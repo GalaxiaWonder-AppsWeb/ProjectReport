@@ -34,22 +34,21 @@
 </style>
 
 <div class="caratula">
-    <p>Universidad - Carrera - Ciclo</p>
-    <h1>Curso - XXXXX</h1>
-    <img src="LOGO" alt="Logo">
-    <h4>Sección</h4>
-    <h4>Nombre de profesor</h4>
+    <p>Universidad Peruana de Ciencias Aplicadas - Ingeniería de Software - 2025-10</p>
+    <h1>1ASI0730 - Aplicaciones Web</h1>
+    <img src="../img/upc_logo.png" alt="Logo">
+    <h4>NRC: 4364</h4>
+    <h4>Profesor: Sánchez Ponce, Alex Humberto</h4>
     <h2>Informe de Trabajo Final</h2>
-    <h3>Nombre de startup</h3>
-    <h3>Nombre del producto</h3>
+    <h3>Startup: Galaxia Wonder</h3>
+    <h3>Producto: BuildFlow</h3>
     <h4>Integrantes:</h4>
     <ul>
-        <li>Nombre 1 (código)</li>
-        <li>Nombre 2 (código)</li>
-        <li>Nombre 3 (código)</li>
-        <li>Nombre 4 (código)</li>
-        <li>Nombre 5 (código)</li>
-        <li>Nombre 6 (código)</li>
+        <li>Aponte Cruzado, Andrea Marielena (202224135)</li>
+        <li>León Vivas, Fabrizio Amir (20211b994)</li>
+        <li>López Acuña, Mario Joaquín (202116250)</li>
+        <li>Orozco Torres, Álvaro Joaquín (202220783)</li>
+        <li>Reaño Delgadillo, Henry Paolo (20221e247)</li>
     </ul>
-    <h4>XXXX de 20XX</h4>
+    <h4>Abril de 2025</h4>
 </div>
