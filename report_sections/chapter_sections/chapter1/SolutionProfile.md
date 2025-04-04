@@ -20,3 +20,33 @@ El sistema de planificación de proyectos de ingeniería civil propuesto busca a
 - La solución debe adaptarse a empresas consultoras y contratistas independientes con distintos niveles de adopción tecnológica, priorizando una interfaz intuitiva y de fácil uso para minimizar barreras de entrada.
 
 - Para asegurar su adopción, deberá ser accesible desde dispositivos móviles y computadoras, garantizar la seguridad de los datos y permitir la integración con sistemas existentes. Además, debe ser escalable y eficiente, evitando complejidad innecesaria que dificulte su implementación.
+
+**Análisis 5W+2H**
+
+***What?***
+
+Falta de control y coordinación de documentos y errores en la toma de datos que persisten durante el desarrollo y posterior entrega del expediente técnico que generan sobrecostos, retrasos y problemas legales.
+
+***Why?***
+
+Falta de un sistema centralizado que facilite la recopilación, almacenamiento y validación de datos en el expediente ténico.
+
+***Who?***
+
+A empresas pequeñas y contratistas independientes de consultoria de obras.
+
+***When?***
+
+En la actualidad, de manera continua a lo largo del tiempo.
+
+***Where?***
+
+En la planificación de un proyecto de obra civil, antes de su adjudicación.
+
+***How?***
+
+Se mide a través del los sobrecostos del expediente técnico.
+
+***How much?***
+
+A la gran mayoría de contratistas que realizan expedientes técnicos.
