@@ -126,7 +126,10 @@ Consideraremos que el problema está resuelto cuando estas pequeñas empresas o 
 * Creemos que lograremos incrementar en un 50% la cantidad de proyectos planificados a tiempo en 5 años si Ana Ramos alcanza mejorar la comunicación y coordinación con distintas áreas con mensajes.
 * Creemos que lograremos incrementar en un 50% la cantidad de proyectos planificados a tiempo en 5 años si Ana Ramos alcanza garantizar una entrega a tiempo de su sección correspondiente de la memoria descriptiva con comunicados.
 * Creemos que lograremos incrementar en un 50% la cantidad de proyectos planificados a tiempo en 5 años si Ana Ramos alcanza garantizar una entrega a tiempo de su sección correspondiente de la memoria descriptiva con recordatorios.
+* Creemos que lograremos reducir en 50% el tiempo que toma replanificar ante errores de planificación si Carlos Mendoza alcanza solicitar ajustes contractuales de forma oportuna con solicitud de ajustes contractuales.
+* Creemos que lograremos llegar al 3% de las empresas consultoras de obra de Lima Metropolitana en 3 añossi Carlos Mendoza alcanza control de seguimiento para verificar la planificación de la obra con resumen de detalles clave.
+* Creemos que lograremos llegar al 3% de las empresas consultoras de obra de Lima Metropolitana en 3 años si Carlos Mendoza alcanza control de seguimiento para verificar la planificación de la obra con permisos de acceso al cliente.
 
 #### 1.2.2.4. Lean UX Canvas.
 
-<img src="../../../img/chapter1/leanuxcanvas.png" alt="Lean UX Canvas image">
+<img src="../../../img/chapter1/leanuxcanvas.png" alt="Logo">
