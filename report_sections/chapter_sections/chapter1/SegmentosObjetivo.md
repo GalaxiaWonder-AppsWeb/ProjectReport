@@ -1,5 +1,5 @@
 ## 1.3. Segmentos Objetivo
-**1. Empresa Pequeña, Contratista en Consultoría de Obra Civil**
+**1. Contratista**
 
 Según los datos del OSCE, se observa que la mayoría de los líderes son hombres de aproximadamente 40 años con estudios universitarios que les permiten gestionar proyectos de menor escala con eficiencia y calidad. 
 

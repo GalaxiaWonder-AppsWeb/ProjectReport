@@ -20,7 +20,7 @@ FINAL_REPORT = OutputFile(
         "ProductDesign.md",
         "ProductImplementation.md",
         "Conclusiones.md",
-        "Bibliografía.md",
+        "Bibliografia.md",
         "Anexos.md"
     ]
 )
