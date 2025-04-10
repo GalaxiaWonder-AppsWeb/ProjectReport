@@ -824,3 +824,138 @@ La plantilla de datos generales permite obtener información básica sobre los e
 | Seguimiento del contrato | 2 | 18.2% | 66.7% |
 | Gestión de observaciones y compatibilidad de planos | 2 | 18.2% | 66.7% |
 | **Total** | 11 | 100% | - |
+
+**ESPECIALISTA DE ÁREA**
+
+**1. Resumen:** Los especialistas de área son en su mayoría varones adultos entre los 26 y 45 años, con formación en Ingeniería Civil y experiencia desarrollada dentro de una especialidad técnica. Muchos de ellos llegaron a su posición actual a través de la práctica profesional en empresas del rubro, aunque algunas áreas, como TI, requieren formación específica. Son personas estructuradas, con un fuerte apego a las normas y procesos establecidos, lo que les permite mantener el orden en sus funciones. Sin embargo, enfrentan ciertas dificultades en la comunicación con otras especialidades, influenciadas por la rigidez de las estructuras organizacionales en las que trabajan.
+
+**2. Edad:**  Las edades de los entrevistados de este segmento varían desde los 26 hasta los 45 años de edad. Se toma como edad representativa la media aritmética de los datos.
+
+| Entrevistado | Luis Agreda | Manuel Anaypoma | Jesús Merino | Valor representativo |
+|-|-|-|-|-|
+| **Edad** | 26 | 45 | 35 | 35 |
+
+**3. Personalidad:** La gran mayoría de los entrevistados (100%) se alínean al arquetipo de personalidad *Guardián*, mientras que la menor parte (33.3%) refleja una personalidad de tipo *Racional*. Se toma el arquetipo *Guardián* como representativo.
+
+| Entrevistado | Luis Agreda | Manuel Anaypoma | Jesús Merino | Valor representativo |
+|-|-|-|-|-|
+| **Personalidad** | Racional | Guardián | Guardián | Guardián |
+
+**4. Marcas e influencers:** La totalidad de los entrevistados (100%) mencionó seguir la marca Microsoft. De ellos, la gran mayoría (66.7%) mencionaron la marca Autodesk, mientras que se encontraron casos aislados (33.3%) de S10, Cisco y Apple. Se toma como marcas representativas Microsoft y Autodesk.
+
+| Marca | Frecuencia Absoluta | Frecuencia Relativa | Entrevistados que la siguen (%) |
+|-|-|-|-|
+| Microsoft | 3 | 37.5% | 100% |
+| Autodesk Inc. | 2 | 25% | 66.7% |
+| S10 | 1 | 12.5% | 33.3% |
+| Cisco | 1 | 12.5% | 33.3% |
+| Apple | 1 | 12.5% | 33.3% |
+| **Total** | 8 | 100% | - |
+
+**5. Uso de tecnología:** Los entrevistados mostraron niveles de dominio de la tecnología variados, que se correlacionan tanto con su edad como con sus respectivas especialidades. Se asigna un peso numérico a los niveles de habilidad y se toma como representativo el nivel que tenga como nivel el más próximo al promedio ponderado (Medio).
+
+| Nivel de uso de tecnología | Frecuencia Absoluta | % de entrevistados en este nivel | Peso | Promedio Ponderado |
+|-|-|-|-|-|
+| Bajo | 1 | 33.3% | 1 | 0.3 |
+| Medio | 1 | 33.3% | 2 | 0.7 |
+| Alto | 1 | 33.3% | 3 | 1 |
+| **Total** | 3 | 100% | - | 2 |
+
+**6. Canales:** La totalidad de los entrevistados mencionó utilizar WhatsApp como canal de comunicación, especialmente para el trabajo. Por otro lado, la gran mayoría (66.7%) mencionó utilizar X (Twitter), mientras que la menor parte (33.3%) mencionó utilizar Instagram.
+
+| Canal de comunicación | Frecuencia Absoluta | Frecuencia Relativa | Entrevistados que lo usan (%) |
+|-|-|-|-|
+| WhatsApp | 3 | 50% | 100% |
+| X (Twitter) | 2 | 33.3% | 66.7% |
+| Instagram | 1 | 16.7% | 33.3% |
+| **Total** | 6 | 100% | - |
+
+**7. Browsers:** La gran mayoría de los entrevistados (66.7%) reportó utilizar Google Chrome como su navegador por defecto. Sin embargo, se presentaron casos particulares de utilizar otros navegadores de forma complementaria (correspondientes a 33.3%). Por ejemplo, usar Safari cuando se usa el teléfono iPhone o Internet Explorer debido a la necesidad de interactuar con sistemas Legacy. Se toma como representativo el uso de Google Chrome, pero se tiene presente los posibles casos adicionales de uso de otros navegadores debido a necesidades del momento.
+
+| Navegador Web | Frecuencia Absoluta | Frecuencia Relativa | Entrevistados que lo usan (%) |
+|-|-|-|-|
+| Google Chrome | 2 | 40% | 66.7% |
+| Safari | 1 | 20% | 33.3% |
+| Firefox | 1 | 20% | 33.3% |
+| Internet Explorer | 1 | 20% | 33.% |
+| **Total** | 5 | 100% | - |
+
+**8. Dispositivos:** La totalidad de los entrevistados (100%) mencionó utilizar el celular como herramienta principal para acceder a recursos digitales. La gran mayoría (66.7%) reportó el uso de Laptops, mientras que una menor parte reportó el uso de computadoras de escritorio (33.3%). Se toma como representativa la clara tendencia hacia la portabilidad (Celular y Laptop).
+
+| Dispositivo | Frecuencia Absoluta | Frecuencia Relativa | Entrevistados que lo usan (%) |
+|-|-|-|-|
+| Celular | 3 | 50% | 100% |
+| PC | 3 | 33.3% | 66.7% |
+| Laptop | 1 | 16.7% | 33.3% |
+| **Total** | 6 | 100% | - |
+
+**9. Flujos principales:** La gran mayoría de los entrevistados destacaron la importancia de las reuniones de coordinación con otros especialistas. El resto de actividades destacadas fueron aquellas relacionadas con su propia área de especialidad dentro de la empresa que trabajan. Se toma como presentativo conjuntos de actividades relacionadas a un único fin conjunto:
+- Análisis de información y elaboración de documentación
+- Comunicación e intercambio de información
+- Seguimiento y cumplimiento de planificación 
+
+<table class="tabla-flujos">
+  <thead>
+    <tr>
+      <th>Categoría</th>
+      <th>Flujo de trabajo</th>
+      <th>Frecuencia Absoluta</th>
+      <th>Frecuencia Relativa</th>
+      <th>Entrevistados que lo priorizan (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="2"><strong>Comunicación e intercambio de información</strong></td>
+      <td>Reuniones de coordinación de especialistas</td>
+      <td>2</td>
+      <td>25%</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Realizar consultas o solicitar revisiones ante incompatibilidad de planos</td>
+      <td>1</td>
+      <td>12.5%</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td rowspan="2"><strong>Seguimiento y cumplimiento de planificación</strong></td>
+      <td>Seguir y cumplir los lineamientos de el expediente técnico</td>
+      <td>1</td>
+      <td>12.5%</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Cumplir con los entregables</td>
+      <td>1</td>
+      <td>12.5%</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td rowspan="3"><strong>Análisis de información y elaboración de documentación</strong></td>
+      <td>Analizar datos para identificar posibles riesgos</td>
+      <td>1</td>
+      <td>12.5%</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Cálculo de materiales de obra y precios unitarios</td>
+      <td>1</td>
+      <td>12.5%</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Elaboración de documentación para los expedientes técnicos</td>
+      <td>1</td>
+      <td>12.5%</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td><strong>Total</strong></td>
+      <td>8</td>
+      <td>100%</td>
+      <td>-</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
