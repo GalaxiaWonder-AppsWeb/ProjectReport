@@ -10,13 +10,13 @@ Edilberto Cáceres representa el segmento objetivo de Contratistas. Trabaja como
 
 **Especialistas**
 
-<img src="../../../img/chapter2/userPersona_Especialista.png" alt="User Persona de Contratista">
+<img src="../../../img/chapter2/userPersona_Especialista.png" alt="User Persona de Especialistas">
 
 José Rodríguez representa el segmento objetivo de Especialistas. Es arquitecto de profesión con mucha experiencia. Es una persona motivada, amante de la arquitectura. Tiene un fuerte sentido del cumplimiento de las normativas dentro de sus actividades en el trabajo. Se destaca por su alta capacidad para comunicarse con otros especialistas y por su capacidad de ánalisis.
 
 **Entidad contratante**
 
-<img src="../../../img/chapter2/userPersona_Contratante.png" alt="User Persona de Contratista">
+<img src="../../../img/chapter2/userPersona_Contratante.png" alt="User Persona de Entidad contratante">
 
 Alfonso Villarán representa el segmento objetivo de Entidad contratante. Se encuentra buscando un contratista para poder planificar su hogar en un terreno heredado. Es una persona precavida y que vela por la seguridad de su futura familia. Es alguien muy afín a la tecnología.
 
