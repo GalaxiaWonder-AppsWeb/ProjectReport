@@ -88,3 +88,24 @@ Se representa el flujo de trabajo habitual del especialista en el contexto de la
 
 Se representa el flujo habitual del contratante, desde la comunicación inicial con el contratista hasta la toma de requisitos y el inicio de la planificación y elaboración de los distintos documentos del expediente técnico. Se hace especial énfasis en el rol activo del cliente como supervisor del cumplimiento de sus propios requisitos a lo largo del proceso.
 
+### 2.3.4. Empathy Mapping
+
+**Contratistas**
+
+<img src="../../../img/chapter2/empathyMap_Contratista.png" alt="Empathy Map de Contratista">
+
+Se representan las necesidades, frustraciones y oportunidades del contratista, así como las percepciones de su entorno y sus propias observaciones. Se concluye que el contratista desempeña un rol central en la elaboración del expediente técnico, participando activamente en múltiples acciones clave a lo largo del proceso.
+
+
+**Especialistas**
+
+<img src="../../../img/chapter2/empathyMap_Especialista.png" alt="Empathy Map de Especialista">
+
+Se representan las necesidades, frustraciones y oportunidades del especialista, así como las percepciones de su entorno y sus propias observaciones. Se hace especial énfasis en la importancia de la comunicación entre especialidades, la participación en reuniones de coordinación y el cumplimiento riguroso de las normativas establecidas.
+
+**Entidad contratante**
+
+<img src="../../../img/chapter2/empathyMap_Contratante.png" alt="Empathy Map de Entidad Contratante">
+
+Se representan las necesidades, frustraciones y oportunidades de la entidad contratante, junto con las percepciones de su entorno y sus propias observaciones. Se destaca especialmente la influencia de las experiencias compartidas por colegas y conocidos, así como la comunicación constante y directa que mantiene con el contratista a lo largo del proceso.
+
