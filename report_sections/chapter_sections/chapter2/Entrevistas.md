@@ -959,3 +959,72 @@ La plantilla de datos generales permite obtener información básica sobre los e
     </tr>
   </tbody>
 </table>
+
+**ENTIDAD CONTRATANTE**
+
+**1. Resumen:** Los clientes (formalmente llamados "La Entidad Contrante") son predominante varones adultos jóvenes entre los 26 y 34 años de edad con entre 5 a 10 años de experiencia laboral. Se destacan por ser ambiciosos y estratégicos, pensar bien las cosas y tener mucho cuidado de que "las cosas marchen de acuerdo al plan". Buscan los servicios de consultoría principalmente para la planificación de su vivienda a futuro, pero también existen intereses de realizar negocios (alquiler, por ejemplo). Sus principales preocupaciones son el cumplimiento de plazos y sus expectativas.
+
+**2. Edad:**  Las edades de los entrevistados de este segmento varían desde los 26 hasta los 34 años de edad. Se toma como edad representativa la media aritmética de los datos.
+
+| Entrevistado | Aldo Apolinario | Lucero Villanes | Álvaro Torres | Valor representativo |
+|-|-|-|-|-|
+| **Edad** | 34 | 26 | 27 | 29 |
+
+**3. Personalidad:** La totalidad de los entrevistados (100%) se alínean al arquetipo de personalidad *Idealista*, debido a que reflejan un alto grado de meticulosidad, cuidado y respeto a la ley de por medio a lograr sus objetivos personales.
+
+| Entrevistado | Aldo Apolinario | Lucero Villanes | Álvaro Torres | Valor representativo |
+|-|-|-|-|-|
+| **Personalidad** | Idealista | Idealista | Idealista | Idealista |
+
+**4. Marcas e influencers:** Los entrevistados no proporcionaron muchos detalles sobre las marcas e influencers que siguen (salvo a una única expeción) sin mostrar un concenso o tendencia clara. Se obtiene del análisis el entendimiento de que el perfil del entrevistado es el seguimiento de marcas e influencers en general y se toma dicha noción como representativa.
+
+| Marca | Frecuencia Absoluta | Frecuencia Relativa | Entrevistados que la siguen (%) |
+|-|-|-|-|
+| Álvaro Soler | 1 | 33.3% | 33.3% |
+| Vlogs en general | 1 | 33.3% | 33.3% |
+| Podcasts en general | 1 | 33.3% | 33.3% |
+| **Total** | 8 | 100% | - |
+
+**5. Uso de tecnología:** La totalidad de los entrevistados (100%) demostraron un nivel de uso de la tecnología Medio. Se toma este nivel como representativo.
+
+| Nivel de uso de tecnología | Frecuencia Absoluta | % de entrevistados en este nivel |
+|-|-|-|
+| Bajo | 0 | 0% |
+| Medio | 3 | 100% |
+| Alto | 0 | 0% |
+| **Total** | 3 | 100% |
+
+**6. Canales:** La gran mayoría de los entrevistados (66.7%) mencionó utilizar TikTok e Instagram como canal de comunicación, especialmente para el trabajo, mientras que la menor parte (33.3%) mencionó utilizar LinkedIn. Se toma como representativo el uso de las dos primeras redes sociales.
+
+| Canal de comunicación | Frecuencia Absoluta | Frecuencia Relativa | Entrevistados que lo usan (%) |
+|-|-|-|-|
+| TikTok | 2 | 40% | 66.7% |
+| Instagram | 2 | 40% | 66.7% |
+| LinkedIn | 1 | 20% | 33.3% |
+| **Total** | 5 | 100% | - |
+
+**7. Browsers:** La totalidad de los entrevistados (100%) mencionó utilizar Google Chrome como su navegador web. Se mencionaron casos aislados (33.3%) de uso de Safari y Edge. Se toma como representativo el uso de Chrome, y se considera a Safari por la posibilidad de tener un dispositivo de Apple.
+
+| Navegador Web | Frecuencia Absoluta | Frecuencia Relativa | Entrevistados que lo usan (%) |
+|-|-|-|-|
+| Google Chrome | 3 | 60% | 100% |
+| Safari | 1 | 20% | 33.3% |
+| Edge | 1 | 20% | 33.3% |
+| **Total** | 5 | 100% | - |
+
+**8. Dispositivos:** La totalidad de los entrevistados (100%) mencionó utilizar el celular como herramienta principal para acceder a recursos digitales. De ellos, la gran mayoría (66.7%) reportó el uso de Laptops. Se toma como representativa la clara tendencia hacia la portabilidad (Celular y Laptop).
+
+| Dispositivo | Frecuencia Absoluta | Frecuencia Relativa | Entrevistados que lo usan (%) |
+|-|-|-|-|
+| Celular | 3 | 60% | 100% |
+| Laptop | 2 | 40% | 66.7% |
+| **Total** | 5 | 100% | - |
+
+**9. Flujos principales:** La totalidad de los entrevistados (100%) señaló la importancia del seguimiento y cumplimiento del calendario. La gran mayoría (66.7%) destacó la importancia del seguimiento del contrato y la gestión de observaciones y compatibilidad de los planos. De manera aislada se mencionaron otros flujos como el contacto con el cliente o la recaudación ded medidas descriptivas, entre otras. Estos últimos flujos tienen cierto grado de solapamiento con los flujos principales mayoritarios, cumpliendo un rol de apoyo o soporte.
+
+| Flujo de trabajo | Frecuencia Absoluta | Frecuencia Relativa | Entrevistados que lo priorizan (%) |
+|-|-|-|-|
+| Contactar con el proyectista | 3 | 50% | 100% |
+| Supervisar el avance del proyecto | 2 | 33.3% | 66.7% |
+| Presentar el requerimiento del proyecto | 1 | 16.7% | 33.3% |
+| **Total** | 6 | 100% | - |
