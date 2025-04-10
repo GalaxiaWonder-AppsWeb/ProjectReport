@@ -66,3 +66,25 @@ Se considera para la realización de este User Task Matrix los User Persona, sus
 
 * Alfonso Villarán: Como entidad contratante, realiza revisiones frecuentes sobre el avance del expediente técnico, siendo esta su actividad más importante. Sus tareas principales están enfocadas en la comunicación con el contratista y en asegurar el cumplimiento de los requisitos establecidos.
 
+### 2.3.3. User Journey Mapping
+
+Se desarrolla el User Journey Mapping en base al As-Is del flujo de trabajo de los User Persona anteriormente elaborados.
+
+**Contratista**
+
+<img src="../../../img/chapter2/userJourneyMap_Contratista.png" alt="User Journey Map de Contratista, reflejando el flujo de trabajo desde la toma de requisitos hasta la entrega del expediente técnico">
+
+Se representa el flujo de trabajo del contratista en relación con el ciclo de vida de la planificación del proyecto, específicamente en la elaboración del expediente técnico. Se hace especial énfasis en las actividades vinculadas a la toma de requisitos del cliente, la recolección de datos de suelos y estudios básicos, así como en la elaboración de planos y cronogramas. A partir del análisis, se concluye que varios de estos procesos presentan oportunidades claras de automatización.
+
+**Especialista**
+
+<img src="../../../img/chapter2/userJourneyMap_Especialista.png" alt="User Journey Map de Especialista, refleja el flujo de trabajo diario de un arquitecto dentro de la elaboración de un expediente técnico">
+
+Se representa el flujo de trabajo habitual del especialista en el contexto de la elaboración de tareas dentro del expediente técnico. Se destaca especialmente la comunicación transversal entre distintas especialidades, identificando que esta interacción ocurre de forma constante y diaria a lo largo del proceso.
+
+**Entidad contratante**
+
+<img src="../../../img/chapter2/userJourneyMap_Contratante.png" alt="User Journey Map de Entidad Contratante, refleja el proceso de identificación de necesidad hasta la culminación del expediente técnico e inicio de obra">
+
+Se representa el flujo habitual del contratante, desde la comunicación inicial con el contratista hasta la toma de requisitos y el inicio de la planificación y elaboración de los distintos documentos del expediente técnico. Se hace especial énfasis en el rol activo del cliente como supervisor del cumplimiento de sus propios requisitos a lo largo del proceso.
+
