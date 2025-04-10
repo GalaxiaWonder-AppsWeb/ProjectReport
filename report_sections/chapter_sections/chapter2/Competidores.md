@@ -352,3 +352,35 @@ El análisis competitivo es fundamental para desarrollar una estrategia sólida 
         </tr>
     </tbody>
 </table>
+
+### 2.1.2. Estrategias y tácticas frente a competidores
+
+#### 1. Destacar la Especialización en Ingeniería Civil y la Excelencia Técnica
+* Contexto:
+    * Fortalezas de competidores: Se posicionan como estándar en la industria, poseen amplia red de colaboradores e integraciones, y ofrecen herramientas integrales para gestionar operaciones y finanzas.
+    * Nuestras fortalezas: Enfoque específico en ingeniería civil, funcionamiento basado en la nube y gestión integral de expedientes técnicos.
+* Tactica:
+    * Utilizar estudios de caso y campañas de marketing que demuestren la eficacia de nuestra solución y resalten nuestra experiencia en el área.
+
+#### 2. Ofrecer Precios Competitivos y Optimizar la Usabilidad
+* Contexto:
+    * Debilidades de competidores: Ofrecen precios elevados para empresas pequeñas o medianas y presentan un enfoque limitado en la gestión de proyectos.
+    * Nuestras debilidades: Requieren mayor inversión en marketing y captación de clientes, y dependen en gran medida de la conectividad a Internet.
+* Tactica:
+    * Realizar pruebas de usabilidad para garantizar que nuestra interfaz sea intuitiva y accesible, proporcionando una experiencia de usuario óptima.
+
+#### 3. Aprovechar el Crecimiento del Mercado y la Transformación Digital
+* Contexto:
+    * Oportunidades del mercado: Aumento de la demanda de soluciones colaborativas y expansión en mercados internacionales.
+    * Nuestras oportunidades: Crecimiento del sector de la construcción y aceleración de la digitalización.
+* Tactica:
+    * Lanzar campañas digitales dirigidas a aquellas empresas que aún no han modernizado sus procesos, con el objetivo de captar nuevos clientes y ampliar nuestra presencia en el mercado.
+
+#### 4. Posicionar una Plataforma Flexible, Segura y Centrada en el Cliente
+* Contexto:
+    * Amenazas de competidores: Problemas de adopción en mercados pequeños, rápidos cambios tecnológicos y competencia creciente.
+    * Nuestras amenazas: Resistencia al cambio por parte de empresas tradicionales y preocupaciones en materia de seguridad y privacidad.
+* Tácticas:
+    * Adaptar la herramienta a las necesidades específicas de cada usuario, reduciendo la curva de aprendizaje y ofreciendo soporte continuo para facilitar la adopción y generar confianza.
+    * Ofrecer garantías y certificaciones de seguridad que respalden nuestro compromiso con la protección de la información.
+    * Permitir a los clientes dar retroalimentación u observaciones sobre el avance del proyecto.
