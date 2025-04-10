@@ -18,4 +18,51 @@ José Rodríguez representa el segmento objetivo de Especialistas. Es arquitecto
 
 <img src="../../../img/chapter2/userPersona_Contratante.png" alt="User Persona de Contratista">
 
-Alfonso Villarán representa el segmento objetivo de Entidad contratante. Se encuentra buscando un contratista para poder planificar su hogar en un terreno heredado. Es una persona precavida y que vela por la seguridad de su futura familia. Es alguien muy afín a la tecnología. 
+Alfonso Villarán representa el segmento objetivo de Entidad contratante. Se encuentra buscando un contratista para poder planificar su hogar en un terreno heredado. Es una persona precavida y que vela por la seguridad de su futura familia. Es alguien muy afín a la tecnología.
+
+### 2.3.2. User Task Matrix
+
+Se considera para la realización de este User Task Matrix los User Persona, sus actividades, frecuencia e importancia.
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <thead>
+    <tr>
+      <th rowspan="2">Task</th>
+      <th colspan="2">Adilberto Cáceres</th>
+      <th colspan="2">José Rodríguez</th>
+      <th colspan="2">Alfonso Villarán</th>
+    </tr>
+    <tr>
+      <th>Frecuencia</th>
+      <th>Importancia</th>
+      <th>Frecuencia</th>
+      <th>Importancia</th>
+      <th>Frecuencia</th>
+      <th>Importancia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Contacto con cliente</td><td>Alta</td><td>Alta</td><td>Baja</td><td>Alta</td><td>Nunca</td><td>Baja</td></tr>
+    <tr><td>Conceder autorización de comunicación de áreas</td><td>Media</td><td>Alta</td><td>Baja</td><td>Alta</td><td>Nunca</td><td>Alta</td></tr>
+    <tr><td>Planificación de cronogramas</td><td>Media</td><td>Alta</td><td>Media</td><td>Alta</td><td>Baja</td><td>Media</td></tr>
+    <tr><td>Cumplimiento de cronogramas</td><td>Alta</td><td>Alta</td><td>Alta</td><td>Alta</td><td>Nunca</td><td>Baja</td></tr>
+    <tr><td>Planificación de estudios básicos</td><td>Media</td><td>Alta</td><td>Alta</td><td>Alta</td><td>Nunca</td><td>Baja</td></tr>
+    <tr><td>Ejecución de estudios básicos</td><td>Baja</td><td>Alta</td><td>Media</td><td>Alta</td><td>Nunca</td><td>Baja</td></tr>
+    <tr><td>Seguimiento de normativas</td><td>Alta</td><td>Alta</td><td>Alta</td><td>Alta</td><td>Media</td><td>Alta</td></tr>
+    <tr><td>Consultar a otras áreas</td><td>Media</td><td>Alta</td><td>Alta</td><td>Alta</td><td>Nunca</td><td>Baja</td></tr>
+    <tr><td>Solicitar revisiones</td><td>Nunca</td><td>Baja</td><td>Alta</td><td>Alta</td><td>Alta</td><td>Alta</td></tr>
+    <tr><td>Reuniones de coordinación</td><td>Alta</td><td>Alta</td><td>Alta</td><td>Media</td><td>Media</td><td>Alta</td></tr>
+    <tr><td>Entregar avances de expediente</td><td>Media</td><td>Alta</td><td>Alta</td><td>Alta</td><td>Media</td><td>Baja</td></tr>
+    <tr><td>Cálculo de materiales y precios unitarios</td><td>Media</td><td>Alta</td><td>Alta</td><td>Alta</td><td>Nunca</td><td>Baja</td></tr>
+    <tr><td>Comunicarse con contratista</td><td>Nunca</td><td>Baja</td><td>Media</td><td>Alta</td><td>Alta</td><td>Alta</td></tr>
+    <tr><td>Explicar requisitos</td><td>Media</td><td>Alta</td><td>Nunca</td><td>Baja</td><td>Alta</td><td>Alta</td></tr>
+    <tr><td>Supervisar cumplimiento de requisitos</td><td>Alta</td><td>Alta</td><td>Media</td><td>Alta</td><td>Alta</td><td>Alta</td></tr>
+  </tbody>
+</table>
+
+* Edilberto Cáceres: Como contratista, participa frecuentemente en reuniones y coordinaciones tanto con el cliente como con los especialistas. Da especial importancia al cumplimiento de las normativas y los términos de referencia del proyecto. Para él, todas las etapas del expediente técnico —desde la coordinación inicial con el cliente hasta la elaboración de cada sección— son fundamentales.
+
+* José Rodríguez: En su rol de especialista, mantiene una alta frecuencia de interacción con el contratista y otras especialidades. Considera crucial que el contratista realice revisiones constantes sobre sus entregables, ya que esto garantiza la coherencia e integración del expediente técnico.
+
+* Alfonso Villarán: Como entidad contratante, realiza revisiones frecuentes sobre el avance del expediente técnico, siendo esta su actividad más importante. Sus tareas principales están enfocadas en la comunicación con el contratista y en asegurar el cumplimiento de los requisitos establecidos.
+
