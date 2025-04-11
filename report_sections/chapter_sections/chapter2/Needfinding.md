@@ -109,3 +109,24 @@ Se representan las necesidades, frustraciones y oportunidades del especialista, 
 
 Se representan las necesidades, frustraciones y oportunidades de la entidad contratante, junto con las percepciones de su entorno y sus propias observaciones. Se destaca especialmente la influencia de las experiencias compartidas por colegas y conocidos, así como la comunicación constante y directa que mantiene con el contratista a lo largo del proceso.
 
+### 2.3.5. As-is Scenario Mapping
+
+Para elaborar esta sección del As-Is Scenario Mapping, el equipo trabajó en conjunto poniéndose en el lugar de los usuarios, con el objetivo de generar descripciones que reflejaran los pain points identificados en el Empathy Map. Aunque se contemplaron más tareas durante el análisis, el resultado final fue acotado de acuerdo con el alcance definido para nuestro proyecto.
+
+**Contratista**
+
+<img src="../../../img/chapter2/asIs_Contratista.jpg" alt="As-Is Scenario de Contratista">
+
+Este escenario representa el flujo de trabajo dentro del ciclo de vida de la planificación del proyecto. Se hace especial énfasis en el cumplimiento de los términos de referencia y en el seguimiento continuo durante la elaboración del expediente técnico.
+
+**Especialista**
+
+<img src="../../../img/chapter2/asIs_Especialista.jpg" alt="As-Is Scenario de Contratista">
+
+Este escenario representa el flujo de trabajo del especialista durante la entrega de un encargo relacionado con el expediente técnico. Se resalta la importancia del cumplimiento de las normativas vigentes y la comunicación constante con otras especialidades para garantizar la coherencia y calidad del proyecto.
+
+**Entidad contratante**
+
+<img src="../../../img/chapter2/asIs_Contratante.jpg" alt="As-Is Scenario de Contratista">
+
+Este escenario representa el flujo de trabajo de la entidad contratante, desde el primer contacto con el contratista hasta el seguimiento del proyecto. Se hace especial énfasis en la verificación y cumplimiento de los requisitos establecidos.
