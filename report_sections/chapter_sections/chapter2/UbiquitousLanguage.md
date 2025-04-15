@@ -28,7 +28,7 @@ El bounded context de Project Management está dedicado a la planificación, eje
 **20. Plains (Planos):** Representaciones gráficas del proyecto (arquitectura, estructuras, instalaciones, etc.). Estos pueden ser planos de estado actual o planos de especialidad.  
 
 
-**Change Management (Gestión del cambio):**
+**Change Management (Gestión del cambio)**
 
 Este contexto se encarga de gestionar y documentar todas las modificaciones que afectan el proyecto durante su ejecución, ya sea en alcance, plazos, costos o diseño. Incluye el manejo de cambios contractuales formales, consultas técnicas, discrepancias entre planos y rediseños en campo. La trazabilidad y aprobación adecuada de estos cambios es crítica para mantener el control y la transparencia del proyecto.
 
@@ -59,7 +59,7 @@ El contexto de Budget (Presupuestos) se enfoca en la planificación, cálculo y 
 **7. Profit (Utilidad):** Ganancia neta obtenida luego de restar todos los costos del ingreso del proyecto.  
 
 
-**Notifications (Notificaciones):**
+**Notifications (Notificaciones)**
 
 El contexto de notificaciones se encarga de gestionar el envío de mensajes relevantes dentro del sistema. Estos mensajes son generados por un coordinador y enviados a los usuarios correspondientes, quienes deben tomar conocimiento o realizar alguna acción sobre eventos o situaciones específicas. Las notificaciones se priorizan según su urgencia y se entregan a través de canales definidos.
 
@@ -70,7 +70,7 @@ El contexto de notificaciones se encarga de gestionar el envío de mensajes rele
 **5. Coordinator (Coordinador):** Rol asignado a un usuario que puede ser miembro de la organización o ser parte de la entidad contratante. Envía notificación de reuniones a los especialistas, notificaciones de entrega de tareas.  
 **6. Specialist (Especialista):** Rol asignado a un miembro de la organización o subcontratado. Reciben notificaciones de reuniones o notificaciones de tareas.  
 
-**Profiles (Perfiles):**
+**Profiles (Perfiles)**
 
 Este contexto gestiona la identidad profesional y técnica de los usuarios dentro del sistema. Está orientado a representar sus roles, especialidades, experiencia, credenciales y preferencias de trabajo, independientemente del proyecto u organización en el que estén participando. El perfil funciona como una hoja de vida técnica activa, accesible por los administradores o contratistas al momento de armar equipos.
 
@@ -85,3 +85,49 @@ Este contexto gestiona la identidad profesional y técnica de los usuarios dentr
 **9. ID Number (Número de documento):** Identificador legal de la entidad contratante o empresa consultora. En el caso de Entidades Contratantes, este puede ser DNI o RUC, según se trata de una persona natural o jurídica. En el caso de Empresas Consultoras, se tratará siempre de un RUC.  
 **10. Contact Information (Información de contacto):** Grupo de datos como correo, número de teléfono y/o redes sociales de un usuario que permiten establecer contacto con este de forma externa a la plataforma.  
 
+
+### Generic
+
+**Identity and Access Management (Gestión de identidad y acceso)**
+
+El contexto de Identity and Access Management (IAM) se encarga de la asignación de roles y permisos A través de este contexto se asegura la correcta administración de accesos y roles, permitiendo una gestión eficiente y segura de los proyectos y equipos.
+
+**1. Organization (Organización):** Unidad estructural dentro del sistema que representa a una empresa consultora. Agrupa usuarios (miembros) bajo una misma identidad corporativa y permite la gestión centralizada de proyectos, equipos y recursos humanos asociados.  
+**2. Contractor (Contratista / Proyectista):** Rol asignado a un único miembro de la organización, típicamente el gerente. Se encarga de añadir miembros a su organización, gestionar todos los proyectos de la organización en general.  
+**3. Project manager (Jefe de proyecto):** Rol asignado a un miembro de la organización. Este rol se encarga de supervisar el desarrollo de un proyecto, organizar reuniones de coordinación y garantizar el cumplimiento de las expectativas del cliente y las normas vigentes.  
+**4. Coordinator (Coordinador):** Rol asignado a un usuario que puede ser miembro de la organización o ser parte de la entidad contratante. Apoya al jefe de proyecto en cuestiones más específicas, desempeñando las mismas o similares funciones de manera constante.  
+**5. Specialist (Especialista):** Rol asignado a un miembro de la organización o subcontratado. Se encarga de realizar y entregar tareas para cumplir hitos relacionados a su especialidad.  
+**6. Architect (Arquitecto):** Subrol de especialista encargado del diseño arquitectónico del proyecto. Se responsabiliza de la organización espacial, funcional y estética del edificio, elaborando planos arquitectónicos y coordinando con las demás especialidades.  
+**7. Health and security consultant (Consultor en salud y seguridad):** Subrol de especialista responsable de identificar y prevenir riesgos laborales y de obra. Asesora al equipo de diseño en materia de seguridad desde la etapa de anteproyecto y elabora planes de seguridad y salud aplicables a la ejecución.  
+**8. Surveyor (Topógrafo):** Subrol encargado de realizar levantamientos del terreno para generar información precisa sobre cotas, pendientes y límites del predio. Esta información sirve como base para el diseño y la ejecución del proyecto.  
+**9. Structural Engineer (Ingeniero estructural):** Subrol de especialista que diseña y calcula la estructura portante del proyecto. Se encarga de definir elementos como vigas, columnas y fundaciones, asegurando estabilidad y seguridad frente a cargas permanentes y eventuales.  
+**10. Sanitary Engineer (Ingeniero sanitario):** Subrol de especialista responsable del diseño de sistemas de agua potable, desagüe, drenaje pluvial y ventilación sanitaria. Garantiza el funcionamiento eficiente y seguro de las instalaciones sanitarias del proyecto.  
+**11. Electrical Engineer (Ingeniero eléctrico):** Subrol de especialista encargado de diseñar las instalaciones eléctricas del proyecto, incluyendo iluminación, tomacorrientes, tableros y protección. Asegura el cumplimiento de normas técnicas y la eficiencia energética.  
+**12. Communications engineer (Ingeniero de comunicaciones):** Subrol de especialista que diseña los sistemas de telecomunicaciones del edificio, como red de datos, telefonía, CCTV y control de acceso. Coordina con el equipo eléctrico y arquitectónico para la correcta integración de estas redes.  
+**13. Contracting entity (Entidad contratante):** Rol asignado a un usuario ajeno a la organización. Puede solicitar cambios y realizar seguimiento a un proyecto por el que haya contratado al proyectista.  
+
+
+**Billing (Facturación)**
+
+Contexto encargado de gestionar la generación, emisión y control de facturas relacionadas a los contratos del proyecto. Administra montos, conceptos, fechas, estados de pago y documentos relacionados con cobros por servicios o entregables.
+
+**1. Invoice (Factura):** Documento comercial que detalla los servicios prestados o entregables completados, junto con sus respectivos montos, impuestos y fechas. Es generado por el contratista y dirigido a la entidad contratante.  
+**2. Billing Item (Ítem de facturación):** Elemento individual dentro de una factura que representa un concepto específico facturado (por ejemplo, avance de obra, expediente entregado, adicional aprobado).  
+**3. Payment Status (Estado de pago):** Indica la situación actual de una factura: pendiente, en revisión, aprobada, rechazada o pagada.  
+**4. Pending (Pendiente):** La factura ha sido emitida, pero aún no ha sido revisada por la entidad contratante. Está a la espera de validación.  
+**5. Under Review (En revisión):** La factura está siendo evaluada por el supervisor o responsable de control. Se verifica su consistencia con el contrato, los entregables y los documentos adjuntos.  
+**6. Approved (Aprobada):** La factura ha sido validada por la entidad contratante. Se encuentra autorizada para su pago dentro del plazo establecido.  
+**7. Rejected (Rechazada):** La factura fue evaluada y no cumple con los requisitos contractuales o presenta errores. Se debe corregir y reenviar.  
+**8. Paid (Pagada):** La factura ha sido cancelada total o parcialmente por la entidad contratante. El pago ha sido realizado al contratista.
+
+
+**Subscription (Suscripción)**
+
+Bounded context encargado de gestionar el ciclo de vida de las suscripciones de usuarios o entidades dentro del sistema. Incluye la administración de planes, fechas de inicio y vencimiento, renovaciones, periodos de prueba, tarifas y estados. Este contexto asegura el control sobre el acceso a funcionalidades o servicios sujetos a suscripción, permitiendo aplicar reglas comerciales, restricciones y notificaciones automatizadas según el estado de cada suscripción.
+
+**1. Subscription (Suscripción):** Acuerdo que permite a un usuario o entidad acceder a servicios, funcionalidades o información durante un periodo definido, bajo condiciones específicas (como tarifas, límites de uso, etc.).  
+**2. Subscription Plan (Plan de suscripción):** Conjunto de condiciones que definen el nivel de acceso, duración, precio y beneficios de la suscripción. Puede haber distintos planes según el perfil del usuario.  
+**3. Start Date (Fecha de inicio):** Fecha en la que comienza la vigencia de la suscripción. Marca el momento desde el cual el usuario puede hacer uso del servicio contratado.  
+**4. End Date (Fecha de finalización):** Fecha en la que termina la vigencia de la suscripción, salvo que sea renovada o extendida.  
+**5. Renewal (Renovación):** Acción de extender la suscripción una vez vencido el periodo anterior, ya sea de forma automática o manual.  
+**6. Subscription Fee (Tarifa de suscripción):** Monto que el usuario debe pagar para acceder al servicio dentro del plan elegido.
