@@ -1,6 +1,6 @@
 ## 2.4. Ubiquitous Language
 
-### Core
+### 2.4.1. Core
 
 **Project Management (Gestión de proyectos)**
 
@@ -44,7 +44,7 @@ Este contexto se encarga de gestionar y documentar todas las modificaciones que 
 **10. Site Worker (Operario de obra):** Persona que ejecuta la obra, es decir, instala, construye, excava, vacía o pinta, dependiendo de su especialidad.  
 
 
-### Support
+### 2.4.2. Support
 
 **Budget (Presupuestos)**
 
@@ -86,7 +86,7 @@ Este contexto gestiona la identidad profesional y técnica de los usuarios dentr
 **10. Contact Information (Información de contacto):** Grupo de datos como correo, número de teléfono y/o redes sociales de un usuario que permiten establecer contacto con este de forma externa a la plataforma.  
 
 
-### Generic
+### 2.4.3. Generic
 
 **Identity and Access Management (Gestión de identidad y acceso)**
 
