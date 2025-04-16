@@ -2,12 +2,12 @@
     <p style="font-style: italic; font-size: 14px;">Universidad Peruana de Ciencias Aplicadas- Ingeniería de Software - Ciclo 2025-10</p>
     <h1 style="margin: 10px 0; border-bottom: none;">1ASI0729 - Desarrollo de aplicaciones Open Source</h1>
     <img src="..\img\upc_logo.png" alt="Logo" style="width: 150px; display: block; margin: 20px auto;">
-    <h4 style="margin: 10px 0; border-bottom: none;">>NRC: 4307</h4>
-    <h4 style="margin: 10px 0; border-bottom: none;">>Profesor: Bautista Ubillús, Efraín Ricardo</h4>
-    <h2 style="margin: 10px 0; border-bottom: none;">>Informe de Trabajo Final</h2>
-    <h3 style="margin: 10px 0; border-bottom: none;">>Startup: Galaxia Wonder</h3>
-    <h3 style="margin: 10px 0; border-bottom: none;">>Producto: ProP GMS</h3>
-    <h4 style="margin: 10px 0; border-bottom: none;">>Integrantes:</h4>
+    <h4 style="margin: 10px 0; border-bottom: none;">NRC: 4307</h4>
+    <h4 style="margin: 10px 0; border-bottom: none;">Profesor: Bautista Ubillús, Efraín Ricardo</h4>
+    <h2 style="margin: 10px 0; border-bottom: none;">Informe de Trabajo Final</h2>
+    <h3 style="margin: 10px 0; border-bottom: none;">Startup: Galaxia Wonder</h3>
+    <h3 style="margin: 10px 0; border-bottom: none;">Producto: ProP GMS</h3>
+    <h4 style="margin: 10px 0; border-bottom: none;">Integrantes:</h4>
     <ul style="display: inline-block; text-align: left; padding: 0;">
         <li style="padding: 5px 0;">Aponte Cruzado, Andrea Marielena (202224135)</li>
         <li style="padding: 5px 0;">León Vivas, Fabrizio Amir (20211b994)</li>
