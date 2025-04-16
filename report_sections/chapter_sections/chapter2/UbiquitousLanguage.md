@@ -131,3 +131,12 @@ Bounded context encargado de gestionar el ciclo de vida de las suscripciones de 
 **4. End Date (Fecha de finalización):** Fecha en la que termina la vigencia de la suscripción, salvo que sea renovada o extendida.  
 **5. Renewal (Renovación):** Acción de extender la suscripción una vez vencido el periodo anterior, ya sea de forma automática o manual.  
 **6. Subscription Fee (Tarifa de suscripción):** Monto que el usuario debe pagar para acceder al servicio dentro del plan elegido.
+
+**Payments (Pagos)**
+
+Bounded context encargado de gestionar el procesamiento de pagos dentro del sistema. Incluye la ejecución de transacciones mediante pasarelas externas, la validación de métodos de pago, la autorización y confirmación de operaciones, así como el seguimiento de estados de cada transacción
+
+**1. Payment (Pago):** Representa la acción de pagar una factura u obligación.
+**2. Payment Method (Método de pago):** Representa el método de pago como tarjeta de crédito, débito, transferencia bancaria. 
+**3. Transaction (Transacción):** Representa el intento de pago y sus datos (monto, método, resultado, etc.).
+**4. Payment reference (Referencia de pago):** Código único para asociar pago con factura.
