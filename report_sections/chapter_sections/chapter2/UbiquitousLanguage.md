@@ -46,19 +46,6 @@ Este contexto se encarga de gestionar y documentar todas las modificaciones que 
 
 ### 2.4.2. Support
 
-**Budget (Presupuestos)**
-
-El contexto de Budget (Presupuestos) se enfoca en la planificación, cálculo y seguimiento de los honorarios para la elaboración de presupuestos y la estimación de ganancias de los proyectos. Este bounded context cubre todos los aspectos relacionados con la gestión financiera de un proyecto, desde la estimación de costos de los especialistas, hasta la evaluación de las ganancias netas que se obtendrán al completar un proyecto. Aquí se definen las modalidades de pago, el cálculo de los honorarios y la asignación de presupuestos.
-
-**1. In-house (Planilla):** Personal contratado de la organización bajo contrato fijo o permanente.  
-**2. Subcontracted (Subcontratado):** Especialista o entidad externa contratada para una tarea específica mediante contrato.  
-**3. Milestone-based (Pago por hito):** Modalidad contractual donde los pagos se efectúan al completar entregables definidos.  
-**4. Time-based (Pago por tiempo):** Modalidad en la que se paga en función de horas o días trabajados.  
-**5. Technical File Preparation Budget (Presupuesto de elaboración del expediente técnico):** Estimación del costo asociado al desarrollo completo del expediente técnico del proyecto.  
-**6. Fees (Honorarios):** Compensación económica por servicios profesionales prestados en el proyecto.  
-**7. Profit (Utilidad):** Ganancia neta obtenida luego de restar todos los costos del ingreso del proyecto.  
-
-
 **Notifications (Notificaciones)**
 
 El contexto de notificaciones se encarga de gestionar el envío de mensajes relevantes dentro del sistema. Estos mensajes son generados por un coordinador y enviados a los usuarios correspondientes, quienes deben tomar conocimiento o realizar alguna acción sobre eventos o situaciones específicas. Las notificaciones se priorizan según su urgencia y se entregan a través de canales definidos.
