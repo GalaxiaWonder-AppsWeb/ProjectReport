@@ -62,152 +62,58 @@ Las preguntas enumeradas con un solo número corresponden a las preguntas princi
 
 La plantilla de datos generales permite obtener información básica sobre los entrevistados, como su entorno, personalidad, herramientas favoritas y preferencias tecnológicas. Esta información sirve como punto de partida para profundizar durante la entrevista.
 
-<style>
-    .interview-table {
+<table style="
         width: 100%;
         text-align: left;
-        font-size: 14px;
-    }
-
-    .interview-table th,
-    .interview-table td {
-        border: 1px solid #000;
-    }
-
-    .interview-table thead {
-        background-color: #f2f2f2;
-    }
-</style>
-
-<table class="interview-table">
+        font-size: 14px;">
   <thead>
     <tr>
-      <th style="width: 50%;">Campo</th>
-      <th style="width: 50%;">Valor</th>
+      <th style="width: 50%; border: 1px solid #000;">Campo</th>
+      <th style="width: 50%; border: 1px solid #000;">Valor</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>Género</td><td></td></tr>
-    <tr><td>Personalidad</td><td></td></tr>
-    <tr><td>Nombre</td><td></td></tr>
-    <tr><td>Edad</td><td></td></tr>
-    <tr><td>Ocupación</td><td></td></tr>
-    <tr><td>Estado Civil</td><td></td></tr>
-    <tr><td>Dispositivos favoritos</td><td></td></tr>
-    <tr><td>Browsers (Safari, Google, Chrome, Mozilla, Edge, etc.)</td><td></td></tr>
-    <tr><td>Canales o medios de comunicación</td><td></td></tr>
-    <tr><td>Marcas e influencers</td><td></td></tr>
+    <tr><td style="border: 1px solid #000;">Género</td><td style="border: 1px solid #000;"></td></tr>
+    <tr><td style="border: 1px solid #000;">Personalidad</td><td style="border: 1px solid #000;"></td></tr>
+    <tr><td style="border: 1px solid #000;">Nombre</td><td style="border: 1px solid #000;"></td></tr>
+    <tr><td style="border: 1px solid #000;">Edad</td><td style="border: 1px solid #000;"></td></tr>
+    <tr><td style="border: 1px solid #000;">Ocupación</td><td style="border: 1px solid #000;"></td></tr>
+    <tr><td style="border: 1px solid #000;">Estado Civil</td><td style="border: 1px solid #000;"></td></tr>
+    <tr><td style="border: 1px solid #000;">Dispositivos favoritos</td><td style="border: 1px solid #000;"></td></tr>
+    <tr><td style="border: 1px solid #000;">Browsers (Safari, Google, Chrome, Mozilla, Edge, etc.)</td><td style="border: 1px solid #000;"></td></tr>
+    <tr><td style="border: 1px solid #000;">Canales o medios de comunicación</td><td style="border: 1px solid #000;"></td></tr>
+    <tr><td style="border: 1px solid #000;">Marcas e influencers</td><td style="border: 1px solid #000;"></td></tr>
   </tbody>
 </table>
 
 ### 2.2.2. Registro de entrevistas
 
-<style>
-  .tabla-entrevista {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: Arial, sans-serif;
-    margin-bottom: 40px;
-  }
-
-  .tabla-entrevista th {
-    text-align: left;
-    padding: 12px;
-    background-color: #f0f0f0;
-    font-size: 22px;
-  }
-
-  .tabla-entrevista td {
-    padding: 0;
-    vertical-align: top;
-    background-color: #fff;
-    border-top: 1px solid #ddd;
-  }
-
-  /* Primera fila: Datos generales */
-  .contenido {
-    display: flex;
-    gap: 24px;
-    align-items: flex-start;
-    background-color: #fafafa;
-    border-radius: 10px;
-    padding: 24px;
-  }
-
-  .datos-texto {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .datos-texto p {
-    margin: 0 0 12px 0;
-    font-size: 18px;
-    font-weight: bold;
-    color: #2c3e50;
-    padding-bottom: 6px;
-  }
-
-  .datos-texto ul {
-    margin: 0;
-    padding-left: 20px;
-    list-style-type: disc;
-    font-size: 1.05em;
-    line-height: 1.7;
-    color: #333;
-  }
-
-  .contenido img {
-    max-width: 40%;
-    height: auto;
-    border-radius: 10px;
-    object-fit: cover;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .resumen-entrevista {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    padding: 24px;
-    margin-top: 12px;
-  }
-
-  .resumen-entrevista p {
-    font-size: 18px;
-    font-weight: bold;
-    color: #2c3e50;
-    margin-bottom: 12px;
-    padding-bottom: 6px;
-  }
-
-  .resumen-entrevista ul {
-    padding-left: 20px;
-    list-style-type: disc;
-    color: #333;
-    font-size: 1em;
-    margin: 0;
-  }
-
-  .resumen-entrevista ul ul {
-    list-style-type: circle;
-    padding-left: 20px;
-  }
-</style>
-
-<table class="tabla-entrevista">
+<table style="
+          width: 100%;
+          border-collapse: collapse;
+          font-family: Arial, sans-serif;
+          margin-bottom: 40px;">
   <thead>
     <tr>
-      <th><strong>SEGMENTO OBJETIVO: CONTRATISTA</strong></th>
-      <th><strong>#1</strong></th>
+      <th style="
+            text-align: left;
+            padding: 12px;
+            background-color: #f0f0f0;
+            font-size: 22px;"><strong>SEGMENTO OBJETIVO: CONTRATISTA</strong></th>
+      <th style="
+            text-align: left;
+            padding: 12px;
+            background-color: #f0f0f0;
+            font-size: 22px;"><strong>#1</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td colspan="2">
-        <div class="contenido">
-          <div class="datos-texto">
-            <p>Datos generales</p>
-            <ul>
+      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
+        <div style="display: flex; gap: 24px; align-items: flex-start; background-color: #fafafa; border-radius: 10px; padding: 24px;">
+          <div style="flex: 1; display: flex; flex-direction: column;">
+            <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Datos generales</p>
+            <ul style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 1.05em; line-height: 1.7; color: #333;">
               <li><strong>Nombres:</strong> William Martín</li>
               <li><strong>Apellidos:</strong> Salcedo Vásquez</li>
               <li><strong>Edad:</strong> 57</li>
@@ -217,15 +123,15 @@ La plantilla de datos generales permite obtener información básica sobre los e
               <li><strong>Duración:</strong> 04:51</li>
             </ul>
           </div>
-          <img src="../../../img/chapter2/william_salcedo.png" alt="Screenshot de la entrevista con William Salcedo">
+          <img style="max-width: 40%; height: auto; border-radius: 10px; object-fit: cover; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);" src="../../../img/chapter2/william_salcedo.png" alt="Screenshot de la entrevista con William Salcedo">
         </div>
       </td>
     </tr>
     <tr>
-      <td colspan="2">
-        <div class="resumen-entrevista">
-          <p>Resumen</p>
-          <ul>
+      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
+        <div style="background-color: #f9f9f9; border-radius: 10px; padding: 24px; margin-top: 12px;">
+          <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Resumen</p>
+          <ul style="padding-left: 20px; list-style-type: disc; color: #333; font-size: 1em; margin: 0;">
             <li><strong>Personalidad:</strong> Guardian. Demuestra un claro respeto por las normas y el cumplimiento de los acuerdos.</li>
             <li><strong>Marcas:</strong> Microsoft y Autodesk Inc. Principalmente sigue marcas porque ofrecen herramientas o soluciones valiosas para su trabajo.</li>
             <li><strong>Uso de tecnología:</strong> Medio, práctico. Posee habilidades de navegación, ofimática y uso de software específico para su trabajo.</li>
@@ -235,14 +141,14 @@ La plantilla de datos generales permite obtener información básica sobre los e
             <li><strong>Background:</strong> Su experiencia ha estado tanto en la parte administrativa (como gerente) como en la parte operativa (como residente de obra), actividad que suele extrañar. </li>
             <li>
               <strong>Frustraciones:</strong>
-              <ul>
+              <ul style="list-style-type: circle; padding-left: 20px;">
                 <li>El factor distancia, pues no siempre puede estar en el lugar de la obra para dar su mejor juicio.</li>
                 <li>La poca interconexión entre sistemas, pues muchos procesos dependen de autorizaciones que terminan en lo manual, muchas veces.</li>
               </ul>
             </li>
             <li>
               <strong>Flujos principales:</strong>
-              <ul>
+              <ul style="list-style-type: circle; padding-left: 20px;">
                 <li>Comunicación / contacto con el cliente.</li>
                 <li>Seguimiento de normativas y acuerdos (contratos).</li>
                 <li>Conceder y solicitar autorización entre distintas áreas.</li>
@@ -261,17 +167,21 @@ La plantilla de datos generales permite obtener información básica sobre los e
 <table class="tabla-entrevista">
   <thead>
     <tr>
-      <th><strong>SEGMENTO OBJETIVO: CONTRATISTA</strong></th>
+      <th style="
+            text-align: left;
+            padding: 12px;
+            background-color: #f0f0f0;
+            font-size: 22px;"><strong>SEGMENTO OBJETIVO: CONTRATISTA</strong></th>
       <th><strong>#2</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td colspan="2">
-        <div class="contenido">
-          <div class="datos-texto">
-            <p>Datos generales</p>
-            <ul>
+      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
+        <div style="display: flex; gap: 24px; align-items: flex-start; background-color: #fafafa; border-radius: 10px; padding: 24px;">
+          <div style="flex: 1; display: flex; flex-direction: column;">
+            <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Datos generales</p>
+            <ul style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 1.05em; line-height: 1.7; color: #333;">
               <li><strong>Nombres:</strong> Mario Encarnación</li>
               <li><strong>Apellidos:</strong> López Saldaña</li>
               <li><strong>Edad:</strong> 64</li>
@@ -281,15 +191,15 @@ La plantilla de datos generales permite obtener información básica sobre los e
               <li><strong>Duración:</strong> 04:37</li>
             </ul>
           </div>
-          <img src="../../../img/chapter2/mario_lopez.png" alt="Screenshot de la entrevista con Mario López">
+          <img style="max-width: 40%; height: auto; border-radius: 10px; object-fit: cover; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);" src="../../../img/chapter2/mario_lopez.png" alt="Screenshot de la entrevista con Mario López">
         </div>
       </td>
     </tr>
     <tr>
-      <td colspan="2">
-        <div class="resumen-entrevista">
-          <p>Resumen</p>
-          <ul>
+      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
+        <div style="background-color: #f9f9f9; border-radius: 10px; padding: 24px; margin-top: 12px;">
+          <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Resumen</p>
+          <ul style="padding-left: 20px; list-style-type: disc; color: #333; font-size: 1em; margin: 0;">
             <li><strong>Personalidad:</strong> Guardián. Lleva la gran responsabilidad de dirigir una empresa con más de 30 años en el mercado que trabaja para el Estado Peruano. El cumplimiento de las normativas, los acuerdos y las expectativas de los clientes son su máxima prioridad.</li>
             <li><strong>Marcas:</strong> Microsoft, Autodesk Inc y S10. Son herramientas que utiliza en su trabajo.</li>
             <li><strong>Uso de tecnología:</strong> Minimo. Su empresa refleja un nivel de adopción de la tecnología bastante bajo, incluyendo prácticas poco convencionales como almacenar archivos en discos duros físicos.</li>
@@ -299,14 +209,14 @@ La plantilla de datos generales permite obtener información básica sobre los e
             <li><strong>Background:</strong> En 1992 fundó su empresa dedicada a la ejecución de obras para empresas privadas, consolidando experiencia como residente de obra. En la actualidad su empresa se dedica a la consultoría y elaboración de expedientes técnicos para el Estado Peruano.</li>
             <li>
               <strong>Frustraciones:</strong>
-              <ul>
+              <ul style="list-style-type: circle; padding-left: 20px;">
                 <li>La adopción de tecnología.</li>
                 <li>Capacitación de personal.</li>
               </ul>
             </li>
             <li>
               <strong>Flujos principales:</strong>
-              <ul>
+              <ul style="list-style-type: circle; padding-left: 20px;">
                 <li>Estudios básicos (medidas descriptivas).</li>
                 <li>Elaboración y seguimiento de calendario.</li>
                 <li>Gestión de observaciones y compatibilidad.</li>
@@ -325,17 +235,21 @@ La plantilla de datos generales permite obtener información básica sobre los e
 <table class="tabla-entrevista">
   <thead>
     <tr>
-      <th><strong>SEGMENTO OBJETIVO: CONTRATISTA</strong></th>
+      <th style="
+            text-align: left;
+            padding: 12px;
+            background-color: #f0f0f0;
+            font-size: 22px;"><strong>SEGMENTO OBJETIVO: CONTRATISTA</strong></th>
       <th><strong>#3</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td colspan="2">
-        <div class="contenido">
-          <div class="datos-texto">
-            <p>Datos generales</p>
-            <ul>
+      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
+        <div style="display: flex; gap: 24px; align-items: flex-start; background-color: #fafafa; border-radius: 10px; padding: 24px;">
+          <div style="flex: 1; display: flex; flex-direction: column;">
+            <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Datos generales</p>
+            <ul style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 1.05em; line-height: 1.7; color: #333;">
               <li><strong>Nombres:</strong> Raúl Fernando</li>
               <li><strong>Apellidos:</strong> Reaño García</li>
               <li><strong>Edad:</strong> 56</li>
@@ -345,15 +259,15 @@ La plantilla de datos generales permite obtener información básica sobre los e
               <li><strong>Duración:</strong> 04:01</li>
             </ul>
           </div>
-          <img src="../../../img/chapter2/raul_reano.png" alt="Screenshot de la entrevista con Raúl Reaño">
+          <img style="max-width: 40%; height: auto; border-radius: 10px; object-fit: cover; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);" src="../../../img/chapter2/raul_reano.png" alt="Screenshot de la entrevista con Raúl Reaño">
         </div>
       </td>
     </tr>
     <tr>
-      <td colspan="2">
-        <div class="resumen-entrevista">
-          <p>Resumen</p>
-          <ul>
+      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
+        <div style="background-color: #f9f9f9; border-radius: 10px; padding: 24px; margin-top: 12px;">
+          <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Resumen</p>
+          <ul style="padding-left: 20px; list-style-type: disc; color: #333; font-size: 1em; margin: 0;">
             <li><strong>Personalidad:</strong> Guardián. Como contratista de ejecución de obra, entiende la importancia de seguir lo establecido en el expediente técnico.</li>
             <li><strong>Marcas:</strong> Microsoft, Autodesk Inc y S10. Son herramientas que utiliza en su trabajo.</li>
             <li><strong>Uso de tecnología:</strong> Mínimo. Su empresa refleja un nivel de adopción de la tecnología bastante bajo, sin un grado de integración completa en las operaciones de empresa.</li>
@@ -363,13 +277,13 @@ La plantilla de datos generales permite obtener información básica sobre los e
             <li><strong>Background:</strong> Es gerente de su propia empresa dedicada a la ejecución de acabados finos en obras, públicas o privadas.</li>
             <li>
               <strong>Frustraciones:</strong>
-              <ul>
+              <ul style="list-style-type: circle; padding-left: 20px;">
                 <li>Realizar consultas al residente de obra ante incompatibilidad de planos.</li>
               </ul>
             </li>
             <li>
               <strong>Flujos principales:</strong>
-              <ul>
+              <ul style="list-style-type: circle; padding-left: 20px;">
                 <li>Seguir y cumplir los lineamientos de el expediente técnico.</li>
                 <li>Realizar consultas o solicitar revisiones ante incompatibilidad de planos.</li>
               </ul>
@@ -386,17 +300,21 @@ La plantilla de datos generales permite obtener información básica sobre los e
 <table class="tabla-entrevista">
   <thead>
     <tr>
-      <th><strong>SEGMENTO OBJETIVO: ESPECIALISTA</strong></th>
+      <th style="
+            text-align: left;
+            padding: 12px;
+            background-color: #f0f0f0;
+            font-size: 22px;"><strong>SEGMENTO OBJETIVO: ESPECIALISTA</strong></th>
       <th><strong>#1</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td colspan="2">
-        <div class="contenido">
-          <div class="datos-texto">
-            <p>Datos generales</p>
-            <ul>
+      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
+        <div style="display: flex; gap: 24px; align-items: flex-start; background-color: #fafafa; border-radius: 10px; padding: 24px;">
+          <div style="flex: 1; display: flex; flex-direction: column;">
+            <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Datos generales</p>
+            <ul style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 1.05em; line-height: 1.7; color: #333;">
               <li><strong>Nombres:</strong> Luis Enrique</li>
               <li><strong>Apellidos:</strong> Agreda Sobrino</li>
               <li><strong>Edad:</strong> 26</li>
@@ -406,15 +324,15 @@ La plantilla de datos generales permite obtener información básica sobre los e
               <li><strong>Duración:</strong> 04:00</li>
             </ul>
           </div>
-          <img src="../../../img/chapter2/luis_agreda.png" alt="Screenshot de la entrevista con Luis Agreda">
+          <img style="max-width: 40%; height: auto; border-radius: 10px; object-fit: cover; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);" src="../../../img/chapter2/luis_agreda.png" alt="Screenshot de la entrevista con Luis Agreda">
         </div>
       </td>
     </tr>
     <tr>
-      <td colspan="2">
-        <div class="resumen-entrevista">
-          <p>Resumen</p>
-          <ul>
+      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
+        <div style="background-color: #f9f9f9; border-radius: 10px; padding: 24px; margin-top: 12px;">
+          <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Resumen</p>
+          <ul style="padding-left: 20px; list-style-type: disc; color: #333; font-size: 1em; margin: 0;">
             <li><strong>Personalidad:</strong> Racional. Busca trabajar de manera eficiente, en el justo nivel de cumplimiento de estándares.</li>
             <li><strong>Marcas:</strong> Microsoft, Autodesk Inc, S10 y Apple. Son marcas que proporcionan herramientas útiles para su trabajo, como Microsoft Project.</li>
             <li><strong>Uso de tecnología:</strong> Bajo. Como asistente de costos y cronograma, se encarga de la digitalización de las operaciones de la empresa para la que trabaja. Para ello, ha tenido que aprender a utilizar todas las herramientas necesarias. Sin embargo, demuestra un bajo nivel de competencia digital, lo que afecta su capacidad de adopción de nuevas herramientas.</li>
@@ -424,14 +342,14 @@ La plantilla de datos generales permite obtener información básica sobre los e
             <li><strong>Background:</strong> Es asistente de costos y cronograma. Se encarga de la fase de digitalización de los procesos para la empresa que trabaja.</li>
             <li>
               <strong>Frustraciones:</strong>
-              <ul>
+              <ul style="list-style-type: circle; padding-left: 20px;">
                 <li>Aprender nuevas herramientas de software.</li>
                 <li>Transferencia de archivos.</li>
               </ul>
             </li>
             <li>
               <strong>Flujos principales:</strong>
-              <ul>
+              <ul style="list-style-type: circle; padding-left: 20px;">
                 <li>Seguir y cumplir los lineamientos de el expediente técnico.</li>
                 <li>Realizar consultas o solicitar revisiones ante incompatibilidad de planos.</li>
               </ul>
@@ -448,17 +366,21 @@ La plantilla de datos generales permite obtener información básica sobre los e
 <table class="tabla-entrevista">
   <thead>
     <tr>
-      <th><strong>SEGMENTO OBJETIVO: ESPECIALISTA</strong></th>
+      <th style="
+            text-align: left;
+            padding: 12px;
+            background-color: #f0f0f0;
+            font-size: 22px;"><strong>SEGMENTO OBJETIVO: ESPECIALISTA</strong></th>
       <th><strong>#2</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td colspan="2">
-        <div class="contenido">
-          <div class="datos-texto">
-            <p>Datos generales</p>
-            <ul>
+      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
+        <div style="display: flex; gap: 24px; align-items: flex-start; background-color: #fafafa; border-radius: 10px; padding: 24px;">
+          <div style="flex: 1; display: flex; flex-direction: column;">
+            <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Datos generales</p>
+            <ul style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 1.05em; line-height: 1.7; color: #333;">
               <li><strong>Nombres:</strong> Manuel Bejamín</li>
               <li><strong>Apellidos:</strong> Anyaypoma Ocon</li>
               <li><strong>Edad:</strong> 45</li>
@@ -468,15 +390,15 @@ La plantilla de datos generales permite obtener información básica sobre los e
               <li><strong>Duración:</strong> 04:47</li>
             </ul>
           </div>
-          <img src="../../../img/chapter2/manuel_anaypoma.png" alt="Screenshot de la entrevista con Manuel Anaypoma">
+          <img style="max-width: 40%; height: auto; border-radius: 10px; object-fit: cover; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);" src="../../../img/chapter2/manuel_anaypoma.png" alt="Screenshot de la entrevista con Manuel Anaypoma">
         </div>
       </td>
     </tr>
     <tr>
-      <td colspan="2">
-        <div class="resumen-entrevista">
-          <p>Resumen</p>
-          <ul>
+      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
+        <div style="background-color: #f9f9f9; border-radius: 10px; padding: 24px; margin-top: 12px;">
+          <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Resumen</p>
+          <ul style="padding-left: 20px; list-style-type: disc; color: #333; font-size: 1em; margin: 0;">
             <li><strong>Personalidad:</strong> Guardián. Demuestra un gran compromiso por mantener el cumplimiento de normativas y estándares, aunque eso resulte en complicaciones.</li>
             <li><strong>Marcas:</strong> Microsoft y Cisco. Marcas de alta envergadura que proporcionan herramientas especializadas, confiables y robustas para su trabajo.</li>
             <li><strong>Uso de tecnología:</strong> Alto. Como jefe de TIC en el INEN, posee un gran entendimiento y habilidad para el manejo de la tecnología, necesario para la posición que ocupa y formando parte de su quehacer diario.</li>
@@ -486,13 +408,13 @@ La plantilla de datos generales permite obtener información básica sobre los e
             <li><strong>Background:</strong> Trabaja en el INEN desde hace más de 10 años como especialista en Redes y Telecomunicaciones.</li>
             <li>
               <strong>Frustraciones:</strong>
-              <ul>
+              <ul style="list-style-type: circle; padding-left: 20px;">
                 <li>Elaboración de documentación exhaustiva en conformidad con la ley.</li>
               </ul>
             </li>
             <li>
               <strong>Flujos principales:</strong>
-              <ul>
+              <ul style="list-style-type: circle; padding-left: 20px;">
                 <li>Reuniones de coordinación de especialistas.</li>
                 <li>Elaboración de documentación para los expedientes técnicos.</li>
               </ul>
@@ -509,17 +431,21 @@ La plantilla de datos generales permite obtener información básica sobre los e
 <table class="tabla-entrevista">
   <thead>
     <tr>
-      <th><strong>SEGMENTO OBJETIVO: ESPECIALISTA</strong></th>
+      <th style="
+            text-align: left;
+            padding: 12px;
+            background-color: #f0f0f0;
+            font-size: 22px;"><strong>SEGMENTO OBJETIVO: ESPECIALISTA</strong></th>
       <th><strong>#3</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td colspan="2">
-        <div class="contenido">
-          <div class="datos-texto">
-            <p>Datos generales</p>
-            <ul>
+      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
+        <div style="display: flex; gap: 24px; align-items: flex-start; background-color: #fafafa; border-radius: 10px; padding: 24px;">
+          <div style="flex: 1; display: flex; flex-direction: column;">
+            <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Datos generales</p>
+            <ul style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 1.05em; line-height: 1.7; color: #333;">
               <li><strong>Nombres:</strong> Jesús Josecarlos</li>
               <li><strong>Apellidos:</strong> Merino Fernández</li>
               <li><strong>Edad:</strong> 35</li>
@@ -529,15 +455,15 @@ La plantilla de datos generales permite obtener información básica sobre los e
               <li><strong>Duración:</strong> 04:55</li>
             </ul>
           </div>
-          <img src="../../../img/chapter2/jesus_merino.png" alt="Screenshot de la entrevista con Jesús Merino">
+          <img style="max-width: 40%; height: auto; border-radius: 10px; object-fit: cover; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);" src="../../../img/chapter2/jesus_merino.png" alt="Screenshot de la entrevista con Jesús Merino">
         </div>
       </td>
     </tr>
     <tr>
-      <td colspan="2">
-        <div class="resumen-entrevista">
-          <p>Resumen</p>
-          <ul>
+      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
+        <div style="background-color: #f9f9f9; border-radius: 10px; padding: 24px; margin-top: 12px;">
+          <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Resumen</p>
+          <ul style="padding-left: 20px; list-style-type: disc; color: #333; font-size: 1em; margin: 0;">
             <li><strong>Personalidad:</strong> Guardián. Demuestra un profundo entendimiento y aceptación de las normativas que constriñen su trabajo y se alinea siempre a su cumplimiento.</li>
             <li><strong>Marcas:</strong> Autodesk Inc y Microsoft. Principalmente por software especializado de trabajo.</li>
             <li><strong>Uso de tecnología:</strong> Medio. Posee dominio suficiente de la tecnología que utiliza y la integra naturalmente en su flujo de trabajo diario.</li>
@@ -547,14 +473,14 @@ La plantilla de datos generales permite obtener información básica sobre los e
             <li><strong>Background:</strong> Es ingeniero civil de profesión y tiene un profundo entendimiento del funcionamiento del proceso de planificación y ejecución de proyectos.</li>
             <li>
               <strong>Frustraciones:</strong>
-              <ul>
+              <ul style="list-style-type: circle; padding-left: 20px;">
                 <li>Solucionar errores en los expedientes técnicos causados por mala praxis de otros especialistas de área.</li>
                 <li>Coordinar la elaboración del expediente técnico en conjunto a múltiples especialistas de área.</li>
               </ul>
             </li>
             <li>
               <strong>Flujos principales:</strong>
-              <ul>
+              <ul style="list-style-type: circle; padding-left: 20px;">
                 <li>Reuniones de coordinación de especialistas.</li>
                 <li>Cumplir con los entregables (avances de los expedientes por etapas).</li>
                 <li>Cálculo de materiales de obra y precios unitarios (presupuesto por área de especialidad).</li>
@@ -573,17 +499,21 @@ La plantilla de datos generales permite obtener información básica sobre los e
 <table class="tabla-entrevista">
   <thead>
     <tr>
-      <th><strong>SEGMENTO OBJETIVO: ENTIDAD CONTRATANTE</strong></th>
+      <th style="
+            text-align: left;
+            padding: 12px;
+            background-color: #f0f0f0;
+            font-size: 22px;"><strong>SEGMENTO OBJETIVO: ENTIDAD CONTRATANTE</strong></th>
       <th><strong>#1</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td colspan="2">
-        <div class="contenido">
-          <div class="datos-texto">
-            <p>Datos generales</p>
-            <ul>
+      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
+        <div style="display: flex; gap: 24px; align-items: flex-start; background-color: #fafafa; border-radius: 10px; padding: 24px;">
+          <div style="flex: 1; display: flex; flex-direction: column;">
+            <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Datos generales</p>
+            <ul style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 1.05em; line-height: 1.7; color: #333;">
               <li><strong>Nombres:</strong> Aldo Kevin</li>
               <li><strong>Apellidos:</strong> Apolinario Vivas</li>
               <li><strong>Edad:</strong> 34</li>
@@ -593,15 +523,15 @@ La plantilla de datos generales permite obtener información básica sobre los e
               <li><strong>Duración:</strong> 03:00</li>
             </ul>
           </div>
-          <img src="../../../img/chapter2/kevin_apolinario.png" alt="Screenshot de la entrevista con Kevin Apolinario">
+          <img style="max-width: 40%; height: auto; border-radius: 10px; object-fit: cover; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);" src="../../../img/chapter2/kevin_apolinario.png" alt="Screenshot de la entrevista con Kevin Apolinario">
         </div>
       </td>
     </tr>
     <tr>
-      <td colspan="2">
-        <div class="resumen-entrevista">
-          <p>Resumen</p>
-          <ul>
+      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
+        <div style="background-color: #f9f9f9; border-radius: 10px; padding: 24px; margin-top: 12px;">
+          <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Resumen</p>
+          <ul style="padding-left: 20px; list-style-type: disc; color: #333; font-size: 1em; margin: 0;">
             <li><strong>Personalidad:</strong> Idealista. Persigue sus objetivos personales sin comprometer su ética.</li>
             <li><strong>Marcas:</strong> Podcasts de educación en general.</li>
             <li><strong>Uso de tecnología:</strong> Medio-bajo. Usa frecuentemente la tecnología a nivel personal para consumir contenidos en línea.</li>
@@ -611,13 +541,13 @@ La plantilla de datos generales permite obtener información básica sobre los e
             <li><strong>Background:</strong> Trabaja en el INEN desde hace más de 10 años como especialista en Redes y Telecomunicaciones.</li>
             <li>
               <strong>Frustraciones:</strong>
-              <ul>
+              <ul style="list-style-type: circle; padding-left: 20px;">
                 <li>Asegurar que sus expectativas sean cumplidas por el proyectista.</li>
               </ul>
             </li>
             <li>
               <strong>Flujos principales:</strong>
-              <ul>
+              <ul style="list-style-type: circle; padding-left: 20px;">
                 <li>Contactar con el proyectista.</li>
                 <li>Presentar el requerimiento del proyecto.</li>
               </ul>
@@ -634,17 +564,21 @@ La plantilla de datos generales permite obtener información básica sobre los e
 <table class="tabla-entrevista">
   <thead>
     <tr>
-      <th><strong>SEGMENTO OBJETIVO: ENTIDAD CONTRATANTE</strong></th>
+      <th style="
+            text-align: left;
+            padding: 12px;
+            background-color: #f0f0f0;
+            font-size: 22px;"><strong>SEGMENTO OBJETIVO: ENTIDAD CONTRATANTE</strong></th>
       <th><strong>#2</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td colspan="2">
-        <div class="contenido">
-          <div class="datos-texto">
-            <p>Datos generales</p>
-            <ul>
+      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
+        <div style="display: flex; gap: 24px; align-items: flex-start; background-color: #fafafa; border-radius: 10px; padding: 24px;">
+          <div style="flex: 1; display: flex; flex-direction: column;">
+            <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Datos generales</p>
+            <ul style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 1.05em; line-height: 1.7; color: #333;">
               <li><strong>Nombres:</strong> Lucero Martina</li>
               <li><strong>Apellidos:</strong> Villanes Santillán</li>
               <li><strong>Edad:</strong> 26</li>
@@ -654,15 +588,15 @@ La plantilla de datos generales permite obtener información básica sobre los e
               <li><strong>Duración:</strong> 01:44</li>
             </ul>
           </div>
-          <img src="../../../img/chapter2/lucero_villanes.png" alt="Screenshot de la entrevista con Kevin Apolinario">
+          <img style="max-width: 40%; height: auto; border-radius: 10px; object-fit: cover; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);" src="../../../img/chapter2/lucero_villanes.png" alt="Screenshot de la entrevista con Kevin Apolinario">
         </div>
       </td>
     </tr>
     <tr>
-      <td colspan="2">
-        <div class="resumen-entrevista">
-          <p>Resumen</p>
-          <ul>
+      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
+        <div style="background-color: #f9f9f9; border-radius: 10px; padding: 24px; margin-top: 12px;">
+          <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Resumen</p>
+          <ul style="padding-left: 20px; list-style-type: disc; color: #333; font-size: 1em; margin: 0;">
             <li><strong>Personalidad:</strong> Idealista. Persigue sus objetivos personales sin comprometer su ética.</li>
             <li><strong>Marcas:</strong> Vlogs en general.</li>
             <li><strong>Uso de tecnología:</strong> Medio-bajo. Usa frecuentemente la tecnología a nivel personal para consumir contenidos en línea.</li>
@@ -672,13 +606,13 @@ La plantilla de datos generales permite obtener información básica sobre los e
             <li><strong>Background:</strong> Es ingeniera industrial con 5 años de experiencia en el año de logística.</li>
             <li>
               <strong>Frustraciones:</strong>
-              <ul>
+              <ul style="list-style-type: circle; padding-left: 20px;">
                 <li>Asegurar que el proyecto sea finalizado a tiempo.</li>
               </ul>
             </li>
             <li>
               <strong>Flujos principales:</strong>
-              <ul>
+              <ul style="list-style-type: circle; padding-left: 20px;">
                 <li>Contactar con el proyectista.</li>
                 <li>Supervisar el avance del proyecto.</li>
               </ul>
@@ -695,17 +629,21 @@ La plantilla de datos generales permite obtener información básica sobre los e
 <table class="tabla-entrevista">
   <thead>
     <tr>
-      <th><strong>SEGMENTO OBJETIVO: ENTIDAD CONTRATANTE</strong></th>
+      <th style="
+            text-align: left;
+            padding: 12px;
+            background-color: #f0f0f0;
+            font-size: 22px;"><strong>SEGMENTO OBJETIVO: ENTIDAD CONTRATANTE</strong></th>
       <th><strong>#3</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td colspan="2">
-        <div class="contenido">
-          <div class="datos-texto">
-            <p>Datos generales</p>
-            <ul>
+      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
+        <div style="display: flex; gap: 24px; align-items: flex-start; background-color: #fafafa; border-radius: 10px; padding: 24px;">
+          <div style="flex: 1; display: flex; flex-direction: column;">
+            <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Datos generales</p>
+            <ul style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 1.05em; line-height: 1.7; color: #333;">
               <li><strong>Nombres:</strong> Álvaro Martín</li>
               <li><strong>Apellidos:</strong> Torres Huamaní</li>
               <li><strong>Edad:</strong> 27</li>
@@ -715,15 +653,15 @@ La plantilla de datos generales permite obtener información básica sobre los e
               <li><strong>Duración:</strong> 03:56</li>
             </ul>
           </div>
-          <img src="../../../img/chapter2/alvaro_torres.png" alt="Screenshot de la entrevista con Kevin Apolinario">
+          <img style="max-width: 40%; height: auto; border-radius: 10px; object-fit: cover; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);" src="../../../img/chapter2/alvaro_torres.png" alt="Screenshot de la entrevista con Kevin Apolinario">
         </div>
       </td>
     </tr>
     <tr>
-      <td colspan="2">
-        <div class="resumen-entrevista">
-          <p>Resumen</p>
-          <ul>
+      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
+        <div style="background-color: #f9f9f9; border-radius: 10px; padding: 24px; margin-top: 12px;">
+          <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Resumen</p>
+          <ul style="padding-left: 20px; list-style-type: disc; color: #333; font-size: 1em; margin: 0;">
             <li><strong>Personalidad:</strong> Idealista. Demuestra ser bastante deliberado en cuanto persigue sus objetivos y metas personales.</li>
             <li><strong>Marcas:</strong> Álvaro Soler.</li>
             <li><strong>Uso de tecnología:</strong> Medio-bajo. Usa frecuentemente la tecnología a nivel personal para consumir contenidos en línea.</li>
@@ -733,13 +671,13 @@ La plantilla de datos generales permite obtener información básica sobre los e
             <li><strong>Background:</strong> Es electricista de profesión y está comenzando a formar una familia.</li>
             <li>
               <strong>Frustraciones:</strong>
-              <ul>
+              <ul style="list-style-type: circle; padding-left: 20px;">
                 <li>Asegurar que el proyectista haga un trabajo de calidad.</li>
               </ul>
             </li>
             <li>
               <strong>Flujos principales:</strong>
-              <ul>
+              <ul style="list-style-type: circle; padding-left: 20px;">
                 <li>Contactar con el proyectista.</li>
                 <li>Supervisar el avance del proyecto.</li>
               </ul>
@@ -750,6 +688,8 @@ La plantilla de datos generales permite obtener información básica sobre los e
     </tr>
   </tbody>
 </table>
+
+<div style="page-break-after: always;"></div>
 
 ### 2.2.3. Análisis de entrevistas
 
@@ -778,6 +718,8 @@ La plantilla de datos generales permite obtener información básica sobre los e
 | S10 | 2 | 25% | 66.7% |
 | **Total** | 8 | 100% | - |
 
+<div style="page-break-after: always;"></div>
+
 **5. Uso de tecnología:** La gran mayoría de los entrevistados (66.7%) demostró un nivel bajo de dominio e integración de la tecnología en su trabajo y vida diaria, mientras que la menor parte (33.3%) mostró un nivel intermedio. Se toma como nivel de uso de tecnología representativo el nivel Bajo.
 
 | Nivel de uso de tecnología | Frecuencia Absoluta | % de entrevistados en este nivel |
@@ -803,6 +745,8 @@ La plantilla de datos generales permite obtener información básica sobre los e
 | Google Chrome | 3 | 100% | 100% |
 | **Total** | 3 | 100% | - |
 
+<div style="page-break-after: always;"></div>
+
 **8. Dispositivos:** La totalidad de los entrevistados (100%) mencionó utilizar el celular como herramienta principal para acceder a recursos digitales. La gran mayoría (66.7%) reportó el uso de Laptops, mientras que una menor parte reportó el uso de computadoras de escritorio (33.3%). Se toma como representativa la clara tendencia hacia la portabilidad (Celular y Laptop).
 
 | Dispositivo | Frecuencia Absoluta | Frecuencia Relativa | Entrevistados que lo usan (%) |
@@ -824,6 +768,8 @@ La plantilla de datos generales permite obtener información básica sobre los e
 | Seguimiento del contrato | 2 | 18.2% | 66.7% |
 | Gestión de observaciones y compatibilidad de planos | 2 | 18.2% | 66.7% |
 | **Total** | 11 | 100% | - |
+
+<div style="page-break-after: always;"></div>
 
 **ESPECIALISTA DE ÁREA**
 
@@ -851,6 +797,8 @@ La plantilla de datos generales permite obtener información básica sobre los e
 | Cisco | 1 | 12.5% | 33.3% |
 | Apple | 1 | 12.5% | 33.3% |
 | **Total** | 8 | 100% | - |
+
+<div style="page-break-after: always;"></div>
 
 **5. Uso de tecnología:** Los entrevistados mostraron niveles de dominio de la tecnología variados, que se correlacionan tanto con su edad como con sus respectivas especialidades. Se asigna un peso numérico a los niveles de habilidad y se toma como representativo el nivel que tenga como nivel el más próximo al promedio ponderado (Medio).
 
@@ -880,6 +828,8 @@ La plantilla de datos generales permite obtener información básica sobre los e
 | Internet Explorer | 1 | 20% | 33.% |
 | **Total** | 5 | 100% | - |
 
+<div style="page-break-after: always;"></div>
+
 **8. Dispositivos:** La totalidad de los entrevistados (100%) mencionó utilizar el celular como herramienta principal para acceder a recursos digitales. La gran mayoría (66.7%) reportó el uso de Laptops, mientras que una menor parte reportó el uso de computadoras de escritorio (33.3%). Se toma como representativa la clara tendencia hacia la portabilidad (Celular y Laptop).
 
 | Dispositivo | Frecuencia Absoluta | Frecuencia Relativa | Entrevistados que lo usan (%) |
@@ -907,58 +857,60 @@ La plantilla de datos generales permite obtener información básica sobre los e
   <tbody>
     <tr>
       <td rowspan="2"><strong>Comunicación e intercambio de información</strong></td>
-      <td>Reuniones de coordinación de especialistas</td>
-      <td>2</td>
-      <td>25%</td>
-      <td>2</td>
+      <td style="border: 1px solid #000;">Reuniones de coordinación de especialistas</td>
+      <td style="border: 1px solid #000;">2</td>
+      <td style="border: 1px solid #000;">25%</td>
+      <td style="border: 1px solid #000;">2</td>
     </tr>
     <tr>
-      <td>Realizar consultas o solicitar revisiones ante incompatibilidad de planos</td>
-      <td>1</td>
-      <td>12.5%</td>
-      <td>1</td>
+      <td style="border: 1px solid #000;">Realizar consultas o solicitar revisiones ante incompatibilidad de planos</td>
+      <td style="border: 1px solid #000;">1</td>
+      <td style="border: 1px solid #000;">12.5%</td>
+      <td style="border: 1px solid #000;">1</td>
     </tr>
     <tr>
       <td rowspan="2"><strong>Seguimiento y cumplimiento de planificación</strong></td>
-      <td>Seguir y cumplir los lineamientos de el expediente técnico</td>
-      <td>1</td>
-      <td>12.5%</td>
-      <td>1</td>
+      <td style="border: 1px solid #000;">Seguir y cumplir los lineamientos de el expediente técnico</td>
+      <td style="border: 1px solid #000;">1</td>
+      <td style="border: 1px solid #000;">12.5%</td>
+      <td style="border: 1px solid #000;">1</td>
     </tr>
     <tr>
-      <td>Cumplir con los entregables</td>
-      <td>1</td>
-      <td>12.5%</td>
-      <td>1</td>
+      <td style="border: 1px solid #000;">Cumplir con los entregables</td>
+      <td style="border: 1px solid #000;">1</td>
+      <td style="border: 1px solid #000;">12.5%</td>
+      <td style="border: 1px solid #000;">1</td>
     </tr>
     <tr>
       <td rowspan="3"><strong>Análisis de información y elaboración de documentación</strong></td>
-      <td>Analizar datos para identificar posibles riesgos</td>
-      <td>1</td>
-      <td>12.5%</td>
-      <td>1</td>
+      <td style="border: 1px solid #000;">Analizar datos para identificar posibles riesgos</td>
+      <td style="border: 1px solid #000;">1</td>
+      <td style="border: 1px solid #000;">12.5%</td>
+      <td style="border: 1px solid #000;">1</td>
     </tr>
     <tr>
-      <td>Cálculo de materiales de obra y precios unitarios</td>
-      <td>1</td>
-      <td>12.5%</td>
-      <td>1</td>
+      <td style="border: 1px solid #000;">Cálculo de materiales de obra y precios unitarios</td>
+      <td style="border: 1px solid #000;">1</td>
+      <td style="border: 1px solid #000;">12.5%</td>
+      <td style="border: 1px solid #000;">1</td>
     </tr>
     <tr>
-      <td>Elaboración de documentación para los expedientes técnicos</td>
-      <td>1</td>
-      <td>12.5%</td>
-      <td>1</td>
+      <td style="border: 1px solid #000;">Elaboración de documentación para los expedientes técnicos</td>
+      <td style="border: 1px solid #000;">1</td>
+      <td style="border: 1px solid #000;">12.5%</td>
+      <td style="border: 1px solid #000;">1</td>
     </tr>
     <tr>
-      <td><strong>Total</strong></td>
-      <td>8</td>
-      <td>100%</td>
-      <td>-</td>
-      <td></td>
+      <td style="border: 1px solid #000;"><strong>Total</strong></td>
+      <td style="border: 1px solid #000;">8</td>
+      <td style="border: 1px solid #000;">100%</td>
+      <td style="border: 1px solid #000;">-</td>
+      <td style="border: 1px solid #000;"></td>
     </tr>
   </tbody>
 </table>
+
+<div style="page-break-after: always;"></div>
 
 **ENTIDAD CONTRATANTE**
 
@@ -984,6 +936,8 @@ La plantilla de datos generales permite obtener información básica sobre los e
 | Vlogs en general | 1 | 33.3% | 33.3% |
 | Podcasts en general | 1 | 33.3% | 33.3% |
 | **Total** | 8 | 100% | - |
+
+<div style="page-break-after: always;"></div>
 
 **5. Uso de tecnología:** La totalidad de los entrevistados (100%) demostraron un nivel de uso de la tecnología Medio. Se toma este nivel como representativo.
 
@@ -1011,6 +965,8 @@ La plantilla de datos generales permite obtener información básica sobre los e
 | Safari | 1 | 20% | 33.3% |
 | Edge | 1 | 20% | 33.3% |
 | **Total** | 5 | 100% | - |
+
+<div style="page-break-after: always;"></div>
 
 **8. Dispositivos:** La totalidad de los entrevistados (100%) mencionó utilizar el celular como herramienta principal para acceder a recursos digitales. De ellos, la gran mayoría (66.7%) reportó el uso de Laptops. Se toma como representativa la clara tendencia hacia la portabilidad (Celular y Laptop).
 
