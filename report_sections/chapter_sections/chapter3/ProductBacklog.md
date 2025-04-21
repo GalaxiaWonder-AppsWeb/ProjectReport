@@ -774,5 +774,432 @@
             <td>Como usuario suscriptor, quiero poder actualizar mi plan de suscripción a uno superior o inferior, para que mi suscripción se ajuste a mis necesidades actuales</td>
             <td>1</td>
         </tr>
+        </tr>        <tr>
+            <td>128</td>
+            <td>TS01</td>
+            <td>Crear organización</td>
+            <td>Como Developer, quiero implementar un endpoint que permita registrar una nueva organización para que los contratistas puedan iniciar la gestión de sus proyectos dentro del sistema</td>
+            <td>3</td>
+        </tr>
+        </tr>        <tr>
+            <td>129</td>
+            <td>TS02</td>
+            <td>Listar organizaciones</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener todas las organizaciones a las que pertenece un usuario para que pueda visualizar y gestionar aquellas donde tiene participación activa</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>130</td>
+            <td>TS03</td>
+            <td>Detalles de una organización</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener los detalles de una organización específica para que los usuarios puedan visualizar su información completa y actualizada</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>131</td>
+            <td>TS04</td>
+            <td>Actualizar información de organización</td>
+            <td>Como Developer, quiero implementar un endpoint que permita actualizar los datos de una organización para que los contratistas puedan mantener su información empresarial al día, incluyendo la posibilidad de eliminar ciertos campos</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>132</td>
+            <td>TS05</td>
+            <td>Eliminar organización</td>
+            <td>Como Developer, quiero implementar un endpoint que permita iniciar la eliminación de una organización, cambiando su estado a pendiente de eliminación para permitir su recuperación antes de eliminarla definitivamente</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>133</td>
+            <td>TS08</td>
+            <td>Añadir proyecto a organización</td>
+            <td>Como Developer, quiero implementar un endpoint que permita registrar un nuevo proyecto vinculado a una organización existente, para que los contratistas puedan iniciar la gestión de sus proyectos dentro del sistema</td>
+            <td>2</td>
+        </tr>
+        </tr>        <tr>
+            <td>134</td>
+            <td>TS09</td>
+            <td>Listar proyectos de organización</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener todos los proyectos asociados a una organización, para que los usuarios autorizados puedan visualizarlos y gestionarlos</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>135</td>
+            <td>TS10</td>
+            <td>Detalles de un proyecto</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener los detalles de un proyecto específico para que los usuarios autorizados puedan visualizar su información completa y actualizada</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>136</td>
+            <td>TS57</td>
+            <td>Eliminar proyecto (soft delete)</td>
+            <td>Como Developer, quiero implementar un endpoint que permita marcar un proyecto como eliminado (soft delete), para preservar sus datos temporalmente y permitir su recuperación antes de ser eliminado definitivamente</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>137</td>
+            <td>TS14</td>
+            <td>Actualizar información de proyecto </td>
+            <td>Como Developer, quiero implementar un endpoint que permita actualizar el nombre y el estado de un proyecto, para reflejar cambios en su identidad o etapa de ejecución</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>138</td>
+            <td>TS06</td>
+            <td>Añadir miembro a organización</td>
+            <td>Como Developer, quiero implementar un endpoint que permita añadir un nuevo miembro a una organización existente, asignándole un rol específico, para que pueda colaborar en la gestión de los proyectos de dicha organización</td>
+            <td>2</td>
+        </tr>
+        </tr>        <tr>
+            <td>139</td>
+            <td>TS07</td>
+            <td>Actualizar estado de miembro de organización</td>
+            <td>Como Developer, quiero implementar un endpoint que permita actualizar el estado de un miembro dentro de una organización para gestionar su acceso según las necesidades administrativas (por ejemplo, activo, suspendido o removido)</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>140</td>
+            <td>TS11</td>
+            <td>Añadir miembro de equipo con salario a proyecto</td>
+            <td>Como Developer, quiero implementar un endpoint que permita añadir un miembro de la organización a un proyecto para que pueda participar formalmente en su ejecución con un rol asignado</td>
+            <td>2</td>
+        </tr>
+        </tr>        <tr>
+            <td>141</td>
+            <td>TS12</td>
+            <td>Listar miembros de proyecto</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener la lista de miembros asignados a un proyecto para que los usuarios autorizados puedan visualizar quiénes forman parte del equipo</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>142</td>
+            <td>TS58</td>
+            <td>Eliminar usuario de proyecto</td>
+            <td>Como Developer, quiero implementar un endpoint que permita eliminar a un usuario del equipo de un proyecto, para que ya no tenga acceso ni participación activa en dicho proyecto</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>143</td>
+            <td>TS13</td>
+            <td>Actualizar información de miembro de proyecto</td>
+            <td>Como Developer, quiero implementar un endpoint que permita actualizar el rol de un miembro dentro de un proyecto, para mantener alineadas sus responsabilidades con las necesidades operativas del equipo</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>144</td>
+            <td>TS15</td>
+            <td>Crear cronograma de proyecto</td>
+            <td>Como Developer, quiero implementar un endpoint que permita crear un cronograma para un proyecto existente, para que los contratistas puedan planificar y gestionar las actividades clave en una línea de tiempo</td>
+            <td>3</td>
+        </tr>
+        </tr>        <tr>
+            <td>145</td>
+            <td>TS16</td>
+            <td>Obtener detalles de cronograma</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener los detalles del cronograma asociado a un proyecto, para que los usuarios puedan visualizar su planificación estructurada</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>146</td>
+            <td>TS17</td>
+            <td>Añadir hito al cronograma</td>
+            <td>Como Developer, quiero implementar un endpoint que permita registrar un nuevo hito dentro del cronograma de un proyecto, para reflejar eventos clave dentro de su planificación</td>
+            <td>2</td>
+        </tr>
+        </tr>        <tr>
+            <td>147</td>
+            <td>TS18</td>
+            <td>Listar hitos del cronograma</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener todos los hitos registrados en el cronograma de un proyecto, para que los usuarios puedan visualizar los eventos clave del mismo</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>148</td>
+            <td>TS19</td>
+            <td>Obtener detalles de hito</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener la información detallada de un hito registrado en el cronograma de un proyecto, para que los usuarios puedan revisar su contenido y estado</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>149</td>
+            <td>TS20</td>
+            <td>Actualizar información de hito</td>
+            <td>Como Developer, quiero implementar un endpoint que permita actualizar el estado y la duración de un hito, para reflejar el avance real del cronograma y ajustar las estimaciones según la ejecución del proyecto</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>150</td>
+            <td>TS21</td>
+            <td>Crear reunión</td>
+            <td>Como Developer, quiero implementar un endpoint que permita crear una reunión vinculada a un proyecto, para que los contratistas puedan organizar y coordinar las reuniones del equipo</td>
+            <td>3</td>
+        </tr>
+        </tr>        <tr>
+            <td>151</td>
+            <td>TS22</td>
+            <td>Listar todas las reuniones de un hito</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener todas las reuniones asociadas a un hito específico dentro del cronograma de un proyecto, para facilitar su visualización y gestión</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>152</td>
+            <td>TS23</td>
+            <td>Obtener detalles de reunión</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener los detalles completos de una reunión específica registrada en un proyecto, para que los usuarios puedan acceder a la información relevante de la reunión</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>153</td>
+            <td>TS24</td>
+            <td>Actualizar información de reunión</td>
+            <td>Como Developer, quiero implementar un endpoint que permita actualizar la fecha y los detalles generales de una reunión registrada, para reflejar cambios en la planificación o ajustes de última hora</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>154</td>
+            <td>TS59</td>
+            <td>Eliminar reunión</td>
+            <td>Como Developer, quiero implementar un endpoint que permita eliminar una reunión registrada en un proyecto, para que los contratistas puedan gestionar las reuniones que ya no son necesarias</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>155</td>
+            <td>TS25</td>
+            <td>Añadir asistente de reunión</td>
+            <td>Como Developer, quiero implementar un endpoint que permita añadir un asistente a una reunión registrada, para que los participantes sean notificados y tengan acceso a la reunión</td>
+            <td>2</td>
+        </tr>
+        </tr>        <tr>
+            <td>156</td>
+            <td>TS26</td>
+            <td>Edita/eliminar asistente de reunión</td>
+            <td>Como Developer, quiero implementar un endpoint que permita editar o eliminar un asistente de una reunión, para mantener actualizada la lista de participantes en caso de cambios en la asistencia</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>157</td>
+            <td>TS27</td>
+            <td>Crear tarea</td>
+            <td>Como Developer, quiero implementar un endpoint que permita crear una nueva tarea en un proyecto, para que los contratistas puedan organizar y asignar actividades dentro del cronograma del proyecto</td>
+            <td>2</td>
+        </tr>
+        </tr>        <tr>
+            <td>158</td>
+            <td>TS61</td>
+            <td>Eliminar tarea</td>
+            <td>Como Developer, quiero implementar un endpoint que permita eliminar una tarea asociada a un proyecto, para que los contratistas puedan gestionar las actividades del proyecto eliminando tareas innecesarias o incorrectas</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>159</td>
+            <td>TS28</td>
+            <td>Listar tareas de hito</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener todas las tareas asociadas a un hito específico dentro de un proyecto, para que los usuarios puedan visualizar todas las actividades vinculadas a ese hito en particular</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>160</td>
+            <td>TS35</td>
+            <td>Obtener detalles de desempeño de hito</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener los detalles del desempeño de un hito específico, incluyendo el desempeño de las tareas asociadas a ese hito, para que los usuarios puedan evaluar el avance y la puntualidad en los entregables del proyecto</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>161</td>
+            <td>TS29</td>
+            <td>Obtener detalles de tarea</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener los detalles completos de una tarea asociada a un proyecto, para que los usuarios puedan visualizar toda la información relevante de la tarea</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>162</td>
+            <td>TS30</td>
+            <td>Actualizar información de tarea</td>
+            <td>Como Developer, quiero implementar un endpoint que permita actualizar la información de una tarea registrada en un proyecto, para que los contratistas puedan ajustar los detalles, responsable y fechas conforme a la evolución del proyecto</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>163</td>
+            <td>TS60</td>
+            <td>Subir entregable de tarea</td>
+            <td>Como Developer, quiero implementar un endpoint que permita subir un entregable asociado a una tarea dentro de un proyecto, para que los contratistas puedan registrar avances y documentación de trabajo</td>
+            <td>2</td>
+        </tr>
+        </tr>        <tr>
+            <td>164</td>
+            <td>TS31</td>
+            <td>Crear solicitud de cambio</td>
+            <td>Como Developer, quiero implementar un endpoint que permita a los clientes crear una solicitud de cambio dentro de un proyecto, para que los cambios solicitados sean registrados y procesados de manera adecuada</td>
+            <td>2</td>
+        </tr>
+        </tr>        <tr>
+            <td>165</td>
+            <td>TS32</td>
+            <td>Listar solicitudes de cambio</td>
+            <td>Como Developer, quiero implementar un endpoint que permita listar todas las solicitudes de cambio asociadas a un proyecto, para que los usuarios puedan ver todas las modificaciones solicitadas por los clientes</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>166</td>
+            <td>TS33</td>
+            <td>Obtener detalles de solicitud de cambio</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener los detalles completos de una solicitud de cambio asociada a un proyecto, para que los usuarios puedan revisar a fondo la solicitud y tomar decisiones informadas</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>167</td>
+            <td>TS34</td>
+            <td>Aceptar/Denegar solicitud de cambio</td>
+            <td>Como Developer, quiero implementar un endpoint que permita aceptar o denegar una solicitud de cambio, para que los contratistas puedan procesar las solicitudes de cambio de acuerdo con la viabilidad del proyecto</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>168</td>
+            <td>TS56</td>
+            <td>Pagar factura</td>
+            <td>Como Developer, quiero implementar un endpoint que permita a los usuarios pagar sus facturas utilizando una pasarela de pagos, como Stripe, para asegurar un proceso de pago seguro y eficiente</td>
+            <td>2</td>
+        </tr>
+        </tr>        <tr>
+            <td>169</td>
+            <td>TS55</td>
+            <td>Visualizar plan de suscripción</td>
+            <td>Como Developer, quiero implementar un endpoint que permita a los usuarios visualizar el plan de suscripción actual al que están suscritos, para que puedan revisar los detalles de su suscripción activa</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>170</td>
+            <td>TS54</td>
+            <td>Actualizar plan de suscripción</td>
+            <td>Como Developer, quiero implementar un endpoint que permita a los usuarios actualizar su plan de suscripción, para que puedan cambiar a un plan superior o inferior según sus necesidades</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>171</td>
+            <td>TS51</td>
+            <td>Listar facturas de usuario</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener el listado de facturas asociadas a un usuario, para que el usuario pueda consultar el historial de facturación relacionado con sus suscripciones</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>172</td>
+            <td>TS53</td>
+            <td>Selección del plan de suscripción</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener el listado de facturas asociadas a un usuario, para que el usuario pueda consultar el historial de facturación relacionado con sus suscripciones</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>173</td>
+            <td>TS52</td>
+            <td>Estado de una factura</td>
+            <td>Como Developer, quiero implementar un endpoint que permita consultar el estado de una factura asociada a un usuario, para que el usuario pueda conocer si la factura está pagada, pendiente o vencida</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>174</td>
+            <td>TS50</td>
+            <td>Corroborar nivel de acceso</td>
+            <td>Como Developer, quiero implementar una verificación de nivel de acceso en cada solicitud del usuario, para asegurar que solo puedan ejecutar acciones autorizadas según su rol</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>175</td>
+            <td>TS45</td>
+            <td>Cambiar contraseña</td>
+            <td>Como Developer, quiero implementar un endpoint que permita a un usuario autenticado cambiar su contraseña actual, para mantener la seguridad de su cuenta</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>176</td>
+            <td>TS49</td>
+            <td>Límite de intentos de login</td>
+            <td>Como Developer, quiero implementar un mecanismo que limite la cantidad de intentos fallidos de inicio de sesión, para prevenir ataques de fuerza bruta contra las credenciales de los usuarios</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>177</td>
+            <td>TS46</td>
+            <td>Solicitar recuperar contraseña</td>
+            <td>Como Developer, quiero implementar un endpoint que permita a los usuarios solicitar la recuperación de su contraseña mediante correo electrónico, para que puedan restablecerla si la han olvidado</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>178</td>
+            <td>TS48</td>
+            <td>Encriptación segura de credenciales</td>
+            <td>Como Developer, quiero implementar una función de encriptación de credenciales mediante salteo y hasheo, para garantizar que las contraseñas de los usuarios no se almacenen ni se procesen nunca en texto plano</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>179</td>
+            <td>TS47</td>
+            <td>Renovar contraseña</td>
+            <td>Como Developer, quiero implementar un endpoint que permita a los usuarios restablecer su contraseña usando un token de recuperación válido, para que puedan recuperar el acceso a su cuenta de forma segura</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>180</td>
+            <td>TS40</td>
+            <td>Actualizar datos de perfil</td>
+            <td>Como Developer, quiero implementar un endpoint que permita actualizar la información profesional y otros detalles del perfil de un usuario, para que su perfil refleje su experiencia y habilidades más actuales</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>181</td>
+            <td>TS44</td>
+            <td>Registro</td>
+            <td>Como Developer, quiero implementar un endpoint de registro que permita a nuevos usuarios crear una cuenta proporcionando su información básica, para que puedan autenticarse y acceder al sistema</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>182</td>
+            <td>TS41</td>
+            <td>Login</td>
+            <td>Como Developer, quiero implementar un endpoint de login que reciba credenciales de usuario y devuelva un token de autenticación, para permitir el acceso seguro a los recursos de la plataforma</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>183</td>
+            <td>TS43</td>
+            <td>Cerrar sesión + invalidar token</td>
+            <td>Como Developer, quiero implementar un endpoint para cerrar sesión e invalidar el <code>refreshToken</code>, para asegurar que el usuario no pueda seguir autenticado tras finalizar su sesión</td>
+            <td>2</td>
+        </tr>
+        </tr>        <tr>
+            <td>184</td>
+            <td>TS42</td>
+            <td>Refrescar Token</td>
+            <td>Como Developer, quiero implementar un endpoint para refrescar el token de autenticación usando un <code>refreshToken</code>, para mantener la sesión activa sin requerir un nuevo login</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>185</td>
+            <td>TS36</td>
+            <td>Consultar notificaciones de usuario</td>
+            <td>Como Developer, quiero implementar un endpoint que permita a un usuario consultar todas las notificaciones asociadas a su cuenta, para que pueda ver los eventos importantes que le corresponden</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>186</td>
+            <td>TS39</td>
+            <td>Actualizar datos personales</td>
+            <td>Como Developer, quiero implementar un endpoint que permita actualizar los datos personales de un usuario, para que pueda modificar su nombre, correo electrónico y otros detalles de contacto en el sistema</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>187</td>
+            <td>TS37</td>
+            <td>Marcar notificación como leída</td>
+            <td>Como Developer, quiero implementar un endpoint que permita a un usuario marcar una notificación como leída, para que pueda llevar un control de las notificaciones que ha revisado</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>188</td>
+            <td>TS38</td>
+            <td>Obtener detalles de perfil</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener los detalles del perfil de un usuario autenticado, para que el sistema pueda mostrar su información personal y profesional en la interfaz</td>
+            <td>1</td>
+        </tr>
     </tbody>
 </table>
