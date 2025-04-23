@@ -133,3 +133,50 @@ Para su gestión interna, se aplicará GitFlow. Se explican a continuación las 
   - **Convención de nombres**:  
     `hotfix/story-id`  
     Ejemplo: `hotfix/swr35`
+
+### 5.1.3. Source Code Style Guide & Coding Conventions
+
+En esta sección se establecen las guías de estilo y convenciones de codificación que el equipo adoptará para mantener la consistencia, legibilidad y calidad del código fuente.
+
+**LENGUAJES DE PROGRAMACIÓN**
+
+Para el desarrollo de la solución, se utilizarán los siguientes lenguajes de programación y marcado:
+- HTML  
+- CSS  
+- JavaScript  
+- C#
+
+**CONVENCIONES GENERALES**  
+Para todos los lenguajes de programación y marcado mencionados:
+- Se aplicará el uso de nomenclaturas en inglés.
+- Se nombrarán variables, constantes, elementos y clases de forma explícita.
+- Se usarán saltos de línea vacíos para separar unidades lógicas diferentes del código.
+- Se promoverá la reutilización de código.
+
+**CONVENCIONES ESPECÍFICAS**
+
+A continuación, se describen las convenciones principales a aplicar por lenguaje:
+
+**HTML & CSS:** Se aplicarán las recomendaciones del HTML Style Guide and Coding Conventions y el Google HTML/CSS Style Guide:
+- Escribir etiquetas y atributos en minúsculas.
+- Utilizar indentación de 2 espacios.
+- Utilizar clases con nombres descriptivos y en `kebab-case`.
+- Evitar el uso de estilos en línea.
+- Separar el contenido (HTML) de la presentación (CSS).
+
+**JavaScript:** Se adoptarán las recomendaciones del Google JavaScript Style Guide.
+- Usar `camelCase` para variables y funciones.
+- Usar `PascalCase` para clases y componentes.
+- Definir constantes en `UPPER_SNAKE_CASE`.
+- Evitar el uso de `var`, preferir `let` y `const`.
+- Usar funciones flecha (`=>`) siempre que sea posible.
+- Documentar funciones y clases con comentarios JSDoc.
+- Diseñar y codificar orientados al desacoplamiento.
+
+**C# (con .NET):** Se seguirán las recomendaciones del Microsoft C# Coding Conventions y .NET documentation.
+- Usar `PascalCase` para nombres de clases, métodos públicos y propiedades.
+- Usar `camelCase` para variables locales y parámetros.
+- Usar nombres descriptivos y evitar abreviaciones innecesarias.
+- Organizar archivos en espacios de nombres (`namespace`) lógicos.
+- Usar correctamente estructuras como `async/await`, `try/catch`, `LINQ`, y `using`.
+- Promover el uso de inyección de dependencias, principios SOLID y separación de capas (por ejemplo: Controllers, Services, DTOs, etc.).
