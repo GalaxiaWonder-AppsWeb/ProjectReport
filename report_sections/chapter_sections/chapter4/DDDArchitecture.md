@@ -10,9 +10,9 @@ El sistema PropGMS es una aplicación diseñada para organizar archivos y activi
 
 ### 4.6.2. Software Architecture Container Diagrams
 
-El sistema PropGMS se estructura en varios contenedores que colaboran entre sí para ofrecer una experiencia fluida a los usuarios. La Web Application, desarrollada en Angular, actúa como la interfaz principal donde interactúan los distintos perfiles: contratistas que gestionan proyectos, clientes que revisan avances y especialistas que ejecutan tareas asignadas. A esta aplicación se accede desde una Landing Page pública construida con HTML, CSS y JavaScript, la cual cumple una función informativa y redirige a los usuarios hacia la plataforma principal para la creación de cuentas.
+El sistema PropGMS se estructura en varios contenedores que colaboran entre sí para ofrecer una experiencia fluida a los usuarios. La Web Application, desarrollada en Vue, actúa como la interfaz principal donde interactúan los distintos perfiles: contratistas que gestionan proyectos, clientes que revisan avances y especialistas que ejecutan tareas asignadas. A esta aplicación se accede desde una Landing Page pública construida con HTML, CSS y JavaScript, la cual cumple una función informativa y redirige a los usuarios hacia la plataforma principal para la creación de cuentas.
 
-El núcleo lógico del sistema reside en una RESTful API desarrollada en Spring Boot. Esta API se encarga de procesar la lógica de negocio, responder a las peticiones del frontend y conectar con la base de datos mediante un túnel SSH seguro. Dicha base de datos, implementada en MariaDB, almacena toda la información relacionada con proyectos, usuarios, tareas, entregables y demás elementos críticos del sistema.
+El núcleo lógico del sistema reside en una RESTful API desarrollada en .NET Core. Esta API se encarga de procesar la lógica de negocio, responder a las peticiones del frontend y conectar con la base de datos mediante un túnel SSH seguro. Dicha base de datos, implementada en MariaDB, almacena toda la información relacionada con proyectos, usuarios, tareas, entregables y demás elementos críticos del sistema.
 
 Además, PropGMS se comunica con dos servicios externos: una Email API, utilizada para enviar correos de validación de cuentas y notificaciones, y una Payment Gateway API, encargada de validar los pagos de suscripciones realizados por los usuarios. Toda la comunicación entre contenedores y sistemas externos se realiza mediante canales seguros como HTTPS, garantizando así la confidencialidad y la integridad de los datos.
 
@@ -34,9 +34,9 @@ Todos estos componentes se comunican de manera segura con la RESTful API mediant
 
 #### 4.6.3.2. API Diagram
 
-Este nivel descompone el backend de PropGMS, revelando cómo cada módulo de la interfaz web se comunica con un componente específico dentro del contenedor de la RESTful API, desarrollado con Spring Boot. La arquitectura sigue un enfoque basado en controladores, cada uno especializado en una funcionalidad concreta del sistema.
+Este nivel descompone el backend de PropGMS, revelando cómo cada módulo de la interfaz web se comunica con un componente específico dentro del contenedor de la RESTful API, desarrollado con .NET Core. La arquitectura sigue un enfoque basado en controladores, cada uno especializado en una funcionalidad concreta del sistema.
 
-Los componentes visuales desarrollados en Angular, como Organization Management UI, Project Management UI o Subscription Management UI, hacen peticiones directas mediante HTTPS hacia sus respectivos controladores: OrganizationController, ProjectController, SubscriptionController, entre otros. Estos controladores manejan operaciones clave como la gestión de organizaciones y miembros, planificación de tareas y reuniones, administración de suscripciones y procesamiento de pagos.
+Los componentes visuales desarrollados en Vue, como Organization Management UI, Project Management UI o Subscription Management UI, hacen peticiones directas mediante HTTPS hacia sus respectivos controladores: OrganizationController, ProjectController, SubscriptionController, entre otros. Estos controladores manejan operaciones clave como la gestión de organizaciones y miembros, planificación de tareas y reuniones, administración de suscripciones y procesamiento de pagos.
 
 El InvoiceController se encarga de recuperar el estado de las facturas, mientras que el PaymentController interactúa con el Payment Gateway API para validar los pagos. Por su parte, el FileController permite cargar y listar archivos del proyecto, y el NotificationController expone los datos de notificaciones personalizadas para los usuarios. Finalmente, el UserAccountController maneja la autenticación, el registro y la actualización del perfil del usuario.
 
