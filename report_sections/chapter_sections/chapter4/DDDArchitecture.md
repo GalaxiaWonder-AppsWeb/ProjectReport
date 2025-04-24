@@ -1,5 +1,4 @@
 ## 4.6. Domain-Driven Software Architecture
-## 4.6. Domain-Driven Software Architecture
 Esta sección presenta una visión general de la arquitectura basada en DDD, desglosada en diferentes niveles de detalle que van desde el contexto general del sistema hasta los componentes más específicos que lo constituyen.
 
 ### 4.6.1. Software Architecture Context Diagram 
