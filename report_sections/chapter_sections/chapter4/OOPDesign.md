@@ -104,3 +104,541 @@ El modelo incluye soporte para pagos recurrentes, encapsulados en RecurringPayme
 Los estados de pago (PENDING, AUTHORIZED, CONFIRMED, FAILED) y de transacción (INITIATED, SUCCESS, FAILURE) permiten un seguimiento detallado del flujo de fondos en la plataforma.
 
 <img src="../../../img/chapter4/oop/payments.png" alt="Diagrama de clases del bounded context Payments de ProP GMS">
+
+### 4.7.2. Class Dictionary
+
+#### 4.7.2.1. Project Management Class Dictionary
+
+Este diccionario describe las clases involucradas en la gestión de proyectos dentro del sistema PropGMS.
+
+**Class:** `Project`
+- **Type**: Aggregate Root
+- **Description**: Representa un proyecto de construcción y actúa como el punto central de coordinación del contrato, cronograma, tareas, reuniones y equipo.
+
+| Attribute         | Type                    | Description                                                  |
+|-------------------|-------------------------|--------------------------------------------------------------|
+| id                | ProjectId               | Identificador único del proyecto                             |
+| name              | string                  | Nombre del proyecto                                          |
+| description       | string                  | Descripción del proyecto                                     |
+| contract          | Contract                | Contrato asociado                                            |
+| technicalFile     | TechnicalFile           | Expediente técnico asociado                                  |
+| status            | ProjectStatus           | Estado actual del proyecto                                   |
+| schedule          | Schedule                | Cronograma del proyecto con sus hitos                        |
+| budget            | Money                   | Presupuesto total del proyecto                               |
+| startingDate      | DateTime                | Fecha de inicio del proyecto                                 |
+| endingDate        | DateTime                | Fecha de finalización del proyecto                           |
+| team              | List<ProjectTeamMember> | Miembros asignados al proyecto                               |
+| organizationId    | OrganizationId          | Organización propietaria del proyecto                        |
+| contractor        | OrganizationMemberId    | Contratista líder                                            |
+| contractingEntityId | ContractingEntityId   | Entidad contratante                                          |
+| activeChangeProcessId | ChangeProcessId?     | Proceso de cambio activo (si existe)                         |
+
+| Method                          | Return Type | Description                                                 |
+|----------------------------------|-------------|-------------------------------------------------------------|
+| updateStatus(newStatus)         | void        | Actualiza el estado del proyecto                            |
+| updateDescription(name, desc)   | void        | Actualiza el nombre y descripción del proyecto              |
+| addTeamMember(member)           | void        | Añade un miembro al equipo del proyecto                     |
+| removeTeamMember(memberId)      | void        | Elimina un miembro del equipo del proyecto                  |
+
+---
+
+**Class:** `Milestone`
+- **Type**: Entity
+- **Description**: Representa un hito clave dentro del cronograma del proyecto.
+
+| Attribute   | Type                    | Description                            |
+|-------------|-------------------------|----------------------------------------|
+| id          | MilestoneId             | Identificador único del hito           |
+| name        | string                  | Nombre del hito                        |
+| startDate   | DateTime                | Fecha de inicio del hito               |
+| endDate     | DateTime                | Fecha de finalización del hito         |
+| items       | List<ScheduleItem>      | Elementos programados dentro del hito  |
+
+| Method                          | Return Type | Description                                       |
+|----------------------------------|-------------|---------------------------------------------------|
+| update(name, start, end)         | void        | Actualiza la información del hito                 |
+| addItem(item)                    | void        | Añade un elemento al hito                         |
+| removeItem(itemId)               | void        | Elimina un elemento del hito                      |
+
+---
+
+**Class:** `Task`
+- **Type**: Entity
+- **Description**: Representa una unidad de trabajo asignada a un miembro del equipo del proyecto.
+
+| Attribute         | Type                      | Description                                 |
+|-------------------|---------------------------|---------------------------------------------|
+| id                | TaskId                    | Identificador único de la tarea             |
+| name              | string                    | Nombre de la tarea                          |
+| specialty         | Specialty                 | Especialidad técnica de la tarea            |
+| status            | TaskStatus                | Estado actual de la tarea                   |
+| startingDate      | DateTime                  | Fecha de inicio de la tarea                 |
+| dueDate           | DateTime                  | Fecha límite de la tarea                    |
+| submission        | TaskSubmission?           | Entrega asociada a la tarea (si aplica)     |
+| responsible       | ProjectTeamMemberId?      | Miembro del equipo responsable              |
+
+| Method                          | Return Type | Description                                |
+|----------------------------------|-------------|--------------------------------------------|
+| getStartDate()                  | DateTime    | Devuelve la fecha de inicio de la tarea    |
+| getDueDate()                    | DateTime    | Devuelve la fecha límite de la tarea       |
+| assignResponsible(memberId)     | void        | Asigna un responsable a la tarea           |
+| updateStatus(newStatus)         | void        | Actualiza el estado de la tarea            |
+
+#### 4.7.2.2. Change Management Class Dictionary
+
+Este diccionario describe las clases involucradas en la gestión de cambios dentro del sistema PropGMS.
+
+**Class:** `ChangeProcess`
+- **Type**: Aggregate Root
+- **Description**: Representa un proceso de cambio en un proyecto, que puede originarse por una solicitud del cliente o por una consulta técnica.
+
+| Attribute               | Type                      | Description                                                    |
+|-------------------------|---------------------------|----------------------------------------------------------------|
+| id                      | ChangeProcessId           | Identificador único del proceso de cambio                      |
+| origin                  | ChangeOrigin              | Origen del cambio (solicitud o consulta técnica)              |
+| status                  | ChangeProcessStatus       | Estado actual del proceso de cambio                            |
+| justification           | string                    | Justificación del cambio                                       |
+| approvalNotes           | string?                   | Notas de aprobación (si aplica)                                |
+| rejectionReason         | string?                   | Razón del rechazo (si aplica)                                  |
+| response                | ChangeResponse?           | Respuesta formal emitida                                       |
+| changeOrder             | ChangeOrder?              | Orden de cambio generada                                      |
+| createdBy               | PersonId                  | Persona que inició el proceso                                  |
+| createdAt               | DateTime                  | Fecha de creación del proceso                                  |
+
+| Method                          | Return Type | Description                                               |
+|----------------------------------|-------------|-----------------------------------------------------------|
+| approve(notes)                  | void        | Aprueba el cambio con notas                               |
+| reject(reason)                  | void        | Rechaza el cambio con una razón                           |
+| attachChangeOrder(order)        | void        | Asocia una orden de cambio al proceso                     |
+| respond(response)               | void        | Adjunta una respuesta al proceso                          |
+
+---
+
+**Class:** `ChangeRequest`
+- **Type**: Entity
+- **Description**: Representa una solicitud de cambio realizada por la entidad contratante.
+
+| Attribute   | Type          | Description                                |
+|-------------|---------------|--------------------------------------------|
+| id          | GUID          | Identificador único de la solicitud        |
+| description | string        | Descripción detallada del cambio solicitado|
+| createdBy   | PersonId      | Persona que realizó la solicitud           |
+| createdAt   | DateTime      | Fecha de creación de la solicitud          |
+
+---
+
+**Class:** `TechnicalQuery`
+- **Type**: Entity
+- **Description**: Representa una consulta técnica que puede generar un proceso de cambio.
+
+| Attribute   | Type          | Description                                     |
+|-------------|---------------|-------------------------------------------------|
+| id          | GUID          | Identificador único de la consulta              |
+| description | string        | Detalle de la consulta técnica                  |
+| createdBy   | PersonId      | Persona que emitió la consulta                  |
+| createdAt   | DateTime      | Fecha de creación de la consulta                |
+
+---
+
+**Class:** `ChangeResponse`
+- **Type**: Value Object
+- **Description**: Representa la respuesta oficial a un proceso de cambio.
+
+| Attribute   | Type      | Description                            |
+|-------------|-----------|----------------------------------------|
+| content     | string    | Contenido de la respuesta              |
+| createdAt   | DateTime  | Fecha de emisión de la respuesta       |
+
+---
+
+**Class:** `ChangeOrder`
+- **Type**: Value Object
+- **Description**: Representa una orden de cambio formal asociada a un proceso de cambio aprobado.
+
+| Attribute     | Type      | Description                           |
+|---------------|-----------|---------------------------------------|
+| summary       | string    | Resumen del cambio autorizado         |
+| issuedBy      | PersonId  | Persona que emite la orden            |
+| issuedAt      | DateTime  | Fecha de emisión de la orden          |
+
+#### 4.7.2.3. Organization Class Dictionary
+
+Este diccionario describe las clases involucradas en la gestión de organizaciones dentro del sistema PropGMS.
+
+**Class:** `Organization`
+- **Type**: Aggregate Root
+- **Description**: Representa una organización dentro del sistema, encargada de gestionar proyectos y equipos de trabajo.
+
+| Attribute             | Type                       | Description                                               |
+|-----------------------|----------------------------|-----------------------------------------------------------|
+| id                    | OrganizationId             | Identificador único de la organización                    |
+| legalName             | string                     | Razón social de la organización                           |
+| commercialName        | string                     | Nombre comercial de la organización                       |
+| ruc                   | Ruc                        | Número de RUC                                             |
+| createdBy             | PersonId                   | Persona que registró la organización                      |
+| createdAt             | DateTime                   | Fecha de creación                                         |
+| status                | OrganizationStatus         | Estado actual de la organización                          |
+| members               | List<OrganizationMember>   | Miembros de la organización                               |
+
+| Method                          | Return Type | Description                                               |
+|----------------------------------|-------------|-----------------------------------------------------------|
+| activate()                      | void        | Activa la organización                                   |
+| deactivate()                    | void        | Desactiva la organización                                |
+| addMember(member)               | void        | Añade un nuevo miembro a la organización                 |
+| removeMember(memberId)          | void        | Elimina un miembro de la organización                    |
+
+---
+
+**Class:** `OrganizationMember`
+- **Type**: Entity
+- **Description**: Representa a un miembro dentro de una organización.
+
+| Attribute     | Type                     | Description                                       |
+|---------------|--------------------------|---------------------------------------------------|
+| id            | OrganizationMemberId     | Identificador del miembro                        |
+| personId      | PersonId                 | Referencia a la persona                          |
+| type          | OrganizationMemberType   | Rol del miembro (CONTRACTOR, WORKER)             |
+| joinedAt      | DateTime                 | Fecha de incorporación a la organización         |
+
+---
+
+**Class:** `OrganizationInvitation`
+- **Type**: Entity
+- **Description**: Representa una invitación enviada a una persona para unirse a una organización.
+
+| Attribute     | Type                     | Description                                           |
+|---------------|--------------------------|-------------------------------------------------------|
+| id            | GUID                     | Identificador único de la invitación                 |
+| invitedBy     | OrganizationMemberId     | Miembro que realiza la invitación                   |
+| email         | string                   | Correo de la persona invitada                       |
+| status        | InvitationStatus         | Estado de la invitación (PENDING, ACCEPTED, REJECTED)|
+| createdAt     | DateTime                 | Fecha de creación de la invitación                  |
+
+#### 4.7.2.4. Notifications Class Dictionary
+
+Este diccionario describe las clases involucradas en la gestión de notificaciones dentro del sistema PropGMS.
+
+**Class:** `Notification`
+- **Type**: Aggregate Root
+- **Description**: Representa una notificación enviada a un usuario sobre eventos relevantes dentro del sistema.
+
+| Attribute         | Type                       | Description                                               |
+|-------------------|----------------------------|-----------------------------------------------------------|
+| id                | NotificationId             | Identificador único de la notificación                    |
+| recipientId       | PersonId                   | Identificador del destinatario de la notificación         |
+| content           | string                     | Contenido del mensaje de la notificación                  |
+| category          | NotificationCategory       | Categoría de la notificación (ej. alerta, recordatorio)   |
+| isRead            | Boolean                    | Indica si la notificación ha sido leída                   |
+| createdAt         | DateTime                   | Fecha de creación de la notificación                      |
+| target            | NotificationTarget         | Objeto de referencia relacionado con la notificación      |
+
+---
+
+**Class:** `NotificationTarget`
+- **Type**: Value Object
+- **Description**: Representa el objetivo al que está asociada una notificación (como una tarea, reunión, proyecto, etc.).
+
+| Attribute     | Type                     | Description                                           |
+|---------------|--------------------------|-------------------------------------------------------|
+| id            | GUID                     | Identificador del objeto relacionado                 |
+| type          | NotificationTargetType   | Tipo de objeto relacionado                           |
+
+---
+
+**Class:** `NotificationCategory`
+- **Type**: Value Object
+- **Description**: Define la categoría de una notificación.
+
+| Attribute   | Type     | Description                          |
+|-------------|----------|--------------------------------------|
+| value       | string   | Valor que representa la categoría    |
+
+#### 4.7.2.5. Files Management Class Dictionary
+
+Este diccionario describe las clases involucradas en la gestión de archivos dentro del sistema PropGMS.
+
+**Class:** `File`
+- **Type**: Aggregate Root
+- **Description**: Representa un archivo digital almacenado en el sistema, incluyendo metadatos relevantes.
+
+| Attribute         | Type               | Description                                          |
+|-------------------|--------------------|------------------------------------------------------|
+| id                | FileId             | Identificador único del archivo                     |
+| name              | string             | Nombre del archivo                                  |
+| mimeType          | string             | Tipo MIME del archivo                               |
+| size              | Int                | Tamaño del archivo en bytes                         |
+| uploadedAt        | DateTime           | Fecha de carga del archivo                          |
+| uploadedBy        | OrganizationMemberId | Miembro que subió el archivo                      |
+| url               | string             | URL de acceso al archivo                            |
+| workspaceId       | WorkspaceId        | Espacio de trabajo al que pertenece el archivo      |
+
+---
+
+**Class:** `FileReference`
+- **Type**: Entity
+- **Description**: Representa una referencia a un archivo desde otro elemento del sistema, como un contrato o tarea.
+
+| Attribute     | Type               | Description                                          |
+|---------------|--------------------|------------------------------------------------------|
+| id            | GUID               | Identificador de la referencia                      |
+| fileId        | FileId             | Identificador del archivo referenciado              |
+| source        | ReferenceSource    | Fuente que origina la referencia                    |
+
+---
+
+**Class:** `ReferenceSource`
+- **Type**: Value Object
+- **Description**: Describe el objeto del sistema desde el cual se está referenciando un archivo.
+
+| Attribute   | Type                 | Description                                     |
+|-------------|----------------------|-------------------------------------------------|
+| id          | GUID                 | Identificador del objeto origen                |
+| type        | ReferenceSourceType  | Tipo del objeto origen                         |
+
+---
+
+**Class:** `Folder`
+- **Type**: Entity
+- **Description**: Representa una carpeta que organiza referencias de archivos de forma jerárquica.
+
+| Attribute     | Type      | Description                                        |
+|---------------|-----------|----------------------------------------------------|
+| id            | GUID      | Identificador único de la carpeta                 |
+| name          | string    | Nombre de la carpeta                              |
+| parentId      | GUID?     | Identificador de la carpeta superior (si existe)  |
+| createdBy     | PersonId  | Persona que creó la carpeta                       |
+| createdAt     | DateTime  | Fecha de creación de la carpeta                   |
+
+#### 4.7.2.6. Identity and Access Management Class Dictionary
+
+Este diccionario describe las clases involucradas en la gestión de identidad y acceso dentro del sistema PropGMS.
+
+**Class:** `UserAccount`
+- **Type**: Aggregate Root
+- **Description**: Representa una cuenta de usuario dentro del sistema, incluyendo sus credenciales, rol y estado.
+
+| Attribute     | Type             | Description                                           |
+|---------------|------------------|-------------------------------------------------------|
+| id            | UserId           | Identificador único de la cuenta                     |
+| fullName      | FullName         | Nombre completo del usuario                          |
+| email         | Email            | Correo electrónico del usuario                       |
+| passwordHash  | string           | Hash de la contraseña                                |
+| role          | Role             | Rol del usuario en el sistema                        |
+| status        | AccountStatus    | Estado actual de la cuenta                           |
+
+| Method                          | Return Type | Description                                              |
+|----------------------------------|-------------|----------------------------------------------------------|
+| activate()                      | void        | Activa la cuenta de usuario                             |
+| deactivate()                    | void        | Desactiva la cuenta de usuario                          |
+| block()                         | void        | Bloquea la cuenta de usuario                            |
+| changePassword(newHash)        | void        | Cambia la contraseña de la cuenta                       |
+| updateEmail(newEmail)          | void        | Actualiza el correo electrónico del usuario             |
+
+---
+
+**Class:** `RegistrationRequest`
+- **Type**: Entity
+- **Description**: Representa una solicitud de registro pendiente de confirmación.
+
+| Attribute     | Type                   | Description                                        |
+|---------------|------------------------|----------------------------------------------------|
+| id            | GUID                   | Identificador único de la solicitud               |
+| fullName      | FullName               | Nombre completo del solicitante                  |
+| email         | Email                  | Correo electrónico del solicitante               |
+| status        | RegistrationRequestStatus | Estado de la solicitud de registro            |
+| createdAt     | DateTime               | Fecha de creación de la solicitud                 |
+
+---
+
+**Class:** `Person`
+- **Type**: Entity
+- **Description**: Representa a una persona dentro del sistema, vinculada a una cuenta.
+
+| Attribute     | Type          | Description                                  |
+|---------------|---------------|----------------------------------------------|
+| id            | PersonId      | Identificador único de la persona           |
+| fullName      | FullName      | Nombre completo                             |
+| email         | Email         | Correo electrónico                          |
+| phone         | Phone         | Número de teléfono                          |
+| profession    | Profession?   | Profesión (si es aplicable)                 |
+| status        | PersonStatus  | Estado actual de la persona                 |
+
+---
+
+**Class:** `AuthToken`
+- **Type**: Entity
+- **Description**: Representa un token de autenticación generado para un usuario.
+
+| Attribute   | Type       | Description                                 |
+|-------------|------------|---------------------------------------------|
+| token       | string     | Token de acceso                             |
+| issuedAt    | DateTime   | Fecha de emisión del token                  |
+| expiresAt   | DateTime   | Fecha de expiración del token               |
+
+---
+
+**Class:** `Session`
+- **Type**: Entity
+- **Description**: Representa una sesión activa del usuario en el sistema.
+
+| Attribute     | Type      | Description                            |
+|---------------|-----------|----------------------------------------|
+| id            | GUID      | Identificador de la sesión             |
+| userId        | UserId    | Usuario asociado a la sesión           |
+| createdAt     | DateTime  | Fecha de inicio de la sesión           |
+| expiredAt     | DateTime  | Fecha de expiración de la sesión       |
+
+---
+
+**Class:** `PasswordResetToken`
+- **Type**: Entity
+- **Description**: Token utilizado para restablecer la contraseña de una cuenta.
+
+| Attribute   | Type       | Description                                   |
+|-------------|------------|-----------------------------------------------|
+| token       | string     | Token único de restablecimiento               |
+| userId      | UserId     | Cuenta asociada al token                      |
+| expiresAt   | DateTime   | Fecha de expiración del token                 |
+
+#### 4.7.2.7. Subscription Class Dictionary
+
+Este diccionario describe las clases involucradas en la gestión de suscripciones dentro del sistema PropGMS.
+
+**Class:** `Subscription`
+- **Type**: Aggregate Root
+- **Description**: Representa una suscripción activa o pasada que una organización ha adquirido para acceder a funcionalidades del sistema.
+
+| Attribute         | Type                      | Description                                               |
+|-------------------|---------------------------|-----------------------------------------------------------|
+| id                | SubscriptionId            | Identificador único de la suscripción                     |
+| plan              | SubscriptionPlan          | Plan asociado a la suscripción                            |
+| status            | SubscriptionStatus        | Estado actual de la suscripción                           |
+| startDate         | DateTime                  | Fecha de inicio de la suscripción                         |
+| endDate           | DateTime                  | Fecha de fin de la suscripción                            |
+| autoRenew         | Boolean                   | Indica si la suscripción se renovará automáticamente      |
+| price             | Money                     | Precio de la suscripción                                  |
+| assignedWorkspace | WorkspaceId               | Workspace asociado a esta suscripción                     |
+
+| Method                          | Return Type | Description                                               |
+|----------------------------------|-------------|-----------------------------------------------------------|
+| activate()                      | void        | Activa la suscripción                                     |
+| cancel()                        | void        | Cancela la suscripción                                    |
+| renew()                         | void        | Renueva la suscripción si está activa                     |
+| expire()                        | void        | Marca la suscripción como expirada                        |
+
+---
+
+**Class:** `SubscriptionPlan`
+- **Type**: Entity
+- **Description**: Define un plan de suscripción con su configuración y límites.
+
+| Attribute             | Type     | Description                                                |
+|-----------------------|----------|------------------------------------------------------------|
+| id                    | PlanId   | Identificador del plan                                     |
+| name                  | string   | Nombre del plan                                            |
+| durationInDays        | Int      | Duración del plan en días                                  |
+| price                 | Money    | Precio del plan                                            |
+| maxMembers            | Int      | Límite de miembros permitidos                              |
+| maxProjects           | Int      | Límite de proyectos permitidos                             |
+| maxStorageMB          | Int      | Límite de almacenamiento en MB                             |
+| features              | List<string> | Lista de características incluidas en el plan         |
+
+---
+
+**Class:** `Workspace`
+- **Type**: Entity
+- **Description**: Representa el espacio digital de trabajo asignado a una organización.
+
+| Attribute     | Type          | Description                                      |
+|---------------|---------------|--------------------------------------------------|
+| id            | WorkspaceId   | Identificador único del workspace               |
+| name          | string        | Nombre del workspace                            |
+| ownerId       | OrganizationId| Organización propietaria del workspace          |
+| currentSubscription | SubscriptionId? | Suscripción actualmente activa              |
+
+#### 4.7.2.8. Billing Class Dictionary
+
+Este diccionario describe las clases involucradas en la gestión de facturación dentro del sistema PropGMS.
+
+**Class:** `Invoice`
+- **Type**: Aggregate Root
+- **Description**: Representa una factura generada por el sistema para una organización o usuario.
+
+| Attribute         | Type              | Description                                              |
+|-------------------|-------------------|----------------------------------------------------------|
+| id                | InvoiceId         | Identificador único de la factura                       |
+| payer             | PersonId          | Persona responsable del pago                            |
+| issuedAt          | DateTime          | Fecha de emisión de la factura                          |
+| dueDate           | DateTime          | Fecha de vencimiento de la factura                      |
+| status            | PaymentStatus     | Estado actual del pago de la factura                    |
+| items             | List<BillingItem> | Ítems incluidos en la factura                           |
+
+| Method                          | Return Type | Description                                               |
+|----------------------------------|-------------|-----------------------------------------------------------|
+| calculateTotal()                | Money       | Calcula el monto total de la factura                      |
+| markAsPaid()                    | void        | Marca la factura como pagada                              |
+| isOverdue()                     | boolean     | Verifica si la factura se encuentra vencida               |
+
+---
+
+**Class:** `BillingItem`
+- **Type**: Entity
+- **Description**: Representa un ítem específico dentro de una factura.
+
+| Attribute   | Type     | Description                          |
+|-------------|----------|--------------------------------------|
+| name        | string   | Nombre del ítem                      |
+| unitPrice   | Money    | Precio unitario del ítem             |
+| quantity    | Int      | Cantidad facturada                   |
+| subtotal    | Money    | Subtotal calculado                   |
+
+#### 4.7.2.9. Payments Class Dictionary
+
+Este diccionario describe las clases involucradas en la gestión de pagos dentro del sistema PropGMS.
+
+**Class:** `Payment`
+- **Type**: Aggregate Root
+- **Description**: Representa un pago realizado para una factura específica.
+
+| Attribute         | Type                          | Description                                                |
+|-------------------|-------------------------------|------------------------------------------------------------|
+| id                | PaymentId                     | Identificador único del pago                               |
+| amount            | Money                         | Monto pagado                                               |
+| method            | PaymentMethodType             | Método de pago utilizado                                   |
+| status            | PaymentStatus                 | Estado actual del pago                                     |
+| paidAt            | DateTime                      | Fecha en la que se realizó el pago                         |
+| recurringAgreement| RecurringPaymentAgreement?    | Acuerdo de pago recurrente (si aplica)                     |
+
+| Method                          | Return Type | Description                                               |
+|----------------------------------|-------------|-----------------------------------------------------------|
+| confirm()                       | void        | Confirma el pago                                          |
+| fail(reason)                    | void        | Marca el pago como fallido                                |
+| authorize()                     | void        | Autoriza el pago antes de confirmarlo                     |
+
+---
+
+**Class:** `Transaction`
+- **Type**: Entity
+- **Description**: Representa un intento de realizar un pago, exitoso o fallido.
+
+| Attribute   | Type            | Description                                |
+|-------------|------------------|--------------------------------------------|
+| id          | GUID            | Identificador de la transacción            |
+| paymentId   | PaymentId       | Pago al que pertenece la transacción       |
+| status      | TransactionStatus| Estado de la transacción                   |
+| attemptedAt | DateTime        | Fecha del intento de transacción           |
+| message     | string          | Mensaje de respuesta del gateway           |
+
+---
+
+**Class:** `RecurringPaymentAgreement`
+- **Type**: Entity
+- **Description**: Representa un acuerdo de pagos recurrentes para renovar automáticamente suscripciones.
+
+| Attribute     | Type      | Description                                      |
+|---------------|-----------|--------------------------------------------------|
+| id            | GUID      | Identificador del acuerdo                        |
+| method        | PaymentMethodType | Método utilizado para los pagos recurrentes  |
+| frequency     | string    | Frecuencia del cobro (mensual, anual, etc.)      |
+| startDate     | DateTime  | Fecha de inicio del acuerdo                      |
+| status        | string    | Estado del acuerdo                               |
