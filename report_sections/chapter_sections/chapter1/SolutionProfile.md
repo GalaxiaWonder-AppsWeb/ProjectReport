@@ -51,11 +51,13 @@ Se mide a través del los sobrecostos del expediente técnico.
 
 A la gran mayoría de contratistas que realizan expedientes técnicos.
 
+<div style="page-break-before: always;"></div>
+
 ### 1.2.2 Lean UX Process.
 
-#### 1.2.2.1. Lean UX Problem Statement.
+#### 1.2.2.1. Lean UX Problem Statements.
 
-Actualmente, el sector de consultoría en obras civiles se centra principalmente en la rápida elaboración de expedientes técnicos. Sin embargo, se suelen pasar por alto aspectos cruciales como la correcta organización de documentos, la comunicación y coordinación entre áreas y la adaptación a los cambios.
+Actualmente, el sector de consultoría en obras civiles se centra principalmente en la rápida elaboración de expedientes técnicos. Sin embargo, se suelen pasar por alto aspectos cruciales como la correcta organización de documentos, la comunicación y coordinación entre áreas, y la adaptación a los cambios.
 
 Nuestro producto aborda estos problemas mediante funcionalidades que incluyen la gestión de múltiples proyectos, la segmentación del expediente técnico, un sistema de comunicación transversal a las especialidades y un sistema de control de cambios durante el desarrollo y la entrega del expediente técnico.
 
@@ -66,34 +68,29 @@ Consideraremos que el problema está resuelto cuando estas pequeñas empresas o 
 #### 1.2.2.2. Lean UX Assumptions.
 
 **Business Outcomes**
-
 * Alcanzar el 3% de las empresas consultoras de obras en Lima Metropolitana en un plazo de 3 años.
 * Reducir en un 50% el tiempo necesario para replanificar ante errores de planificación.
 
 **Users**
 
 **1. Víctor Umeres - Contratista, Dueño de empresa constructora**
-
 * Tomar decisiones estratégicas sobre múltiples proyectos.
 * Conocer, evaluar y considerar múltiples datos.
 * Mantener un flujo de trabajo organizado.
 * Gestionar los cambios en planificación.
 
 **2. Ana Ramos - Especialista de área**
-
 * Realizar trabajos de investigación obteniendo datos precisos.
 * Organizar datos de manera legible, bajo estándares claros.
 
 **User Outcomes**
 
 **1. Víctor Umeres - Contratista, Dueño de empresa constructora**
-
 * Agilizar la toma de decisiones empresariales.
 * Sentir control y dominio del sistema.
 * Responder eficazmente al cambio.
 
 **2. Ana Ramos - Especialista de área**
-
 * Garantizar una entrega a tiempo de su sección correspondiente de la memoria descriptiva.
 * Obtener datos precisos y de calidad.
 * Mejorar la comunicación y coordinación con distintas áreas.
@@ -113,7 +110,11 @@ Consideraremos que el problema está resuelto cuando estas pequeñas empresas o 
 * Creación de ajustes contractuales
 * Creación de plantillas métricas
 
+<div style="page-break-before: always;"></div>
+
 #### 1.2.2.3. Lean UX Hypothesis Statements.
+
+Hemos formulado como equipo las siguientes hipótesis orientadas a probar las distintas funcionalidades que hemos obtenido como parte del Lean UX Process:
 
 * Creemos que lograremos llegar al 3% de las empresas consultoras de obra de Lima Metropolitana en 3 años si Víctor alcanza sentir control y dominio del sistema con documentación de funcionalidades
 * Creemos que lograremos  llegar al 3% de las empresas consultoras de obra de Lima Metropolitana en 3 años si Ana Ramos alcanza mejorar la comunicación y coordinación con distintas áreas con ficheros para documentos compartidos 
@@ -129,6 +130,8 @@ Consideraremos que el problema está resuelto cuando estas pequeñas empresas o 
 * Creemos que lograremos reducir en 50% el tiempo que toma replanificar ante errores de planificación si Carlos Mendoza alcanza solicitar ajustes contractuales de forma oportuna con solicitud de ajustes contractuales.
 * Creemos que lograremos llegar al 3% de las empresas consultoras de obra de Lima Metropolitana en 3 añossi Carlos Mendoza alcanza control de seguimiento para verificar la planificación de la obra con resumen de detalles clave.
 * Creemos que lograremos llegar al 3% de las empresas consultoras de obra de Lima Metropolitana en 3 años si Carlos Mendoza alcanza control de seguimiento para verificar la planificación de la obra con permisos de acceso al cliente.
+
+<div style="page-break-before: always;"></div>
 
 #### 1.2.2.4. Lean UX Canvas.
 

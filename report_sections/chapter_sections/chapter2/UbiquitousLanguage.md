@@ -80,6 +80,8 @@ Este contexto gestiona los archivos dentro del sistema. Modela los archivos en c
 **2. File (Archivo):** Es un elemento de una carpeta. Guarda información valiosa del expediente técnico en formato pdf, word, etc.<br>
 **3. Workspace (Espacio de trabajo):** Es el espacio de trabajo que adquiere una organización para poder planificar sus proyectos dentro del sistema.<br>
 
+<div style="page-break-before: always;"></div>
+
 ### 2.4.3. Generic
 
 **Identity and Access Management (Gestión de identidad y acceso)**
@@ -107,6 +109,7 @@ El contexto de Identity and Access Management (IAM) se encarga de la asignación
 **19. Electrical Engineer (Ingeniero eléctrico):** Subrol de especialista encargado de diseñar las instalaciones eléctricas del proyecto, incluyendo iluminación, tomacorrientes, tableros y protección. Asegura el cumplimiento de normas técnicas y la eficiencia energética.<br>
 **20. Communications engineer (Ingeniero de comunicaciones):** Subrol de especialista que diseña los sistemas de telecomunicaciones del edificio, como red de datos, telefonía, CCTV y control de acceso. Coordina con el equipo eléctrico y arquitectónico para la correcta integración de estas redes.<br>
 
+<div style="page-break-before: always;"></div>
 
 **Billing (Facturación)**
 

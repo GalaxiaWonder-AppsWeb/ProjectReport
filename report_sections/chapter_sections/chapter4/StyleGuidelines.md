@@ -24,6 +24,8 @@ El nombre de la propuesta de solucion es ProP GMS. La idea surge de la unión de
 
 <p align="center"><img src="../../../img/chapter4/StyleGuidelines/Logo.jpg" width="30%"></p>
 
+<div style="page-break-before: always;"></div>
+
 **Colores:**
 
 La apariencia visual de una plataforma influye directamente en cómo es percibida, especialmente en campos técnicos como la ingeniería civil. Por ello, se ha diseñado una paleta cromática estratégica, alineada con los principios de la psicología del color y orientada a transmitir profesionalismo, claridad y funcionalidad.
@@ -44,6 +46,8 @@ Como colores secundarios se han incorporado:
 
 <p align="center"><img src="../../../img/chapter4/StyleGuidelines/Secondary-Color.png" width="30%"></p>
 
+<div style="page-break-before: always;"></div>
+
 La paleta se completa con colores neutros:
 <br>
 <li>Negro azulado (#0C0C20), que proporciona contraste y fuerza visual.
@@ -57,6 +61,8 @@ La paleta se completa con colores neutros:
 La tipografía cumple un papel clave en la estructuración del contenido y en la orientación del usuario a lo largo de la interfaz. En este proyecto, se optó por el uso de la fuente Inter, seleccionada por su legibilidad y versatilidad en entornos digitales. La jerarquía visual se organiza en distintos niveles que definen claramente titulares, párrafos y elementos interactivos, asegurando una navegación fluida y coherente.
 
 <p align="center"><img src="../../../img/chapter4/StyleGuidelines/Texto.png" width="30%"></p>
+
+<div style="page-break-before: always;"></div>
 
 **Encabezado:**
 
@@ -106,9 +112,12 @@ Este par de botones nos brindan la pagina web en ingles y español para que le u
 <br>
 <p align="center"><img src="../../../img/chapter4/StyleGuidelines/Internacional.png" width="30%"></p>
 
+<div style="page-break-before: always;"></div>
 
 **Formulario**
 
-Estos formularios son para que los usuarios se contacten con nosotros si necesitan informacion
+Estos formularios son para que los usuarios se contacten con nosotros si necesitan  informacion 
 <br>
 <p align="center"><img src="../../../img/chapter4/StyleGuidelines/Formulario.png" width="30%"></p>
+
+<div style="page-break-before: always;"></div>
