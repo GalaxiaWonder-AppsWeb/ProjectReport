@@ -97,8 +97,6 @@ El componente es una barra de navegacion que permite al usuario acceder a las se
 <p align="center"><img src="../../../img/chapter4/StyleGuidelines/Encabezado.png" width="50%"></p>
 <br>
 
-<div style="page-break-before: always;"></div>
-
 **Botones**
 
 Este conjunto de botones de accion, incluye opciones para descargar, exportar, denegar, aprobar, enviar y para que acceda a las redes sociales de la empresa.
