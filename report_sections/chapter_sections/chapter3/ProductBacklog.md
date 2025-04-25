@@ -1,5 +1,24 @@
 ## 3.4. Product Backlog
 
+La priorización de las SWR, US y TS se realizó de manera grupal, basándonos en los conocimientos técnicos y de dominio que cada miembro del equipo aportó. Para facilitar este proceso, utilizamos la herramienta YouTrack, que no solo nos permitió organizar y visualizar nuestras tareas de forma clara y estructurada, sino que también nos ayudó enormemente a coordinar esfuerzos, establecer prioridades de manera colaborativa y mantener una trazabilidad efectiva de todos los elementos durante el proyecto.
+
+<img src="../../../img/chapter3/youTrack.png" alt="Imagen del YouTrack de ProP GMS">
+
+<a href="https://galaxiawonder.youtrack.cloud/dashboard?id=213-2" target="_blank">Ver tablero en YouTrack</a>
+
+<b>Credenciales:</b>
+<ul>
+  <li>
+    Correo: 
+    <span style="cursor: default; color: inherit; text-decoration: none;">
+      invitadogw&#64;galaxiawonder.com
+    </span>
+  </li>
+  <li>Contraseña: GA14x4W0nd3r</li>
+</ul>
+
+<div style="page-break-before: always;"></div>
+
 <table style="width: 100%;">
     <thead>
         <tr>
