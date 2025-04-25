@@ -4,18 +4,22 @@ Para elaborar esta sección del To-be Scenario Mapping, el equipo trabajó en co
 
 **Contratista**
 
+Este escenario representa el flujo de trabajo dentro del ciclo de vida de la planificación del proyecto. A diferencia del As-is Scenario se nota una clara mejora en la creación del proyecto y planificación de los cronogramas e hitos del expediente técnico.
+
 <img src="../../../img/chapter3/toBe_Contratista.jpg" alt="To-be Scenario de Contratista">
 
-Este escenario representa el flujo de trabajo dentro del ciclo de vida de la planificación del proyecto. A diferencia del As-is Scenario se nota una clara mejora en la creación del proyecto y planificación de los cronogramas e hitos del expediente técnico.
+<div style="page-break-before: always;"></div>
 
 **Especialista**
 
+Este escenario representa el flujo de trabajo del especialista durante la entrega de un encargo relacionado con el expediente técnico. A comparación del As-is Scenario se nota una clara mejora en el recepcionamiento de la tarea encargada para el especialista. Se mejora la coordinación y comunicación entre distitantas especialidades que trabajan en el expediente técnico.
+
 <img src="../../../img/chapter3/toBe_Especialista.jpg" alt="To-be Scenario de Contratista">
 
-Este escenario representa el flujo de trabajo del especialista durante la entrega de un encargo relacionado con el expediente técnico. A comparación del As-is Scenario se nota una clara mejora en el recepcionamiento de la tarea encargada para el especialista. Se mejora la coordinación y comunicación entre distitantas especialidades que trabajan en el expediente técnico.
+<div style="page-break-before: always;"></div>
 
 **Entidad contratante**
 
-<img src="../../../img/chapter3/toBe_Contratante.jpg" alt="To-be Scenario de Contratista">
-
 Este escenario representa el flujo de trabajo de la entidad contratante, desde el primer contacto con el contratista hasta el seguimiento del proyecto. Se nota una clara mejora con respecto al As-is Scenario en la supervisión del proyecto con respecto a los plazos establecidos e hitos entregados.
+
+<img src="../../../img/chapter3/toBe_Contratante.jpg" alt="To-be Scenario de Contratista">
