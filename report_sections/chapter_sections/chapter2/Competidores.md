@@ -2,7 +2,7 @@
 ### 2.1.1. Análisis Competitivo
 El análisis competitivo es fundamental para desarrollar una estrategia sólida en el mercado, ya que permite comprender qué soluciones existen, cómo operan y qué valor ofrecen a los clientes. A través de esta metodología, se pueden detectar brechas en el mercado y evaluar qué necesidades de los clientes aún no están cubiertas. Por ese motivo, se presentará el siguiente cuadro con el análisis competitivo correspondiente.
 
-<table style="width: 100%; border-collapse: collapse; text-align: left;">
+<table style="width: 100%; border-collapse: collapse; text-align: left; page-break-inside: auto;">
     <thead>
         <tr>
             <th style="border: 1px solid #000; padding: 10px; font-weight: bold;" colspan="6">Competitive Analysis Landscape</th>
