@@ -1221,4 +1221,5 @@ La priorización de las SWR, US y TS se realizó de manera grupal, basándonos e
             <td>1</td>
         </tr>
     </tbody>
-</table>
+</tanle>
+

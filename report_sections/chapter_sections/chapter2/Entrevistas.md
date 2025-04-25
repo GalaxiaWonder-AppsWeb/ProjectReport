@@ -58,6 +58,8 @@ Las preguntas enumeradas con un solo número corresponden a las preguntas princi
 12. ¿Qué tan fácil o difícil es coordinar con su equipo directo? ¿Qué herramientas utilizan para ello?
 13. ¿Cómo se comunica con otras áreas técnicas (como estructuras, arquitectura, etc.) durante el desarrollo del expediente?
 
+<div style="page-break-before: always;"></div>
+
 **Tabla de datos generales**
 
 La plantilla de datos generales permite obtener información básica sobre los entrevistados, como su entorno, personalidad, herramientas favoritas y preferencias tecnológicas. Esta información sirve como punto de partida para profundizar durante la entrevista.
@@ -85,6 +87,8 @@ La plantilla de datos generales permite obtener información básica sobre los e
     <tr><td style="border: 1px solid #000;">Marcas e influencers</td><td style="border: 1px solid #000;"></td></tr>
   </tbody>
 </table>
+
+<div style="page-break-before: always;"></div>
 
 ### 2.2.2. Registro de entrevistas
 
@@ -718,8 +722,6 @@ La plantilla de datos generales permite obtener información básica sobre los e
 | S10 | 2 | 25% | 66.7% |
 | **Total** | 8 | 100% | - |
 
-<div style="page-break-after: always;"></div>
-
 **5. Uso de tecnología:** La gran mayoría de los entrevistados (66.7%) demostró un nivel bajo de dominio e integración de la tecnología en su trabajo y vida diaria, mientras que la menor parte (33.3%) mostró un nivel intermedio. Se toma como nivel de uso de tecnología representativo el nivel Bajo.
 
 | Nivel de uso de tecnología | Frecuencia Absoluta | % de entrevistados en este nivel |
@@ -798,8 +800,6 @@ La plantilla de datos generales permite obtener información básica sobre los e
 | Apple | 1 | 12.5% | 33.3% |
 | **Total** | 8 | 100% | - |
 
-<div style="page-break-after: always;"></div>
-
 **5. Uso de tecnología:** Los entrevistados mostraron niveles de dominio de la tecnología variados, que se correlacionan tanto con su edad como con sus respectivas especialidades. Se asigna un peso numérico a los niveles de habilidad y se toma como representativo el nivel que tenga como nivel el más próximo al promedio ponderado (Medio).
 
 | Nivel de uso de tecnología | Frecuencia Absoluta | % de entrevistados en este nivel | Peso | Promedio Ponderado |
@@ -818,6 +818,8 @@ La plantilla de datos generales permite obtener información básica sobre los e
 | Instagram | 1 | 16.7% | 33.3% |
 | **Total** | 6 | 100% | - |
 
+<div style="page-break-after: always;"></div>
+
 **7. Browsers:** La gran mayoría de los entrevistados (66.7%) reportó utilizar Google Chrome como su navegador por defecto. Sin embargo, se presentaron casos particulares de utilizar otros navegadores de forma complementaria (correspondientes a 33.3%). Por ejemplo, usar Safari cuando se usa el teléfono iPhone o Internet Explorer debido a la necesidad de interactuar con sistemas Legacy. Se toma como representativo el uso de Google Chrome, pero se tiene presente los posibles casos adicionales de uso de otros navegadores debido a necesidades del momento.
 
 | Navegador Web | Frecuencia Absoluta | Frecuencia Relativa | Entrevistados que lo usan (%) |
@@ -827,8 +829,6 @@ La plantilla de datos generales permite obtener información básica sobre los e
 | Firefox | 1 | 20% | 33.3% |
 | Internet Explorer | 1 | 20% | 33.% |
 | **Total** | 5 | 100% | - |
-
-<div style="page-break-after: always;"></div>
 
 **8. Dispositivos:** La totalidad de los entrevistados (100%) mencionó utilizar el celular como herramienta principal para acceder a recursos digitales. La gran mayoría (66.7%) reportó el uso de Laptops, mientras que una menor parte reportó el uso de computadoras de escritorio (33.3%). Se toma como representativa la clara tendencia hacia la portabilidad (Celular y Laptop).
 
@@ -936,8 +936,6 @@ La plantilla de datos generales permite obtener información básica sobre los e
 | Vlogs en general | 1 | 33.3% | 33.3% |
 | Podcasts en general | 1 | 33.3% | 33.3% |
 | **Total** | 8 | 100% | - |
-
-<div style="page-break-after: always;"></div>
 
 **5. Uso de tecnología:** La totalidad de los entrevistados (100%) demostraron un nivel de uso de la tecnología Medio. Se toma este nivel como representativo.
 
