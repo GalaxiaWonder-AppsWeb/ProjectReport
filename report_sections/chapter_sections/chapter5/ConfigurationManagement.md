@@ -180,3 +180,15 @@ A continuación, se describen las convenciones principales a aplicar por lenguaj
 - Organizar archivos en espacios de nombres (`namespace`) lógicos.
 - Usar correctamente estructuras como `async/await`, `try/catch`, `LINQ`, y `using`.
 - Promover el uso de inyección de dependencias, principios SOLID y separación de capas (por ejemplo: Controllers, Services, DTOs, etc.).
+
+### 5.1.4 Software Deployment Configuration
+
+**LANDING PAGE DEPLOYMENT**
+
+La landing page del proyecto se desplegará utilizando GitHub Pages, una plataforma gratuita proporcionada por GitHub para alojar sitios web estáticos directamente desde un repositorio. Esta solución permite mostrar públicamente la interfaz sin necesidad de servidores externos o configuraciones complicadas.
+
+1. El despliegue se realiza a partir de la rama principal del repositorio (main), asegurando que las versiones mas estables del equipo de desarrollo estén siempre disponibles para visualización inmediata.
+
+<img src="../../../img/chapter5/Deploy/Gitpages.png">
+
+Enlace para acceder a la landing page: 
