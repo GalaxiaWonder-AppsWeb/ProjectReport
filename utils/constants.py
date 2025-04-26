@@ -10,7 +10,7 @@ FINAL_REPORT = OutputFile(
     output_file_name="README.md",
     order = [
         "Carátula.md",
-        "RegistroVersiones.md",
+        "RegistroVersiones del Informe.md",
         "CollaborationInsights.md",
         "Contenido.md",
         "StudentOutcome.md",
