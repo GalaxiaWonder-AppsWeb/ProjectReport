@@ -1,9 +1,9 @@
 <div style="text-align: center; font-family: Arial, sans-serif; margin: 0; padding: 50px;">
     <p style="font-style: italic; font-size: 14px;">Universidad Peruana de Ciencias Aplicadas- Ingeniería de Software - Ciclo 2025-10</p>
-    <h1 style="margin: 10px 0; border-bottom: none;">1ASI0729 - Desarrollo de aplicaciones Open Source</h1>
+    <h1 style="margin: 10px 0; border-bottom: none;">1ASI0730 - Aplicaciones Web</h1>
     <img src="..\img\upc_logo.png" alt="Logo" style="width: 150px; display: block; margin: 20px auto;">
-    <h4 style="margin: 10px 0; border-bottom: none;">NRC: 4307</h4>
-    <h4 style="margin: 10px 0; border-bottom: none;">Profesor: Bautista Ubillús, Efraín Ricardo</h4>
+    <h4 style="margin: 10px 0; border-bottom: none;">NRC: 4363</h4>
+    <h4 style="margin: 10px 0; border-bottom: none;">Profesor: Sánchez Ponce, Alex Humberto</h4>
     <h2 style="margin: 10px 0; border-bottom: none;">Informe de Trabajo Final</h2>
     <h3 style="margin: 10px 0; border-bottom: none;">Startup: Galaxia Wonder</h3>
     <h3 style="margin: 10px 0; border-bottom: none;">Producto: ProP GMS</h3>
