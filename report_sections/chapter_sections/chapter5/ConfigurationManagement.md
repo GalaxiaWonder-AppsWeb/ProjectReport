@@ -191,4 +191,4 @@ La landing page del proyecto se desplegará utilizando GitHub Pages, una platafo
 
 <img src="../../../img/chapter5/Deploy/Gitpages.png">
 
-Enlace para acceder a la landing page: 
+Enlace para acceder a la landing page: [https://galaxiawonder-appsweb.github.io/LandingPage/](https://galaxiawonder-appsweb.github.io/LandingPage/)

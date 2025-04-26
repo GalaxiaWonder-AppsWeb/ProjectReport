@@ -94,6 +94,8 @@ Debido a la presión por completar el Sprint 1 a tiempo, no se manejó a gran de
   </tr>
 </table>
 
+<div style="page-break-before: always;"></div>
+
 #### 5.2.1.3. Sprint Backlog 1
 
 <img src="../../../../img/chapter5/Sprint1/sprintbacklog.png">
@@ -474,6 +476,8 @@ Debido a la presión por completar el Sprint 1 a tiempo, no se manejó a gran de
         </tr>
 </table>
 
+<div style="page-break-after: always;"></div>
+
 #### 5.2.1.4. Development Evidence for Sprint Review
 
 En el Sprint 1, se realizó una primera implementación de la Landing Page utilizando HTML, CSS y JavaScript estándar.
@@ -505,8 +509,53 @@ En el Sprint 1, se realizó una primera implementación de la Landing Page utili
 | LandingPage | feature/swr13 | b6b07c1830b3afa8f90b52817c6cb7dd0427c5be | feat(swr13): add assets for the about the product section |   | 25/04/2025 |
 | LandingPage | feature/swr13 | 8a8d134c794d760725b1c25c8e1570ba631ec32c | feat(swr13): add css and responsive style for about the product section |   | 25/04/2025 |
 | LandingPage | feature/swr13 | 458a2639f0c4bd29fae6ca75630717d843c9ee0a | feat(swr13): add html code for about the product section |   | 25/04/2025 |
+| LandingPage | bugfix/all | c03ea566013981b5348731bffd448923bb6480d6 | bugfix(all): change html and css for better spacing and display |   | 26/04/2025 |
+
+<div style="page-break-after: always;"></div>
 
 #### 5.2.1.5. Execution Evidence for Sprint Review
+
+Se presenta a modo de evidencia un video y capturas de las principales vistas implementadas. Enlace al video: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221e247_upc_edu_pe/EWyo-JabeMpAkW37lgNxTQwBG13dBIdjy05sSZCa00UfRw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=MG98Hf](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221e247_upc_edu_pe/EWyo-JabeMpAkW37lgNxTQwBG13dBIdjy05sSZCa00UfRw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=MG98Hf)
+
+**HERO SECTION**
+
+Contiene el formulario de contacto con una frase llamativa
+
+<img src="../../../../img/chapter5/Sprint1/execution1.png">
+
+<div style="page-break-after: always;"></div>
+
+**ABOUT US**
+
+Contiene información sobre nuestra startup
+
+<img src="../../../../img/chapter5/Sprint1/execution2.png">
+
+<div style="page-break-after: always;"></div>
+
+**FEATURES**
+
+Detalla, para grupo por segmento, cuales son las principales funcionalidades del producto
+
+<img src="../../../../img/chapter5/Sprint1/execution3.png">
+
+<div style="page-break-after: always;"></div>
+
+**PLANS**
+
+Se presentan los planes de suscripción (los diseñados provisionalmente)
+
+<img src="../../../../img/chapter5/Sprint1/execution4.png">
+
+<div style="page-break-after: always;"></div>
+
+**FOOTER Y TESTIMONIALS**
+
+Junto al footer con información de contacto, se presentan testimonios de usuarios
+
+<img src="../../../../img/chapter5/Sprint1/execution5.png">
+
+<div style="page-break-after: always;"></div>
 
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
 
