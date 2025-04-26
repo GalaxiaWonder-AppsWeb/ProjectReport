@@ -1,9 +1,9 @@
 <div style="text-align: center; font-family: Arial, sans-serif; margin: 0; padding: 50px;">
     <p style="font-style: italic; font-size: 14px;">Universidad Peruana de Ciencias Aplicadas- Ingeniería de Software - Ciclo 2025-10</p>
-    <h1 style="margin: 10px 0; border-bottom: none;">1ASI0729 - Desarrollo de aplicaciones Open Source</h1>
+    <h1 style="margin: 10px 0; border-bottom: none;">1ASI0730 - Aplicaciones Web</h1>
     <img src="./img\upc_logo.png" alt="Logo" style="width: 150px; display: block; margin: 20px auto;">
-    <h4 style="margin: 10px 0; border-bottom: none;">NRC: 4307</h4>
-    <h4 style="margin: 10px 0; border-bottom: none;">Profesor: Bautista Ubillús, Efraín Ricardo</h4>
+    <h4 style="margin: 10px 0; border-bottom: none;">NRC: 4363</h4>
+    <h4 style="margin: 10px 0; border-bottom: none;">Profesor: Sánchez Ponce, Alex Humberto</h4>
     <h2 style="margin: 10px 0; border-bottom: none;">Informe de Trabajo Final</h2>
     <h3 style="margin: 10px 0; border-bottom: none;">Startup: Galaxia Wonder</h3>
     <h3 style="margin: 10px 0; border-bottom: none;">Producto: ProP GMS</h3>
@@ -130,6 +130,43 @@
 <div style="page-break-before: always;"></div>
 
 # Project Report Collaboration Insights
+
+El desarrollo del informe se realizó en un repositorio dedicado en la organización de GitHub. Enlace: [https://github.com/GalaxiaWonder-AppsWeb/ProjectReport](https://github.com/GalaxiaWonder-AppsWeb/ProjectReport)
+
+Se presenta una tabla que especifica qué miembro del equipo se corresponde con qué usuario de GitHub.
+
+<table cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <th>Team Member <br>(Last Name, First Name)</th>
+    <th>GitHub Username</th>
+  </tr>
+  <tr>
+    <td>Aponte Cruzado, Andrea Marielena</td>
+    <td>iconicmiau</td>
+  </tr>
+  <tr>
+    <td>León Vivas, Fabrizio Amir</td>
+    <td>CodyLionVivo</td>
+  </tr>
+  <tr>
+    <td>López Acuña, Mario Joaquín</td>
+    <td>tertegen</td>
+  </tr>
+  <tr>
+    <td>Orozco Torres, Álvaro Joaquín</td>
+    <td>L1LZ4Z</td>
+  </tr>
+  <tr>
+    <td>Reaño Delgadillo, Henry Paolo</td>
+    <td>PaoloHRRR</td>
+  </tr>
+</table>
+
+**TB1**
+
+Para este entregable que ha elaborado el informe desde el capitulo I hasta el capítulo V en base al proceso de investigación realizado en equipo y diseño del sistema (integralmente).
+
+<img src="./img/insight_tb1.png">
 
 <div style="page-break-before: always;"></div>
 
@@ -565,7 +602,7 @@ El análisis competitivo es fundamental para desarrollar una estrategia sólida 
         <tr>
             <th style="border: 1px solid #000; padding: 10px;font-weight: bold;" colspan="2">(En la cabecera colocar por cada competidor nombre y logo)</th>
             <th style="border: 1px solid #000; padding: 10px;font-weight: bold; width: 20%; text-align: center;">Galaxia Wonder
-            <img style="display : flex; justify-content: center;" src="./img/chapter2/statupLogo.png" alt="Galaxia Wonder logo">
+            <img style="display : flex; justify-content: center;" src="./img/chapter2/startupLogo.png" alt="Galaxia Wonder logo">
             </th>
             <th style="border: 1px solid #000; padding: 10px;font-weight: bold; width: 20%; text-align: center;">
                 Autodesk Construction Cloud
@@ -6953,7 +6990,7 @@ Debido a la presión por completar el Sprint 1 a tiempo, no se manejó a gran de
 
 #### 5.2.1.3. Sprint Backlog 1
 
-<img src="./../img/chapter5/Sprint1/sprintbacklog.png">
+<img src="./img/chapter5/Sprint1/sprintbacklog.png">
 
 <a href="https://galaxiawonder.youtrack.cloud/dashboard?id=213-2" target="_blank">Ver tablero en YouTrack</a>
 
@@ -7376,7 +7413,7 @@ Se presenta a modo de evidencia un video y capturas de las principales vistas im
 
 Contiene el formulario de contacto con una frase llamativa
 
-<img src="./../img/chapter5/Sprint1/execution1.png">
+<img src="./img/chapter5/Sprint1/execution1.png">
 
 <div style="page-break-after: always;"></div>
 
@@ -7384,7 +7421,7 @@ Contiene el formulario de contacto con una frase llamativa
 
 Contiene información sobre nuestra startup
 
-<img src="./../img/chapter5/Sprint1/execution2.png">
+<img src="./img/chapter5/Sprint1/execution2.png">
 
 <div style="page-break-after: always;"></div>
 
@@ -7392,7 +7429,7 @@ Contiene información sobre nuestra startup
 
 Detalla, para grupo por segmento, cuales son las principales funcionalidades del producto
 
-<img src="./../img/chapter5/Sprint1/execution3.png">
+<img src="./img/chapter5/Sprint1/execution3.png">
 
 <div style="page-break-after: always;"></div>
 
@@ -7400,7 +7437,7 @@ Detalla, para grupo por segmento, cuales son las principales funcionalidades del
 
 Se presentan los planes de suscripción (los diseñados provisionalmente)
 
-<img src="./../img/chapter5/Sprint1/execution4.png">
+<img src="./img/chapter5/Sprint1/execution4.png">
 
 <div style="page-break-after: always;"></div>
 
@@ -7408,7 +7445,7 @@ Se presentan los planes de suscripción (los diseñados provisionalmente)
 
 Junto al footer con información de contacto, se presentan testimonios de usuarios
 
-<img src="./../img/chapter5/Sprint1/execution5.png">
+<img src="./img/chapter5/Sprint1/execution5.png">
 
 <div style="page-break-after: always;"></div>
 
@@ -7449,36 +7486,23 @@ Para este primer Sprint, el equipo ha fallado en tener una participación comple
 
 # Bibliografía
 
-<style>
-  .sangria-francesa {
-    padding-left: 30px;
-    text-indent: -30px;
-  }
-
-  .sangria-francesa a {
-    word-break: break-all;        
-    overflow-wrap: break-word;   
-    text-decoration: none;        
-  }
-</style>
-
-<p class="sangria-francesa">
+<p style="padding-left: 30px; text-indent: -30px;">
   Conosce - datos abiertos. (s/f). Gob.Pe. Recuperado el 9 de abril de 2025, de 
-  <a href="https://bi.seace.gob.pe/pentaho/api/repos/%3Apublic%3Aportal%3Adatosabiertos.html/content?userid=public&password=key">
+  <a style="word-break: break-all; overflow-wrap: break-word; text-decoration: none;" href="https://bi.seace.gob.pe/pentaho/api/repos/%3Apublic%3Aportal%3Adatosabiertos.html/content?userid=public&password=key">
     https://bi.seace.gob.pe/pentaho/api/repos/%3Apublic%3Aportal%3Adatosabiertos.html/content?userid=public&password=key
   </a>
 </p>
 
-<p class="sangria-francesa">
+<p style="padding-left: 30px; text-indent: -30px;">
   Instituto Nacional de Estadística e Informática. (s/f). Gob.pe. Recuperado el 9 de abril de 2025, de 
-  <a href="https://www.inei.gob.pe">
+  <a style="word-break: break-all; overflow-wrap: break-word; text-decoration: none;" href="https://www.inei.gob.pe">
     https://www.inei.gob.pe
   </a>
 </p>
 
-<p class="sangria-francesa">
+<p style="padding-left: 30px; text-indent: -30px;">
   Ministerio de Vivienda, Construcción y Saneamiento. (s/f). Gob.pe. Recuperado el 9 de abril de 2025, de 
-  <a href="https://www.gob.pe/vivienda">
+  <a style="word-break: break-all; overflow-wrap: break-word; text-decoration: none;" href="https://www.gob.pe/vivienda">
     https://www.gob.pe/vivienda
   </a>
 </p>
@@ -7487,11 +7511,10 @@ Para este primer Sprint, el equipo ha fallado en tener una participación comple
 
 # Anexos
 
-- Organización de GitHub: [Enlace](https://github.com/GalaxiaWonder-OpenSource)
-- Organización YouTrack: [Enlace](https://galaxiawonder.youtrack.cloud/projects/0-6)
-- Despliegue Landing Page: [Enlace](https://galaxiawonder-opensource.github.io/LandingPage/)
-- Video exposición TB1: [Enlace](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221e247_upc_edu_pe/ERtHWpdBfrdHrm7U2tOCxzwBDHdOpDxJ_wwfz-ZTDKtxcA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=9LvT0v)
-
+- Organización de GitHub: [Enlace](https://github.com/GalaxiaWonder-AppsWeb)
+- Organización YouTrack: [Enlace](https://galaxiawonder.youtrack.cloud/projects/0-2)
+- Despliegue Landing Page: [Enlace](https://galaxiawonder-appsweb.github.io/LandingPage/)
+- Video exposición TB1: [Enlace](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221e247_upc_edu_pe/EZWHYu0kuXJNo3vwxZbwAI8BUgztRVa4ZYaaLK5_yOF2qQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=roB70Rv)
 
 <div style="page-break-before: always;"></div>
 

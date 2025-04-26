@@ -17,7 +17,7 @@ El análisis competitivo es fundamental para desarrollar una estrategia sólida 
         <tr>
             <th style="border: 1px solid #000; padding: 10px;font-weight: bold;" colspan="2">(En la cabecera colocar por cada competidor nombre y logo)</th>
             <th style="border: 1px solid #000; padding: 10px;font-weight: bold; width: 20%; text-align: center;">Galaxia Wonder
-            <img style="display : flex; justify-content: center;" src="../../../img/chapter2/statupLogo.png" alt="Galaxia Wonder logo">
+            <img style="display : flex; justify-content: center;" src="../../../img/chapter2/startupLogo.png" alt="Galaxia Wonder logo">
             </th>
             <th style="border: 1px solid #000; padding: 10px;font-weight: bold; width: 20%; text-align: center;">
                 Autodesk Construction Cloud
