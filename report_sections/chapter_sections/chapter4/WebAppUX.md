@@ -6,7 +6,29 @@
 
 ### 4.4.3. Web Applications Mock-ups. 
 
+**Crear proyecto**
+
+<img src="../../../img/chapter4/mockup/Crearproyecto.png">
+
+**Listar proyectos de organización**
+
+<img src="../../../img/chapter4/mockup/listarProyectos.png">
+
+**Editar proyecto**
+
+<img src="../../../img/chapter4/mockup/editarproyecto.png">
+
+**Listar hitos**
+
+<img src="../../../img/chapter4/mockup/listarMilestones.png">
+
+**Login**
+
+<img src="../../../img/chapter4/mockup/Login.png">
+
 ### 4.4.4. Web Applications User Flow Diagrams. 
+
+<img src="../../../img/chapter4/userflows/uf01.png">
 
 **1. Crear un nuevo proyecto**
 
@@ -42,6 +64,8 @@
 
 **2. Consultar y visualizar lista de proyectos y sus detalles**
 
+<img src="../../../img/chapter4/userflows/uf02.png">
+
 - **User Goal:** Consultar los proyectos accesibles para el usuario y visualizar su información general.
 - **User Persona:** Miembro del equipo / Contratista
 
@@ -68,6 +92,9 @@
 
 **3. Editar información general del proyecto**
 
+<img src="../../../img/chapter4/userflows/uf03.png">
+
+
 - **User Goal:** Actualizar el nombre o la descripción del proyecto para reflejar cambios en el alcance o clarificaciones internas.
 - **User Persona:** Contratista
 
@@ -91,6 +118,8 @@
 - Usuario sin permisos: error "No tienes permisos para editar este proyecto". 
 
 **4. Cambiar constraints legales del proyecto**
+
+<img src="../../../img/chapter4/userflows/uf04.png">
 
 - **User Goal:** Actualizar el contrato y la entidad contratante asociada al proyecto en caso de modificaciones legales o administrativas.
 - **User Persona:** Contratista
@@ -121,6 +150,8 @@
 
 **5. Cambiar estado del proyecto**
 
+<img src="../../../img/chapter4/userflows/uf05.png">
+
 - **User Goal:** Actualizar el estado del proyecto para reflejar su progreso o finalización.
 - **User Persona:** Contratista
 
@@ -142,6 +173,8 @@
 - Usuario sin permisos: error "No tienes permisos para cambiar el estado de este proyecto". 
 
 **6. Eliminar proyecto**
+
+<img src="../../../img/chapter4/userflows/uf06.png">
 
 - **User Goal:** Eliminar un proyecto que ya no será ejecutado o es innecesario conservar.
 - **User Persona:** Contratista
@@ -243,6 +276,8 @@
 
 **10. Crear un nuevo hito**
 
+<img src="../../../img/chapter4/userflows/uf10.png">
+
 - **User Goal:** Añadir un hito al cronograma del proyecto para estructurar fases clave o entregables intermedios.
 - **User Persona:** Contratista
 
@@ -274,6 +309,8 @@
 
 **11. Consultar lista de hitos del proyecto**
 
+<img src="../../../img/chapter4/userflows/uf11.png">
+
 - **User Goal:** Visualizar los hitos existentes del proyecto para conocer la estructura de su cronograma.
 - **User Persona:** Miembro del proyecto
 
@@ -294,6 +331,8 @@
 - Usuario sin permisos: error "No tienes permisos para visualizar el cronograma de este proyecto". 
 
 **12. Editar información de un hito**
+
+<img src="../../../img/chapter4/userflows/uf12.png">
 
 - **User Goal:** Actualizar el nombre o las fechas de un hito para reflejar cambios en la planificación del proyecto.
 - **User Persona:** Contratista
@@ -327,6 +366,8 @@
 - Usuario sin permisos: error "No tienes permisos para editar hitos en este proyecto". 
 
 **13. Eliminar hito del cronograma**
+
+<img src="../../../img/chapter4/userflows/uf13.png">
 
 - **User Goal:** Eliminar un hito del cronograma del proyecto cuando ya no sea necesario.
 - **User Persona:** Contratista

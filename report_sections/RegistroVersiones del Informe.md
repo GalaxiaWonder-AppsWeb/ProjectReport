@@ -13,7 +13,15 @@
         <tr>
             <td>1.0</td>
             <td>25/04/2025</td>
-            <td>Arturo Jiménez</td>
+            <td>
+                <ul>
+                    <li>Aponte Cruzado, Andrea Marielena</li>
+                    <li>León Vivas, Fabrizio Amir</li>
+                    <li>López Acuña, Mario Joaquín</li>
+                    <li>Orozco Torres, Álvaro Joaquín</li>
+                    <li>Reaño Delgadillo, Henry Paolo</li>
+                </ul>
+            </td>
             <td>
                 <strong>Adición de secciones:</strong><br>
                 <p style="display: block; margin: 2px 0; text-indent: 0px; font-weight: bold;">Registro de Versiones del Informe</p>
