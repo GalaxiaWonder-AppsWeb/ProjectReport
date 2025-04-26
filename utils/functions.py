@@ -4,13 +4,17 @@ from utils.constants import page_break, FINAL_REPORT, CHAPTER_1, CHAPTER_2, CHAP
 def update_image_routes(content_md, level):
     if level == 0:
         relative_ref = 'src="../'
+        alt_relative_ref = 'src="..\\'
         new_ref = 'src="./'
-    if level == 1:
+    elif level == 1:
         relative_ref = 'src="../../../'
+        alt_relative_ref = 'src="..\\..\\..\\'
         new_ref = 'src="../'
-    # <img src="../../../img/Carátula/logo_upc.png">
-    # <img src="../img/Carátula/logo_upc.png">
-    return content_md.replace(relative_ref, new_ref)
+    
+    content_md = content_md.replace(relative_ref, new_ref)
+    content_md = content_md.replace(alt_relative_ref, new_ref)
+    
+    return content_md
 
 def combine_markdowns(output_file_obj):
     output_dir = os.path.dirname(output_file_obj.output_file_name)

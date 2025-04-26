@@ -2,17 +2,2553 @@
 
 ## 3.1. To-Be Scenario Mapping
 
+Para elaborar esta sección del To-be Scenario Mapping, el equipo trabajó en conjunto poniéndose en el lugar de los usuarios, y en base al escenario planteando en As-is se planteo una situación de mejora para los segmentos con ProP GMS presente en su flujo de trabajo.
+
+**Contratista**
+
+Este escenario representa el flujo de trabajo dentro del ciclo de vida de la planificación del proyecto. A diferencia del As-is Scenario se nota una clara mejora en la creación del proyecto y planificación de los cronogramas e hitos del expediente técnico.
+
+<img src="../img/chapter3/toBe_Contratista.jpg" alt="To-be Scenario de Contratista">
+
+<div style="page-break-before: always;"></div>
+
+**Especialista**
+
+Este escenario representa el flujo de trabajo del especialista durante la entrega de un encargo relacionado con el expediente técnico. A comparación del As-is Scenario se nota una clara mejora en el recepcionamiento de la tarea encargada para el especialista. Se mejora la coordinación y comunicación entre distitantas especialidades que trabajan en el expediente técnico.
+
+<img src="../img/chapter3/toBe_Especialista.jpg" alt="To-be Scenario de Contratista">
+
+<div style="page-break-before: always;"></div>
+
+**Entidad contratante**
+
+Este escenario representa el flujo de trabajo de la entidad contratante, desde el primer contacto con el contratista hasta el seguimiento del proyecto. Se nota una clara mejora con respecto al As-is Scenario en la supervisión del proyecto con respecto a los plazos establecidos e hitos entregados.
+
+<img src="../img/chapter3/toBe_Contratante.jpg" alt="To-be Scenario de Contratista">
+
 <div style="page-break-before: always;"></div>
 
 ## 3.2. User Stories
+
+Se elaboraron historias de usuario, historias técnicas (para el API) e historias de sitio web estático, denotadas por US, TS y SWR respectivamente. Se aplicaron buenas prácticas como INVEST. En el cuadro a continuación, se visualizarán dichas historias de usuario, las épicas y sus respectivos criterios de aceptación.
+
+<table style="width: 100%; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th>Epic / Story ID</th>
+            <th>Título</th>
+            <th>Descripción</th>
+            <th>Criterios de Aceptación</th>
+            <th>Relacionado con (Epic ID)</th>
+        </tr>
+    </thead>
+    <tbody>   
+    <tr>
+        <td>US001</td>
+        <td>Ingresar nombre del proyecto</td>
+        <td>Como contratista quiero asignar un nombre claro al proyecto para identificarlo fácilmente y mantenerlo organizado dentro del workspace</td>
+        <td><strong>Scenario: Nombre obligatorio</strong><br>Given el contratista accede al formulario de creación de proyecto<br>When envía el formulario sin ingresar nombre<br>Then el sistema debe mostrar un mensaje indicando que el nombre es obligatorio<br><br></td>
+        <td>EP01</td>
+    </tr>
+    <tr>
+        <td>US002</td>
+        <td>Ingresar fecha de inicio del proyecto</td>
+        <td>Como contratista quiero establecer la fecha en que el proyecto comienza oficialmente para definir el punto de partida del cronograma técnico y administrativo</td>
+        <td><strong>Scenario: Asignación automática de fecha de inicio</strong><br>Given el contratista accede al formulario de creación de proyecto<br>When el formulario es cargado<br>Then el campo 'Fecha de inicio' debe rellenarse automáticamente con la fecha actual<br>Then el campo debe estar deshabilitado para edición manual<br><br></td>
+        <td>EP01</td>
+    </tr>
+    <tr>
+        <td>US003</td>
+        <td>Ingresar fecha de finalización del proyecto</td>
+        <td>Como contratista quiero definir el plazo previsto para la ejecución del proyecto para planificar los hitos técnicos y asegurar la entrega oportuna del expediente</td>
+        <td><strong>Scenario: Fecha válida</strong><br>Given el contratista accede al formulario de creación de proyecto<br>Given ha ingresado una fecha de finalización posterior a la fecha actual<br>When envía el formulario<br>Then el sistema debe guardar la fecha correctamente<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Fecha inválida</strong><br>Given el contratista accede al formulario de creación de proyecto<br>Given ha ingresado una fecha de finalización anterior o igual a la fecha actual<br>When envía el formulario<br>Then el sistema debe impedir la creación del proyecto<br>Then mostrar un mensaje 'La fecha de finalización debe ser posterior a la fecha actual'<br><br></td>
+        <td>EP01</td>
+    </tr>
+    <tr>
+        <td>US004</td>
+        <td>Asociar contrato firmado y su fecha al proyecto</td>
+        <td>Como contratista quiero vincular el contrato legal que respalda el proyecto para formalizar la ejecución del proyecto con la entidad contratante de manera legal y trazable</td>
+        <td><strong>Scenario: Interfaz permite subir archivo local al workspace</strong><br>Given el contratista accede al formulario de creación de proyecto<br>When visualiza el campo para subir el contrato<br>Then el sistema debe mostrar un input para seleccionar un archivo local desde el dispositivo<br>Then el sistema debe aceptar formatos comunes como PDF, DOCX o imágenes<br><br><strong>Scenario: Subida del archivo y referencia al proyecto</strong><br>Given el contratista ha seleccionado un archivo válido<br>When confirma la subida del archivo<br>Then el sistema debe subir el archivo al workspace de la organización<br>Then crear una referencia de tipo PROJECT_CONTRACT<br>Then mostrar el archivo como referenciado dentro del formulario del proyecto<br><br><strong>Scenario: Contrato y fecha proporcionados correctamente</strong><br>Given el contratista ha subido el archivo del contrato<br>Given y ha ingresado una fecha válida de firma<br>When envía el formulario<br>Then el sistema debe asociar la referencia del archivo al proyecto<br>Then guardar la fecha de firma como parte del proyecto<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Contrato o fecha faltante</strong><br>Given el contratista accede al formulario de creación de proyecto<br>When envía el formulario sin haber completado ambos campos<br>Then el sistema debe impedir la creación del proyecto<br>Then mostrar un mensaje indicando que tanto el contrato como la fecha de firma son obligatorios<br><br></td>
+        <td>EP01</td>
+    </tr>
+    <tr>
+        <td>US005</td>
+        <td>Seleccionar entidad contratante del proyecto</td>
+        <td>Como contratista quiero asociar la entidad responsable del encargo del proyecto para formalizar y registrar correctamente la relación contractual desde el inicio</td>
+        <td><strong>Scenario: Mostrar campo de correo electrónico</strong><br>Given el contratista accede al formulario de creación de proyecto<br>When visualiza el campo de entidad contratante<br>Then el sistema debe mostrar un campo de texto para ingresar el correo electrónico de la entidad contratante<br><br><strong>Scenario: Correo no vinculado a entidad contratante</strong><br>Given el contratista ha ingresado un correo que no está asociado a ninguna entidad contratante registrada<br>When envía el formulario<br>Then el sistema debe impedir la creación del proyecto<br>Then mostrar un mensaje indicando que el correo ingresado no corresponde a una entidad contratante válida<br><br><strong>Scenario: Correo válido ingresado</strong><br>Given el contratista ha ingresado un correo de una entidad contratante válida<br>When envía el formulario<br>Then el sistema debe asociar dicha entidad al proyecto<br>Then mostrar un mensaje de confirmación<br><br></td>
+        <td>EP01</td>
+    </tr>
+    <tr>
+        <td>US006</td>
+        <td>Visualizar listado de proyectos accesibles</td>
+        <td>Como miembro del equipo quiero consultar todos los proyectos a los que tengo acceso dentro de mi organización para identificar rápidamente los proyectos disponibles y comprender mi responsabilidad en cada uno</td>
+        <td><strong>Scenario: Usuario ve el listado de proyectos accesibles</strong><br>Given el usuario pertenece a una organización con al menos un proyecto asignado<br>When accede a la sección de proyectos<br>Then el sistema debe mostrar una lista con los proyectos accesibles<br>Then cada proyecto debe mostrar el nombre, estado y el rol del usuario dentro del proyecto<br><br><strong>Scenario: Usuario sin proyectos asignados</strong><br>Given el usuario pertenece a una organización sin proyectos activos o asignados<br>When accede a la sección de proyectos<br>Then el sistema debe mostrar un mensaje informando que no tiene proyectos disponibles<br><br></td>
+        <td>EP01</td>
+    </tr>
+    <tr>
+        <td>US007</td>
+        <td>Consultar los detalles de un proyecto específico</td>
+        <td>Como miembro del equipo del proyecto quiero ver toda la información relevante de un proyecto en el que participo para comprender su estado, equipo, documentos y planificación para colaborar efectivamente</td>
+        <td><strong>Scenario: Miembro del equipo accede a los detalles básicos del proyecto</strong><br>Given el usuario forma parte del equipo del proyecto<br>When solicita consultar los detalles del proyecto<br>Then el sistema debe mostrar el nombre, estado, fechas, entidad contratante y miembros del equipo<br>Then el sistema no debe mostrar el contrato ni las opciones de configuración si el usuario no es el contratista<br><br><strong>Scenario: Contratista accede a los detalles completos del proyecto</strong><br>Given el usuario forma parte del equipo del proyecto<br>Given y es el contratista (dueño de la organización del proyecto)<br>When solicita consultar los detalles del proyecto<br>Then el sistema debe mostrar todos los datos del proyecto, incluyendo contrato y opciones de configuración<br><br><strong>Scenario: Usuario no autorizado intenta acceder</strong><br>Given el usuario no forma parte del equipo del proyecto<br>When intenta consultar los detalles de dicho proyecto<br>Then el sistema debe denegar el acceso<br>Then mostrar un mensaje indicando que no tiene permisos para acceder a este proyecto<br><br></td>
+        <td>EP01</td>
+    </tr>
+    <tr>
+        <td>US008</td>
+        <td>Editar nombre y descripción de un proyecto</td>
+        <td>Como contratista quiero modificar los datos descriptivos del proyecto cuando haya errores o cambios de enfoque para mantener la información del proyecto clara y actualizada para los miembros del equipo</td>
+        <td><strong>Scenario: Contratista actualiza nombre o descripción</strong><br>Given el usuario es el contratista del proyecto<br>Given se encuentra en la sección de configuración del proyecto<br>When envía el formulario con el nuevo nombre o descripción<br>Then el sistema debe guardar los cambios y mostrar un mensaje de confirmación<br><br><strong>Scenario: Campos vacíos al editar</strong><br>Given el contratista accede al formulario de edición<br>Given se encuentra en la sección de configuración del proyecto<br>When envía el formulario sin completar el nombre<br>Then el sistema debe impedir el guardado<br>Then mostrar un mensaje indicando que el nombre del proyecto es obligatorio<br><br></td>
+        <td>EP01</td>
+    </tr>
+    <tr>
+        <td>US009</td>
+        <td>Cambiar el estado del proyecto</td>
+        <td>Como contratista quiero actualizar manualmente la etiqueta de estado del proyecto para indicar su progreso para ayudar al equipo a interpretar en qué etapa se encuentra el proyecto</td>
+        <td><strong>Scenario: Contratista cambia el estado del proyecto</strong><br>Given el usuario es el contratista del proyecto<br>Given se encuentra en la sección de configuración del proyecto<br>When confirma el cambio de estado<br>Then el sistema debe actualizar el estado del proyecto<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Usuario no autorizado intenta cambiar el estado</strong><br>Given el usuario no es el contratista<br>When intenta cambiar el estado del proyecto<br>Then el sistema debe bloquear la acción<br>Then mostrar un mensaje indicando que no tiene permisos para cambiar el estado<br><br></td>
+        <td>EP01</td>
+    </tr>
+    <tr>
+        <td>US010</td>
+        <td>Actualizar entidad contratante y contrato del proyecto</td>
+        <td>Como contratista quiero corregir o modificar formalmente la relación contractual del proyecto para mantener la validez legal del encargo ante cambios institucionales o errores de registro</td>
+        <td><strong>Scenario: Actualizar entidad y contrato correctamente</strong><br>Given el usuario es el contratista del proyecto<br>Given se encuentra en la sección de configuración del proyecto<br>Given ha ingresado un nuevo correo de entidad contratante válido<br>Given ha seleccionado un nuevo archivo de contrato<br>When confirma el procedimiento<br>Then el sistema debe subir el nuevo contrato al workspace de la organización<br>Then crear una nueva referencia de tipo PROJECT_CONTRACT<br>Then asociar la nueva entidad contratante y el nuevo contrato al proyecto<br>Then mostrar un mensaje indicando que la actualización se realizó correctamente<br><br><strong>Scenario: Intento de cambiar entidad sin nuevo contrato</strong><br>Given el usuario es el contratista<br>Given se encuentra en la sección de configuración del proyecto<br>Given ha ingresado un nuevo correo de entidad contratante válido<br>Given no ha adjuntado un nuevo archivo de contrato<br>When confirma el procedimiento<br>Then el sistema debe impedir la modificación<br>Then mostrar un mensaje indicando que se requiere un nuevo contrato para cambiar la entidad contratante<br><br><strong>Scenario: Correo de entidad no registrada</strong><br>Given el contratista ha ingresado un correo que no corresponde a una entidad contratante registrada<br>When confirma el procedimiento<br>Then el sistema debe impedir la actualización<br>Then mostrar un mensaje indicando que la entidad contratante ingresada no es válida<br><br></td>
+        <td>EP01</td>
+    </tr>
+    <tr>
+        <td>US011</td>
+        <td>Eliminar un proyecto</td>
+        <td>Como contratista quiero descartar un proyecto si fue creado por error o ya no será ejecutado para mantener el entorno de trabajo limpio y enfocado solo en proyectos activos</td>
+        <td><strong>Scenario: Mostrar advertencia y solicitar confirmación manual</strong><br>Given el usuario es el contratista del proyecto<br>Given se encuentra en la sección de configuración del proyecto<br>When intenta eliminar el proyecto<br>Then el sistema debe mostrar una advertencia informando que se eliminarán todos los datos del proyecto salvo los archivos subidos al workspace<br>Then el sistema debe solicitar una confirmación manual del tipo 'delete + nombre del proyecto'<br><br><strong>Scenario: Confirmación válida para eliminar proyecto</strong><br>Given el contratista ha recibido la advertencia<br>Given ha ingresado correctamente la frase de confirmación solicitada<br>When envía la confirmación<br>Then el sistema debe eliminar el proyecto definitivamente<br>Then mostrar un mensaje indicando que el proyecto fue eliminado exitosamente<br><br><strong>Scenario: Confirmación inválida impide eliminación</strong><br>Given el contratista ha recibido la advertencia<br>When envía una confirmación que no coincide con el formato requerido<br>Then el sistema debe cancelar la operación<br>Then mostrar un mensaje indicando que la confirmación no es válida<br><br><strong>Scenario: Usuario no autorizado intenta eliminar un proyecto</strong><br>Given el usuario no es el contratista<br>When intenta eliminar el proyecto<br>Then el sistema debe bloquear la acción<br>Then mostrar un mensaje indicando que no tiene permisos para eliminar el proyecto<br><br></td>
+        <td>EP01</td>
+    </tr>
+    <tr>
+        <td>US012</td>
+        <td>Agregar miembro de organización al equipo de proyecto</td>
+        <td>Como contratista quiero añadir miembros de su organización al equipo de un proyecto activo para formar y estructurar el equipo responsable de cumplir con los entregables del proyecto</td>
+        <td><strong>Scenario: Visualizar miembros disponibles de la organización</strong><br>Given el contratista accede a la sección de configuración del equipo de un proyecto<br>When se despliega el campo de selección de miembro<br>Then el sistema debe mostrar todos los miembros de su organización<br>Then debe indicar visualmente cuáles ya pertenecen al equipo del proyecto<br><br><strong>Scenario: Seleccionar miembro que no pertenece al equipo</strong><br>Given el contratista visualiza la lista de los miembros de su organización<br>When selecciona un miembro que aún no forma parte del equipo<br>Then el sistema debe asignar al miembro seleccionado al campo 'miembro' del formulario<br><br><strong>Scenario: Seleccionar miembro que ya forma parte del equipo</strong><br>Given el contratista visualiza la lista de los miembros de su organización<br>When selecciona un miembro que ya forma parte del equipo<br>Then el sistema no debe realizar ninguna acción adicional<br>Then no debe mostrar errores<br><br></td>
+        <td>EP02</td>
+    </tr>
+    <tr>
+        <td>US013</td>
+        <td>Buscar miembro por nombre o correo dentro de la organización</td>
+        <td>Como contratista quiero filtrar eficientemente la lista de miembros de la organización al seleccionar integrantes del equipo para reducir el tiempo de búsqueda cuando la organización tiene muchos miembros</td>
+        <td><strong>Scenario: La lista de miembros permite escribir texto</strong><br>Given el contratista accede a la sección de configuración del equipo<br>When abre la lista de miembros de su organización<br>Then el sistema debe permitir escribir texto directamente sobre la lista para activar el filtrado<br><br><strong>Scenario: Filtrado automático por nombre o correo</strong><br>Given el contratista ha empezado a escribir texto en la lista de miembros<br>When el texto ingresado coincide parcial o totalmente con un nombre o correo<br>Then el sistema debe mostrar solo los miembros cuyos nombres o correos coincidan con el texto ingresado<br><br><strong>Scenario: Sin coincidencias en la búsqueda</strong><br>Given el contratista ha ingresado texto que no coincide con ningún nombre o correo<br>When escribe en la lista<br>Then el sistema debe mostrar un mensaje indicando que no se encontraron coincidencias<br><br></td>
+        <td>EP02</td>
+    </tr>
+    <tr>
+        <td>US014</td>
+        <td>Seleccionar rol del miembro del equipo</td>
+        <td>Como contratista quiero definir el rol de cada miembro del equipo al momento de asignarlo para organizar el equipo de trabajo según funciones de coordinación o especialización</td>
+        <td><strong>Scenario: Visualizar opciones de rol disponibles</strong><br>Given el contratista está en la sección de configuración del equipo de un proyecto<br>Given ha asignado un miembro al campo 'miembro' del formulario<br>When se despliega el campo para seleccionar el rol<br>Then el sistema debe permitir seleccionar entre las opciones 'COORDINATOR' y 'especialista'<br><br><strong>Scenario: Intento de confirmar sin seleccionar rol</strong><br>Given el contratista ha asignado un miembro al formulario<br>Given no ha seleccionado ningún rol<br>When confirma la incorporación<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que el rol es obligatorio<br><br></td>
+        <td>EP02</td>
+    </tr>
+    <tr>
+        <td>US015</td>
+        <td>Seleccionar especialidad del miembro del equipo</td>
+        <td>Como contratista quiero asignar la especialidad técnica del miembro del equipo si su rol es especialista para organizar correctamente al equipo por áreas de conocimiento y asignación de tareas</td>
+        <td><strong>Scenario: Visualizar campo de especialidad al seleccionar rol 'especialista'</strong><br>Given el contratista está en el formulario de añadir miembro<br>When selecciona el rol 'especialista'<br>Then el sistema debe mostrar un campo para seleccionar una especialidad técnica<br><br><strong>Scenario: Ocultar campo de especialidad al seleccionar rol 'COORDINATOR'</strong><br>Given el contratista está en el formulario de añadir miembro<br>When selecciona el rol 'COORDINATOR'<br>Then el sistema no debe mostrar el campo de especialidad<br><br><strong>Scenario: Intento de confirmar sin seleccionar especialidad</strong><br>Given el contratista ha seleccionado el rol 'especialista'<br>Given no ha seleccionado una especialidad<br>When confirma la incorporación del miembro<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que la especialidad es obligatoria para eespecialistaas<br><br></td>
+        <td>EP02</td>
+    </tr>
+    <tr>
+        <td>US016</td>
+        <td>Confirmar incorporación de los miembros seleccionados al proyecto</td>
+        <td>Como contratista quiero revisar y confirmar los miembros que ha preparado para añadir al equipo del proyecto para tener control final antes de que se realicen los cambios en el equipo del proyecto</td>
+        <td><strong>Scenario: Confirmar miembros con datos completos</strong><br>Given el contratista ha asignado correctamente todos los campos obligatorios del formulario<br>Given está en el formulario de añadir miembro<br>When confirma la incorporación<br>Then el sistema debe agregar el miembro al equipo del proyecto<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Intento de confirmar sin seleccionar un miembro</strong><br>Given el contratista está en el formulario de añadir miembro<br>When intenta confirmar sin haber seleccionado un miembro<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que debe seleccionar un miembro para continuar<br><br></td>
+        <td>EP02</td>
+    </tr>
+    <tr>
+        <td>US017</td>
+        <td>Visualizar listado de miembros del equipo del proyecto</td>
+        <td>Como miembro del proyecto quiero consultar los miembros que forman parte del equipo y sus roles para entender la estructura del equipo y saber quién cumple qué función</td>
+        <td><strong>Scenario: Ver listado completo del equipo</strong><br>Given el usuario forma parte del equipo del proyecto<br>When accede a la sección del equipo del proyecto<br>Then el sistema debe mostrar todos los miembros del equipo<br>Then debe incluir para cada miembro: nombre, rol y especialidad (si aplica)<br><br><strong>Scenario: Visualizar opción de editar para miembros distintos a sí mismo</strong><br>Given el usuario es el contratista<br>Given está visualizando la lista de miembros del equipo<br>When selecciona a un miembro de equipo diferente de sí mismo<br>Then el sistema debe mostrar una opción para editar el rol junto a cada miembro editable<br>Then no debe mostrar dicha opción junto a su propio nombre<br><br><strong>Scenario: Visualizar opción de eliminar si es contratista</strong><br>Given el usuario es el contratista<br>Given está visualizando la lista de miembros del equipo<br>When selecciona a un miembro de equipo diferente de sí mismo<br>Then el sistema debe mostrar una opción de eliminar del equipo junto a cada miembro<br>Then no debe mostrar dicha opción junto a su propio nombre<br><br></td>
+        <td>EP02</td>
+    </tr>
+    <tr>
+        <td>US018</td>
+        <td>Editar el rol de un miembro del equipo del proyecto</td>
+        <td>Como contratista quiero modificar el rol de un miembro del equipo cuando cambien sus responsabilidades para mantener la estructura del equipo alineada con las necesidades del proyecto</td>
+        <td><strong>Scenario: Usuario que no es contratista no ve la opción de editar rol</strong><br>Given el usuario no es el contratista del proyecto<br>When visualiza la lista de miembros del equipo<br>Then el sistema no debe mostrar ninguna opción para editar el rol<br><br><strong>Scenario: Permitir editar rol de un miembro</strong><br>Given el contratista ha abierto la opción para editar el rol de un miembro<br>When abre el formulario de edición de rol<br>Then el sistema debe mostrar un campo para seleccionar un rol<br>Then mostrar su valor actual<br><br><strong>Scenario: Confirmar nuevo rol correctamente</strong><br>Given el contratista ha seleccionado un nuevo rol para el miembro<br>When confirma la acción<br>Then el sistema debe actualizar el rol del miembro<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Impedir guardar sin seleccionar un rol</strong><br>Given el contratista ha accedido al formulario de edición de rol<br>Given no ha seleccionado ningún valor<br>When confirma la acción<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que el rol es obligatorio<br><br></td>
+        <td>EP02</td>
+    </tr>
+    <tr>
+        <td>US019</td>
+        <td>Editar la especialidad de un miembro del equipo del proyecto</td>
+        <td>Como contratista quiero modificar la especialidad técnica de un miembro que tenga el rol de especialista para mantener la asignación de especialidades actualizada para una correcta distribución de tareas</td>
+        <td><strong>Scenario: Visualizar campo de especialidad al abrir el formulario si el rol es 'especialista'</strong><br>Given el contratista accede al formulario de edición de un miembro<br>Given el miembro tiene asignado el rol 'especialista'<br>When se carga el formulario<br>Then el sistema debe mostrar un campo para seleccionar una especialidad<br>Then mostrar su valor actual<br><br><strong>Scenario: Mostrar campo de especialidad al cambiar dinámicamente el rol a 'especialista'</strong><br>Given el contratista está editando el rol de un miembro del equipo<br>When cambia el valor del rol a 'especialista'<br>Then el sistema debe mostrar el campo de especialidad<br><br><strong>Scenario: Ocultar campo de especialidad al cambiar dinámicamente el rol a uno distinto de 'especialista'</strong><br>Given el contratista está editando el rol de un miembro del equipo<br>Given el rol estaba previamente en 'especialista'<br>When cambia el valor del rol a 'COORDINATOR'<br>Then el sistema debe ocultar el campo de especialidad<br><br><strong>Scenario: Guardar sin especialidad cuando el rol es 'especialista'</strong><br>Given el contratista ha asignado el rol 'especialista' a un miembro<br>Given no ha seleccionado una especialidad<br>When confirma la edición<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que la especialidad es obligatoria<br><br><strong>Scenario: Guardar correctamente con rol y especialidad asignados</strong><br>Given el contratista ha editado el rol a 'especialista'<br>Given ha seleccionado una especialidad<br>When confirma la edición<br>Then el sistema debe actualizar la especialidad del miembro<br>Then mostrar un mensaje de confirmación<br><br></td>
+        <td>EP02</td>
+    </tr>
+    <tr>
+        <td>US020</td>
+        <td>Eliminar un miembro del equipo del proyecto sin tareas asignadas</td>
+        <td>Como contratista quiero retirar a un miembro del equipo cuando ya no tiene función activa en el proyecto y no tiene tareas asignadas para mantener el equipo alineado y evitar confirmaciones accidentales</td>
+        <td><strong>Scenario: Solicitar confirmación por input</strong><br>Given el contratista ha seleccionado eliminar a un miembro que no tiene tareas asignadas<br>When inicia la acción de eliminar<br>Then el sistema debe solicitar que escriba 'eliminar + nombre del miembro' para confirmar<br><br><strong>Scenario: Confirmación correcta por input</strong><br>Given el contratista ha ingresado correctamente el texto de confirmación<br>When confirma la acción<br>Then el sistema debe eliminar al miembro del equipo<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Confirmación incorrecta por input</strong><br>Given el contratista ha ingresado un texto incorrecto<br>When intenta confirmar la eliminación<br>Then el sistema debe cancelar la eliminación<br>Then mostrar un mensaje indicando que la confirmación no es válida<br><br></td>
+        <td>EP02</td>
+    </tr>
+    <tr>
+        <td>US021</td>
+        <td>Eliminar un miembro del equipo del proyecto con tareas asignadas</td>
+        <td>Como contratista quiero retirar a un miembro que ya no participa, controlando correctamente sus tareas y participaciones para mantener integridad del proyecto evitando tareas huérfanas y reuniones inconsistentes</td>
+        <td><strong>Scenario: Mostrar advertencia si el miembro tiene tareas o reuniones</strong><br>Given el contratista ha seleccionado eliminar a un miembro del equipo<br>Given el miembro tiene tareas asignadas o está invitado a reuniones<br>When inicia la acción de eliminar<br>Then el sistema debe mostrar una advertencia indicando que todas las tareas asignadas al miembro cambiarán su estado a DRAFT y que será eliminado de todas las reuniones<br><br><strong>Scenario: Eliminar miembro y actualizar tareas y reuniones</strong><br>Given el contratista ha confirmado la eliminación del miembro<br>Given el miembro tenía tareas y reuniones asignadas<br>When confirma la eliminación<br>Then el sistema debe eliminar al miembro del equipo<br>Then cambiar todas sus tareas a estado DRAFT<br>Then eliminar al miembro de todas las reuniones del proyecto<br>Then mostrar un mensaje de confirmación<br><br></td>
+        <td>EP02</td>
+    </tr>
+    <tr>
+        <td>US022</td>
+        <td>Visualizar opción de añadir hito al cronograma</td>
+        <td>Como contratista quiero acceder a la funcionalidad de crear nuevos hitos en el cronograma del proyecto para permitir la planificación estructurada de entregables en etapas definidas</td>
+        <td><strong>Scenario: Mostrar opción de crear hito si es contratista</strong><br>Given el usuario es el contratista<br>Given accede al cronograma del proyecto<br>When se carga la vista del cronograma<br>Then el sistema debe mostrar una opción para añadir un nuevo hito<br><br><strong>Scenario: Ocultar opción si el usuario no es contratista</strong><br>Given el usuario no es el contratista<br>When accede al cronograma del proyecto<br>Then el sistema no debe mostrar la opción para añadir hitos<br><br><strong>Scenario: Desplegar formulario al seleccionar la opción de crear hito</strong><br>Given el contratista accede al cronograma del proyecto<br>When selecciona la opción para añadir un nuevo hito<br>Then el sistema debe desplegar un formulario para ingresar los datos del hito<br><br></td>
+        <td>EP03</td>
+    </tr>
+    <tr>
+        <td>US023</td>
+        <td>Ingresar nombre del hito del cronograma</td>
+        <td>Como contratista quiero asignar un nombre claro y representativo al hito del cronograma para identificar fácilmente el propósito de cada etapa del proyecto</td>
+        <td><strong>Scenario: Visualizar campo de nombre del hito</strong><br>Given el contratista ha abierto el formulario para añadir un hito<br>When se carga el formulario<br>Then el sistema debe mostrar un campo para ingresar el nombre del hito<br><br><strong>Scenario: Intento de continuar sin ingresar nombre</strong><br>Given el contratista está en el formulario para añadir un hito<br>Given no ha ingresado un nombre<br>When intenta finalizar la creación<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que el nombre del hito es obligatorio<br><br></td>
+        <td>EP03</td>
+    </tr>
+    <tr>
+        <td>US024</td>
+        <td>Ingresar fechas de inicio y fin del hito</td>
+        <td>Como contratista quiero definir el período que abarca un hito dentro del cronograma para estructurar temporalmente las etapas del proyecto y facilitar la planificación</td>
+        <td><strong>Scenario: Visualizar campos de fecha</strong><br>Given el contratista ha abierto el formulario para añadir un hito<br>When se carga el formulario<br>Then el sistema debe mostrar un campo para la fecha de inicio<br>Then y otro campo para la fecha de fin del hito<br><br><strong>Scenario: Intento de continuar sin ingresar fechas</strong><br>Given el contratista está en el formulario de crear hito<br>When intenta confirmar la creación sin haber ingresado ninguna de las dos fechas<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que ambas fechas son obligatorias<br><br><strong>Scenario: Fecha de inicio posterior a la de fin</strong><br>Given el contratista ha ingresado una fecha de inicio posterior a la fecha de fin<br>When confirma la edición del campo de fecha de inicio<br>Then el sistema debe actualizar la fecha de fin para que coincida con la de inicio<br><br><strong>Scenario: Fecha de fin anterior a la de inicio</strong><br>Given el contratista ha ingresado una fecha de fin anterior a la fecha de inicio<br>When confirma la edición del campo de fecha de fin<br>Then el sistema debe actualizar la fecha de inicio para que coincida con la de fin<br><br></td>
+        <td>EP03</td>
+    </tr>
+    <tr>
+        <td>US025</td>
+        <td>Confirmar creación del hito</td>
+        <td>Como contratista quiero guardar un nuevo hito en el cronograma del proyecto para integrar el hito dentro de la planificación del proyecto y comenzar a estructurar entregables</td>
+        <td><strong>Scenario: Confirmar hito con datos válidos</strong><br>Given el contratista ha completado el formulario con nombre y fechas<br>Given las fechas del hito se encuentran dentro del rango de fechas del proyecto<br>When confirma la creación del hito<br>Then el sistema debe crear el hito en el cronograma<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Intento de confirmar con datos incompletos</strong><br>Given el contratista está en el formulario de creación de hito<br>Given falta el nombre o alguna de las fechas<br>When intenta confirmar la creación<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que debe completar todos los campos obligatorios<br><br></td>
+        <td>EP03</td>
+    </tr>
+    <tr>
+        <td>US026</td>
+        <td>Visualizar lista de hitos del cronograma del proyecto</td>
+        <td>Como miembro del proyecto quiero consultar los hitos definidos en el cronograma del proyecto para entender la estructura temporal del proyecto y preparar las actividades por etapa</td>
+        <td><strong>Scenario: Ver lista de hitos</strong><br>Given el usuario pertenece al equipo del proyecto<br>When accede a la sección de cronograma<br>Then el sistema debe mostrar la lista de hitos registrados<br>Then cada hito debe incluir su nombre, fecha de inicio y fecha de fin<br><br><strong>Scenario: Sin hitos en el cronograma</strong><br>Given el proyecto aún no tiene hitos registrados<br>When el usuario accede al cronograma<br>Then el sistema debe mostrar un mensaje indicando que no hay hitos creados<br><br><strong>Scenario: Mostrar opción de editar si es contratista</strong><br>Given el usuario accede a la lista de hitos del cronograma<br>When el sistema identifica que el usuario es el contratista<br>Then debe mostrarse una opción para editar cada hito<br>Then esta opción no debe mostrarse si el usuario no es el contratista<br><br><strong>Scenario: Mostrar opción de eliminar si es contratista</strong><br>Given el usuario accede a la lista de hitos del cronograma<br>When el sistema identifica que el usuario es el contratista<br>Then debe mostrarse una opción para eliminar cada hito<br>Then esta opción no debe mostrarse si el usuario no es el contratista<br><br></td>
+        <td>EP03</td>
+    </tr>
+    <tr>
+        <td>US027</td>
+        <td>Editar nombre de un hito del cronograma</td>
+        <td>Como contratista quiero modificar el nombre de un hito cuando sea necesario ajustarlo o corregirlo para mantener la claridad del cronograma frente al equipo y reflejar adecuadamente la etapa del proyecto</td>
+        <td><strong>Scenario: Visualizar campo de nombre al editar hito</strong><br>Given el contratista accede a la edición de un hito existente<br>When se carga el formulario de edición<br>Then el sistema debe mostrar el campo de nombre con el valor actual prellenado<br><br><strong>Scenario: Editar y confirmar nuevo nombre</strong><br>Given el contratista ha editado el campo de nombre<br>When confirma la edición<br>Then el sistema debe actualizar el nombre del hito<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Intento de confirmar sin nombre</strong><br>Given el contratista ha dejado vacío el campo de nombre<br>When confirma la edición<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que el nombre es obligatorio<br><br></td>
+        <td>EP03</td>
+    </tr>
+    <tr>
+        <td>US028</td>
+        <td>Editar fechas de inicio y fin de un hito</td>
+        <td>Como contratista quiero ajustar el período de un hito en función de cambios en el cronograma del proyecto para mantener actualizada la planificación temporal y reflejar la realidad del avance</td>
+        <td><strong>Scenario: Visualizar campos de fecha al editar</strong><br>Given el contratista accede al formulario de edición de un hito<br>When se carga la interfaz de edición<br>Then el sistema debe mostrar los campos de fecha de inicio y fecha de fin con sus valores actuales<br><br><strong>Scenario: Actualizar fechas válidas dentro del rango del proyecto</strong><br>Given el contratista ha modificado ambas fechas<br>Given las fechas están dentro del rango de fechas del proyecto<br>When confirma la edición<br>Then el sistema debe actualizar las fechas del hito<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Fecha de inicio posterior a la de fin</strong><br>Given el contratista ha ingresado una fecha de inicio posterior a la de fin<br>When confirma el campo de fecha de inicio<br>Then el sistema debe actualizar automáticamente la fecha de fin para igualarla a la de inicio<br><br><strong>Scenario: Fecha de fin anterior a la de inicio</strong><br>Given el contratista ha ingresado una fecha de fin anterior a la de inicio<br>When confirma el campo de fecha de fin<br>Then el sistema debe actualizar automáticamente la fecha de inicio para igualarla a la de fin<br><br></td>
+        <td>EP03</td>
+    </tr>
+    <tr>
+        <td>US029</td>
+        <td>Eliminar un hito del cronograma</td>
+        <td>Como contratista quiero eliminar un hito que ya no es necesario dentro del cronograma del proyecto para mantener el cronograma limpio y alineado con los hitos verdaderamente relevantes</td>
+        <td><strong>Scenario: Solicitar confirmación manual por input</strong><br>Given el contratista ha seleccionado un hito para eliminar<br>When se despliega el diálogo de eliminación<br>Then el sistema debe solicitar que escriba 'eliminar + nombre del hito' para confirmar<br><br><strong>Scenario: Confirmación correcta por input</strong><br>Given el contratista ha escrito correctamente la confirmación<br>When confirma la eliminación<br>Then el sistema debe eliminar el hito del cronograma<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Confirmación incorrecta por input</strong><br>Given el contratista ha escrito una confirmación incorrecta<br>When intenta confirmar la eliminación<br>Then el sistema debe cancelar la operación<br>Then mostrar un mensaje indicando que la confirmación no es válida<br><br><strong>Scenario: Cancelar eliminación de hito</strong><br>Given el contratista ha iniciado la eliminación<br>When cancela la acción desde el diálogo de confirmación<br>Then el sistema no debe realizar ningún cambio en el cronograma<br><br></td>
+        <td>EP03</td>
+    </tr>
+    <tr>
+        <td>US030</td>
+        <td>Confirmar eliminación de un hito con contenido asociado</td>
+        <td>Como contratista quiero comprender las consecuencias de eliminar un hito que contiene tareas o reuniones vinculadas para tomar decisiones informadas y evitar la pérdida accidental de contenido importante</td>
+        <td><strong>Scenario: Advertir sobre contenido vinculado</strong><br>Given el contratista ha seleccionado un hito que contiene tareas o reuniones<br>When se despliega el diálogo de eliminación<br>Then el sistema debe mostrar una advertencia indicando que se eliminarán también todas las tareas y reuniones asociadas al hito<br><br><strong>Scenario: Eliminar hito y su contenido al confirmar</strong><br>Given el contratista ha confirmado correctamente la eliminación del hito con contenido<br>When acepta la advertencia y finaliza la eliminación<br>Then el sistema debe eliminar el hito del cronograma<br>Then eliminar todas las tareas y reuniones asociadas<br>Then mostrar un mensaje de confirmación<br><br></td>
+        <td>EP03</td>
+    </tr>
+    <tr>
+        <td>US031</td>
+        <td>Configurar orden de visualización de hitos del cronograma</td>
+        <td>Como contratista quiero elegir cómo se ordenan los hitos al visualizarlos en el cronograma para mejorar la legibilidad y adaptarse al estilo de trabajo del contratista o del equipo</td>
+        <td><strong>Scenario: Mostrar opciones de orden disponibles</strong><br>Given el contratista accede a la vista del cronograma<br>When abre el menú de configuración de orden<br>Then el sistema debe mostrar las siguientes opciones de orden:<br>Then 'Más próximos primero', 'Último al inicio', y 'Primero al inicio'<br><br><strong>Scenario: Aplicar orden por más próximos primero</strong><br>Given el contratista ha seleccionado 'Más próximos primero'<br>When confirma la selección<br>Then el sistema debe ordenar los hitos mostrando primero el hito actual y los futuros, y luego los pasados<br><br><strong>Scenario: Aplicar orden por último al inicio</strong><br>Given el contratista ha seleccionado 'Último al inicio'<br>When confirma la selección<br>Then el sistema debe mostrar los hitos en orden cronológico descendente<br><br><strong>Scenario: Aplicar orden por primero al inicio</strong><br>Given el contratista ha seleccionado 'Primero al inicio'<br>When confirma la selección<br>Then el sistema debe mostrar los hitos en orden cronológico ascendente<br><br></td>
+        <td>EP03</td>
+    </tr>
+    <tr>
+        <td>US032</td>
+        <td>Visualizar lista de tareas del cronograma por hito</td>
+        <td>Como miembro del proyecto quiero consultar las tareas planificadas dentro de los hitos del cronograma del proyecto para entender el trabajo técnico pendiente o en curso según la planificación del proyecto</td>
+        <td><strong>Scenario: Visualizar tareas si es contratista o coordinador</strong><br>Given el usuario es el contratista o un coordinador del proyecto<br>When expande un hito del cronograma<br>Then el sistema debe mostrar todas las tareas asociadas a ese hito con detalles básicos como nombre, fecha límite y estado actual<br><br><strong>Scenario: Visualizar solo tareas asignadas si es eespecialistaa</strong><br>Given el usuario es un eespecialistaa<br>When expande un hito del cronograma<br>Then el sistema debe mostrar solo las tareas asignadas a ese eespecialistaa con detalles básicos como nombre, fecha límite y estado actual<br><br><strong>Scenario: Mostrar opción de añadir tarea solo si es contratista</strong><br>Given el usuario es el contratista<br>When expande un hito del cronograma<br>Then el sistema debe mostrar una opción para añadir una nueva tarea<br><br><strong>Scenario: Visualizar opción para editar tarea solo si es contratista</strong><br>Given el usuario es el contratista del proyecto<br>When visualiza la lista de tareas<br>Then el sistema debe mostrar una opción para editar el nombre junto a cada tarea<br><br><strong>Scenario: Visualizar opción de eliminar si es contratista</strong><br>Given el usuario es el contratista del proyecto<br>When visualiza la lista de tareas<br>Then el sistema debe mostrar la opción para eliminar junto a cada tarea<br><br></td>
+        <td>EP04</td>
+    </tr>
+    <tr>
+        <td>US033</td>
+        <td>Ingresar nombre y especialidad de la tarea</td>
+        <td>Como contratista quiero definir el objetivo técnico de una tarea y su ámbito de especialidad para estructurar claramente el trabajo técnico que debe realizarse dentro de cada hito del cronograma</td>
+        <td><strong>Scenario: Visualizar campos de nombre y especialidad</strong><br>Given el contratista accede al formulario de creación de tarea<br>When se carga el formulario<br>Then el sistema debe mostrar un campo obligatorio para ingresar el nombre de la tarea<br>Then y una lista de especialidades para seleccionar una<br><br><strong>Scenario: Intento de continuar sin completar ambos campos</strong><br>Given el contratista está en el formulario de creación de tarea<br>When intenta continuar sin ingresar nombre o sin seleccionar especialidad<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que ambos campos son obligatorios<br><br></td>
+        <td>EP04</td>
+    </tr>
+    <tr>
+        <td>US034</td>
+        <td>Ingresar nombre de la tarea</td>
+        <td>Como contratista quiero asignar un nombre que identifique claramente el propósito de la tarea para permitir que el equipo reconozca fácilmente el objetivo técnico de cada actividad</td>
+        <td><strong>Scenario: Visualizar campo de nombre de tarea</strong><br>Given el contratista accede al formulario para añadir una nueva tarea<br>When se carga el formulario<br>Then el sistema debe mostrar un campo obligatorio para ingresar el nombre de la tarea<br><br><strong>Scenario: Validar campo obligatorio de nombre</strong><br>Given el contratista está en el formulario de creación de tarea<br>When intenta continuar sin haber ingresado un nombre<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que el nombre es obligatorio<br><br></td>
+        <td>EP04</td>
+    </tr>
+    <tr>
+        <td>US035</td>
+        <td>Seleccionar especialidad de la tarea</td>
+        <td>Como contratista quiero definir la especialidad técnica necesaria para completar una tarea para asignar la tarea al perfil adecuado y permitir una distribución lógica del trabajo</td>
+        <td><strong>Scenario: Visualizar lista de especialidades disponibles</strong><br>Given el contratista accede al formulario de creación de tarea<br>When se carga el formulario<br>Then el sistema debe mostrar un campo de selección con las especialidades disponibles<br><br><strong>Scenario: Validar selección de especialidad</strong><br>Given el contratista está en el formulario de creación de tarea<br>When intenta continuar sin haber seleccionado una especialidad<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que la especialidad es obligatoria<br><br></td>
+        <td>EP04</td>
+    </tr>
+    <tr>
+        <td>US036</td>
+        <td>Ingresar fechas de inicio y vencimiento de la tarea</td>
+        <td>Como contratista quiero definir el rango de tiempo durante el cual debe realizarse una tarea para mantener un cronograma preciso y detectar tareas retrasadas o vencidas</td>
+        <td><strong>Scenario: Visualizar campos de fechas</strong><br>Given el contratista accede al formulario de creación de tarea<br>When se carga el formulario<br>Then el sistema debe mostrar campos separados para ingresar la fecha de inicio y la fecha de vencimiento<br><br><strong>Scenario: Validar que ambas fechas sean obligatorias</strong><br>Given el contratista está en el formulario de creación de tarea<br>When intenta confirmar la tarea sin haber ingresado una o ambas fechas<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que ambas fechas son obligatorias<br><br><strong>Scenario: Ajustar fecha si hay inconsistencias</strong><br>Given el contratista ha ingresado una fecha de inicio posterior a la de vencimiento<br>When confirma uno de los campos<br>Then el sistema debe actualizar automáticamente la otra fecha para que coincida<br><br><strong>Scenario: Validar que las fechas estén dentro del rango del hito</strong><br>Given el contratista ha ingresado fechas válidas<br>When las fechas están fuera del rango del hito al que se asignará la tarea<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que las fechas deben estar dentro del rango del hito<br><br></td>
+        <td>EP04</td>
+    </tr>
+    <tr>
+        <td>US037</td>
+        <td>Confirmar creación de la tarea</td>
+        <td>Como contratista quiero guardar una nueva tarea en el cronograma del proyecto una vez ingresados todos los campos requeridos para formalizar la existencia de la tarea y permitir su visualización y gestión dentro del flujo del proyecto</td>
+        <td><strong>Scenario: Confirmar tarea con todos los datos requeridos</strong><br>Given el contratista ha ingresado el nombre, especialidad, fecha de inicio y fecha de vencimiento válidos<br>When confirma la creación de la tarea<br>Then el sistema debe crear la tarea en el cronograma<br>Then asignarle el estado inicial DRAFT<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Intento de confirmar con datos incompletos</strong><br>Given el contratista está en el formulario de creación de tarea<br>Given falta uno o más campos obligatorios<br>When intenta confirmar la creación<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que debe completar todos los campos obligatorios<br><br></td>
+        <td>EP04</td>
+    </tr>
+    <tr>
+        <td>US038</td>
+        <td>Asignar responsable a una tarea</td>
+        <td>Como contratista quiero designar a un miembro del equipo como responsable de ejecutar una tarea para garantizar la trazabilidad de la tarea y activar su flujo de trabajo</td>
+        <td><strong>Scenario: Visualizar lista de miembros del equipo</strong><br>Given el contratista accede al formulario para asignar responsable a una tarea<br>When se carga la interfaz de asignación<br>Then el sistema debe mostrar una lista con todos los miembros del equipo del proyecto<br><br><strong>Scenario: Asignar responsable y cambiar estado a PENDING</strong><br>Given el contratista ha seleccionado un miembro de la lista<br>When confirma la asignación<br>Then el sistema debe registrar al miembro como responsable de la tarea<br>Then cambiar el estado de la tarea a PENDING<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Intento de asignar responsable sin selección</strong><br>Given el contratista está en el formulario de asignación<br>When intenta confirmar sin haber seleccionado un miembro<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que debe seleccionar un responsable<br><br></td>
+        <td>EP04</td>
+    </tr>
+    <tr>
+        <td>US039</td>
+        <td>Filtrar responsables por especialidad afín a la tarea</td>
+        <td>Como contratista quiero activar un filtro para facilitar la asignación de tareas a eespecialistaas compatibles para agilizar la asignación técnica de tareas evitando errores por desalineación de especialidades</td>
+        <td><strong>Scenario: Visualizar opción para activar filtro por especialidad</strong><br>Given el contratista accede al formulario de asignación de responsable<br>When se carga la interfaz de selección<br>Then el sistema debe mostrar un checkbox o switch etiquetado como 'Filtrar por especialidad afín'<br><br><strong>Scenario: Alternar estado del filtro</strong><br>Given el checkbox o switch está visible en la interfaz<br>When el contratista activa o desactiva el filtro<br>Then el sistema debe registrar el cambio de estado del filtro y actualizar la lista mostrada<br><br><strong>Scenario: Filtrar lista al activar el filtro</strong><br>Given el filtro está activado<br>When se muestra la lista de miembros del equipo<br>Then el sistema debe mostrar solo a los miembros cuya especialidad coincida con la de la tarea<br><br></td>
+        <td>EP04</td>
+    </tr>
+    <tr>
+        <td>US040</td>
+        <td>Editar nombre de una tarea</td>
+        <td>Como contratista quiero modificar el nombre de una tarea para reflejar mejor su propósito o alcance para mejorar la claridad y comprensión de las actividades planificadas dentro del proyecto</td>
+        <td><strong>Scenario: Mostrar campo de edición con nombre actual</strong><br>Given el contratista ha iniciado la edición del nombre de una tarea<br>When se despliega el formulario de edición<br>Then el sistema debe mostrar el campo con el nombre actual prellenado<br><br><strong>Scenario: Confirmar cambio de nombre</strong><br>Given el contratista ha modificado el nombre de una tarea<br>When confirma el cambio<br>Then el sistema debe actualizar el nombre de la tarea<br>Then mostrar un mensaje de confirmación<br><br></td>
+        <td>EP04</td>
+    </tr>
+    <tr>
+        <td>US041</td>
+        <td>Editar nombre de una tarea</td>
+        <td>Como contratista quiero modificar el nombre de una tarea para reflejar mejor su propósito o alcance para mejorar la claridad y comprensión de las actividades planificadas dentro del proyecto</td>
+        <td><strong>Scenario: Mostrar campo de edición con nombre actual</strong><br>Given el contratista ha accedido a la opción de editar una tarea<br>When se despliega el formulario de edición<br>Then el sistema debe mostrar el campo de nombre con el valor actual prellenado<br><br><strong>Scenario: Validar campo obligatorio de nombre</strong><br>Given el contratista está editando el nombre de una tarea<br>When intenta confirmar sin haber ingresado un nuevo nombre<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que el nombre es obligatorio<br><br><strong>Scenario: Confirmar cambio de nombre</strong><br>Given el contratista ha modificado el nombre de una tarea<br>When confirma el cambio<br>Then el sistema debe actualizar el nombre de la tarea<br>Then mostrar un mensaje de confirmación<br><br></td>
+        <td>EP04</td>
+    </tr>
+    <tr>
+        <td>US042</td>
+        <td>Editar especialidad de una tarea</td>
+        <td>Como contratista quiero modificar la especialidad técnica requerida para una tarea según cambios en los entregables o enfoque para garantizar que cada tarea esté alineada con el perfil técnico adecuado</td>
+        <td><strong>Scenario: Mostrar campo de especialidad con valor actual</strong><br>Given el contratista ha accedido a la opción de editar una tarea<br>When se despliega el formulario de edición<br>Then el sistema debe mostrar un campo de selección con la especialidad actual preseleccionada<br><br><strong>Scenario: Validar campo obligatorio de especialidad</strong><br>Given el contratista está editando la especialidad de una tarea<br>When intenta confirmar sin haber seleccionado una especialidad<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que la especialidad es obligatoria<br><br><strong>Scenario: Confirmar cambio de especialidad</strong><br>Given el contratista ha seleccionado una nueva especialidad<br>When confirma el cambio<br>Then el sistema debe actualizar la especialidad de la tarea<br>Then mostrar un mensaje de confirmación<br><br></td>
+        <td>EP04</td>
+    </tr>
+    <tr>
+        <td>US043</td>
+        <td>Editar fechas de inicio y vencimiento de una tarea</td>
+        <td>Como contratista quiero ajustar el período programado de una tarea ante cambios en el cronograma o entregables para mantener una planificación actualizada y coherente con el hito del cronograma</td>
+        <td><strong>Scenario: Mostrar campos de fechas con valores actuales</strong><br>Given el contratista ha accedido a la opción de editar una tarea<br>When se despliega el formulario de edición<br>Then el sistema debe mostrar los campos de fecha de inicio y fecha de vencimiento con sus valores actuales prellenados<br><br><strong>Scenario: Validar que ambas fechas sean obligatorias</strong><br>Given el contratista está en el formulario de edición de fechas<br>When intenta confirmar sin haber completado ambos campos<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que ambas fechas son obligatorias<br><br><strong>Scenario: Ajustar automáticamente fechas inconsistentes</strong><br>Given el contratista ha ingresado una fecha de inicio posterior a la fecha de vencimiento, o viceversa<br>When confirma uno de los campos<br>Then el sistema debe ajustar automáticamente la otra fecha para que coincida<br><br><strong>Scenario: Validar que las fechas estén dentro del rango del hito</strong><br>Given el contratista ha ingresado nuevas fechas<br>When las fechas están fuera del rango del hito<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que las fechas deben estar dentro del rango del hito<br><br><strong>Scenario: Confirmar cambios en fechas</strong><br>Given el contratista ha ingresado fechas válidas dentro del rango del hito<br>When confirma la edición<br>Then el sistema debe actualizar las fechas de la tarea<br>Then mostrar un mensaje de confirmación<br><br></td>
+        <td>EP04</td>
+    </tr>
+    <tr>
+        <td>US044</td>
+        <td>Activar filtro por especialidad al seleccionar responsable de una tarea</td>
+        <td>Como contratista quiero mostrar solo los miembros cuya especialidad coincida con la especialidad de la tarea, tanto en la asignación como en la edición del responsable para facilitar una selección precisa del responsable técnico ideal</td>
+        <td><strong>Scenario: Mostrar control de filtro en asignación o edición</strong><br>Given el contratista está asignando o editando el responsable de una tarea<br>When se carga la interfaz de selección<br>Then el sistema debe mostrar un switch o checkbox para activar el filtro por especialidad afín<br><br><strong>Scenario: Filtrar la lista al activar el filtro</strong><br>Given el filtro por especialidad está activado<br>When el contratista visualiza la lista de miembros del equipo<br>Then el sistema debe mostrar solo los miembros cuya especialidad coincida con la de la tarea<br><br><strong>Scenario: Desactivar filtro y mostrar lista completa</strong><br>Given el filtro ha sido desactivado manualmente<br>When se muestra la lista de miembros del equipo<br>Then el sistema debe mostrar nuevamente todos los miembros del equipo<br><br></td>
+        <td>EP04</td>
+    </tr>
+    <tr>
+        <td>US045</td>
+        <td>Visualizar opción de entregar una tarea</td>
+        <td>Como eespecialistaa quiero saber si tiene permitido enviar la entrega de una tarea que le fue asignada para acceder fácilmente al formulario de entrega solo cuando corresponde</td>
+        <td><strong>Scenario: Mostrar opción de entrega si es responsable</strong><br>Given el usuario es el responsable asignado de la tarea<br>Given el estado de la tarea es PENDING<br>When visualiza los detalles de la tarea<br>Then el sistema debe mostrar un botón o enlace para iniciar la entrega de la tarea<br><br><strong>Scenario: Ocultar opción si no es responsable</strong><br>Given el usuario no es el responsable de la tarea<br>When visualiza los detalles de la tarea<br>Then el sistema no debe mostrar la opción para enviar entrega<br><br></td>
+        <td>EP04</td>
+    </tr>
+    <tr>
+        <td>US046</td>
+        <td>Adjuntar archivos en la entrega de tarea</td>
+        <td>Como eespecialistaa quiero subir documentos técnicos o evidencias como parte de la entrega de una tarea para centralizar la documentación técnica en el workspace de la organización y asegurar trazabilidad</td>
+        <td><strong>Scenario: Visualizar input para adjuntar archivos</strong><br>Given el responsable accede al formulario de entrega de tarea<br>When se carga la interfaz<br>Then el sistema debe mostrar un campo para subir archivos desde el dispositivo<br><br><strong>Scenario: Subir archivos al workspace y generar referencia en la entrega</strong><br>Given el responsable ha seleccionado uno o más archivos válidos<br>When confirma la selección<br>Then el sistema debe subir automáticamente los archivos al workspace de la organización<br>Then crear referencias de tipo TASK_SUBMISSION para cada archivo<br>Then guardar en el entregable solo las referencias generadas<br>Then mostrar un mensaje de éxito<br><br><strong>Scenario: Rechazar archivos no válidos</strong><br>Given el responsable ha seleccionado archivos con formato no permitido<br>When intenta subirlos<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando los formatos válidos (por ejemplo: PDF, DOCX, JPG, PNG)<br><br></td>
+        <td>EP04</td>
+    </tr>
+    <tr>
+        <td>US047</td>
+        <td>Escribir notas en la entrega de tarea</td>
+        <td>Como eespecialistaa quiero incluir observaciones, comentarios técnicos o explicaciones junto a los archivos entregados para facilitar la comprensión y revisión de la entrega por parte del coordinador o contratista</td>
+        <td><strong>Scenario: Visualizar campo de notas</strong><br>Given el responsable accede al formulario de entrega de tarea<br>When se carga la interfaz<br>Then el sistema debe mostrar un campo de texto para ingresar notas o comentarios adicionales<br><br><strong>Scenario: Permitir entrega con o sin notas</strong><br>Given el responsable está completando la entrega<br>When envía la entrega sin ingresar notas<br>Then el sistema debe permitir continuar la acción sin mostrar advertencias<br><br><strong>Scenario: Guardar notas junto al entregable</strong><br>Given el responsable ha escrito comentarios técnicos en el campo de notas<br>When confirma la entrega<br>Then el sistema debe almacenar las notas como parte del entregable de la tarea<br><br></td>
+        <td>EP04</td>
+    </tr>
+    <tr>
+        <td>US048</td>
+        <td>Enviar entrega de tarea</td>
+        <td>Como eespecialistaa quiero finalizar el proceso de entrega de una tarea con los elementos completados para marcar la tarea como enviada para su revisión, asegurando trazabilidad y control de avances</td>
+        <td><strong>Scenario: Confirmar entrega con archivos válidos</strong><br>Given el eespecialistaa ha adjuntado al menos una referencia a un archivo<br>When confirma la entrega<br>Then el sistema debe registrar un nuevo TaskSubmission<br>Then cambiar el estado de la tarea a SUBMITTED<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Evitar envío si no hay archivos adjuntos</strong><br>Given el eespecialistaa no ha adjuntado ninguna referencia a archivo<br>When intenta confirmar la entrega<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que se requiere al menos un archivo<br><br></td>
+        <td>EP04</td>
+    </tr>
+    <tr>
+        <td>US049</td>
+        <td>Visualizar tareas pendientes de revisión</td>
+        <td>Como coordinador o contratista quiero consultar todas las tareas del proyecto y saber cuáles requieren revisión para mantener control sobre el estado de avance de las tareas y facilitar la evaluación oportuna</td>
+        <td><strong>Scenario: Habilitar acciones de revisión solo en tareas SUBMITTED</strong><br>Given el usuario visualiza la lista de tareas<br>When una tarea se encuentra en estado SUBMITTED<br>Then el sistema debe mostrar opciones para revisar dicha tarea (aprobar o rechazar)<br><br><strong>Scenario: No permitir revisión si la tarea no está enviada</strong><br>Given la tarea no se encuentra en estado SUBMITTED<br>When el usuario intenta revisarla<br>Then el sistema debe impedir la acción y mostrar un mensaje indicando que la tarea no está disponible para revisión<br><br></td>
+        <td>EP04</td>
+    </tr>
+    <tr>
+        <td>US050</td>
+        <td>Aprobar entrega de tarea</td>
+        <td>Como coordinador o contratista quiero marcar una tarea entregada como completada satisfactoriamente tras su revisión para cerrar formalmente el ciclo de ejecución de la tarea y reflejar su avance dentro del proyecto</td>
+        <td><strong>Scenario: Mostrar opción de aprobar solo si la tarea está enviada</strong><br>Given el usuario accede a una tarea con estado SUBMITTED<br>When visualiza la entrega<br>Then el sistema debe mostrar la opción para aprobar la entrega<br><br><strong>Scenario: Confirmar aprobación de la entrega</strong><br>Given el usuario ha revisado la entrega y está conforme<br>When confirma la aprobación<br>Then el sistema debe cambiar el estado de la tarea a APPROVED<br>Then guardar la fecha y el usuario que aprobó la entrega<br>Then mostrar un mensaje de confirmación<br><br></td>
+        <td>EP04</td>
+    </tr>
+    <tr>
+        <td>US051</td>
+        <td>Rechazar entrega de tarea con retroalimentación</td>
+        <td>Como coordinador o contratista quiero marcar una entrega como no aceptada y proporcionar retroalimentación clara al eespecialistaa para garantizar la calidad del trabajo entregado y orientar mejoras en una nueva entrega</td>
+        <td><strong>Scenario: Mostrar campo de retroalimentación al rechazar</strong><br>Given el usuario accede a una tarea en estado SUBMITTED<br>When selecciona la opción para rechazar la entrega<br>Then el sistema debe mostrar un campo obligatorio para escribir retroalimentación<br><br><strong>Scenario: Confirmar rechazo con retroalimentación</strong><br>Given el usuario ha escrito retroalimentación<br>When confirma el rechazo<br>Then el sistema debe cambiar el estado de la tarea a REJECTED<br>Then guardar la nota y el usuario que realizó la revisión<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Impedir rechazo sin retroalimentación</strong><br>Given el usuario ha seleccionado rechazar una entrega<br>When intenta confirmar sin escribir retroalimentación<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que el campo de retroalimentación es obligatorio<br><br></td>
+        <td>EP04</td>
+    </tr>
+    <tr>
+        <td>US052</td>
+        <td>Volver a enviar una tarea rechazada</td>
+        <td>Como eespecialistaa quiero realizar una nueva entrega luego de recibir retroalimentación en una revisión anterior para permitir el perfeccionamiento del trabajo técnico y el avance del proyecto tras correcciones</td>
+        <td><strong>Scenario: Visualizar opción de reenviar tarea solo si fue rechazada</strong><br>Given el usuario es el responsable de la tarea<br>Given la tarea está en estado REJECTED<br>When accede a los detalles de la tarea<br>Then el sistema debe mostrar la opción para enviar una nueva entrega<br><br><strong>Scenario: Adjuntar archivos nuevos desde el dispositivo</strong><br>Given el responsable accede al formulario de nueva entrega<br>When se carga la interfaz<br>Then el sistema debe mostrar un input para subir archivos desde el dispositivo<br><br><strong>Scenario: Subir archivos al workspace y referenciarlos en la nueva entrega</strong><br>Given el eespecialistaa ha seleccionado archivos válidos<br>When confirma la subida<br>Then el sistema debe subir automáticamente los archivos al workspace de la organización<br>Then crear referencias de tipo TASK_SUBMISSION para cada archivo<br>Then incluir las referencias en la nueva entrega de tarea<br><br><strong>Scenario: Realizar nueva entrega y actualizar estado</strong><br>Given el eespecialistaa ha completado la nueva entrega con archivos adjuntos<br>When confirma el envío<br>Then el sistema debe guardar la entrega con sus comentarios y referencias<br>Then actualizar el estado de la tarea a SUBMITTED<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Impedir reenvío si no hay nuevos archivos</strong><br>Given el eespecialistaa intenta reenviar la tarea<br>When no ha adjuntado ningún archivo<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que debe adjuntar al menos un archivo nuevo<br><br></td>
+        <td>EP04</td>
+    </tr>
+    <tr>
+        <td>US053</td>
+        <td>Eliminar una tarea del cronograma</td>
+        <td>Como contratista quiero retirar tareas que ya no deben ser ejecutadas o que fueron registradas por error para mantener la planificación limpia, precisa y sin tareas obsoletas</td>
+        <td><strong>Scenario: Solicitar confirmación antes de eliminar</strong><br>Given el contratista ha seleccionado la opción para eliminar una tarea<br>When se despliega el diálogo de eliminación<br>Then el sistema debe solicitar una confirmación escrita del tipo 'eliminar + nombre de la tarea'<br><br><strong>Scenario: Eliminar tarea si confirmación es correcta</strong><br>Given el contratista ha escrito correctamente la confirmación<br>When confirma la acción<br>Then el sistema debe eliminar la tarea del cronograma<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Cancelar eliminación si la confirmación es incorrecta</strong><br>Given el contratista ha escrito incorrectamente la confirmación<br>When intenta confirmar la acción<br>Then el sistema debe cancelar la operación<br>Then mostrar un mensaje indicando que la confirmación no es válida<br><br></td>
+        <td>EP04</td>
+    </tr>
+    <tr>
+        <td>US054</td>
+        <td>Visualizar lista de reuniones del cronograma por hito</td>
+        <td>Como miembro del proyecto quiero consultar las reuniones planificadas dentro de los hitos del cronograma del proyecto para entender la agenda de coordinación del equipo según el avance por etapas del proyecto</td>
+        <td><strong>Scenario: Visualizar reuniones si es contratista o coordinador</strong><br>Given el usuario es el contratista o un coordinador del proyecto<br>When expande un hito del cronograma<br>Then el sistema debe mostrar todas las reuniones asociadas a ese hito con detalles como tema, fecha, hora y convocante<br><br><strong>Scenario: Visualizar solo reuniones en las que participa si es eespecialistaa</strong><br>Given el usuario es un eespecialistaa<br>When expande un hito del cronograma<br>Then el sistema debe mostrar solo las reuniones en las que el eespecialistaa está incluido como participante<br>Then cada reunión debe mostrar tema, fecha y hora<br><br><strong>Scenario: Mostrar opción de añadir reunión solo si es contratista o coordinador</strong><br>Given el usuario es el contratista o un coordinador<br>When expande un hito del cronograma<br>Then el sistema debe mostrar una opción para añadir una nueva reunión<br><br><strong>Scenario: Visualizar opción para editar reunión solo si es contratista o convocante</strong><br>Given el usuario es el contratista o es quien convocó la reunión<br>When visualiza la lista de reuniones<br>Then el sistema debe mostrar una opción para editar junto a cada reunión editable por el usuario<br><br><strong>Scenario: Visualizar opción de eliminar reunión solo si es contratista</strong><br>Given el usuario es el contratista del proyecto<br>When visualiza la lista de reuniones<br>Then el sistema debe mostrar una opción para eliminar junto a cada reunión<br><br></td>
+        <td>EP05</td>
+    </tr>
+    <tr>
+        <td>US055</td>
+        <td>Visualizar detalles de una reunión</td>
+        <td>Como miembro del proyecto quiero consultar toda la información relevante de una reunión agendada para conocer con claridad los objetivos, participantes y horarios de cada reunión</td>
+        <td><strong>Scenario: Visualizar todos los campos de la reunión</strong><br>Given el usuario accede a los detalles de una reunión a la que tiene acceso<br>When se abre la vista de detalles<br>Then el sistema debe mostrar el tema, descripción, fecha de inicio, fecha de fin, convocante y lista de participantes<br><br><strong>Scenario: Mostrar solo si el usuario pertenece al proyecto</strong><br>Given el usuario no pertenece al equipo del proyecto<br>When intenta acceder a los detalles de una reunión<br>Then el sistema debe impedir el acceso<br>Then mostrar un mensaje indicando que no tiene permisos para visualizar esta información<br><br></td>
+        <td>EP05</td>
+    </tr>
+    <tr>
+        <td>US056</td>
+        <td>Ingresar tema de la reunión</td>
+        <td>Como contratista o coordinador quiero definir el tema principal que será tratado durante la reunión para comunicar claramente el propósito del encuentro al equipo participante</td>
+        <td><strong>Scenario: Visualizar campo de tema de reunión</strong><br>Given el usuario accede al formulario de creación de una reunión<br>When se carga la interfaz<br>Then el sistema debe mostrar un campo obligatorio para ingresar el tema de la reunión<br><br><strong>Scenario: Validar que el campo de tema no esté vacío</strong><br>Given el usuario está completando el formulario de creación<br>When intenta continuar sin ingresar un tema<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que el tema es obligatorio<br><br></td>
+        <td>EP05</td>
+    </tr>
+    <tr>
+        <td>US057</td>
+        <td>Ingresar descripción de la reunión</td>
+        <td>Como contratista o coordinador quiero agregar una descripción con detalles complementarios sobre el propósito o los temas a tratar para proporcionar contexto adicional a los participantes antes de asistir a la reunión</td>
+        <td><strong>Scenario: Visualizar campo de descripción en el formulario</strong><br>Given el usuario accede al formulario de creación de una reunión<br>When se carga la interfaz<br>Then el sistema debe mostrar un campo de texto para ingresar una descripción<br><br><strong>Scenario: Permitir continuar sin ingresar una descripción</strong><br>Given el campo de descripción está vacío<br>When el usuario confirma la creación de la reunión<br>Then el sistema debe permitir completar la acción sin mostrar advertencias<br><br><strong>Scenario: Guardar la descripción si fue ingresada</strong><br>Given el usuario ha ingresado una descripción<br>When confirma la creación de la reunión<br>Then el sistema debe guardar el texto como parte de los detalles de la reunión<br><br></td>
+        <td>EP05</td>
+    </tr>
+    <tr>
+        <td>US058</td>
+        <td>Ingresar fechas y horarios de la reunión</td>
+        <td>Como contratista o coordinador quiero definir la fecha y hora de inicio y fin de una reunión planificada para asegurar una correcta organización del cronograma y permitir que los participantes se preparen con anticipación</td>
+        <td><strong>Scenario: Visualizar campos de fecha y hora de inicio y fin</strong><br>Given el usuario accede al formulario de creación de una reunión<br>When se carga la interfaz<br>Then el sistema debe mostrar campos para seleccionar la fecha y hora de inicio y fin de la reunión<br><br><strong>Scenario: Validar campos obligatorios de fechas</strong><br>Given el usuario ha dejado uno o ambos campos vacíos<br>When intenta confirmar la creación<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que ambos campos son obligatorios<br><br><strong>Scenario: Ajustar fechas si son inconsistentes</strong><br>Given el usuario ha ingresado una fecha de inicio posterior a la de fin, o viceversa<br>When confirma alguno de los campos<br>Then el sistema debe ajustar automáticamente la otra fecha para igualarla<br><br><strong>Scenario: Validar que las fechas estén dentro del rango del hito</strong><br>Given el usuario ha ingresado fechas válidas<br>When estas fechas están fuera del rango del hito al que se asociará la reunión<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que las fechas deben estar dentro del rango del hito<br><br></td>
+        <td>EP05</td>
+    </tr>
+    <tr>
+        <td>US059</td>
+        <td>Ingresar fechas y horarios de la reunión</td>
+        <td>Como contratista o coordinador quiero definir la fecha y hora de inicio y fin de una reunión planificada para asegurar una correcta organización del cronograma y permitir que los participantes se preparen con anticipación</td>
+        <td><strong>Scenario: Visualizar campos de fecha y hora de inicio y fin</strong><br>Given el usuario accede al formulario de creación de una reunión<br>When se carga la interfaz<br>Then el sistema debe mostrar campos para seleccionar la fecha y hora de inicio y fin de la reunión<br><br><strong>Scenario: Validar campos obligatorios de fechas</strong><br>Given el usuario ha dejado uno o ambos campos vacíos<br>When intenta confirmar la creación<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que ambos campos son obligatorios<br><br><strong>Scenario: Ajustar fechas si son inconsistentes</strong><br>Given el usuario ha ingresado una fecha de inicio posterior a la de fin, o viceversa<br>When confirma alguno de los campos<br>Then el sistema debe ajustar automáticamente la otra fecha para igualarla<br><br><strong>Scenario: Impedir selección de fechas fuera del hito</strong><br>Given el usuario ha ingresado fechas válidas<br>When confirma la creación de la reunión<br>Then el sistema debe validar que las fechas estén dentro del rango del hito<br>Then si no lo están, debe impedir la acción y mostrar un mensaje indicando el error<br><br></td>
+        <td>EP05</td>
+    </tr>
+    <tr>
+        <td>US060</td>
+        <td>Añadir participantes a una reunión</td>
+        <td>Como contratista o coordinador quiero incluir a los miembros del equipo que deben asistir a la reunión para asegurar que los participantes pertinentes estén convocados desde el momento de su creación</td>
+        <td><strong>Scenario: Visualizar lista de miembros del proyecto</strong><br>Given el usuario accede al formulario de creación de una reunión<br>When se carga la interfaz<br>Then el sistema debe mostrar una lista de todos los miembros del equipo del proyecto para su selección<br><br><strong>Scenario: Seleccionar participantes para convocar</strong><br>Given el usuario visualiza la lista de miembros<br>When selecciona uno o más miembros del equipo<br>Then el sistema debe añadirlos a la lista de participantes convocados<br><br></td>
+        <td>EP05</td>
+    </tr>
+    <tr>
+        <td>US061</td>
+        <td>Buscar participantes por nombre o correo en reuniones</td>
+        <td>Como contratista o coordinador quiero filtrar rápidamente la lista de miembros del proyecto al convocar una reunión para ahorrar tiempo al seleccionar participantes, especialmente en equipos grandes</td>
+        <td><strong>Scenario: La lista de participantes permite escribir texto</strong><br>Given el usuario accede al formulario de creación de una reunión<br>When abre la lista de miembros del equipo para añadir participantes<br>Then el sistema debe permitir escribir texto directamente sobre la lista para activar el filtrado<br><br><strong>Scenario: Filtrado automático por nombre o correo</strong><br>Given el usuario ha empezado a escribir texto en la lista<br>When el texto ingresado coincide parcial o totalmente con un nombre o correo<br>Then el sistema debe mostrar solo los miembros cuyos nombres o correos coincidan con el texto ingresado<br><br><strong>Scenario: Sin coincidencias en la búsqueda</strong><br>Given el usuario ha ingresado texto que no coincide con ningún nombre o correo<br>When escribe en la lista<br>Then el sistema debe mostrar un mensaje indicando que no se encontraron coincidencias<br><br></td>
+        <td>EP05</td>
+    </tr>
+    <tr>
+        <td>US062</td>
+        <td>Eliminar participantes de una reunión</td>
+        <td>Como contratista o coordinador quiero ajustar la lista de personas convocadas a una reunión antes de confirmarla para asegurar que solo participen quienes realmente deben estar presentes, evitando errores o confusiones</td>
+        <td><strong>Scenario: Visualizar lista editable de participantes seleccionados</strong><br>Given el usuario ha añadido al menos un participante a la reunión<br>When se carga el resumen de los participantes seleccionados<br>Then el sistema debe mostrar los nombres de los miembros añadidos junto con una opción para eliminarlos<br><br><strong>Scenario: Eliminar un participante de la reunión</strong><br>Given el usuario visualiza la lista de participantes seleccionados<br>When hace clic en la opción de eliminar junto a un nombre<br>Then el sistema debe quitar a ese miembro de la lista<br>Then actualizar la visualización de participantes en tiempo real<br><br></td>
+        <td>EP05</td>
+    </tr>
+    <tr>
+        <td>US063</td>
+        <td>Confirmar creación de la reunión</td>
+        <td>Como contratista o coordinador quiero finalizar el registro de una reunión con todos sus datos completados para añadir formalmente la reunión al cronograma y notificar a los participantes correspondientes</td>
+        <td><strong>Scenario: Confirmar con todos los campos obligatorios completos</strong><br>Given el usuario ha ingresado un tema, fechas válidas y seleccionado al menos un participante<br>When confirma la creación<br>Then el sistema debe registrar la nueva reunión en el cronograma<br>Then asignar al usuario como convocante<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Impedir creación si faltan campos obligatorios</strong><br>Given el usuario no ha completado alguno de los campos obligatorios<br>When intenta confirmar la reunión<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando qué campos faltan<br><br></td>
+        <td>EP05</td>
+    </tr>
+    <tr>
+        <td>US064</td>
+        <td>Editar tema de una reunión</td>
+        <td>Como contratista o convocante quiero actualizar el título o motivo principal de la reunión si cambia el enfoque para reflejar claramente el propósito actualizado del encuentro para todos los participantes</td>
+        <td><strong>Scenario: Visualizar campo de tema con valor actual</strong><br>Given el usuario accede a la edición de una reunión<br>When abre el formulario de edición<br>Then el sistema debe mostrar el campo de tema con su valor actual prellenado<br><br><strong>Scenario: Actualizar tema y confirmar</strong><br>Given el usuario ha modificado el campo de tema<br>When confirma los cambios<br>Then el sistema debe guardar el nuevo tema de la reunión<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Validar tema como campo obligatorio</strong><br>Given el campo de tema está vacío<br>When el usuario intenta guardar los cambios<br>Then el sistema debe impedir la acción y mostrar un mensaje indicando que el campo es obligatorio<br><br></td>
+        <td>EP05</td>
+    </tr>
+    <tr>
+        <td>US065</td>
+        <td>Editar descripción de una reunión</td>
+        <td>Como contratista o convocante quiero actualizar la información complementaria o aclaratoria de una reunión ya agendada para brindar mayor claridad a los participantes sobre los temas a tratar o los objetivos del encuentro</td>
+        <td><strong>Scenario: Visualizar campo de descripción con valor actual</strong><br>Given el usuario accede al formulario de edición de una reunión<br>When se carga la interfaz<br>Then el sistema debe mostrar el campo de descripción con el contenido actual prellenado<br><br><strong>Scenario: Actualizar descripción y guardar cambios</strong><br>Given el usuario ha modificado el texto en el campo de descripción<br>When confirma los cambios<br>Then el sistema debe guardar la nueva descripción de la reunión<br>Then mostrar un mensaje de confirmación<br><br></td>
+        <td>EP05</td>
+    </tr>
+    <tr>
+        <td>US066</td>
+        <td>Editar fechas y horarios de una reunión</td>
+        <td>Como contratista o convocante quiero modificar la fecha y hora de una reunión ya agendada si hay cambios en la planificación para mantener el cronograma actualizado y notificar correctamente a los participantes</td>
+        <td><strong>Scenario: Visualizar fechas actuales para editar</strong><br>Given el usuario accede a la edición de una reunión<br>When se carga el formulario de edición<br>Then el sistema debe mostrar los campos de fecha de inicio y fin con sus valores actuales prellenados<br><br><strong>Scenario: Ajustar automáticamente fechas inconsistentes</strong><br>Given el usuario ingresa fechas que no siguen el orden lógico (inicio > fin o viceversa)<br>When confirma alguno de los campos<br>Then el sistema debe ajustar automáticamente la otra fecha para igualarla<br><br><strong>Scenario: Guardar cambios si las fechas son válidas y están dentro del hito</strong><br>Given el usuario ha ingresado fechas válidas dentro del rango permitido<br>When confirma los cambios<br>Then el sistema debe actualizar la reunión y mostrar un mensaje de confirmación<br><br><strong>Scenario: Impedir cambios si las fechas están fuera del rango del hito</strong><br>Given el usuario ha ingresado fechas válidas pero fuera del rango del hito<br>When intenta confirmar la edición<br>Then el sistema debe impedir la acción y mostrar un mensaje indicando el error<br><br></td>
+        <td>EP05</td>
+    </tr>
+    <tr>
+        <td>US067</td>
+        <td>Editar participantes de una reunión</td>
+        <td>Como contratista o convocante quiero ajustar la lista de personas convocadas tras cambios en la disponibilidad o roles para garantizar que solo los miembros pertinentes estén informados y participen activamente</td>
+        <td><strong>Scenario: Visualizar participantes actuales para edición</strong><br>Given el usuario accede a la edición de una reunión<br>When se carga el formulario de edición<br>Then el sistema debe mostrar la lista actual de participantes seleccionados con opción para añadir o eliminar<br><br><strong>Scenario: Actualizar la lista de participantes</strong><br>Given el usuario ha añadido o eliminado participantes<br>When confirma los cambios<br>Then el sistema debe guardar la nueva lista de participantes<br>Then mostrar un mensaje de confirmación<br><br></td>
+        <td>EP05</td>
+    </tr>
+    <tr>
+        <td>US068</td>
+        <td>Cancelar una reunión del cronograma</td>
+        <td>Como contratista quiero eliminar reuniones que ya no son necesarias o que fueron agendadas por error para mantener el cronograma limpio y reflejar únicamente reuniones vigentes y relevantes</td>
+        <td><strong>Scenario: Solicitar confirmación manual antes de cancelar</strong><br>Given el contratista ha seleccionado la opción para cancelar una reunión<br>When se despliega el cuadro de confirmación<br>Then el sistema debe solicitar que escriba el texto 'cancelar + nombre del tema de la reunión'<br><br><strong>Scenario: Cancelar la reunión si la confirmación es correcta</strong><br>Given el contratista ha ingresado correctamente el texto de confirmación<br>When confirma la acción<br>Then el sistema debe eliminar la reunión del cronograma<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Cancelar operación si la confirmación es incorrecta</strong><br>Given el contratista ha ingresado incorrectamente la confirmación<br>When intenta confirmar la cancelación<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que la confirmación no es válida<br><br></td>
+        <td>EP05</td>
+    </tr>
+    <tr>
+        <td>US069</td>
+        <td>Visualizar estructura del expediente técnico del proyecto</td>
+        <td>Como miembro del proyecto quiero consultar el contenido organizado del expediente técnico asociado al proyecto para acceder fácilmente a los documentos técnicos relevantes según la estructura definida por la empresa</td>
+        <td><strong>Scenario: Visualizar estructura jerárquica de carpetas</strong><br>Given el usuario pertenece al equipo del proyecto<br>When accede a la sección de expediente técnico<br>Then el sistema debe mostrar la estructura de carpetas y subcarpetas en formato jerárquico tipo árbol<br><br><strong>Scenario: Visualizar archivos referenciados en cada carpeta</strong><br>Given el usuario ha expandido una carpeta<br>When se visualiza su contenido<br>Then el sistema debe mostrar los nombres de los archivos referenciados junto con su tipo y fecha de referencia<br><br><strong>Scenario: Permitir retroceder a la carpeta padre</strong><br>Given el usuario está navegando dentro de una subcarpeta<br>When desea volver al directorio superior<br>Then el sistema debe mostrar una opción para retroceder a la carpeta o directorio padre<br><br></td>
+        <td>EP06</td>
+    </tr>
+    <tr>
+        <td>US070</td>
+        <td>Ver detalles de un archivo referenciado</td>
+        <td>Como miembro del proyecto quiero consultar información completa sobre un archivo incluido en el expediente técnico para identificar el contenido, origen y propósito del archivo dentro del contexto del proyecto</td>
+        <td><strong>Scenario: Visualizar información detallada del archivo</strong><br>Given el usuario está visualizando una carpeta del expediente técnico<br>When selecciona un archivo referenciado<br>Then el sistema debe mostrar los detalles del archivo como nombre, tipo, fecha de referencia, autor y ubicación original en el workspace<br><br><strong>Scenario: Permitir descargar el archivo</strong><br>Given el usuario ha abierto los detalles del archivo<br>When selecciona la opción de descarga<br>Then el sistema debe iniciar la descarga del archivo al dispositivo del usuario<br><br><strong>Scenario: Permitir vista previa del archivo si es compatible</strong><br>Given el usuario ha abierto los detalles del archivo<br>When selecciona la opción de vista previa<br>Then el sistema debe mostrar una vista previa del archivo si su tipo lo permite (por ejemplo: PDF, imágenes)<br><br></td>
+        <td>EP06</td>
+    </tr>
+    <tr>
+        <td>US071</td>
+        <td>Crear carpeta dentro del expediente técnico</td>
+        <td>Como contratista quiero organizar el expediente técnico mediante una estructura jerárquica clara para mantener ordenados los documentos técnicos según los estándares de la empresa y del proyecto</td>
+        <td><strong>Scenario: Mostrar opción de crear carpeta solo si es contratista</strong><br>Given el usuario accede a la sección de expediente técnico<br>When el sistema identifica que el usuario es el contratista del proyecto<br>Then el sistema debe mostrar una opción para crear una nueva carpeta<br><br><strong>Scenario: Visualizar campo para nombre de la carpeta</strong><br>Given el contratista ha seleccionado la opción para crear una carpeta<br>When se despliega el formulario<br>Then el sistema debe mostrar un campo para ingresar el nombre de la nueva carpeta<br><br><strong>Scenario: Validar que el nombre de la carpeta no esté vacío</strong><br>Given el campo de nombre está vacío<br>When el contratista intenta confirmar la creación<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que el nombre es obligatorio<br><br><strong>Scenario: Confirmar creación con nombre válido</strong><br>Given el contratista ha ingresado un nombre válido<br>When confirma la creación<br>Then el sistema debe crear la carpeta en la ubicación actual del expediente técnico<br>Then mostrar un mensaje de confirmación<br><br></td>
+        <td>EP06</td>
+    </tr>
+    <tr>
+        <td>US072</td>
+        <td>Renombrar carpeta del expediente</td>
+        <td>Como contratista quiero actualizar el nombre de una carpeta si se cometió un error o cambió su propósito para mantener la organización del expediente técnico clara y alineada con los estándares del proyecto</td>
+        <td><strong>Scenario: Mostrar opción para renombrar solo si es contratista</strong><br>Given el usuario está visualizando el expediente técnico<br>When el sistema identifica que el usuario es el contratista<br>Then debe mostrarse una opción para renombrar cada carpeta<br><br><strong>Scenario: Visualizar campo con nombre actual</strong><br>Given el contratista ha elegido renombrar una carpeta<br>When se despliega el campo de edición<br>Then el sistema debe mostrar el nombre actual editable de la carpeta<br><br><strong>Scenario: Validar que el nuevo nombre no esté vacío</strong><br>Given el campo está vacío<br>When el contratista intenta confirmar el cambio<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que el nombre es obligatorio<br><br><strong>Scenario: Guardar nuevo nombre si es válido</strong><br>Given el contratista ha ingresado un nuevo nombre válido<br>When confirma el cambio<br>Then el sistema debe actualizar el nombre de la carpeta y mostrar un mensaje de confirmación<br><br></td>
+        <td>EP06</td>
+    </tr>
+    <tr>
+        <td>US073</td>
+        <td>Eliminar carpeta del expediente</td>
+        <td>Como contratista quiero retirar una carpeta que fue creada por error o ya no es necesaria para mantener la estructura del expediente técnico ordenada y libre de elementos innecesarios</td>
+        <td><strong>Scenario: Mostrar opción para eliminar solo si es contratista</strong><br>Given el usuario está visualizando la estructura del expediente<br>When el sistema identifica que el usuario es el contratista<br>Then debe mostrarse una opción para eliminar cada carpeta<br><br><strong>Scenario: Solicitar confirmación manual antes de eliminar</strong><br>Given el contratista ha seleccionado la opción de eliminar una carpeta<br>When confirma que desea eliminar la carpeta<br>Then el sistema debe solicitar escribir 'eliminar + nombre de la carpeta' para confirmar<br><br><strong>Scenario: Eliminar carpeta si la confirmación es correcta</strong><br>Given el contratista ha ingresado correctamente el texto de confirmación<br>When confirma la acción<br>Then el sistema debe eliminar la carpeta del expediente técnico<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Cancelar operación si la confirmación es incorrecta</strong><br>Given el contratista ha ingresado incorrectamente el texto de confirmación<br>When intenta confirmar la eliminación<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que la confirmación no es válida<br><br></td>
+        <td>EP06</td>
+    </tr>
+    <tr>
+        <td>US074</td>
+        <td>Añadir referencia a archivo al expediente</td>
+        <td>Como contratista quiero integrar documentos ya subidos al workspace dentro del expediente técnico sin duplicarlos para mantener una estructura ordenada y trazable sin aumentar el almacenamiento innecesariamente</td>
+        <td><strong>Scenario: Visualizar opción para añadir referencia si es contratista</strong><br>Given el usuario está visualizando una carpeta del expediente técnico<br>When el sistema identifica que el usuario es el contratista<br>Then el sistema debe mostrar una opción para añadir archivos como referencias<br><br><strong>Scenario: Seleccionar archivo existente del workspace</strong><br>Given el contratista ha abierto el selector de archivos<br>When se carga la vista del workspace de la organización<br>Then el sistema debe mostrar los archivos disponibles para seleccionar como referencia<br><br><strong>Scenario: Confirmar referencia y asociarla al expediente</strong><br>Given el contratista ha seleccionado un archivo del workspace<br>When confirma su inclusión en la carpeta del expediente técnico<br>Then el sistema debe crear una referencia de tipo TECHNICAL_FILE_FOLDER hacia ese archivo<br>Then asociar dicha referencia a la carpeta actual del expediente técnico<br>Then mostrar un mensaje de confirmación<br><br></td>
+        <td>EP06</td>
+    </tr>
+    <tr>
+        <td>US075</td>
+        <td>Eliminar referencia a archivo del expediente técnico</td>
+        <td>Como contratista quiero retirar del expediente una referencia que fue añadida por error o ya no es necesaria para mantener la relevancia y organización del expediente sin afectar el archivo original en el workspace</td>
+        <td><strong>Scenario: Visualizar opción para eliminar referencia si es contratista</strong><br>Given el usuario está visualizando una carpeta del expediente técnico<br>When el sistema identifica que el usuario es el contratista<br>Then el sistema debe mostrar una opción para eliminar cada referencia de archivo<br><br><strong>Scenario: Confirmar eliminación de referencia</strong><br>Given el contratista ha seleccionado una referencia para eliminar<br>When confirma la acción<br>Then el sistema debe eliminar solo la referencia del expediente técnico<br>Then mostrar un mensaje indicando que la eliminación fue exitosa<br><br></td>
+        <td>EP06</td>
+    </tr>
+    <tr>
+        <td>US076</td>
+        <td>Iniciar solicitud de cambio desde una solicitud de cambio</td>
+        <td>Como entidad contratante quiero solicitar formalmente una modificación del alcance, contenido o entrega del proyecto para asegurar que el cambio sea evaluado, aprobado o rechazado bajo un proceso trazable</td>
+        <td><strong>Scenario: Visualizar formulario para solicitud de cambio</strong><br>Given la entidad contratante accede a la sección de solicitudes de cambio de un proyecto<br>When selecciona la opción para iniciar una nueva solicitud<br>Then el sistema debe mostrar un formulario con los campos: descripción del cambio (obligatorio)<br><br><strong>Scenario: Validar campos obligatorios del solicitud de cambio</strong><br>Given la entidad contratante ha dejado el campo de descripción vacío en el formulario<br>When intenta confirmar la solicitud<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que debe llenar todos los campos obligatorios<br><br><strong>Scenario: Crear solicitud de cambio y proceso de cambio válidamente</strong><br>Given la entidad contratante ha ingresado una descripción válida<br>When confirma la solicitud<br>Then el sistema debe registrar la nueva solicitud de cambio<br>Then crear un proceso de cambio con estado PENDING vinculado a esta solicitud<br>Then registrar como origen el tipo CHANGE_REQUEST con su ID asociado<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Impedir creación si ya existe un proceso PENDING</strong><br>Given el proyecto ya tiene un proceso de cambio en estado PENDING<br>When la entidad contratante intenta enviar una nueva solicitud<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que ya existe una solicitud pendiente en curso<br><br></td>
+        <td>EP07</td>
+    </tr>
+    <tr>
+        <td>US077</td>
+        <td>Iniciar solicitud de cambio desde una consulta técnica</td>
+        <td>Como residente de obra quiero reportar un problema técnico observado durante la ejecución del proyecto que requiere aprobación formal para ser modificado para registrar incidentes técnicos y estructurar su evaluación mediante un proceso formal de cambio</td>
+        <td><strong>Scenario: Visualizar formulario para consulta técnica</strong><br>Given el residente de obra accede a la sección de consultas técnicas de un proyecto<br>When selecciona la opción para iniciar una nueva consulta técnica<br>Then el sistema debe mostrar un formulario con el campo: descripción del problema (obligatorio)<br><br><strong>Scenario: Validar campos obligatorios de la consulta</strong><br>Given el residente de obra ha dejado el campo de descripción vacío en el formulario<br>When intenta confirmar la solicitud<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que debe completar la descripción<br><br><strong>Scenario: Crear consulta técnica y proceso de cambio válidamente</strong><br>Given el residente de obra ha ingresado una descripción válida<br>When confirma la solicitud<br>Then el sistema debe registrar una nueva consulta técnica<br>Then crear un proceso de cambio con estado PENDING vinculado a esta consulta<br>Then registrar como origen el tipo TECHNICAL_QUERY con su ID asociado<br>Then cambiar el estado del proyecto asociado a CHANGE_REQUESTED<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Impedir creación si ya existe un proceso PENDING</strong><br>Given el proyecto ya tiene un proceso de cambio en estado PENDING<br>When el residente de obra intenta iniciar una nueva consulta técnica<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que ya existe una solicitud pendiente en curso<br><br></td>
+        <td>EP07</td>
+    </tr>
+    <tr>
+        <td>US078</td>
+        <td>Visualizar detalles de proceso de cambio</td>
+        <td>Como contratista quiero visualizar el motivo detrás de una solicitud de cambio iniciada por un cliente o residente para analizar el contexto del cambio y tomar una decisión fundamentada sobre su aprobación o rechazo</td>
+        <td><strong>Scenario: Visualizar la justificación en detalle</strong><br>Given el contratista accede a un proceso de cambio en estado PENDING<br>When visualiza los detalles del proceso<br>Then el sistema debe mostrar la justificación ingresada por quien inició la solicitud<br><br><strong>Scenario: Indicar el origen del cambio</strong><br>Given el contratista accede a los detalles del proceso de cambio<br>When se muestra la información relacionada<br>Then el sistema debe indicar si el origen es una solicitud de cambio o una consulta técnica<br>Then mostrar el identificador y la descripción del origen<br><br></td>
+        <td>EP07</td>
+    </tr>
+    <tr>
+        <td>US079</td>
+        <td>Ver proceso de cambio iniciados</td>
+        <td>Como contratista o miembro del equipo quiero consultar todos los procesos de cambio registrados en el proyecto para analizar el historial de solicitudes y realizar un seguimiento efectivo del estado de los cambios</td>
+        <td><strong>Scenario: Visualizar listado de procesos de cambio</strong><br>Given el usuario accede a la sección de solicitudes de cambio de un proyecto<br>When se carga la vista de procesos iniciados<br>Then el sistema debe mostrar una lista con todos los proceso de cambioes registrados en el proyecto<br>Then cada item debe incluir el tipo de origen, la fecha de creación, el estado actual y un resumen de la justificación<br><br><strong>Scenario: Filtrar lista por estado</strong><br>Given el usuario está visualizando la lista de procesos iniciados<br>When utiliza un filtro por estado (PENDING, APPROVED, REJECTED)<br>Then el sistema debe actualizar la lista para mostrar solo los procesos que coincidan con el estado seleccionado<br><br></td>
+        <td>EP07</td>
+    </tr>
+    <tr>
+        <td>US080</td>
+        <td>Ver proceso de cambio iniciados (Entidad contratante)</td>
+        <td>Como entidad contratante quiero consultar las solicitudes de cambio iniciadas por su organización para hacer seguimiento al estado de sus solicitudes y entender la evolución del proceso de evaluación</td>
+        <td><strong>Scenario: Visualizar procesos iniciados por la entidad contratante</strong><br>Given la entidad contratante accede a la sección de solicitudes de cambio<br>When se carga la vista de procesos de cambio<br>Then el sistema debe mostrar solo los proceso de cambioes iniciados por su organización mediante solicitud de cambios<br>Then cada item debe incluir fecha, estado, descripción y justificación<br><br><strong>Scenario: Visualizar estado actualizado del proceso de cambio</strong><br>Given la entidad contratante está viendo una solicitud iniciada por ellos<br>When abre los detalles de un proceso de cambio<br>Then el sistema debe mostrar el estado actual (PENDING, APPROVED o REJECTED) y, si existe, la respuesta del contratista<br><br></td>
+        <td>EP07</td>
+    </tr>
+    <tr>
+        <td>US081</td>
+        <td>Restringir acceso a proceso de cambioes iniciados fuera de la organización</td>
+        <td>Como entidad contratante o residente de obra quiero mantener la confidencialidad de los procesos iniciados por otras organizaciones para proteger la integridad de los datos y asegurar la trazabilidad solo para actores autorizados</td>
+        <td><strong>Scenario: Impedir visualización de procesos iniciados por otros</strong><br>Given un usuario pertenece a una organización distinta a la que inició el proceso de cambio<br>When intenta acceder a la lista o detalles de ese proceso de cambio<br>Then el sistema debe impedir el acceso<br>Then mostrar un mensaje indicando que el proceso no está disponible<br><br><strong>Scenario: Permitir acceso solo si la organización inició el proceso</strong><br>Given el usuario forma parte de la organización que inició el proceso (como entidad contratante o residente)<br>When accede a la sección de solicitudes de cambio<br>Then el sistema debe mostrar solamente los proceso de cambioes iniciados por esa organización y proyecto específico<br><br></td>
+        <td>EP07</td>
+    </tr>
+    <tr>
+        <td>US082</td>
+        <td>Aprobar un proceso de cambio</td>
+        <td>Como contratista quiero aceptar formalmente una solicitud de cambio tras evaluar su justificación para avanzar con la modificación del proyecto bajo respaldo documentado y ordenado</td>
+        <td><strong>Scenario: Aprobar proceso y generar orden de cambio</strong><br>Given el contratista accede a un proceso de cambio en estado PENDING<br>Given ha ingresado una descripción válida para la aprobación<br>When confirma la aprobación<br>Then el sistema debe cambiar el estado del proceso de cambio a APPROVED<br>Then crear un adicional de obra asociado<br>Then actualizar el estado del proyecto a CHANGE_PENDING<br><br><strong>Scenario: Validar campo obligatorio: descripción</strong><br>Given el contratista accede a un proceso de cambio en estado PENDING<br>Given no ha ingresado una descripción para justificar la aprobación<br>When intenta confirmar la aprobación<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que la descripción es obligatoria<br><br></td>
+        <td>EP08</td>
+    </tr>
+    <tr>
+        <td>US083</td>
+        <td>Rechazar un proceso de cambio</td>
+        <td>Como contratista quiero denegar una solicitud de cambio que no se justifica o no puede ser atendida para mantener la estabilidad del proyecto evitando cambios innecesarios o mal fundamentados</td>
+        <td><strong>Scenario: Rechazar proceso de cambio válidamente</strong><br>Given el contratista accede a un proceso de cambio en estado PENDING<br>Given ha ingresado una descripción con el motivo del rechazo<br>When confirma el rechazo<br>Then el sistema debe cambiar el estado del proceso de cambio a REJECTED<br><br><strong>Scenario: Validar campo obligatorio: motivo de rechazo</strong><br>Given el contratista accede a un proceso de cambio en estado PENDING<br>Given no ha ingresado una descripción del motivo de rechazo<br>When intenta confirmar el rechazo<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que debe ingresar una descripción para rechazar<br><br></td>
+        <td>EP08</td>
+    </tr>
+    <tr>
+        <td>US084</td>
+        <td>Solicitar datos para registrar adicional de obra al aprobar</td>
+        <td>Como contratista quiero completar los datos necesarios para formalizar la orden de cambio al aprobar una solicitud para emitir la orden de cambio de forma clara, contextualizada y documentada</td>
+        <td><strong>Scenario: Solicitar campos requeridos para el adicional de obra</strong><br>Given el contratista ha decidido aprobar un proceso de cambio<br>When se inicia el procedimiento de aprobación<br>Then el sistema debe solicitar los siguientes campos: descripción del cambio (obligatorio), selección del hito relacionado (obligatorio)<br><br><strong>Scenario: Validar que se ingresen todos los campos</strong><br>Given el contratista ha dejado vacíos uno o más campos obligatorios<br>When intenta confirmar la aprobación<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que debe ingresar una descripción y seleccionar un hito<br><br><strong>Scenario: Registrar adicional de obra si los datos son válidos</strong><br>Given el contratista ha ingresado una descripción válida<br>Given y ha seleccionado un hito relacionado<br>When confirma la aprobación<br>Then el sistema debe registrar un nuevo adicional de obra con los datos proporcionados<br><br></td>
+        <td>EP08</td>
+    </tr>
+    <tr>
+        <td>US085</td>
+        <td>Crear nuevo hito a partir de un adicional de obra aprobado</td>
+        <td>Como contratista quiero incluir formalmente una etapa adicional en el cronograma del proyecto como resultado de un cambio aprobado para reflejar en la planificación oficial el impacto del cambio aprobado sobre el desarrollo del proyecto</td>
+        <td><strong>Scenario: Solicitar datos para el nuevo hito</strong><br>Given el contratista ha aprobado un proceso de cambio<br>Given y el sistema ha generado un adicional de obra<br>When se activa la creación del hito asociado<br>Then el sistema debe solicitar los siguientes campos: nombre del hito (obligatorio), fecha de inicio (obligatoria), fecha de fin (obligatoria)<br><br><strong>Scenario: Validar campos vacíos</strong><br>Given el contratista no ha llenado uno o más campos requeridos<br>When intenta confirmar la creación del hito<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que todos los campos son obligatorios<br><br><strong>Scenario: Validar rango de fechas del proyecto</strong><br>Given el contratista ha ingresado fechas para el nuevo hito<br>When confirma la creación<br>Then el sistema debe validar que la fecha de inicio y fin estén dentro del rango del proyecto<br>Then impedir la creación si alguna fecha está fuera de rango<br>Then mostrar un mensaje indicando que las fechas deben estar dentro del plazo del proyecto<br><br><strong>Scenario: Ajuste automático entre fechas inconsistentes</strong><br>Given el contratista ha ingresado una combinación de fechas en la que la fecha de inicio es posterior a la de fin, o viceversa<br>When confirma el campo de fecha de inicio o fecha de fin<br>Then el sistema debe ajustar automáticamente la fecha que corresponda para igualarla a la otra, garantizando una secuencia cronológica válida<br><br><strong>Scenario: Registrar el nuevo hito correctamente</strong><br>Given el contratista ha completado todos los campos válidamente<br>When confirma la creación<br>Then el sistema debe registrar el nuevo hito dentro del cronograma del proyecto<br>Then vincularlo al adicional de obra aprobado<br><br></td>
+        <td>EP08</td>
+    </tr>
+    <tr>
+        <td>US086</td>
+        <td>Registrar Respuesta al cambio luego de aprobar o rechazar</td>
+        <td>Como contratista quiero dejar constancia formal de su decisión respecto a una solicitud de cambio para mantener un historial completo de las decisiones tomadas, incluyendo quién respondió y cuándo</td>
+        <td><strong>Scenario: Registrar respuesta tras aprobación</strong><br>Given el contratista ha aprobado un proceso de cambio<br>When se completa el proceso de aprobación<br>Then el sistema debe registrar un Respuesta al cambio con la descripción ingresada, el contratista como autor y la fecha actual como respondedAt<br><br><strong>Scenario: Registrar respuesta tras rechazo</strong><br>Given el contratista ha rechazado un proceso de cambio<br>When se completa el proceso de rechazo<br>Then el sistema debe registrar un Respuesta al cambio con la descripción ingresada, el contratista como autor y la fecha actual como respondedAt<br><br></td>
+        <td>EP08</td>
+    </tr>
+    <tr>
+        <td>US087</td>
+        <td>Crear una organización</td>
+        <td>Como persona registrada en el sistema quiero iniciar el registro de una nueva organización consultora para poder organizar su estructura interna y comenzar a gestionar proyectos con su equipo</td>
+        <td><strong>Scenario: Mostrar opción de creación siempre</strong><br>Given el usuario ha iniciado sesión<br>When accede a la sección de organizaciones<br>Then el sistema debe mostrar una opción para crear una nueva organización<br><br><strong>Scenario: Redirigir si no tiene workspace disponible</strong><br>Given el usuario no tiene un workspace disponible a su nombre<br>When selecciona la opción para crear una organización<br>Then el sistema debe redirigirlo a la sección de suscripciones<br>Then mostrar un mensaje indicando que necesita adquirir un workspace para continuar<br><br><strong>Scenario: Mostrar formulario si tiene workspace disponible</strong><br>Given el usuario tiene un workspace activo disponible<br>When selecciona la opción para crear una organización<br>Then el sistema debe mostrar el formulario de creación de organización<br><br></td>
+        <td>EP09</td>
+    </tr>
+    <tr>
+        <td>US088</td>
+        <td>Crear una organización</td>
+        <td>Como persona registrada en el sistema quiero registrar una nueva organización consultora para administrar su estructura interna y comenzar a gestionar proyectos con su equipo</td>
+        <td><strong>Scenario: Mostrar opción de crear organización</strong><br>Given el usuario ha iniciado sesión en el sistema<br>When accede a la sección de organizaciones<br>Then el sistema debe mostrar la opción para crear una nueva organización<br><br><strong>Scenario: Abrir formulario de creación</strong><br>Given el usuario ha seleccionado la opción de crear una organización<br>When hace clic en dicha opción<br>Then el sistema debe mostrar el formulario para ingresar los datos de la organización<br><br></td>
+        <td>EP09</td>
+    </tr>
+    <tr>
+        <td>US089</td>
+        <td>Ingresar razón social de la organización</td>
+        <td>Como persona registrada quiero proporcionar la razón social durante la creación de una organización para registrar formalmente a la organización con el nombre legal requerido</td>
+        <td><strong>Scenario: Mostrar campo de razón social</strong><br>Given el usuario accede al formulario de creación de organización<br>When se carga la interfaz<br>Then el sistema debe mostrar un campo para ingresar la razón social de la organización<br><br><strong>Scenario: Validar campo obligatorio</strong><br>Given el usuario ha dejado vacío el campo de razón social<br>When intenta confirmar el registro<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que la razón social es obligatoria<br><br></td>
+        <td>EP09</td>
+    </tr>
+    <tr>
+        <td>US090</td>
+        <td>Ingresar nombre comercial de la organización</td>
+        <td>Como persona registrada quiero proporcionar un nombre comercial durante la creación de una organización para identificar públicamente a la organización con un nombre amigable o representativo</td>
+        <td><strong>Scenario: Mostrar campo de nombre comercial</strong><br>Given el usuario accede al formulario de creación de organización<br>When se carga la interfaz<br>Then el sistema debe mostrar un campo para ingresar el nombre comercial de la organización, indicando que es opcional<br><br></td>
+        <td>EP09</td>
+    </tr>
+    <tr>
+        <td>US091</td>
+        <td>Ingresar RUC de la organización</td>
+        <td>Como persona registrada quiero proporcionar el RUC como identificador tributario durante la creación de una organización para cumplir con los requisitos legales de registro y evitar duplicidades o inconsistencias</td>
+        <td><strong>Scenario: Mostrar campo de RUC</strong><br>Given el usuario accede al formulario de creación de organización<br>When se carga la interfaz<br>Then el sistema debe mostrar un campo para ingresar el RUC de la organización<br><br><strong>Scenario: Validar que el RUC no esté vacío</strong><br>Given el usuario ha dejado el campo de RUC vacío<br>When intenta confirmar el registro<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que el RUC es obligatorio<br><br><strong>Scenario: Validar que el RUC tenga exactamente 11 caracteres</strong><br>Given el usuario ha ingresado un RUC con menos o más de 11 caracteres<br>When intenta confirmar el registro<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que el RUC debe tener exactamente 11 caracteres<br><br><strong>Scenario: Validar que el RUC contenga solo caracteres numéricos</strong><br>Given el usuario ha ingresado caracteres no numéricos en el RUC<br>When intenta confirmar el registro<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que el RUC debe contener solo números<br><br></td>
+        <td>EP09</td>
+    </tr>
+    <tr>
+        <td>US092</td>
+        <td>Confirmar creación de la organización</td>
+        <td>Como persona registrada quiero finalizar el proceso de creación de una organización una vez completado el formulario para registrar formalmente la organización dentro del sistema y habilitarla para operaciones posteriores</td>
+        <td><strong>Scenario: Crear organización con datos válidos</strong><br>Given el usuario ha completado correctamente todos los campos obligatorios del formulario<br>When confirma el envío del formulario<br>Then el sistema debe registrar la nueva organización con estado ACTIVO<br>Then mostrar un mensaje de éxito<br><br><strong>Scenario: Impedir creación si faltan campos obligatorios</strong><br>Given el usuario ha dejado uno o más campos obligatorios incompletos o inválidos<br>When intenta enviar el formulario<br>Then el sistema debe impedir la creación de la organización<br>Then mostrar un mensaje indicando que debe corregir los errores antes de continuar<br><br></td>
+        <td>EP09</td>
+    </tr>
+    <tr>
+        <td>US093</td>
+        <td>Visualizar organizaciones</td>
+        <td>Como persona registrada quiero consultar las organizaciones de las que forma parte para acceder rápidamente a las entidades con las que colabora o gestiona proyectos</td>
+        <td><strong>Scenario: Mostrar lista de organizaciones</strong><br>Given el usuario ha iniciado sesión<br>When accede a la sección de organizaciones<br>Then el sistema debe mostrar una lista con todas las organizaciones a las que pertenece<br>Then cada organización debe mostrar su nombre comercial (razón social si no lo tiene), estado y rol del usuario como miembro de la organización<br><br><strong>Scenario: Mensaje si no pertenece a ninguna organización</strong><br>Given el usuario no pertenece a ninguna organización<br>When accede a la sección de organizaciones<br>Then el sistema debe mostrar un mensaje indicando que aún no forma parte de ninguna organización<br><br></td>
+        <td>EP09</td>
+    </tr>
+    <tr>
+        <td>US094</td>
+        <td>Acceder al dashboard de una organización</td>
+        <td>Como persona registrada quiero ingresar a la vista principal de una organización a la que pertenece para gestionar proyectos, miembros, configuraciones y otros recursos desde un punto centralizado</td>
+        <td><strong>Scenario: Acceder a organización desde la lista</strong><br>Given el usuario ha accedido a la sección de organizaciones<br>Given visualiza una organización a la que pertenece<br>When selecciona dicha organización<br>Then el sistema debe abrir el dashboard correspondiente a esa organización<br>Then mostrar las secciones relevantes como proyectos, miembros y configuración<br><br><strong>Scenario: Impedir acceso si no pertenece a la organización</strong><br>Given el usuario intenta acceder directamente a una organización que no figura en su lista<br>When envía una solicitud para abrir su dashboard<br>Then el sistema debe impedir el acceso<br>Then mostrar un mensaje indicando que no pertenece a dicha organización<br><br></td>
+        <td>EP09</td>
+    </tr>
+    <tr>
+        <td>US095</td>
+        <td>Editar razón social de la organización</td>
+        <td>Como contratista quiero actualizar la razón social registrada cuando existan cambios formales en la empresa para mantener alineada la información del sistema con los datos legales oficiales de la organización</td>
+        <td><strong>Scenario: Mostrar campo editable solo si es contratista</strong><br>Given el usuario ha accedido a la sección de configuración de una organización<br>When el sistema identifica que el usuario es el contratista<br>Then el sistema debe mostrar un campo editable para modificar la razón social<br><br><strong>Scenario: Impedir edición si no es contratista</strong><br>Given el usuario no es el contratista de la organización<br>When accede a la sección de configuración<br>Then el sistema no debe mostrar la opción para editar la razón social<br><br><strong>Scenario: Validar campo obligatorio</strong><br>Given el contratista ha dejado vacío el campo de razón social<br>When intenta guardar los cambios<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que la razón social es obligatoria<br><br></td>
+        <td>EP10</td>
+    </tr>
+    <tr>
+        <td>US096</td>
+        <td>Editar nombre comercial de la organización</td>
+        <td>Como contratista quiero actualizar el nombre comercial cuando cambie la presentación pública de la organización para mantener la información visual y comunicacional coherente con la identidad actual de la empresa</td>
+        <td><strong>Scenario: Mostrar acción solo si es contratista</strong><br>Given el usuario ha accedido a la sección de configuración de una organización<br>When se carga la interfaz con las acciones disponibles<br>Then el sistema debe mostrar la opción correspondiente (editar/eliminar) solo si el usuario es el contratista de la organización<br><br><strong>Scenario: Mostrar campo editable solo si es contratista</strong><br>Given el usuario ha accedido a la configuración de la organización<br>When el sistema identifica que es el contratista<br>Then el sistema debe mostrar un campo editable para modificar el nombre comercial<br><br><strong>Scenario: Impedir edición si no es contratista</strong><br>Given el usuario no es el contratista de la organización<br>When accede a la configuración de la organización<br>Then el sistema no debe mostrar el campo editable<br><br></td>
+        <td>EP10</td>
+    </tr>
+    <tr>
+        <td>US097</td>
+        <td>Editar nombre comercial de la organización</td>
+        <td>Como contratista quiero actualizar el nombre comercial cuando cambie la presentación pública de la organización para mantener la información visual y comunicacional coherente con la identidad actual de la empresa</td>
+        <td><strong>Scenario: Mostrar acción solo si es contratista</strong><br>Given el usuario ha accedido a la sección de configuración de una organización<br>When se carga la interfaz con las acciones disponibles<br>Then el sistema debe mostrar la opción correspondiente (editar/eliminar) solo si el usuario es el contratista de la organización<br><br><strong>Scenario: Mostrar campo editable solo si es contratista</strong><br>Given el usuario ha accedido a la configuración de la organización<br>When el sistema identifica que es el contratista<br>Then el sistema debe mostrar un campo editable para modificar el nombre comercial<br>Then el campo debe indicarse explícitamente como opcional<br><br><strong>Scenario: Impedir edición si no es contratista</strong><br>Given el usuario no es el contratista de la organización<br>When accede a la configuración de la organización<br>Then el sistema no debe mostrar el campo editable<br><br></td>
+        <td>EP10</td>
+    </tr>
+    <tr>
+        <td>US098</td>
+        <td>Eliminar organización (estado INACTIVE)</td>
+        <td>Como contratista quiero desactivar una organización cuando ya no sea necesaria para proteger el sistema de errores accidentales y mantener control sobre el ciclo de vida de la entidad</td>
+        <td><strong>Scenario: Mostrar acción solo si es contratista</strong><br>Given el usuario ha accedido a la sección de configuración de una organización<br>When se carga la interfaz con las acciones disponibles<br>Then el sistema debe mostrar la opción correspondiente (editar/eliminar) solo si el usuario es el contratista de la organización<br><br><strong>Scenario: Eliminar organización lógicamente</strong><br>Given el usuario es el contratista de la organización<br>When confirma la acción de eliminar la organización<br>Then el sistema debe marcar la organización con estado INACTIVE<br>Then no se deben eliminar inmediatamente los datos asociados<br>Then mostrar un mensaje indicando que la eliminación es reversible por un tiempo limitado<br><br><strong>Scenario: Impedir eliminación si no es contratista</strong><br>Given el usuario no es el contratista de la organización<br>When intenta eliminar la organización<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que solo el contratista puede realizar esta operación<br><br></td>
+        <td>EP10</td>
+    </tr>
+    <tr>
+        <td>US099</td>
+        <td>Eliminar definitivamente la organización (vía confirmación por correo)</td>
+        <td>Como contratista quiero eliminar de manera inmediata y permanente una organización cuando se justifique con una confirmación explícita para limpiar datos obsoletos o innecesarios del sistema sin esperar el periodo de eliminación lógica</td>
+        <td><strong>Scenario: Mostrar opción solo si es contratista</strong><br>Given el usuario ha accedido a la configuración de una organización<br>When el sistema identifica que el usuario es el contratista<br>Then el sistema debe mostrar la opción de eliminación forzada<br><br><strong>Scenario: Solicitar confirmación por correo</strong><br>Given el contratista ha elegido la opción de eliminación forzada<br>When confirma la intención de eliminar<br>Then el sistema debe enviar un correo con un enlace o código de confirmación al contratista<br><br><strong>Scenario: Eliminar definitivamente al confirmar</strong><br>Given el contratista ha ingresado correctamente el código de confirmación o ha seguido el enlace<br>When se valida dicha confirmación<br>Then el sistema debe eliminar permanentemente la organización<br>Then eliminar todos los recursos asociados como proyectos y miembros<br>Then mantener los archivos intactos ya que están ligados al workspace<br><br><strong>Scenario: Impedir eliminación sin confirmación válida</strong><br>Given el contratista ha ingresado un código inválido o expirado<br>When intenta confirmar la eliminación forzada<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje de error indicando que la confirmación no es válida<br><br></td>
+        <td>EP10</td>
+    </tr>
+    <tr>
+        <td>US100</td>
+        <td>Invitar a una persona a la organización</td>
+        <td>Como contratista quiero incorporar nuevos miembros a la organización enviando invitaciones para expandir el equipo de trabajo de forma controlada y con trazabilidad</td>
+        <td><strong>Scenario: Visualizar opción de invitar en configuración</strong><br>Given el usuario ha accedido a la sección de configuración de la organización<br>When el sistema identifica que es el contratista<br>Then el sistema debe mostrar una opción para enviar nuevas invitaciones<br><br><strong>Scenario: Enviar invitación por correo</strong><br>Given el contratista ha ingresado un correo válido en el formulario de invitación<br>When confirma el envío<br>Then el sistema debe crear una nueva invitación con estado PENDING<br>Then asociar la invitación a la persona y organización correspondiente<br>Then mostrar un mensaje de confirmación<br><br></td>
+        <td>EP11</td>
+    </tr>
+    <tr>
+        <td>US101</td>
+        <td>Validar que no exista ya una invitación pendiente</td>
+        <td>Como contratista quiero evitar el envío redundante de invitaciones a personas que ya han sido invitadas para mantener orden en el proceso de incorporación y evitar confusión en los usuarios</td>
+        <td><strong>Scenario: Impedir nueva invitación si ya hay una pendiente</strong><br>Given la persona ya tiene una invitación en estado PENDING para esta organización<br>When el contratista intenta enviar una nueva invitación<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que ya se ha enviado una invitación pendiente<br><br><strong>Scenario: Permitir nueva invitación si la anterior fue rechazada</strong><br>Given la última invitación enviada a esa persona fue REJECTED<br>When el contratista intenta enviar una nueva invitación<br>Then el sistema debe permitir el envío<br>Then crear una nueva invitación con estado PENDING<br><br></td>
+        <td>EP11</td>
+    </tr>
+    <tr>
+        <td>US102</td>
+        <td>Impedir invitar a alguien que ya es miembro</td>
+        <td>Como contratista quiero evitar enviar invitaciones a personas que ya forman parte de la organización para prevenir errores y mantener consistencia en la gestión de miembros</td>
+        <td><strong>Scenario: Detectar membresía previa</strong><br>Given la persona ya figura como miembro activo de la organización<br>When el contratista intenta enviarle una invitación<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que la persona ya pertenece a la organización<br><br></td>
+        <td>EP11</td>
+    </tr>
+    <tr>
+        <td>US103</td>
+        <td>Ver listado de invitaciones enviadas</td>
+        <td>Como contratista quiero consultar las invitaciones que ha enviado para incorporar miembros a la organización para dar seguimiento a quién ha sido invitado y qué respuesta ha dado</td>
+        <td><strong>Scenario: Mostrar historial de invitaciones</strong><br>Given el usuario es contratista de una organización<br>When accede a la sección de gestión de invitaciones<br>Then el sistema debe mostrar una lista de todas las invitaciones enviadas con sus estados (PENDING, ACCEPTED, REJECTED)<br><br><strong>Scenario: Mostrar mensaje si no hay invitaciones</strong><br>Given la organización aún no tiene invitaciones registradas<br>When el contratista accede a la sección de invitaciones<br>Then el sistema debe mostrar un mensaje indicando que aún no se han enviado invitaciones<br><br></td>
+        <td>EP11</td>
+    </tr>
+    <tr>
+        <td>US104</td>
+        <td>Aceptar o rechazar una invitación recibida</td>
+        <td>Como persona invitada quiero responder a una invitación de ingreso a una organización para controlar su afiliación a organizaciones y gestionar de forma consciente su participación</td>
+        <td><strong>Scenario: Mostrar invitaciones pendientes</strong><br>Given el usuario ha sido invitado a una organización<br>When accede a la sección de invitaciones<br>Then el sistema debe mostrar todas las invitaciones en estado PENDING dirigidas al usuario<br><br><strong>Scenario: Aceptar una invitación</strong><br>Given el usuario visualiza una invitación pendiente<br>When decide aceptar la invitación<br>Then el sistema debe cambiar el estado de la invitación a ACCEPTED<br>Then añadir al usuario como miembro de la organización con tipo WORKER<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Rechazar una invitación</strong><br>Given el usuario visualiza una invitación pendiente<br>When decide rechazar la invitación<br>Then el sistema debe cambiar el estado de la invitación a REJECTED<br>Then mostrar un mensaje de confirmación<br><br></td>
+        <td>EP11</td>
+    </tr>
+    <tr>
+        <td>US105</td>
+        <td>Visualizar lista de miembros de la organización</td>
+        <td>Como miembro de una organización quiero consultar quiénes forman parte de su organización para conocer la composición del equipo y facilitar la comunicación o coordinación</td>
+        <td><strong>Scenario: Mostrar lista de miembros</strong><br>Given el usuario pertenece a una organización<br>When accede al dashboard de esa organización<br>Then el sistema debe mostrar una lista con todos los miembros actuales<br>Then cada miembro debe mostrar su nombre, rol (contratista o worker) y fecha de ingreso<br><br><strong>Scenario: Mostrar mensaje si no hay miembros</strong><br>Given el usuario pertenece a una organización que solo tiene un miembro registrado<br>When accede al dashboard<br>Then el sistema debe mostrar un mensaje indicando que todavía no hay otros miembros registrados<br><br><strong>Scenario: Mostrar opción de eliminar si es contratista</strong><br>Given el usuario es el contratista de la organización<br>When se muestra la lista de miembros<br>Then el sistema debe mostrar la opción de eliminar junto a cada miembro (excepto a sí mismo)<br><br></td>
+        <td>EP11</td>
+    </tr>
+    <tr>
+        <td>US106</td>
+        <td>Eliminar miembro de la organización</td>
+        <td>Como contratista quiero retirar a un miembro que ya no colabora dentro de la organización para mantener actualizada la lista de miembros activos y evitar responsabilidades innecesarias</td>
+        <td><strong>Scenario: Eliminar miembro sin advertencias si no tiene asignaciones</strong><br>Given el contratista ha seleccionado un miembro sin tareas asignadas<br>When confirma la eliminación<br>Then el sistema debe eliminar al miembro de la organización<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Mostrar advertencia si tiene tareas asignadas</strong><br>Given el contratista ha seleccionado un miembro con tareas asignadas en uno o más proyectos<br>When intenta eliminar al miembro<br>Then el sistema debe mostrar un mensaje de advertencia indicando que todas las tareas asignadas pasarán a estado DRAFT<br>Then una vez confirmado, el sistema debe eliminar al miembro y actualizar automáticamente el estado de dichas tareas<br><br></td>
+        <td>EP11</td>
+    </tr>
+    <tr>
+        <td>US107</td>
+        <td>Notificar a los participantes cuando se crea una reunión</td>
+        <td>Como miembro del equipo quiero enterarse cuando ha sido convocado a una reunión del proyecto para asistir puntualmente y prepararse adecuadamente</td>
+        <td><strong>Scenario: Generar notificación para cada participante</strong><br>Given se ha creado una nueva reunión y se han definido sus participantes<br>When la reunión es confirmada y registrada en el sistema<br>Then el sistema debe generar una notificación para cada participante<br>Then la categoría de la notificación debe ser REMINDER<br>Then el mensaje debe incluir el tema de la reunión, la fecha y hora<br>Then el target de la notificación debe ser la entidad MEETING correspondiente<br><br></td>
+        <td>EP13</td>
+    </tr>
+    <tr>
+        <td>US108</td>
+        <td>Notificar al responsable cuando se acerca la fecha límite de una tarea</td>
+        <td>Como eespecialistaa del proyecto quiero recibir un recordatorio oportuno antes de la fecha límite de una tarea para evitar retrasos y facilitar la entrega puntual del trabajo técnico</td>
+        <td><strong>Scenario: Enviar notificación como recordatorio de vencimiento</strong><br>Given una tarea tiene un responsable y una fecha límite registrada<br>Given y faltan 48 horas o menos para la fecha de vencimiento<br>When se cumple la condición temporal<br>Then el sistema debe generar una notificación al responsable de la tarea<br>Then la categoría debe ser REMINDER<br>Then el mensaje debe indicar que la tarea está próxima a vencer, con su nombre y fecha límite<br>Then el target de la notificación debe ser la entidad TASK correspondiente<br><br></td>
+        <td>EP13</td>
+    </tr>
+    <tr>
+        <td>US109</td>
+        <td>Notificar cuando se emite una respuesta a una solicitud de cambio</td>
+        <td>Como persona que originó el proceso de cambio quiero ser informado cuando se toma una decisión formal sobre su solicitud para actuar con base en la decisión del contratista y continuar con los trabajos o ajustes necesarios</td>
+        <td><strong>Scenario: Generar notificación al responder proceso de cambio</strong><br>Given un proceso de cambio ha sido aprobado o rechazado<br>Given y su origen es una solicitud de cambio de tipo CHANGE_REQUEST o TECHNICAL_QUERY<br>When se registra una respuesta oficial en el sistema<br>Then el sistema debe generar una notificación dirigida al originador del proceso<br>Then el título debe indicar si fue aprobado o rechazado<br>Then el mensaje debe incluir el resumen de la respuesta (notas)<br>Then la categoría debe ser INFO<br>Then el target debe ser la entidad CHANGE_RESPONSE correspondiente<br><br></td>
+        <td>EP13</td>
+    </tr>
+    <tr>
+        <td>US110</td>
+        <td>Notificar cuando se crea un nuevo hito como parte de un cambio aprobado</td>
+        <td>Como equipo del proyecto quiero enterarse cuando se incorpora un nuevo hito al cronograma como resultado de un cambio aprobado para replanificar tareas, coordinar reuniones y alinear entregables de acuerdo al nuevo alcance</td>
+        <td><strong>Scenario: Notificar a los miembros del equipo sobre el nuevo hito</strong><br>Given un proceso de cambio ha sido aprobado<br>Given y como consecuencia se ha creado un nuevo hito en el cronograma<br>When se registra el nuevo hito en el sistema<br>Then el sistema debe generar una notificación a todos los miembros del proyecto<br>Then la categoría debe ser INFO<br>Then el título debe indicar que se ha añadido un nuevo hito al cronograma<br>Then el target debe ser la entidad MILESTONE correspondiente<br><br></td>
+        <td>EP13</td>
+    </tr>
+    <tr>
+        <td>US111</td>
+        <td>Notificar a un usuario cuando es invitado a una organización</td>
+        <td>Como persona externa al sistema o no miembro de la organización quiero ser informado cuando ha sido invitado a unirse a una organización para poder tomar una decisión informada sobre su participación</td>
+        <td><strong>Scenario: Generar notificación al enviar invitación</strong><br>Given el contratista ha enviado una invitación a una persona para que se una a la organización<br>When la invitación es registrada en el sistema<br>Then el sistema debe generar una notificación para el destinatario<br>Then el mensaje debe indicar el nombre de la organización que lo ha invitado<br>Then la categoría debe ser INFO<br>Then el target debe ser la entidad ORGANIZATION correspondiente<br><br></td>
+        <td>EP13</td>
+    </tr>
+    <tr>
+        <td>US112</td>
+        <td>Notificar recordatorio de vencimiento de factura</td>
+        <td>Como usuario responsable de la cuenta de suscripción quiero recibir una alerta cuando una factura está próxima a vencer para evitar la suspensión del servicio por falta de pago</td>
+        <td><strong>Scenario: Generar notificación 3 días antes del vencimiento</strong><br>Given existe una factura activa vinculada a la cuenta del usuario<br>Given faltan exactamente 3 días para la fecha de vencimiento<br>When se ejecuta el proceso automático de revisión de facturas<br>Then el sistema debe generar una notificación para el usuario responsable<br>Then el título debe indicar: 'Factura próxima a vencer'<br>Then la categoría debe ser ALERT<br>Then el target debe ser la entidad INVOICE correspondiente<br><br></td>
+        <td>EP13</td>
+    </tr>
+    <tr>
+        <td>US113</td>
+        <td>Visualizar lista de notificaciones recibidas</td>
+        <td>Como usuario del sistema quiero consultar todas las notificaciones que le han sido enviadas para estar al tanto de eventos importantes del sistema y tomar decisiones oportunas</td>
+        <td><strong>Scenario: Mostrar listado de notificaciones</strong><br>Given el usuario ha iniciado sesión<br>When accede a la sección de notificaciones<br>Then el sistema debe mostrar la lista de notificaciones ordenadas por fecha de creación (más reciente primero)<br>Then cada notificación debe mostrar su título, fecha y estado (leída o no leída)<br><br><strong>Scenario: Mostrar mensaje si no hay notificaciones</strong><br>Given el usuario no ha recibido notificaciones<br>When accede a la sección de notificaciones<br>Then el sistema debe mostrar un mensaje indicando que no hay notificaciones disponibles<br><br></td>
+        <td>EP14</td>
+    </tr>
+    <tr>
+        <td>US114</td>
+        <td>Ver detalles de una notificación específica</td>
+        <td>Como usuario del sistema quiero consultar el contenido completo y contexto de una notificación para entender claramente la razón y el impacto del mensaje recibido</td>
+        <td><strong>Scenario: Acceder al contenido completo de la notificación</strong><br>Given el usuario ha accedido a la lista de notificaciones<br>When selecciona una notificación de la lista<br>Then el sistema debe mostrar el mensaje completo de la notificación<br>Then debe indicarse la fecha de creación, la categoría y el tipo de entidad relacionada (target)<br><br><strong>Scenario: Permitir acceso al objeto vinculado (target)</strong><br>Given la notificación tiene un target definido<br>When el usuario visualiza los detalles<br>Then el sistema debe permitir navegar al detalle del elemento referido (por ejemplo, tarea, reunión, etc.) mediante un enlace o botón<br><br></td>
+        <td>EP14</td>
+    </tr>
+    <tr>
+        <td>US115</td>
+        <td>Eliminar notificación manualmente</td>
+        <td>Como usuario del sistema quiero descartar notificaciones que ya no son relevantes o útiles para mantener su bandeja de notificaciones limpia y enfocada</td>
+        <td><strong>Scenario: Eliminar notificación desde la lista</strong><br>Given el usuario ha accedido a la lista de notificaciones<br>When selecciona la opción de eliminar junto a una notificación<br>Then el sistema debe eliminar la notificación sez|leccionada<br>Then mostrar un mensaje de confirmación o retroalimentación visual<br><br></td>
+        <td>EP14</td>
+    </tr>
+    <tr>
+        <td>US116</td>
+        <td>Eliminar automáticamente notificaciones antiguas</td>
+        <td>Como sistema quiero remover notificaciones que ya no son relevantes tras un largo periodo para mantener la base de datos limpia y evitar acumulación innecesaria de registros obsoletos</td>
+        <td><strong>Scenario: Eliminar notificaciones con más de 90 días</strong><br>Given existen notificaciones con fecha de creación superior a 90 días<br>When se ejecuta el proceso de limpieza periódica del sistema<br>Then el sistema debe eliminar automáticamente dichas notificaciones<br><br></td>
+        <td>EP14</td>
+    </tr>
+    <tr>
+        <td>US117</td>
+        <td>Elegir tipo de cuenta al iniciar el registro</td>
+        <td>Como persona externa al sistema quiero indicar qué tipo de cuenta desea registrar para visualizar el formulario adecuado según el tipo de participación que tendrá en la plataforma</td>
+        <td><strong>Scenario: Seleccionar tipo de cuenta antes de llenar datos</strong><br>Given el usuario accede a la página de registro<br>When el sistema carga el formulario inicial<br>Then el sistema debe mostrar un selector con las opciones de tipo de cuenta: ORGANIZATION_USER y CLIENT_USER<br>Then el usuario debe poder continuar solo después de elegir una opción<br><br></td>
+        <td>EP15</td>
+    </tr>
+    <tr>
+        <td>US118</td>
+        <td>Mostrar campos de registro según tipo de cuenta seleccionado</td>
+        <td>Como persona externa al sistema quiero llenar solo los campos necesarios para el tipo de cuenta elegida para facilitar el registro con un formulario claro y adaptado a sus necesidades</td>
+        <td><strong>Scenario: Mostrar campos básicos para CLIENT_USER</strong><br>Given el usuario se encuentra en el formulario de registro<br>When selecciona CLIENT_USER como tipo de cuenta<br>Then se deben mostrar los campos: nombre completo, correo electrónico y contraseña<br>Then no deben mostrarse campos relacionados a profesión<br><br><strong>Scenario: Mostrar campos extendidos para ORGANIZATION_USER</strong><br>Given el usuario se encuentra en el formulario de registro<br>When selecciona ORGANIZATION_USER como tipo de cuenta<br>Then se deben mostrar los campos: nombre completo, correo electrónico, contraseña, nombre de la profesión y número de colegiatura<br>Then los campos profesionales deben marcarse como obligatorios<br><br></td>
+        <td>EP15</td>
+    </tr>
+    <tr>
+        <td>US119</td>
+        <td>Validar campos requeridos según tipo de cuenta</td>
+        <td>Como persona externa al sistema quiero completar correctamente los campos necesarios según el tipo de cuenta seleccionada para garantizar que el sistema tenga la información mínima necesaria para crear la cuenta correctamente</td>
+        <td><strong>Scenario: Validación de CLIENT_USER</strong><br>Given el usuario ha seleccionado CLIENT_USER como tipo de cuenta<br>Given se encuentra en el formulario de registro<br>When intenta enviar el formulario sin llenar nombre completo, correo electrónico o contraseña<br>Then el sistema debe mostrar un mensaje indicando que todos esos campos son obligatorios<br>Then no se debe permitir enviar el formulario hasta completarlos correctamente<br><br><strong>Scenario: Validación de ORGANIZATION_USER</strong><br>Given el usuario ha seleccionado ORGANIZATION_USER como tipo de cuenta<br>Given se encuentra en el formulario de registro<br>When intenta enviar el formulario sin completar alguno de los campos: nombre completo, correo electrónico, contraseña, profesión o número de colegiatura<br>Then el sistema debe mostrar un mensaje indicando que todos los campos anteriores son obligatorios<br>Then no se debe permitir enviar el formulario hasta completarlos correctamente<br><br></td>
+        <td>EP15</td>
+    </tr>
+    <tr>
+        <td>US120</td>
+        <td>Validar si el correo ya está registrado o en uso en una solicitud pendiente</td>
+        <td>Como persona externa al sistema quiero saber si su correo ya está vinculado a una cuenta o en uso en una solicitud activa para evitar duplicar cuentas o solicitudes, y guiar correctamente el proceso de ingreso al sistema</td>
+        <td><strong>Scenario: Correo ya asociado a un UserAccount</strong><br>Given el usuario se encuentra en el formulario de registro<br>When ingresa un correo electrónico ya vinculado a una cuenta existente<br>Then el sistema debe mostrar un mensaje indicando que el correo ya está registrado<br>Then puede sugerir recuperar el acceso en lugar de volver a registrarse<br><br><strong>Scenario: Correo asociado a una solicitud de registro pendiente</strong><br>Given el usuario ingresa un correo con una solicitud de registro activa (estado CONFIRMATION_PENDING)<br>When intenta enviar nuevamente el formulario de registro<br>Then el sistema debe mostrar un mensaje indicando que ya existe una solicitud pendiente para ese correo<br>Then debe sugerirse revisar el correo y completar el proceso de confirmación<br><br></td>
+        <td>EP15</td>
+    </tr>
+    <tr>
+        <td>US121</td>
+        <td>Confirmar el registro mediante enlace recibido por correo</td>
+        <td>Como persona que inició su registro quiero validar su identidad para activar su cuenta para garantizar que solo usuarios con acceso a su correo puedan finalizar el registro</td>
+        <td><strong>Scenario: Confirmar registro con enlace válido</strong><br>Given el usuario ha recibido un correo con enlace de confirmación<br>When hace clic en el enlace dentro del periodo de validez<br>Then el sistema debe validar el token y completar el registro<br>Then mostrar un mensaje de confirmación indicando que la cuenta ha sido activada correctamente<br><br><strong>Scenario: Intentar confirmar con enlace vencido</strong><br>Given el usuario intenta acceder al enlace de confirmación fuera del periodo de validez<br>When abre el enlace expirado<br>Then el sistema debe mostrar un mensaje indicando que el enlace ha expirado<br>Then sugerir reiniciar el proceso de registro<br><br></td>
+        <td>EP15</td>
+    </tr>
+    <tr>
+        <td>US122</td>
+        <td>Iniciar sesión desde el formulario de login</td>
+        <td>Como usuario del sistema quiero autenticarse para acceder a las funcionalidades protegidas de la plataforma para trabajar dentro de su entorno personal o organizacional de forma segura</td>
+        <td><strong>Scenario: Autenticarse con credenciales válidas</strong><br>Given el usuario se encuentra en el formulario de login<br>When ingresa un correo y contraseña válidos y envía el formulario<br>Then el sistema debe iniciar sesión y redirigir al dashboard correspondiente<br>Then debe generarse una sesión activa y un token válido<br><br></td>
+        <td>EP16</td>
+    </tr>
+    <tr>
+        <td>US123</td>
+        <td>Mostrar error si las credenciales son incorrectas</td>
+        <td>Como usuario del sistema quiero saber cuándo ha ingresado mal su correo o contraseña al intentar iniciar sesión para corregir rápidamente el error y evitar intentos fallidos o bloqueos innecesarios</td>
+        <td><strong>Scenario: Credenciales inválidas</strong><br>Given el usuario se encuentra en el formulario de login<br>When envía un correo o contraseña incorrectos<br>Then el sistema debe mostrar un mensaje indicando que las credenciales son inválidas<br>Then no se debe iniciar sesión ni redirigir al usuario<br><br></td>
+        <td>EP16</td>
+    </tr>
+    <tr>
+        <td>US124</td>
+        <td>Mantener sesión activa mientras el usuario interactúa</td>
+        <td>Como usuario del sistema quiero permanecer autenticado mientras trabaja continuamente en la plataforma para evitar interrupciones y pérdida de información por cierre de sesión anticipado</td>
+        <td><strong>Scenario: Extender validez de la sesión con actividad reciente</strong><br>Given el usuario ha iniciado sesión<br>Given realiza acciones en la plataforma (navegar, guardar, interactuar)<br>When transcurre el tiempo de expiración estándar sin inactividad<br>Then el sistema debe mantener la sesión activa<br>Then el usuario no debe ser redirigido a la pantalla de login<br><br></td>
+        <td>EP16</td>
+    </tr>
+    <tr>
+        <td>US125</td>
+        <td>Cerrar sesión manualmente desde el sistema</td>
+        <td>Como usuario del sistema quiero finalizar su sesión cuando termina de usar la plataforma para garantizar que nadie más acceda a su información tras dejar de utilizar el sistema</td>
+        <td><strong>Scenario: Cerrar sesión desde el menú</strong><br>Given el usuario está autenticado y en cualquier parte del sistema<br>When selecciona la opción 'Cerrar sesión'<br>Then el sistema debe finalizar la sesión actual<br>Then redirigir al usuario a la pantalla de login<br><br></td>
+        <td>EP16</td>
+    </tr>
+    <tr>
+        <td>US126</td>
+        <td>Solicitar restablecimiento de contraseña desde el login</td>
+        <td>Como usuario que no recuerda su contraseña quiero recibir un enlace para restablecer su contraseña de forma segura para volver a acceder a su cuenta sin tener que crear una nueva</td>
+        <td><strong>Scenario: Solicitar restablecimiento desde pantalla de login</strong><br>Given el usuario se encuentra en la pantalla de login<br>When selecciona la opción '¿Olvidaste tu contraseña?'<br>Then el sistema debe mostrar un formulario donde puede ingresar su correo registrado<br><br><strong>Scenario: Correo válido para restablecimiento</strong><br>Given el usuario ha ingresado un correo válido y registrado<br>When envía el formulario de recuperación<br>Then el sistema debe generar un token de restablecimiento y enviarlo por correo electrónico<br><br></td>
+        <td>EP17</td>
+    </tr>
+    <tr>
+        <td>US127</td>
+        <td>Ver mensaje de confirmación tras solicitar restablecimiento</td>
+        <td>Como usuario que solicitó recuperar su contraseña quiero saber que su solicitud fue aceptada y está siendo procesada para tener tranquilidad de que el sistema enviará el enlace correspondiente al correo indicado</td>
+        <td><strong>Scenario: Confirmar solicitud de recuperación</strong><br>Given el usuario ha enviado un correo válido en el formulario de recuperación<br>When el sistema procesa la solicitud<br>Then el sistema debe mostrar un mensaje indicando que, si el correo está registrado, se ha enviado un enlace de restablecimiento<br><br></td>
+        <td>EP17</td>
+    </tr>
+    <tr>
+        <td>US128</td>
+        <td>Acceder al formulario de nueva contraseña desde el enlace recibido</td>
+        <td>Como usuario que ha solicitado restablecer su contraseña quiero establecer una nueva contraseña desde un enlace seguro para recuperar el control de su cuenta sin depender de soporte técnico</td>
+        <td><strong>Scenario: Acceso al formulario de restablecimiento</strong><br>Given el usuario ha recibido un enlace válido de restablecimiento de contraseña<br>When hace clic en el enlace desde su correo<br>Then el sistema debe mostrar el formulario para ingresar y confirmar la nueva contraseña<br><br></td>
+        <td>EP17</td>
+    </tr>
+    <tr>
+        <td>US129</td>
+        <td>Ver mensaje de éxito al completar el restablecimiento</td>
+        <td>Como usuario que ha restablecido su contraseña quiero confirmar que su nueva contraseña fue aceptada para saber que ahora puede iniciar sesión normalmente con su nueva clave</td>
+        <td><strong>Scenario: Mensaje de confirmación tras restablecimiento exitoso</strong><br>Given el usuario ha completado correctamente el formulario con su nueva contraseña<br>When envía el formulario<br>Then el sistema debe mostrar un mensaje indicando que la contraseña ha sido actualizada<br>Then y ofrecer un enlace para volver a la pantalla de login<br><br></td>
+        <td>EP17</td>
+    </tr>
+    <tr>
+        <td>US130</td>
+        <td>Visualizar información personal registrada</td>
+        <td>Como usuario autenticado quiero consultar los datos que el sistema tiene registrados sobre su identidad personal para verificar que su información esté actualizada y corregir posibles errores</td>
+        <td><strong>Scenario: Mostrar los campos del perfil</strong><br>Given el usuario ha iniciado sesión<br>When accede a la sección de perfil personal<br>Then el sistema debe mostrar su nombre completo, correo electrónico, número de teléfono y, si corresponde, profesión y número de colegiatura<br><br></td>
+        <td>EP18</td>
+    </tr>
+    <tr>
+        <td>US131</td>
+        <td>Editar nombre completo del perfil</td>
+        <td>Como usuario autenticado quiero actualizar su nombre completo si ha cambiado o contiene errores para mantener una representación precisa de su identidad dentro del sistema</td>
+        <td><strong>Scenario: Modificar nombre y guardar</strong><br>Given el usuario ha accedido a la sección de perfil personal<br>When edita el campo de nombre completo y guarda los cambios<br>Then el sistema debe actualizar el nombre completo del usuario<br>Then mostrar un mensaje de confirmación de la edición<br><br></td>
+        <td>EP18</td>
+    </tr>
+    <tr>
+        <td>US132</td>
+        <td>Editar correo electrónico personal</td>
+        <td>Como usuario autenticado quiero cambiar su correo personal si ha cambiado de proveedor o detecta un error para recibir correctamente todas las notificaciones e invitaciones del sistema</td>
+        <td><strong>Scenario: Actualizar correo electrónico</strong><br>Given el usuario está autenticado<br>Given se encuentra en la sección de edición del perfil<br>When modifica el campo de correo electrónico y guarda los cambios<br>Then el sistema debe actualizar el correo registrado en su perfil<br>Then mostrar un mensaje de confirmación<br><br></td>
+        <td>EP18</td>
+    </tr>
+    <tr>
+        <td>US133</td>
+        <td>Editar número de teléfono</td>
+        <td>Como usuario autenticado quiero modificar su número de contacto registrado en el perfil para asegurar que su número actual esté disponible en caso de contacto, verificación o notificaciones</td>
+        <td><strong>Scenario: Actualizar número de teléfono</strong><br>Given el usuario ha accedido a la edición del perfil<br>When modifica el campo de teléfono y guarda los cambios<br>Then el sistema debe registrar el nuevo número<br>Then mostrar un mensaje indicando que el cambio se realizó exitosamente<br><br></td>
+        <td>EP18</td>
+    </tr>
+    <tr>
+        <td>US134</td>
+        <td>Visualizar los planes de suscripción disponibles</td>
+        <td>Como persona interesada en suscribirse quiero conocer los distintos planes disponibles y sus características para elegir el plan más adecuado según sus necesidades y capacidades</td>
+        <td><strong>Scenario: Acceder al catálogo de planes</strong><br>Given el usuario ha iniciado sesión<br>When navega a la sección de suscripciones<br>Then el sistema debe mostrar una lista de planes disponibles con nombre, precio, duración y beneficios (límite de proyectos, almacenamiento, miembros, etc.)<br><br></td>
+        <td>EP19</td>
+    </tr>
+    <tr>
+        <td>US135</td>
+        <td>Visualizar los planes de suscripción disponibles</td>
+        <td>Como persona interesada en suscribirse quiero conocer los distintos planes disponibles y sus características para elegir el plan más adecuado según sus necesidades y capacidades</td>
+        <td><strong>Scenario: Acceder al catálogo de planes</strong><br>Given el usuario ha iniciado sesión<br>When navega a la sección de suscripciones<br>Then el sistema debe mostrar una lista de planes disponibles con nombre, precio, duración y beneficios (límite de proyectos, almacenamiento, miembros, etc.)<br><br></td>
+        <td>EP19</td>
+    </tr>
+    <tr>
+        <td>US136</td>
+        <td>Contratar un nuevo plan de suscripción</td>
+        <td>Como persona interesada en acceder a funcionalidades avanzadas quiero activar un plan que le permita gestionar organizaciones, proyectos y archivos para adquirir permisos y capacidad de uso según sus necesidades mediante un workspace asociado</td>
+        <td><strong>Scenario: Seleccionar un plan para contratar</strong><br>Given el usuario ha accedido a la sección de planes de suscripción<br>When selecciona un plan específico<br>Then el sistema debe mostrar un resumen del plan seleccionado y solicitar confirmación para iniciar la contratación<br><br><strong>Scenario: Completar contratación con éxito</strong><br>Given el usuario ha confirmado el plan seleccionado<br>When completa el proceso de pago con éxito<br>Then el sistema debe crear una nueva suscripción con estado ACTIVE<br>Then asociar un nuevo workspace basado en las restricciones del plan<br>Then mostrar un mensaje de éxito indicando que la suscripción está activa<br><br></td>
+        <td>EP19</td>
+    </tr>
+    <tr>
+        <td>US137</td>
+        <td>Ver detalles de la suscripción activa</td>
+        <td>Como usuario con suscripción activa quiero consultar la información actual de su plan contratado para gestionar mejor sus fechas, límites y renovar a tiempo si es necesario</td>
+        <td><strong>Scenario: Visualizar información de la suscripción</strong><br>Given el usuario cuenta con una suscripción activa<br>When accede a la sección de suscripción actual<br>Then el sistema debe mostrar el nombre del plan, fecha de inicio, fecha de vencimiento, estado de renovación, y restricciones aplicadas (miembros, almacenamiento, proyectos)<br><br></td>
+        <td>EP19</td>
+    </tr>
+    <tr>
+        <td>US138</td>
+        <td>Cancelar una suscripción activa y mostrar restricciones asociadas</td>
+        <td>Como usuario con suscripción activa quiero detener la renovación automática de su plan o darlo de baja para controlar su suscripción y entender las implicancias del cambio</td>
+        <td><strong>Scenario: Confirmar cancelación de suscripción</strong><br>Given el usuario cuenta con una suscripción activa<br>When decide cancelarla desde la configuración de su suscripción<br>Then el sistema debe mostrar un mensaje de advertencia indicando que perderá el acceso a funcionalidades al finalizar la vigencia<br>Then debe mostrar claramente qué restricciones aplicarán (ej. sin creación de organizaciones, sin nuevos archivos)<br><br><strong>Scenario: Completar cancelación</strong><br>Given el usuario ha leído y aceptado las advertencias<br>When confirma la cancelación<br>Then el sistema debe cambiar el estado de la suscripción a CANCELLED<br>Then mostrar un mensaje confirmando la cancelación<br><br></td>
+        <td>EP19</td>
+    </tr>
+    <tr>
+        <td>US139</td>
+        <td>Visualizar facturas generadas por suscripciones</td>
+        <td>Como usuario con historial de suscripción quiero consultar las facturas emitidas asociadas a sus planes contratados para llevar control financiero y descargar los documentos para su archivo personal o contable</td>
+        <td><strong>Scenario: Ver listado de facturas</strong><br>Given el usuario ha contratado una o más suscripciones en el sistema<br>When accede a la sección de facturación<br>Then el sistema debe mostrar una lista de facturas ordenadas por fecha de emisión<br>Then cada factura debe mostrar el monto total, el estado de pago, y el vencimiento<br><br></td>
+        <td>EP19</td>
+    </tr>
+    <tr>
+        <td>US140</td>
+        <td>Visualizar el detalle de una factura</td>
+        <td>Como usuario con historial de facturación quiero ver el contenido detallado de una factura emitida por el sistema para entender qué conceptos fueron cobrados y validar los importes incluidos</td>
+        <td><strong>Scenario: Consultar desglose de factura</strong><br>Given el usuario está visualizando la lista de sus facturas<br>When selecciona una factura específica<br>Then el sistema debe mostrar el detalle de cada ítem de facturación, incluyendo descripción, precio unitario y subtotal<br>Then también debe mostrar el monto total, fecha de emisión, fecha de vencimiento y estado de pago<br><br></td>
+        <td>EP19</td>
+    </tr>
+    <tr>
+        <td>US141</td>
+        <td>Iniciar pago manual de una factura pendiente</td>
+        <td>Como usuario con una factura pendiente de pago quiero completar el pago voluntariamente antes de su vencimiento para evitar interrupciones en el acceso al sistema por falta de pago</td>
+        <td><strong>Scenario: Pagar factura desde su vista detallada</strong><br>Given el usuario está visualizando una factura con estado PENDING<br>When selecciona la opción de pagar ahora<br>Then el sistema debe redirigirlo al flujo de pago según el método disponible (tarjeta, transferencia, etc.)<br>Then una vez confirmado el pago, debe actualizar el estado a PAID y mostrar un mensaje de éxito<br><br></td>
+        <td>EP19</td>
+    </tr>
+    <tr>
+        <td>US142</td>
+        <td>Activar o desactivar pago automático</td>
+        <td>Como usuario con suscripción activa quiero decidir si desea que las renovaciones se cobren automáticamente para evitar cobros inesperados o garantizar continuidad sin preocuparse por fechas</td>
+        <td><strong>Scenario: Activar pago automático</strong><br>Given el usuario tiene una suscripción activa y pagos manuales<br>When activa la opción de pago automático<br>Then el sistema debe crear un acuerdo de pago recurrente con el método seleccionado<br>Then mostrar la fecha de próximo cobro automático<br><br><strong>Scenario: Desactivar pago automático</strong><br>Given el usuario tiene habilitado el pago automático<br>When desactiva la opción desde la configuración de su suscripción<br>Then el sistema debe desactivar el acuerdo de pago recurrente<br>Then mostrar un mensaje indicando que los próximos pagos deberán hacerse manualmente<br><br></td>
+        <td>EP19</td>
+    </tr>
+    <tr>
+        <td>US143</td>
+        <td>Ver intentos de pago realizados (transacciones)</td>
+        <td>Como usuario con pagos recientes o recurrentes quiero consultar los intentos de cobro realizados por el sistema para detectar pagos exitosos o fallidos y actuar con anticipación ante problemas</td>
+        <td><strong>Scenario: Consultar historial de transacciones</strong><br>Given el usuario tiene pagos asociados a su suscripción<br>When accede a la sección de historial de pagos o a una factura específica<br>Then el sistema debe mostrar la lista de intentos con fecha, estado (éxito/fallo) y respuesta de la pasarela<br>Then debe poder identificar si fue un intento manual o automático<br><br></td>
+        <td>EP19</td>
+    </tr>
+    <tr>
+        <td>US144</td>
+        <td>Ver detalles del workspace asociado a su suscripción</td>
+        <td>Como usuario con suscripción activa quiero consultar los límites y capacidades asignados a su entorno de trabajo para organizar sus recursos según el espacio disponible y el número de proyectos o miembros permitidos</td>
+        <td><strong>Scenario: Visualizar características del workspace</strong><br>Given el usuario tiene una suscripción activa con workspace asignado<br>When accede a la sección de detalles de workspace<br>Then el sistema debe mostrar la cantidad máxima de proyectos, almacenamiento disponible y número de miembros permitidos<br>Then también debe indicar qué organización está asociada al workspace<br><br></td>
+        <td>EP19</td>
+    </tr>
+    <tr>
+        <td>US145</td>
+        <td>Mostrar advertencia si la organización está inactiva por falta de workspace</td>
+        <td>Como miembro de una organización quiero entender por qué no puede acceder a las funciones administrativas de su organización para recibir orientación clara para reactivar el workspace mediante la suscripción correspondiente</td>
+        <td><strong>Scenario: Advertencia al acceder a organización inactiva</strong><br>Given el usuario es parte de una organización que no tiene un workspace activo<br>When intenta acceder al dashboard o funciones administrativas de la organización<br>Then el sistema debe mostrar un mensaje indicando que la organización se encuentra inactiva por no tener un workspace asociado<br>Then debe ofrecer un enlace o instrucción para activar o renovar la suscripción correspondiente<br><br></td>
+        <td>EP19</td>
+    </tr>
+    <tr>
+        <td>US146</td>
+        <td>Mostrar advertencia al intentar exceder el número máximo de miembros permitidos</td>
+        <td>Como contratista de una organización quiero comprender por qué no puede añadir más personas al equipo para respetar los límites del plan contratado y evaluar la necesidad de un upgrade</td>
+        <td><strong>Scenario: Intentar añadir miembro cuando se ha alcanzado el límite</strong><br>Given el número actual de miembros en la organización ha alcanzado el máximo permitido por el workspace<br>When el contratista intenta añadir un nuevo miembro al equipo<br>Then el sistema debe mostrar un mensaje de advertencia indicando que se ha alcanzado el número máximo de miembros<br>Then debe sugerir actualizar el plan para ampliar la capacidad<br><br></td>
+        <td>EP19</td>
+    </tr>
+    <tr>
+        <td>US147</td>
+        <td>Mostrar advertencia al intentar subir archivos que superan la capacidad del workspace</td>
+        <td>Como miembro de una organización quiero entender por qué no puede subir nuevos archivos al sistema para evitar pérdidas de tiempo y mantener la organización del almacenamiento según los límites contratados</td>
+        <td><strong>Scenario: Superar el espacio de almacenamiento disponible</strong><br>Given el espacio total ocupado en el workspace está próximo o ya supera el límite permitido<br>When el usuario intenta subir uno o más archivos<br>Then el sistema debe mostrar un mensaje indicando que no se pueden subir los archivos debido a que se superaría la capacidad del workspace<br>Then debe sugerir eliminar archivos no utilizados o actualizar el plan de suscripción<br><br></td>
+        <td>EP19</td>
+    </tr>
+    <tr>
+        <td>US148</td>
+        <td>Cambiar el idioma preferido desde la configuración de cuenta</td>
+        <td>Como usuario autenticado quiero ajustar el idioma en el que desea navegar la plataforma para tener una experiencia más cómoda y comprensible al utilizar el sistema</td>
+        <td><strong>Scenario: Seleccionar idioma desde la configuración</strong><br>Given el usuario ha iniciado sesión<br>Given accede a la configuración de cuenta<br>When modifica su idioma preferido entre las opciones disponibles<br>Then el sistema debe actualizar su preferencia<br>Then reflejar el nuevo idioma en la interfaz en la siguiente carga<br><br></td>
+        <td>EP18</td>
+    </tr>
+    <tr><td>TS01</td><td>Crear organización</td><td>Como Developer, quiero implementar un endpoint que permita registrar una nueva organización para que los contratistas puedan iniciar la gestión de sus proyectos dentro del sistema.</td><td><br><br><strong>Scenario: Registrar una nueva organización exitosamente</strong><br>Given un contratista autorizado envía una solicitud POST al endpoint /organizations<br>And el cuerpo de la solicitud contiene razón social, RUC, nombre comercial<br>When el servidor recibe la solicitud<br>Then debe responder con un código 201 Created<br>And el cuerpo de la respuesta debe incluir los datos de la organización recién creada junto con su id<br><br><strong>Scenario: Enviar datos incompletos o inválidos</strong><br>Given un contratista envía una solicitud POST al endpoint /organizations<br>And el cuerpo de la solicitud omite campos obligatorios o incluye valores con formato inválido<br>When el servidor procesa la solicitud<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje que indique los errores de validación<br><br></td><td>EP09</td></tr>
+    <tr><td>TS02</td><td>Listar organizaciones</td><td>Como Developer, quiero implementar un endpoint que permita obtener todas las organizaciones a las que pertenece un usuario para que pueda visualizar y gestionar aquellas donde tiene participación activa.</td><td><br><br><strong>Scenario: Listar organizaciones exitosamente</strong><br>Given un usuario autenticado realiza una solicitud GET al endpoint /organizations<br>When el servidor recibe la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe contener un arreglo con las organizaciones donde el usuario tiene algún rol<br>And cada organización debe incluir al menos: id, razón social, nombre comercial, descripción y el rol del usuario dentro de la organización<br><br><strong>Scenario: Usuario sin organizaciones asociadas</strong><br>Given un usuario autenticado realiza una solicitud GET al endpoint /organizations<br>And el usuario no pertenece a ninguna organización<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe contener una lista vacía<br><br></td><td>EP09</td></tr>
+    <tr><td>TS03</td><td>Detalles de una organización</td><td>Como Developer, quiero implementar un endpoint que permita obtener los detalles de una organización específica para que los usuarios puedan visualizar su información completa y actualizada.</td><td><br><br><strong>Scenario: Obtener detalles exitosamente</strong><br>Given un usuario autenticado realiza una solicitud GET al endpoint /organizations/{id}<br>And el usuario pertenece a la organización con el id proporcionado<br>When el servidor recibe la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir: id, razón social, nombre comercial, RUC, descripción, y URL del logo (si existe)<br><br><strong>Scenario: Organización no encontrada</strong><br>Given el usuario autenticado realiza una solicitud GET al endpoint /organizations/{id}<br>And no existe una organización con el id proporcionado<br>When el servidor procesa la solicitud<br>Then debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Organización no encontrada"<br><br></td><td>EP09</td></tr>
+    <tr><td>TS04</td><td>Actualizar información de organización</td><td>Como Developer, quiero implementar un endpoint que permita actualizar los datos de una organización para que los contratistas puedan mantener su información empresarial al día, incluyendo la posibilidad de eliminar ciertos campos.</td><td><br><br><strong>Scenario: Actualizar campos exitosamente</strong><br>Given un contratista autorizado envía una solicitud PATCH al endpoint /organizations/{id}<br>And el cuerpo de la solicitud incluye uno o varios de los siguientes campos válidos: razón social, nombre comercial, descripción, logo<br>When el servidor recibe la solicitud<br>Then debe responder con un código 200 OK<br>And los cambios se reflejan inmediatamente<br>And el cuerpo de la respuesta debe incluir la organización actualizada<br><br><strong>Scenario: Eliminar campos opcionales dejando el campo en blanco</strong><br>Given el contratista autorizado envía un campo vacío para nombre comercial o descripción<br>When el servidor recibe la solicitud<br>Then se debe interpretar como una eliminación del campo<br>And el valor debe eliminarse del registro de la organización<br>And el cuerpo de la respuesta debe incluir la organización actualizada sin ese campo<br><br><strong>Scenario: Enviar campos con formato inválido</strong><br>Given el contratista autorizado envía valores con formato inválido o que exceden el límite de caracteres permitidos<br>When el servidor procesa la solicitud<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir los errores de validación por campo<br><br><strong>Scenario: Organización no encontrada</strong><br>Given se envía una solicitud PATCH al endpoint /organizations/{id} con un id inexistente<br>When el servidor procesa la solicitud<br>Then debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Organización no encontrada"<br><br></td><td>EP10</td></tr>
+    <tr><td>TS05</td><td>Eliminar organización</td><td>Como Developer, quiero implementar un endpoint que permita iniciar la eliminación de una organización, cambiando su estado a pendiente de eliminación para permitir su recuperación antes de eliminarla definitivamente.</td><td><br><br><strong>Scenario: Solicitud de eliminación exitosa</strong><br>Given un contratista autorizado envía una solicitud DELETE al endpoint /organizations/{id}<br>And la organización está activa<br>When el servidor recibe la solicitud<br>Then debe cambiar el estado de la organización a deletion_pending<br>And debe responder con un código 202 Accepted<br>And un mensaje "La organización ha sido marcada para eliminación y será eliminada permanentemente en 30 días"<br><br><strong>Scenario: Eliminar organización ya marcada</strong><br>Given la organización ya tiene el estado deletion_pending<br>When el contratista vuelve a enviar la solicitud DELETE<br>Then debe responder con un código 409 Conflict<br>And un mensaje "La organización ya está en proceso de eliminación"<br><br><strong>Scenario: Organización no encontrada</strong><br>Given la organización con el id proporcionado no existe<br>When se envía la solicitud DELETE<br>Then debe responder con un código 404 Not Found<br><br></td><td>EP10</td></tr>
+    <tr><td>TS06</td><td>Añadir miembro a organización</td><td>Como Developer, quiero implementar un endpoint que permita añadir un nuevo miembro a una organización existente, asignándole un rol específico, para que pueda colaborar en la gestión de los proyectos de dicha organización.</td><td><br><br><strong>Scenario: Añadir miembro exitosamente</strong><br>Given un contratista autorizado envía una solicitud POST al endpoint /organizations/{organizationId}/members<br>And el cuerpo de la solicitud contiene un correo válido y un rol permitido<br>When el servidor recibe la solicitud<br>Then debe responder con un código 201 Created<br>And el cuerpo de la respuesta debe incluir los datos del nuevo miembro agregado<br><br><strong>Scenario: Añadir miembro con datos inválidos</strong><br>Given un contratista envía una solicitud POST al endpoint /organizations/{organizationId}/members<br>And el cuerpo de la solicitud omite el correo o el rol, o incluye un correo con formato inválido<br>When el servidor procesa la solicitud<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje que indique los errores de validación<br><br><strong>Scenario: Añadir miembro ya existente</strong><br>Given el contratista envía un correo que ya pertenece a la organización<br>When intenta añadirlo nuevamente<br>Then el servidor debe responder con un código 409 Conflict<br>And el cuerpo de la respuesta debe incluir un mensaje "Este miembro ya forma parte de la organización"<br><br></td><td>EP11</td></tr>
+    <tr><td>TS07</td><td>Actualizar estado de miembro de organización</td><td>Como Developer, quiero implementar un endpoint que permita actualizar el estado de un miembro dentro de una organización para gestionar su acceso según las necesidades administrativas (por ejemplo, activo, suspendido o removido).</td><td><br><br><strong>Scenario: Cambiar estado exitosamente</strong><br>Given un contratista autorizado envía una solicitud PATCH al endpoint /organizations/{organizationId}/members/{memberId}<br>And el cuerpo de la solicitud incluye un estado válido (active, suspended, removed)<br>When el servidor recibe la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe reflejar el nuevo estado del miembro actualizado correctamente<br><br><strong>Scenario: Enviar estado inválido</strong><br>Given un contratista autorizado envía un estado que no está permitido<br>When el servidor procesa la solicitud<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje "Estado no válido"<br><br><strong>Scenario: Intentar cambiar el estado de un miembro inexistente</strong><br>Given el miembro con el memberId indicado no existe en la organización<br>When se envía la solicitud PATCH<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Miembro no encontrado"<br><br></td><td>EP11</td></tr>
+    <tr><td>TS08</td><td>Añadir proyecto a organización</td><td>Como Developer, quiero implementar un endpoint que permita registrar un nuevo proyecto vinculado a una organización existente, para que los contratistas puedan iniciar la gestión de sus proyectos dentro del sistema.</td><td><br><br><strong>Scenario: Crear proyecto exitosamente</strong><br>Given un contratista autorizado envía una solicitud POST al endpoint /organizations/{organizationId}/projects<br>And el cuerpo de la solicitud contiene los datos válidos del proyecto (nombre, fecha de inicio, descripción opcional)<br>When el servidor procesa la solicitud<br>Then debe responder con un código 201 Created<br>And el cuerpo de la respuesta debe incluir los datos del proyecto creado, incluyendo su id y la organización asociada<br><br><strong>Scenario: Crear proyecto con datos inválidos</strong><br>Given el contratista envía una solicitud POST con datos incompletos o con formato inválido<br>When el servidor procesa la solicitud<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir detalles de los errores de validación<br><br><strong>Scenario: Organización no encontrada</strong><br>Given el contratista envía una solicitud con un organizationId inexistente<br>When el servidor procesa la solicitud<br>Then debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Organización no encontrada"<br><br></td><td>EP01</td></tr>
+    <tr><td>TS09</td><td>Listar proyectos de organización</td><td>Como Developer, quiero implementar un endpoint que permita obtener todos los proyectos asociados a una organización, para que los usuarios autorizados puedan visualizarlos y gestionarlos.</td><td><br><br><strong>Scenario: Listar proyectos exitosamente</strong><br>Given un usuario autorizado realiza una solicitud GET al endpoint /organizations/{organizationId}/projects<br>And la organización existe y tiene proyectos registrados<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe contener una lista con los proyectos asociados a esa organización<br>And cada proyecto debe incluir al menos: id, nombre, estado, fecha de inicio<br><br><strong>Scenario: Organización sin proyectos</strong><br>Given un usuario autorizado realiza una solicitud GET al endpoint /organizations/{organizationId}/projects<br>And la organización existe pero no tiene proyectos registrados<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe ser una lista vacía<br><br><strong>Scenario: Organización no encontrada</strong><br>Given el usuario autorizado realiza una solicitud GET al endpoint con un organizationId inexistente<br>When el servidor procesa la solicitud<br>Then debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Organización no encontrada"<br><br></td><td>EP01</td></tr>
+    <tr><td>TS10</td><td>Detalles de un proyecto</td><td>Como Developer, quiero implementar un endpoint que permita obtener los detalles de un proyecto específico para que los usuarios autorizados puedan visualizar su información completa y actualizada.</td><td><br><br><strong>Scenario: Obtener detalles de un proyecto exitosamente</strong><br>Given un usuario autorizado realiza una solicitud GET al endpoint /organizations/{organizationId}/projects/{project-id}<br>And el proyecto existe<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir: id, nombre, estado, fecha de inicio, descripción, cliente (si existe), contrato (si existe), y organización asociada<br><br><strong>Scenario: Proyecto no encontrado</strong><br>Given el usuario autorizado realiza una solicitud GET con un projectId inexistente<br>When el servidor procesa la solicitud<br>Then debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Proyecto no encontrado"<br><br></td><td>EP01</td></tr>
+    <tr><td>TS11</td><td>Añadir miembro de equipo con salario a proyecto</td><td>Como Developer, quiero implementar un endpoint que permita añadir un miembro de la organización a un proyecto para que pueda participar formalmente en su ejecución con un rol asignado.</td><td><br><br><strong>Scenario: Añadir miembro exitosamente</strong><br>Given un contratista autorizado envía una solicitud POST al endpoint /organizations/{organizationId}/projects/{project-id}/members<br>And el cuerpo de la solicitud contiene un userId y un rol válidos<br>And el usuario pertenece a la misma organización del proyecto<br>When el servidor procesa la solicitud<br>Then debe responder con un código 201 Created<br>And el cuerpo de la respuesta debe incluir los datos del nuevo miembro vinculado al proyecto<br><br><strong>Scenario: Usuario no pertenece a la organización del proyecto</strong><br>Given el contratista intenta añadir un userId que no forma parte de la organización vinculada al proyecto<br>When el servidor procesa la solicitud<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje "El usuario no pertenece a la organización de este proyecto"<br><br><strong>Scenario: Usuario ya es miembro del proyecto</strong><br>Given el contratista envía una solicitud con un userId ya asignado al proyecto<br>When el servidor procesa la solicitud<br>Then debe responder con un código 409 Conflict<br>And el cuerpo de la respuesta debe incluir un mensaje "El usuario ya forma parte del proyecto"<br><br><strong>Scenario: Proyecto no encontrado</strong><br>Given el contratista envía una solicitud con un projectId inexistente<br>When el servidor procesa la solicitud<br>Then debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Proyecto no encontrado"<br><br></td><td>EP02</td></tr>
+    <tr><td>TS12</td><td>Listar miembros de proyecto</td><td>Como Developer, quiero implementar un endpoint que permita obtener la lista de miembros asignados a un proyecto para que los usuarios autorizados puedan visualizar quiénes forman parte del equipo.</td><td><br><br><strong>Scenario: Listar miembros exitosamente</strong><br>Given un usuario autorizado realiza una solicitud GET al endpoint /organizations/{organizationId}/projects/{project-id}/members<br>And el proyecto existe y tiene miembros asignados<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe contener una lista con los miembros del proyecto<br>And cada miembro debe incluir: id, nombre, correo, rol en el proyecto, y rol en la organización<br><br><strong>Scenario: Proyecto sin miembros asignados</strong><br>Given el usuario autorizado realiza una solicitud GET al endpoint /organizations/{organizationId}/projects/{project-id}/members<br>And el proyecto no tiene miembros asignados<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe ser una lista vacía<br><br><strong>Scenario: Proyecto no encontrado</strong><br>Given el usuario autorizado realiza una solicitud GET con un projectId inexistente<br>When el servidor procesa la solicitud<br>Then debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Proyecto no encontrado"<br><br></td><td>EP02</td></tr>
+    <tr><td>TS13</td><td>Actualizar información de miembro de proyecto</td><td>Como Developer, quiero implementar un endpoint que permita actualizar el rol de un miembro dentro de un proyecto, para mantener alineadas sus responsabilidades con las necesidades operativas del equipo.</td><td><br><br><strong>Scenario: Actualizar rol exitosamente</strong><br>Given un contratista autorizado envía una solicitud PATCH al endpoint /organizations/{organizationId}/projects/{project-id}/members<br>And el cuerpo de la solicitud incluye un rol válido diferente al actual<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe reflejar el nuevo rol del miembro en el proyecto<br><br><strong>Scenario: Rol inválido o no permitido</strong><br>Given el contratista envía un rol que no existe o que no está permitido para ese proyecto<br>When el servidor procesa la solicitud<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje "Rol no válido"<br><br><strong>Scenario: Miembro no pertenece al proyecto</strong><br>Given el memberId proporcionado no está asignado al projectId indicado<br>When el servidor procesa la solicitud<br>Then debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Miembro no encontrado en este proyecto"<br><br></td><td>EP02</td></tr>
+    <tr><td>TS14</td><td>Actualizar información de proyecto</td><td>Como Developer, quiero implementar un endpoint que permita actualizar el nombre y el estado de un proyecto, para reflejar cambios en su identidad o etapa de ejecución.</td><td><br><br><strong>Scenario: Actualizar nombre del proyecto exitosamente</strong><br>Given un contratista autorizado envía una solicitud PATCH al endpoint /organizations/{organizationId}/projects/{project-id}<br>And el cuerpo de la solicitud contiene un nuevo nombre válido<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el nuevo nombre debe reflejarse en los datos del proyecto<br><br><strong>Scenario: Actualizar estado del proyecto exitosamente</strong><br>Given un contratista autorizado envía una solicitud PATCH al endpoint /organizations/{organizationId}/projects/{project-id}<br>And el cuerpo de la solicitud contiene un estado válido dentro del flujo definido<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el nuevo estado debe reflejarse inmediatamente en la información del proyecto<br><br><strong>Scenario: Enviar nombre o estado inválido</strong><br>Given el contratista incluye un nombre vacío o un estado no reconocido<br>When intenta guardar los cambios<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir los errores de validación correspondientes<br><br><strong>Scenario: Proyecto no encontrado</strong><br>Given el projectId no corresponde a ningún proyecto existente<br>When se envía la solicitud PATCH<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Proyecto no encontrado"<br><br></td><td>EP01</td></tr>
+    <tr><td>TS15</td><td>Crear cronograma de proyecto</td><td>Como Developer, quiero implementar un endpoint que permita crear un cronograma para un proyecto existente, para que los contratistas puedan planificar y gestionar las actividades clave en una línea de tiempo.</td><td><br><br><strong>Scenario: Crear cronograma exitosamente</strong><br>Given un contratista autorizado envía una solicitud POST al endpoint /organizations/{organizationId}/projects/{project-id}/schedule<br>And el cuerpo de la solicitud incluye un rango de fechas válido (fecha de inicio y fin)<br>When el servidor procesa la solicitud<br>Then debe responder con un código 201 Created<br>And el cuerpo de la respuesta debe incluir el cronograma creado vinculado al proyecto<br><br><strong>Scenario: Proyecto ya tiene un cronograma</strong><br>Given el proyecto ya cuenta con un cronograma existente<br>When el contratista intenta crear uno nuevo<br>Then el servidor debe responder con un código 409 Conflict<br>And el cuerpo de la respuesta debe incluir un mensaje "Este proyecto ya tiene un cronograma registrado"<br><br><strong>Scenario: Datos inválidos en la solicitud</strong><br>Given el contratista envía fechas mal formateadas o con inconsistencias (inicio mayor que fin, etc.)<br>When el servidor procesa la solicitud<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje que detalle los errores de validación<br><br><strong>Scenario: Proyecto no encontrado</strong><br>Given el projectId proporcionado no corresponde a ningún proyecto existente<br>When se envía la solicitud<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Proyecto no encontrado"<br><br></td><td>EP03</td></tr>
+    <tr><td>TS16</td><td>Obtener detalles de cronograma</td><td>Como Developer, quiero implementar un endpoint que permita obtener los detalles del cronograma asociado a un proyecto, para que los usuarios puedan visualizar su planificación estructurada.</td><td><br><br><strong>Scenario: Obtener cronograma exitosamente</strong><br>Given un usuario autorizado realiza una solicitud GET al endpoint /organizations/{organizationId}/projects/{project-id}/schedule<br>And el proyecto cuenta con un cronograma registrado<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir: fecha de inicio, fecha de fin, y una lista de hitos asociados al cronograma<br><br><strong>Scenario: Proyecto sin cronograma registrado</strong><br>Given el proyecto no tiene un cronograma creado<br>When el usuario autorizado realiza la solicitud GET<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Este proyecto no tiene un cronograma registrado"<br><br><strong>Scenario: Proyecto no encontrado</strong><br>Given el projectId proporcionado no corresponde a ningún proyecto existente<br>When se realiza la solicitud GET<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Proyecto no encontrado"<br><br></td><td>EP03</td></tr>
+    <tr><td>TS17</td><td>Añadir hito al cronograma</td><td>Como Developer, quiero implementar un endpoint que permita registrar un nuevo hito dentro del cronograma de un proyecto, para reflejar eventos clave dentro de su planificación.</td><td><br><br><strong>Scenario: Añadir hito exitosamente</strong><br>Given un contratista autorizado envía una solicitud POST al endpoint /organizations/{organizationId}/projects/{project-id}/schedule/milestones<br>And el cuerpo de la solicitud incluye un nombre, fecha prevista, y opcionalmente descripción y duración<br>When el servidor procesa la solicitud<br>Then debe responder con un código 201 Created<br>And el cuerpo de la respuesta debe incluir los datos del hito registrado, vinculado al proyecto<br><br><strong>Scenario: Datos inválidos en el hito</strong><br>Given el contratista envía datos incompletos o inválidos (nombre vacío, fecha malformateada, duración negativa, etc.)<br>When el servidor procesa la solicitud<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje de validación detallando los errores<br><br><strong>Scenario: Proyecto sin cronograma</strong><br>Given el proyecto especificado no tiene un cronograma registrado<br>When el contratista intenta añadir un hito<br>Then el servidor debe responder con un código 409 Conflict<br>And el cuerpo de la respuesta debe incluir un mensaje "Este proyecto aún no tiene un cronograma registrado"<br><br><strong>Scenario: Proyecto no encontrado</strong><br>Given el projectId proporcionado no corresponde a ningún proyecto existente<br>When se realiza la solicitud<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Proyecto no encontrado"<br><br></td><td>EP03</td></tr>
+    <tr><td>TS18</td><td>Listar hitos del cronograma</td><td>Como Developer, quiero implementar un endpoint que permita obtener todos los hitos registrados en el cronograma de un proyecto, para que los usuarios puedan visualizar los eventos clave del mismo.</td><td><br><br><strong>Scenario: Listar hitos exitosamente</strong><br>Given un usuario autorizado realiza una solicitud GET al endpoint /organizations/{organizationId}/projects/{project-id}/schedule/milestones<br>And el cronograma del proyecto tiene al menos un hito registrado<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe contener una lista de hitos, donde cada uno incluye: id, nombre, fecha prevista, estado, duración (si existe), y descripción (si existe)<br><br><strong>Scenario: Cronograma sin hitos registrados</strong><br>Given el cronograma del proyecto no tiene hitos registrados<br>When se realiza la solicitud GET<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir una lista vacía<br><br><strong>Scenario: Proyecto sin cronograma</strong><br>Given el proyecto no tiene un cronograma registrado<br>When se realiza la solicitud GET al endpoint<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Este proyecto no tiene un cronograma registrado"<br><br><strong>Scenario: Proyecto no encontrado</strong><br>Given el projectId proporcionado no corresponde a ningún proyecto existente<br>When se realiza la solicitud<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Proyecto no encontrado"<br><br></td><td>EP03</td></tr>
+    <tr><td>TS19</td><td>Obtener detalles de hito</td><td>Como Developer, quiero implementar un endpoint que permita obtener la información detallada de un hito registrado en el cronograma de un proyecto, para que los usuarios puedan revisar su contenido y estado.</td><td><br><br><strong>Scenario: Obtener detalles del hito exitosamente</strong><br>Given un usuario autorizado realiza una solicitud GET al endpoint /organizations/{organizationId}/projects/{project-id}/schedule/milestones/{milestoneId}<br>And el hito existe dentro del cronograma del proyecto<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir: id, nombre, fecha prevista, estado, descripción (si existe), y duración (si existe)<br><br><strong>Scenario: Hito no encontrado en el proyecto</strong><br>Given el milestoneId no está registrado en el cronograma del proyecto indicado<br>When se realiza la solicitud GET<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Hito no encontrado en este proyecto"<br><br><strong>Scenario: Proyecto no encontrado</strong><br>Given el projectId proporcionado no corresponde a ningún proyecto existente<br>When se realiza la solicitud<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Proyecto no encontrado"<br><br></td><td>EP03</td></tr>
+    <tr><td>TS20</td><td>Actualizar información de hito</td><td>Como Developer, quiero implementar un endpoint que permita actualizar el estado y la duración de un hito, para reflejar el avance real del cronograma y ajustar las estimaciones según la ejecución del proyecto.</td><td><br><br><strong>Scenario: Actualizar estado del hito exitosamente</strong><br>Given un contratista autorizado envía una solicitud PATCH al endpoint /organizations/{organizationId}/projects/{project-id}/schedule/milestones/{milestoneId}<br>And el cuerpo de la solicitud contiene un nuevo estado válido (pendiente, en curso, finalizado)<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el estado del hito debe actualizarse correctamente en la base de datos<br>And el cuerpo de la respuesta debe reflejar el nuevo estado<br><br><strong>Scenario: Actualizar duración del hito exitosamente</strong><br>Given el cuerpo de la solicitud incluye una nueva duración válida (valor numérico positivo)<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And la duración actualizada debe reflejarse correctamente en el hito<br><br><strong>Scenario: Enviar estado o duración inválidos</strong><br>Given el contratista ha enviado un estado no reconocido o una duración negativa/no numérica<br>When se procesa la solicitud<br>Then el servidor debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje con los errores de validación<br><br><strong>Scenario: Hito no encontrado en el proyecto</strong><br>Given el milestoneId no corresponde a ningún hito registrado en el proyecto indicado<br>When se envía la solicitud PATCH<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Hito no encontrado en este proyecto"<br><br></td><td>EP03</td></tr>
+    <tr><td>TS21</td><td>Crear reunión</td><td>Como Developer, quiero implementar un endpoint que permita crear una reunión vinculada a un proyecto, para que los contratistas puedan organizar y coordinar las reuniones del equipo.</td><td><br><br><strong>Scenario: Crear reunión exitosamente</strong><br>Given un contratista autorizado envía una solicitud POST al endpoint /organizations/{organizationId}/projects/{project id}/schedule/milestones/{milestoneId}/meetings<br>And el cuerpo de la solicitud contiene un tipo de reunión (presencial o virtual), fecha, hora, y otros detalles necesarios<br>When el servidor procesa la solicitud<br>Then debe responder con un código 201 Created<br>And el cuerpo de la respuesta debe incluir los detalles de la reunión creada, incluyendo su id, tipo, fecha, hora, y detalles opcionales como lugar o enlace de la reunión<br><br><strong>Scenario: Datos inválidos en la reunión</strong><br>Given el contratista envía una solicitud POST con datos incompletos o inválidos (por ejemplo, una fecha en el pasado o enlace malformado)<br>When el servidor procesa la solicitud<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje que detalle los errores de validación<br><br><strong>Scenario: Proyecto no encontrado</strong><br>Given el projectId proporcionado no corresponde a ningún proyecto existente<br>When se envía la solicitud POST<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Proyecto no encontrado"<br><br></td><td>EP05</td></tr>
+    <tr><td>TS22</td><td>Listar todas las reuniones de un hito</td><td>Como Developer, quiero implementar un endpoint que permita obtener todas las reuniones asociadas a un hito específico dentro del cronograma de un proyecto, para facilitar su visualización y gestión.</td><td><br><br><strong>Scenario: Listar reuniones exitosamente</strong><br>Given un usuario autorizado realiza una solicitud GET al endpoint /organizations/{organizationId}/projects/{project-id}/schedule/milestones/{milestoneId}/meetings<br>And el hito especificado tiene reuniones asociadas<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir una lista de reuniones asociadas al hito, donde cada reunión debe incluir: id, fecha, hora, tipo (presencial o virtual), lugar o enlace (según corresponda)<br><br><strong>Scenario: Hito sin reuniones asociadas</strong><br>Given el hito especificado no tiene reuniones registradas<br>When se realiza la solicitud GET<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir una lista vacía<br><br><strong>Scenario: Hito no encontrado</strong><br>Given el milestoneId proporcionado no corresponde a ningún hito registrado en el cronograma del proyecto<br>When se realiza la solicitud GET<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Hito no encontrado"<br><br><strong>Scenario: Proyecto no encontrado</strong><br>Given el projectId proporcionado no corresponde a ningún proyecto existente<br>When se realiza la solicitud GET<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Proyecto no encontrado"<br><br></td><td>EP05</td></tr>
+    <tr><td>TS23</td><td>Obtener detalles de reunión</td><td>Como Developer, quiero implementar un endpoint que permita obtener los detalles completos de una reunión específica registrada en un proyecto, para que los usuarios puedan acceder a la información relevante de la reunión.</td><td><br><br><strong>Scenario: Obtener detalles de reunión exitosamente</strong><br>Given un usuario autorizado realiza una solicitud GET al endpoint /organizations/{organizationId}/projects/{project-id}/schedule/milestones/{milestoneId}/meetings/{meetingId}<br>And la reunión existe y está asociada al proyecto<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir: id, tipo (presencial o virtual), fecha, hora, lugar o enlace (según corresponda), temas y objetivos (si están registrados)<br><br><strong>Scenario: Reunión no encontrada</strong><br>Given el meetingId proporcionado no corresponde a ninguna reunión registrada en el proyecto<br>When se realiza la solicitud GET<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Reunión no encontrada"<br><br><strong>Scenario: Proyecto no encontrado</strong><br>Given el projectId proporcionado no corresponde a ningún proyecto existente<br>When se realiza la solicitud GET<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Proyecto no encontrado"<br><br></td><td>EP05</td></tr>
+    <tr><td>TS24</td><td>Actualizar información de reunión</td><td>Como Developer, quiero implementar un endpoint que permita actualizar la fecha y los detalles generales de una reunión registrada, para reflejar cambios en la planificación o ajustes de última hora.</td><td><br><br><strong>Scenario: Actualizar fecha de reunión exitosamente</strong><br>Given un contratista autorizado envía una solicitud PATCH al endpoint /organizations/{organizationId}/projects/{project-id}/schedule/milestones/{milestoneId}/meetings/{meetingId}<br>And el cuerpo de la solicitud incluye una nueva fecha y hora válidas<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And la fecha y hora de la reunión deben actualizarse correctamente en la base de datos<br>And el cuerpo de la respuesta debe reflejar la nueva fecha y hora de la reunión<br><br><strong>Scenario: Actualizar detalles generales de reunión exitosamente</strong><br>Given un contratista autorizado envía una solicitud PATCH al endpoint /organizations/{organizationId}/projects/{project-id}/schedule/milestones/{milestoneId}/meetings/{meetingId}<br>And el cuerpo de la solicitud incluye nuevos detalles generales (temas a tratar, objetivos, lugar o enlace, según el tipo de reunión)<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And los detalles generales deben actualizarse correctamente en la reunión<br>And el cuerpo de la respuesta debe reflejar los nuevos detalles<br><br><strong>Scenario: Enviar datos inválidos en la solicitud</strong><br>Given el contratista ha enviado una solicitud PATCH con datos inválidos (fecha mal formateada, texto vacío o lugar/enlace mal ingresado)<br>When el servidor procesa la solicitud<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje que detalle los errores de validación<br><br><strong>Scenario: Reunión no encontrada</strong><br>Given el meetingId proporcionado no corresponde a ninguna reunión registrada en el proyecto<br>When se envía la solicitud PATCH<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Reunión no encontrada"<br><br></td><td>EP05</td></tr>
+    <tr><td>TS25</td><td>Añadir asistente de reunión</td><td>Como Developer, quiero implementar un endpoint que permita añadir un asistente a una reunión registrada, para que los participantes sean notificados y tengan acceso a la reunión.</td><td><br><br><strong>Scenario: Añadir asistente exitosamente</strong><br>Given un contratista autorizado envía una solicitud POST al endpoint /organizations/{organizationId}/projects/{project-id}/schedule/milestones/{milestoneId}/meetings/{meetingId}/attendees<br>And el cuerpo de la solicitud contiene un email válido de un nuevo asistente<br>When el servidor procesa la solicitud<br>Then debe responder con un código 201 Created<br>And el cuerpo de la respuesta debe incluir los datos del asistente añadido, incluyendo su email y rol<br><br><strong>Scenario: Asistente ya registrado</strong><br>Given el asistente proporcionado ya está registrado en la lista de participantes de la reunión<br>When el servidor procesa la solicitud<br>Then debe responder con un código 409 Conflict<br>And el cuerpo de la respuesta debe incluir un mensaje "Este asistente ya forma parte de la reunión"<br><br><strong>Scenario: Enviar email inválido</strong><br>Given el contratista envía una solicitud POST con un email mal formateado o no válido<br>When el servidor procesa la solicitud<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje "Debe ingresar un correo electrónico válido"<br><br><strong>Scenario: Reunión no encontrada</strong><br>Given el meetingId proporcionado no corresponde a ninguna reunión registrada en el proyecto<br>When se envía la solicitud POST<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Reunión no encontrada"<br><br></td><td>EP05</td></tr>
+    <tr><td>TS26</td><td>Editar/eliminar asistente de reunión</td><td>Como Developer, quiero implementar un endpoint que permita editar o eliminar un asistente de una reunión, para mantener actualizada la lista de participantes en caso de cambios en la asistencia.</td><td><br><br><strong>Scenario: Editar asistente exitosamente</strong><br>Given un contratista autorizado envía una solicitud PATCH al endpoint /organizations/{organizationId}/projects/{project-id}/schedule/milestones/{milestoneId}/meetings/{meetingId}/attendees/{attendeeId}<br>And el cuerpo de la solicitud contiene un nuevo email válido o rol para el asistente<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir los datos del asistente actualizado, incluyendo su email y rol<br><br><strong>Scenario: Eliminar asistente exitosamente</strong><br>Given un contratista autorizado envía una solicitud DELETE al endpoint /organizations/{organizationId}/projects/{project-id}/schedule/milestones/{milestoneId}/meetings/{meetingId}/attendees/{attendeeId}<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el asistente debe ser eliminado de la lista de participantes de la reunión<br>And el cuerpo de la respuesta debe incluir un mensaje "Asistente eliminado exitosamente"<br><br><strong>Scenario: Intentar editar asistente inexistente</strong><br>Given el attendeeId proporcionado no existe en la lista de asistentes de la reunión<br>When se envía la solicitud PATCH<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Asistente no encontrado"<br><br><strong>Scenario: Intentar eliminar asistente inexistente</strong><br>Given el attendeeId proporcionado no existe en la lista de asistentes de la reunión<br>When se envía la solicitud DELETE<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Asistente no encontrado"<br><br></td><td>EP05</td></tr>
+    <tr><td>TS27</td><td>Crear tarea</td><td>Como Developer, quiero implementar un endpoint que permita crear una nueva tarea en un proyecto, para que los contratistas puedan organizar y asignar actividades dentro del cronograma del proyecto.</td><td><br><br><strong>Scenario: Crear tarea exitosamente</strong><br>Given un contratista autorizado envía una solicitud POST al endpoint /organizations/{organizationId}/projects/{project-id}/schedule/milestones/{milestoneId}/tasks<br>And el cuerpo de la solicitud contiene los datos válidos de la tarea (título, fecha de inicio, fecha de finalización, responsable asignado, etc.)<br>When el servidor procesa la solicitud<br>Then debe responder con un código 201 Created<br>And el cuerpo de la respuesta debe incluir los datos de la tarea recién creada, incluyendo su id, título, fecha de inicio, fecha de finalización y responsable asignado<br><br><strong>Scenario: Enviar datos inválidos en la solicitud</strong><br>Given el contratista envía una solicitud POST con datos incompletos o con formato inválido (por ejemplo, fecha mal formateada, campos vacíos, etc.)<br>When el servidor procesa la solicitud<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje que detalle los errores de validación<br><br><strong>Scenario: Proyecto no encontrado</strong><br>Given el projectId proporcionado no corresponde a ningún proyecto existente<br>When se envía la solicitud POST<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Proyecto no encontrado"<br><br></td><td>EP04</td></tr>
+    <tr><td>TS28</td><td>Listar tareas de hito</td><td>Como Developer, quiero implementar un endpoint que permita obtener todas las tareas asociadas a un hito específico dentro de un proyecto, para que los usuarios puedan visualizar todas las actividades vinculadas a ese hito en particular.</td><td><br><br><strong>Scenario: Listar tareas exitosamente</strong><br>Given un usuario autorizado realiza una solicitud GET al endpoint /organizations/{organizationId}/projects/{project-id}/schedule/milestones/{milestoneId}/tasks<br>And el hito especificado tiene tareas asociadas<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir una lista de tareas asociadas al hito, donde cada tarea debe incluir: id, título, fecha de inicio, fecha de finalización, responsable asignado y estado de la tarea<br><br><strong>Scenario: Hito sin tareas asociadas</strong><br>Given el hito especificado no tiene tareas asociadas<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir una lista vacía<br><br><strong>Scenario: Hito no encontrado</strong><br>Given el milestoneId proporcionado no corresponde a ningún hito registrado en el proyecto<br>When se realiza la solicitud GET<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Hito no encontrado"<br><br><strong>Scenario: Proyecto no encontrado</strong><br>Given el projectId proporcionado no corresponde a ningún proyecto existente<br>When se realiza la solicitud GET<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Proyecto no encontrado"<br><br></td><td>EP04</td></tr>
+    <tr><td>TS29</td><td>Obtener detalles de tarea</td><td>Como Developer, quiero implementar un endpoint que permita obtener los detalles completos de una tarea asociada a un proyecto, para que los usuarios puedan visualizar toda la información relevante de la tarea.</td><td><br><br><strong>Scenario: Obtener detalles de tarea exitosamente</strong><br>Given un usuario autorizado realiza una solicitud GET al endpoint /organizations/{organizationId}/projects/{project-id}/schedule/milestones/{milestoneId}/tasks/{taskId}<br>And la tarea especificada existe dentro del proyecto<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir los detalles de la tarea, como: id, título, descripción, fecha de inicio, fecha de finalización, responsable asignado, estado, y cualquier otro campo adicional<br><br><strong>Scenario: Tarea no encontrada</strong><br>Given el taskId proporcionado no corresponde a ninguna tarea registrada en el proyecto<br>When se realiza la solicitud GET<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Tarea no encontrada"<br><br><strong>Scenario: Proyecto no encontrado</strong><br>Given el projectId proporcionado no corresponde a ningún proyecto existente<br>When se realiza la solicitud GET<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Proyecto no encontrado"<br><br></td><td>EP04</td></tr>
+    <tr><td>TS30</td><td>Actualizar información de tarea</td><td>Como Developer, quiero implementar un endpoint que permita actualizar la información de una tarea registrada en un proyecto, para que los contratistas puedan ajustar los detalles, responsable y fechas conforme a la evolución del proyecto.</td><td><br><br><strong>Scenario: Actualizar detalles de tarea exitosamente</strong><br>Given un contratista autorizado envía una solicitud PATCH al endpoint /organizations/{organizationId}/projects/{project-id}/schedule/milestones/{milestoneId}/tasks/{taskId}<br>And el cuerpo de la solicitud contiene los nuevos detalles de la tarea, como descripción, prioridad, etc.<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe reflejar los detalles actualizados de la tarea<br><br><strong>Scenario: Actualizar responsable de tarea exitosamente</strong><br>Given un contratista autorizado envía una solicitud PATCH al endpoint /organizations/{organizationId}/projects/{project-id}/schedule/milestones/{milestoneId}/tasks/{taskId}<br>And el cuerpo de la solicitud contiene un responsable válido (usuario existente)<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe reflejar el nuevo responsable asignado a la tarea<br><br><strong>Scenario: Actualizar fecha de tarea exitosamente</strong><br>Given un contratista autorizado envía una solicitud PATCH al endpoint /organizations/{organizationId}/projects/{project-id}/schedule/milestones/{milestoneId}/tasks/{taskId}<br>And el cuerpo de la solicitud contiene una nueva fecha de inicio y/o fecha de finalización válidas<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe reflejar las nuevas fechas de la tarea<br><br><strong>Scenario: Enviar datos inválidos en la solicitud</strong><br>Given el contratista envía datos inválidos (por ejemplo, fecha mal formateada, responsable no válido o descripción vacía)<br>When el servidor procesa la solicitud<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje de validación con los errores encontrados<br><br><strong>Scenario: Tarea no encontrada</strong><br>Given el taskId proporcionado no corresponde a ninguna tarea registrada en el proyecto<br>When se envía la solicitud PATCH<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Tarea no encontrada"<br><br></td><td>EP04</td></tr>
+    <tr><td>TS31</td><td>Crear solicitud de cambio</td><td>Como Developer, quiero implementar un endpoint que permita a los clientes crear una solicitud de cambio dentro de un proyecto, para que los cambios solicitados sean registrados y procesados de manera adecuada.</td><td><br><br><strong>Scenario: Crear solicitud de cambio exitosamente</strong><br>Given un cliente autorizado envía una solicitud POST al endpoint /organizations/{org-id}/projects/{project-id}/change-request<br>And el cuerpo de la solicitud contiene los datos válidos de la solicitud de cambio (título, descripción, motivo, documentos adjuntos)<br>When el servidor procesa la solicitud<br>Then debe responder con un código 201 Created<br>And el cuerpo de la respuesta debe incluir los detalles de la solicitud de cambio creada, incluyendo su id, título, descripción, motivo, y documentos adjuntos (si existen)<br><br><strong>Scenario: Enviar datos inválidos en la solicitud de cambio</strong><br>Given el cliente envía una solicitud POST con datos incompletos o con formato inválido (por ejemplo, descripción vacía o formato incorrecto en los documentos adjuntos)<br>When el servidor procesa la solicitud<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje que detalle los errores de validación<br><br><strong>Scenario: Proyecto no encontrado</strong><br>Given el projectId proporcionado no corresponde a ningún proyecto registrado<br>When se envía la solicitud POST<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Proyecto no encontrado"<br><br></td><td>EP07</td></tr>
+    <tr><td>TS32</td><td>Listar solicitudes de cambio</td><td>Como Developer, quiero implementar un endpoint que permita listar todas las solicitudes de cambio asociadas a un proyecto, para que los usuarios puedan ver todas las modificaciones solicitadas por los clientes.</td><td><br><br><strong>Scenario: Listar solicitudes de cambio exitosamente</strong><br>Given un usuario autorizado realiza una solicitud GET al endpoint /organizations/{org-id}/projects/{project-id}/change-request<br>And el proyecto tiene solicitudes de cambio registradas<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir una lista de solicitudes de cambio asociadas al proyecto, donde cada solicitud debe incluir: id, título, motivo, fecha de creación, estado (pendiente, aceptada, denegada) y documentos adjuntos (si existen)<br><br><strong>Scenario: Proyecto sin solicitudes de cambio</strong><br>Given el proyecto no tiene solicitudes de cambio registradas<br>When se realiza la solicitud GET<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir una lista vacía<br><br><strong>Scenario: Proyecto no encontrado</strong><br>Given el projectId proporcionado no corresponde a ningún proyecto registrado<br>When se realiza la solicitud GET<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Proyecto no encontrado"<br><br></td><td>EP07</td></tr>
+    <tr><td>TS33</td><td>Obtener detalles de solicitud de cambio</td><td>Como Developer, quiero implementar un endpoint que permita obtener los detalles completos de una solicitud de cambio asociada a un proyecto, para que los usuarios puedan revisar a fondo la solicitud y tomar decisiones informadas.</td><td><br><br><strong>Scenario: Obtener detalles de solicitud de cambio exitosamente</strong><br>Given un usuario autorizado realiza una solicitud GET al endpoint /organizations/{org-id}/projects/{project-id}/change-request/{solicitud de cambioId}<br>And la solicitud de cambio existe dentro del proyecto<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir los detalles completos de la solicitud de cambio, como: id, título, descripción, motivo, fecha de creación, estado, comentarios adicionales (si existen), y documentos adjuntos (si existen)<br><br><strong>Scenario: Solicitud de cambio no encontrada</strong><br>Given el solicitud de cambioId proporcionado no corresponde a ninguna solicitud registrada en el proyecto<br>When se realiza la solicitud GET<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Solicitud de cambio no encontrada"<br><br><strong>Scenario: Proyecto no encontrado</strong><br>Given el projectId proporcionado no corresponde a ningún proyecto registrado<br>When se realiza la solicitud GET<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Proyecto no encontrado"<br><br></td><td>EP07</td></tr>
+    <tr><td>TS34</td><td>Aceptar / Denegar solicitud de cambio</td><td>Como Developer, quiero implementar un endpoint que permita aceptar o denegar una solicitud de cambio, para que los contratistas puedan procesar las solicitudes de cambio de acuerdo con la viabilidad del proyecto.</td><td><br><br><strong>Scenario: Aceptar solicitud de cambio exitosamente</strong><br>Given un contratista autorizado envía una solicitud PATCH al endpoint /organizations/{org-id}/projects/{project-id}/change-request/{solicitud de cambioId}<br>And la solicitud de cambio existe y está en estado pendiente<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir un mensaje "Solicitud de cambio aceptada exitosamente"<br>And la solicitud de cambio debe actualizar su estado a "Aceptada"<br><br><strong>Scenario: Denegar solicitud de cambio exitosamente</strong><br>Given un contratista autorizado envía una solicitud PATCH al endpoint /projects/{projectId}/change-requests/{solicitud de cambioId}/deny<br>And la solicitud de cambio existe y está en estado pendiente<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir un mensaje "Solicitud de cambio denegada exitosamente"<br>And la solicitud de cambio debe actualizar su estado a "Denegada"<br><br><strong>Scenario: Intentar aceptar solicitud de cambio ya aceptada</strong><br>Given la solicitud de cambio ya ha sido aceptada previamente<br>When se intenta aceptar nuevamente<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje "Esta solicitud de cambio ya ha sido aceptada"<br><br><strong>Scenario: Intentar denegar solicitud de cambio ya denegada</strong><br>Given la solicitud de cambio ya ha sido denegada previamente<br>When se intenta denegar nuevamente<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje "Esta solicitud de cambio ya ha sido denegada"<br><br><strong>Scenario: Solicitud de cambio no encontrada</strong><br>Given el solicitud de cambioId proporcionado no corresponde a ninguna solicitud registrada en el proyecto<br>When se envía la solicitud PATCH<br>Then debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Solicitud de cambio no encontrada"<br><br><strong>Scenario: Proyecto no encontrado</strong><br>Given el projectId proporcionado no corresponde a ningún proyecto registrado<br>When se realiza la solicitud PATCH<br>Then debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Proyecto no encontrado"<br><br></td><td>EP07</td></tr>
+    <tr><td>TS35</td><td>Obtener detalles de desempeño de hito</td><td>Como Developer, quiero implementar un endpoint que permita obtener los detalles del desempeño de un hito específico, incluyendo el desempeño de las tareas asociadas a ese hito, para que los usuarios puedan evaluar el avance y la puntualidad en los entregables del proyecto.</td><td><br><br><strong>Scenario: Obtener detalles de desempeño de hito exitosamente</strong><br>Given un usuario autorizado realiza una solicitud GET al endpoint /organizations/{organizationId}/projects/{projectId}/schedule/milestones/{milestoneId}<br>And el hito especificado tiene tareas asociadas<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir detalles sobre el desempeño del hito, tales como:<br><br>total_tareas: Total de tareas asociadas al hito<br><br>tareas_completadas: Cuántas tareas han sido completadas<br><br>tareas_pendientes: Cuántas tareas aún no han sido completadas<br><br>tareas_completadas_a_tiempo: Cuántas de las tareas completadas fueron entregadas a tiempo<br><br>tareas_completadas_fuera_de_tiempo: Cuántas de las tareas completadas no fueron entregadas a tiempo<br><br><strong>Scenario: Hito sin tareas asociadas</strong><br>Given el hito especificado no tiene tareas asociadas<br>When se realiza la solicitud GET<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir un mensaje "Este hito no tiene tareas asociadas"<br><br><strong>Scenario: Hito no encontrado</strong><br>Given el milestoneId proporcionado no corresponde a ningún hito registrado en el proyecto<br>When se realiza la solicitud GET<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Hito no encontrado"<br><br><strong>Scenario: Proyecto no encontrado</strong><br>Given el projectId proporcionado no corresponde a ningún proyecto registrado<br>When se realiza la solicitud GET<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Proyecto no encontrado"<br><br></td><td>EP03</td></tr>
+    <tr><td>TS36</td><td>Consultar notificaciones de usuario</td><td>Como Developer, quiero implementar un endpoint que permita a un usuario consultar todas las notificaciones asociadas a su cuenta, para que pueda ver los eventos importantes que le corresponden.</td><td><br><br><strong>Scenario: Consultar notificaciones exitosamente</strong><br>Given un usuario autorizado realiza una solicitud GET al endpoint /notifications<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir una lista de notificaciones asociadas al usuario, donde cada notificación debe incluir: id, tipo, mensaje, fecha de creación, estado (leída/no leída)<br><br><strong>Scenario: Usuario sin notificaciones</strong><br>Given el usuario no tiene notificaciones asociadas a su cuenta<br>When el servidor procesa la solicitud GET<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir una lista vacía<br><br><strong>Scenario: Consultar notificaciones filtradas por estado</strong><br>Given un usuario autorizado realiza una solicitud GET al endpoint /notifications con un parámetro de filtro de estado (por ejemplo, ?status=unread)<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir únicamente las notificaciones que coinciden con el estado especificado (por ejemplo, "no leídas")<br><br><strong>Scenario: No encontrar notificaciones debido a parámetros incorrectos</strong><br>Given el usuario envía parámetros incorrectos en la solicitud GET (por ejemplo, un filtro de estado inválido)<br>When el servidor procesa la solicitud<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje "Parámetro de solicitud inválido"<br><br><strong>Scenario: Usuario no encontrado</strong><br>Given el usuario no está autorizado o no existe en el sistema<br>When se realiza la solicitud GET<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Usuario no encontrado"<br><br></td><td>EP13</td></tr>
+    <tr><td>TS37</td><td>Marcar notificación como leída</td><td>Como Developer, quiero implementar un endpoint que permita a un usuario marcar una notificación como leída, para que pueda llevar un control de las notificaciones que ha revisado.</td><td><br><br><strong>Scenario: Marcar notificación como leída exitosamente</strong><br>Given un usuario autorizado envía una solicitud PATCH al endpoint /notifications/{notificationId}<br>And la notificación existe y está asociada al usuario<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir un mensaje "Notificación marcada como leída exitosamente"<br>And el estado de la notificación debe actualizarse a "leída"<br><br><strong>Scenario: Intentar marcar una notificación inexistente como leída</strong><br>Given el notificationId proporcionado no corresponde a ninguna notificación registrada en el sistema<br>When se envía la solicitud PATCH<br>Then debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Notificación no encontrada"<br><br><strong>Scenario: Intentar marcar una notificación que ya está marcada como leída</strong><br>Given la notificación ya ha sido marcada como leída previamente<br>When el usuario intenta marcarla como leída nuevamente<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir un mensaje "La notificación ya está marcada como leída"<br><br><strong>Scenario: Usuario no autorizado para marcar la notificación</strong><br>Given el usuario no tiene permisos para modificar la notificación (por ejemplo, la notificación pertenece a otro usuario)<br>When se intenta marcar la notificación como leída<br>Then debe responder con un código 403 Forbidden<br>And el cuerpo de la respuesta debe incluir un mensaje "No tienes permisos para modificar esta notificación"<br><br></td><td>EP14</td></tr>
+    <tr><td>TS38</td><td>Obtener detalles de perfil</td><td>Como Developer, quiero implementar un endpoint que permita obtener los detalles del perfil de un usuario autenticado, para que el sistema pueda mostrar su información personal y profesional en la interfaz.</td><td><br><br><strong>Scenario: Obtener detalles del perfil exitosamente</strong><br>Given un usuario autenticado realiza una solicitud GET al endpoint /users/profile<br>When el servidor procesa la solicitud correctamente<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir los datos del usuario: nombre, correo, rol, fecha de registro, teléfono, ocupación, especialización y años de experiencia<br><br><strong>Scenario: Usuario no autenticado</strong><br>Given no se proporciona un token de autenticación válido en la solicitud<br>When se realiza la solicitud al endpoint /users/profile<br>Then debe responder con un código 401 Unauthorized<br>And el cuerpo de la respuesta debe incluir un mensaje "No autorizado. Inicia sesión para continuar"<br><br><strong>Scenario: Error interno del servidor</strong><br>Given el usuario está autenticado<br>When ocurre un error inesperado al intentar obtener la información del perfil<br>Then se debe responder con un código 500 Internal Server Error<br>And el cuerpo de la respuesta debe incluir un mensaje "Error al obtener los datos del perfil"<br><br></td><td>EP18</td></tr>
+    <tr><td>TS39</td><td>Actualizar datos personales</td><td>Como Developer, quiero implementar un endpoint que permita actualizar los datos personales de un usuario, para que pueda modificar su nombre, correo electrónico y otros detalles de contacto en el sistema.</td><td><br><br><strong>Scenario: Actualizar datos personales exitosamente</strong><br>Given un usuario autenticado envía una solicitud PUT al endpoint /users/profile<br>And el cuerpo de la solicitud contiene los campos nombre y correo electrónico actualizados<br>When el servidor procesa la solicitud correctamente<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir los nuevos datos personales del usuario: nombre y correo electrónico<br><br><strong>Scenario: Campos obligatorios vacíos</strong><br>Given un usuario autenticado envía una solicitud PUT con campos obligatorios vacíos (como nombre o correo electrónico)<br>When el servidor procesa la solicitud<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje "Los campos nombre y correo electrónico son obligatorios"<br><br><strong>Scenario: Formato de correo electrónico inválido</strong><br>Given un usuario autenticado envía una solicitud PUT con un correo electrónico en formato incorrecto<br>When el servidor procesa la solicitud<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje "El correo electrónico proporcionado no es válido"<br><br><strong>Scenario: Usuario no autenticado</strong><br>Given un usuario no autenticado intenta actualizar sus datos personales<br>When se envía la solicitud PUT al endpoint /users/profile<br>Then debe responder con un código 401 Unauthorized<br>And el cuerpo de la respuesta debe incluir un mensaje "No autorizado. Inicia sesión para actualizar tus datos personales"<br><br></td><td>EP18</td></tr>
+    <tr><td>TS40</td><td>Actualizar datos de perfil</td><td>Como Developer, quiero implementar un endpoint que permita actualizar la información profesional y otros detalles del perfil de un usuario, para que su perfil refleje su experiencia y habilidades más actuales.</td><td><br><br><strong>Scenario: Actualizar datos de perfil exitosamente</strong><br>Given un usuario autenticado envía una solicitud PUT al endpoint /users/profile/details<br>And el cuerpo de la solicitud contiene los campos actualizados como ocupación, especialización, años de experiencia, certificaciones<br>When el servidor procesa la solicitud correctamente<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir los nuevos datos del perfil del usuario, incluyendo ocupación, especialización, años de experiencia y certificaciones<br><br><strong>Scenario: Campos obligatorios vacíos</strong><br>Given un usuario autenticado envía una solicitud PUT con campos obligatorios vacíos (como ocupación o especialización)<br>When el servidor procesa la solicitud<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje "Los campos ocupación y especialización son obligatorios"<br><br><strong>Scenario: Datos inválidos</strong><br>Given un usuario autenticado envía una solicitud PUT con datos no válidos en los campos, como un número de experiencia con formato incorrecto<br>When el servidor procesa la solicitud<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje "Los datos proporcionados son inválidos. Verifica la información ingresada"<br><br><strong>Scenario: Usuario no autenticado</strong><br>Given un usuario no autenticado intenta actualizar sus datos de perfil<br>When se envía la solicitud PUT al endpoint /users/profile/details<br>Then debe responder con un código 401 Unauthorized<br>And el cuerpo de la respuesta debe incluir un mensaje "No autorizado. Inicia sesión para actualizar tus datos de perfil"<br><br></td><td>EP18</td></tr>
+    <tr><td>TS41</td><td>Login</td><td>Como Developer, quiero implementar un endpoint de login que reciba credenciales de usuario y devuelva un token de autenticación, para permitir el acceso seguro a los recursos de la plataforma.</td><td><br><br><strong>Scenario: Login exitoso</strong><br>Given se realiza una solicitud POST al endpoint /auth/login<br>And el cuerpo de la solicitud incluye un email y una contraseña válidos<br>When las credenciales son verificadas correctamente<br>Then el servidor debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir un accessToken, refreshToken, y datos del usuario como userId, nombre, y rol<br><br><strong>Scenario: Credenciales incorrectas</strong><br>Given se realiza una solicitud POST al endpoint /auth/login<br>And las credenciales no coinciden con ningún usuario registrado<br>When se intenta autenticar<br>Then el servidor debe responder con un código 401 Unauthorized<br>And el cuerpo de la respuesta debe incluir un mensaje "Credenciales incorrectas"<br><br><strong>Scenario: Usuario no registrado</strong><br>Given se realiza una solicitud POST al endpoint /auth/login<br>And el email proporcionado no pertenece a ningún usuario registrado<br>When se intenta autenticar<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Usuario no encontrado"<br><br><strong>Scenario: Campos obligatorios faltantes</strong><br>Given se realiza una solicitud POST al endpoint /auth/login<br>And falta el email o la contraseña en el cuerpo de la solicitud<br>When se procesa la solicitud<br>Then el servidor debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje "El correo electrónico y la contraseña son obligatorios"<br><br></td><td>EP16</td></tr>
+    <tr><td>TS42</td><td>Refrescar Token</td><td>Como Developer, quiero implementar un endpoint para refrescar el token de autenticación usando un refreshToken, para mantener la sesión activa sin requerir un nuevo login.</td><td><br><br><strong>Scenario: Refrescar token exitosamente</strong><br>Given se realiza una solicitud POST al endpoint /auth/refresh-token<br>And el cuerpo de la solicitud contiene un refreshToken válido y no expirado<br>When se procesa la solicitud<br>Then el servidor debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir un nuevo accessToken y un nuevo refreshToken<br><br><strong>Scenario: Refresh token inválido</strong><br>Given se realiza una solicitud POST al endpoint /auth/refresh-token<br>And el refreshToken proporcionado no es válido<br>When se procesa la solicitud<br>Then el servidor debe responder con un código 401 Unauthorized<br>And el cuerpo de la respuesta debe incluir un mensaje "Token no válido"<br><br><strong>Scenario: Refresh token expirado</strong><br>Given se realiza una solicitud POST al endpoint /auth/refresh-token<br>And el refreshToken ha expirado<br>When se procesa la solicitud<br>Then el servidor debe responder con un código 403 Forbidden<br>And el cuerpo de la respuesta debe incluir un mensaje "El token ha expirado, inicie sesión nuevamente"<br><br><strong>Scenario: Refresh token no proporcionado</strong><br>Given se realiza una solicitud POST al endpoint /auth/refresh-token<br>And no se incluye un refreshToken en el cuerpo de la solicitud<br>When se procesa la solicitud<br>Then el servidor debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje "Se requiere un token de actualización"<br><br></td><td>EP16</td></tr>
+    <tr><td>TS43</td><td>Cerrar sesión + invalidar token</td><td>Como Developer, quiero implementar un endpoint para cerrar sesión e invalidar el refreshToken, para asegurar que el usuario no pueda seguir autenticado tras finalizar su sesión.</td><td><br><br><strong>Scenario: Cierre de sesión exitoso</strong><br>Given se realiza una solicitud POST al endpoint /auth/logout<br>And el cuerpo de la solicitud contiene un refreshToken válido<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir un mensaje "Sesión cerrada exitosamente"<br>And el refreshToken debe quedar invalidado para futuros usos<br><br><strong>Scenario: Refresh token inválido</strong><br>Given se realiza una solicitud POST al endpoint /auth/logout<br>And el refreshToken no es válido<br>When el servidor procesa la solicitud<br>Then debe responder con un código 401 Unauthorized<br>And el cuerpo de la respuesta debe incluir un mensaje "Token no válido o ya ha sido invalidado"<br><br><strong>Scenario: Refresh token no proporcionado</strong><br>Given se realiza una solicitud POST al endpoint /auth/logout<br>And no se incluye ningún refreshToken en el cuerpo de la solicitud<br>When el servidor procesa la solicitud<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje "Se requiere un token para cerrar la sesión"<br><br></td><td>EP16</td></tr>
+    <tr><td>TS44</td><td>Registro</td><td>Como Developer, quiero implementar un endpoint de registro que permita a nuevos usuarios crear una cuenta proporcionando su información básica, para que puedan autenticarse y acceder al sistema.</td><td><br><br><strong>Scenario: Registro exitoso</strong><br>Given se realiza una solicitud POST al endpoint /auth/register<br>And el cuerpo de la solicitud contiene campos válidos como nombre, apellido, email y contraseña<br>When el servidor procesa la solicitud<br>Then debe responder con un código 201 Created<br>And el cuerpo de la respuesta debe incluir los datos básicos del nuevo usuario (por ejemplo: userId, nombre, email)<br>And se debe enviar un correo de verificación de cuenta al email registrado<br><br><strong>Scenario: Email ya registrado</strong><br>Given se realiza una solicitud POST al endpoint /auth/register<br>And el email proporcionado ya pertenece a una cuenta existente<br>When el servidor procesa la solicitud<br>Then debe responder con un código 409 Conflict<br>And el cuerpo de la respuesta debe incluir un mensaje "Este correo electrónico ya está registrado"<br><br><strong>Scenario: Datos faltantes o inválidos</strong><br>Given se realiza una solicitud POST al endpoint /auth/register<br>And el cuerpo de la solicitud contiene campos vacíos o con formato incorrecto (por ejemplo, email mal formateado, contraseña muy corta)<br>When el servidor procesa la solicitud<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje que indique el campo inválido o faltante<br><br><strong>Scenario: Error interno al registrar usuario</strong><br>Given el servidor recibe una solicitud válida<br>When ocurre un error inesperado durante el proceso de registro<br>Then debe responder con un código 500 Internal Server Error<br>And el cuerpo de la respuesta debe incluir un mensaje "No se pudo completar el registro. Intente nuevamente más tarde"<br><br></td><td>EP15</td></tr>
+    <tr><td>TS45</td><td>Cambiar contraseña</td><td>Como Developer, quiero implementar un endpoint que permita a un usuario autenticado cambiar su contraseña actual, para mantener la seguridad de su cuenta.</td><td><br><br><strong>Scenario: Cambio de contraseña exitoso</strong><br>Given el usuario está autenticado<br>And realiza una solicitud PUT al endpoint /auth/change-password<br>And el cuerpo de la solicitud incluye los campos contraseñaActual, nuevaContraseña y confirmarNuevaContraseña<br>When las credenciales son válidas y las contraseñas nuevas coinciden<br>Then el servidor debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir un mensaje "Contraseña actualizada con éxito"<br>And la nueva contraseña debe reemplazar la anterior en el sistema<br><br><strong>Scenario: Contraseña actual incorrecta</strong><br>Given el usuario está autenticado<br>And envía un contraseñaActual que no coincide con la registrada<br>When el servidor procesa la solicitud<br>Then debe responder con un código 401 Unauthorized<br>And el cuerpo de la respuesta debe incluir un mensaje "La contraseña actual es incorrecta"<br><br><strong>Scenario: Contraseñas nuevas no coinciden</strong><br>Given el usuario está autenticado<br>And los campos nuevaContraseña y confirmarNuevaContraseña no son iguales<br>When se procesa la solicitud<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje "Las nuevas contraseñas no coinciden"<br><br><strong>Scenario: Campos obligatorios faltantes</strong><br>Given el usuario está autenticado<br>And el cuerpo de la solicitud no incluye alguno de los campos requeridos<br>When se procesa la solicitud<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje que indique los campos obligatorios faltantes<br><br></td><td>EP16</td></tr>
+    <tr><td>TS46</td><td>Solicitar recuperar contraseña</td><td>Como Developer, quiero implementar un endpoint que permita a los usuarios solicitar la recuperación de su contraseña mediante correo electrónico, para que puedan restablecerla si la han olvidado.</td><td><br><br><strong>Scenario: Solicitud de recuperación exitosa</strong><br>Given se realiza una solicitud POST al endpoint /auth/forgot-password<br>And el cuerpo de la solicitud incluye un email registrado en el sistema<br>When se procesa la solicitud<br>Then el servidor debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir un mensaje "Se ha enviado un enlace para restablecer la contraseña"<br>And se debe enviar un correo electrónico con un enlace único y temporal para restablecer la contraseña<br><br><strong>Scenario: Email no registrado</strong><br>Given se realiza una solicitud POST al endpoint /auth/forgot-password<br>And el email no pertenece a ningún usuario registrado<br>When se procesa la solicitud<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "El correo electrónico no está registrado"<br><br><strong>Scenario: Email inválido o mal formateado</strong><br>Given se realiza una solicitud POST al endpoint /auth/forgot-password<br>And el email tiene un formato incorrecto o está vacío<br>When se procesa la solicitud<br>Then el servidor debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje "Debe ingresar un correo electrónico válido"<br><br><strong>Scenario: Error al enviar el correo</strong><br>Given la solicitud es válida y el usuario está registrado<br>When ocurre un error al intentar enviar el correo de recuperación<br>Then el servidor debe responder con un código 500 Internal Server Error<br>And el cuerpo de la respuesta debe incluir un mensaje "No se pudo enviar el correo de recuperación. Intente más tarde"<br><br></td><td>EP17</td></tr>
+    <tr><td>TS47</td><td>Renovar contraseña</td><td>Como Developer, quiero implementar un endpoint que permita a los usuarios restablecer su contraseña usando un token de recuperación válido, para que puedan recuperar el acceso a su cuenta de forma segura.</td><td><br><br><strong>Scenario: Renovación de contraseña exitosa</strong><br>Given se realiza una solicitud POST al endpoint /auth/reset-password<br>And el cuerpo de la solicitud incluye un token, nuevaContraseña y confirmarNuevaContraseña<br>When el token es válido y las contraseñas coinciden<br>Then el servidor debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir un mensaje "La contraseña se ha actualizado exitosamente"<br>And la nueva contraseña debe reemplazar la anterior<br><br><strong>Scenario: Token inválido o expirado</strong><br>Given se realiza una solicitud POST al endpoint /auth/reset-password<br>And el token es incorrecto, ha expirado o ya fue utilizado<br>When se procesa la solicitud<br>Then el servidor debe responder con un código 403 Forbidden<br>And el cuerpo de la respuesta debe incluir un mensaje "El token no es válido o ha expirado"<br><br><strong>Scenario: Contraseñas no coinciden</strong><br>Given se realiza una solicitud POST al endpoint /auth/reset-password<br>And nuevaContraseña y confirmarNuevaContraseña no son iguales<br>When se procesa la solicitud<br>Then el servidor debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje "Las contraseñas no coinciden"<br><br><strong>Scenario: Campos obligatorios faltantes</strong><br>Given se realiza una solicitud POST al endpoint /auth/reset-password<br>And el cuerpo de la solicitud no contiene alguno de los campos requeridos (token, nuevaContraseña, confirmarNuevaContraseña)<br>When se procesa la solicitud<br>Then el servidor debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje que indique los campos faltantes o inválidos<br><br><strong>Scenario: Contraseña insegura</strong><br>Given se realiza una solicitud POST con una nueva contraseña que no cumple los requisitos mínimos de seguridad<br>When se procesa la solicitud<br>Then el servidor debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje "La nueva contraseña no cumple con los requisitos de seguridad"<br><br></td><td>EP17</td></tr>
+    <tr><td>TS48</td><td>Encriptación segura de credenciales</td><td>Como Developer, quiero implementar una función de encriptación de credenciales mediante salteo y hasheo, para garantizar que las contraseñas de los usuarios no se almacenen ni se procesen nunca en texto plano.</td><td><br><br><strong>Scenario: Almacenar nueva contraseña</strong><br>Given el sistema recibe una nueva contraseña como parte del registro o actualización de cuenta<br>When la contraseña va a ser almacenada en la base de datos<br>Then se debe generar un "salt" aleatorio único<br>And la contraseña debe ser hasheada utilizando un algoritmo robusto como bcrypt con el salt generado<br>And el hash resultante junto con el salt deben almacenarse de forma segura<br>And la contraseña original nunca debe almacenarse ni registrarse en texto plano<br><br><strong>Scenario: Verificar contraseña y permitir acceso</strong><br>Given el usuario envía su contraseña al iniciar sesión<br>When el sistema aplica el algoritmo de hash con el salt correspondiente<br>Then el resultado debe coincidir con el hash almacenado<br>And se debe permitir el acceso al usuario<br><br><strong>Scenario: Verificar contraseña y rechazar acceso</strong><br>Given el usuario envía su contraseña al iniciar sesión<br>When el sistema aplica el algoritmo de hash con el salt correspondiente<br>Then el resultado no debe coincidir con el hash almacenado<br>And se debe rechazar el acceso al usuario<br><br></td><td>EP16</td></tr>
+    <tr><td>TS49</td><td>Límite de intentos de login</td><td>Como Developer, quiero implementar un mecanismo que limite la cantidad de intentos fallidos de inicio de sesión, para prevenir ataques de fuerza bruta contra las credenciales de los usuarios.</td><td><br><br><strong>Scenario: Superar el número máximo de intentos fallidos</strong><br>Given un usuario ha ingresado credenciales incorrectas varias veces consecutivas<br>When el número de intentos fallidos alcanza el límite definido (por ejemplo, 5 intentos)<br>Then el sistema debe bloquear temporalmente el intento de inicio de sesión para ese usuario o dirección IP<br>And se debe registrar el intento y la duración del bloqueo<br><br><strong>Scenario: Reintentar login después del tiempo de espera</strong><br>Given un usuario ha sido bloqueado por exceder el número de intentos fallidos<br>When ha transcurrido el tiempo de espera definido (por ejemplo, 15 minutos)<br>Then el sistema debe permitir nuevamente el intento de inicio de sesión<br><br><strong>Scenario: Restablecer contador de intentos al iniciar sesión exitosamente</strong><br>Given un usuario logra autenticarse correctamente<br>When el inicio de sesión es exitoso<br>Then el sistema debe restablecer el contador de intentos fallidos a cero<br><br><strong>Scenario: Informar sobre intentos fallidos restantes</strong><br>Given el usuario ha realizado uno o más intentos fallidos de login<br>When se realiza un nuevo intento con credenciales incorrectas<br>Then el sistema debe informar cuántos intentos restantes quedan antes del bloqueo<br><br></td><td>EP17</td></tr>
+    <tr><td>TS50</td><td>Corroborar nivel de acceso</td><td>Como Developer, quiero implementar una verificación de nivel de acceso en cada solicitud del usuario, para asegurar que solo puedan ejecutar acciones autorizadas según su rol.</td><td><br><br><strong>Scenario: Acceso permitido según rol</strong><br>Given un usuario autenticado realiza una solicitud a un recurso protegido<br>When el sistema verifica los permisos asociados al rol del usuario<br>Then si el rol del usuario tiene acceso al recurso solicitado<br>And se debe permitir la ejecución de la acción<br><br><strong>Scenario: Acceso denegado por rol insuficiente</strong><br>Given un usuario autenticado realiza una solicitud a un recurso restringido<br>When el sistema verifica que el rol del usuario no tiene permiso para acceder a ese recurso<br>Then se debe denegar el acceso<br>And el sistema debe devolver un error de autorización, como 403 Forbidden<br><br></td><td>EP16</td></tr>
+    <tr><td>TS51</td><td>Listar facturas de usuario</td><td>Como Developer, quiero implementar un endpoint que permita obtener el listado de facturas asociadas a un usuario, para que el usuario pueda consultar el historial de facturación relacionado con sus suscripciones.</td><td><br><br><strong>Scenario: Obtener listado de facturas exitosamente</strong><br>Given un usuario autenticado envía una solicitud GET al endpoint /users/invoices<br>When el usuario tiene facturas asociadas a sus suscripciones<br>Then el sistema debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir un arreglo de facturas con los campos invoiceId, fechaEmision, estado, montoTotal, fechaPago (si corresponde) y un enlace para ver el detalle<br><br><strong>Scenario: Usuario sin facturas registradas</strong><br>Given un usuario realiza una solicitud válida pero no tiene facturas generadas<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe contener un arreglo vacío<br><br><strong>Scenario: Usuario no encontrado</strong><br>Given el userId proporcionado no corresponde a ningún usuario registrado<br>When se realiza la solicitud GET<br>Then el sistema debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Usuario no encontrado"<br><br></td><td>EP19</td></tr>
+    <tr><td>TS52</td><td>Estado de una factura</td><td>Como Developer, quiero implementar un endpoint que permita consultar el estado de una factura asociada a un usuario, para que el usuario pueda conocer si la factura está pagada, pendiente o vencida.</td><td><br><br><strong>Scenario: Obtener estado de factura exitosamente</strong><br>Given un usuario autenticado envía una solicitud GET al endpoint /users/invoices/{invoiceId}/status<br>When la factura existe y está registrada en el sistema<br>Then el sistema debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir el estado de la factura, que puede ser uno de los siguientes: Pagada, Pendiente, o Vencida<br>And debe incluir la fecha de pago (si aplica) y la fecha límite de pago<br><br><strong>Scenario: Factura no encontrada</strong><br>Given un usuario intenta obtener el estado de una factura que no existe<br>When se realiza la solicitud GET<br>Then el sistema debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Factura no encontrada"<br><br></td><td>EP19</td></tr>
+    <tr><td>TS53</td><td>Selección del plan de suscripción</td><td>Como Developer, quiero implementar un endpoint que permita a los usuarios seleccionar un plan de suscripción, para que puedan elegir el plan que mejor se ajuste a sus necesidades y activar la suscripción.</td><td><br><br><strong>Scenario: Seleccionar un plan de suscripción correctamente</strong><br>Given un usuario autenticado envía una solicitud POST al endpoint /users/subscriptions<br>When el usuario selecciona un plan de suscripción válido con los datos correctos en el cuerpo de la solicitud<br>Then el sistema debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir los detalles del plan seleccionado, como planId, nombre, precio, cicloFacturacion, fechaActivacion, y fechaRenovacion<br><br><strong>Scenario: Selección de plan no válido</strong><br>Given el usuario envía una solicitud POST al endpoint /users/{userId}/subscriptions/select<br>When el plan seleccionado no es válido o no existe<br>Then el sistema debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje "El plan seleccionado no es válido"<br><br><strong>Scenario: Usuario sin suscripción activa</strong><br>Given el usuario no tiene una suscripción activa<br>When el usuario selecciona un plan de suscripción para activarlo<br>Then el sistema debe procesar la solicitud de activación del plan<br>And el sistema debe generar una factura prorrateada según el tiempo restante del ciclo de facturación actual<br><br></td><td>EP19</td></tr>
+    <tr><td>TS54</td><td>Actualizar plan de suscripción</td><td>Como Developer, quiero implementar un endpoint que permita a los usuarios actualizar su plan de suscripción, para que puedan cambiar a un plan superior o inferior según sus necesidades.</td><td><br><br><strong>Scenario: Actualizar a un plan superior</strong><br>Given un usuario autenticado envía una solicitud PUT al endpoint /users/subscriptions<br>When el usuario selecciona un plan superior válido en el cuerpo de la solicitud<br>Then el sistema debe procesar el cambio de plan<br>And debe generar una factura prorrateada en función del tiempo restante del ciclo de facturación actual<br>And debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir los detalles del nuevo plan, como planId, nombre, precio, cicloFacturacion, fechaActivacion, fechaRenovacion<br><br><strong>Scenario: Actualizar a un plan inferior</strong><br>Given un usuario autenticado envía una solicitud PUT al endpoint /users/{userId}/subscriptions/update<br>When el usuario selecciona un plan inferior válido en el cuerpo de la solicitud<br>Then el sistema debe procesar el cambio de plan<br>And debe generar una factura prorrateada en función del tiempo restante del ciclo de facturación actual<br>And debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir los detalles del nuevo plan, como planId, nombre, precio, cicloFacturacion, fechaActivacion, fechaRenovacion<br><br><strong>Scenario: Intento de actualización con plan no válido</strong><br>Given el usuario intenta actualizar a un plan no válido<br>When se realiza la solicitud de actualización<br>Then el sistema debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje "El plan seleccionado no es válido"<br><br><strong>Scenario: Usuario no tiene suscripción activa</strong><br>Given el usuario no tiene una suscripción activa<br>When el usuario intenta actualizar su plan de suscripción<br>Then el sistema debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje "Debes tener una suscripción activa para actualizar tu plan"<br><br></td><td>EP19</td></tr>
+    <tr><td>TS55</td><td>Visualizar plan de suscripción</td><td>Como Developer, quiero implementar un endpoint que permita a los usuarios visualizar el plan de suscripción actual al que están suscritos, para que puedan revisar los detalles de su suscripción activa.</td><td><br><br><strong>Scenario: Obtener detalles del plan de suscripción exitosamente</strong><br>Given un usuario autenticado envía una solicitud GET al endpoint /users/subscriptions<br>When el usuario tiene una suscripción activa<br>Then el sistema debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir los detalles del plan de suscripción actual, como planId, nombre, precio, cicloFacturacion, fechaActivacion, fechaRenovacion, y estado (Activo/Pendiente/Suspendido)<br><br><strong>Scenario: Usuario sin suscripción activa</strong><br>Given el usuario no tiene una suscripción activa<br>When el usuario realiza una solicitud GET al endpoint /users/{userId}/subscriptions/current<br>Then el sistema debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "No tienes una suscripción activa"<br><br></td><td>EP19</td></tr>
+    <tr><td>TS56</td><td>Pagar factura</td><td>Como Developer, quiero implementar un endpoint que permita a los usuarios pagar sus facturas utilizando una pasarela de pagos, como Stripe, para asegurar un proceso de pago seguro y eficiente.</td><td><br><br><strong>Scenario: Pagar factura exitosamente</strong><br>Given un usuario autenticado envía una solicitud POST al endpoint /users/invoices/{invoiceId}/pay<br>And el cuerpo de la solicitud contiene un paymentMethod válido (por ejemplo, un token de tarjeta de crédito de Stripe)<br>When el sistema procesa el pago con la pasarela de pagos integrada (Stripe)<br>Then el sistema debe responder con un código 200 OK<br>And el cuerpo de la respuesta debe incluir el estado actualizado de la factura, con estado: Pagada<br>And debe incluir un mensaje "Pago realizado con éxito"<br>And debe actualizar el estado de la suscripción si el pago activa o renueva la suscripción<br><br><strong>Scenario: Pago rechazado</strong><br>Given el usuario intenta pagar con un paymentMethod no válido o con fondos insuficientes<br>When el sistema procesa el pago a través de la pasarela de pagos (Stripe)<br>Then el sistema debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje "Pago rechazado"<br>And debe especificar el motivo del rechazo (por ejemplo, fondos insuficientes, tarjeta caducada, etc.)<br><br><strong>Scenario: Usuario no tiene factura pendiente</strong><br>Given el usuario no tiene una factura pendiente de pago<br>When el usuario intenta pagar una factura<br>Then el sistema debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "No tienes facturas pendientes"<br>And no debe procesarse el pago<br><br></td><td>EP19</td></tr>
+    <tr><td>TS57</td><td>Eliminar proyecto (soft delete)</td><td>Como Developer, quiero implementar un endpoint que permita marcar un proyecto como eliminado (soft delete), para preservar sus datos temporalmente y permitir su recuperación antes de ser eliminado definitivamente.</td><td><br><br><strong>Scenario: Eliminar proyecto exitosamente (soft delete)</strong><br>Given un contratista autorizado envía una solicitud DELETE al endpoint /organizations/{organizationId}/projects/{project-id}<br>And el proyecto está en estado activo o gestionable<br>When el servidor procesa la solicitud<br>Then debe cambiar el estado interno del proyecto a deletion_pending<br>And debe responder con un código 202 Accepted<br>And un mensaje "El proyecto ha sido marcado para eliminación y será eliminado definitivamente en X días"<br><br><strong>Scenario: Proyecto ya marcado para eliminación</strong><br>Given el proyecto ya tiene el estado deletion_pending<br>When se recibe una nueva solicitud DELETE sobre el mismo projectId<br>Then el servidor debe responder con un código 409 Conflict<br>And el cuerpo de la respuesta debe incluir un mensaje "El proyecto ya está en proceso de eliminación"<br><br><strong>Scenario: Proyecto no encontrado</strong><br>Given el projectId proporcionado no corresponde a ningún proyecto registrado<br>When se envía la solicitud DELETE<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Proyecto no encontrado"<br><br></td><td>EP01</td></tr>
+    <tr><td>TS58</td><td>Eliminar usuario de proyecto</td><td>Como Developer, quiero implementar un endpoint que permita eliminar a un usuario del equipo de un proyecto, para que ya no tenga acceso ni participación activa en dicho proyecto.</td><td><br><br><strong>Scenario: Eliminar usuario del proyecto exitosamente</strong><br>Given un contratista autorizado envía una solicitud DELETE al endpoint /organizations/{organizationId}/projects/{project-id}/members/{memberId}<br>And el usuario forma parte del equipo del proyecto<br>When el servidor procesa la solicitud<br>Then debe eliminar la relación entre el usuario y el proyecto<br>And debe responder con un código 200 OK<br>And un mensaje "Miembro eliminado del proyecto exitosamente"<br><br><strong>Scenario: Usuario no pertenece al proyecto</strong><br>Given el memberId proporcionado no está asociado al projectId indicado<br>When se envía la solicitud DELETE<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Este usuario no forma parte del proyecto"<br><br><strong>Scenario: Proyecto no encontrado</strong><br>Given el projectId proporcionado no existe<br>When el servidor procesa la solicitud<br>Then debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Proyecto no encontrado"<br><br></td><td>EP02</td></tr>
+    <tr><td>TS59</td><td>Eliminar reunión</td><td>Como Developer, quiero implementar un endpoint que permita eliminar una reunión registrada en un proyecto, para que los contratistas puedan gestionar las reuniones que ya no son necesarias.</td><td><br><br><strong>Scenario: Eliminar reunión exitosamente</strong><br>Given un contratista autorizado envía una solicitud DELETE al endpoint /organizations/{organizationId}/projects/{project-id}/schedule/milestones/{milestoneId}/meetings/{meetingId}<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And la reunión debe ser eliminada del cronograma del proyecto<br>And el cuerpo de la respuesta debe incluir un mensaje "Reunión eliminada exitosamente"<br><br><strong>Scenario: Intentar eliminar una reunión inexistente</strong><br>Given el meetingId proporcionado no corresponde a ninguna reunión registrada en el proyecto<br>When se envía la solicitud DELETE<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Reunión no encontrada"<br><br><strong>Scenario: Intentar eliminar reunión de un proyecto inexistente</strong><br>Given el projectId proporcionado no corresponde a ningún proyecto registrado<br>When se envía la solicitud DELETE<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Proyecto no encontrado"<br><br></td><td>EP05</td></tr>
+    <tr><td>TS60</td><td>Subir entregable de tarea</td><td>Como Developer, quiero implementar un endpoint que permita subir un entregable asociado a una tarea dentro de un proyecto, para que los contratistas puedan registrar avances y documentación de trabajo.</td><td><br><br><strong>Scenario: Subir entregable exitosamente</strong><br>Given un contratista autorizado envía una solicitud POST al endpoint /organizations/{organizationId}/projects/{project-id}/schedule/milestones/{milestoneId}/tasks/{taskId}/deliverables<br>And el cuerpo de la solicitud contiene un archivo válido (formato permitido: PDF, DOCX, PPTX, etc.) y una descripción opcional del entregable<br>When el servidor procesa la solicitud<br>Then debe responder con un código 201 Created<br>And el cuerpo de la respuesta debe incluir los detalles del entregable subido, incluyendo su id, nombre, archivo y descripción (si proporcionada)<br><br><strong>Scenario: Enviar archivo inválido o no permitido</strong><br>Given el contratista intenta subir un archivo que no tiene el formato permitido o excede el límite de tamaño<br>When el servidor procesa la solicitud<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje "Debe subir un archivo válido"<br><br><strong>Scenario: Subir entregable sin archivo</strong><br>Given el contratista intenta enviar la solicitud sin incluir un archivo en el cuerpo de la solicitud<br>When el servidor procesa la solicitud<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje "Debe adjuntar un archivo de entregable"<br><br><strong>Scenario: Tarea no encontrada</strong><br>Given el taskId proporcionado no corresponde a ninguna tarea registrada en el proyecto<br>When se envía la solicitud POST<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Tarea no encontrada"<br><br><strong>Scenario: Proyecto no encontrado</strong><br>Given el projectId proporcionado no corresponde a ningún proyecto existente<br>When se envía la solicitud POST<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Proyecto no encontrado"<br><br></td><td>EP04</td></tr>
+    <tr><td>TS61</td><td>Eliminar tarea</td><td>Como Developer, quiero implementar un endpoint que permita eliminar una tarea asociada a un proyecto, para que los contratistas puedan gestionar las actividades del proyecto eliminando tareas innecesarias o incorrectas.</td><td><br><br><strong>Scenario: Eliminar tarea exitosamente</strong><br>Given un contratista autorizado envía una solicitud DELETE al endpoint /organizations/{organizationId}/projects/{project-id}/schedule/milestones/{milestoneId}/tasks/{taskId}<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And la tarea debe ser eliminada del proyecto<br>And el cuerpo de la respuesta debe incluir un mensaje "Tarea eliminada exitosamente"<br><br><strong>Scenario: Intentar eliminar tarea inexistente</strong><br>Given el taskId proporcionado no corresponde a ninguna tarea registrada en el proyecto<br>When se envía la solicitud DELETE<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Tarea no encontrada"<br><br><strong>Scenario: Intentar eliminar tarea de proyecto inexistente</strong><br>Given el projectId proporcionado no corresponde a ningún proyecto registrado<br>When se envía la solicitud DELETE<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Proyecto no encontrado"<br><br><strong>Scenario: Eliminar tarea asociada a un entregable</strong><br>Given la tarea seleccionada tiene entregables asociados<br>When se elimina la tarea<br>Then el servidor debe responder con un mensaje adicional "Esta tarea tiene entregables asociados, ¿deseas eliminarlos también?"<br><br></td><td>EP04</td></tr>
+    <tr><td>SWR01</td><td>Cambiar segmento objetivo</td><td>Como visitante quiero contar con la opción de especificar qué tipo de visitante soy para obtener información relevante a mis propios intereses en el Landing Page</td><td><br><br><strong>Acceptance Criteria</strong><br><br>* Debe encontrarse en la parte superior del landing page, a simple vista<br><br>* Debe mostrar las opciones correspondientes a los segmentos entidad contratante y proyectista y eespecialistaa mediante nombres más comprensibles como "Miembro de organización consultora" y "Cliente"<br><br>* Al seleccionar una de las opciones, el contenido de la página debe ajustarse automáticamente a la opción correspondiente<br><br></td><td>EP12</td></tr>
+    <tr><td>SWR02</td><td>Internacionalización</td><td>Como visitante quiero contar con internacionalización para adaptar el contenido de la Landing Page al idioma que entiendo mejor</td><td><br><br><strong>Acceptance Criteria</strong><br><br>* Al seleccionarlo, deben aparecer opciones todas las opciones de idioma<br><br>* Deben visualizarse los idiomas español e inglés<br><br>* Al seleccionar uno de los idiomas, el contenido de la página debe cambiar inmediatamente al idioma seleccionado<br><br></td><td>EP12</td></tr>
+    <tr><td>SWR03</td><td>About Us</td><td>Como visitante quiero conocer más acerca del equipo detrás del producto para evaluar qué tan confiable es su origen</td><td><br><br><strong>Acceptance Criteria</strong><br><br>* Debe visualizarse el logo de la organización Galaxia Wonder<br><br>* Debe explicarse la misión de la organización<br><br>* Debe explicarse la visión de la organización<br><br>* Deben mencionarse los valores de la organización<br><br></td><td>EP12</td></tr>
+    <tr><td>SWR04</td><td>Hero Section cliente</td><td>Como visitante del segmento cliente quiero visualizar un hero section para conocer rápidamente el valor principal del producto</td><td><br><br><strong>Acceptance Criteria</strong><br><br>* Debe visualizarse una imagen relativa y cercana al segmento de cliente según el user persona Alfonso Villarán mostrando una interacción y experiencia positiva con el producto<br><br>* Debe visualizarse un eslogan que venda la idea principal del producto<br><br></td><td>EP12</td></tr>
+    <tr><td>SWR05</td><td>Hero Section contratista</td><td>Como visitante del segmento contratista quiero visualizar un hero section para conocer rápidamente el valor principal del producto</td><td><br><br><strong>Acceptance Criteria</strong><br><br>* Debe visualizarse una imagen relativa y cercana al segmento de cliente según los user personas José Rodríguez y Edilberto Cáceres mostrando una interacción y experiencia positiva con el producto<br><br>* Debe visualizarse un eslogan que venda la idea principal del producto<br><br></td><td>EP12</td></tr>
+    <tr><td>SWR06</td><td>Call to action contratista</td><td>Como visitante del segmento contratista quiero contar con una sección que me indique como empezar a utilizar el producto</td><td><br><br><strong>Acceptance Criteria</strong><br><br>* Debe visualizarse una clara indicación de cuál es el primer paso a realizar como proyectistas (contacto)<br><br>* Debe visualizarse un formulario con los campos adecuados para iniciar contacto con la organización<br><br></td><td>EP12</td></tr><tr><td>SWR07</td><td>Call to action cliente</td><td>Como visitante del segmento cliente quiero contar con una sección que me indique como empezar a utilizar el producto</td><td><br><br><strong>Acceptance Criteria</strong><br><br>* Debe visualizarse una clara indicación de cuál es el primer paso a realizar como clientes (registro)<br><br>* Debe visualizarse un formulario con los campos adecuados para un registro según el tipo de cliente (Persona natural o jurídica)<br><br></td><td>EP12</td></tr>
+    <tr><td>SWR08</td><td>Overview cliente</td><td>Como visitante del segmento cliente quiero contar con un resumen de las principales funcionalidades del producto para conocer cual es su propósito</td><td><br><br><strong>Acceptance Criteria</strong><br><br>* Deben visualizarse cuales son los principales features del producto<br><br>* Deben visualizarse íconos correspondientes a cada feature<br><br></td><td>EP12</td></tr>
+    <tr><td>SWR09</td><td>Overview contratista</td><td>Como visitante del segmento contratista quiero un resumen de las principales funcionalidades del producto para para saber si el producto se adapta a las necesidades de mi empresa.</td><td><br><br><strong>Acceptance Criteria</strong><br><br>* Deben visualizarse cuales son los principales features del producto<br><br>* Deben visualizarse íconos correspondientes a cada feature<br><br></td><td>EP12</td></tr>
+    <tr><td>SWR10</td><td>Beneficios cliente</td><td>Como visitante de segmento cliente quiero conocer los beneficios de utilizar el producto para mejorar mi experiencia durante la planificación del proyecto</td><td><br><br><strong>Acceptance Criteria</strong><br><br>* Debe visualizarse el beneficio principal del segmento cliente<br><br></td><td>EP12</td></tr>
+    <tr><td>SWR11</td><td>Beneficios contratista</td><td>Como visitante de segmento contratista quiero conocer los beneficios de utilizar el producto para mejorar mi producción y gestión de tiempo en la planificación de expedientes técnicos</td><td><br><br><strong>Acceptance Criteria</strong><br><br>* Debe visualizarse el beneficio principal del segmento contratista<br><br></td><td>EP12</td></tr>
+    <tr><td>SWR12</td><td>Testimonios cliente</td><td>Como visitante del segmento cliente quiero leer testimonios de otros clientes que hayan tenido experiencias con el producto para conocer los beneficios del mismo.</td><td><br><br><strong>Acceptance Criteria</strong><br><br>* Deben visualizarse descripciones e imagenes de clientes que tengan experiencias con el producto<br><br></td><td>EP12</td></tr>
+    <tr><td>SWR13</td><td>Testimonios contratista</td><td>Como visitante del segmento contratista quiero leer testimonios de otros contratistas que hayan utilizado el producto para saber si empresas similares a la mía han obtenido buenos resultados al usarlo.</td><td><br><br><strong>Acceptance Criteria</strong><br><br>* Deben visualizarse descripciones e imagenes de contratistas que hallan utilizado el producto<br><br></td><td>EP12</td></tr>
+    <tr><td>SWR14</td><td>Footer</td><td>Como visitante quiero acceder a información clave desde el pie de página para orientarme fácilmente sin tener que volver al inicio.</td><td><br><br><strong>Acceptance Criteria</strong><br><br>* Deben visualizarse enlaces a las principales secciones del Landing Page<br><br>* Debe visualizarse las redes sociales del proyecto<br><br>* Deben visualizarse los datos de contacto del proyecto<br><br></td><td>EP12</td></tr>
+    <tr><td>SWR15</td><td>Header</td><td>Como visitante quiero contar con un sistema de navegación que me permita explorar fácilmente el contenido de la Landing Page</td><td><br><br><strong>Acceptance Criteria</strong><br><br>* Debe visualizarse el logo del producto, el cual redireccione a la seccion principal al hacerse click<br><br>* Deben visualizarse enlaces a las principales secciones del Landing Page<br><br></td><td>EP12</td></tr>
+    <tr><td>SWR16</td><td>About The Product</td><td>Como visitante quiero conocer más acerca del producto que voy a adquirir para saber con que producto voy a trabajar</td><td><br><br><strong>Acceptance Criteria</strong><br><br>* Debe visualizarse una descripción sobre el producto<br><br>* Debe visualizarse un video demostrativo del producto<br><br></td><td>EP12</td></tr>
+    <tr><td>SWR17</td><td>Términos y condiciones de uso</td><td>Como visitante, quiero conocer los términos y condiciones del servicio para estar informado sobre los lineamientos bajo los cuales opera el servicio</td><td><br><br><strong>Acceptance Criteria:</strong> <br><br> * Los Términos y Condiciones están disponibles a través de un enlace claramente visible en el footer de cualquier página del sitio web.<br> * El documento de Términos y Condiciones incluye referencias explícitas al Código de Ética de la ACM/IEEE y al Código de Ética del Colegio de Ingenieros del Perú (CIP).<br> * El contenido explica cómo se protege la privacidad del usuario, el uso de datos y la responsabilidad del equipo desarrollador. <br>* El documento está redactado en lenguaje claro y accesible para cualquier visitante, sin tecnicismos legales innecesarios.<br> * El documento incluye una fecha de última actualización y datos de contacto para dudas o reclamos.<br><br></td><td>EP12</td></tr>
+    <tr><td>SWR18</td><td>Planes</td><td>Como visitante quiero conocer los planes del producto para evaluar cuál es el que más me conviene.</td><td><br><br><strong>Acceptance Criteria:</strong> <br><br> * Debe visualizarse la descripción del plan.<br> * Debe visualizarse el costo del plan.<br> * Debe visualizarse el nombre del plan.<br> * Debe visualizarse la comparación entre los dos planes.<br><br></td><td>EP12</td></tr>
+    <tr>
+        <td>EP01</td>
+        <td>Gestión de Proyectos</td>
+        <td>Como contratista o miembro del equipo quiero crear, visualizar y actualizar los proyectos de consultoría, junto con sus atributos críticos para mantener un control eficiente y trazable del ciclo de vida de cada encargo técnico</td>
+        <td></td>
+        <td>US001, US002, US003, US004, US005, US006, US007, US008, US009, US010, US011, TS07, TS08, TS09, TS10, TS14, TS57</td>
+    </tr>
+    <tr>
+        <td>EP02</td>
+        <td>Gestión del Equipo del Proyecto</td>
+        <td>Como contratista quiero organizar y mantener actualizado el equipo de trabajo de cada proyecto para garantizar una asignación clara de roles y responsabilidades en cada etapa del desarrollo</td>
+        <td></td>
+        <td>US012, US013, US014, US015, US016, US017, US018, US019, US020, US021, TS11, TS12, TS13, TS58</td>
+    </tr>
+    <tr>
+        <td>EP03</td>
+        <td>Gestión del Cronograma e Hitos</td>
+        <td>Como contratista o miembro del proyecto quiero definir y mantener un cronograma estructurado por etapas con entregables concretos para facilitar la planificación, seguimiento y control del avance del proyecto</td>
+        <td></td>
+        <td>US022, US023, US024, US025, US026, US027, US028, US029, US030, US031, TS15, TS16, TS17, TS18, TS19, TS20, TS35</td>
+    </tr>
+    <tr>
+        <td>EP04</td>
+        <td>Gestión de Tareas</td>
+        <td>Como contratista, coordinador o eespecialistaa quiero crear, asignar, entregar y revisar tareas técnicas dentro del cronograma para garantizar el cumplimiento de los objetivos de cada hito mediante trabajo colaborativo y trazable</td>
+        <td></td>
+        <td>US032, US033, US034, US035, US036, US037, US038, US039, US040, US041, US042, US043, US044, US045, US046, US047, US048, US049, US050, US051, US052, US053, TS27, TS28, TS29, TS30, TS60, TS61</td>
+    </tr>
+    <tr>
+        <td>EP05</td>
+        <td>Gestión de Reuniones</td>
+        <td>Como contratista o convocante quiero coordinar encuentros formales entre miembros del equipo durante el ciclo del proyecto para mejorar la comunicación, planificación y toma de decisiones a lo largo del desarrollo</td>
+        <td></td>
+        <td>US054, US055, US056, US057, US058, US059, US060, US061, US062, US063, US064, US065, US066, US067, US068, TS21, TS22, TS23, TS24, TS25, TS26, TS59</td>
+    </tr>
+    <tr>
+        <td>EP06</td>
+        <td>Gestión del Expediente Técnico</td>
+        <td>Como contratista quiero estructurar, organizar y mantener actualizado el expediente técnico del proyecto para asegurar el orden documental y la trazabilidad de entregables técnicos exigidos por norma</td>
+        <td></td>
+        <td>US069, US070, US071, US072, US073, US074, US075</td>
+    </tr>
+    <tr>
+        <td>EP07</td>
+        <td>Registro de Solicitudes de Cambio</td>
+        <td>Como residente de obra o entidad contratante quiero iniciar procesos formales de cambio en un proyecto cuando se identifican nuevas necesidades o problemas para asegurar que toda solicitud de modificación esté documentada, justificada y gestionada bajo un flujo formal</td>
+        <td></td>
+        <td>US076, US077, US078, US079, US080, US081, TS31, TS32, TS33, TS34</td>
+    </tr>
+    <tr>
+        <td>EP08</td>
+        <td>Evaluación y Decisión del Proceso de Cambio</td>
+        <td>Como contratista quiero aprobar o rechazar formalmente las solicitudes de cambio recibidas para controlar la ejecución de modificaciones mediante decisiones responsables y documentadas</td>
+        <td></td>
+        <td>US082, US083, US084, US085, US086</td>
+    </tr>
+    <tr>
+        <td>EP09</td>
+        <td>Registro y Activación de Organización</td>
+        <td>Como persona con suscripción activa quiero crear una nueva organización consultora asociada a su workspace para poder estructurar y administrar proyectos, equipos y documentos dentro de un entorno corporativo propio</td>
+        <td></td>
+        <td>US087, US088, US089, US090, US091, US092, US093, US094, TS01, TS02, TS03</td>
+    </tr>
+    <tr>
+        <td>EP10</td>
+        <td>Gestión de Invitaciones y Miembros de la Organización</td>
+        <td>Como contratista quiero modificar los datos registrados de la organización o eliminarla cuando ya no sea necesaria para mantener la información actualizada y asegurar la gestión responsable del ciclo de vida de la organización</td>
+        <td></td>
+        <td>US095, US096, US097, US098, US099, TS04, TS05</td>
+    </tr>
+    <tr>
+        <td>EP11</td>
+        <td>Gestión de Invitaciones a la Organización</td>
+        <td>Como contratista quiero invitar a personas externas para que se unan como miembros a su organización para formar y ampliar el equipo de trabajo manteniendo control sobre quién puede ingresar</td>
+        <td></td>
+        <td>US100, US101, US102, US103, US104, US105, US106, TS06, TS07</td>
+    </tr>
+    <tr>
+        <td>EP12</td>
+        <td>Landing Page</td>
+        <td>Como usuario, quiero conocer los beneficios y el funcionamiento del producto para evaluar si se ajusta a mis necesidades antes de utilizarlo.</td>
+        <td></td>
+        <td>SWR01, SWR02, SWR03, SWR04, SWR05, SWR06, SWR07, SWR08, SWR09, SWR10, SWR11, SWR12, SWR13, SWR14, SWR15, SWR16, SWR17, SWR18</td>
+    </tr>
+    <tr>
+        <td>EP13</td>
+        <td>Gestión de notificaciones</td>
+        <td>Como miembro de organizaciónm quiero visualizar y recibir notificaciones relevantes del sistema, para estar informado sobre acciones importantes como entregas, invitaciones, tareas asignadas y eventos del proyecto.</td>
+        <td></td>
+        <td>US107, US108, US109, US110, US111, US112, TS36</td>
+    </tr>
+    <tr>
+        <td>EP14</td>
+        <td>Interación con notificaciones</td>
+        <td>Como miembro de organización quiero gestionar mis notificaciones (marcar como leídas o eliminarlas), para mantener organizada mi bandeja y enfocarme en lo que realmente importa dentro del sistema.</td>
+        <td></td>
+        <td>US113, US114, US115, US116, TS37</td>
+    </tr>
+    <tr>
+        <td>EP15</td>
+        <td>Registro y creación de cuenta</td>
+        <td>Como visitante del sistema, quiero registrarme proporcionando mis datos personales, para poder acceder a las funcionalidades de la plataforma y participar en proyectos de consultoría.</td>
+        <td></td>
+        <td>US117, US118, US119, US120, US121, TS44</td>
+    </tr>
+    <tr>
+        <td>EP16</td>
+        <td>Autentificación y gestión de sesiones</td>
+        <td>Como usuario registrado, quiero iniciar sesión y mantener una sesión activa, para acceder de forma segura y continua a mi entorno de trabajo.</td>
+        <td></td>
+        <td>US122, US123, US124, US125, TS41, TS42, TS43, TS45, TS48, TS50</td>
+    </tr>
+    <tr>
+        <td>EP17</td>
+        <td>Recuperación de acceso</td>
+        <td>Como usuario registrado, quiero recuperar el acceso a mi cuenta cuando olvido mi contraseña, para evitar quedarme sin acceso y continuar trabajando sin interrupciones.</td>
+        <td></td>
+        <td>US126, US127, US128, US129, TS46, TS47, TS49
+</td>
+    </tr>
+    <tr>
+        <td>EP18</td>
+        <td>Gestión del perfil personal</td>
+        <td>Como usuario autenticado, quiero editar mi información personal como nombre, correo o idioma, para mantener mi perfil actualizado y disfrutar una experiencia adaptada a mis preferencias.</td>
+        <td></td>
+        <td>US130, US131, US132, US133, US148, TS38, TS39, TS40</td>
+    </tr>
+    <tr>
+        <td>EP19</td>
+        <td>Gestión de suscripciones y workspaces</td>
+        <td>Como contratista, quiero gestionar mi suscripción y el uso de recursos del workspace, para asegurar que mi organización cuente con la capacidad necesaria para desarrollar sus proyectos de manera eficiente.</td>
+        <td></td>
+        <td>US134, US135, US136, US137, US138, US139, US140, US141, US142, US143, US144, US145, US146, US147, TS51, TS52, TS53, TS54, TS55, TS56, TS57, TS58, TS59, TS60</td>
+    </tr>
+    </tbody>
+</table>
+
 
 <div style="page-break-before: always;"></div>
 
 ## 3.3. Impact Mapping
 
+Para la elaboración del Impact Mapping del producto se tomaron en cuenta los Business Goals planteados anteriormente, así como los User Persona que representan a nuestros segmentos y las User Stories creadas para ProP GMS.
+
+<img src="../img/chapter3/impactMapping.png" alt="Impact Mapping de Prop GMS">
+
+Se concluye, a partir del artefacto analizado, que los tres segmentos identificados son fundamentales para alcanzar los objetivos establecidos por la empresa.
+
+En primer lugar, lograr que el 3% de las empresas consultoras de obras en Lima utilicen ProP GMS será realidad si:
+
+* Edilberto Cáceres es consciente del desempeño temporal en el cumplimiento de los hitos del expediente técnico.
+
+* José Rodríguez participa activamente en las reuniones del proyecto.
+
+* Alfonso Villarán supervisa de forma constante el cumplimiento de sus requisitos durante la elaboración del expediente técnico.
+
+En segundo lugar, la meta de reducir en un 50% el tiempo requerido para replanificar un expediente técnico se podrá alcanzar si:
+
+* Edilberto Cáceres responde con eficacia ante los cambios, siendo notificado oportunamente de cada solicitud del cliente y organizando adecuadamente el cronograma y los hitos del proyecto.
+
+* José Rodríguez recibe notificaciones a tiempo sobre nuevas tareas asignadas y reuniones creadas.
+
+* Alfonso Villarán solicita modificaciones de manera oportuna durante el desarrollo del expediente técnico.
+
 <div style="page-break-before: always;"></div>
 
 ## 3.4. Product Backlog
+
+La priorización de las SWR, US y TS se realizó de manera grupal, basándonos en los conocimientos técnicos y de dominio que cada miembro del equipo aportó. Para facilitar este proceso, utilizamos la herramienta YouTrack, que no solo nos permitió organizar y visualizar nuestras tareas de forma clara y estructurada, sino que también nos ayudó enormemente a coordinar esfuerzos, establecer prioridades de manera colaborativa y mantener una trazabilidad efectiva de todos los elementos durante el proyecto.
+
+<img src="../img/chapter3/youTrack.png" alt="Imagen del YouTrack de ProP GMS">
+
+<a href="https://galaxiawonder.youtrack.cloud/dashboard?id=213-2" target="_blank">Ver tablero en YouTrack</a>
+
+<b>Credenciales:</b>
+<ul>
+  <li>
+    Correo: 
+    <span style="cursor: default; color: inherit; text-decoration: none;">
+      invitadogw&#64;galaxiawonder.com
+    </span>
+  </li>
+  <li>Contraseña: GA14x4W0nd3r</li>
+</ul>
+
+<div style="page-break-before: always;"></div>
+
+<table style="width: 100%;">
+    <thead>
+        <tr>
+            <th style="font-weight: bold; width: 12%;"># Orden</th>
+            <th style="font-weight: bold; width: 12%;">User Story ID</th>
+            <th style="font-weight: bold; width: 23%;">Título</th>
+            <th style="font-weight: bold; width: 43%;">Descripción</th>
+            <th style="font-weight: bold; width: 10%;">Story Points</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>SWR01</td>
+            <td>Cambiar segmento objetivo</td>
+            <td>Como visitante quiero contar con la opción de especificar qué tipo de visitante soy para obtener información relevante a mis propios intereses en el Landing Page</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>2</td>
+            <td>SWR06</td>
+            <td>Call to action Contratista</td>
+            <td>Como visitante del segmento contratista quiero contar con una sección que me indique como empezar a utilizar el producto</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>3</td>
+            <td>SWR07</td>
+            <td>Call to action Cliente</td>
+            <td>Como visitante del segmento cliente quiero contar con una sección que me indique como empezar a utilizar el producto</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>4</td>
+            <td>SWR05</td>
+            <td>Hero Section Contratista</td>
+            <td>Como visitante del segmento contratista quiero visualizar un hero section para conocer rápidamente el valor principal del producto</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>5</td>
+            <td>SWR04</td>
+            <td>Hero Section Cliente</td>
+            <td>Como visitante del segmento cliente quiero visualizar un hero section para conocer rápidamente el valor principal del producto</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>6</td>
+            <td>SWR09</td>
+            <td>Overview contratista</td>
+            <td>Como visitante del segmento contratista quiero un resumen de las principales funcionalidades del producto para para saber si el producto se adapta a las necesidades de mi empresa</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>7</td>
+            <td>SWR08</td>
+            <td>Overview cliente</td>
+            <td>Como visitante del segmento cliente quiero contar con un resumen de las principales funcionalidades del producto para conocer cual es su propósito</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>8</td>
+            <td>SWR11</td>
+            <td>Beneficios contratista</td>
+            <td>Como visitante de segmento contratista quiero conocer los beneficios de utilizar el producto para mejorar mi producción y gestión de tiempo en la planificación de expedientes técnicos</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>9</td>
+            <td>SWR10</td>
+            <td>Beneficios cliente</td>
+            <td>Como visitante de segmento cliente quiero conocer los beneficios de utilizar el producto para mejorar mi experiencia durante la planificación del proyecto</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>10</td>
+            <td>SWR16</td>
+            <td>About The Product</td>
+            <td>Como visitante quiero conocer más acerca del producto que voy a adquirir para saber con que producto voy a trabajar</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>11</td>
+            <td>SWR03</td>
+            <td>About Us</td>
+            <td>Como visitante quiero conocer más acerca del equipo detrás del producto para evaluar qué tan confiable es su origen</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>12</td>
+            <td>SWR13</td>
+            <td>Testimonios contratista</td>
+            <td>Como visitante del segmento contratista quiero leer testimonios de otros contratistas que hayan utilizado el producto para saber si empresas similares a la mía han obtenido buenos resultados al usarlo</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>13</td>
+            <td>SWR12</td>
+            <td>Testimonios cliente</td>
+            <td>Como visitante del segmento cliente quiero leer testimonios de otros clientes que hayan tenido experiencias con el producto para conocer los beneficios del mismo</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>14</td>
+            <td>SWR02</td>
+            <td>Internacionalización</td>
+            <td>Como visitante quiero contar con internacionalización para adaptar el contenido de la Landing Page al idioma que entiendo mejor</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>15</td>
+            <td>SWR14</td>
+            <td>Footer</td>
+            <td>Como visitante quiero acceder a información clave desde el pie de página para orientarme fácilmente sin tener que volver al inicio</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>16</td>
+            <td>SWR17</td>
+            <td>Términos y condiciones de uso</td>
+            <td>Como visitante quiero conocer los términos y condiciones del servicio para estar informado sobre los lineamientos bajos los cuales opera el servicio</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>17</td>
+            <td>SWR15</td>
+            <td>Header</td>
+            <td>Como visitante quiero contar con un sistema de navegación que me permita explorar fácilmente el contenido de la Landing Page</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>18</td>
+            <td>US01</td>
+            <td>Crear organización</td>
+            <td>Como contratista, quiero crear una organización para centralizar la gestión de mis proyectos y empleados dentro de una misma entidad administrativa</td>
+            <td>2</td>
+        </tr>        <tr>
+            <td>19</td>
+            <td>US09</td>
+            <td>Añadir razón social</td>
+            <td>Como contratista, quiero añadir la razón social de una organización que dirijo para identificar mi empresa como legal, confiable y constituida frente a mis clientes</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>20</td>
+            <td>US11</td>
+            <td>Añadir RUC</td>
+            <td>Como contratista, quiero añadir el RUC de una organización que dirijo para validar su registro tributario y facilitar la identificación formal de mi empresa</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>21</td>
+            <td>US06</td>
+            <td>Añadir nombre comercial</td>
+            <td>Como contratista, quiero añadir un nombre comercial a una organización que dirijo para que los clientes identifiquen fácilmente a mi empresa</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>22</td>
+            <td>US02</td>
+            <td>Listar organizaciones</td>
+            <td>Como miembro de organización, quiero contar con un listado de todas las organizaciones que dirijo o a las que pertenezco, para acceder fácilmente a los proyectos correspondientes</td>
+            <td>2</td>
+        </tr>        <tr>
+            <td>23</td>
+            <td>US18</td>
+            <td>Añadir miembro</td>
+            <td>Como contratista, quiero añadir nuevos miembros a mi organización para asignarles roles específicos y permitirles participar en la gestión de los proyectos</td>
+            <td>3</td>
+        </tr>        <tr>
+            <td>24</td>
+            <td>US22</td>
+            <td>Añadir rol de nuevo miembro de organización</td>
+            <td>Como contratista, quiero asignar un rol a un nuevo miembro de mi organización para definir sus responsabilidades dentro del equipo al momento de incorporarlo</td>
+            <td>2</td>
+        </tr>        <tr>
+            <td>25</td>
+            <td>US21</td>
+            <td>Añadir correo de nuevo miembro</td>
+            <td>Como contratista, quiero añadir el correo del nuevo miembro de mi organización para poder identificarlo dentro del sistema inequívocamente</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>26</td>
+            <td>US19</td>
+            <td>Editar miembro de organización</td>
+            <td>Como contratista, quiero editar el rol de un miembro dentro de mi organización para ajustar sus permisos según sus responsabilidades actuales</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>27</td>
+            <td>US23</td>
+            <td>Editar rol de miembro de organización</td>
+            <td>Como contratista, quiero editar el rol asignado a un miembro de mi organización para mantener actualizada su responsabilidad dentro del equipo</td>
+            <td>2</td>
+        </tr>        <tr>
+            <td>28</td>
+            <td>US20</td>
+            <td>Eliminar miembro</td>
+            <td>Como contratista, quiero eliminar un miembro de mi organización para restringir su acceso y participación en los proyectos cuando ya no corresponde</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>29</td>
+            <td>US24</td>
+            <td>Crear proyecto</td>
+            <td>Como contratista, quiero crear un proyecto vinculado a una organización para iniciar el proceso de elaboración del expediente técnico y gestionar todos los aspectos operativos desde su etapa inicial.</td>
+            <td>3</td>
+        </tr>        <tr>
+            <td>30</td>
+            <td>US86</td>
+            <td>Añadir cliente</td>
+            <td>Como contratista, quiero añadir un cliente al proyecto para registrar a la persona o empresa responsable del encargo y facilitar la comunicación formal durante su ejecución</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>31</td>
+            <td>US03</td>
+            <td>Añadir contrato del proyecto</td>
+            <td>Como contratista, quiero añadir el contrato asociado a un proyecto para registrar formalmente su inicio y mantener la documentación clave accesible para su gestión</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>32</td>
+            <td>US31</td>
+            <td>Añadir miembro de equipo</td>
+            <td>Como contratista, quiero añadir miembros de mi organización a un proyecto para conformar el equipo responsable de su ejecución y permitirles colaborar activamente</td>
+            <td>2</td>
+        </tr>        <tr>
+            <td>33</td>
+            <td>US35</td>
+            <td>Cambiar estado de proyecto</td>
+            <td>Como contratista, quiero cambiar el estado de un proyecto para reflejar su progreso y gestión operativa a lo largo del tiempo</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>34</td>
+            <td>US29</td>
+            <td>Añadir nombre</td>
+            <td>Como contratista, quiero añadir un nombre al proyecto que estoy creando para identificarlo fácilmente dentro de la organización y en la planificación general</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>35</td>
+            <td>US36</td>
+            <td>Crear cronograma</td>
+            <td>Como contratista, quiero crear un cronograma para un proyecto que gestiono, con el fin de planificar y visualizar los hitos y actividades clave a lo largo del tiempo</td>
+            <td>3</td>
+        </tr>        <tr>
+            <td>36</td>
+            <td>US39</td>
+            <td>Añadir hito</td>
+            <td>Como contratista, quiero añadir un hito al cronograma de un proyecto que gestiono para representar eventos clave dentro del desarrollo del proyecto</td>
+            <td>2</td>
+        </tr>        <tr>
+            <td>37</td>
+            <td>US44</td>
+            <td>Añadir duración de hito</td>
+            <td>Como contratista, quiero añadir una duración a un hito del cronograma para representar el tiempo estimado que tomará completar esa etapa o actividad clave dentro del proyecto</td>
+            <td>2</td>
+        </tr>        <tr>
+            <td>38</td>
+            <td>US46</td>
+            <td>Finalizar hito</td>
+            <td>Como contratista, quiero marcar un hito como finalizado para registrar su cumplimiento dentro del cronograma del proyecto y reflejar el avance real</td>
+            <td>2</td>
+        </tr>        <tr>
+            <td>39</td>
+            <td>US47</td>
+            <td>Añadir reunión</td>
+            <td>Como contratista, quiero añadir una reunión vinculada a un proyecto para coordinar temas relevantes con los miembros del equipo y registrar su programación dentro del sistema</td>
+            <td>2</td>
+        </tr>        <tr>
+            <td>40</td>
+            <td>US59</td>
+            <td>Añadir fecha de reunión</td>
+            <td>Como contratista, quiero añadir la fecha de una reunión para que los asistentes conozcan el día programado para el encuentro</td>
+            <td>2</td>
+        </tr>        <tr>
+            <td>41</td>
+            <td>US54</td>
+            <td>Añadir asistentes de reunión</td>
+            <td>Como contratista, quiero añadir asistentes a una reunión registrada, para que todos los participantes clave estén informados y preparados para la reunión</td>
+            <td>2</td>
+        </tr>        <tr>
+            <td>42</td>
+            <td>US57</td>
+            <td>Añadir lugar de reunión presencial</td>
+            <td>Como contratista, quiero añadir el lugar donde se llevará a cabo una reunión presencial para asegurar que todos los asistentes sepan dónde se realizará la reunión</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>43</td>
+            <td>US58</td>
+            <td>Añadir enlace de reunión virtual</td>
+            <td>Como contratista, quiero añadir un enlace a una reunión virtual para que los asistentes puedan acceder fácilmente a la reunión desde su dispositivo</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>44</td>
+            <td>US52</td>
+            <td>Añadir detalles generales de reunión</td>
+            <td>Como contratista, quiero añadir detalles generales a una reunión registrada, como los temas a tratar, los objetivos de la reunión, y cualquier otra información relevante, para que todos los miembros involucrados estén bien preparados</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>45</td>
+            <td>US61</td>
+            <td>Añadir tarea</td>
+            <td>Como contratista, quiero añadir una tarea a un proyecto para organizar las actividades clave que deben completarse durante la ejecución del proyecto</td>
+            <td>2</td>
+        </tr>        <tr>
+            <td>46</td>
+            <td>US68</td>
+            <td>Añadir responsable de tarea</td>
+            <td>Como contratista, quiero asignar un responsable a una tarea para asegurar que la persona adecuada esté encargada de su ejecución</td>
+            <td>2</td>
+        </tr>        <tr>
+            <td>47</td>
+            <td>US70</td>
+            <td>Añadir fecha de tarea</td>
+            <td>Como contratista, quiero añadir una fecha de tarea para asignar un plazo claro y organizar las actividades del proyecto de acuerdo con la planificación</td>
+            <td>2</td>
+        </tr>        <tr>
+            <td>48</td>
+            <td>US66</td>
+            <td>Añadir detalles generales de tarea</td>
+            <td>Como contratista, quiero añadir detalles generales a una tarea registrada, como la descripción, prioridad y notas adicionales, para proporcionar más contexto sobre lo que debe hacerse</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>49</td>
+            <td>US72</td>
+            <td>Subir entregable</td>
+            <td>Como especialista, quiero entregar la tarea asignada a mi persona para continuar con mi flujo de trabajo</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>50</td>
+            <td>US73</td>
+            <td>Supervisar entregable</td>
+            <td>Como contratista, quiero supervisar los entregables subidos para revisar su calidad y asegurarse de que cumplan con los requisitos establecidos para el proyecto</td>
+            <td>2</td>
+        </tr>        <tr>
+            <td>51</td>
+            <td>US62</td>
+            <td>Listar tareas</td>
+            <td>Como miembro de proyecto, quiero visualizar todas las tareas asignadas a un proyecto para conocer las actividades pendientes, su estado y el progreso general</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>52</td>
+            <td>US63</td>
+            <td>Obtener detalles de tarea</td>
+            <td>Como miembro de proyecto, quiero acceder a los detalles completos de una tarea para conocer su descripción, estado, fechas y responsable asignado</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>53</td>
+            <td>US49</td>
+            <td>Obtener detalles de reunión</td>
+            <td>Como miembro de proyecto, quiero visualizar los detalles completos de una reunión registrada, para conocer la información relevante sobre su fecha, hora, lugar y temas a tratar</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>54</td>
+            <td>US74</td>
+            <td>Crear solicitud de cambio</td>
+            <td>Como cliente, quiero crear una solicitud de cambio durante el proceso de elaboración del expediente técnico de un proyecto para modificar detalles o añadir nuevos requerimientos que surjan durante el desarrollo</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>55</td>
+            <td>US75</td>
+            <td>Listar solicitudes de cambio de proyecto</td>
+            <td>Como contratista, quiero visualizar todas las solicitudes de cambio asociadas a un proyecto para poder gestionar los cambios solicitados por los clientes de manera eficiente</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>56</td>
+            <td>US76</td>
+            <td>Obtener detalles de solicitud de cambio</td>
+            <td>Como contratista, quiero visualizar los detalles completos de una solicitud de cambio para comprender claramente la modificación solicitada y los motivos detrás de ella</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>57</td>
+            <td>US78</td>
+            <td>Agregar detalles de incompatibilidad de planos</td>
+            <td>Como residente de obra, quiero agregar detalles sobre las incompatibilidades encontradas en los planos para que el equipo de trabajo pueda tomar las acciones necesarias y corregir los problemas detectados en el proyecto</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>58</td>
+            <td>US79</td>
+            <td>Agregar detalles de replanteo de obra</td>
+            <td>Como residente de obra, quiero agregar los detalles del replanteo de obra realizado para que el equipo de trabajo tenga una referencia clara de las acciones ejecutadas en la obra</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>59</td>
+            <td>US77</td>
+            <td>Agregar detalles de consulta técnica</td>
+            <td>Como residente de obra, quiero agregar detalles a una consulta técnica para aclarar dudas o solicitar información adicional relacionada con el proyecto, con el objetivo de asegurar que todos los miembros del equipo tengan la información correcta</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>60</td>
+            <td>US80</td>
+            <td>Aceptar solicitud de cambio</td>
+            <td>Como contratista, quiero aceptar una solicitud de cambio realizada por el cliente para reflejar los cambios en el proyecto y ajustarme a las nuevas indicaciones o requerimientos</td>
+            <td>3</td>
+        </tr>        <tr>
+            <td>61</td>
+            <td>US81</td>
+            <td>Denegar solicitud de cambio</td>
+            <td>Como contratista, quiero denegar una solicitud de cambio realizada por el cliente para no proceder con modificaciones que no se consideren viables o necesarias para el proyecto</td>
+            <td>2</td>
+        </tr>        <tr>
+            <td>62</td>
+            <td>US38</td>
+            <td>Editar cronograma</td>
+            <td>Como contratista, quiero editar el cronograma de un proyecto que gestiono para ajustar fechas, actividades o hitos según los cambios en la planificación</td>
+            <td>2</td>
+        </tr>        <tr>
+            <td>63</td>
+            <td>US42</td>
+            <td>Editar hito</td>
+            <td>Como contratista, quiero editar un hito del cronograma para ajustar su nombre, fecha o descripción según los cambios en la planificación del proyecto</td>
+            <td>2</td>
+        </tr>        <tr>
+            <td>64</td>
+            <td>US45</td>
+            <td>Editar duración de hito</td>
+            <td>Como contratista, quiero editar la duración de un hito del cronograma para ajustarla a cambios en la planificación o correcciones en la estimación inicial</td>
+            <td>2</td>
+        </tr>        <tr>
+            <td>65</td>
+            <td>US50</td>
+            <td>Editar reunión</td>
+            <td>Como contratista, quiero editar una reunión ya registrada para ajustar detalles como la fecha, hora, lugar o temas a tratar, en caso de que haya cambios en la planificación</td>
+            <td>2</td>
+        </tr>        <tr>
+            <td>66</td>
+            <td>US55</td>
+            <td>Editar asistentes de reunión</td>
+            <td>Como contratista, quiero editar la lista de asistentes de una reunión registrada para actualizar la participación en caso de cambios o ausencias</td>
+            <td>2</td>
+        </tr>        <tr>
+            <td>67</td>
+            <td>US60</td>
+            <td>Editar fecha de reunión</td>
+            <td>Como contratista, quiero editar la fecha de una reunión registrada para ajustarla en caso de cambios en la planificación o disponibilidad de los asistentes</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>68</td>
+            <td>US53</td>
+            <td>Editar detalles generales de reunión</td>
+            <td>Como contratista, quiero editar los detalles generales de una reunión registrada, como los temas a tratar, los objetivos y cualquier otra información relevante, para actualizar la planificación de la reunión según las necesidades del proyecto</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>69</td>
+            <td>US64</td>
+            <td>Editar tarea</td>
+            <td>Como contratista, quiero editar una tarea registrada en el proyecto para ajustar su información, como la fecha de inicio, fecha de finalización, responsable asignado o el estado de la tarea</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>70</td>
+            <td>US69</td>
+            <td>Editar responsable de tarea</td>
+            <td>Como contratista, quiero editar el responsable de una tarea registrada, para ajustar la asignación de responsabilidades según los cambios en el equipo o en la planificación del proyecto</td>
+            <td>2</td>
+        </tr>        <tr>
+            <td>71</td>
+            <td>US71</td>
+            <td>Editar fecha de tarea</td>
+            <td>Como contratista, quiero editar la fecha de una tarea registrada para ajustar los plazos según cambios en la planificación del proyecto</td>
+            <td>2</td>
+        </tr>        <tr>
+            <td>72</td>
+            <td>US67</td>
+            <td>Editar detalles generales de tarea</td>
+            <td>Como contratista, quiero editar los detalles generales de una tarea registrada, como la descripción, prioridad y notas adicionales, para mantener la información actualizada según el progreso del proyecto</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>73</td>
+            <td>US43</td>
+            <td>Eliminar hito</td>
+            <td>Como contratista, quiero eliminar un hito del cronograma de un proyecto para remover eventos que ya no son relevantes o que fueron agregados por error</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>74</td>
+            <td>US25</td>
+            <td>Listar proyectos</td>
+            <td>Como miembro de organización, quiero visualizar un listado de los proyectos asociados a mi organización para acceder rápidamente a su información y gestionarlos según mi rol</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>75</td>
+            <td>US26</td>
+            <td>Obtener detalles de proyecto</td>
+            <td>Como miembro de organización, quiero acceder a los detalles de un proyecto específico para revisar su información general y comprender su estado actual</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>76</td>
+            <td>US37</td>
+            <td>Obtener detalles de cronograma</td>
+            <td>Como miembro de proyecto, quiero visualizar los detalles del cronograma para conocer las fechas clave, actividades planificadas y el progreso del proyecto</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>77</td>
+            <td>US40</td>
+            <td>Listar hitos de proyecto</td>
+            <td>Como miembro de proyecto, quiero visualizar todos los hitos registrados en el cronograma para conocer los eventos clave del proyecto y su planificación temporal</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>78</td>
+            <td>US41</td>
+            <td>Obtener detalles de hito</td>
+            <td>Como miembro de proyecto, quiero acceder a los detalles de un hito del cronograma para entender su propósito, fecha prevista y estado dentro del desarrollo del proyecto</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>79</td>
+            <td>US32</td>
+            <td>Listar miembros de equipo</td>
+            <td>Como miembro de proyecto, quiero visualizar la lista de personas que forman parte del equipo para conocer quiénes están asignados y cuáles son sus roles dentro del proyecto</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>80</td>
+            <td>US48</td>
+            <td>Listar reuniones</td>
+            <td>Como miembro de proyecto, quiero visualizar el listado de reuniones registradas en un proyecto para conocer las fechas, temas y modalidades de coordinación del equipo</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>81</td>
+            <td>US33</td>
+            <td>Editar miembro de equipo</td>
+            <td>Como contratista, quiero modificar los roles de los miembros de un equipo dentro de un proyecto para asegurar que sus responsabilidades estén alineadas a sus funciones reales</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>82</td>
+            <td>US34</td>
+            <td>Eliminar miembro de equipo</td>
+            <td>Como contratista, quiero eliminar miembros del equipo de un proyecto para restringir su acceso y participación cuando ya no corresponda su intervención</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>83</td>
+            <td>US04</td>
+            <td>Editar organización</td>
+            <td>Como contratista, quiero poder editar detalles de la organización que dirijo para mantener actualizada su información relevante</td>
+            <td>2</td>
+        </tr>        <tr>
+            <td>84</td>
+            <td>US27</td>
+            <td>Editar proyecto</td>
+            <td>Como contratista, quiero editar la información de un proyecto que he creado para mantener sus datos actualizados y corregir posibles errores o cambios en la planificación</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>85</td>
+            <td>US30</td>
+            <td>Editar nombre</td>
+            <td>Como contratista, quiero editar el nombre de un proyecto que he creado para corregir errores o actualizar su identificación según la etapa o alcance del mismo</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>86</td>
+            <td>US28</td>
+            <td>Eliminar proyecto</td>
+            <td>Como contratista, quiero eliminar un proyecto que ya no se llevará a cabo para mantener organizada la información de la organización y evitar confusiones con proyectos inactivos</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>87</td>
+            <td>US56</td>
+            <td>Eliminar asistentes de reunión</td>
+            <td>Como contratista, quiero eliminar asistentes de una reunión registrada para mantener actualizada la lista de participantes según la disponibilidad o cambios de última hora</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>88</td>
+            <td>US51</td>
+            <td>Eliminar reunión</td>
+            <td>Como contratista, quiero eliminar una reunión registrada en el proyecto para quitarla del cronograma cuando ya no sea necesaria o relevante</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>89</td>
+            <td>US65</td>
+            <td>Eliminar tarea</td>
+            <td>Como contratista, quiero eliminar una tarea registrada en un proyecto para eliminar actividades que ya no son necesarias o que fueron creadas por error</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>90</td>
+            <td>US10</td>
+            <td>Editar razón social</td>
+            <td>Como contratista, quiero cambiar la razón social de una organización que dirijo para mantener actualizada su identificación frente a mis clientes</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>91</td>
+            <td>US07</td>
+            <td>Editar nombre comercial</td>
+            <td>Como contratista, quiero editar el nombre comercial de una organización que dirijo para mantener actualizado el nombre con el que nos presentamos a los clientes</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>92</td>
+            <td>US12</td>
+            <td>Añadir logo</td>
+            <td>Como contratista, quiero añadir el logo de la organización que dirijo para que sea más fácilmente identificable por mis clientes</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>93</td>
+            <td>US15</td>
+            <td>Añadir descripción</td>
+            <td>Como contratista, quiero añadir una descripción a la organización que dirijo para comunicar de forma clara la naturaleza y propósito de mi empresa a otros miembros y colaboradores</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>94</td>
+            <td>US13</td>
+            <td>Editar logo</td>
+            <td>Como contratista, quiero editar el logo de la organización que dirijo para mantener actualizada su imagen visual frente a mis clientes y asegurar una representación profesional de la empresa</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>95</td>
+            <td>US16</td>
+            <td>Editar descripción</td>
+            <td>Como contratista, quiero editar la descripción de una organización que dirijo para mantener actualizada la información pública y contextual de mi empresa</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>96</td>
+            <td>US91</td>
+            <td>Proyectar desempeño de proyecto</td>
+            <td>Como contratista, quiero proyectar el desempeño del proyecto en cuanto a tareas completadas, para poder ver el avance general del proyecto y cómo se están cumpliendo los plazos establecidos</td>
+            <td>2</td>
+        </tr>        <tr>
+            <td>97</td>
+            <td>US87</td>
+            <td>Mostrar alertas</td>
+            <td>Como contratista, quiero ver alertas en el dashboard que me notifiquen cuando los hitos del proyecto estén próximos a terminar, para poder tomar acciones a tiempo y asegurar que se cumplan los plazos establecidos</td>
+            <td>2</td>
+        </tr>        <tr>
+            <td>98</td>
+            <td>US92</td>
+            <td>Notificación por nueva organización</td>
+            <td>Como miembro de organización, quiero recibir una notificación cuando me inviten a una nueva organización, para que pueda unirme y comenzar a trabajar en los proyectos asignados</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>99</td>
+            <td>US99</td>
+            <td>Notificación por cambio de estado de proyecto</td>
+            <td>Como miembro de organización, quiero recibir una notificación cuando el estado de un proyecto cambie, para estar al tanto de las actualizaciones y de cómo avanza el proyecto</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>100</td>
+            <td>US94</td>
+            <td>Notificación por solicitud de cambio</td>
+            <td>Como miembro de organización, quiero recibir una notificación cuando se cree una solicitud de cambio en un proyecto, para estar al tanto de las modificaciones solicitadas y poder revisar los cambios propuestos</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>101</td>
+            <td>US93</td>
+            <td>Notificación por nuevo proyecto</td>
+            <td>Como miembro de organización, quiero recibir una notificación cuando se cree un nuevo proyecto en la organización, para estar al tanto de las nuevas iniciativas y participar en ellas</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>102</td>
+            <td>US98</td>
+            <td>Notificación por tarea completada</td>
+            <td>Como miembro de organización, quiero recibir una notificación cuando se marque una tarea como completada, para estar al tanto del progreso de las actividades del proyecto y saber qué tareas ya se han finalizado</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>103</td>
+            <td>US97</td>
+            <td>Notificación por hito completado</td>
+            <td>Como miembro de organización, quiero recibir una notificación cuando un hito del proyecto se complete, para poder conocer los avances y los logros alcanzados en el proyecto</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>104</td>
+            <td>US96</td>
+            <td>Notificación por nueva reunión</td>
+            <td>Como miembro de organización, quiero recibir una notificación cuando se programe una nueva reunión en el proyecto, para estar al tanto de las actividades y participar en ellas</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>105</td>
+            <td>US95</td>
+            <td>Notificación por nueva tarea</td>
+            <td>Como especialista, quiero recibir una notificación cuando se cree una nueva tarea vinculada a mi, para que pueda estar al tanto de las actividades asignadas y comenzar a trabajar en ellas</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>106</td>
+            <td>US100</td>
+            <td>Notificación por nueva factura</td>
+            <td>Como contratista, quiero recibir una notificación cuando se genere una nueva factura de mi suscripción, para estar al tanto de los pagos de mi cuenta</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>107</td>
+            <td>US101</td>
+            <td>Obtener detalles de perfil</td>
+            <td>Como usuario del sistema, quiero poder obtener los detalles de mi perfil, para asegurarme de que mi información esté correcta y actualizada</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>108</td>
+            <td>US102</td>
+            <td>Editar datos personales</td>
+            <td>Como usuario del sistema, quiero poder editar mis datos personales, para mantener mi información actualizada y correcta en la plataforma</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>109</td>
+            <td>US103</td>
+            <td>Agregar datos de contacto</td>
+            <td>Como usuario del sistema, quiero poder agregar mis datos de contacto, para que otros usuarios o administradores puedan comunicarse conmigo si es necesario</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>110</td>
+            <td>US106</td>
+            <td>Actualizar información profesional</td>
+            <td>Como usuario del sistema, quiero poder actualizar mi información profesional, para que mi perfil refleje mi experiencia, formación y habilidades actuales</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>111</td>
+            <td>US104</td>
+            <td>Editar datos de contacto</td>
+            <td>Como usuario del sistema, quiero poder editar mis datos de contacto, para mantener mi información actualizada en caso de que cambie mi número de teléfono o dirección</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>112</td>
+            <td>US105</td>
+            <td>Eliminar datos de contacto</td>
+            <td>Como usuario del sistema, quiero poder eliminar mis datos de contacto, para mantener mi privacidad cuando ya no desee que otros puedan comunicarse conmigo a través de esos medios</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>113</td>
+            <td>US08</td>
+            <td>Eliminar nombre comercial</td>
+            <td>Como contratista quiero eliminar el nombre comercial de una organización que dirijo para presentar mi empresa ante el público mediante el nombre de razón social</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>114</td>
+            <td>US05</td>
+            <td>Eliminar organización</td>
+            <td>Como contratista, quiero eliminar una organización que dirijo para desvincular mi organización del producto</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>115</td>
+            <td>US14</td>
+            <td>Eliminar logo</td>
+            <td>Como contratista, quiero eliminar el logo de una organización que dirijo para dejar de mostrar una imagen que ya no representa adecuadamente a mi empresa</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>116</td>
+            <td>US17</td>
+            <td>Eliminar descripción</td>
+            <td>Como contratista, quiero eliminar la descripción de una organización que dirijo para que no se muestre información contextual innecesaria sobre mi empresa</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>117</td>
+            <td>US82</td>
+            <td>Login</td>
+            <td>Como usuario de la plataforma, quiero poder iniciar sesión con mis credenciales, para acceder a mi cuenta y utilizar las funcionalidades disponibles</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>118</td>
+            <td>US83</td>
+            <td>Registro</td>
+            <td>Como nuevo usuario, quiero poder registrarme en la plataforma con mis datos personales, para crear una cuenta y acceder a los servicios ofrecidos</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>119</td>
+            <td>US84</td>
+            <td>Recuperar contraseña</td>
+            <td>Como usuario quiero iniciar un proceso de recuperación de contraseña en caso la haya olvidado para volver a obtener acceso a mi cuenta</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>120</td>
+            <td>US85</td>
+            <td>Cambiar contraseña</td>
+            <td>Como usuario quiero cambiar mi contraseña para mantener segura y accesible mi cuenta</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>121</td>
+            <td>US112</td>
+            <td>Selección de plan de suscripción</td>
+            <td>Como usuario suscriptor, quiero poder ver el estado actual de mi suscripción, para saber si está activa, pendiente o suspendida, y poder gestionar mi suscripción de manera efectiva</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>122</td>
+            <td>US108</td>
+            <td>Generación de factura por suscripción</td>
+            <td>Como usuario suscriptor, quiero que se genere una factura prorrateada al momento de activar o cambiar mi plan de suscripción, para que el cobro refleje solo el tiempo efectivamente utilizado</td>
+            <td>2</td>
+        </tr>        <tr>
+            <td>123</td>
+            <td>US114</td>
+            <td>Pagar factura</td>
+            <td>Como usuario, quiero poder pagar mis facturas mediante una pasarela de pagos integrada, para que mi suscripción se active y/o continúe sin problemas.</td>
+            <td>3</td>
+        </tr>        <tr>
+            <td>124</td>
+            <td>US109</td>
+            <td>Visualización del historial de facturas</td>
+            <td>Como usuario suscriptor, quiero poder visualizar el historial de mis facturas anteriores, para tener control y seguimiento sobre los pagos realizados y cargos aplicados</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>125</td>
+            <td>US110</td>
+            <td>Visualización del estado de una factura</td>
+            <td>Como usuario suscriptor, quiero poder ver el estado actual de una factura específica, para saber si está pagada, pendiente o vencida</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>126</td>
+            <td>US111</td>
+            <td>Visualización del estado de suscripción</td>
+            <td>Como usuario suscriptor, quiero poder ver el estado actual de mi suscripción, para saber si está activa, pendiente o suspendida, y poder gestionar mi suscripción de manera efectiva</td>
+            <td>1</td>
+        </tr>        <tr>
+            <td>127</td>
+            <td>US113</td>
+            <td>Actualizar plan de suscripción</td>
+            <td>Como usuario suscriptor, quiero poder actualizar mi plan de suscripción a uno superior o inferior, para que mi suscripción se ajuste a mis necesidades actuales</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>128</td>
+            <td>TS01</td>
+            <td>Crear organización</td>
+            <td>Como Developer, quiero implementar un endpoint que permita registrar una nueva organización para que los contratistas puedan iniciar la gestión de sus proyectos dentro del sistema</td>
+            <td>3</td>
+        </tr>
+        </tr>        <tr>
+            <td>129</td>
+            <td>TS02</td>
+            <td>Listar organizaciones</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener todas las organizaciones a las que pertenece un usuario para que pueda visualizar y gestionar aquellas donde tiene participación activa</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>130</td>
+            <td>TS03</td>
+            <td>Detalles de una organización</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener los detalles de una organización específica para que los usuarios puedan visualizar su información completa y actualizada</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>131</td>
+            <td>TS04</td>
+            <td>Actualizar información de organización</td>
+            <td>Como Developer, quiero implementar un endpoint que permita actualizar los datos de una organización para que los contratistas puedan mantener su información empresarial al día, incluyendo la posibilidad de eliminar ciertos campos</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>132</td>
+            <td>TS05</td>
+            <td>Eliminar organización</td>
+            <td>Como Developer, quiero implementar un endpoint que permita iniciar la eliminación de una organización, cambiando su estado a pendiente de eliminación para permitir su recuperación antes de eliminarla definitivamente</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>133</td>
+            <td>TS08</td>
+            <td>Añadir proyecto a organización</td>
+            <td>Como Developer, quiero implementar un endpoint que permita registrar un nuevo proyecto vinculado a una organización existente, para que los contratistas puedan iniciar la gestión de sus proyectos dentro del sistema</td>
+            <td>2</td>
+        </tr>
+        </tr>        <tr>
+            <td>134</td>
+            <td>TS09</td>
+            <td>Listar proyectos de organización</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener todos los proyectos asociados a una organización, para que los usuarios autorizados puedan visualizarlos y gestionarlos</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>135</td>
+            <td>TS10</td>
+            <td>Detalles de un proyecto</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener los detalles de un proyecto específico para que los usuarios autorizados puedan visualizar su información completa y actualizada</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>136</td>
+            <td>TS57</td>
+            <td>Eliminar proyecto (soft delete)</td>
+            <td>Como Developer, quiero implementar un endpoint que permita marcar un proyecto como eliminado (soft delete), para preservar sus datos temporalmente y permitir su recuperación antes de ser eliminado definitivamente</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>137</td>
+            <td>TS14</td>
+            <td>Actualizar información de proyecto </td>
+            <td>Como Developer, quiero implementar un endpoint que permita actualizar el nombre y el estado de un proyecto, para reflejar cambios en su identidad o etapa de ejecución</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>138</td>
+            <td>TS06</td>
+            <td>Añadir miembro a organización</td>
+            <td>Como Developer, quiero implementar un endpoint que permita añadir un nuevo miembro a una organización existente, asignándole un rol específico, para que pueda colaborar en la gestión de los proyectos de dicha organización</td>
+            <td>2</td>
+        </tr>
+        </tr>        <tr>
+            <td>139</td>
+            <td>TS07</td>
+            <td>Actualizar estado de miembro de organización</td>
+            <td>Como Developer, quiero implementar un endpoint que permita actualizar el estado de un miembro dentro de una organización para gestionar su acceso según las necesidades administrativas (por ejemplo, activo, suspendido o removido)</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>140</td>
+            <td>TS11</td>
+            <td>Añadir miembro de equipo con salario a proyecto</td>
+            <td>Como Developer, quiero implementar un endpoint que permita añadir un miembro de la organización a un proyecto para que pueda participar formalmente en su ejecución con un rol asignado</td>
+            <td>2</td>
+        </tr>
+        </tr>        <tr>
+            <td>141</td>
+            <td>TS12</td>
+            <td>Listar miembros de proyecto</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener la lista de miembros asignados a un proyecto para que los usuarios autorizados puedan visualizar quiénes forman parte del equipo</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>142</td>
+            <td>TS58</td>
+            <td>Eliminar usuario de proyecto</td>
+            <td>Como Developer, quiero implementar un endpoint que permita eliminar a un usuario del equipo de un proyecto, para que ya no tenga acceso ni participación activa en dicho proyecto</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>143</td>
+            <td>TS13</td>
+            <td>Actualizar información de miembro de proyecto</td>
+            <td>Como Developer, quiero implementar un endpoint que permita actualizar el rol de un miembro dentro de un proyecto, para mantener alineadas sus responsabilidades con las necesidades operativas del equipo</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>144</td>
+            <td>TS15</td>
+            <td>Crear cronograma de proyecto</td>
+            <td>Como Developer, quiero implementar un endpoint que permita crear un cronograma para un proyecto existente, para que los contratistas puedan planificar y gestionar las actividades clave en una línea de tiempo</td>
+            <td>3</td>
+        </tr>
+        </tr>        <tr>
+            <td>145</td>
+            <td>TS16</td>
+            <td>Obtener detalles de cronograma</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener los detalles del cronograma asociado a un proyecto, para que los usuarios puedan visualizar su planificación estructurada</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>146</td>
+            <td>TS17</td>
+            <td>Añadir hito al cronograma</td>
+            <td>Como Developer, quiero implementar un endpoint que permita registrar un nuevo hito dentro del cronograma de un proyecto, para reflejar eventos clave dentro de su planificación</td>
+            <td>2</td>
+        </tr>
+        </tr>        <tr>
+            <td>147</td>
+            <td>TS18</td>
+            <td>Listar hitos del cronograma</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener todos los hitos registrados en el cronograma de un proyecto, para que los usuarios puedan visualizar los eventos clave del mismo</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>148</td>
+            <td>TS19</td>
+            <td>Obtener detalles de hito</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener la información detallada de un hito registrado en el cronograma de un proyecto, para que los usuarios puedan revisar su contenido y estado</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>149</td>
+            <td>TS20</td>
+            <td>Actualizar información de hito</td>
+            <td>Como Developer, quiero implementar un endpoint que permita actualizar el estado y la duración de un hito, para reflejar el avance real del cronograma y ajustar las estimaciones según la ejecución del proyecto</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>150</td>
+            <td>TS21</td>
+            <td>Crear reunión</td>
+            <td>Como Developer, quiero implementar un endpoint que permita crear una reunión vinculada a un proyecto, para que los contratistas puedan organizar y coordinar las reuniones del equipo</td>
+            <td>3</td>
+        </tr>
+        </tr>        <tr>
+            <td>151</td>
+            <td>TS22</td>
+            <td>Listar todas las reuniones de un hito</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener todas las reuniones asociadas a un hito específico dentro del cronograma de un proyecto, para facilitar su visualización y gestión</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>152</td>
+            <td>TS23</td>
+            <td>Obtener detalles de reunión</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener los detalles completos de una reunión específica registrada en un proyecto, para que los usuarios puedan acceder a la información relevante de la reunión</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>153</td>
+            <td>TS24</td>
+            <td>Actualizar información de reunión</td>
+            <td>Como Developer, quiero implementar un endpoint que permita actualizar la fecha y los detalles generales de una reunión registrada, para reflejar cambios en la planificación o ajustes de última hora</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>154</td>
+            <td>TS59</td>
+            <td>Eliminar reunión</td>
+            <td>Como Developer, quiero implementar un endpoint que permita eliminar una reunión registrada en un proyecto, para que los contratistas puedan gestionar las reuniones que ya no son necesarias</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>155</td>
+            <td>TS25</td>
+            <td>Añadir asistente de reunión</td>
+            <td>Como Developer, quiero implementar un endpoint que permita añadir un asistente a una reunión registrada, para que los participantes sean notificados y tengan acceso a la reunión</td>
+            <td>2</td>
+        </tr>
+        </tr>        <tr>
+            <td>156</td>
+            <td>TS26</td>
+            <td>Edita/eliminar asistente de reunión</td>
+            <td>Como Developer, quiero implementar un endpoint que permita editar o eliminar un asistente de una reunión, para mantener actualizada la lista de participantes en caso de cambios en la asistencia</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>157</td>
+            <td>TS27</td>
+            <td>Crear tarea</td>
+            <td>Como Developer, quiero implementar un endpoint que permita crear una nueva tarea en un proyecto, para que los contratistas puedan organizar y asignar actividades dentro del cronograma del proyecto</td>
+            <td>2</td>
+        </tr>
+        </tr>        <tr>
+            <td>158</td>
+            <td>TS61</td>
+            <td>Eliminar tarea</td>
+            <td>Como Developer, quiero implementar un endpoint que permita eliminar una tarea asociada a un proyecto, para que los contratistas puedan gestionar las actividades del proyecto eliminando tareas innecesarias o incorrectas</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>159</td>
+            <td>TS28</td>
+            <td>Listar tareas de hito</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener todas las tareas asociadas a un hito específico dentro de un proyecto, para que los usuarios puedan visualizar todas las actividades vinculadas a ese hito en particular</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>160</td>
+            <td>TS35</td>
+            <td>Obtener detalles de desempeño de hito</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener los detalles del desempeño de un hito específico, incluyendo el desempeño de las tareas asociadas a ese hito, para que los usuarios puedan evaluar el avance y la puntualidad en los entregables del proyecto</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>161</td>
+            <td>TS29</td>
+            <td>Obtener detalles de tarea</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener los detalles completos de una tarea asociada a un proyecto, para que los usuarios puedan visualizar toda la información relevante de la tarea</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>162</td>
+            <td>TS30</td>
+            <td>Actualizar información de tarea</td>
+            <td>Como Developer, quiero implementar un endpoint que permita actualizar la información de una tarea registrada en un proyecto, para que los contratistas puedan ajustar los detalles, responsable y fechas conforme a la evolución del proyecto</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>163</td>
+            <td>TS60</td>
+            <td>Subir entregable de tarea</td>
+            <td>Como Developer, quiero implementar un endpoint que permita subir un entregable asociado a una tarea dentro de un proyecto, para que los contratistas puedan registrar avances y documentación de trabajo</td>
+            <td>2</td>
+        </tr>
+        </tr>        <tr>
+            <td>164</td>
+            <td>TS31</td>
+            <td>Crear solicitud de cambio</td>
+            <td>Como Developer, quiero implementar un endpoint que permita a los clientes crear una solicitud de cambio dentro de un proyecto, para que los cambios solicitados sean registrados y procesados de manera adecuada</td>
+            <td>2</td>
+        </tr>
+        </tr>        <tr>
+            <td>165</td>
+            <td>TS32</td>
+            <td>Listar solicitudes de cambio</td>
+            <td>Como Developer, quiero implementar un endpoint que permita listar todas las solicitudes de cambio asociadas a un proyecto, para que los usuarios puedan ver todas las modificaciones solicitadas por los clientes</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>166</td>
+            <td>TS33</td>
+            <td>Obtener detalles de solicitud de cambio</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener los detalles completos de una solicitud de cambio asociada a un proyecto, para que los usuarios puedan revisar a fondo la solicitud y tomar decisiones informadas</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>167</td>
+            <td>TS34</td>
+            <td>Aceptar/Denegar solicitud de cambio</td>
+            <td>Como Developer, quiero implementar un endpoint que permita aceptar o denegar una solicitud de cambio, para que los contratistas puedan procesar las solicitudes de cambio de acuerdo con la viabilidad del proyecto</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>168</td>
+            <td>TS56</td>
+            <td>Pagar factura</td>
+            <td>Como Developer, quiero implementar un endpoint que permita a los usuarios pagar sus facturas utilizando una pasarela de pagos, como Stripe, para asegurar un proceso de pago seguro y eficiente</td>
+            <td>2</td>
+        </tr>
+        </tr>        <tr>
+            <td>169</td>
+            <td>TS55</td>
+            <td>Visualizar plan de suscripción</td>
+            <td>Como Developer, quiero implementar un endpoint que permita a los usuarios visualizar el plan de suscripción actual al que están suscritos, para que puedan revisar los detalles de su suscripción activa</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>170</td>
+            <td>TS54</td>
+            <td>Actualizar plan de suscripción</td>
+            <td>Como Developer, quiero implementar un endpoint que permita a los usuarios actualizar su plan de suscripción, para que puedan cambiar a un plan superior o inferior según sus necesidades</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>171</td>
+            <td>TS51</td>
+            <td>Listar facturas de usuario</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener el listado de facturas asociadas a un usuario, para que el usuario pueda consultar el historial de facturación relacionado con sus suscripciones</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>172</td>
+            <td>TS53</td>
+            <td>Selección del plan de suscripción</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener el listado de facturas asociadas a un usuario, para que el usuario pueda consultar el historial de facturación relacionado con sus suscripciones</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>173</td>
+            <td>TS52</td>
+            <td>Estado de una factura</td>
+            <td>Como Developer, quiero implementar un endpoint que permita consultar el estado de una factura asociada a un usuario, para que el usuario pueda conocer si la factura está pagada, pendiente o vencida</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>174</td>
+            <td>TS50</td>
+            <td>Corroborar nivel de acceso</td>
+            <td>Como Developer, quiero implementar una verificación de nivel de acceso en cada solicitud del usuario, para asegurar que solo puedan ejecutar acciones autorizadas según su rol</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>175</td>
+            <td>TS45</td>
+            <td>Cambiar contraseña</td>
+            <td>Como Developer, quiero implementar un endpoint que permita a un usuario autenticado cambiar su contraseña actual, para mantener la seguridad de su cuenta</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>176</td>
+            <td>TS49</td>
+            <td>Límite de intentos de login</td>
+            <td>Como Developer, quiero implementar un mecanismo que limite la cantidad de intentos fallidos de inicio de sesión, para prevenir ataques de fuerza bruta contra las credenciales de los usuarios</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>177</td>
+            <td>TS46</td>
+            <td>Solicitar recuperar contraseña</td>
+            <td>Como Developer, quiero implementar un endpoint que permita a los usuarios solicitar la recuperación de su contraseña mediante correo electrónico, para que puedan restablecerla si la han olvidado</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>178</td>
+            <td>TS48</td>
+            <td>Encriptación segura de credenciales</td>
+            <td>Como Developer, quiero implementar una función de encriptación de credenciales mediante salteo y hasheo, para garantizar que las contraseñas de los usuarios no se almacenen ni se procesen nunca en texto plano</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>179</td>
+            <td>TS47</td>
+            <td>Renovar contraseña</td>
+            <td>Como Developer, quiero implementar un endpoint que permita a los usuarios restablecer su contraseña usando un token de recuperación válido, para que puedan recuperar el acceso a su cuenta de forma segura</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>180</td>
+            <td>TS40</td>
+            <td>Actualizar datos de perfil</td>
+            <td>Como Developer, quiero implementar un endpoint que permita actualizar la información profesional y otros detalles del perfil de un usuario, para que su perfil refleje su experiencia y habilidades más actuales</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>181</td>
+            <td>TS44</td>
+            <td>Registro</td>
+            <td>Como Developer, quiero implementar un endpoint de registro que permita a nuevos usuarios crear una cuenta proporcionando su información básica, para que puedan autenticarse y acceder al sistema</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>182</td>
+            <td>TS41</td>
+            <td>Login</td>
+            <td>Como Developer, quiero implementar un endpoint de login que reciba credenciales de usuario y devuelva un token de autenticación, para permitir el acceso seguro a los recursos de la plataforma</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>183</td>
+            <td>TS43</td>
+            <td>Cerrar sesión + invalidar token</td>
+            <td>Como Developer, quiero implementar un endpoint para cerrar sesión e invalidar el <code>refreshToken</code>, para asegurar que el usuario no pueda seguir autenticado tras finalizar su sesión</td>
+            <td>2</td>
+        </tr>
+        </tr>        <tr>
+            <td>184</td>
+            <td>TS42</td>
+            <td>Refrescar Token</td>
+            <td>Como Developer, quiero implementar un endpoint para refrescar el token de autenticación usando un <code>refreshToken</code>, para mantener la sesión activa sin requerir un nuevo login</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>185</td>
+            <td>TS36</td>
+            <td>Consultar notificaciones de usuario</td>
+            <td>Como Developer, quiero implementar un endpoint que permita a un usuario consultar todas las notificaciones asociadas a su cuenta, para que pueda ver los eventos importantes que le corresponden</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>186</td>
+            <td>TS39</td>
+            <td>Actualizar datos personales</td>
+            <td>Como Developer, quiero implementar un endpoint que permita actualizar los datos personales de un usuario, para que pueda modificar su nombre, correo electrónico y otros detalles de contacto en el sistema</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>187</td>
+            <td>TS37</td>
+            <td>Marcar notificación como leída</td>
+            <td>Como Developer, quiero implementar un endpoint que permita a un usuario marcar una notificación como leída, para que pueda llevar un control de las notificaciones que ha revisado</td>
+            <td>1</td>
+        </tr>
+        </tr>        <tr>
+            <td>188</td>
+            <td>TS38</td>
+            <td>Obtener detalles de perfil</td>
+            <td>Como Developer, quiero implementar un endpoint que permita obtener los detalles del perfil de un usuario autenticado, para que el sistema pueda mostrar su información personal y profesional en la interfaz</td>
+            <td>1</td>
+        </tr>
+    </tbody>
+</tanle>
+
+
 
 <div style="page-break-before: always;"></div>
 

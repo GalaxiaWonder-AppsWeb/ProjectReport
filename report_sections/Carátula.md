@@ -1,55 +1,19 @@
-<style>
-    .caratula {
-        text-align: center;
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 50px;
-    }
-
-    .caratula h1, .caratula h2, .caratula h3, .caratula h4 {
-        margin: 10px 0;
-        border-bottom: none;
-    }
-
-    .caratula img {
-        width: 150px;
-        display: block;
-        margin: 20px auto;
-    }
-
-    .caratula p {
-        font-style: italic;
-        font-size: 14px;
-    }
-
-    .caratula ul {
-        display: inline-block;
-        text-align: left;
-        padding: 0;
-    }
-    
-    .caratula li {
-        padding: 5px 0;
-    }
-</style>
-
-<div class="caratula">
-    <p>Universidad - Carrera - Ciclo</p>
-    <h1>Curso - XXXXX</h1>
-    <img src="LOGO" alt="Logo">
-    <h4>Sección</h4>
-    <h4>Nombre de profesor</h4>
-    <h2>Informe de Trabajo Final</h2>
-    <h3>Nombre de startup</h3>
-    <h3>Nombre del producto</h3>
-    <h4>Integrantes:</h4>
-    <ul>
-        <li>Nombre 1 (código)</li>
-        <li>Nombre 2 (código)</li>
-        <li>Nombre 3 (código)</li>
-        <li>Nombre 4 (código)</li>
-        <li>Nombre 5 (código)</li>
-        <li>Nombre 6 (código)</li>
+<div style="text-align: center; font-family: Arial, sans-serif; margin: 0; padding: 50px;">
+    <p style="font-style: italic; font-size: 14px;">Universidad Peruana de Ciencias Aplicadas- Ingeniería de Software - Ciclo 2025-10</p>
+    <h1 style="margin: 10px 0; border-bottom: none;">1ASI0729 - Desarrollo de aplicaciones Open Source</h1>
+    <img src="..\img\upc_logo.png" alt="Logo" style="width: 150px; display: block; margin: 20px auto;">
+    <h4 style="margin: 10px 0; border-bottom: none;">NRC: 4307</h4>
+    <h4 style="margin: 10px 0; border-bottom: none;">Profesor: Bautista Ubillús, Efraín Ricardo</h4>
+    <h2 style="margin: 10px 0; border-bottom: none;">Informe de Trabajo Final</h2>
+    <h3 style="margin: 10px 0; border-bottom: none;">Startup: Galaxia Wonder</h3>
+    <h3 style="margin: 10px 0; border-bottom: none;">Producto: ProP GMS</h3>
+    <h4 style="margin: 10px 0; border-bottom: none;">Integrantes:</h4>
+    <ul style="display: inline-block; text-align: left; padding: 0;">
+        <li style="padding: 5px 0;">Aponte Cruzado, Andrea Marielena (202224135)</li>
+        <li style="padding: 5px 0;">León Vivas, Fabrizio Amir (20211b994)</li>
+        <li style="padding: 5px 0;">Lopez Acuña, Mario Joaquín (202116250)</li>
+        <li style="padding: 5px 0;">Orozco Torres, Álvaro Joaquín (202220783)</li>
+        <li style="padding: 5px 0;">Reaño Delgadillo, Henry Paolo (20221e247)</li>
     </ul>
-    <h4>XXXX de 20XX</h4>
+    <h4 style="margin: 10px 0; border-bottom: none;">Abril de 2025</h4>
 </div>
