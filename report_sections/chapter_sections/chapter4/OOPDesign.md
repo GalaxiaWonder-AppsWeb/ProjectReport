@@ -105,6 +105,8 @@ Los estados de pago (PENDING, AUTHORIZED, CONFIRMED, FAILED) y de transacción (
 
 <img src="../../../img/chapter4/oop/payments.png" alt="Diagrama de clases del bounded context Payments de ProP GMS">
 
+<div style="page-break-after: always;"></div>
+
 ### 4.7.2. Class Dictionary
 
 #### 4.7.2.1. Project Management Class Dictionary

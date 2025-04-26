@@ -7,6 +7,8 @@ El sistema PropGMS es una aplicación diseñada para organizar archivos y activi
 
 <img src="../../../img/chapter4/c4/context.png" alt="Diagrama de contexto de ProP GMS">
 
+<div style="page-break-after: always;"></div>
+
 ### 4.6.2. Software Architecture Container Diagrams
 
 El sistema PropGMS se estructura en varios contenedores que colaboran entre sí para ofrecer una experiencia fluida a los usuarios. La Web Application, desarrollada en Vue, actúa como la interfaz principal donde interactúan los distintos perfiles: contratistas que gestionan proyectos, clientes que revisan avances y especialistas que ejecutan tareas asignadas. A esta aplicación se accede desde una Landing Page pública construida con HTML, CSS y JavaScript, la cual cumple una función informativa y redirige a los usuarios hacia la plataforma principal para la creación de cuentas.
@@ -16,6 +18,8 @@ El núcleo lógico del sistema reside en una RESTful API desarrollada en .NET Co
 Además, PropGMS se comunica con dos servicios externos: una Email API, utilizada para enviar correos de validación de cuentas y notificaciones, y una Payment Gateway API, encargada de validar los pagos de suscripciones realizados por los usuarios. Toda la comunicación entre contenedores y sistemas externos se realiza mediante canales seguros como HTTPS, garantizando así la confidencialidad y la integridad de los datos.
 
 <img src="../../../img/chapter4/c4/container.png" alt="Diagrama de contenedores de ProP GMS">
+
+<div style="page-break-after: always;"></div>
 
 ### 4.6.3. Software Architecture Components Diagrams
 
