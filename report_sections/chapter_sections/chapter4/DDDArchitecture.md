@@ -21,26 +21,26 @@ Además, PropGMS se comunica con dos servicios externos: una Email API, utilizad
 
 #### 4.6.3.1. Web Application Diagram
 
-El sistema PropGMS se organiza a nivel interno mediante una arquitectura modular basada en componentes. Cada módulo se encarga de una funcionalidad específica, ofreciendo una experiencia segmentada pero coherente al usuario.
+El núcleo de la aplicación, el AppComponent, actúa como el esqueleto que mantiene unida la interfaz, incluyendo navegación principal (ToolbarComponent), pie de página (FooterComponent) y el enrutamiento dinámico (RouterView) que carga componentes específicos según la navegación del usuario.
 
-La interfaz se divide en distintos módulos como Organization Management UI, que permite gestionar la creación y edición de organizaciones y miembros; Project Management UI, donde se crean y organizan proyectos, hitos, tareas y reuniones; y Change Management UI, que permite a los usuarios generar y revisar solicitudes de cambio. Otros componentes destacados incluyen el Subscription Management UI para la gestión de suscripciones, el Billing UI que muestra el estado de las facturas, y el Payments UI, responsable del flujo de pagos.
+Cada funcionalidad clave del sistema, como la gestión de organizaciones, miembros, proyectos, tareas, cambios y reuniones, se orquesta a través de componentes especializados: por ejemplo, OrganizationComponent, ProjectComponent, TaskComponent y MeetingComponent, cada uno complementado por subcomponentes como listas de ítems (ListComponents) y formularios de edición (EditComponents).
 
-Además, la plataforma incorpora módulos especializados como Files Management UI para la gestión de archivos de proyecto, Notifications UI para la visualización de notificaciones, y Identity & Access UI, encargado de todo lo relacionado con autenticación, registro y manejo del perfil del usuario.
+Para manejar las operaciones de backend, la aplicación utiliza servicios como OrganizationService, UserService, ProjectService y otros, que abstraen la comunicación con la Web API y transforman respuestas API en modelos frontend mediante ensambladores como OrganizationAssembler o TaskAssembler.
 
-Todos estos componentes se comunican de manera segura con la RESTful API mediante el protocolo HTTPS. Esta API centraliza la lógica del negocio, recibe las solicitudes de cada componente y responde con los datos necesarios, promoviendo una arquitectura desacoplada, escalable y fácil de mantener.
+Los flujos críticos de usuario, como autenticación (LoginComponent, RegisterComponent) y administración de suscripciones (SubscriptionComponent, BillingComponent), están centralizados en componentes dedicados, asegurando una navegación intuitiva y un acceso seguro a las funcionalidades del sistema.
+
+Esta arquitectura basada en componentes y servicios fomenta una modularidad impecable, permitiendo que PropGMS no solo sea altamente mantenible y escalable, sino también adaptable a futuras expansiones o personalizaciones sin comprometer la estabilidad de la plataforma.
 
 <img src="../../../img/chapter4/c4/componente/webApplication.png" alt="Diagrama de componentes de Web Application de ProP GMS">
 
 #### 4.6.3.2. API Diagram
 
-Este nivel descompone el backend de PropGMS, revelando cómo cada módulo de la interfaz web se comunica con un componente específico dentro del contenedor de la RESTful API, desarrollado con .NET Core. La arquitectura sigue un enfoque basado en controladores, cada uno especializado en una funcionalidad concreta del sistema.
+Cada módulo de la plataforma web, como la gestión de organizaciones, proyectos o pagos, se comunica de manera segura con un controlador dedicado: OrganizationController, ProjectController, TaskController, entre otros. Estos controladores delegan la lógica de negocio a servicios internos como OrganizationService, ProjectService o PaymentService, cada uno encargado de una funcionalidad crítica del sistema, desde la administración de proyectos hasta el procesamiento de pagos.
 
-Los componentes visuales desarrollados en Vue, como Organization Management UI, Project Management UI o Subscription Management UI, hacen peticiones directas mediante HTTPS hacia sus respectivos controladores: OrganizationController, ProjectController, SubscriptionController, entre otros. Estos controladores manejan operaciones clave como la gestión de organizaciones y miembros, planificación de tareas y reuniones, administración de suscripciones y procesamiento de pagos.
+Los servicios, a su vez, interactúan con repositorios específicos —por ejemplo, OrganizationRepository, ProjectRepository o PaymentRepository— que manejan las operaciones de lectura y escritura sobre una base de datos relacional en MariaDB, asegurando la persistencia confiable de la información.
 
-El InvoiceController se encarga de recuperar el estado de las facturas, mientras que el PaymentController interactúa con el Payment Gateway API para validar los pagos. Por su parte, el FileController permite cargar y listar archivos del proyecto, y el NotificationController expone los datos de notificaciones personalizadas para los usuarios. Finalmente, el UserAccountController maneja la autenticación, el registro y la actualización del perfil del usuario.
+Además, la API integra servicios externos estratégicos: NotificationService se comunica con el Email API para enviar correos electrónicos de notificaciones, mientras que PaymentService interactúa con el Payment Gateway API para validar las transacciones de pago de las suscripciones de los usuarios.
 
-Además, se visualizan las conexiones entre los controladores y el servicio externo de correo electrónico (Email API), el cual se utiliza para enviar notificaciones como la creación de cuentas, generación de facturas o confirmaciones de pago. Esto asegura una experiencia de usuario informada y fluida.
-
-Este nivel detalla cómo la lógica de negocio está organizada en unidades autónomas, fácilmente testeables y mantenibles, lo que aporta robustez y escalabilidad al sistema completo.
+Esta organización en capas —controladores, servicios y repositorios— promueve un diseño altamente modular, testeable y escalable, permitiendo a PropGMS evolucionar de forma robusta ante futuras necesidades de crecimiento y adaptación tecnológica.
 
 <img src="../../../img/chapter4/c4/componente/api.png" alt="Diagrama de componentes de Web Application de ProP GMS">
