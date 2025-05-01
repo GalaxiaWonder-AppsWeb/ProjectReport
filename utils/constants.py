@@ -72,7 +72,7 @@ CHAPTER_4 = HeaderOutputFile(
         "WebAppPrototyping.md",
         "DDDArchitecture.md",
         "OOPDesign.md",
-        "DatabaseDesign.md",
+        "DBDesign.md",
     ]
 )
 
