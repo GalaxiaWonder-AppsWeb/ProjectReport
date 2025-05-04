@@ -523,6 +523,11 @@ En el Sprint 1, se realizó una primera implementación de la Landing Page utili
 | LandingPage | feature/swr13 | e22f0c2d60ac67112ef79b8eedd988f978b9464f | feat(swr13): add testimonial carousel component |   | 3/05/2025 |
 | LandingPage | feature/swr12 | 20cdc06a1cea69dff10c2cdaa6959ecbd2e8d86d | feat(swr12): add client testimonial in testimonial model |   | 3/05/2025 |
 | LandingPage | feature/swr17 | 1f45fcba0e79f437bd3b828f3ec605b6e9020aed | chore(swr17): add terms and conditions in i18n json files |   | 3/05/2025 |
+| LandingPage | feature/swr17 | 126b04364fbb8d4346de66d458d697a72cd79398 | feat(swr17): add terms and conditions component |   | 3/05/2025 |
+| LandingPage | feature/swr17 | 1eb8a4750ea95434dd7c7904673d86ccf386701e | feat(swr17): add email of galaxia wonder in terms and conditions |   | 3/05/2025 |
+| LandingPage | feature/swr17 | ba9a19f68671664cf914e0d3f6320b135b283021 | chore(swr17): add styles in terms and conditions component |   | 3/05/2025 |
+| LandingPage | feature/swr15 | fafec32b6e6505d8b9c74476388c4dc90febb2a3 | feat(swr15): add navigation to sections in the toolbar component |   | 3/05/2025 |
+| LandingPage | bugfix/swr17 | 22a7dc22d3d0526209863782761a3b1d7ed944e0 | bugfix(swr17): remove unnecessary buttons in the terms and conditions dialog |   | 3/05/2025 |
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
 
