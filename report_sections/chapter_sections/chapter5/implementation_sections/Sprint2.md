@@ -534,6 +534,64 @@ En el Sprint 1, se realizó una primera implementación de la Landing Page utili
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
 
+Se presenta a modo de evidencia un video y capturas de las principales vistas implementadas. Enlace al video: []()
+
+**HERO SECTION CONTRATISTA**
+
+Contiene una frase e imagen alusiva a las necesidades de este segmento. Proporciona un botón que redirige a la página de registro.
+
+<img src="../../../../img/chapter5/Sprint2/landing/hero_contractor.png">
+
+<div style="page-break-after: always;"></div>
+
+**HERO SECTION CLIENTE**
+
+Contiene una frase e imagen alusiva a las necesidades de este segmento. Proporciona un botón que redirige a la página de registro.
+
+<img src="../../../../img/chapter5/Sprint2/landing/hero_client.png">
+
+<div style="page-break-after: always;"></div>
+
+**ABOUT US**
+
+Contiene una la misión, visión y valores de la startup.
+
+<img src="../../../../img/chapter5/Sprint2/landing/about_us.png">
+
+<div style="page-break-after: always;"></div>
+
+**OVERVIEW CONTRATISTA**
+
+Contiene un resumen de los principales features de la aplicación web.
+
+<img src="../../../../img/chapter5/Sprint2/landing/overview_contractor.png">
+
+<div style="page-break-after: always;"></div>
+
+**OVERVIEW CLIENTE**
+
+Contiene un resumen de los principales features de la aplicación web.
+
+<img src="../../../../img/chapter5/Sprint2/landing/overview_client.png">
+
+<div style="page-break-after: always;"></div>
+
+**PLANES**
+
+Muestra los principales planes de suscripción con sus beneficios.
+
+<img src="../../../../img/chapter5/Sprint2/landing/plans.png">
+
+<div style="page-break-after: always;"></div>
+
+**REVIEWS Y FOOTER**
+
+Muestra reviews de usuarios de cada segmento y, debajo, el footer con información de relevante como los términos de uso y datos de contacto.
+
+<img src="../../../../img/chapter5/Sprint2/landing/reviews_and_footer.png">
+
+<div style="page-break-after: always;"></div>
+
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
