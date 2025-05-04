@@ -528,6 +528,9 @@ En el Sprint 1, se realizó una primera implementación de la Landing Page utili
 | LandingPage | feature/swr17 | ba9a19f68671664cf914e0d3f6320b135b283021 | chore(swr17): add styles in terms and conditions component |   | 3/05/2025 |
 | LandingPage | feature/swr15 | fafec32b6e6505d8b9c74476388c4dc90febb2a3 | feat(swr15): add navigation to sections in the toolbar component |   | 3/05/2025 |
 | LandingPage | bugfix/swr17 | 22a7dc22d3d0526209863782761a3b1d7ed944e0 | bugfix(swr17): remove unnecessary buttons in the terms and conditions dialog |   | 3/05/2025 |
+| LandingPage | release/tp | 418ecbdaf8acd65dc159fbe3b14a81a01cedaec9 | chore(tp): add prop gms title and logo in index |   | 4/05/2025 |
+| LandingPage | release/tp | 15fcc54b83a65c0af2bce5bf17b69af25730d775 | bugfix(tp): remove duplicate product logo in folder images |   | 4/05/2025 |
+| LandingPage | release/tp | 91a3c02b17332f822022e6bc2de779d09cf42b4f | chore(tp): add startup name in toolbar component |   | 4/05/2025 |
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
 
