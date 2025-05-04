@@ -192,3 +192,31 @@ La landing page del proyecto se desplegará utilizando GitHub Pages, una platafo
 <img src="../../../img/chapter5/Deploy/Gitpages.png">
 
 Enlace para acceder a la landing page: [https://galaxiawonder-appsweb.github.io/LandingPage/](https://galaxiawonder-appsweb.github.io/LandingPage/)
+
+**LANDING PAGE V2 DEPLOYMENT**
+
+Para la segunda implementación de la landing page del proyecto, se decidió utilizar Netlify. Para ello, se siguio el siguiente proceso:
+
+1. Seleccionar la opción de importar un proyecto existente.
+
+<img src="../../../img/chapter5/Deploy/landing_page_v2/step1.png">
+
+2. Seleccionamos mediante GitHub
+
+<img src="../../../img/chapter5/Deploy/landing_page_v2/step2.png">
+
+3. Seleccionamos la opción de organización
+
+<img src="../../../img/chapter5/Deploy/landing_page_v2/step3.png">
+
+4. Seleccionamos el repositorio de la landing page
+
+<img src="../../../img/chapter5/Deploy/landing_page_v2/step4.png">
+
+5. Se refleja las configuraciones en el dashboard
+
+<img src="../../../img/chapter5/Deploy/landing_page_v2/step5.png">
+
+6. Configuramos el sitename (url) del web page, la rama y el comando de build y guardamos los cambios.
+
+<img src="../../../img/chapter5/Deploy/landing_page_v2/step6.png">
