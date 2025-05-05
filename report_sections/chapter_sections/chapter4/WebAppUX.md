@@ -32,155 +32,192 @@
 
 **1. Crear un nuevo proyecto**
 
-- **User Goal:** Crear un proyecto en la plataforma para iniciar la planificación de su cronograma, equipo y tareas.
+- **User Goal:** Crear un proyecto dentro de la organización activa para iniciar la planificación de su cronograma, equipo y tareas.
 - **User Persona:** Contratista
 
 **Flujo Principal (Happy Path):**
-- Usuario accede al dashboard principal.
+- Sistema muestra la vista de la organización seleccionada que muestra la barra de navegación de organización.
+- Sistema muestra por default la pestaña "Información" de la organización, que incluye:
+  - Nombre comercial (o razón social).
+  - El contratista dueño de la organización.
+  - La fecha de creación de la organización.
+  - El RUC de la organización.
+- Usuario selecciona la pestaña de proyectos de la organización.
+- Sistema muestra la lista de todos los proyectos de la organización, con información resumida: nombre, estado, rol del usuario.
 - Usuario selecciona la opción "Crear nuevo proyecto".
-- Usuario completa los siguientes campos del formulario:
+- Sistema despliega formulario de creación con los siguientes campos:
   - Nombre del proyecto.
-  - Fecha de inicio (automáticamente el día de creación).
+  - Descripción del proyecto.
+  - Fecha de inicio (asignada automáticamente como fecha actual, no editable).
   - Fecha de finalización estimada.
   - Subida del contrato firmado.
   - Fecha de firma del contrato.
-  - Correo de la entidad contratante.
-- Usuario envía el formulario.
-- El sistema valida los datos.
-- El sistema crea el proyecto.
-- El sistema muestra mensaje de éxito y redirige al detalle del proyecto.
+  - Correo de la entidad contratante (debe estar registrada).
+- Usuario completa el formulario y lo envía.
+- Sistema valida los datos ingresados.
+- Sistema crea el proyecto dentro de la organización activa.
+- Sistema muestra un mensaje de éxito y redirige al detalle del proyecto creado.
 
 **Puntos de Decisión:**
-- ¿Todos los campos obligatorios fueron completados?
-- ¿Fecha de finalización es válida?
-- ¿Archivo del contrato adjunto?
-- ¿Correo de entidad contratante válido?
+- ¿Todos los campos obligatorios fueron completados? (Todos excepto descripción)
+- ¿La fecha de finalización es posterior a la de inicio?
+- ¿El correo de la entidad contratante pertenece a una entidad registrada?
 
 **Flujos Alternativos (Unhappy Paths):**
-- Campos obligatorios incompletos: mensaje de error "Debe completar todos los campos requeridos".
-- Fecha de finalización anterior al inicio: error "La fecha de finalización debe ser posterior a la fecha de inicio".
-- Archivo de contrato no subido: error "Debe adjuntar el contrato firmado".
-- Correo inválido: error "Entidad contratante no encontrada".
+- Campos obligatorios incompletos: error "Debe completar todos los campos requeridos".
+- Fecha de finalización anterior a la fecha de inicio: error "La fecha de finalización debe ser posterior a la fecha de inicio".
+- Correo de entidad contratante inválido o no registrado: error "Entidad contratante no encontrada".
 
 **2. Consultar y visualizar lista de proyectos y sus detalles**
 
-<img src="../../../img/chapter4/userflows/uf02.png">
-
 - **User Goal:** Consultar los proyectos accesibles para el usuario y visualizar su información general.
-- **User Persona:** Miembro del equipo / Contratista
+- **User Persona:** Contratista
 
 **Flujo Principal (Happy Path):**
-- Usuario inicia sesión en la plataforma.
-- Usuario accede a la sección "Proyectos".
-- Sistema muestra la lista de proyectos accesibles, con información resumida: nombre, estado, rol del usuario.
+- Sistema muestra la vista de la organización seleccionada que muestra la barra de navegación de organización.
+- Usuario selecciona la pestaña "Proyectos" de la organización.
+- Sistema muestra la lista de todos los proyectos de la organización, con información resumida: nombre, estado, rol del usuario.
 - Usuario selecciona un proyecto de la lista.
-- Sistema muestra el detalle completo del proyecto:
+- Sistema muestra la vista del proyecto seleccionado que muestra la barra de navegación de proyecto.
+- Sistema carga por default la pestaña "Información" del proyecto, que incluye:
   - Nombre del proyecto.
   - Estado actual.
   - Fechas de inicio y finalización.
   - Entidad contratante.
-  - Miembros del equipo asignado.
-  - Contrato asociado (visible solo para contratistas).
 
 **Puntos de Decisión:**
-- ¿Usuario tiene permisos para ver proyectos?
-- ¿Usuario pertenece al equipo del proyecto seleccionado?
+- No hay puntos de decisión en este flujo.
 
 **Flujos Alternativos (Unhappy Paths):**
-- Usuario sin proyectos asignados: mensaje "No tienes proyectos disponibles".
-- Usuario no autorizado para ver el proyecto seleccionado: error "No tienes permisos para acceder a este proyecto".
+- No hay unhappy paths para este flujo.
 
 **3. Editar información general del proyecto**
-
-<img src="../../../img/chapter4/userflows/uf03.png">
-
 
 - **User Goal:** Actualizar el nombre o la descripción del proyecto para reflejar cambios en el alcance o clarificaciones internas.
 - **User Persona:** Contratista
 
 **Flujo Principal (Happy Path):**
-- Contratista accede al detalle del proyecto.
-- Usuario selecciona la opción "Editar información general".
-- Sistema despliega formulario editable con los campos actuales:
+- Sistema muestra la vista del proyecto seleccionado que muestra la barra de navegación de proyecto.
+- Usuario selecciona la pestaña "Configuración".
+- Sistema despliega una vista con los detalles actuales del proyecto:
   - Nombre del proyecto.
   - Descripción del proyecto.
-- Usuario realiza los cambios necesarios.
-- Usuario guarda los cambios.
+  - Estado del proyecto.
+  - La "zona de peligro", que muestra la opción de editar restricciones contractuales y eliminar proyecto.
+- Los campos de nombre y descripción pueden reescribirse, como si se tratara de un formulario.
+- Usuario cambia el nombre y/o descripción del proyecto.
 - Sistema valida los datos y actualiza la información.
 - Sistema muestra un mensaje de éxito.
 
 **Puntos de Decisión:**
 - ¿Nuevo nombre ingresado no está vacío?
-- ¿Usuario tiene permisos de edición?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Nombre de proyecto vacío: error "El nombre del proyecto no puede estar vacío".
-- Usuario sin permisos: error "No tienes permisos para editar este proyecto". 
 
-**4. Cambiar constraints legales del proyecto**
-
-<img src="../../../img/chapter4/userflows/uf04.png">
-
-- **User Goal:** Actualizar el contrato y la entidad contratante asociada al proyecto en caso de modificaciones legales o administrativas.
-- **User Persona:** Contratista
-
-**Flujo Principal (Happy Path):**
-- Contratista accede al detalle del proyecto.
-- Usuario selecciona la opción "Actualizar contrato y entidad contratante".
-- Sistema despliega formulario para actualizar:
-  - Archivo del nuevo contrato firmado.
-  - Fecha de firma del nuevo contrato.
-  - Nuevo correo de la entidad contratante.
-- Usuario completa los campos requeridos y envía la actualización.
-- Sistema valida la información.
-- Sistema guarda los nuevos datos legales del proyecto.
-- Sistema muestra mensaje de éxito confirmando la actualización.
-
-**Puntos de Decisión:**
-- ¿Nuevo contrato adjuntado?
-- ¿Fecha de firma del contrato ingresada?
-- ¿Correo de entidad contratante válido?
-- ¿Usuario tiene permisos para realizar esta acción?
-
-**Flujos Alternativos (Unhappy Paths):**
-- No se adjunta contrato: error "Debe adjuntar el nuevo contrato firmado".
-- Fecha de firma no ingresada: error "Debe ingresar la fecha de firma del contrato".
-- Correo de entidad no válido: error "Entidad contratante no encontrada".
-- Usuario sin permisos: error "No tienes permisos para actualizar los datos legales de este proyecto".
-
-**5. Cambiar estado del proyecto**
-
-<img src="../../../img/chapter4/userflows/uf05.png">
+**4. Cambiar estado del proyecto**
 
 - **User Goal:** Actualizar el estado del proyecto para reflejar su progreso o finalización.
 - **User Persona:** Contratista
 
 **Flujo Principal (Happy Path):**
-- Contratista accede al detalle del proyecto.
-- Usuario selecciona la opción "Cambiar estado del proyecto".
-- Sistema despliega lista de estados posibles (por ejemplo: En ejecución, Finalizado, Cancelado).
-- Usuario selecciona el nuevo estado deseado.
-- Usuario confirma el cambio de estado.
-- Sistema actualiza el estado del proyecto.
-- Sistema muestra un mensaje de éxito indicando el nuevo estado.
+- Sistema muestra la vista del proyecto seleccionado que muestra la barra de navegación de proyecto.
+- Usuario selecciona la pestaña "Configuración".
+- Sistema despliega una vista con los detalles actuales del proyecto:
+  - Nombre del proyecto.
+  - Descripción del proyecto.
+  - Estado del proyecto.
+  - La "zona de peligro", que muestra la opción de editar restricciones contractuales y eliminar proyecto.
+- El campo de estado del proyecto puede desplegarse como una lista de opciones.
+- Usuario selecciona un nuevo estado para el proyecto de la lista desplegable.
+- Sistema valida los datos y actualiza la información.
+- Sistema muestra un mensaje de éxito.
 
 **Puntos de Decisión:**
-- ¿Nuevo estado seleccionado es válido?
-- ¿Usuario tiene permisos para cambiar el estado?
+- No hay puntos de decisión en este flujo.
 
 **Flujos Alternativos (Unhappy Paths):**
-- No se selecciona nuevo estado: error "Debe seleccionar un estado para continuar".
-- Usuario sin permisos: error "No tienes permisos para cambiar el estado de este proyecto". 
+- No hay unhappy paths para este flujo.
 
-**6. Eliminar proyecto**
+**5. Cambiar correo de entidad contratante y fecha de finalización**
 
-<img src="../../../img/chapter4/userflows/uf06.png">
+- **User Goal:** Actualizar la entidad contratante y fecha de finalización del proyecto en caso de modificaciones administrativas.
+- **User Persona:** Contratista
+
+**Flujo Principal (Happy Path):**
+- Sistema muestra la vista del proyecto seleccionado que muestra la barra de navegación de proyecto.
+- Usuario selecciona la pestaña "Configuración".
+- Sistema despliega una vista con los detalles actuales del proyecto:
+  - Nombre del proyecto.
+  - Descripción del proyecto.
+  - Estado del proyecto.
+  - La "zona de peligro", que muestra la opción de editar restricciones contractuales y eliminar proyecto.
+- Usuario selecciona la opción "Cambiar restricciones contractuales".
+- Sistema despliega una vista con los detalles contractuales actuales del proyecto:
+  - Archivo del nuevo contrato firmado.
+  - Correo de la entidad contratante.
+  - Fecha de finalización del proyecto.
+- Los campos de correo de entidad contratante y fecha de finalización pueden reescribirse, como si se tratara de un formulario.
+- Usuario cambia el correo de entidad contratante y/o fecha de finalización.
+- Sistema valida la información.
+- Sistema guarda los nuevos datos.
+- Sistema muestra mensaje de éxito confirmando la actualización.
+
+**Puntos de Decisión:**
+- ¿Fecha de firma del contrato ingresada?
+- ¿Correo de entidad contratante válido?
+
+**Flujos Alternativos (Unhappy Paths):**
+- Fecha de firma no ingresada: error "Debe ingresar la fecha de finalización del proyecto.".
+- Correo de entidad no válido: error "Entidad contratante no encontrada".
+
+**6. Cambiar contrato del proyecto**
+
+- **User Goal:** Actualizar el contrato del proyecto en caso de modificaciones legales.
+- **User Persona:** Contratista
+
+**Flujo Principal (Happy Path):**
+- Sistema muestra la vista del proyecto seleccionado que muestra la barra de navegación de proyecto.
+- Usuario selecciona la pestaña "Configuración".
+- Sistema despliega una vista con los detalles actuales del proyecto:
+  - Nombre del proyecto.
+  - Descripción del proyecto.
+  - Estado del proyecto.
+  - La "zona de peligro", que muestra la opción de editar restricciones contractuales y eliminar proyecto.
+- Usuario selecciona la opción "Cambiar restricciones contractuales".
+- Sistema despliega una vista con los detalles contractuales actuales del proyecto:
+  - Archivo del nuevo contrato firmado.
+  - Correo de la entidad contratante.
+  - Fecha de finalización del proyecto.
+- El campo de contrato debe ser un botón que permita elegir entre subir un nuevo archivo o elegir uno del workspace de la organización.
+- Si usuario elige elige workspace, debe visualizar la lista de archivos del workspace, incluyendo:
+  - Nombre del archivo.
+  - Extensión del archivo.
+- Si el usuario elige subir nuevo archivo, debe permitir subir un archivo desde su dispositivo.
+  - Sistema valida que haya espacio suficiente en el workspace para el nuevo archivo antes de subirlo.
+- Sistema guarda la referencia al nuevo contrato.
+- Sistema muestra mensaje de éxito confirmando la actualización.
+
+**Puntos de Decisión:**
+- ¿Qué método para adjuntar nuevo contrato elige el usuario?
+- ¿La organización del proyecto cuenta con suficiente espacio en su workspace?
+
+**Flujos Alternativos (Unhappy Paths):**
+- Espacio insuficiente en workspace: error "No hay suficiente espacio en el workspace".
+
+**7. Eliminar proyecto**
 
 - **User Goal:** Eliminar un proyecto que ya no será ejecutado o es innecesario conservar.
 - **User Persona:** Contratista
 
 **Flujo Principal (Happy Path):**
-- Contratista accede al detalle del proyecto.
+- Sistema muestra la vista del proyecto seleccionado que muestra la barra de navegación de proyecto.
+- Usuario selecciona la pestaña "Configuración".
+- Sistema despliega una vista con los detalles actuales del proyecto:
+  - Nombre del proyecto.
+  - Descripción del proyecto.
+  - Estado del proyecto.
+  - La "zona de peligro", que muestra la opción de editar restricciones contractuales y eliminar proyecto.
 - Usuario selecciona la opción "Eliminar proyecto".
 - Sistema muestra una advertencia de confirmación indicando que se eliminarán todos los recursos asociados (excepto archivos del workspace).
 - Usuario debe confirmar la acción escribiendo "eliminar + nombre del proyecto" para proceder.
@@ -191,14 +228,11 @@
 
 **Puntos de Decisión:**
 - ¿Confirmación escrita correctamente?
-- ¿Usuario tiene permisos para eliminar el proyecto?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Confirmación incorrecta: error "El texto ingresado no coincide con el nombre del proyecto".
-- Usuario sin permisos: error "No tienes permisos para eliminar este proyecto".
-- Usuario cancela la operación: no se realiza ninguna acción, proyecto permanece activo.
 
-**7. Agregar nuevos miembros al proyecto**
+**8. Agregar nuevos miembros al proyecto**
 
 - **User Goal:** Incorporar nuevos miembros de la organización al equipo del proyecto, asignándoles un rol y especialidad si corresponde.
 - **User Persona:** Contratista
@@ -226,7 +260,7 @@
 - Especialidad no asignada a especialista: error "Debe asignar una especialidad si el rol es Especialista".
 - Miembro ya pertenece al proyecto: el sistema impide su selección o muestra advertencia "El miembro ya es parte del proyecto". 
 
-**8. Confirmar incorporación de miembros**
+**9. Confirmar incorporación de miembros**
 
 - **User Goal:** Finalizar el proceso de adición de nuevos miembros al proyecto, haciéndolos oficialmente parte del equipo.
 - **User Persona:** Contratista
@@ -248,7 +282,7 @@
 - Especialista sin especialidad: error "Debe asignar una especialidad a todos los especialistas".
 - Error de validación general: mensaje "Revise los datos antes de confirmar la incorporación". 
 
-**9. Consultar y gestionar miembros del equipo**
+**10. Consultar y gestionar miembros del equipo**
 
 - **User Goal:** Consultar la lista de miembros del proyecto y gestionar sus roles o especialidades, o eliminarlos si corresponde.
 - **User Persona:** Contratista
@@ -266,17 +300,13 @@
   - Eliminar un miembro del equipo (previa confirmación).
 
 **Puntos de Decisión:**
-- ¿Usuario tiene permisos para editar o eliminar miembros?
 - ¿El miembro seleccionado tiene tareas asignadas?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Usuario intenta eliminar miembro con tareas asignadas: sistema muestra advertencia "Debe reasignar o eliminar tareas antes de eliminar este miembro".
-- Usuario sin permisos: error "No tienes permisos para gestionar el equipo de este proyecto".
 - Cancelar edición o eliminación: no se realizan cambios. 
 
-**10. Crear un nuevo hito**
-
-<img src="../../../img/chapter4/userflows/uf10.png">
+**11. Crear un nuevo hito**
 
 - **User Goal:** Añadir un hito al cronograma del proyecto para estructurar fases clave o entregables intermedios.
 - **User Persona:** Contratista
@@ -299,17 +329,13 @@
 **Puntos de Decisión:**
 - ¿Nombre del hito ingresado?
 - ¿Fechas consistentes y dentro del rango permitido?
-- ¿Usuario tiene permisos para crear hitos?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Nombre vacío: error "El nombre del hito es obligatorio".
 - Fechas inconsistentes (inicio posterior a fin): sistema ajusta automáticamente o muestra advertencia.
 - Fechas fuera del rango del proyecto: error "Las fechas del hito deben estar dentro del rango del proyecto".
-- Usuario sin permisos: error "No tienes permisos para añadir hitos a este proyecto".
 
-**11. Consultar lista de hitos del proyecto**
-
-<img src="../../../img/chapter4/userflows/uf11.png">
+**12. Consultar lista de hitos del proyecto**
 
 - **User Goal:** Visualizar los hitos existentes del proyecto para conocer la estructura de su cronograma.
 - **User Persona:** Miembro del proyecto
@@ -324,15 +350,11 @@
 
 **Puntos de Decisión:**
 - ¿Existen hitos creados en el proyecto?
-- ¿Usuario tiene permisos para visualizar el cronograma?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Proyecto sin hitos creados: sistema muestra mensaje "No hay hitos registrados en este proyecto".
-- Usuario sin permisos: error "No tienes permisos para visualizar el cronograma de este proyecto". 
 
-**12. Editar información de un hito**
-
-<img src="../../../img/chapter4/userflows/uf12.png">
+**13. Editar información de un hito**
 
 - **User Goal:** Actualizar el nombre o las fechas de un hito para reflejar cambios en la planificación del proyecto.
 - **User Persona:** Contratista
@@ -357,17 +379,13 @@
 - ¿Nuevo nombre ingresado?
 - ¿Fechas en orden correcto?
 - ¿Fechas dentro del rango del proyecto?
-- ¿Usuario tiene permisos para editar hitos?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Nombre vacío: error "El nombre del hito es obligatorio".
 - Fechas inconsistentes: sistema puede ajustar automáticamente o mostrar advertencia.
 - Fechas fuera de rango: error "Las fechas del hito deben coincidir con el rango del proyecto".
-- Usuario sin permisos: error "No tienes permisos para editar hitos en este proyecto". 
 
-**13. Eliminar hito del cronograma**
-
-<img src="../../../img/chapter4/userflows/uf13.png">
+**14. Eliminar hito del cronograma**
 
 - **User Goal:** Eliminar un hito del cronograma del proyecto cuando ya no sea necesario.
 - **User Persona:** Contratista
@@ -386,14 +404,12 @@
 **Puntos de Decisión:**
 - ¿Hito tiene tareas o reuniones asociadas?
 - ¿Confirmación escrita correctamente?
-- ¿Usuario tiene permisos para eliminar hitos?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Confirmación incorrecta: error "El texto ingresado no coincide con el nombre del hito".
 - Usuario cancela la eliminación: no se realiza ninguna acción.
-- Usuario sin permisos: error "No tienes permisos para eliminar hitos en este proyecto".
 
-**14. Crear una nueva tarea**
+**15. Crear una nueva tarea**
 
 - **User Goal:** Añadir una nueva tarea dentro de un hito del cronograma para organizar el trabajo del equipo.
 - **User Persona:** Contratista
@@ -419,15 +435,13 @@
 - ¿Nombre de la tarea ingresado?
 - ¿Especialidad seleccionada?
 - ¿Fechas consistentes y dentro del rango del hito?
-- ¿Usuario tiene permisos para crear tareas?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Nombre vacío: error "El nombre de la tarea es obligatorio".
 - Especialidad no seleccionada: error "Debe seleccionar una especialidad".
 - Fechas inconsistentes o fuera de rango: error "Las fechas deben estar dentro del rango del hito y en orden correcto".
-- Usuario sin permisos: error "No tienes permisos para añadir tareas en este proyecto".
 
-**15. Consultar lista de tareas de un hito**
+**16. Consultar lista de tareas de un hito**
 
 - **User Goal:** Visualizar las tareas asociadas a un hito específico dentro del cronograma del proyecto.
 - **User Persona:** Miembro del proyecto
@@ -443,14 +457,12 @@
 - Usuario puede seleccionar una tarea para consultar más detalles si lo desea.
 
 **Puntos de Decisión:**
-- ¿Usuario tiene permisos para visualizar las tareas del proyecto?
 - ¿Existen tareas asociadas al hito?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Hito sin tareas: sistema muestra mensaje "No hay tareas registradas para este hito".
-- Usuario sin permisos: error "No tienes permisos para visualizar las tareas de este proyecto". 
 
-**16. Asignar responsable a una tarea**
+**17. Asignar responsable a una tarea**
 
 - **User Goal:** Designar un miembro del equipo como responsable de una tarea para su ejecución y seguimiento.
 - **User Persona:** Contratista
@@ -467,14 +479,12 @@
 
 **Puntos de Decisión:**
 - ¿Miembro seleccionado tiene la especialidad adecuada?
-- ¿Usuario tiene permisos para asignar responsables?
 
 **Flujos Alternativos (Unhappy Paths):**
 - No seleccionar responsable: error "Debe seleccionar un responsable para asignar la tarea".
 - No hay miembros compatibles al aplicar filtro: mensaje "No hay miembros disponibles con la especialidad requerida".
-- Usuario sin permisos: error "No tienes permisos para asignar responsables en este proyecto". 
 
-**17. Editar información de una tarea**
+**18. Editar información de una tarea**
 
 - **User Goal:** Actualizar el nombre, especialidad, fechas o responsable de una tarea en función de ajustes en la planificación o el equipo.
 - **User Persona:** Contratista
@@ -501,15 +511,13 @@
 - ¿Especialidad válida seleccionada?
 - ¿Fechas consistentes y dentro del rango del hito?
 - ¿Responsable actualizado cumple con la especialidad (si aplica)?
-- ¿Usuario tiene permisos para editar tareas?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Nombre vacío: error "El nombre de la tarea es obligatorio".
 - Especialidad no seleccionada: error "Debe seleccionar una especialidad".
 - Fechas inconsistentes o fuera de rango: error "Las fechas deben estar dentro del rango del hito y ser consistentes".
-- Usuario sin permisos: error "No tienes permisos para editar tareas en este proyecto". 
 
-**18. Enviar entregable de tarea**
+**19. Enviar entregable de tarea**
 
 - **User Goal:** Subir y enviar el entregable asociado a una tarea para su revisión.
 - **User Persona:** Especialista
@@ -529,13 +537,11 @@
 
 **Puntos de Decisión:**
 - ¿Se adjuntó al menos un archivo?
-- ¿Usuario tiene permisos para enviar entregables?
 
 **Flujos Alternativos (Unhappy Paths):**
 - No adjuntar archivos: error "Debe adjuntar al menos un archivo para enviar el entregable".
-- Usuario sin permisos: error "No tienes permisos para enviar entregables en esta tarea".
 
-**19. Consultar entregables enviados**
+**20. Consultar entregables enviados**
 
 - **User Goal:** Visualizar los entregables enviados para una tarea y consultar su estado de revisión.
 - **User Persona:** Especialista / Coordinador / Contratista
@@ -552,13 +558,11 @@
 
 **Puntos de Decisión:**
 - ¿El entregable ya fue enviado?
-- ¿Usuario tiene permisos para visualizar entregables?
 
 **Flujos Alternativos (Unhappy Paths):**
 - No hay entregable enviado: mensaje "Todavía no se ha enviado entregable para esta tarea".
-- Usuario sin permisos: error "No tienes permisos para consultar los entregables de esta tarea".
 
-**20. Revisar entregable enviado**
+**21. Revisar entregable enviado**
 
 - **User Goal:** Evaluar un entregable enviado por un especialista y tomar una acción (aprobar, rechazar o solicitar ajustes).
 - **User Persona:** Coordinador / Contratista
@@ -580,16 +584,14 @@
 - Sistema muestra mensaje de éxito con la acción realizada.
 
 **Puntos de Decisión:**
-- ¿Usuario tiene permisos de revisión?
 - ¿Acción seleccionada correctamente?
 - ¿Comentario obligatorio en caso de rechazo o solicitud de ajustes?
 
 **Flujos Alternativos (Unhappy Paths):**
 - No seleccionar acción: error "Debe seleccionar una acción para completar la revisión".
 - No ingresar comentario en rechazo o ajuste: error "Debe ingresar un comentario explicativo".
-- Usuario sin permisos: error "No tienes permisos para revisar entregables en este proyecto".
 
-**21. Presentar un Change Request**
+**22. Presentar un Change Request**
 
 - **User Goal:** Solicitar formalmente una modificación al proyecto mediante un Change Request.
 - **User Persona:** Entidad contratante (Cliente)
@@ -609,13 +611,11 @@
 
 **Puntos de Decisión:**
 - ¿Título y descripción del cambio ingresados correctamente?
-- ¿Usuario tiene permisos para presentar un Change Request?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Campos obligatorios incompletos: error "Debe ingresar título y descripción para solicitar un cambio".
-- Usuario sin permisos: error "No tienes permisos para presentar un Change Request en este proyecto".
 
-**22. Presentar una Technical Query**
+**23. Presentar una Technical Query**
 
 - **User Goal:** Formular una consulta técnica relacionada al proyecto para su evaluación y respuesta formal.
 - **User Persona:** Entidad contratante (Cliente)
@@ -634,13 +634,11 @@
 
 **Puntos de Decisión:**
 - ¿Título y descripción de la consulta ingresados correctamente?
-- ¿Usuario tiene permisos para presentar una Technical Query?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Campos obligatorios incompletos: error "Debe ingresar título y descripción para presentar una consulta técnica".
-- Usuario sin permisos: error "No tienes permisos para presentar una Technical Query en este proyecto".
 
-**23. Consultar Change Processes creados**
+**24. Consultar Change Processes creados**
 
 - **User Goal:** Visualizar los Change Processes asociados al proyecto, su origen (Change Request o Technical Query) y su estado actual.
 - **User Persona:** Coordinador / Contratista / Cliente
@@ -655,14 +653,12 @@
 - Usuario puede seleccionar un Change Process para ver su detalle completo si lo desea.
 
 **Puntos de Decisión:**
-- ¿Usuario tiene permisos para visualizar los Change Processes?
 - ¿Existen Change Processes asociados al proyecto?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Proyecto sin Change Processes: sistema muestra mensaje "No hay Change Processes registrados para este proyecto".
-- Usuario sin permisos: error "No tienes permisos para visualizar los Change Processes de este proyecto". 
 
-**24. Gestionar Change Order asociado**
+**25. Gestionar Change Order asociado**
 
 - **User Goal:** Formalizar y gestionar la autorización de cambios en el proyecto una vez que un Change Process ha sido aprobado.
 - **User Persona:** Contratista
@@ -683,9 +679,7 @@
 
 **Puntos de Decisión:**
 - ¿Change Process está aprobado?
-- ¿Usuario tiene permisos para gestionar Change Orders?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Change Process no aprobado aún: error "Solo se pueden generar Change Orders de Change Processes aprobados".
-- Usuario sin permisos: error "No tienes permisos para generar un Change Order en este proyecto".
 - Cancelar emisión del Change Order: no se genera ningún cambio.
