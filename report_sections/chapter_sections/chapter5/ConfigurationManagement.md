@@ -116,13 +116,13 @@ Para su gestión interna, se aplicará GitFlow. Se explican a continuación las 
 
 - **feature/**: Ramas para el desarrollo de nuevas funcionalidades. Se crean a partir de `develop` y, una vez completadas, se integran de nuevo en `develop`.  
   - **Convención de nombres**:  
-    `feature/story-id`  
-    Ejemplo: `feature/us77`
+    `feature/epic-id`  
+    Ejemplo: `feature/epic10`
 
 - **bugfix/**: Ramas para la correción de errores detectados en fase de desarrollo. Se crean a partir de `develop` y, una vez completadas, se integran de nuevo en `develop`.  
   - **Convención de nombres**:  
-    `bugfix/story-id`  
-    Ejemplo: `bugfix/us82`
+    `bugfix/epic-id`  
+    Ejemplo: `bugfix/epic08`
 
 - **release/**: Ramas para preparar una nueva versión de producción. Se crean desde `develop` cuando ya se ha alcanzado un conjunto estable de funcionalidades. Sirven para realizar pruebas, ajustes menores y documentación. Al finalizar, se integran en `main` y `develop`.  
   - **Convención de nombres**:  
@@ -131,8 +131,8 @@ Para su gestión interna, se aplicará GitFlow. Se explican a continuación las 
 
 - **hotfix/**: Ramas para corregir errores críticos detectados tardíamente en producción. Se crean desde `main` y se integran tanto en `main` como en `develop` (o en `release`, si hubiere alguna rama de ese tipo activa).  
   - **Convención de nombres**:  
-    `hotfix/story-id`  
-    Ejemplo: `hotfix/swr35`
+    `hotfix/epic-id`  
+    Ejemplo: `hotfix/epic01`
 
 ### 5.1.3. Source Code Style Guide & Coding Conventions
 
