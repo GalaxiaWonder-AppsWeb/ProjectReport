@@ -137,9 +137,9 @@
             </td>
             <td>
                 <strong>Adición de secciones:</strong><br>
-                <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.1. Sprint Planning 1</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.1. Sprint Planning 2</p>
                 <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.2. Aspect Leaders and Collaborators</p>
-                <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.3. Sprint Backlog 1</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.3. Sprint Backlog 2</p>
                 <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.4. Development Evidence for Sprint Review</p>
                 <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.5. Execution Evidence for Sprint Review</p>
                 <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.6. Services Documentation Evidence for Sprint Review</p>
@@ -297,7 +297,7 @@ Para este entregable se ha modificado principalmente el contenido del capítulo 
   - [5.1. Software Configuration Management](#51-software-configuration-management)
     - [5.1.1. Software Development Environment Configuration](#511-software-development-environment-configuration)
     - [5.1.2. Source Code Management](#512-source-code-management)
-    - [5.1.3. Source Code Style Guide and Coding Conventions](#513-source-code-style-guide-and-coding-conventions)
+    - [5.1.3. Source Code Style Guide and Coding Conventions](#513-source-code-style-guide-&-coding-conventions)
     - [5.1.4. Software Deployment Configuration](#514-software-deployment-configuration)
   - [5.2. Landing Page, Services & Applications Implementation](#52-landing-page-services--applications-implementation)
     - [5.2.1. Sprint 1](#521-sprint-1)
@@ -309,7 +309,7 @@ Para este entregable se ha modificado principalmente el contenido del capítulo 
       - [5.2.1.6. Services Documentation Evidence for Sprint Review](#5216-services-documentation-evidence-for-sprint-review)
       - [5.2.1.7. Software Deployment Evidence for Sprint Review](#5217-software-deployment-evidence-for-sprint-review)
       - [5.2.1.8. Team Collaboration Insights during Sprint](#5218-team-collaboration-insights-during-sprint)
-    - [5.2.2. Sprint 1](#521-sprint-1)
+    - [5.2.2. Sprint 2](#522-sprint-2)
       - [5.2.2.1. Sprint Planning 2](#5221-sprint-planning-2)
       - [5.2.2.2. Aspect Leaders & Collaborators](#5222-aspect-leaders--collaborators)
       - [5.2.2.3. Sprint Backlog 2](#5223-sprint-backlog-2)
@@ -7761,7 +7761,7 @@ Para la primera implementación de la web application se decidió utilizar Azure
 
 <div style="page-break-before: always;"></div>
 
-#### 5.2.1.2. Aspect Leaders and Collaborators
+#### 5.2.1.2. Aspect Leaders & Collaborators
 
 Debido a la presión por completar el Sprint 1 a tiempo, no se manejó a gran detalle una coordinación de aspectos. Se acordó establecer como aspecto general el desarrollo de la Landing Page, del cual el lider fue Fabrizio León.
 
@@ -7804,7 +7804,7 @@ Debido a la presión por completar el Sprint 1 a tiempo, no se manejó a gran de
 
 <img src="./img/chapter5/Sprint1/sprintbacklog.png">
 
-<a href="https://galaxiawonder.youtrack.cloud/dashboard?id=213-2" target="_blank">Ver tablero en YouTrack</a>
+<a href="https://galaxiawonder.youtrack.cloud/projects/0-2" target="_blank">Ver tablero en YouTrack</a>
 
 <b>Credenciales:</b>
 <ul>
@@ -8336,7 +8336,7 @@ Para este primer Sprint, el equipo ha fallado en tener una participación comple
   </tr>
 </table>
 
-#### 5.2.2.2. Aspect Leaders and Collaborators
+#### 5.2.2.2. Aspect Leaders & Collaborators
 
 Para el Sprint 2, se proyectan actividades como la segunda versión del Landing Page y la implementación de las vistas del Web Application.
 
@@ -8387,9 +8387,9 @@ Para el Sprint 2, se proyectan actividades como la segunda versión del Landing 
 
 #### 5.2.2.3. Sprint Backlog 2
 
-<img src=".//chapter5/Sprint1/sprintbacklog.png">
+<img src="./img/chapter5/Sprint1/sprintbacklog.png">
 
-<a href="https://galaxiawonder.youtrack.cloud/dashboard?id=213-2" target="_blank">Ver tablero en YouTrack</a>
+<a href="https://galaxiawonder.youtrack.cloud/projects/0-2" target="_blank">Ver tablero en YouTrack</a>
 
 <b>Credenciales:</b>
 <ul>

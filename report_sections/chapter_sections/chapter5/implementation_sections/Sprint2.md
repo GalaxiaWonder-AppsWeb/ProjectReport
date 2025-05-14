@@ -55,7 +55,7 @@
   </tr>
 </table>
 
-#### 5.2.2.2. Aspect Leaders and Collaborators
+#### 5.2.2.2. Aspect Leaders & Collaborators
 
 Para el Sprint 2, se proyectan actividades como la segunda versión del Landing Page y la implementación de las vistas del Web Application.
 
@@ -108,7 +108,7 @@ Para el Sprint 2, se proyectan actividades como la segunda versión del Landing 
 
 <img src="../../../../img/chapter5/Sprint1/sprintbacklog.png">
 
-<a href="https://galaxiawonder.youtrack.cloud/dashboard?id=213-2" target="_blank">Ver tablero en YouTrack</a>
+<a href="https://galaxiawonder.youtrack.cloud/projects/0-2" target="_blank">Ver tablero en YouTrack</a>
 
 <b>Credenciales:</b>
 <ul>
