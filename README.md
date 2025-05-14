@@ -211,6 +211,12 @@ Para este entregable que ha elaborado el informe desde el capitulo I hasta el ca
 
 <img src="./img/insight_tb1.png">
 
+**TP**
+
+Para este entregable se ha modificado principalmente el contenido del capítulo III y IV.
+
+<img src="./img/insight_tp.png">
+
 <div style="page-break-before: always;"></div>
 
 # Contenido
@@ -7796,7 +7802,7 @@ Debido a la presión por completar el Sprint 1 a tiempo, no se manejó a gran de
 
 #### 5.2.1.3. Sprint Backlog 1
 
-<img src="./../img/chapter5/Sprint1/sprintbacklog.png">
+<img src="./img/chapter5/Sprint1/sprintbacklog.png">
 
 <a href="https://galaxiawonder.youtrack.cloud/dashboard?id=213-2" target="_blank">Ver tablero en YouTrack</a>
 
@@ -8219,7 +8225,7 @@ Se presenta a modo de evidencia un video y capturas de las principales vistas im
 
 Contiene el formulario de contacto con una frase llamativa
 
-<img src="./../img/chapter5/Sprint1/execution1.png">
+<img src="./img/chapter5/Sprint1/execution1.png">
 
 <div style="page-break-after: always;"></div>
 
@@ -8227,7 +8233,7 @@ Contiene el formulario de contacto con una frase llamativa
 
 Contiene información sobre nuestra startup
 
-<img src="./../img/chapter5/Sprint1/execution2.png">
+<img src="./img/chapter5/Sprint1/execution2.png">
 
 <div style="page-break-after: always;"></div>
 
@@ -8235,7 +8241,7 @@ Contiene información sobre nuestra startup
 
 Detalla, para grupo por segmento, cuales son las principales funcionalidades del producto
 
-<img src="./../img/chapter5/Sprint1/execution3.png">
+<img src="./img/chapter5/Sprint1/execution3.png">
 
 <div style="page-break-after: always;"></div>
 
@@ -8243,7 +8249,7 @@ Detalla, para grupo por segmento, cuales son las principales funcionalidades del
 
 Se presentan los planes de suscripción (los diseñados provisionalmente)
 
-<img src="./../img/chapter5/Sprint1/execution4.png">
+<img src="./img/chapter5/Sprint1/execution4.png">
 
 <div style="page-break-after: always;"></div>
 
@@ -8251,7 +8257,7 @@ Se presentan los planes de suscripción (los diseñados provisionalmente)
 
 Junto al footer con información de contacto, se presentan testimonios de usuarios
 
-<img src="./../img/chapter5/Sprint1/execution5.png">
+<img src="./img/chapter5/Sprint1/execution5.png">
 
 <div style="page-break-after: always;"></div>
 
@@ -8381,7 +8387,7 @@ Para el Sprint 2, se proyectan actividades como la segunda versión del Landing 
 
 #### 5.2.2.3. Sprint Backlog 2
 
-<img src="./../img/chapter5/Sprint1/sprintbacklog.png">
+<img src=".//chapter5/Sprint1/sprintbacklog.png">
 
 <a href="https://galaxiawonder.youtrack.cloud/dashboard?id=213-2" target="_blank">Ver tablero en YouTrack</a>
 
@@ -11594,7 +11600,7 @@ Se presenta a modo de evidencia un video y capturas de las principales vistas im
 
 Contiene una frase e imagen alusiva a las necesidades de este segmento. Proporciona un botón que redirige a la página de registro.
 
-<img src="./../img/chapter5/Sprint2/landing/hero_contractor.png">
+<img src="./img/chapter5/Sprint2/landing/hero_contractor.png">
 
 <div style="page-break-after: always;"></div>
 
@@ -11602,7 +11608,7 @@ Contiene una frase e imagen alusiva a las necesidades de este segmento. Proporci
 
 Contiene una frase e imagen alusiva a las necesidades de este segmento. Proporciona un botón que redirige a la página de registro.
 
-<img src="./../img/chapter5/Sprint2/landing/hero_client.png">
+<img src="./img/chapter5/Sprint2/landing/hero_client.png">
 
 <div style="page-break-after: always;"></div>
 
@@ -11610,7 +11616,7 @@ Contiene una frase e imagen alusiva a las necesidades de este segmento. Proporci
 
 Contiene una la misión, visión y valores de la startup.
 
-<img src="./../img/chapter5/Sprint2/landing/about_us.png">
+<img src="./img/chapter5/Sprint2/landing/about_us.png">
 
 <div style="page-break-after: always;"></div>
 
@@ -11618,7 +11624,7 @@ Contiene una la misión, visión y valores de la startup.
 
 Contiene un resumen de los principales features de la aplicación web.
 
-<img src="./../img/chapter5/Sprint2/landing/overview_contractor.png">
+<img src="./img/chapter5/Sprint2/landing/overview_contractor.png">
 
 <div style="page-break-after: always;"></div>
 
@@ -11626,7 +11632,7 @@ Contiene un resumen de los principales features de la aplicación web.
 
 Contiene un resumen de los principales features de la aplicación web.
 
-<img src="./../img/chapter5/Sprint2/landing/overview_client.png">
+<img src="./img/chapter5/Sprint2/landing/overview_client.png">
 
 <div style="page-break-after: always;"></div>
 
@@ -11634,7 +11640,7 @@ Contiene un resumen de los principales features de la aplicación web.
 
 Muestra los principales planes de suscripción con sus beneficios.
 
-<img src="./../img/chapter5/Sprint2/landing/plans.png">
+<img src="./img/chapter5/Sprint2/landing/plans.png">
 
 <div style="page-break-after: always;"></div>
 
@@ -11642,7 +11648,7 @@ Muestra los principales planes de suscripción con sus beneficios.
 
 Muestra reviews de usuarios de cada segmento y, debajo, el footer con información de relevante como los términos de uso y datos de contacto.
 
-<img src="./../img/chapter5/Sprint2/landing/reviews_and_footer.png">
+<img src="./img/chapter5/Sprint2/landing/reviews_and_footer.png">
 
 <div style="page-break-after: always;"></div>
 
@@ -11655,42 +11661,42 @@ Se presenta a modo de evidencia un video y capturas de las principales vistas im
 
 Muestra credenciales de acceso, email y contraseña del usuario. Contiene opción de registro de usuario en caso no lo esté. Proporciona un botón para ingresar a aplicación.
 
-<img src="./../img/chapter5/Sprint2/webapplication/execution1.png">
+<img src="./img/chapter5/Sprint2/webapplication/execution1.png">
 
 <div style="page-break-after: always;"></div>
 
 **ORGANIZATION**
 Muestra vista principal de la organización, donde se encuentra la lista de organizaciones de las que es miembro el usuario. 
 
-<img src="./../img/chapter5/Sprint2/webapplication/execution2.png">
+<img src="./img/chapter5/Sprint2/webapplication/execution2.png">
 
 <div style="page-break-after: always;"></div>
 
 **ORGANIZATION INFORMATION**
 Muestra la pestaña información, la cual es también la vista por default al ingresar a organización.
 
-<img src="./../img/chapter5/Sprint2/webapplication/execution3.png">
+<img src="./img/chapter5/Sprint2/webapplication/execution3.png">
 
 <div style="page-break-after: always;"></div>
 
 **ORGANIZATION CONFIGURATION CONTRATISTA**
 Muestra la pestaña configuración, donde se pueden editar datos de la organización, pero solo para la entidad contratista.
 
-<img src="./../img/chapter5/Sprint2/webapplication/execution4.png">
+<img src="./img/chapter5/Sprint2/webapplication/execution4.png">
 
 <div style="page-break-after: always;"></div>
 
 **ORGANIZATION MEMBERS**
 Muestra la pestaña miembros, donde se listan los miembros y se agregan nuevos a la organización.
 
-<img src="./../img/chapter5/Sprint2/webapplication/execution5.png">
+<img src="./img/chapter5/Sprint2/webapplication/execution5.png">
 
 <div style="page-break-after: always;"></div>
 
 **ORGANIZATION PROJECTS**
 Muestra la vista de proyectos que están asignados dentro de la organización. 
 
-<img src="./../img/chapter5/Sprint2/webapplication/execution6.png">
+<img src="./img/chapter5/Sprint2/webapplication/execution6.png">
 
 <div style="page-break-after: always;"></div>
 
