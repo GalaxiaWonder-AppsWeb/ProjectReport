@@ -220,3 +220,27 @@ Para la segunda implementación de la landing page del proyecto, se decidió uti
 6. Configuramos el sitename (url) del web page, la rama y el comando de build y guardamos los cambios.
 
 <img src="../../../img/chapter5/Deploy/landing_page_v2/step6.png">
+
+**WEB APPLICATION DEPLOYMENT**
+
+Para la primera implementación de la web application se decidió utilizar Azure. Para ello, se siguio el siguiente proceso:
+
+1. Seleccionar la opción de Aplicación Web Estática
+
+<img src="../../../img/chapter5/Deploy/web_application/step1.png">
+
+2. Configurar nombre, organización, repositorio y rama
+
+<img src="../../../img/chapter5/Deploy/web_application/step2.png">
+
+3. Configuración de build
+
+<img src="../../../img/chapter5/Deploy/web_application/step3.png">
+
+4. Revisamos los detalles antes de crear
+
+<img src="../../../img/chapter5/Deploy/web_application/step4.png">
+
+5. Agregar variables de entorno
+
+<img src="../../../img/chapter5/Deploy/web_application/step5.png">
