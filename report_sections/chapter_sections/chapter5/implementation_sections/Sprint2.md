@@ -3424,6 +3424,24 @@ Muestra la vista de proyectos que están asignados dentro de la organización.
 
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
+No hubo desarrollo del API en este Sprint 2.
+
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
 
+Para este segundo sprint, se creó la segunda versión de la Landing Page, cuyo despliegue incluyó:
+
+1. Creación del primer release a partir de lo avanzado en develop.
+2. Integración del código en la branch de producción (main).
+3. Configuración de Netlify para el despliegue.
+4. Un hotfix y un redespliegue tras el deploy de la aplicación web.
+
+Además se llevó a cabo el desarrollo de la aplicación web, cuyo despliegue incluyó:
+
+1. Creación del primer release a partir de lo avanzado en develop.
+2. Integración del código en la branch de producción (main).
+3. Configuración en Azure para el despliegue.
+4. Un hotfix debido a un error de producción con las variables de entorno.
+
 #### 5.2.2.8. Team Collaboration Insights during Sprint
+
+En este segundo sprint se ha fallado en lograr el objetivo de implementar a totalidad toda la interfaz funcional de la aplicación web, pero se ha conseguido un avance total del desarrollo del modelo y los servicios.
