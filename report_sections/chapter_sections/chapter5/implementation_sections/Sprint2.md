@@ -3312,6 +3312,9 @@ En el Sprint 1, se realizó una primera implementación de la Landing Page utili
 
 Se presenta a modo de evidencia un video y capturas de las principales vistas implementadas. Enlace al video: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221e247_upc_edu_pe/EfQqRKJ2zyxGoWI-cu8L_iMBzPDe6ArypdwxPU3wHi_IUg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=rxu9W1](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221e247_upc_edu_pe/EfQqRKJ2zyxGoWI-cu8L_iMBzPDe6ArypdwxPU3wHi_IUg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=rxu9W1)
 
+<p align="center"><strong>LANDING PAGE</strong></p>
+
+
 **HERO SECTION CONTRATISTA**
 
 Contiene una frase e imagen alusiva a las necesidades de este segmento. Proporciona un botón que redirige a la página de registro.
@@ -3365,6 +3368,57 @@ Muestra los principales planes de suscripción con sus beneficios.
 Muestra reviews de usuarios de cada segmento y, debajo, el footer con información de relevante como los términos de uso y datos de contacto.
 
 <img src="../../../../img/chapter5/Sprint2/landing/reviews_and_footer.png">
+
+<div style="page-break-after: always;"></div>
+
+
+<p align="center"><strong>WEB APPLICATION</strong></p>
+
+Se presenta a modo de evidencia un video y capturas de las principales vistas implementadas. Enlace del video: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221e247_upc_edu_pe/Ee0BRLkm8UtIqEEy78tjwxgBmSbX22hY4dGRdd8HwxeDCA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=7Zb9qu](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221e247_upc_edu_pe/Ee0BRLkm8UtIqEEy78tjwxgBmSbX22hY4dGRdd8HwxeDCA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=7Zb9qu)
+
+**LOGIN Y REGISTER**
+
+Muestra credenciales de acceso, email y contraseña del usuario. Contiene opción de registro de usuario en caso no lo esté. Proporciona un botón para ingresar a aplicación.
+
+<img src="../../../../img/chapter5/Sprint2/webapplication/execution1.png">
+
+<div style="page-break-after: always;"></div>
+
+**ORGANIZATION**
+Muestra vista principal de la organización, donde se encuentra la lista de organizaciones de las que es miembro el usuario. 
+
+<img src="../../../../img/chapter5/Sprint2/webapplication/execution2.png">
+
+<div style="page-break-after: always;"></div>
+
+**ORGANIZATION INFORMATION**
+Muestra la pestaña información, la cual es también la vista por default al ingresar a organización.
+
+<img src="../../../../img/chapter5/Sprint2/webapplication/execution3.png">
+
+<div style="page-break-after: always;"></div>
+
+**ORGANIZATION CONFIGURATION CONTRATISTA**
+Muestra la pestaña configuración, donde se pueden editar datos de la organización, pero solo para la entidad contratista.
+
+<img src="../../../../img/chapter5/Sprint2/webapplication/execution4.png">
+
+<div style="page-break-after: always;"></div>
+
+**ORGANIZATION MEMBERS**
+Muestra la pestaña miembros, donde se listan los miembros y se agregan nuevos a la organización.
+
+<img src="../../../../img/chapter5/Sprint2/webapplication/execution5.png">
+
+<div style="page-break-after: always;"></div>
+
+**ORGANIZATION PROJECTS**
+Muestra la vista de proyectos que están asignados dentro de la organización. 
+
+<img src="../../../../img/chapter5/Sprint2/webapplication/execution6.png">
+
+<div style="page-break-after: always;"></div>
+
 
 <div style="page-break-after: always;"></div>
 
