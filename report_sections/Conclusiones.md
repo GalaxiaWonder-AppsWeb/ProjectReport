@@ -1,6 +1,5 @@
 # Conclusiones
 
-- En el ámbito de desarrollo, se ha completado exitosamente la primera implementación y el despliegue de la landing page de nuestro producto.
-- En el ámbito financiero, se ha validado la existencia de un mercado activo que presenta una necesidad real de soluciones tecnológicas como la que ofrecemos.
-- En el ámbito de diseño, a través de la elicitación de requisitos, se ha logrado una comprensión profunda del modelo de negocio, lo que ha permitido aplicar el conocimiento de dominio para diseñar una solución funcionalmente sólida y con una interfaz orientada a la experiencia del usuario.
-- En el ámbito de trabajo en equipo, se han identificado una serie de falencias que han impedido lograr una colaboración efectiva, que deberán resolverse a medida del avance del proyecto.
+- En el ámbito de desarrollo, se ha completado exitosamente la segunda implementación y despliegue de la landing page de nuestro producto, pero se ha fallado en cumplir con la implementación del front-end del web application, quedando incompleto.
+- En el ámbito financiero, se mantiene la validez de la existencia de un mercado activo que presenta una necesidad real de soluciones tecnológicas como la que ofrecemos, más ahora se toman en consideración preocupaciones como el precio del hosting, que serán necesarios tomar en cuenta para ajustar los precios de las suscripciones y/o modelo de negocio del producto.
+- En el ámbito de trabajo en equipo, se ha identificado como principal falencia la falta de dominio técnico de los miembros del equipo, desafío que deberá abordarse a lo largo de los próximos sprints.
