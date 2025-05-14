@@ -114,9 +114,9 @@
             </td>
             <td>
                 <strong>Adición de secciones:</strong><br>
-                <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.1. Sprint Planning 1</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.1. Sprint Planning 2</p>
                 <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.2. Aspect Leaders and Collaborators</p>
-                <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.3. Sprint Backlog 1</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.3. Sprint Backlog 2</p>
                 <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.4. Development Evidence for Sprint Review</p>
                 <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.5. Execution Evidence for Sprint Review</p>
                 <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.6. Services Documentation Evidence for Sprint Review</p>
