@@ -92,7 +92,7 @@ En Galaxia Wonder, la gestión del código fuente se realiza mediante Git como s
 
 El proyecto está organizado en varios repositorios, según la arquitectura modular de las soluciones tecnológicas utilizadas:
 
-- Landing Page (Vue.js + Tailwind CSS):  
+- Landing Page (Vue.js):  
   [https://github.com/GalaxiaWonder-AppsWeb/LandingPage](https://github.com/GalaxiaWonder-AppsWeb/LandingPage)
 
 - FrontEnd Web Application (Vue.js SPA con Vite):  
