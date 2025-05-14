@@ -36,3 +36,9 @@ Se presenta una tabla que especifica qué miembro del equipo se corresponde con 
 Para este entregable que ha elaborado el informe desde el capitulo I hasta el capítulo V en base al proceso de investigación realizado en equipo y diseño del sistema (integralmente).
 
 <img src="../img/insight_tb1.png">
+
+**TP**
+
+Para este entregable se ha modificado principalmente el contenido del capítulo III y IV.
+
+<img src="../img/insight_tp.png">
