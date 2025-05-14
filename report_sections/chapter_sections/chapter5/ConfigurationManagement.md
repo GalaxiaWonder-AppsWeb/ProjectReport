@@ -92,7 +92,7 @@ En Galaxia Wonder, la gestión del código fuente se realiza mediante Git como s
 
 El proyecto está organizado en varios repositorios, según la arquitectura modular de las soluciones tecnológicas utilizadas:
 
-- Landing Page (Vue.js + Tailwind CSS):  
+- Landing Page (Vue.js):  
   [https://github.com/GalaxiaWonder-AppsWeb/LandingPage](https://github.com/GalaxiaWonder-AppsWeb/LandingPage)
 
 - FrontEnd Web Application (Vue.js SPA con Vite):  
@@ -116,13 +116,13 @@ Para su gestión interna, se aplicará GitFlow. Se explican a continuación las 
 
 - **feature/**: Ramas para el desarrollo de nuevas funcionalidades. Se crean a partir de `develop` y, una vez completadas, se integran de nuevo en `develop`.  
   - **Convención de nombres**:  
-    `feature/story-id`  
-    Ejemplo: `feature/us77`
+    `feature/epic-id`  
+    Ejemplo: `feature/epic10`
 
 - **bugfix/**: Ramas para la correción de errores detectados en fase de desarrollo. Se crean a partir de `develop` y, una vez completadas, se integran de nuevo en `develop`.  
   - **Convención de nombres**:  
-    `bugfix/story-id`  
-    Ejemplo: `bugfix/us82`
+    `bugfix/epic-id`  
+    Ejemplo: `bugfix/epic08`
 
 - **release/**: Ramas para preparar una nueva versión de producción. Se crean desde `develop` cuando ya se ha alcanzado un conjunto estable de funcionalidades. Sirven para realizar pruebas, ajustes menores y documentación. Al finalizar, se integran en `main` y `develop`.  
   - **Convención de nombres**:  
@@ -131,8 +131,8 @@ Para su gestión interna, se aplicará GitFlow. Se explican a continuación las 
 
 - **hotfix/**: Ramas para corregir errores críticos detectados tardíamente en producción. Se crean desde `main` y se integran tanto en `main` como en `develop` (o en `release`, si hubiere alguna rama de ese tipo activa).  
   - **Convención de nombres**:  
-    `hotfix/story-id`  
-    Ejemplo: `hotfix/swr35`
+    `hotfix/epic-id`  
+    Ejemplo: `hotfix/epic01`
 
 ### 5.1.3. Source Code Style Guide & Coding Conventions
 
@@ -192,3 +192,55 @@ La landing page del proyecto se desplegará utilizando GitHub Pages, una platafo
 <img src="../../../img/chapter5/Deploy/Gitpages.png">
 
 Enlace para acceder a la landing page: [https://galaxiawonder-appsweb.github.io/LandingPage/](https://galaxiawonder-appsweb.github.io/LandingPage/)
+
+**LANDING PAGE V2 DEPLOYMENT**
+
+Para la segunda implementación de la landing page del proyecto, se decidió utilizar Netlify. Para ello, se siguio el siguiente proceso:
+
+1. Seleccionar la opción de importar un proyecto existente.
+
+<img src="../../../img/chapter5/Deploy/landing_page_v2/step1.png">
+
+2. Seleccionamos mediante GitHub
+
+<img src="../../../img/chapter5/Deploy/landing_page_v2/step2.png">
+
+3. Seleccionamos la opción de organización
+
+<img src="../../../img/chapter5/Deploy/landing_page_v2/step3.png">
+
+4. Seleccionamos el repositorio de la landing page
+
+<img src="../../../img/chapter5/Deploy/landing_page_v2/step4.png">
+
+5. Se refleja las configuraciones en el dashboard
+
+<img src="../../../img/chapter5/Deploy/landing_page_v2/step5.png">
+
+6. Configuramos el sitename (url) del web page, la rama y el comando de build y guardamos los cambios.
+
+<img src="../../../img/chapter5/Deploy/landing_page_v2/step6.png">
+
+**WEB APPLICATION DEPLOYMENT**
+
+Para la primera implementación de la web application se decidió utilizar Azure. Para ello, se siguio el siguiente proceso:
+
+1. Seleccionar la opción de Aplicación Web Estática
+
+<img src="../../../img/chapter5/Deploy/web_application/step1.png">
+
+2. Configurar nombre, organización, repositorio y rama
+
+<img src="../../../img/chapter5/Deploy/web_application/step2.png">
+
+3. Configuración de build
+
+<img src="../../../img/chapter5/Deploy/web_application/step3.png">
+
+4. Revisamos los detalles antes de crear
+
+<img src="../../../img/chapter5/Deploy/web_application/step4.png">
+
+5. Agregar variables de entorno
+
+<img src="../../../img/chapter5/Deploy/web_application/step5.png">

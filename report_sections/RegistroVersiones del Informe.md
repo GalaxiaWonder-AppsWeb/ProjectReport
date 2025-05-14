@@ -100,5 +100,48 @@
                 <p style="display: block; margin: 2px 0; text-indent: 0px; font-weight: bold;">Conclusiones</p>
             </td>
         </tr>
+        <tr>
+            <td>2.0</td>
+            <td>14/05/2025</td>
+            <td>
+                <ul>
+                    <li>Aponte Cruzado, Andrea Marielena</li>
+                    <li>León Vivas, Fabrizio Amir</li>
+                    <li>López Acuña, Mario Joaquín</li>
+                    <li>Orozco Torres, Álvaro Joaquín</li>
+                    <li>Reaño Delgadillo, Henry Paolo</li>
+                </ul>
+            </td>
+            <td>
+                <strong>Adición de secciones:</strong><br>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.1. Sprint Planning 1</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.2. Aspect Leaders and Collaborators</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.3. Sprint Backlog 1</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.4. Development Evidence for Sprint Review</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.5. Execution Evidence for Sprint Review</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.6. Services Documentation Evidence for Sprint Review</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.7. Software Deployment Evidence for Sprint Review</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.8. Team Collaboration Insights during Sprint</p>
+                <strong>Actualización de secciones:</strong><br>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">4.3.1. Landing Page Wireframe</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">4.3.2. Landing Page Mock-up</p>
+                <p style="display: block; margin: 2px 0; text-indent: 0px; font-weight: bold;">4.4. Web Applications UX/UI Design</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">4.4.1. Web Applications Wireframes</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">4.4.2. Web Applications Wireflow Diagrams</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">4.4.2. Web Applications Mock-ups</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">4.4.3. Web Applications User Flow Diagrams</p>
+                <p style="display: block; margin: 2px 0; text-indent: 0px; font-weight: bold;">4.5. Web Applications Prototyping</p>
+                <p style="display: block; margin: 2px 0; text-indent: 0px; font-weight: bold;">4.6. Domain-Driven Software Architecture</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">4.6.1. Software Architecture Context Diagram</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">4.6.2. Software Architecture Container Diagrams</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">4.6.3. Software Architecture Components Diagrams</p>
+                <p style="display: block; margin: 2px 0; text-indent: 0px; font-weight: bold;">4.7. Software Object-Oriented Design</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">4.7.1. Class Diagrams</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">4.7.2. Class Dictionary</p>
+                <p style="display: block; margin: 2px 0; text-indent: 0px; font-weight: bold;">4.8. Database Design</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">4.8.1. Database Diagram</p>
+            </td>
+        </tr>
     </tbody>
 </table>
+

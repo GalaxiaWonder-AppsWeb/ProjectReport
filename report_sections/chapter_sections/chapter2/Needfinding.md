@@ -51,7 +51,7 @@ Se considera para la realización de este User Task Matrix los User Persona, sus
   <thead>
     <tr>
       <th rowspan="2">Task</th>
-      <th colspan="2">Adilberto Cáceres</th>
+      <th colspan="2">Edilberto Cáceres</th>
       <th colspan="2">José Rodríguez</th>
       <th colspan="2">Alfonso Villarán</th>
     </tr>

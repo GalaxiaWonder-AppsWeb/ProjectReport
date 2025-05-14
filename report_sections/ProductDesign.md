@@ -437,203 +437,737 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 
 ### 4.4.1. Web Applications Wireframes. 
 
+Enlace para acceder al <a href="https://www.figma.com/design/K68n9DnQRThT5DihRPAQId/SoftwareGestion?node-id=2105-1303&t=8pukcXo2ixT5RZ4d-1">Figma</a>
+
+**Iniciar sesion**
+
+<img src="../img/chapter4/wireframes/Login.png">
+
+<div style="page-break-before: always;"></div>
+
+**Informacion de organizacion**
+
+<img src="../img/chapter4/wireframes/Detailorga.png">
+
+<div style="page-break-before: always;"></div>
+
+**Crear proyecto**
+
+<img src="../img/chapter4/wireframes/Createproject.png">
+
+<div style="page-break-before: always;"></div>
+
+**Informacion del proyecto**
+
+<img src="../img/chapter4/wireframes/Projectlist.png">
+
+<div style="page-break-before: always;"></div>
+
+**Configuracion del proyecto**
+
+<img src="../img/chapter4/wireframes/Projectcongfig.png">
+
+<div style="page-break-before: always;"></div>
+
+**Miembros del proyecto**
+
+<img src="../img/chapter4/wireframes/Projectmembers.png">
+
+<div style="page-break-before: always;"></div>
+
+**Subir contrato**
+
+<img src="../img/chapter4/wireframes/Uploadcontract.png">
+
+<div style="page-break-before: always;"></div>
+
+**Creacion de milestone**
+
+<img src="../img/chapter4/wireframes/Createmilestone.png">
+
+<div style="page-break-before: always;"></div>
+
+**Informacion de tarea**
+
+<img src="../img/chapter4/wireframes/Edittask.png">
+
+<div style="page-break-before: always;"></div>
+
+**Estado de proyecto**
+
+<img src="../img/chapter4/wireframes/Statusproject.png">
+
+<div style="page-break-before: always;"></div>
+
+**Proceso de cambio del proyecto**
+
+<img src="../img/chapter4/wireframes/Changeprocess.png">
+
+<div style="page-break-before: always;"></div>
+
 ### 4.4.2. Web Applications Wireflow Diagrams. 
 
+Enlace para acceder al <a href="https://lucid.app/lucidchart/61958854-f009-480f-b122-df53bd8ab153/edit?viewport_loc=-9091%2C-7108%2C21047%2C10719%2C0_0&invitationId=inv_a67952f0-a49f-4210-bb72-2e9b6b4d129d">Lucid Chart</a>
+
+**1. Invitar miembros a una organizacion**
+
+**User Goal: Invitar a un nuevo miembro a la organización.**
+
+**User Persona:** Contratista
+
+El sistema carga la vista principal de la organización con la pestaña "Miembros de la organización" activa. Desde esta vista, el usuario selecciona la opción "Agregar miembro", lo que despliega un buscador con una lista de usuarios disponibles para ser invitados. El usuario selecciona a uno de ellos y hace clic en el botón "Continuar". A continuación, el sistema actualiza la sección de invitaciones mostrando al nuevo usuario como invitado. Finalmente, el usuario puede ver el listado de personas pendientes de aceptar la invitación.
+
+<img src="../img/chapter4/wireflow/wf01.png">
+
+<div style="page-break-before: always;"></div>
+
+**2. Crear un nuevo proyecto**
+
+**User Goal: Crear un proyecto dentro de la organización activa para iniciar la planificación de su cronograma, equipo y tareas.**
+
+**User Persona:** Contratista
+
+El sistema presenta la vista de la organización seleccionada con la barra de navegación específica de organización visible. Por defecto, se muestra la pestaña "Información", donde el usuario puede ver el nombre comercial o razón social, el contratista propietario de la organización, la fecha de creación y el RUC. A continuación, el usuario accede a la pestaña de proyectos de la organización. El sistema muestra una lista de proyectos existentes, cada uno con su nombre, estado actual y el rol que desempeña el usuario. Desde esta vista, el usuario selecciona la opción "Crear nuevo proyecto", tras lo cual el sistema despliega un formulario con los siguientes campos: nombre del proyecto, descripción, fecha de inicio (prellenada con la fecha actual y no editable), fecha estimada de finalización, carga del contrato firmado, fecha de firma del contrato y correo electrónico de la entidad contratante (que debe estar previamente registrada). El usuario completa todos los campos y envía el formulario. El sistema valida los datos ingresados y, si todo es correcto, crea el nuevo proyecto dentro de la organización activa. Finalmente, se muestra un mensaje de éxito y el sistema redirige automáticamente al detalle del proyecto recién creado.
+
+<img src="../img/chapter4/wireflow/wf02.png">
+
+<div style="page-break-before: always;"></div>
+
+**3. Consultar y visualizar lista de proyectos y sus detalles**
+
+**User Goal: Consultar los proyectos accesibles para el usuario y visualizar su información general.**
+
+**User Persona:** Contratista
+
+El sistema carga la vista de la organización seleccionada, mostrando la barra de navegación correspondiente. Desde esta vista, el usuario accede a la pestaña "Proyectos", donde el sistema presenta un listado de todos los proyectos vinculados a la organización, incluyendo información resumida como el nombre del proyecto, su estado actual y el rol del usuario dentro de cada uno. El usuario selecciona uno de los proyectos disponibles. A continuación, el sistema muestra la vista específica del proyecto elegido, incluyendo la barra de navegación de proyecto. De forma predeterminada, se carga la pestaña "Información", donde se detallan el nombre del proyecto, su estado actual, las fechas de inicio y finalización, y la entidad contratante responsable.
+
+<img src="../img/chapter4/wireflow/wf03.png">
+
+<div style="page-break-before: always;"></div>
+
+**4. Editar información general del proyecto**
+
+**User Goal: Actualizar el nombre o la descripción del proyecto para reflejar cambios en el alcance o clarificaciones internas.**
+
+**User Persona:** Contratista
+
+El sistema presenta la vista del proyecto seleccionado, incluyendo la barra de navegación específica del proyecto. El usuario accede a la pestaña "Configuración", donde el sistema despliega una vista con los detalles actuales del proyecto: nombre, descripción, estado y una sección denominada "zona de peligro", que permite editar las restricciones contractuales y eliminar el proyecto. Los campos de nombre y descripción están habilitados para edición directa, como en un formulario. El usuario modifica uno o ambos campos. Una vez realizados los cambios, el sistema valida la información ingresada y, si es correcta, actualiza los datos del proyecto. Finalmente, se muestra un mensaje confirmando que la operación fue exitosa.
+
+<img src="../img/chapter4/wireflow/wf04.png">
+
+<div style="page-break-before: always;"></div>
+
+**5. Cambiar estado del proyecto**
+
+**User Goal: Actualizar el estado del proyecto para reflejar su progreso o finalización.**
+
+**User Persona:** Contratista
+
+El sistema presenta la vista del proyecto seleccionado, mostrando la barra de navegación correspondiente. El usuario accede a la pestaña "Configuración", donde se despliega una vista con los detalles actuales del proyecto: nombre, descripción, estado y una sección de “zona de peligro” que incluye opciones para editar restricciones contractuales y eliminar el proyecto. El campo correspondiente al estado del proyecto está habilitado como una lista desplegable. El usuario selecciona un nuevo estado desde dicha lista. Una vez realizado el cambio, el sistema valida la información y actualiza el estado del proyecto. Finalmente, se muestra un mensaje confirmando que la actualización se realizó con éxito.
+
+<img src="../img/chapter4/wireflow/wf05.png">
+
+<div style="page-break-before: always;"></div>
+
+**6. Cambiar correo de entidad contratante y fecha de finalización**
+
+**User Goal: Actualizar la entidad contratante y fecha de finalización del proyecto en caso de modificaciones administrativas.**
+
+**User Persona:** Contratista
+
+El sistema muestra la vista del proyecto seleccionado con su respectiva barra de navegación. El usuario accede a la pestaña "Configuración", donde se despliega una vista con los detalles actuales del proyecto, incluyendo el nombre, la descripción, el estado y una sección llamada "zona de peligro", que permite editar las restricciones contractuales o eliminar el proyecto. El usuario selecciona la opción "Cambiar restricciones contractuales". El sistema presenta una nueva vista con los datos contractuales actuales del proyecto: el archivo del contrato firmado, el correo de la entidad contratante y la fecha estimada de finalización. Los campos de correo y fecha están habilitados para edición. El usuario modifica uno o ambos datos, y al enviar los cambios, el sistema valida la información ingresada. Si todo es correcto, guarda los nuevos valores y muestra un mensaje de éxito confirmando la actualización.
+
+<img src="../img/chapter4/wireflow/wf06.png">
+
+<div style="page-break-before: always;"></div>
+
+**7. Cambiar contrato del proyecto**
+
+**User Goal: Actualizar el contrato del proyecto en caso de modificaciones legales.**
+
+**User Persona:** Contratista
+
+El sistema presenta la vista del proyecto seleccionado junto con la barra de navegación correspondiente. El usuario accede a la pestaña "Configuración", donde se despliega una vista con los detalles actuales del proyecto: nombre, descripción, estado y una sección denominada "zona de peligro", que permite editar las restricciones contractuales o eliminar el proyecto. El usuario selecciona la opción "Cambiar restricciones contractuales". A continuación, el sistema muestra una nueva vista con los datos contractuales actuales del proyecto, incluyendo el archivo del contrato firmado, el correo de la entidad contratante y la fecha estimada de finalización.
+
+<img src="../img/chapter4/wireflow/wf07.png">
+
+<div style="page-break-before: always;"></div>
+
+**8. Eliminar proyecto**
+
+**User Goal: Eliminar un proyecto que ya no será ejecutado o es innecesario conservar.**
+
+**User Persona:** Contratista
+
+El sistema muestra la vista del proyecto seleccionado con su barra de navegación correspondiente. El usuario accede a la pestaña "Configuración", donde se presentan los detalles actuales del proyecto: nombre, descripción, estado y una sección denominada "zona de peligro", que permite editar las restricciones contractuales o eliminar el proyecto. El usuario selecciona la opción "Eliminar proyecto".
+El sistema muestra una advertencia de confirmación, informando que la eliminación del proyecto implica la pérdida de todos los recursos asociados, excepto los archivos almacenados en el espacio de trabajo. Para confirmar la acción, el usuario debe escribir manualmente la frase “eliminar + nombre del proyecto” en un campo de texto. Tras enviar la confirmación, el sistema valida que la entrada coincida exactamente con el formato solicitado. Si es correcta, el sistema procede a eliminar el proyecto. Finalmente, se muestra un mensaje de éxito notificando que el proyecto ha sido eliminado satisfactoriamente.
+
+<img src="../img/chapter4/wireflow/wf08.png">
+
+<div style="page-break-before: always;"></div>
+
+**9. Agregar nuevos miembros al proyecto**
+
+**User Goal: Incorporar nuevos miembros de la organización al equipo del proyecto, asignándoles un rol y especialidad si corresponde.**
+
+**User Persona:** Contratista
+
+El contratista accede a la sección "Equipo" dentro del detalle del proyecto. Desde esta vista, el usuario selecciona la opción "Agregar miembros". El sistema despliega una lista con los miembros de la organización que aún no forman parte del proyecto. En caso de ser necesario, el usuario puede utilizar la barra de búsqueda para filtrar los resultados por nombre o correo electrónico.
+Luego, el usuario selecciona uno o más miembros de la lista. Para cada persona seleccionada, se solicita la asignación de un rol, que puede ser Coordinador o Especialista. En caso de asignar el rol de Especialista, el sistema también requiere definir la especialidad correspondiente. Una vez completadas las asignaciones, el usuario confirma la acción. El sistema registra la incorporación de los miembros en estado pendiente de confirmación.
+
+<img src="../img/chapter4/wireflow/wf09.png">
+
+<div style="page-break-before: always;"></div>
+
+**10. Confirmar incorporación de miembros**
+
+**User Goal: Finalizar el proceso de adición de nuevos miembros al proyecto, haciéndolos oficialmente parte del equipo.**
+
+**User Persona:** Contratista
+
+El contratista revisa la lista de miembros seleccionados para su incorporación al proyecto. Durante esta revisión, verifica que cada miembro tenga asignado un rol y, en caso de que el rol sea Especialista, que también cuente con una especialidad definida. Una vez confirmada la integridad de la información, el usuario presiona el botón "Confirmar incorporación". El sistema valida que todos los datos requeridos estén completos y correctamente asignados. Si la validación es exitosa, el sistema actualiza oficialmente el equipo del proyecto, incorporando a los nuevos miembros. Finalmente, se muestra un mensaje de éxito confirmando que la incorporación se ha realizado correctamente.
+
+<img src="../img/chapter4/wireflow/wf10.png">
+
+<div style="page-break-before: always;"></div>
+
+**11. Consultar y gestionar miembros del equipo**
+
+**User Goal: Consultar la lista de miembros del proyecto y gestionar sus roles o especialidades.**
+
+**User Persona:** Contratista
+
+El contratista accede a la sección "Equipo" dentro del detalle del proyecto. El sistema presenta una lista de los miembros actuales del equipo, incluyendo para cada uno su nombre, correo electrónico, rol asignado y, en caso de corresponder, la especialidad asociada. Desde esta vista, el usuario puede realizar acciones específicas como editar el rol de cualquier miembro del equipo. Si el rol asignado es "Especialista", también se habilita la opción para modificar su especialidad correspondiente.
+
+<img src="../img/chapter4/wireflow/wf11.png">
+
+<div style="page-break-before: always;"></div>
+
+**12. Crear un nuevo hito**
+
+**User Goal: Añadir un hito al cronograma del proyecto para estructurar fases clave o entregables intermedios.**
+
+**User Persona:** Contratista
+
+El contratista accede a la sección "Cronograma" dentro del detalle del proyecto. Desde esta vista, el usuario selecciona la opción "Añadir hito". El sistema despliega un formulario de creación que solicita el nombre del hito, la fecha de inicio y la fecha de finalización. El usuario completa todos los campos requeridos y envía el formulario. El sistema procede a validar la información ingresada, asegurando que el nombre no esté vacío, que las fechas estén en el orden cronológico correcto y que dichas fechas se encuentren dentro del rango general definido para el proyecto. Si la validación es exitosa, el sistema crea el nuevo hito y muestra un mensaje confirmando su creación satisfactoria.
+
+<img src="../img/chapter4/wireflow/wf12.png">
+
+<div style="page-break-before: always;"></div>
+
+**13. Consultar lista de hitos del proyecto**
+
+**User Goal: Visualizar los hitos existentes del proyecto para conocer la estructura de su cronograma.**
+
+**User Persona:** Miembro del proyecto
+
+El usuario accede a la sección "Cronograma" dentro del detalle del proyecto. El sistema muestra una lista de los hitos registrados, presentando para cada uno su nombre, fecha de inicio y fecha de finalización. Desde esta vista, el usuario puede interactuar con la lista expandiendo cualquier hito que lo permita, con el fin de visualizar las tareas asociadas a dicho hito, en caso de que existan.
+
+<img src="../img/chapter4/wireflow/wf13.png">
+
+<div style="page-break-before: always;"></div>
+
+**14. Editar información de un hito**
+
+**User Goal: Actualizar el nombre o las fechas de un hito para reflejar cambios en la planificación del proyecto.**
+
+**User Persona:** Contratista
+
+El contratista accede a la sección "Cronograma" del proyecto y selecciona el hito que desea modificar. Luego, el usuario presiona la opción "Editar hito", tras lo cual el sistema despliega un formulario editable con los campos correspondientes: nombre del hito, fecha de inicio y fecha de finalización. El usuario realiza las modificaciones necesarias y guarda los cambios. El sistema valida que el nombre no esté vacío, que las fechas estén en un orden cronológico válido (fecha de inicio menor o igual a la fecha de finalización), y que ambas fechas se encuentren dentro del rango permitido del proyecto. Si la validación es exitosa, el sistema actualiza el hito con la nueva información y muestra un mensaje confirmando la actualización.
+
+<img src="../img/chapter4/wireflow/wf14.png">
+
+<div style="page-break-before: always;"></div>
+
+**15. Eliminar hito del cronograma**
+
+**User Goal: Eliminar un hito del cronograma del proyecto cuando ya no sea necesario.**
+
+**User Persona:** Contratista
+
+El contratista accede a la sección "Cronograma" del proyecto y selecciona el hito que desea eliminar. El usuario presiona la opción "Eliminar hito", tras lo cual el sistema muestra una advertencia de confirmación. En caso de que el hito tenga tareas o reuniones asociadas, se informa claramente que estos elementos también serán eliminados. Para confirmar la acción, el usuario debe escribir la frase "eliminar + nombre del hito". El sistema valida que la confirmación coincida exactamente con lo solicitado. Si la validación es correcta, el sistema elimina el hito junto con los contenidos asociados, en caso de haberlos, y muestra un mensaje de éxito indicando que la operación se realizó satisfactoriamente.
+
+<img src="../img/chapter4/wireflow/wf15.png">
+
+<div style="page-break-before: always;"></div>
+
+**16. Crear una nueva tarea**
+
+**User Goal: Añadir una nueva tarea dentro de un hito del cronograma para organizar el trabajo del equipo.**
+
+**User Persona:** Contratista
+
+El contratista accede a la sección "Cronograma" del proyecto y expande el hito en el que desea crear una nueva tarea. Desde allí, el usuario selecciona la opción "Añadir tarea". El sistema despliega un formulario que solicita los siguientes datos: nombre de la tarea, especialidad requerida, fecha de inicio y fecha de vencimiento. El usuario completa todos los campos y envía el formulario. A continuación, el sistema valida que el nombre no esté vacío, que las fechas estén en el orden correcto (inicio ≤ vencimiento) y que ambas se encuentren dentro del rango definido por el hito. Si la validación es exitosa, el sistema crea la nueva tarea en estado DRAFT y muestra un mensaje confirmando que la tarea fue creada satisfactoriamente.
+
+<img src="../img/chapter4/wireflow/wf16.png">
+
+<div style="page-break-before: always;"></div>
+
+**17. Consultar lista de tareas de un hito**
+
+**User Goal: Visualizar las tareas asociadas a un hito específico dentro del cronograma del proyecto.**
+
+**User Persona:** Contratista
+
+El usuario accede a la sección "Cronograma" dentro del detalle del proyecto y expande el hito que desea consultar. El sistema muestra la lista de tareas asociadas a ese hito, presentando para cada una de ellas su nombre, la especialidad requerida, el responsable asignado en caso de que exista, y el estado actual de la tarea, que puede ser Draft, Pending, Submitted o Reviewed. Si lo desea, el usuario puede seleccionar una tarea específica para consultar más detalles sobre su contenido o estado.
+
+<img src="../img/chapter4/wireflow/wf17.png">
+
+<div style="page-break-before: always;"></div>
+
+**18. Asignar responsable a una tarea**
+
+**User Goal: Designar un miembro del equipo como responsable de una tarea para su ejecución y seguimiento.**
+
+**User Persona:** Miembro del proyecto
+
+El contratista accede a la sección "Cronograma" del proyecto, expande el hito correspondiente y localiza la tarea que desea asignar. Luego, selecciona la opción "Asignar responsable". El sistema despliega una lista con los miembros del proyecto disponibles para asumir la tarea. Opcionalmente, el usuario puede aplicar un filtro para mostrar únicamente aquellos miembros cuya especialidad coincida con la requerida por la tarea. A continuación, el usuario selecciona un miembro como responsable. El sistema actualiza la tarea, asignando al responsable elegido y cambiando automáticamente su estado a PENDING. Finalmente, se muestra un mensaje de éxito que confirma que la tarea fue asignada correctamente.
+
+<img src="../img/chapter4/wireflow/wf18.png">
+
+<div style="page-break-before: always;"></div>
+
+**19. Editar información de una tarea**
+
+**User Goal: Actualizar el nombre, especialidad, fechas o responsable de una tarea en función de ajustes en la planificación o el equipo.**
+
+**User Persona:** Contratista
+
+El contratista accede a la sección "Cronograma" del proyecto, expande el hito correspondiente y localiza la tarea que desea editar. El usuario selecciona la opción "Editar tarea", tras lo cual el sistema despliega un formulario editable con los campos actuales: nombre de la tarea, especialidad requerida, fecha de inicio, fecha de vencimiento y responsable asignado. El usuario realiza las modificaciones necesarias y guarda los cambios. El sistema valida que el nombre no esté vacío, que la especialidad sea válida, y que las fechas estén en orden cronológico y dentro del rango establecido por el hito. Si la validación es exitosa, el sistema actualiza la información de la tarea y muestra un mensaje de éxito confirmando la edición.
+
+<img src="../img/chapter4/wireflow/wf19.png">
+
+<div style="page-break-before: always;"></div>
+
+**20. Enviar entregable de tarea**
+
+**User Goal: Subir y enviar el entregable asociado a una tarea para su revisión.**
+
+**User Persona:** Especialista
+
+El especialista accede a la sección "Cronograma" del proyecto, expande el hito correspondiente y localiza la tarea que le ha sido asignada. El usuario selecciona la opción "Enviar entregable". El sistema despliega un formulario que permite adjuntar uno o más archivos relacionados con la tarea —como documentos, planos u otros insumos—, y ofrece un campo opcional para agregar comentarios adicionales. El usuario adjunta los archivos requeridos, incluye comentarios si lo desea y confirma el envío del entregable. El sistema valida que se haya cargado al menos un archivo. Si la validación es exitosa, actualiza el estado de la tarea a SUBMITTED y muestra un mensaje de éxito indicando que el entregable fue enviado para revisión.
+
+<img src="../img/chapter4/wireflow/wf20.png">
+
+<div style="page-break-before: always;"></div>
+
+**21. Consultar entregables enviados**
+
+**User Goal: Visualizar los entregables enviados para una tarea y consultar su estado de revisión.**
+
+**User Persona:** Coordinador / Contratista / Cliente
+
+El usuario accede a la sección "Cronograma" del proyecto, expande el hito correspondiente y localiza la tarea deseada. Si la tarea cuenta con un entregable disponible, el usuario selecciona la opción "Ver entregable". El sistema muestra una vista con los detalles del entregable, incluyendo la lista de archivos enviados, los comentarios añadidos por el remitente y el estado actual del proceso de revisión, que puede ser En revisión, Aprobado o Rechazado. Desde esta misma vista, el usuario puede descargar o previsualizar los archivos adjuntos según lo requiera.
+
+<img src="../img/chapter4/wireflow/wf21.png">
+
+<div style="page-break-before: always;"></div>
+
+**22. Revisar entregable enviado**
+
+**User Goal: Evaluar un entregable enviado por un especialista y tomar una acción (aprobar, rechazar o solicitar ajustes).**
+
+**User Persona:** Coordinador / Contratista
+
+El usuario accede a la sección "Cronograma" del proyecto, expande el hito correspondiente y localiza la tarea cuyo entregable desea revisar. A continuación, selecciona la opción "Revisar entregable". El sistema presenta los archivos enviados junto con los comentarios asociados al envío. El usuario analiza el contenido del entregable y elige una de las acciones disponibles: aprobar el entregable, rechazarlo indicando los motivos, o solicitar ajustes especificando observaciones puntuales. Una vez seleccionada la acción, el usuario la confirma. El sistema actualiza el estado tanto del entregable como de la tarea: si se aprueba, la tarea pasa al estado REVIEWED; si se rechaza o se solicitan ajustes, la tarea vuelve al estado PENDING o queda a la espera de un nuevo envío. Finalmente, el sistema muestra un mensaje de éxito confirmando la acción realizada.
+
+<img src="../img/chapter4/wireflow/wf22.png">
+
+<div style="page-break-before: always;"></div>
+
+**23. Presentar un Change Request**
+
+**User Goal: Solicitar formalmente una modificación al proyecto mediante un Change Request.**
+
+**User Persona:** Entidad contratante (Cliente)
+
+El cliente accede al proyecto desde su cuenta en la plataforma y selecciona la opción "Presentar Change Request". El sistema despliega un formulario que permite ingresar el título del cambio solicitado, una descripción detallada, la justificación del cambio y, de forma opcional, adjuntar documentos de soporte. El usuario completa los campos requeridos y envía la solicitud. El sistema valida que tanto el título como la descripción no estén vacíos. Si la información es válida, se crea un nuevo proceso de cambio (Change Process) vinculado al proyecto correspondiente. Finalmente, el sistema muestra un mensaje de éxito confirmando que la solicitud de cambio ha sido presentada correctamente.
+
+<img src="../img/chapter4/wireflow/wf23.png">
+
+<div style="page-break-before: always;"></div>
+
+**24. Presentar una Technical Query**
+
+**User Goal: Formular una consulta técnica relacionada al proyecto para su evaluación y respuesta formal.**
+
+**User Persona:** Entidad contratante (Cliente)
+
+El cliente accede al proyecto desde su cuenta en la plataforma y selecciona la opción "Presentar Technical Query". El sistema despliega un formulario que permite ingresar el título de la consulta técnica, una descripción detallada de la duda o cuestión, y de forma opcional, adjuntar documentos de soporte. El usuario completa los campos requeridos y envía la consulta. El sistema valida que tanto el título como la descripción no estén vacíos. Si la información es válida, se crea un nuevo Change Process asociado al proyecto, clasificado como una Technical Query. Finalmente, el sistema muestra un mensaje de éxito confirmando que la consulta ha sido registrada correctamente.
+
+<img src="../img/chapter4/wireflow/wf24.png">
+
+<div style="page-break-before: always;"></div>
+
+**25. Consultar Change Processes creados**
+
+**User Goal: Visualizar los Change Processes asociados al proyecto, su origen (Change Request o Technical Query) y su estado actual.**
+
+**User Persona:** Coordinador / Contratista / Cliente
+
+El usuario accede a la sección "Gestión de Cambios" dentro del detalle del proyecto. El sistema muestra una lista de los Change Processes creados, presentando para cada uno su número o identificador, el título del Change Request o Technical Query asociado, el tipo de origen correspondiente (ya sea un Change Request o una Technical Query) y el estado actual del proceso, como por ejemplo En evaluación, Aprobado o Rechazado. Desde esta vista, el usuario puede seleccionar cualquiera de los procesos listados para consultar su detalle completo, si así lo desea.
+
+<img src="../img/chapter4/wireflow/wf25.png">
+
+<div style="page-break-before: always;"></div>
+
+**26. Aprobar Change Process**
+
+**User Goal: Revisar y aprobar formalmente un Change Process propuesto para habilitar la posterior emisión de un Change Order**
+
+**User Persona:** Contratista
+
+El contratista accede al detalle de un Change Process pendiente de aprobación. El sistema despliega la información relevante del caso, incluyendo la descripción del cambio propuesto, la justificación técnica o contractual y la documentación de soporte adjunta por quien presentó la solicitud. Tras revisar la información, el usuario selecciona la opción "Aprobar Change Process". El sistema solicita una confirmación para continuar. Una vez confirmada la acción, el sistema actualiza el estado del Change Process a “Aprobado” y muestra un mensaje de éxito. A partir de ese momento, se habilita la opción “Gestionar Change Order” para continuar con la implementación del cambio aprobado.
+
+<img src="../img/chapter4/wireflow/wf26.png">
+
+<div style="page-break-before: always;"></div>
+
 ### 4.4.3. Web Applications Mock-ups. 
+
+Enlace para acceder al <a href="https://www.figma.com/design/K68n9DnQRThT5DihRPAQId/SoftwareGestion?node-id=2105-1303&t=8pukcXo2ixT5RZ4d-1">Figma</a>
 
 **Crear proyecto**
 
 <img src="../img/chapter4/mockup/Crearproyecto.png">
 
+<div style="page-break-before: always;"></div>
+
 **Listar proyectos de organización**
 
 <img src="../img/chapter4/mockup/listarProyectos.png">
+
+<div style="page-break-before: always;"></div>
 
 **Editar proyecto**
 
 <img src="../img/chapter4/mockup/editarproyecto.png">
 
+<div style="page-break-before: always;"></div>
+
 **Listar hitos**
 
 <img src="../img/chapter4/mockup/listarMilestones.png">
+
+<div style="page-break-before: always;"></div>
 
 **Login**
 
 <img src="../img/chapter4/mockup/Login.png">
 
+<div style="page-break-before: always;"></div>
+
+**Informacion de organizacion**
+
+<img src="../img/chapter4/mockup/Vistaorganizacion.png">
+
+<div style="page-break-before: always;"></div>
+
+**Configuracion del proyecto**
+
+<img src="../img/chapter4/mockup/Configuracionproyecto.png">
+
+<div style="page-break-before: always;"></div>
+
+**Adjuntar contrato**
+
+<img src="../img/chapter4/mockup/Adjuntarcontrato.png">
+
+<div style="page-break-before: always;"></div>
+
+**Informacion de proyecto**
+
+<img src="../img/chapter4/mockup/Vistaproyecto.png">
+
+<div style="page-break-before: always;"></div>
+
+**Miembros del proyecto**
+
+<img src="../img/chapter4/mockup/Projectmembers.png">
+
+<div style="page-break-before: always;"></div>
+
+**Vista de tarea**
+
+<img src="../img/chapter4/mockup/Editartareas.png">
+
+<div style="page-break-before: always;"></div>
+
+**Proceso de cambio del proyecto**
+
+<img src="../img/chapter4/mockup/Cambioproceso.png">
+
+<div style="page-break-before: always;"></div>
+
+**Asignar tarea**
+
+<img src="../img/chapter4/mockup/Vistatareas.png">
+
+<div style="page-break-before: always;"></div>
+
 ### 4.4.4. Web Applications User Flow Diagrams. 
+
+Enlace para acceder al <a href="https://lucid.app/lucidchart/61958854-f009-480f-b122-df53bd8ab153/edit?viewport_loc=-9091%2C-7108%2C21047%2C10719%2C0_0&invitationId=inv_a67952f0-a49f-4210-bb72-2e9b6b4d129d">Lucid Chart</a>
+
+**1. Invitar miembros a una organizacion**
 
 <img src="../img/chapter4/userflows/uf01.png">
 
-**1. Crear un nuevo proyecto**
+<div style="page-break-before: always;"></div>
 
-- **User Goal:** Crear un proyecto en la plataforma para iniciar la planificación de su cronograma, equipo y tareas.
+- **User Goal:** Invitar a un nuevo miembro a la organización.
 - **User Persona:** Contratista
 
 **Flujo Principal (Happy Path):**
-- Usuario accede al dashboard principal.
-- Usuario selecciona la opción "Crear nuevo proyecto".
-- Usuario completa los siguientes campos del formulario:
-  - Nombre del proyecto.
-  - Fecha de inicio (automáticamente el día de creación).
-  - Fecha de finalización estimada.
-  - Subida del contrato firmado.
-  - Fecha de firma del contrato.
-  - Correo de la entidad contratante.
-- Usuario envía el formulario.
-- El sistema valida los datos.
-- El sistema crea el proyecto.
-- El sistema muestra mensaje de éxito y redirige al detalle del proyecto.
+- Sistema muestra la vista de la organización con pestaña activa “Organization Members”.
+- Usuario hace clic en el botón "Add Member".
+- Sistema muestra un buscador con la lista de posibles usuarios a invitar.
+- Usuario selecciona un nombre de la lista.
+- Usuario hace clic en el botón "Continue".
+- Sistema actualiza la sección de “Invitations” con el nuevo usuario invitado.
+- Usuario puede visualizar los usuarios pendientes de invitación.
 
 **Puntos de Decisión:**
-- ¿Todos los campos obligatorios fueron completados?
-- ¿Fecha de finalización es válida?
-- ¿Archivo del contrato adjunto?
-- ¿Correo de entidad contratante válido?
+- Si el usuario ya fue invitado o pertenece a la organización, el sistema muestra un mensaje de error: "You must select at least one member to add."
 
 **Flujos Alternativos (Unhappy Paths):**
-- Campos obligatorios incompletos: mensaje de error "Debe completar todos los campos requeridos".
-- Fecha de finalización anterior al inicio: error "La fecha de finalización debe ser posterior a la fecha de inicio".
-- Archivo de contrato no subido: error "Debe adjuntar el contrato firmado".
-- Correo inválido: error "Entidad contratante no encontrada".
+- Usuario debe seleccionar otro nombre o cancelar la acción.
 
-**2. Consultar y visualizar lista de proyectos y sus detalles**
+**2. Crear un nuevo proyecto**
 
 <img src="../img/chapter4/userflows/uf02.png">
 
-- **User Goal:** Consultar los proyectos accesibles para el usuario y visualizar su información general.
-- **User Persona:** Miembro del equipo / Contratista
+<div style="page-break-before: always;"></div>
+
+- **User Goal:** Crear un proyecto dentro de la organización activa para iniciar la planificación de su cronograma, equipo y tareas.
+- **User Persona:** Contratista
 
 **Flujo Principal (Happy Path):**
-- Usuario inicia sesión en la plataforma.
-- Usuario accede a la sección "Proyectos".
-- Sistema muestra la lista de proyectos accesibles, con información resumida: nombre, estado, rol del usuario.
+- Sistema muestra la vista de la organización seleccionada que muestra la barra de navegación de organización.
+- Sistema muestra por default la pestaña "Información" de la organización, que incluye:
+  - Nombre comercial (o razón social).
+  - El contratista dueño de la organización.
+  - La fecha de creación de la organización.
+  - El RUC de la organización.
+- Usuario selecciona la pestaña de proyectos de la organización.
+- Sistema muestra la lista de todos los proyectos de la organización, con información resumida: nombre, estado, rol del usuario.
+- Usuario selecciona la opción "Crear nuevo proyecto".
+- Sistema despliega formulario de creación con los siguientes campos:
+  - Nombre del proyecto.
+  - Descripción del proyecto.
+  - Fecha de inicio (asignada automáticamente como fecha actual, no editable).
+  - Fecha de finalización estimada.
+  - Subida del contrato firmado.
+  - Fecha de firma del contrato.
+  - Correo de la entidad contratante (debe estar registrada).
+- Usuario completa el formulario y lo envía.
+- Sistema valida los datos ingresados.
+- Sistema crea el proyecto dentro de la organización activa.
+- Sistema muestra un mensaje de éxito y redirige al detalle del proyecto creado.
+
+**Puntos de Decisión:**
+- ¿Todos los campos obligatorios fueron completados? (Todos excepto descripción)
+- ¿La fecha de finalización es posterior a la de inicio?
+- ¿El correo de la entidad contratante pertenece a una entidad registrada?
+
+**Flujos Alternativos (Unhappy Paths):**
+- Campos obligatorios incompletos: error "Debe completar todos los campos requeridos".
+- Fecha de finalización anterior a la fecha de inicio: error "La fecha de finalización debe ser posterior a la fecha de inicio".
+- Correo de entidad contratante inválido o no registrado: error "Entidad contratante no encontrada".
+
+**3. Consultar y visualizar lista de proyectos y sus detalles**
+
+<img src="../img/chapter4/userflows/uf03.png">
+
+<div style="page-break-before: always;"></div>
+
+- **User Goal:** Consultar los proyectos accesibles para el usuario y visualizar su información general.
+- **User Persona:** Contratista
+
+**Flujo Principal (Happy Path):**
+- Sistema muestra la vista de la organización seleccionada que muestra la barra de navegación de organización.
+- Usuario selecciona la pestaña "Proyectos" de la organización.
+- Sistema muestra la lista de todos los proyectos de la organización, con información resumida: nombre, estado, rol del usuario.
 - Usuario selecciona un proyecto de la lista.
-- Sistema muestra el detalle completo del proyecto:
+- Sistema muestra la vista del proyecto seleccionado que muestra la barra de navegación de proyecto.
+- Sistema carga por default la pestaña "Información" del proyecto, que incluye:
   - Nombre del proyecto.
   - Estado actual.
   - Fechas de inicio y finalización.
   - Entidad contratante.
-  - Miembros del equipo asignado.
-  - Contrato asociado (visible solo para contratistas).
 
 **Puntos de Decisión:**
-- ¿Usuario tiene permisos para ver proyectos?
-- ¿Usuario pertenece al equipo del proyecto seleccionado?
+- No hay puntos de decisión en este flujo.
 
 **Flujos Alternativos (Unhappy Paths):**
-- Usuario sin proyectos asignados: mensaje "No tienes proyectos disponibles".
-- Usuario no autorizado para ver el proyecto seleccionado: error "No tienes permisos para acceder a este proyecto".
+- No hay unhappy paths para este flujo.
 
-**3. Editar información general del proyecto**
+**4. Editar información general del proyecto**
 
-<img src="../img/chapter4/userflows/uf03.png">
+<img src="../img/chapter4/userflows/uf04.png">
 
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Actualizar el nombre o la descripción del proyecto para reflejar cambios en el alcance o clarificaciones internas.
 - **User Persona:** Contratista
 
 **Flujo Principal (Happy Path):**
-- Contratista accede al detalle del proyecto.
-- Usuario selecciona la opción "Editar información general".
-- Sistema despliega formulario editable con los campos actuales:
+- Sistema muestra la vista del proyecto seleccionado que muestra la barra de navegación de proyecto.
+- Usuario selecciona la pestaña "Configuración".
+- Sistema despliega una vista con los detalles actuales del proyecto:
   - Nombre del proyecto.
   - Descripción del proyecto.
-- Usuario realiza los cambios necesarios.
-- Usuario guarda los cambios.
+  - Estado del proyecto.
+  - La "zona de peligro", que muestra la opción de editar restricciones contractuales y eliminar proyecto.
+- Los campos de nombre y descripción pueden reescribirse, como si se tratara de un formulario.
+- Usuario cambia el nombre y/o descripción del proyecto.
 - Sistema valida los datos y actualiza la información.
 - Sistema muestra un mensaje de éxito.
 
 **Puntos de Decisión:**
 - ¿Nuevo nombre ingresado no está vacío?
-- ¿Usuario tiene permisos de edición?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Nombre de proyecto vacío: error "El nombre del proyecto no puede estar vacío".
-- Usuario sin permisos: error "No tienes permisos para editar este proyecto". 
-
-**4. Cambiar constraints legales del proyecto**
-
-<img src="../img/chapter4/userflows/uf04.png">
-
-- **User Goal:** Actualizar el contrato y la entidad contratante asociada al proyecto en caso de modificaciones legales o administrativas.
-- **User Persona:** Contratista
-
-**Flujo Principal (Happy Path):**
-- Contratista accede al detalle del proyecto.
-- Usuario selecciona la opción "Actualizar contrato y entidad contratante".
-- Sistema despliega formulario para actualizar:
-  - Archivo del nuevo contrato firmado.
-  - Fecha de firma del nuevo contrato.
-  - Nuevo correo de la entidad contratante.
-- Usuario completa los campos requeridos y envía la actualización.
-- Sistema valida la información.
-- Sistema guarda los nuevos datos legales del proyecto.
-- Sistema muestra mensaje de éxito confirmando la actualización.
-
-**Puntos de Decisión:**
-- ¿Nuevo contrato adjuntado?
-- ¿Fecha de firma del contrato ingresada?
-- ¿Correo de entidad contratante válido?
-- ¿Usuario tiene permisos para realizar esta acción?
-
-**Flujos Alternativos (Unhappy Paths):**
-- No se adjunta contrato: error "Debe adjuntar el nuevo contrato firmado".
-- Fecha de firma no ingresada: error "Debe ingresar la fecha de firma del contrato".
-- Correo de entidad no válido: error "Entidad contratante no encontrada".
-- Usuario sin permisos: error "No tienes permisos para actualizar los datos legales de este proyecto".
 
 **5. Cambiar estado del proyecto**
 
 <img src="../img/chapter4/userflows/uf05.png">
 
+<div style="page-break-before: always;"></div>
+
 - **User Goal:** Actualizar el estado del proyecto para reflejar su progreso o finalización.
 - **User Persona:** Contratista
 
 **Flujo Principal (Happy Path):**
-- Contratista accede al detalle del proyecto.
-- Usuario selecciona la opción "Cambiar estado del proyecto".
-- Sistema despliega lista de estados posibles (por ejemplo: En ejecución, Finalizado, Cancelado).
-- Usuario selecciona el nuevo estado deseado.
-- Usuario confirma el cambio de estado.
-- Sistema actualiza el estado del proyecto.
-- Sistema muestra un mensaje de éxito indicando el nuevo estado.
+- Sistema muestra la vista del proyecto seleccionado que muestra la barra de navegación de proyecto.
+- Usuario selecciona la pestaña "Configuración".
+- Sistema despliega una vista con los detalles actuales del proyecto:
+  - Nombre del proyecto.
+  - Descripción del proyecto.
+  - Estado del proyecto.
+  - La "zona de peligro", que muestra la opción de editar restricciones contractuales y eliminar proyecto.
+- El campo de estado del proyecto puede desplegarse como una lista de opciones.
+- Usuario selecciona un nuevo estado para el proyecto de la lista desplegable.
+- Sistema valida los datos y actualiza la información.
+- Sistema muestra un mensaje de éxito.
 
 **Puntos de Decisión:**
-- ¿Nuevo estado seleccionado es válido?
-- ¿Usuario tiene permisos para cambiar el estado?
+- No hay puntos de decisión en este flujo.
 
 **Flujos Alternativos (Unhappy Paths):**
-- No se selecciona nuevo estado: error "Debe seleccionar un estado para continuar".
-- Usuario sin permisos: error "No tienes permisos para cambiar el estado de este proyecto". 
+- No hay unhappy paths para este flujo.
 
-**6. Eliminar proyecto**
+**6. Cambiar correo de entidad contratante y fecha de finalización**
 
 <img src="../img/chapter4/userflows/uf06.png">
+
+<div style="page-break-before: always;"></div>
+
+- **User Goal:** Actualizar la entidad contratante y fecha de finalización del proyecto en caso de modificaciones administrativas.
+- **User Persona:** Contratista
+
+**Flujo Principal (Happy Path):**
+- Sistema muestra la vista del proyecto seleccionado que muestra la barra de navegación de proyecto.
+- Usuario selecciona la pestaña "Configuración".
+- Sistema despliega una vista con los detalles actuales del proyecto:
+  - Nombre del proyecto.
+  - Descripción del proyecto.
+  - Estado del proyecto.
+  - La "zona de peligro", que muestra la opción de editar restricciones contractuales y eliminar proyecto.
+- Usuario selecciona la opción "Cambiar restricciones contractuales".
+- Sistema despliega una vista con los detalles contractuales actuales del proyecto:
+  - Archivo del nuevo contrato firmado.
+  - Correo de la entidad contratante.
+  - Fecha de finalización del proyecto.
+- Los campos de correo de entidad contratante y fecha de finalización pueden reescribirse, como si se tratara de un formulario.
+- Usuario cambia el correo de entidad contratante y/o fecha de finalización.
+- Sistema valida la información.
+- Sistema guarda los nuevos datos.
+- Sistema muestra mensaje de éxito confirmando la actualización.
+
+**Puntos de Decisión:**
+- ¿Fecha de firma del contrato ingresada?
+- ¿Correo de entidad contratante válido?
+
+**Flujos Alternativos (Unhappy Paths):**
+- Fecha de firma no ingresada: error "Debe ingresar la fecha de finalización del proyecto.".
+- Correo de entidad no válido: error "Entidad contratante no encontrada".
+
+**7. Cambiar contrato del proyecto**
+
+<img src="../img/chapter4/userflows/uf07.png">
+
+<div style="page-break-before: always;"></div>
+
+- **User Goal:** Actualizar el contrato del proyecto en caso de modificaciones legales.
+- **User Persona:** Contratista
+
+**Flujo Principal (Happy Path):**
+- Sistema muestra la vista del proyecto seleccionado que muestra la barra de navegación de proyecto.
+- Usuario selecciona la pestaña "Configuración".
+- Sistema despliega una vista con los detalles actuales del proyecto:
+  - Nombre del proyecto.
+  - Descripción del proyecto.
+  - Estado del proyecto.
+  - La "zona de peligro", que muestra la opción de editar restricciones contractuales y eliminar proyecto.
+- Usuario selecciona la opción "Cambiar restricciones contractuales".
+- Sistema despliega una vista con los detalles contractuales actuales del proyecto:
+  - Archivo del nuevo contrato firmado.
+  - Correo de la entidad contratante.
+  - Fecha de finalización del proyecto.
+- El campo de contrato debe ser un botón que permita elegir entre subir un nuevo archivo o elegir uno del workspace de la organización.
+- Si usuario elige elige workspace, debe visualizar la lista de archivos del workspace, incluyendo:
+  - Nombre del archivo.
+  - Extensión del archivo.
+- Si el usuario elige subir nuevo archivo, debe permitir subir un archivo desde su dispositivo.
+  - Sistema valida que haya espacio suficiente en el workspace para el nuevo archivo antes de subirlo.
+- Sistema guarda la referencia al nuevo contrato.
+- Sistema muestra mensaje de éxito confirmando la actualización.
+
+**Puntos de Decisión:**
+- ¿Qué método para adjuntar nuevo contrato elige el usuario?
+- ¿La organización del proyecto cuenta con suficiente espacio en su workspace?
+
+**Flujos Alternativos (Unhappy Paths):**
+- Espacio insuficiente en workspace: error "No hay suficiente espacio en el workspace".
+
+**8. Eliminar proyecto**
+
+<img src="../img/chapter4/userflows/uf08.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Eliminar un proyecto que ya no será ejecutado o es innecesario conservar.
 - **User Persona:** Contratista
 
 **Flujo Principal (Happy Path):**
-- Contratista accede al detalle del proyecto.
+- Sistema muestra la vista del proyecto seleccionado que muestra la barra de navegación de proyecto.
+- Usuario selecciona la pestaña "Configuración".
+- Sistema despliega una vista con los detalles actuales del proyecto:
+  - Nombre del proyecto.
+  - Descripción del proyecto.
+  - Estado del proyecto.
+  - La "zona de peligro", que muestra la opción de editar restricciones contractuales y eliminar proyecto.
 - Usuario selecciona la opción "Eliminar proyecto".
 - Sistema muestra una advertencia de confirmación indicando que se eliminarán todos los recursos asociados (excepto archivos del workspace).
 - Usuario debe confirmar la acción escribiendo "eliminar + nombre del proyecto" para proceder.
 - Usuario envía la confirmación.
 - Sistema valida la entrada.
-- Sistema elimina lógicamente el proyecto (lo marca como inactivo o lo mueve a papelera).
+- Sistema elimina el proyecto.
 - Sistema muestra mensaje de éxito indicando que el proyecto fue eliminado.
 
 **Puntos de Decisión:**
 - ¿Confirmación escrita correctamente?
-- ¿Usuario tiene permisos para eliminar el proyecto?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Confirmación incorrecta: error "El texto ingresado no coincide con el nombre del proyecto".
-- Usuario sin permisos: error "No tienes permisos para eliminar este proyecto".
-- Usuario cancela la operación: no se realiza ninguna acción, proyecto permanece activo.
 
-**7. Agregar nuevos miembros al proyecto**
+**9. Agregar nuevos miembros al proyecto**
+
+<img src="../img/chapter4/userflows/uf09.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Incorporar nuevos miembros de la organización al equipo del proyecto, asignándoles un rol y especialidad si corresponde.
 - **User Persona:** Contratista
@@ -661,7 +1195,11 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 - Especialidad no asignada a especialista: error "Debe asignar una especialidad si el rol es Especialista".
 - Miembro ya pertenece al proyecto: el sistema impide su selección o muestra advertencia "El miembro ya es parte del proyecto". 
 
-**8. Confirmar incorporación de miembros**
+**10. Confirmar incorporación de miembros**
+
+<img src="../img/chapter4/userflows/uf10.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Finalizar el proceso de adición de nuevos miembros al proyecto, haciéndolos oficialmente parte del equipo.
 - **User Persona:** Contratista
@@ -683,9 +1221,13 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 - Especialista sin especialidad: error "Debe asignar una especialidad a todos los especialistas".
 - Error de validación general: mensaje "Revise los datos antes de confirmar la incorporación". 
 
-**9. Consultar y gestionar miembros del equipo**
+**11. Consultar y gestionar miembros del equipo**
 
-- **User Goal:** Consultar la lista de miembros del proyecto y gestionar sus roles o especialidades, o eliminarlos si corresponde.
+<img src="../img/chapter4/userflows/uf11.png">
+
+<div style="page-break-before: always;"></div>
+
+- **User Goal:** Consultar la lista de miembros del proyecto y gestionar sus roles o especialidades.
 - **User Persona:** Contratista
 
 **Flujo Principal (Happy Path):**
@@ -697,21 +1239,19 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
   - Especialidad (si aplica).
 - Usuario puede realizar las siguientes acciones:
   - Editar rol de un miembro.
-  - Editar especialidad de un miembro si su rol es Especialista.
-  - Eliminar un miembro del equipo (previa confirmación).
+- Editar especialidad de un miembro si su rol es Especialista.
 
 **Puntos de Decisión:**
-- ¿Usuario tiene permisos para editar o eliminar miembros?
 - ¿El miembro seleccionado tiene tareas asignadas?
 
 **Flujos Alternativos (Unhappy Paths):**
-- Usuario intenta eliminar miembro con tareas asignadas: sistema muestra advertencia "Debe reasignar o eliminar tareas antes de eliminar este miembro".
-- Usuario sin permisos: error "No tienes permisos para gestionar el equipo de este proyecto".
-- Cancelar edición o eliminación: no se realizan cambios. 
+- Cancelar edición: no se realizan cambios. 
 
-**10. Crear un nuevo hito**
+**12. Crear un nuevo hito**
 
-<img src="../img/chapter4/userflows/uf10.png">
+<img src="../img/chapter4/userflows/uf12.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Añadir un hito al cronograma del proyecto para estructurar fases clave o entregables intermedios.
 - **User Persona:** Contratista
@@ -734,17 +1274,17 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 **Puntos de Decisión:**
 - ¿Nombre del hito ingresado?
 - ¿Fechas consistentes y dentro del rango permitido?
-- ¿Usuario tiene permisos para crear hitos?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Nombre vacío: error "El nombre del hito es obligatorio".
 - Fechas inconsistentes (inicio posterior a fin): sistema ajusta automáticamente o muestra advertencia.
 - Fechas fuera del rango del proyecto: error "Las fechas del hito deben estar dentro del rango del proyecto".
-- Usuario sin permisos: error "No tienes permisos para añadir hitos a este proyecto".
 
-**11. Consultar lista de hitos del proyecto**
+**13. Consultar lista de hitos del proyecto**
 
-<img src="../img/chapter4/userflows/uf11.png">
+<img src="../img/chapter4/userflows/uf13.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Visualizar los hitos existentes del proyecto para conocer la estructura de su cronograma.
 - **User Persona:** Miembro del proyecto
@@ -759,15 +1299,15 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 
 **Puntos de Decisión:**
 - ¿Existen hitos creados en el proyecto?
-- ¿Usuario tiene permisos para visualizar el cronograma?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Proyecto sin hitos creados: sistema muestra mensaje "No hay hitos registrados en este proyecto".
-- Usuario sin permisos: error "No tienes permisos para visualizar el cronograma de este proyecto". 
 
-**12. Editar información de un hito**
+**14. Editar información de un hito**
 
-<img src="../img/chapter4/userflows/uf12.png">
+<img src="../img/chapter4/userflows/uf14.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Actualizar el nombre o las fechas de un hito para reflejar cambios en la planificación del proyecto.
 - **User Persona:** Contratista
@@ -792,17 +1332,17 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 - ¿Nuevo nombre ingresado?
 - ¿Fechas en orden correcto?
 - ¿Fechas dentro del rango del proyecto?
-- ¿Usuario tiene permisos para editar hitos?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Nombre vacío: error "El nombre del hito es obligatorio".
 - Fechas inconsistentes: sistema puede ajustar automáticamente o mostrar advertencia.
 - Fechas fuera de rango: error "Las fechas del hito deben coincidir con el rango del proyecto".
-- Usuario sin permisos: error "No tienes permisos para editar hitos en este proyecto". 
 
-**13. Eliminar hito del cronograma**
+**15. Eliminar hito del cronograma**
 
-<img src="../img/chapter4/userflows/uf13.png">
+<img src="../img/chapter4/userflows/uf15.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Eliminar un hito del cronograma del proyecto cuando ya no sea necesario.
 - **User Persona:** Contratista
@@ -821,14 +1361,16 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 **Puntos de Decisión:**
 - ¿Hito tiene tareas o reuniones asociadas?
 - ¿Confirmación escrita correctamente?
-- ¿Usuario tiene permisos para eliminar hitos?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Confirmación incorrecta: error "El texto ingresado no coincide con el nombre del hito".
 - Usuario cancela la eliminación: no se realiza ninguna acción.
-- Usuario sin permisos: error "No tienes permisos para eliminar hitos en este proyecto".
 
-**14. Crear una nueva tarea**
+**16. Crear una nueva tarea**
+
+<img src="../img/chapter4/userflows/uf16.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Añadir una nueva tarea dentro de un hito del cronograma para organizar el trabajo del equipo.
 - **User Persona:** Contratista
@@ -854,15 +1396,17 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 - ¿Nombre de la tarea ingresado?
 - ¿Especialidad seleccionada?
 - ¿Fechas consistentes y dentro del rango del hito?
-- ¿Usuario tiene permisos para crear tareas?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Nombre vacío: error "El nombre de la tarea es obligatorio".
 - Especialidad no seleccionada: error "Debe seleccionar una especialidad".
 - Fechas inconsistentes o fuera de rango: error "Las fechas deben estar dentro del rango del hito y en orden correcto".
-- Usuario sin permisos: error "No tienes permisos para añadir tareas en este proyecto".
 
-**15. Consultar lista de tareas de un hito**
+**17. Consultar lista de tareas de un hito**
+
+<img src="../img/chapter4/userflows/uf17.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Visualizar las tareas asociadas a un hito específico dentro del cronograma del proyecto.
 - **User Persona:** Miembro del proyecto
@@ -878,14 +1422,16 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 - Usuario puede seleccionar una tarea para consultar más detalles si lo desea.
 
 **Puntos de Decisión:**
-- ¿Usuario tiene permisos para visualizar las tareas del proyecto?
 - ¿Existen tareas asociadas al hito?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Hito sin tareas: sistema muestra mensaje "No hay tareas registradas para este hito".
-- Usuario sin permisos: error "No tienes permisos para visualizar las tareas de este proyecto". 
 
-**16. Asignar responsable a una tarea**
+**18. Asignar responsable a una tarea**
+
+<img src="../img/chapter4/userflows/uf18.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Designar un miembro del equipo como responsable de una tarea para su ejecución y seguimiento.
 - **User Persona:** Contratista
@@ -902,14 +1448,16 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 
 **Puntos de Decisión:**
 - ¿Miembro seleccionado tiene la especialidad adecuada?
-- ¿Usuario tiene permisos para asignar responsables?
 
 **Flujos Alternativos (Unhappy Paths):**
 - No seleccionar responsable: error "Debe seleccionar un responsable para asignar la tarea".
 - No hay miembros compatibles al aplicar filtro: mensaje "No hay miembros disponibles con la especialidad requerida".
-- Usuario sin permisos: error "No tienes permisos para asignar responsables en este proyecto". 
 
-**17. Editar información de una tarea**
+**19. Editar información de una tarea**
+
+<img src="../img/chapter4/userflows/uf19.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Actualizar el nombre, especialidad, fechas o responsable de una tarea en función de ajustes en la planificación o el equipo.
 - **User Persona:** Contratista
@@ -936,15 +1484,17 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 - ¿Especialidad válida seleccionada?
 - ¿Fechas consistentes y dentro del rango del hito?
 - ¿Responsable actualizado cumple con la especialidad (si aplica)?
-- ¿Usuario tiene permisos para editar tareas?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Nombre vacío: error "El nombre de la tarea es obligatorio".
 - Especialidad no seleccionada: error "Debe seleccionar una especialidad".
 - Fechas inconsistentes o fuera de rango: error "Las fechas deben estar dentro del rango del hito y ser consistentes".
-- Usuario sin permisos: error "No tienes permisos para editar tareas en este proyecto". 
 
-**18. Enviar entregable de tarea**
+**20. Enviar entregable de tarea**
+
+<img src="../img/chapter4/userflows/uf20.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Subir y enviar el entregable asociado a una tarea para su revisión.
 - **User Persona:** Especialista
@@ -964,13 +1514,15 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 
 **Puntos de Decisión:**
 - ¿Se adjuntó al menos un archivo?
-- ¿Usuario tiene permisos para enviar entregables?
 
 **Flujos Alternativos (Unhappy Paths):**
 - No adjuntar archivos: error "Debe adjuntar al menos un archivo para enviar el entregable".
-- Usuario sin permisos: error "No tienes permisos para enviar entregables en esta tarea".
 
-**19. Consultar entregables enviados**
+**21. Consultar entregables enviados**
+
+<img src="../img/chapter4/userflows/uf21.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Visualizar los entregables enviados para una tarea y consultar su estado de revisión.
 - **User Persona:** Especialista / Coordinador / Contratista
@@ -987,13 +1539,15 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 
 **Puntos de Decisión:**
 - ¿El entregable ya fue enviado?
-- ¿Usuario tiene permisos para visualizar entregables?
 
 **Flujos Alternativos (Unhappy Paths):**
 - No hay entregable enviado: mensaje "Todavía no se ha enviado entregable para esta tarea".
-- Usuario sin permisos: error "No tienes permisos para consultar los entregables de esta tarea".
 
-**20. Revisar entregable enviado**
+**22. Revisar entregable enviado**
+
+<img src="../img/chapter4/userflows/uf22.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Evaluar un entregable enviado por un especialista y tomar una acción (aprobar, rechazar o solicitar ajustes).
 - **User Persona:** Coordinador / Contratista
@@ -1015,16 +1569,18 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 - Sistema muestra mensaje de éxito con la acción realizada.
 
 **Puntos de Decisión:**
-- ¿Usuario tiene permisos de revisión?
 - ¿Acción seleccionada correctamente?
 - ¿Comentario obligatorio en caso de rechazo o solicitud de ajustes?
 
 **Flujos Alternativos (Unhappy Paths):**
 - No seleccionar acción: error "Debe seleccionar una acción para completar la revisión".
 - No ingresar comentario en rechazo o ajuste: error "Debe ingresar un comentario explicativo".
-- Usuario sin permisos: error "No tienes permisos para revisar entregables en este proyecto".
 
-**21. Presentar un Change Request**
+**23. Presentar un Change Request**
+
+<img src="../img/chapter4/userflows/uf23.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Solicitar formalmente una modificación al proyecto mediante un Change Request.
 - **User Persona:** Entidad contratante (Cliente)
@@ -1044,13 +1600,15 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 
 **Puntos de Decisión:**
 - ¿Título y descripción del cambio ingresados correctamente?
-- ¿Usuario tiene permisos para presentar un Change Request?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Campos obligatorios incompletos: error "Debe ingresar título y descripción para solicitar un cambio".
-- Usuario sin permisos: error "No tienes permisos para presentar un Change Request en este proyecto".
 
-**22. Presentar una Technical Query**
+**24. Presentar una Technical Query**
+
+<img src="../img/chapter4/userflows/uf24.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Formular una consulta técnica relacionada al proyecto para su evaluación y respuesta formal.
 - **User Persona:** Entidad contratante (Cliente)
@@ -1069,13 +1627,15 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 
 **Puntos de Decisión:**
 - ¿Título y descripción de la consulta ingresados correctamente?
-- ¿Usuario tiene permisos para presentar una Technical Query?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Campos obligatorios incompletos: error "Debe ingresar título y descripción para presentar una consulta técnica".
-- Usuario sin permisos: error "No tienes permisos para presentar una Technical Query en este proyecto".
 
-**23. Consultar Change Processes creados**
+**25. Consultar Change Processes creados**
+
+<img src="../img/chapter4/userflows/uf25.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Visualizar los Change Processes asociados al proyecto, su origen (Change Request o Technical Query) y su estado actual.
 - **User Persona:** Coordinador / Contratista / Cliente
@@ -1090,44 +1650,47 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 - Usuario puede seleccionar un Change Process para ver su detalle completo si lo desea.
 
 **Puntos de Decisión:**
-- ¿Usuario tiene permisos para visualizar los Change Processes?
 - ¿Existen Change Processes asociados al proyecto?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Proyecto sin Change Processes: sistema muestra mensaje "No hay Change Processes registrados para este proyecto".
-- Usuario sin permisos: error "No tienes permisos para visualizar los Change Processes de este proyecto". 
 
-**24. Gestionar Change Order asociado**
+**26. Aprobar Change Process**
 
-- **User Goal:** Formalizar y gestionar la autorización de cambios en el proyecto una vez que un Change Process ha sido aprobado.
+<img src="../img/chapter4/userflows/uf26.png">
+
+<div style="page-break-before: always;"></div>
+
+- **User Goal:** Revisar y aprobar formalmente un Change Process propuesto para habilitar la posterior emisión de un Change Order.
 - **User Persona:** Contratista
 
 **Flujo Principal (Happy Path):**
-- Contratista accede al detalle del Change Process aprobado.
-- Usuario selecciona la opción "Gestionar Change Order".
+- Contratista accede al detalle de un Change Process pendiente de aprobación.
+- Sistema muestra la siguiente información:
 - Sistema despliega información relevante:
-  - Datos del Change Process aprobado.
-  - Documentación del cambio.
-- Usuario genera el Change Order correspondiente:
-  - Completa información adicional requerida (por ejemplo, costos, impacto en fechas si aplica).
-  - Adjunta documentos oficiales (opcional).
-- Usuario confirma la emisión del Change Order.
-- Sistema registra el Change Order asociado al Change Process.
-- Sistema actualiza el estado del Change Process indicando que ya cuenta con un Change Order emitido.
-- Sistema muestra mensaje de éxito.
+  - Descripción del cambio propuesto.
+  - Justificación técnica o contractual.
+  - Documentación soporte (adjunta por quien propone el cambio).
+- Usuario revisa la información y selecciona "Aprobar Change Process".
+- Sistema solicita confirmación.
+- Usuario confirma la aprobación.
+- Sistema actualiza el estado del Change Process a “Aprobado”.
+- Sistema muestra mensaje de éxito y habilita la opción “Gestionar Change Order”.
 
 **Puntos de Decisión:**
-- ¿Change Process está aprobado?
-- ¿Usuario tiene permisos para gestionar Change Orders?
-
-**Flujos Alternativos (Unhappy Paths):**
-- Change Process no aprobado aún: error "Solo se pueden generar Change Orders de Change Processes aprobados".
-- Usuario sin permisos: error "No tienes permisos para generar un Change Order en este proyecto".
-- Cancelar emisión del Change Order: no se genera ningún cambio.
+- ¿El usuario tiene permisos para aprobar cambios?
+- ¿La información del Change Process está completa?
 
 <div style="page-break-before: always;"></div>
 
 ## 4.5. Web Applications Prototyping
+Para el desarrollo de los prototipos de la interfaz de usuario orientados a navegadores web en entornos Desktop y Mobile, se adoptaron una serie de principios clave que guiaron el diseño. En primer lugar, se priorizó la claridad y facilidad de uso, procurando que la navegación resultara intuitiva y que los usuarios comprendieran con facilidad las funcionalidades principales, tales como el registro de procesos y la consulta de reportes estadísticos. En segundo lugar, se aplicaron criterios de diseño adaptable (responsive design) para asegurar la compatibilidad de la aplicación con distintos tamaños de pantalla, permitiendo así una experiencia consistente independientemente del dispositivo utilizado. Finalmente, se puso énfasis en la presentación de información relevante, procurando mostrar únicamente los datos esenciales para el perfil de usuario al que se dirige la aplicación.
+
+<img src="../img/chapter4/prototyping/Prototyping.png">
+
+Enlace para acceder al video de explicación del <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20211b994_upc_edu_pe/EQXb8kwTRW1JsIjq76EiawIBSVFvOBnmGCS3Wmu5zYUhOQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=0fERvI">Web Applications Prototyping</a>
+
+Enlace para acceder al <a href= "https://www.figma.com/proto/58D13IoOvL8qDbERBSw8nX/Web-Application-Prototyping?node-id=0-1&t=a4MLV1z9mhD1XMI7-1">Flujo</a>
 
 <div style="page-break-before: always;"></div>
 
@@ -1169,6 +1732,8 @@ Los flujos críticos de usuario, como autenticación (LoginComponent, RegisterCo
 Esta arquitectura basada en componentes y servicios fomenta una modularidad impecable, permitiendo que PropGMS no solo sea altamente mantenible y escalable, sino también adaptable a futuras expansiones o personalizaciones sin comprometer la estabilidad de la plataforma.
 
 <img src="../img/chapter4/c4/componente/webApplication.png" alt="Diagrama de componentes de Web Application de ProP GMS">
+
+<div style="page-break-after: always;"></div>
 
 #### 4.6.3.2. API Diagram
 
@@ -1830,6 +2395,111 @@ Este diccionario describe las clases involucradas en la gestión de pagos dentro
 | frequency     | string    | Frecuencia del cobro (mensual, anual, etc.)      |
 | startDate     | DateTime  | Fecha de inicio del acuerdo                      |
 | status        | string    | Estado del acuerdo                               |
+
+<div style="page-break-before: always;"></div>
+
+## 4.8. Database Design
+
+Para el proyecto ProP GMS se ha seleccionado el motor de base de datos MariaDB debido a su escalabilidad. Esta elección se basa en la experiencia del equipo con motores de bases de datos similares.
+
+### 4.8.1. Database Diagram
+
+El modelo general de base de datos de PropGMS refleja una arquitectura modular basada en contextos delimitados (bounded contexts), alineados con los principios de Domain-Driven Design. Cada contexto modela una parte funcional del sistema, tales como gestión de proyectos, usuarios, archivos, pagos, suscripciones, notificaciones y organizaciones.
+
+Se identifican entidades clave como projects, tasks, invoices, payments, user_accounts, organizations, entre muchas otras, conectadas mediante claves foráneas que garantizan la integridad referencial entre dominios. Las relaciones entre contextos están cuidadosamente controladas para evitar acoplamientos innecesarios y fomentar una evolución independiente de cada módulo.
+
+El diseño promueve escalabilidad, trazabilidad y una clara separación de responsabilidades, facilitando tanto el mantenimiento como la extensión futura del sistema.
+
+<img src="../img/chapter4/db/general.svg" alt="Diagrama de base de datos general de ProP GMS">
+
+#### 4.8.1.1. Project Management Database Diagram
+
+El diseño de base de datos del contexto de gestión de proyectos representa la estructura encargada de organizar y supervisar los proyectos técnicos dentro del sistema PropGMS. La tabla principal projects se conecta con otras tablas relacionadas como schedules, milestones, tasks, meetings y project_team_members, lo que permite modelar de forma estructurada el ciclo de vida completo de un proyecto.
+
+Cada proyecto se clasifica mediante la tabla project_status y se vincula con un equipo técnico registrado en la tabla project_team_members, el cual especifica roles y especialidades mediante las tablas role y specialty. Las tareas que componen un proyecto se organizan por hitos y pueden incluir entregas evaluables a través de task_submissions, que a su vez están enlazadas a archivos mediante la tabla task_submission_files.
+
+Las reuniones de coordinación también están modeladas, permitiendo registrar su temática, fechas y participantes. Este diseño facilita la planificación, el control de avance y la trazabilidad técnica del proyecto, asegurando una gestión estructurada y alineada con los procesos reales de consultoras y contratistas técnicos.
+
+<img src="../img/chapter4/db/projects.png" alt="Diagrama de base de datos del bounded context Project Management de ProP GMS">
+
+#### 4.8.1.2. Change Management Database Diagram
+
+El diseño del contexto de gestión de cambios permite registrar y controlar las modificaciones solicitadas durante el desarrollo de un proyecto técnico en PropGMS. La tabla principal change_processes centraliza toda la información relacionada a los procesos de cambio, incluyendo su origen, estado, justificación y vínculos con órdenes y respuestas.
+
+Las solicitudes de cambio pueden tener origen técnico o contractual, diferenciadas mediante la tabla origin_types. El estado del proceso se gestiona con la tabla change_status. Cada proceso puede generar una orden de cambio formal a través de la tabla change_orders, o recibir una respuesta por medio de la tabla change_responses, que contiene notas y fechas relevantes de la retroalimentación.
+
+Esta estructura permite mantener un historial claro de las decisiones, fechas y responsables asociados a cada modificación, facilitando la trazabilidad y gobernanza del proyecto.
+
+<img src="../img/chapter4/db/changes.png" alt="Diagrama de base de datos del bounded context de Changes Management de ProP GMS">
+
+#### 4.8.1.3. Organization Database Diagram
+
+El diseño del contexto de organización permite modelar las entidades jurídicas y su estructura de miembros dentro del sistema PropGMS. La tabla principal organizations almacena la información esencial como razón social, nombre comercial, RUC y su estado, referenciado desde la tabla organization_status.
+
+El proceso de incorporación de personas a una organización se gestiona mediante la tabla organization_invitations, que permite registrar a quién se invitó, quién realizó la invitación y el estado de la misma, con ayuda de la tabla invitation_status. Una vez aceptada, la persona se convierte en miembro mediante la tabla organization_members, que vincula personas con organizaciones de forma formal y estructurada.
+
+Este diseño permite tener un control completo sobre el ciclo de vida de una organización en la plataforma, desde su creación hasta la gestión de sus miembros, manteniendo trazabilidad y control de acceso claro.
+
+<img src="../img/chapter4/db/organizations.png" alt="Diagrama de base de datos del bounded context Organization de ProP GMS">
+
+#### 4.8.1.4. Notification Database Diagram
+
+El diseño del contexto de notificaciones permite gestionar la comunicación interna del sistema PropGMS dirigida a usuarios. La tabla notifications almacena los mensajes que se envían a cada persona, registrando su título, contenido, destinatario, fecha de creación y la categoría de la notificación.
+
+Las categorías disponibles están definidas en la tabla notification_categories, que permite clasificar los mensajes como informativos, alertas, recordatorios, entre otros. Esta estructura facilita una experiencia más clara y ordenada para los usuarios, permitiendo diferenciar el tipo y propósito de cada notificación dentro de la plataforma.
+
+<img src="../img/chapter4/db/notifications.png" alt="Diagrama de base de datos del bounded context Notifications de ProP GMS">
+
+#### 4.8.1.5. File Database Diagram
+
+El contexto de gestión de archivos permite organizar y clasificar los documentos digitales que se generan o se utilizan dentro del sistema PropGMS. La tabla principal files almacena información clave de cada archivo, como su tamaño, ubicación, fecha de carga, autor y su tipo.
+
+Los archivos pueden agruparse opcionalmente dentro de carpetas, modeladas en la tabla folders, que además se encuentran asociadas a un espacio de trabajo específico. Cada archivo también está clasificado por tipo mediante la tabla file_type, lo que permite diferenciar su propósito o categoría, como contratos, entregas o documentos técnicos.
+
+Este diseño facilita una organización clara y estructurada de los recursos digitales, asegurando su trazabilidad y una experiencia eficiente de gestión documental.
+
+<img src="../img/chapter4/db/files.png" alt="Diagrama de base de datos del bounded context Files Management de ProP GMS">
+
+#### 4.8.1.6. IAM Database Diagram
+
+El contexto de gestión de identidad y acceso permite administrar las credenciales y el estado de los usuarios del sistema PropGMS. La tabla user_accounts almacena los datos de inicio de sesión, incluyendo tipo de usuario, estado de la cuenta, fechas relevantes y vínculo opcional con la tabla persons, donde se detalla información personal como nombre completo, correo y teléfono.
+
+Cada cuenta está categorizada según su tipo mediante la tabla user_types y su estado actual se define por la tabla account_statuses, lo que permite distinguir usuarios activos, inactivos o bloqueados.
+
+Este diseño proporciona una base robusta para la autenticación, autorización y trazabilidad de los usuarios dentro de la plataforma, garantizando seguridad y control en el acceso al sistema.
+
+<img src="../img/chapter4/db/iam.png" alt="Diagrama de base de datos del bounded context IAM de ProP GMS">
+
+#### 4.8.1.7. Subscription Database Diagram
+
+El contexto de suscripciones permite administrar los planes comerciales que habilitan el acceso a las funcionalidades del sistema PropGMS. La tabla subscriptions registra cada suscripción adquirida, incluyendo su plan, duración, costo, estado y la persona asociada.
+
+Los planes disponibles están definidos en la tabla subscription_plans, donde se especifican características como duración en días, capacidad máxima de miembros, almacenamiento y número de proyectos. El estado actual de cada suscripción se controla mediante la tabla subscription_statuses.
+
+<img src="../img/chapter4/db/subscriptions.png" alt="Diagrama de base de datos del bounded context Subscription de ProP GMS">
+
+#### 4.8.1.8. Billing Database Diagram
+
+El contexto de facturación permite registrar y estructurar las transacciones comerciales dentro del sistema PropGMS. La tabla principal invoices representa las facturas emitidas a los usuarios o entidades, incluyendo montos, fechas clave, moneda utilizada y estado de pago, gestionado a través de la tabla payment_statuses.
+
+Cada factura puede incluir múltiples ítems, detallados en la tabla billing_items, donde se especifican los conceptos facturados, sus precios unitarios y subtotales. Esta organización permite una descomposición clara de los servicios cobrados, facilitando tanto el seguimiento contable como la generación de reportes.
+
+Este modelo de datos asegura que los procesos de cobro sean transparentes, auditables y fácilmente integrables con otros componentes financieros del sistema.
+
+<img src="../img/chapter4/db/billings.png" alt="Diagrama de base de datos del bounded context Billing de ProP GMS">
+
+#### 4.8.1.9. Payment Database Diagram
+
+El contexto de pagos se encarga de registrar las operaciones financieras asociadas al cobro de facturas dentro del sistema PropGMS. La tabla payments almacena cada pago realizado, incluyendo su monto, moneda, método utilizado, estado, fecha de realización y la factura a la que corresponde.
+
+El diseño contempla acuerdos de pago recurrente, representados en la tabla recurring_payment_agreements, que permiten automatizar la facturación periódica según el método de pago asociado, especificado en la tabla payment_method_types.
+
+Cada pago puede tener múltiples intentos de transacción registrados en la tabla transactions, la cual guarda la respuesta del gateway de pagos junto con su estado, definido por la tabla transaction_statuses. El estado general del pago se controla mediante la tabla payment_statuses.
+
+Esta estructura robusta permite gestionar pagos únicos y recurrentes con trazabilidad completa de los intentos y resultados, facilitando la integración con plataformas de pago externas.
+
+<img src="../img/chapter4/db/payments.png" alt="Diagrama de base de datos del bounded context Payments de ProP GMS">
+
 
 <div style="page-break-before: always;"></div>
 

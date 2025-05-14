@@ -123,8 +123,51 @@
                 <p style="display: block; margin: 2px 0; text-indent: 0px; font-weight: bold;">Conclusiones</p>
             </td>
         </tr>
+        <tr>
+            <td>2.0</td>
+            <td>14/05/2025</td>
+            <td>
+                <ul>
+                    <li>Aponte Cruzado, Andrea Marielena</li>
+                    <li>León Vivas, Fabrizio Amir</li>
+                    <li>López Acuña, Mario Joaquín</li>
+                    <li>Orozco Torres, Álvaro Joaquín</li>
+                    <li>Reaño Delgadillo, Henry Paolo</li>
+                </ul>
+            </td>
+            <td>
+                <strong>Adición de secciones:</strong><br>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.1. Sprint Planning 1</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.2. Aspect Leaders and Collaborators</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.3. Sprint Backlog 1</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.4. Development Evidence for Sprint Review</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.5. Execution Evidence for Sprint Review</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.6. Services Documentation Evidence for Sprint Review</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.7. Software Deployment Evidence for Sprint Review</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">5.2.8. Team Collaboration Insights during Sprint</p>
+                <strong>Actualización de secciones:</strong><br>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">4.3.1. Landing Page Wireframe</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">4.3.2. Landing Page Mock-up</p>
+                <p style="display: block; margin: 2px 0; text-indent: 0px; font-weight: bold;">4.4. Web Applications UX/UI Design</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">4.4.1. Web Applications Wireframes</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">4.4.2. Web Applications Wireflow Diagrams</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">4.4.2. Web Applications Mock-ups</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">4.4.3. Web Applications User Flow Diagrams</p>
+                <p style="display: block; margin: 2px 0; text-indent: 0px; font-weight: bold;">4.5. Web Applications Prototyping</p>
+                <p style="display: block; margin: 2px 0; text-indent: 0px; font-weight: bold;">4.6. Domain-Driven Software Architecture</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">4.6.1. Software Architecture Context Diagram</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">4.6.2. Software Architecture Container Diagrams</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">4.6.3. Software Architecture Components Diagrams</p>
+                <p style="display: block; margin: 2px 0; text-indent: 0px; font-weight: bold;">4.7. Software Object-Oriented Design</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">4.7.1. Class Diagrams</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">4.7.2. Class Dictionary</p>
+                <p style="display: block; margin: 2px 0; text-indent: 0px; font-weight: bold;">4.8. Database Design</p>
+                <p style="display: block; margin: 2px 0; text-indent: 10px;">4.8.1. Database Diagram</p>
+            </td>
+        </tr>
     </tbody>
 </table>
+
 
 
 <div style="page-break-before: always;"></div>
@@ -175,76 +218,100 @@ Para este entregable que ha elaborado el informe desde el capitulo I hasta el ca
 - [Registro de Versiones del Informe](#registro-de-versiones-del-informe)
 - [Project Report Collaboration Insights](#project-report-collaboration-insights)
 - [Student Outcome](#student-outcome)
-- [1.1. Startup Profile](#11-startup-profile)
-  - [1.1.1. Descripción de la Startup](#111-descripción-de-la-startup)
-  - [1.1.2. Perfiles de integrantes del equipo](#112-perfiles-de-integrantes-del-equipo)
-- [1.2. Solution Profile](#12-solution-profile)
-  - [1.2.1 Antecedentes y problemática](#121-antecedentes-y-problemática)
-  - [1.2.2 Lean UX Process](#122-lean-ux-process)
-    - [1.2.2.1. Lean UX Problem Statements](#1221-lean-ux-problem-statements)
-    - [1.2.2.2. Lean UX Assumptions](#1222-lean-ux-assumptions)
-    - [1.2.2.3. Lean UX Hypothesis Statements](#1223-lean-ux-hypothesis-statements)
-    - [1.2.2.4. Lean UX Canvas](#1224-lean-ux-canvas)
+- [Capítulo I: Introducción](#capítulo-i-introducción)
+  - [1.1. Startup Profile](#11-startup-profile)
+    - [1.1.1. Descripción de la Startup](#111-descripción-de-la-startup)
+    - [1.1.2. Perfiles de integrantes del equipo](#112-perfiles-de-integrantes-del-equipo)
+  - [1.2. Solution Profile](#12-solution-profile)
+    - [1.2.1 Antecedentes y problemática](#121-antecedentes-y-problemática)
+    - [1.2.2 Lean UX Process](#122-lean-ux-process)
+      - [1.2.2.1. Lean UX Problem Statements](#1221-lean-ux-problem-statements)
+      - [1.2.2.2. Lean UX Assumptions](#1222-lean-ux-assumptions)
+      - [1.2.2.3. Lean UX Hypothesis Statements](#1223-lean-ux-hypothesis-statements)
+      - [1.2.2.4. Lean UX Canvas](#1224-lean-ux-canvas)
 - [1.3. Segmentos objetivo](#13-segmentos-objetivo)
-- [2.1. Competidores](#21-competidores)
-  - [2.1.1. Análisis competitivo](#211-análisis-competitivo)
-  - [2.1.2. Estrategias y tácticas frente a competidores](#212-estrategias-y-tácticas-frente-a-competidores)
-- [2.2. Entrevistas](#22-entrevistas)
-  - [2.2.1. Diseño de entrevistas](#221-diseño-de-entrevistas)
-  - [2.2.2. Registro de entrevistas](#222-registro-de-entrevistas)
-  - [2.2.3. Análisis de entrevistas](#223-análisis-de-entrevistas)
-- [2.3. Needfinding](#23-needfinding)
-  - [2.3.1. User Personas](#231-user-personas)
-  - [2.3.2. User Task Matrix](#232-user-task-matrix)
-  - [2.3.3. User Journey Mapping](#233-user-journey-mapping)
-  - [2.3.4. Empathy Mapping](#234-empathy-mapping)
-  - [2.3.5. As-is Scenario Mapping](#235-as-is-scenario-mapping)
-- [2.4. Ubiquitous Language](#24-ubiquitous-language)
-- [3.1. To-Be Scenario Mapping](#31-to-be-scenario-mapping)
-- [3.2. User Stories](#32-user-stories)
-- [3.3. Impact Mapping](#33-impact-mapping)
-- [3.4. Product Backlog](#34-product-backlog)
-- [4.1. Style Guidelines](#41-style-guidelines)
-  - [4.1.1. General Style Guidelines](#411-general-style-guidelines)
-  - [4.1.2. Web Style Guidelines](#412-web-style-guidelines)
-- [4.2. Information Architecture](#42-information-architecture)
-  - [4.2.1. Organization Systems](#421-organization-systems)
-  - [4.2.2. Labeling Systems](#422-labeling-systems)
-  - [4.2.3. SEO Tags and Meta Tags](#423-seo-tags-and-meta-tags)
-  - [4.2.4. Searching Systems](#424-searching-systems)
-  - [4.2.5. Navigation Systems](#425-navigation-systems)
-- [4.3. Landing Page UI Design](#43-landing-page-ui-design)
-  - [4.3.1. Landing Page Wireframe](#431-landing-page-wireframe)
-  - [4.3.2. Landing Page Mock-up](#432-landing-page-mock-up)
-- [4.4. Web Applications UX/UI Design](#44-web-applications-uxui-design)
-  - [4.4.1. Web Applications Wireframes](#441-web-applications-wireframes)
-  - [4.4.2. Web Applications Wireflow Diagrams](#442-web-applications-wireflow-diagrams)
-  - [4.4.2. Web Applications Mock-ups](#442-web-applications-mock-ups)
-  - [4.4.3. Web Applications User Flow Diagrams](#443-web-applications-user-flow-diagrams)
-- [4.5. Web Applications Prototyping](#45-web-applications-prototyping)
-- [4.6. Domain-Driven Software Architecture](#46-domain-driven-software-architecture)
-  - [4.6.1. Software Architecture Context Diagram](#461-software-architecture-context-diagram)
-  - [4.6.2. Software Architecture Container Diagrams](#462-software-architecture-container-diagrams)
-  - [4.6.3. Software Architecture Components Diagrams](#463-software-architecture-components-diagrams)
-- [4.7. Software Object-Oriented Design](#47-software-object-oriented-design)
-  - [4.7.1. Class Diagrams](#471-class-diagrams)
-  - [4.7.2. Class Dictionary](#472-class-dictionary)
-- [4.8. Database Design](#48-database-design)
-  - [4.8.1. Database Diagram](#481-database-diagram)
-- [5.1. Software Configuration Management](#51-software-configuration-management)
-  - [5.1.1. Software Development Environment Configuration](#511-software-development-environment-configuration)
-  - [5.1.2. Source Code Management](#512-source-code-management)
-  - [5.1.3. Source Code Style Guide & Conventions](#513-source-code-style-guide--conventions)
-  - [5.1.4. Software Deployment Configuration](#514-software-deployment-configuration)
-- [5.2. Landing Page, Services & Applications Implementation](#52-landing-page-services--applications-implementation)
-  - [5.2.1. Sprint Planning 1](#521-sprint-planning-1)
-  - [5.2.2. Aspect Leaders and Collaborators](#522-aspect-leaders-and-collaborators)
-  - [5.2.3. Sprint Backlog 1](#523-sprint-backlog-1)
-  - [5.2.4. Development Evidence for Sprint Review](#524-development-evidence-for-sprint-review)
-  - [5.2.5. Execution Evidence for Sprint Review](#525-execution-evidence-for-sprint-review)
-  - [5.2.6. Services Documentation Evidence for Sprint Review](#526-services-documentation-evidence-for-sprint-review)
-  - [5.2.7. Software Deployment Evidence for Sprint Review](#527-software-deployment-evidence-for-sprint-review)
-  - [5.2.8. Team Collaboration Insights during Sprint](#528-team-collaboration-insights-during-sprint)
+- [Capítulo II: Requirements Elicitation & Analysis](#capítulo-ii-requirements-elicitation--analysis)
+  - [2.1. Competidores](#21-competidores)
+    - [2.1.1. Análisis competitivo](#211-análisis-competitivo)
+    - [2.1.2. Estrategias y tácticas frente a competidores](#212-estrategias-y-tácticas-frente-a-competidores)
+  - [2.2. Entrevistas](#22-entrevistas)
+    - [2.2.1. Diseño de entrevistas](#221-diseño-de-entrevistas)
+    - [2.2.2. Registro de entrevistas](#222-registro-de-entrevistas)
+    - [2.2.3. Análisis de entrevistas](#223-análisis-de-entrevistas)
+  - [2.3. Needfinding](#23-needfinding)
+    - [2.3.1. User Personas](#231-user-personas)
+    - [2.3.2. User Task Matrix](#232-user-task-matrix)
+    - [2.3.3. User Journey Mapping](#233-user-journey-mapping)
+    - [2.3.4. Empathy Mapping](#234-empathy-mapping)
+    - [2.3.5. As-is Scenario Mapping](#235-as-is-scenario-mapping)
+  - [2.4. Ubiquitous Language](#24-ubiquitous-language)
+- [Capítulo III: Requirements Specification](#capítulo-iii-requirements-specification)
+  - [3.1. To-Be Scenario Mapping](#31-to-be-scenario-mapping)
+  - [3.2. User Stories](#32-user-stories)
+  - [3.3. Impact Mapping](#33-impact-mapping)
+  - [3.4. Product Backlog](#34-product-backlog)
+- [Capítulo IV: Product Design](#capítulo-iv-product-design)
+  - [4.1. Style Guidelines](#41-style-guidelines)
+    - [4.1.1. General Style Guidelines](#411-general-style-guidelines)
+    - [4.1.2. Web Style Guidelines](#412-web-style-guidelines)
+  - [4.2. Information Architecture](#42-information-architecture)
+    - [4.2.1. Organization Systems](#421-organization-systems)
+    - [4.2.2. Labeling Systems](#422-labeling-systems)
+    - [4.2.3. SEO Tags and Meta Tags](#423-seo-tags-and-meta-tags)
+    - [4.2.4. Searching Systems](#424-searching-systems)
+    - [4.2.5. Navigation Systems](#425-navigation-systems)
+  - [4.3. Landing Page UI Design](#43-landing-page-ui-design)
+    - [4.3.1. Landing Page Wireframe](#431-landing-page-wireframe)
+    - [4.3.2. Landing Page Mock-up](#432-landing-page-mock-up)
+  - [4.4. Web Applications UX/UI Design](#44-web-applications-uxui-design)
+    - [4.4.1. Web Applications Wireframes](#441-web-applications-wireframes)
+    - [4.4.2. Web Applications Wireflow Diagrams](#442-web-applications-wireflow-diagrams)
+    - [4.4.3. Web Applications Mock-ups](#443-web-applications-mock-ups)
+    - [4.4.4. Web Applications User Flow Diagrams](#444-web-applications-user-flow-diagrams)
+  - [4.5. Web Applications Prototyping](#45-web-applications-prototyping)
+  - [4.6. Domain-Driven Software Architecture](#46-domain-driven-software-architecture)
+    - [4.6.1. Software Architecture Context Diagram](#461-software-architecture-context-diagram)
+    - [4.6.2. Software Architecture Container Diagrams](#462-software-architecture-container-diagrams)
+    - [4.6.3. Software Architecture Components Diagrams](#463-software-architecture-components-diagrams)
+  - [4.7. Software Object-Oriented Design](#47-software-object-oriented-design)
+    - [4.7.1. Class Diagrams](#471-class-diagrams)
+    - [4.7.2. Class Dictionary](#472-class-dictionary)
+  - [4.8. Database Design](#48-database-design)
+    - [4.8.1. Database Diagram](#481-database-diagram)
+      - [4.8.1.1. Project Management Database Diagram](#4811-project-management-database-diagram)
+      - [4.8.1.2. Change Management Database Diagram](#4812-change-management-database-diagram)
+      - [4.8.1.3. Organization Database Diagram](#4813-organization-database-diagram)
+      - [4.8.1.4. Notification Database Diagram](#4814-notification-database-diagram)
+      - [4.8.1.5. File Database Diagram](#4815-file-database-diagram)
+      - [4.8.1.6. IAM Database Diagram](#4816-iam-database-diagram)
+      - [4.8.1.7. Subscription Database Diagram](#4817-subscription-database-diagram)
+      - [4.8.1.8. Billing Database Diagram](#4818-billing-database-diagram)
+      - [4.8.1.9. Payment Database Diagram](#4819-payment-database-diagram)
+- [Capítulo V: Product Implementation, Validation & Deployment](#capítulo-v-product-implementation-validation--deployment)
+  - [5.1. Software Configuration Management](#51-software-configuration-management)
+    - [5.1.1. Software Development Environment Configuration](#511-software-development-environment-configuration)
+    - [5.1.2. Source Code Management](#512-source-code-management)
+    - [5.1.3. Source Code Style Guide and Coding Conventions](#513-source-code-style-guide-and-coding-conventions)
+    - [5.1.4. Software Deployment Configuration](#514-software-deployment-configuration)
+  - [5.2. Landing Page, Services & Applications Implementation](#52-landing-page-services--applications-implementation)
+    - [5.2.1. Sprint 1](#521-sprint-1)
+      - [5.2.1.1. Sprint Planning 1](#5211-sprint-planning-1)
+      - [5.2.1.2. Aspect Leaders & Collaborators](#5212-aspect-leaders--collaborators)
+      - [5.2.1.3. Sprint Backlog 1](#5213-sprint-backlog-1)
+      - [5.2.1.4. Development Evidence for Sprint Review](#5214-development-evidence-for-sprint-review)
+      - [5.2.1.5. Execution Evidence for Sprint Review](#5215-execution-evidence-for-sprint-review)
+      - [5.2.1.6. Services Documentation Evidence for Sprint Review](#5216-services-documentation-evidence-for-sprint-review)
+      - [5.2.1.7. Software Deployment Evidence for Sprint Review](#5217-software-deployment-evidence-for-sprint-review)
+      - [5.2.1.8. Team Collaboration Insights during Sprint](#5218-team-collaboration-insights-during-sprint)
+    - [5.2.2. Sprint 1](#521-sprint-1)
+      - [5.2.2.1. Sprint Planning 2](#5221-sprint-planning-2)
+      - [5.2.2.2. Aspect Leaders & Collaborators](#5222-aspect-leaders--collaborators)
+      - [5.2.2.3. Sprint Backlog 2](#5223-sprint-backlog-2)
+      - [5.2.2.4. Development Evidence for Sprint Review](#5224-development-evidence-for-sprint-review)
+      - [5.2.2.5. Execution Evidence for Sprint Review](#5225-execution-evidence-for-sprint-review)
+      - [5.2.2.6. Services Documentation Evidence for Sprint Review](#5226-services-documentation-evidence-for-sprint-review)
+      - [5.2.2.7. Software Deployment Evidence for Sprint Review](#5227-software-deployment-evidence-for-sprint-review)
+      - [5.2.2.8. Team Collaboration Insights during Sprint](#5228-team-collaboration-insights-during-sprint)
 - [Conclusiones](#conclusiones)
 
 
@@ -274,9 +341,18 @@ Para este entregable que ha elaborado el informe desde el capitulo I hasta el ca
                     <li><strong>Álvaro:</strong> Delegué tareas entre los miembros del equipo tomando en cuenta sus puntos fuertes y debiles. Siempre apoye a mis compañeros en la medida de lo posible. </li>
                     <li><strong>Henry:</strong> Trabaje de la mano con mis compañeros para realizar, fielmente al dominio, toda la arquitectura del sistema. Durante el primer entregable he trabajado más horas en equipo que en solitario. </li>
                 </ul>
+                 <strong>TP:</strong><br>
+                <ul>
+                    <li><strong>Andrea:</strong>  Participé activamente en el desarrollo del segundo entregable del proyecto, liderando la implementación de la funcionalidad de gestión de miembros en la aplicación web. </li>
+                    <li><strong>Fabrizio:</strong> Fui partícipe en la creación colaborativa del módulo de gestión de proyectos, contribuyendo activamente al diseño y la toma de decisiones en conjunto con mi equipo. </li>
+                    <li><strong>Mario:</strong> Fui partícipe en la creación de la estructura para la planificación de entregables, colaborando estrechamente con mi equipo</li>
+                    <li><strong>Álvaro:</strong> Asumí un rol de liderazgo dentro del equipo, guiando decisiones clave relacionadas con la arquitectura de la solución y la planificación del sprint. Esta labor fue realizada de forma colaborativa, fomentando el consenso y asegurando una dirección técnica coherente con los objetivos del proyecto. </li>
+                    <li><strong>Henry:</strong> Participé activamente en el desarrollo del núcleo de la solución, asegurando su correcta integración con el resto del sistema. Además, lideré el proceso de despliegue en el entorno productivo y brindé soporte constante a mis compañeros, resolviendo dudas técnicas y facilitando el avance del equipo de forma colaborativa. </li>
+                </ul>
             </td>
             <td>
                 <strong>TB1:</strong> El trabajo en equipo para este entregable fue muy fuerte, casi siempre estabamos en reunión y trabajando juntos. Sin embargo, aún hay espacio para mejorar en la autonomía de cada miembro del equipo. <br>
+                <strong>TP:</strong> El trabajo en equipo para este entregable fue constante, con reuniones frecuentes y colaboración activa entre los miembros. No obstante, aún existen oportunidades para fortalecer la autonomía individual y optimizar la gestión del tiempo de manera más equilibrada<br>
             </td>
         </tr>
         <tr>
@@ -287,14 +363,23 @@ Para este entregable que ha elaborado el informe desde el capitulo I hasta el ca
                 <strong>TB1:</strong><br>
                 <ul>
                     <li><strong>Andrea:</strong> Cumplí todas las tareas que se me asignaron y apoye a los compañeros que no podían completar sus tareas. En muchas ocasiones ayude a resolver problemas de diseño de manera rápida. </li>
-                    <li><strong>Fabrizio:</strong> Ayude a mis compañeros a realizar sus tareas con respecto a la Landing Page y aporte constantemente en el diseño de la misma. Durante el primer entregable he cumplido con los plazos establecidos. </li>
-                    <li><strong>Mario:</strong> Ayude a mis compañeros siempre que pude y cumplí con los plazos que se me asignaban. </li>
-                    <li><strong>Álvaro:</strong>  Enseñe a mis compañeros sobre el diseño orientado por compentes. Establecí metas del equipo y planifique tareas para todos. </li>
+                    <li><strong>Fabrizio:</strong> Ayudé a mis compañeros a realizar sus tareas con respecto a la Landing Page y aporte constantemente en el diseño de la misma. Durante el primer entregable he cumplido con los plazos establecidos. </li>
+                    <li><strong>Mario:</strong> Ayudé a mis compañeros siempre que pude y cumplí con los plazos que se me asignaban. </li>
+                    <li><strong>Álvaro:</strong>  Enseñé a mis compañeros sobre el diseño orientado por compentes. Establecí metas del equipo y planifique tareas para todos. </li>
                     <li><strong>Henry:</strong> Cumplí con las tareas que se me asignaron y complete otras sin responsable. Ayude a establecer metas en el equipo y siempre cumplí con los plazos. </li>
+                </ul>
+                <strong>TP:</strong><br>
+                <ul>
+                    <li><strong>Andrea:</strong> Cumplí con parte de las tareas que se me asignaron dentro del plazo establecido. En varias ocasiones, enfrenté desafíos relacionados con la organización del tiempo y la priorización de actividades, lo que me permitió identificar áreas en las que puedo seguir mejorando. </li>
+                    <li><strong>Fabrizio:</strong> Asumí responsabilidades clave durante el desarrollo del entregable y logré avanzar con varias de ellas dentro del tiempo acordado. Si bien hubo momentos en los que el ritmo de trabajo se vio afectado por otras exigencias, mantuve el compromiso con el equipo y busqué adaptarme para cumplir con lo necesario. </li>
+                    <li><strong>Mario:</strong> Avancé de manera significativa con la tarea que se me asignó, aunque no logré completarla en su totalidad dentro del plazo. Este proceso me permitió identificar aspectos en los que debo mejorar, como la planificación personal y la anticipación a posibles contratiempos. </li>
+                    <li><strong>Álvaro:</strong> Participé activamente en la coordinación del equipo y en el seguimiento del avance de tareas. Pude cumplir con las actividades asignadas, aunque reconozco que en algunos momentos me costó mantener una comunicación constante, lo cual es un aspecto que me propongo mejorar en los próximos trabajos. </li>
+                    <li><strong>Henry:</strong> Contribuí al desarrollo del entregable en los aspectos técnicos que se me asignaron. A pesar de algunas dificultades para gestionar el tiempo entre distintas responsabilidades, logré mantenerme alineado con los objetivos del equipo. Este reto me ayudó a reconocer la importancia de una mejor planificación y comunicación continua. </li>
                 </ul>
             </td>
             <td>
                 <strong>TB1:</strong> El desempeño y cohesión del equipo durante este entregable fue muy bueno. Se realizaron constantes reuniones y colaboramos mutuamente para llegar a la meta planteada. Todos cumplieron con sus tareas asignadas y cumplieron con los plazos establecidos. Sin embargo, aún hay margen de mejora.<br>
+                <strong>TP:</strong> El desempeño del equipo en este entregable no fue sólido. Aún con reuniones frecuentes que facilitaron el avance de algunos objetivos propuestos, no se cumplieron todos. Cada integrante trató de asumir con responsabilidad sus tareas, cumpliéndolas fuera de los plazos establecidos. No obstante, aún existe margen de mejora en aspectos como la coordinación en momentos clave, la distribución equilibrada del trabajo y el fortalecimiento de la autonomía individual para optimizar el rendimiento colectivo.<br>
             </td>
         </tr>
     </tobdy>
@@ -357,7 +442,7 @@ Visión: Nuestro objetivo es convertirnos en la plataforma de mayor confianza pa
                 <td style="border: 1px solid #ddd; padding: 10px; text-align: left; background-color: #f2f2f2; color: #333;"><img style="width: 240px; height: auto; border-radius: 25%;" src="./img/chapter1/Mario.png" alt="Foto de Mario Lopez"></td>
                 <td style="border: 1px solid #ddd; padding: 10px; text-align: left; background-color: #f2f2f2; color: #333;">Lopez Acuña, Mario Joaquín</td>
                 <td style="border: 1px solid #ddd; padding: 10px; text-align: left; background-color: #f2f2f2; color: #333;">202116250</td>
-                <td style="border: 1px solid #ddd; padding: 10px; text-align: left; background-color: #f2f2f2; color: #333;">Ingenería de Software</td>
+                <td style="border: 1px solid #ddd; padding: 10px; text-align: left; background-color: #f2f2f2; color: #333;">Ingeniería de Software</td>
                 <td style="max-width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: normal;">
                     <ul>
                         <li>Diseño web</li>
@@ -371,7 +456,7 @@ Visión: Nuestro objetivo es convertirnos en la plataforma de mayor confianza pa
                 <td style="border: 1px solid #ddd; padding: 10px; text-align: left; background-color: #f2f2f2; color: #333;"><img style="width: 240px; height: auto; border-radius: 25%;" src="./img/chapter1/Alvaro.png" alt="Foto de Álvaro Orozco"></td>
                 <td style="border: 1px solid #ddd; padding: 10px; text-align: left; background-color: #f2f2f2; color: #333;">Orozco Torres, Álvaro Joaquín</td>
                 <td style="border: 1px solid #ddd; padding: 10px; text-align: left; background-color: #f2f2f2; color: #333;">202220783</td>
-                <td style="border: 1px solid #ddd; padding: 10px; text-align: left; background-color: #f2f2f2; color: #333;">Ingenería de Software</td>
+                <td style="border: 1px solid #ddd; padding: 10px; text-align: left; background-color: #f2f2f2; color: #333;">Ingeniería de Software</td>
                 <td style="max-width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: normal;">
                     <ul>
                         <li>Programación con Python y JavaScript</li>
@@ -386,7 +471,7 @@ Visión: Nuestro objetivo es convertirnos en la plataforma de mayor confianza pa
                 <td style="border: 1px solid #ddd; padding: 10px; text-align: left; background-color: #f2f2f2; color: #333;"><img style="width: 240px; height: auto; border-radius: 25%;" src="./img/chapter1/Henry.png" alt="Foto de Henry Reaño"></td>
                 <td style="border: 1px solid #ddd; padding: 10px; text-align: left; background-color: #f2f2f2; color: #333;">Reaño Delgadillo, Henry Paolo</td>
                 <td style="border: 1px solid #ddd; padding: 10px; text-align: left; background-color: #f2f2f2; color: #333;">20221e247</td>
-                <td style="border: 1px solid #ddd; padding: 10px; text-align: left; background-color: #f2f2f2; color: #333;">Ingenería de Software</td>
+                <td style="border: 1px solid #ddd; padding: 10px; text-align: left; background-color: #f2f2f2; color: #333;">Ingeniería de Software</td>
                 <td style="max-width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: normal;">
                     <ul>
                         <li>Conocimiento en sistemas operativos tipo Linux</li>
@@ -1969,7 +2054,7 @@ Se considera para la realización de este User Task Matrix los User Persona, sus
   <thead>
     <tr>
       <th rowspan="2">Task</th>
-      <th colspan="2">Adilberto Cáceres</th>
+      <th colspan="2">Edilberto Cáceres</th>
       <th colspan="2">José Rodríguez</th>
       <th colspan="2">Alfonso Villarán</th>
     </tr>
@@ -2438,7 +2523,7 @@ Se elaboraron historias de usuario, historias técnicas (para el API) e historia
         <td>US015</td>
         <td>Seleccionar especialidad del miembro del equipo</td>
         <td>Como contratista quiero asignar la especialidad técnica del miembro del equipo si su rol es especialista para organizar correctamente al equipo por áreas de conocimiento y asignación de tareas</td>
-        <td><strong>Scenario: Visualizar campo de especialidad al seleccionar rol 'especialista'</strong><br>Given el contratista está en el formulario de añadir miembro<br>When selecciona el rol 'especialista'<br>Then el sistema debe mostrar un campo para seleccionar una especialidad técnica<br><br><strong>Scenario: Ocultar campo de especialidad al seleccionar rol 'COORDINATOR'</strong><br>Given el contratista está en el formulario de añadir miembro<br>When selecciona el rol 'COORDINATOR'<br>Then el sistema no debe mostrar el campo de especialidad<br><br><strong>Scenario: Intento de confirmar sin seleccionar especialidad</strong><br>Given el contratista ha seleccionado el rol 'especialista'<br>Given no ha seleccionado una especialidad<br>When confirma la incorporación del miembro<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que la especialidad es obligatoria para eespecialistaas<br><br></td>
+        <td><strong>Scenario: Visualizar campo de especialidad al seleccionar rol 'especialista'</strong><br>Given el contratista está en el formulario de añadir miembro<br>When selecciona el rol 'especialista'<br>Then el sistema debe mostrar un campo para seleccionar una especialidad técnica<br><br><strong>Scenario: Ocultar campo de especialidad al seleccionar rol 'COORDINATOR'</strong><br>Given el contratista está en el formulario de añadir miembro<br>When selecciona el rol 'COORDINATOR'<br>Then el sistema no debe mostrar el campo de especialidad<br><br><strong>Scenario: Intento de confirmar sin seleccionar especialidad</strong><br>Given el contratista ha seleccionado el rol 'especialista'<br>Given no ha seleccionado una especialidad<br>When confirma la incorporación del miembro<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que la especialidad es obligatoria para especialistas<br><br></td>
         <td>EP02</td>
     </tr>
     <tr>
@@ -2557,7 +2642,7 @@ Se elaboraron historias de usuario, historias técnicas (para el API) e historia
         <td>US032</td>
         <td>Visualizar lista de tareas del cronograma por hito</td>
         <td>Como miembro del proyecto quiero consultar las tareas planificadas dentro de los hitos del cronograma del proyecto para entender el trabajo técnico pendiente o en curso según la planificación del proyecto</td>
-        <td><strong>Scenario: Visualizar tareas si es contratista o coordinador</strong><br>Given el usuario es el contratista o un coordinador del proyecto<br>When expande un hito del cronograma<br>Then el sistema debe mostrar todas las tareas asociadas a ese hito con detalles básicos como nombre, fecha límite y estado actual<br><br><strong>Scenario: Visualizar solo tareas asignadas si es eespecialistaa</strong><br>Given el usuario es un eespecialistaa<br>When expande un hito del cronograma<br>Then el sistema debe mostrar solo las tareas asignadas a ese eespecialistaa con detalles básicos como nombre, fecha límite y estado actual<br><br><strong>Scenario: Mostrar opción de añadir tarea solo si es contratista</strong><br>Given el usuario es el contratista<br>When expande un hito del cronograma<br>Then el sistema debe mostrar una opción para añadir una nueva tarea<br><br><strong>Scenario: Visualizar opción para editar tarea solo si es contratista</strong><br>Given el usuario es el contratista del proyecto<br>When visualiza la lista de tareas<br>Then el sistema debe mostrar una opción para editar el nombre junto a cada tarea<br><br><strong>Scenario: Visualizar opción de eliminar si es contratista</strong><br>Given el usuario es el contratista del proyecto<br>When visualiza la lista de tareas<br>Then el sistema debe mostrar la opción para eliminar junto a cada tarea<br><br></td>
+        <td><strong>Scenario: Visualizar tareas si es contratista o coordinador</strong><br>Given el usuario es el contratista o un coordinador del proyecto<br>When expande un hito del cronograma<br>Then el sistema debe mostrar todas las tareas asociadas a ese hito con detalles básicos como nombre, fecha límite y estado actual<br><br><strong>Scenario: Visualizar solo tareas asignadas si es especialista</strong><br>Given el usuario es un especialista<br>When expande un hito del cronograma<br>Then el sistema debe mostrar solo las tareas asignadas a ese especialista con detalles básicos como nombre, fecha límite y estado actual<br><br><strong>Scenario: Mostrar opción de añadir tarea solo si es contratista</strong><br>Given el usuario es el contratista<br>When expande un hito del cronograma<br>Then el sistema debe mostrar una opción para añadir una nueva tarea<br><br><strong>Scenario: Visualizar opción para editar tarea solo si es contratista</strong><br>Given el usuario es el contratista del proyecto<br>When visualiza la lista de tareas<br>Then el sistema debe mostrar una opción para editar el nombre junto a cada tarea<br><br><strong>Scenario: Visualizar opción de eliminar si es contratista</strong><br>Given el usuario es el contratista del proyecto<br>When visualiza la lista de tareas<br>Then el sistema debe mostrar la opción para eliminar junto a cada tarea<br><br></td>
         <td>EP04</td>
     </tr>
     <tr>
@@ -2605,7 +2690,7 @@ Se elaboraron historias de usuario, historias técnicas (para el API) e historia
     <tr>
         <td>US039</td>
         <td>Filtrar responsables por especialidad afín a la tarea</td>
-        <td>Como contratista quiero activar un filtro para facilitar la asignación de tareas a eespecialistaas compatibles para agilizar la asignación técnica de tareas evitando errores por desalineación de especialidades</td>
+        <td>Como contratista quiero activar un filtro para facilitar la asignación de tareas a especialistas compatibles para agilizar la asignación técnica de tareas evitando errores por desalineación de especialidades</td>
         <td><strong>Scenario: Visualizar opción para activar filtro por especialidad</strong><br>Given el contratista accede al formulario de asignación de responsable<br>When se carga la interfaz de selección<br>Then el sistema debe mostrar un checkbox o switch etiquetado como 'Filtrar por especialidad afín'<br><br><strong>Scenario: Alternar estado del filtro</strong><br>Given el checkbox o switch está visible en la interfaz<br>When el contratista activa o desactiva el filtro<br>Then el sistema debe registrar el cambio de estado del filtro y actualizar la lista mostrada<br><br><strong>Scenario: Filtrar lista al activar el filtro</strong><br>Given el filtro está activado<br>When se muestra la lista de miembros del equipo<br>Then el sistema debe mostrar solo a los miembros cuya especialidad coincida con la de la tarea<br><br></td>
         <td>EP04</td>
     </tr>
@@ -2647,29 +2732,29 @@ Se elaboraron historias de usuario, historias técnicas (para el API) e historia
     <tr>
         <td>US045</td>
         <td>Visualizar opción de entregar una tarea</td>
-        <td>Como eespecialistaa quiero saber si tiene permitido enviar la entrega de una tarea que le fue asignada para acceder fácilmente al formulario de entrega solo cuando corresponde</td>
+        <td>Como especialista quiero saber si tiene permitido enviar la entrega de una tarea que le fue asignada para acceder fácilmente al formulario de entrega solo cuando corresponde</td>
         <td><strong>Scenario: Mostrar opción de entrega si es responsable</strong><br>Given el usuario es el responsable asignado de la tarea<br>Given el estado de la tarea es PENDING<br>When visualiza los detalles de la tarea<br>Then el sistema debe mostrar un botón o enlace para iniciar la entrega de la tarea<br><br><strong>Scenario: Ocultar opción si no es responsable</strong><br>Given el usuario no es el responsable de la tarea<br>When visualiza los detalles de la tarea<br>Then el sistema no debe mostrar la opción para enviar entrega<br><br></td>
         <td>EP04</td>
     </tr>
     <tr>
         <td>US046</td>
         <td>Adjuntar archivos en la entrega de tarea</td>
-        <td>Como eespecialistaa quiero subir documentos técnicos o evidencias como parte de la entrega de una tarea para centralizar la documentación técnica en el workspace de la organización y asegurar trazabilidad</td>
+        <td>Como especialista quiero subir documentos técnicos o evidencias como parte de la entrega de una tarea para centralizar la documentación técnica en el workspace de la organización y asegurar trazabilidad</td>
         <td><strong>Scenario: Visualizar input para adjuntar archivos</strong><br>Given el responsable accede al formulario de entrega de tarea<br>When se carga la interfaz<br>Then el sistema debe mostrar un campo para subir archivos desde el dispositivo<br><br><strong>Scenario: Subir archivos al workspace y generar referencia en la entrega</strong><br>Given el responsable ha seleccionado uno o más archivos válidos<br>When confirma la selección<br>Then el sistema debe subir automáticamente los archivos al workspace de la organización<br>Then crear referencias de tipo TASK_SUBMISSION para cada archivo<br>Then guardar en el entregable solo las referencias generadas<br>Then mostrar un mensaje de éxito<br><br><strong>Scenario: Rechazar archivos no válidos</strong><br>Given el responsable ha seleccionado archivos con formato no permitido<br>When intenta subirlos<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando los formatos válidos (por ejemplo: PDF, DOCX, JPG, PNG)<br><br></td>
         <td>EP04</td>
     </tr>
     <tr>
         <td>US047</td>
         <td>Escribir notas en la entrega de tarea</td>
-        <td>Como eespecialistaa quiero incluir observaciones, comentarios técnicos o explicaciones junto a los archivos entregados para facilitar la comprensión y revisión de la entrega por parte del coordinador o contratista</td>
+        <td>Como especialista quiero incluir observaciones, comentarios técnicos o explicaciones junto a los archivos entregados para facilitar la comprensión y revisión de la entrega por parte del coordinador o contratista</td>
         <td><strong>Scenario: Visualizar campo de notas</strong><br>Given el responsable accede al formulario de entrega de tarea<br>When se carga la interfaz<br>Then el sistema debe mostrar un campo de texto para ingresar notas o comentarios adicionales<br><br><strong>Scenario: Permitir entrega con o sin notas</strong><br>Given el responsable está completando la entrega<br>When envía la entrega sin ingresar notas<br>Then el sistema debe permitir continuar la acción sin mostrar advertencias<br><br><strong>Scenario: Guardar notas junto al entregable</strong><br>Given el responsable ha escrito comentarios técnicos en el campo de notas<br>When confirma la entrega<br>Then el sistema debe almacenar las notas como parte del entregable de la tarea<br><br></td>
         <td>EP04</td>
     </tr>
     <tr>
         <td>US048</td>
         <td>Enviar entrega de tarea</td>
-        <td>Como eespecialistaa quiero finalizar el proceso de entrega de una tarea con los elementos completados para marcar la tarea como enviada para su revisión, asegurando trazabilidad y control de avances</td>
-        <td><strong>Scenario: Confirmar entrega con archivos válidos</strong><br>Given el eespecialistaa ha adjuntado al menos una referencia a un archivo<br>When confirma la entrega<br>Then el sistema debe registrar un nuevo TaskSubmission<br>Then cambiar el estado de la tarea a SUBMITTED<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Evitar envío si no hay archivos adjuntos</strong><br>Given el eespecialistaa no ha adjuntado ninguna referencia a archivo<br>When intenta confirmar la entrega<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que se requiere al menos un archivo<br><br></td>
+        <td>Como especialista quiero finalizar el proceso de entrega de una tarea con los elementos completados para marcar la tarea como enviada para su revisión, asegurando trazabilidad y control de avances</td>
+        <td><strong>Scenario: Confirmar entrega con archivos válidos</strong><br>Given el especialista ha adjuntado al menos una referencia a un archivo<br>When confirma la entrega<br>Then el sistema debe registrar un nuevo TaskSubmission<br>Then cambiar el estado de la tarea a SUBMITTED<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Evitar envío si no hay archivos adjuntos</strong><br>Given el especialista no ha adjuntado ninguna referencia a archivo<br>When intenta confirmar la entrega<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que se requiere al menos un archivo<br><br></td>
         <td>EP04</td>
     </tr>
     <tr>
@@ -2689,15 +2774,15 @@ Se elaboraron historias de usuario, historias técnicas (para el API) e historia
     <tr>
         <td>US051</td>
         <td>Rechazar entrega de tarea con retroalimentación</td>
-        <td>Como coordinador o contratista quiero marcar una entrega como no aceptada y proporcionar retroalimentación clara al eespecialistaa para garantizar la calidad del trabajo entregado y orientar mejoras en una nueva entrega</td>
+        <td>Como coordinador o contratista quiero marcar una entrega como no aceptada y proporcionar retroalimentación clara al especialista para garantizar la calidad del trabajo entregado y orientar mejoras en una nueva entrega</td>
         <td><strong>Scenario: Mostrar campo de retroalimentación al rechazar</strong><br>Given el usuario accede a una tarea en estado SUBMITTED<br>When selecciona la opción para rechazar la entrega<br>Then el sistema debe mostrar un campo obligatorio para escribir retroalimentación<br><br><strong>Scenario: Confirmar rechazo con retroalimentación</strong><br>Given el usuario ha escrito retroalimentación<br>When confirma el rechazo<br>Then el sistema debe cambiar el estado de la tarea a REJECTED<br>Then guardar la nota y el usuario que realizó la revisión<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Impedir rechazo sin retroalimentación</strong><br>Given el usuario ha seleccionado rechazar una entrega<br>When intenta confirmar sin escribir retroalimentación<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que el campo de retroalimentación es obligatorio<br><br></td>
         <td>EP04</td>
     </tr>
     <tr>
         <td>US052</td>
         <td>Volver a enviar una tarea rechazada</td>
-        <td>Como eespecialistaa quiero realizar una nueva entrega luego de recibir retroalimentación en una revisión anterior para permitir el perfeccionamiento del trabajo técnico y el avance del proyecto tras correcciones</td>
-        <td><strong>Scenario: Visualizar opción de reenviar tarea solo si fue rechazada</strong><br>Given el usuario es el responsable de la tarea<br>Given la tarea está en estado REJECTED<br>When accede a los detalles de la tarea<br>Then el sistema debe mostrar la opción para enviar una nueva entrega<br><br><strong>Scenario: Adjuntar archivos nuevos desde el dispositivo</strong><br>Given el responsable accede al formulario de nueva entrega<br>When se carga la interfaz<br>Then el sistema debe mostrar un input para subir archivos desde el dispositivo<br><br><strong>Scenario: Subir archivos al workspace y referenciarlos en la nueva entrega</strong><br>Given el eespecialistaa ha seleccionado archivos válidos<br>When confirma la subida<br>Then el sistema debe subir automáticamente los archivos al workspace de la organización<br>Then crear referencias de tipo TASK_SUBMISSION para cada archivo<br>Then incluir las referencias en la nueva entrega de tarea<br><br><strong>Scenario: Realizar nueva entrega y actualizar estado</strong><br>Given el eespecialistaa ha completado la nueva entrega con archivos adjuntos<br>When confirma el envío<br>Then el sistema debe guardar la entrega con sus comentarios y referencias<br>Then actualizar el estado de la tarea a SUBMITTED<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Impedir reenvío si no hay nuevos archivos</strong><br>Given el eespecialistaa intenta reenviar la tarea<br>When no ha adjuntado ningún archivo<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que debe adjuntar al menos un archivo nuevo<br><br></td>
+        <td>Como especialista quiero realizar una nueva entrega luego de recibir retroalimentación en una revisión anterior para permitir el perfeccionamiento del trabajo técnico y el avance del proyecto tras correcciones</td>
+        <td><strong>Scenario: Visualizar opción de reenviar tarea solo si fue rechazada</strong><br>Given el usuario es el responsable de la tarea<br>Given la tarea está en estado REJECTED<br>When accede a los detalles de la tarea<br>Then el sistema debe mostrar la opción para enviar una nueva entrega<br><br><strong>Scenario: Adjuntar archivos nuevos desde el dispositivo</strong><br>Given el responsable accede al formulario de nueva entrega<br>When se carga la interfaz<br>Then el sistema debe mostrar un input para subir archivos desde el dispositivo<br><br><strong>Scenario: Subir archivos al workspace y referenciarlos en la nueva entrega</strong><br>Given el especialista ha seleccionado archivos válidos<br>When confirma la subida<br>Then el sistema debe subir automáticamente los archivos al workspace de la organización<br>Then crear referencias de tipo TASK_SUBMISSION para cada archivo<br>Then incluir las referencias en la nueva entrega de tarea<br><br><strong>Scenario: Realizar nueva entrega y actualizar estado</strong><br>Given el especialista ha completado la nueva entrega con archivos adjuntos<br>When confirma el envío<br>Then el sistema debe guardar la entrega con sus comentarios y referencias<br>Then actualizar el estado de la tarea a SUBMITTED<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Impedir reenvío si no hay nuevos archivos</strong><br>Given el especialista intenta reenviar la tarea<br>When no ha adjuntado ningún archivo<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que debe adjuntar al menos un archivo nuevo<br><br></td>
         <td>EP04</td>
     </tr>
     <tr>
@@ -2711,7 +2796,7 @@ Se elaboraron historias de usuario, historias técnicas (para el API) e historia
         <td>US054</td>
         <td>Visualizar lista de reuniones del cronograma por hito</td>
         <td>Como miembro del proyecto quiero consultar las reuniones planificadas dentro de los hitos del cronograma del proyecto para entender la agenda de coordinación del equipo según el avance por etapas del proyecto</td>
-        <td><strong>Scenario: Visualizar reuniones si es contratista o coordinador</strong><br>Given el usuario es el contratista o un coordinador del proyecto<br>When expande un hito del cronograma<br>Then el sistema debe mostrar todas las reuniones asociadas a ese hito con detalles como tema, fecha, hora y convocante<br><br><strong>Scenario: Visualizar solo reuniones en las que participa si es eespecialistaa</strong><br>Given el usuario es un eespecialistaa<br>When expande un hito del cronograma<br>Then el sistema debe mostrar solo las reuniones en las que el eespecialistaa está incluido como participante<br>Then cada reunión debe mostrar tema, fecha y hora<br><br><strong>Scenario: Mostrar opción de añadir reunión solo si es contratista o coordinador</strong><br>Given el usuario es el contratista o un coordinador<br>When expande un hito del cronograma<br>Then el sistema debe mostrar una opción para añadir una nueva reunión<br><br><strong>Scenario: Visualizar opción para editar reunión solo si es contratista o convocante</strong><br>Given el usuario es el contratista o es quien convocó la reunión<br>When visualiza la lista de reuniones<br>Then el sistema debe mostrar una opción para editar junto a cada reunión editable por el usuario<br><br><strong>Scenario: Visualizar opción de eliminar reunión solo si es contratista</strong><br>Given el usuario es el contratista del proyecto<br>When visualiza la lista de reuniones<br>Then el sistema debe mostrar una opción para eliminar junto a cada reunión<br><br></td>
+        <td><strong>Scenario: Visualizar reuniones si es contratista o coordinador</strong><br>Given el usuario es el contratista o un coordinador del proyecto<br>When expande un hito del cronograma<br>Then el sistema debe mostrar todas las reuniones asociadas a ese hito con detalles como tema, fecha, hora y convocante<br><br><strong>Scenario: Visualizar solo reuniones en las que participa si es especialista</strong><br>Given el usuario es un especialista<br>When expande un hito del cronograma<br>Then el sistema debe mostrar solo las reuniones en las que el especialista está incluido como participante<br>Then cada reunión debe mostrar tema, fecha y hora<br><br><strong>Scenario: Mostrar opción de añadir reunión solo si es contratista o coordinador</strong><br>Given el usuario es el contratista o un coordinador<br>When expande un hito del cronograma<br>Then el sistema debe mostrar una opción para añadir una nueva reunión<br><br><strong>Scenario: Visualizar opción para editar reunión solo si es contratista o convocante</strong><br>Given el usuario es el contratista o es quien convocó la reunión<br>When visualiza la lista de reuniones<br>Then el sistema debe mostrar una opción para editar junto a cada reunión editable por el usuario<br><br><strong>Scenario: Visualizar opción de eliminar reunión solo si es contratista</strong><br>Given el usuario es el contratista del proyecto<br>When visualiza la lista de reuniones<br>Then el sistema debe mostrar una opción para eliminar junto a cada reunión<br><br></td>
         <td>EP05</td>
     </tr>
     <tr>
@@ -3088,7 +3173,7 @@ Se elaboraron historias de usuario, historias técnicas (para el API) e historia
     <tr>
         <td>US108</td>
         <td>Notificar al responsable cuando se acerca la fecha límite de una tarea</td>
-        <td>Como eespecialistaa del proyecto quiero recibir un recordatorio oportuno antes de la fecha límite de una tarea para evitar retrasos y facilitar la entrega puntual del trabajo técnico</td>
+        <td>Como especialista del proyecto quiero recibir un recordatorio oportuno antes de la fecha límite de una tarea para evitar retrasos y facilitar la entrega puntual del trabajo técnico</td>
         <td><strong>Scenario: Enviar notificación como recordatorio de vencimiento</strong><br>Given una tarea tiene un responsable y una fecha límite registrada<br>Given y faltan 48 horas o menos para la fecha de vencimiento<br>When se cumple la condición temporal<br>Then el sistema debe generar una notificación al responsable de la tarea<br>Then la categoría debe ser REMINDER<br>Then el mensaje debe indicar que la tarea está próxima a vencer, con su nombre y fecha límite<br>Then el target de la notificación debe ser la entidad TASK correspondiente<br><br></td>
         <td>EP13</td>
     </tr>
@@ -3433,7 +3518,7 @@ Se elaboraron historias de usuario, historias técnicas (para el API) e historia
     <tr><td>TS59</td><td>Eliminar reunión</td><td>Como Developer, quiero implementar un endpoint que permita eliminar una reunión registrada en un proyecto, para que los contratistas puedan gestionar las reuniones que ya no son necesarias.</td><td><br><br><strong>Scenario: Eliminar reunión exitosamente</strong><br>Given un contratista autorizado envía una solicitud DELETE al endpoint /organizations/{organizationId}/projects/{project-id}/schedule/milestones/{milestoneId}/meetings/{meetingId}<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And la reunión debe ser eliminada del cronograma del proyecto<br>And el cuerpo de la respuesta debe incluir un mensaje "Reunión eliminada exitosamente"<br><br><strong>Scenario: Intentar eliminar una reunión inexistente</strong><br>Given el meetingId proporcionado no corresponde a ninguna reunión registrada en el proyecto<br>When se envía la solicitud DELETE<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Reunión no encontrada"<br><br><strong>Scenario: Intentar eliminar reunión de un proyecto inexistente</strong><br>Given el projectId proporcionado no corresponde a ningún proyecto registrado<br>When se envía la solicitud DELETE<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Proyecto no encontrado"<br><br></td><td>EP05</td></tr>
     <tr><td>TS60</td><td>Subir entregable de tarea</td><td>Como Developer, quiero implementar un endpoint que permita subir un entregable asociado a una tarea dentro de un proyecto, para que los contratistas puedan registrar avances y documentación de trabajo.</td><td><br><br><strong>Scenario: Subir entregable exitosamente</strong><br>Given un contratista autorizado envía una solicitud POST al endpoint /organizations/{organizationId}/projects/{project-id}/schedule/milestones/{milestoneId}/tasks/{taskId}/deliverables<br>And el cuerpo de la solicitud contiene un archivo válido (formato permitido: PDF, DOCX, PPTX, etc.) y una descripción opcional del entregable<br>When el servidor procesa la solicitud<br>Then debe responder con un código 201 Created<br>And el cuerpo de la respuesta debe incluir los detalles del entregable subido, incluyendo su id, nombre, archivo y descripción (si proporcionada)<br><br><strong>Scenario: Enviar archivo inválido o no permitido</strong><br>Given el contratista intenta subir un archivo que no tiene el formato permitido o excede el límite de tamaño<br>When el servidor procesa la solicitud<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje "Debe subir un archivo válido"<br><br><strong>Scenario: Subir entregable sin archivo</strong><br>Given el contratista intenta enviar la solicitud sin incluir un archivo en el cuerpo de la solicitud<br>When el servidor procesa la solicitud<br>Then debe responder con un código 400 Bad Request<br>And el cuerpo de la respuesta debe incluir un mensaje "Debe adjuntar un archivo de entregable"<br><br><strong>Scenario: Tarea no encontrada</strong><br>Given el taskId proporcionado no corresponde a ninguna tarea registrada en el proyecto<br>When se envía la solicitud POST<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Tarea no encontrada"<br><br><strong>Scenario: Proyecto no encontrado</strong><br>Given el projectId proporcionado no corresponde a ningún proyecto existente<br>When se envía la solicitud POST<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Proyecto no encontrado"<br><br></td><td>EP04</td></tr>
     <tr><td>TS61</td><td>Eliminar tarea</td><td>Como Developer, quiero implementar un endpoint que permita eliminar una tarea asociada a un proyecto, para que los contratistas puedan gestionar las actividades del proyecto eliminando tareas innecesarias o incorrectas.</td><td><br><br><strong>Scenario: Eliminar tarea exitosamente</strong><br>Given un contratista autorizado envía una solicitud DELETE al endpoint /organizations/{organizationId}/projects/{project-id}/schedule/milestones/{milestoneId}/tasks/{taskId}<br>When el servidor procesa la solicitud<br>Then debe responder con un código 200 OK<br>And la tarea debe ser eliminada del proyecto<br>And el cuerpo de la respuesta debe incluir un mensaje "Tarea eliminada exitosamente"<br><br><strong>Scenario: Intentar eliminar tarea inexistente</strong><br>Given el taskId proporcionado no corresponde a ninguna tarea registrada en el proyecto<br>When se envía la solicitud DELETE<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Tarea no encontrada"<br><br><strong>Scenario: Intentar eliminar tarea de proyecto inexistente</strong><br>Given el projectId proporcionado no corresponde a ningún proyecto registrado<br>When se envía la solicitud DELETE<br>Then el servidor debe responder con un código 404 Not Found<br>And el cuerpo de la respuesta debe incluir un mensaje "Proyecto no encontrado"<br><br><strong>Scenario: Eliminar tarea asociada a un entregable</strong><br>Given la tarea seleccionada tiene entregables asociados<br>When se elimina la tarea<br>Then el servidor debe responder con un mensaje adicional "Esta tarea tiene entregables asociados, ¿deseas eliminarlos también?"<br><br></td><td>EP04</td></tr>
-    <tr><td>SWR01</td><td>Cambiar segmento objetivo</td><td>Como visitante quiero contar con la opción de especificar qué tipo de visitante soy para obtener información relevante a mis propios intereses en el Landing Page</td><td><br><br><strong>Acceptance Criteria</strong><br><br>* Debe encontrarse en la parte superior del landing page, a simple vista<br><br>* Debe mostrar las opciones correspondientes a los segmentos entidad contratante y proyectista y eespecialistaa mediante nombres más comprensibles como "Miembro de organización consultora" y "Cliente"<br><br>* Al seleccionar una de las opciones, el contenido de la página debe ajustarse automáticamente a la opción correspondiente<br><br></td><td>EP12</td></tr>
+    <tr><td>SWR01</td><td>Cambiar segmento objetivo</td><td>Como visitante quiero contar con la opción de especificar qué tipo de visitante soy para obtener información relevante a mis propios intereses en el Landing Page</td><td><br><br><strong>Acceptance Criteria</strong><br><br>* Debe encontrarse en la parte superior del landing page, a simple vista<br><br>* Debe mostrar las opciones correspondientes a los segmentos entidad contratante y proyectista y especialista mediante nombres más comprensibles como "Miembro de organización consultora" y "Cliente"<br><br>* Al seleccionar una de las opciones, el contenido de la página debe ajustarse automáticamente a la opción correspondiente<br><br></td><td>EP12</td></tr>
     <tr><td>SWR02</td><td>Internacionalización</td><td>Como visitante quiero contar con internacionalización para adaptar el contenido de la Landing Page al idioma que entiendo mejor</td><td><br><br><strong>Acceptance Criteria</strong><br><br>* Al seleccionarlo, deben aparecer opciones todas las opciones de idioma<br><br>* Deben visualizarse los idiomas español e inglés<br><br>* Al seleccionar uno de los idiomas, el contenido de la página debe cambiar inmediatamente al idioma seleccionado<br><br></td><td>EP12</td></tr>
     <tr><td>SWR03</td><td>About Us</td><td>Como visitante quiero conocer más acerca del equipo detrás del producto para evaluar qué tan confiable es su origen</td><td><br><br><strong>Acceptance Criteria</strong><br><br>* Debe visualizarse el logo de la organización Galaxia Wonder<br><br>* Debe explicarse la misión de la organización<br><br>* Debe explicarse la visión de la organización<br><br>* Deben mencionarse los valores de la organización<br><br></td><td>EP12</td></tr>
     <tr><td>SWR04</td><td>Hero Section cliente</td><td>Como visitante del segmento cliente quiero visualizar un hero section para conocer rápidamente el valor principal del producto</td><td><br><br><strong>Acceptance Criteria</strong><br><br>* Debe visualizarse una imagen relativa y cercana al segmento de cliente según el user persona Alfonso Villarán mostrando una interacción y experiencia positiva con el producto<br><br>* Debe visualizarse un eslogan que venda la idea principal del producto<br><br></td><td>EP12</td></tr>
@@ -3474,7 +3559,7 @@ Se elaboraron historias de usuario, historias técnicas (para el API) e historia
     <tr>
         <td>EP04</td>
         <td>Gestión de Tareas</td>
-        <td>Como contratista, coordinador o eespecialistaa quiero crear, asignar, entregar y revisar tareas técnicas dentro del cronograma para garantizar el cumplimiento de los objetivos de cada hito mediante trabajo colaborativo y trazable</td>
+        <td>Como contratista, coordinador o especialista quiero crear, asignar, entregar y revisar tareas técnicas dentro del cronograma para garantizar el cumplimiento de los objetivos de cada hito mediante trabajo colaborativo y trazable</td>
         <td></td>
         <td>US032, US033, US034, US035, US036, US037, US038, US039, US040, US041, US042, US043, US044, US045, US046, US047, US048, US049, US050, US051, US052, US053, TS27, TS28, TS29, TS30, TS60, TS61</td>
     </tr>
@@ -5288,203 +5373,737 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 
 ### 4.4.1. Web Applications Wireframes. 
 
+Enlace para acceder al <a href="https://www.figma.com/design/K68n9DnQRThT5DihRPAQId/SoftwareGestion?node-id=2105-1303&t=8pukcXo2ixT5RZ4d-1">Figma</a>
+
+**Iniciar sesion**
+
+<img src="./img/chapter4/wireframes/Login.png">
+
+<div style="page-break-before: always;"></div>
+
+**Informacion de organizacion**
+
+<img src="./img/chapter4/wireframes/Detailorga.png">
+
+<div style="page-break-before: always;"></div>
+
+**Crear proyecto**
+
+<img src="./img/chapter4/wireframes/Createproject.png">
+
+<div style="page-break-before: always;"></div>
+
+**Informacion del proyecto**
+
+<img src="./img/chapter4/wireframes/Projectlist.png">
+
+<div style="page-break-before: always;"></div>
+
+**Configuracion del proyecto**
+
+<img src="./img/chapter4/wireframes/Projectcongfig.png">
+
+<div style="page-break-before: always;"></div>
+
+**Miembros del proyecto**
+
+<img src="./img/chapter4/wireframes/Projectmembers.png">
+
+<div style="page-break-before: always;"></div>
+
+**Subir contrato**
+
+<img src="./img/chapter4/wireframes/Uploadcontract.png">
+
+<div style="page-break-before: always;"></div>
+
+**Creacion de milestone**
+
+<img src="./img/chapter4/wireframes/Createmilestone.png">
+
+<div style="page-break-before: always;"></div>
+
+**Informacion de tarea**
+
+<img src="./img/chapter4/wireframes/Edittask.png">
+
+<div style="page-break-before: always;"></div>
+
+**Estado de proyecto**
+
+<img src="./img/chapter4/wireframes/Statusproject.png">
+
+<div style="page-break-before: always;"></div>
+
+**Proceso de cambio del proyecto**
+
+<img src="./img/chapter4/wireframes/Changeprocess.png">
+
+<div style="page-break-before: always;"></div>
+
 ### 4.4.2. Web Applications Wireflow Diagrams. 
 
+Enlace para acceder al <a href="https://lucid.app/lucidchart/61958854-f009-480f-b122-df53bd8ab153/edit?viewport_loc=-9091%2C-7108%2C21047%2C10719%2C0_0&invitationId=inv_a67952f0-a49f-4210-bb72-2e9b6b4d129d">Lucid Chart</a>
+
+**1. Invitar miembros a una organizacion**
+
+**User Goal: Invitar a un nuevo miembro a la organización.**
+
+**User Persona:** Contratista
+
+El sistema carga la vista principal de la organización con la pestaña "Miembros de la organización" activa. Desde esta vista, el usuario selecciona la opción "Agregar miembro", lo que despliega un buscador con una lista de usuarios disponibles para ser invitados. El usuario selecciona a uno de ellos y hace clic en el botón "Continuar". A continuación, el sistema actualiza la sección de invitaciones mostrando al nuevo usuario como invitado. Finalmente, el usuario puede ver el listado de personas pendientes de aceptar la invitación.
+
+<img src="./img/chapter4/wireflow/wf01.png">
+
+<div style="page-break-before: always;"></div>
+
+**2. Crear un nuevo proyecto**
+
+**User Goal: Crear un proyecto dentro de la organización activa para iniciar la planificación de su cronograma, equipo y tareas.**
+
+**User Persona:** Contratista
+
+El sistema presenta la vista de la organización seleccionada con la barra de navegación específica de organización visible. Por defecto, se muestra la pestaña "Información", donde el usuario puede ver el nombre comercial o razón social, el contratista propietario de la organización, la fecha de creación y el RUC. A continuación, el usuario accede a la pestaña de proyectos de la organización. El sistema muestra una lista de proyectos existentes, cada uno con su nombre, estado actual y el rol que desempeña el usuario. Desde esta vista, el usuario selecciona la opción "Crear nuevo proyecto", tras lo cual el sistema despliega un formulario con los siguientes campos: nombre del proyecto, descripción, fecha de inicio (prellenada con la fecha actual y no editable), fecha estimada de finalización, carga del contrato firmado, fecha de firma del contrato y correo electrónico de la entidad contratante (que debe estar previamente registrada). El usuario completa todos los campos y envía el formulario. El sistema valida los datos ingresados y, si todo es correcto, crea el nuevo proyecto dentro de la organización activa. Finalmente, se muestra un mensaje de éxito y el sistema redirige automáticamente al detalle del proyecto recién creado.
+
+<img src="./img/chapter4/wireflow/wf02.png">
+
+<div style="page-break-before: always;"></div>
+
+**3. Consultar y visualizar lista de proyectos y sus detalles**
+
+**User Goal: Consultar los proyectos accesibles para el usuario y visualizar su información general.**
+
+**User Persona:** Contratista
+
+El sistema carga la vista de la organización seleccionada, mostrando la barra de navegación correspondiente. Desde esta vista, el usuario accede a la pestaña "Proyectos", donde el sistema presenta un listado de todos los proyectos vinculados a la organización, incluyendo información resumida como el nombre del proyecto, su estado actual y el rol del usuario dentro de cada uno. El usuario selecciona uno de los proyectos disponibles. A continuación, el sistema muestra la vista específica del proyecto elegido, incluyendo la barra de navegación de proyecto. De forma predeterminada, se carga la pestaña "Información", donde se detallan el nombre del proyecto, su estado actual, las fechas de inicio y finalización, y la entidad contratante responsable.
+
+<img src="./img/chapter4/wireflow/wf03.png">
+
+<div style="page-break-before: always;"></div>
+
+**4. Editar información general del proyecto**
+
+**User Goal: Actualizar el nombre o la descripción del proyecto para reflejar cambios en el alcance o clarificaciones internas.**
+
+**User Persona:** Contratista
+
+El sistema presenta la vista del proyecto seleccionado, incluyendo la barra de navegación específica del proyecto. El usuario accede a la pestaña "Configuración", donde el sistema despliega una vista con los detalles actuales del proyecto: nombre, descripción, estado y una sección denominada "zona de peligro", que permite editar las restricciones contractuales y eliminar el proyecto. Los campos de nombre y descripción están habilitados para edición directa, como en un formulario. El usuario modifica uno o ambos campos. Una vez realizados los cambios, el sistema valida la información ingresada y, si es correcta, actualiza los datos del proyecto. Finalmente, se muestra un mensaje confirmando que la operación fue exitosa.
+
+<img src="./img/chapter4/wireflow/wf04.png">
+
+<div style="page-break-before: always;"></div>
+
+**5. Cambiar estado del proyecto**
+
+**User Goal: Actualizar el estado del proyecto para reflejar su progreso o finalización.**
+
+**User Persona:** Contratista
+
+El sistema presenta la vista del proyecto seleccionado, mostrando la barra de navegación correspondiente. El usuario accede a la pestaña "Configuración", donde se despliega una vista con los detalles actuales del proyecto: nombre, descripción, estado y una sección de “zona de peligro” que incluye opciones para editar restricciones contractuales y eliminar el proyecto. El campo correspondiente al estado del proyecto está habilitado como una lista desplegable. El usuario selecciona un nuevo estado desde dicha lista. Una vez realizado el cambio, el sistema valida la información y actualiza el estado del proyecto. Finalmente, se muestra un mensaje confirmando que la actualización se realizó con éxito.
+
+<img src="./img/chapter4/wireflow/wf05.png">
+
+<div style="page-break-before: always;"></div>
+
+**6. Cambiar correo de entidad contratante y fecha de finalización**
+
+**User Goal: Actualizar la entidad contratante y fecha de finalización del proyecto en caso de modificaciones administrativas.**
+
+**User Persona:** Contratista
+
+El sistema muestra la vista del proyecto seleccionado con su respectiva barra de navegación. El usuario accede a la pestaña "Configuración", donde se despliega una vista con los detalles actuales del proyecto, incluyendo el nombre, la descripción, el estado y una sección llamada "zona de peligro", que permite editar las restricciones contractuales o eliminar el proyecto. El usuario selecciona la opción "Cambiar restricciones contractuales". El sistema presenta una nueva vista con los datos contractuales actuales del proyecto: el archivo del contrato firmado, el correo de la entidad contratante y la fecha estimada de finalización. Los campos de correo y fecha están habilitados para edición. El usuario modifica uno o ambos datos, y al enviar los cambios, el sistema valida la información ingresada. Si todo es correcto, guarda los nuevos valores y muestra un mensaje de éxito confirmando la actualización.
+
+<img src="./img/chapter4/wireflow/wf06.png">
+
+<div style="page-break-before: always;"></div>
+
+**7. Cambiar contrato del proyecto**
+
+**User Goal: Actualizar el contrato del proyecto en caso de modificaciones legales.**
+
+**User Persona:** Contratista
+
+El sistema presenta la vista del proyecto seleccionado junto con la barra de navegación correspondiente. El usuario accede a la pestaña "Configuración", donde se despliega una vista con los detalles actuales del proyecto: nombre, descripción, estado y una sección denominada "zona de peligro", que permite editar las restricciones contractuales o eliminar el proyecto. El usuario selecciona la opción "Cambiar restricciones contractuales". A continuación, el sistema muestra una nueva vista con los datos contractuales actuales del proyecto, incluyendo el archivo del contrato firmado, el correo de la entidad contratante y la fecha estimada de finalización.
+
+<img src="./img/chapter4/wireflow/wf07.png">
+
+<div style="page-break-before: always;"></div>
+
+**8. Eliminar proyecto**
+
+**User Goal: Eliminar un proyecto que ya no será ejecutado o es innecesario conservar.**
+
+**User Persona:** Contratista
+
+El sistema muestra la vista del proyecto seleccionado con su barra de navegación correspondiente. El usuario accede a la pestaña "Configuración", donde se presentan los detalles actuales del proyecto: nombre, descripción, estado y una sección denominada "zona de peligro", que permite editar las restricciones contractuales o eliminar el proyecto. El usuario selecciona la opción "Eliminar proyecto".
+El sistema muestra una advertencia de confirmación, informando que la eliminación del proyecto implica la pérdida de todos los recursos asociados, excepto los archivos almacenados en el espacio de trabajo. Para confirmar la acción, el usuario debe escribir manualmente la frase “eliminar + nombre del proyecto” en un campo de texto. Tras enviar la confirmación, el sistema valida que la entrada coincida exactamente con el formato solicitado. Si es correcta, el sistema procede a eliminar el proyecto. Finalmente, se muestra un mensaje de éxito notificando que el proyecto ha sido eliminado satisfactoriamente.
+
+<img src="./img/chapter4/wireflow/wf08.png">
+
+<div style="page-break-before: always;"></div>
+
+**9. Agregar nuevos miembros al proyecto**
+
+**User Goal: Incorporar nuevos miembros de la organización al equipo del proyecto, asignándoles un rol y especialidad si corresponde.**
+
+**User Persona:** Contratista
+
+El contratista accede a la sección "Equipo" dentro del detalle del proyecto. Desde esta vista, el usuario selecciona la opción "Agregar miembros". El sistema despliega una lista con los miembros de la organización que aún no forman parte del proyecto. En caso de ser necesario, el usuario puede utilizar la barra de búsqueda para filtrar los resultados por nombre o correo electrónico.
+Luego, el usuario selecciona uno o más miembros de la lista. Para cada persona seleccionada, se solicita la asignación de un rol, que puede ser Coordinador o Especialista. En caso de asignar el rol de Especialista, el sistema también requiere definir la especialidad correspondiente. Una vez completadas las asignaciones, el usuario confirma la acción. El sistema registra la incorporación de los miembros en estado pendiente de confirmación.
+
+<img src="./img/chapter4/wireflow/wf09.png">
+
+<div style="page-break-before: always;"></div>
+
+**10. Confirmar incorporación de miembros**
+
+**User Goal: Finalizar el proceso de adición de nuevos miembros al proyecto, haciéndolos oficialmente parte del equipo.**
+
+**User Persona:** Contratista
+
+El contratista revisa la lista de miembros seleccionados para su incorporación al proyecto. Durante esta revisión, verifica que cada miembro tenga asignado un rol y, en caso de que el rol sea Especialista, que también cuente con una especialidad definida. Una vez confirmada la integridad de la información, el usuario presiona el botón "Confirmar incorporación". El sistema valida que todos los datos requeridos estén completos y correctamente asignados. Si la validación es exitosa, el sistema actualiza oficialmente el equipo del proyecto, incorporando a los nuevos miembros. Finalmente, se muestra un mensaje de éxito confirmando que la incorporación se ha realizado correctamente.
+
+<img src="./img/chapter4/wireflow/wf10.png">
+
+<div style="page-break-before: always;"></div>
+
+**11. Consultar y gestionar miembros del equipo**
+
+**User Goal: Consultar la lista de miembros del proyecto y gestionar sus roles o especialidades.**
+
+**User Persona:** Contratista
+
+El contratista accede a la sección "Equipo" dentro del detalle del proyecto. El sistema presenta una lista de los miembros actuales del equipo, incluyendo para cada uno su nombre, correo electrónico, rol asignado y, en caso de corresponder, la especialidad asociada. Desde esta vista, el usuario puede realizar acciones específicas como editar el rol de cualquier miembro del equipo. Si el rol asignado es "Especialista", también se habilita la opción para modificar su especialidad correspondiente.
+
+<img src="./img/chapter4/wireflow/wf11.png">
+
+<div style="page-break-before: always;"></div>
+
+**12. Crear un nuevo hito**
+
+**User Goal: Añadir un hito al cronograma del proyecto para estructurar fases clave o entregables intermedios.**
+
+**User Persona:** Contratista
+
+El contratista accede a la sección "Cronograma" dentro del detalle del proyecto. Desde esta vista, el usuario selecciona la opción "Añadir hito". El sistema despliega un formulario de creación que solicita el nombre del hito, la fecha de inicio y la fecha de finalización. El usuario completa todos los campos requeridos y envía el formulario. El sistema procede a validar la información ingresada, asegurando que el nombre no esté vacío, que las fechas estén en el orden cronológico correcto y que dichas fechas se encuentren dentro del rango general definido para el proyecto. Si la validación es exitosa, el sistema crea el nuevo hito y muestra un mensaje confirmando su creación satisfactoria.
+
+<img src="./img/chapter4/wireflow/wf12.png">
+
+<div style="page-break-before: always;"></div>
+
+**13. Consultar lista de hitos del proyecto**
+
+**User Goal: Visualizar los hitos existentes del proyecto para conocer la estructura de su cronograma.**
+
+**User Persona:** Miembro del proyecto
+
+El usuario accede a la sección "Cronograma" dentro del detalle del proyecto. El sistema muestra una lista de los hitos registrados, presentando para cada uno su nombre, fecha de inicio y fecha de finalización. Desde esta vista, el usuario puede interactuar con la lista expandiendo cualquier hito que lo permita, con el fin de visualizar las tareas asociadas a dicho hito, en caso de que existan.
+
+<img src="./img/chapter4/wireflow/wf13.png">
+
+<div style="page-break-before: always;"></div>
+
+**14. Editar información de un hito**
+
+**User Goal: Actualizar el nombre o las fechas de un hito para reflejar cambios en la planificación del proyecto.**
+
+**User Persona:** Contratista
+
+El contratista accede a la sección "Cronograma" del proyecto y selecciona el hito que desea modificar. Luego, el usuario presiona la opción "Editar hito", tras lo cual el sistema despliega un formulario editable con los campos correspondientes: nombre del hito, fecha de inicio y fecha de finalización. El usuario realiza las modificaciones necesarias y guarda los cambios. El sistema valida que el nombre no esté vacío, que las fechas estén en un orden cronológico válido (fecha de inicio menor o igual a la fecha de finalización), y que ambas fechas se encuentren dentro del rango permitido del proyecto. Si la validación es exitosa, el sistema actualiza el hito con la nueva información y muestra un mensaje confirmando la actualización.
+
+<img src="./img/chapter4/wireflow/wf14.png">
+
+<div style="page-break-before: always;"></div>
+
+**15. Eliminar hito del cronograma**
+
+**User Goal: Eliminar un hito del cronograma del proyecto cuando ya no sea necesario.**
+
+**User Persona:** Contratista
+
+El contratista accede a la sección "Cronograma" del proyecto y selecciona el hito que desea eliminar. El usuario presiona la opción "Eliminar hito", tras lo cual el sistema muestra una advertencia de confirmación. En caso de que el hito tenga tareas o reuniones asociadas, se informa claramente que estos elementos también serán eliminados. Para confirmar la acción, el usuario debe escribir la frase "eliminar + nombre del hito". El sistema valida que la confirmación coincida exactamente con lo solicitado. Si la validación es correcta, el sistema elimina el hito junto con los contenidos asociados, en caso de haberlos, y muestra un mensaje de éxito indicando que la operación se realizó satisfactoriamente.
+
+<img src="./img/chapter4/wireflow/wf15.png">
+
+<div style="page-break-before: always;"></div>
+
+**16. Crear una nueva tarea**
+
+**User Goal: Añadir una nueva tarea dentro de un hito del cronograma para organizar el trabajo del equipo.**
+
+**User Persona:** Contratista
+
+El contratista accede a la sección "Cronograma" del proyecto y expande el hito en el que desea crear una nueva tarea. Desde allí, el usuario selecciona la opción "Añadir tarea". El sistema despliega un formulario que solicita los siguientes datos: nombre de la tarea, especialidad requerida, fecha de inicio y fecha de vencimiento. El usuario completa todos los campos y envía el formulario. A continuación, el sistema valida que el nombre no esté vacío, que las fechas estén en el orden correcto (inicio ≤ vencimiento) y que ambas se encuentren dentro del rango definido por el hito. Si la validación es exitosa, el sistema crea la nueva tarea en estado DRAFT y muestra un mensaje confirmando que la tarea fue creada satisfactoriamente.
+
+<img src="./img/chapter4/wireflow/wf16.png">
+
+<div style="page-break-before: always;"></div>
+
+**17. Consultar lista de tareas de un hito**
+
+**User Goal: Visualizar las tareas asociadas a un hito específico dentro del cronograma del proyecto.**
+
+**User Persona:** Contratista
+
+El usuario accede a la sección "Cronograma" dentro del detalle del proyecto y expande el hito que desea consultar. El sistema muestra la lista de tareas asociadas a ese hito, presentando para cada una de ellas su nombre, la especialidad requerida, el responsable asignado en caso de que exista, y el estado actual de la tarea, que puede ser Draft, Pending, Submitted o Reviewed. Si lo desea, el usuario puede seleccionar una tarea específica para consultar más detalles sobre su contenido o estado.
+
+<img src="./img/chapter4/wireflow/wf17.png">
+
+<div style="page-break-before: always;"></div>
+
+**18. Asignar responsable a una tarea**
+
+**User Goal: Designar un miembro del equipo como responsable de una tarea para su ejecución y seguimiento.**
+
+**User Persona:** Miembro del proyecto
+
+El contratista accede a la sección "Cronograma" del proyecto, expande el hito correspondiente y localiza la tarea que desea asignar. Luego, selecciona la opción "Asignar responsable". El sistema despliega una lista con los miembros del proyecto disponibles para asumir la tarea. Opcionalmente, el usuario puede aplicar un filtro para mostrar únicamente aquellos miembros cuya especialidad coincida con la requerida por la tarea. A continuación, el usuario selecciona un miembro como responsable. El sistema actualiza la tarea, asignando al responsable elegido y cambiando automáticamente su estado a PENDING. Finalmente, se muestra un mensaje de éxito que confirma que la tarea fue asignada correctamente.
+
+<img src="./img/chapter4/wireflow/wf18.png">
+
+<div style="page-break-before: always;"></div>
+
+**19. Editar información de una tarea**
+
+**User Goal: Actualizar el nombre, especialidad, fechas o responsable de una tarea en función de ajustes en la planificación o el equipo.**
+
+**User Persona:** Contratista
+
+El contratista accede a la sección "Cronograma" del proyecto, expande el hito correspondiente y localiza la tarea que desea editar. El usuario selecciona la opción "Editar tarea", tras lo cual el sistema despliega un formulario editable con los campos actuales: nombre de la tarea, especialidad requerida, fecha de inicio, fecha de vencimiento y responsable asignado. El usuario realiza las modificaciones necesarias y guarda los cambios. El sistema valida que el nombre no esté vacío, que la especialidad sea válida, y que las fechas estén en orden cronológico y dentro del rango establecido por el hito. Si la validación es exitosa, el sistema actualiza la información de la tarea y muestra un mensaje de éxito confirmando la edición.
+
+<img src="./img/chapter4/wireflow/wf19.png">
+
+<div style="page-break-before: always;"></div>
+
+**20. Enviar entregable de tarea**
+
+**User Goal: Subir y enviar el entregable asociado a una tarea para su revisión.**
+
+**User Persona:** Especialista
+
+El especialista accede a la sección "Cronograma" del proyecto, expande el hito correspondiente y localiza la tarea que le ha sido asignada. El usuario selecciona la opción "Enviar entregable". El sistema despliega un formulario que permite adjuntar uno o más archivos relacionados con la tarea —como documentos, planos u otros insumos—, y ofrece un campo opcional para agregar comentarios adicionales. El usuario adjunta los archivos requeridos, incluye comentarios si lo desea y confirma el envío del entregable. El sistema valida que se haya cargado al menos un archivo. Si la validación es exitosa, actualiza el estado de la tarea a SUBMITTED y muestra un mensaje de éxito indicando que el entregable fue enviado para revisión.
+
+<img src="./img/chapter4/wireflow/wf20.png">
+
+<div style="page-break-before: always;"></div>
+
+**21. Consultar entregables enviados**
+
+**User Goal: Visualizar los entregables enviados para una tarea y consultar su estado de revisión.**
+
+**User Persona:** Coordinador / Contratista / Cliente
+
+El usuario accede a la sección "Cronograma" del proyecto, expande el hito correspondiente y localiza la tarea deseada. Si la tarea cuenta con un entregable disponible, el usuario selecciona la opción "Ver entregable". El sistema muestra una vista con los detalles del entregable, incluyendo la lista de archivos enviados, los comentarios añadidos por el remitente y el estado actual del proceso de revisión, que puede ser En revisión, Aprobado o Rechazado. Desde esta misma vista, el usuario puede descargar o previsualizar los archivos adjuntos según lo requiera.
+
+<img src="./img/chapter4/wireflow/wf21.png">
+
+<div style="page-break-before: always;"></div>
+
+**22. Revisar entregable enviado**
+
+**User Goal: Evaluar un entregable enviado por un especialista y tomar una acción (aprobar, rechazar o solicitar ajustes).**
+
+**User Persona:** Coordinador / Contratista
+
+El usuario accede a la sección "Cronograma" del proyecto, expande el hito correspondiente y localiza la tarea cuyo entregable desea revisar. A continuación, selecciona la opción "Revisar entregable". El sistema presenta los archivos enviados junto con los comentarios asociados al envío. El usuario analiza el contenido del entregable y elige una de las acciones disponibles: aprobar el entregable, rechazarlo indicando los motivos, o solicitar ajustes especificando observaciones puntuales. Una vez seleccionada la acción, el usuario la confirma. El sistema actualiza el estado tanto del entregable como de la tarea: si se aprueba, la tarea pasa al estado REVIEWED; si se rechaza o se solicitan ajustes, la tarea vuelve al estado PENDING o queda a la espera de un nuevo envío. Finalmente, el sistema muestra un mensaje de éxito confirmando la acción realizada.
+
+<img src="./img/chapter4/wireflow/wf22.png">
+
+<div style="page-break-before: always;"></div>
+
+**23. Presentar un Change Request**
+
+**User Goal: Solicitar formalmente una modificación al proyecto mediante un Change Request.**
+
+**User Persona:** Entidad contratante (Cliente)
+
+El cliente accede al proyecto desde su cuenta en la plataforma y selecciona la opción "Presentar Change Request". El sistema despliega un formulario que permite ingresar el título del cambio solicitado, una descripción detallada, la justificación del cambio y, de forma opcional, adjuntar documentos de soporte. El usuario completa los campos requeridos y envía la solicitud. El sistema valida que tanto el título como la descripción no estén vacíos. Si la información es válida, se crea un nuevo proceso de cambio (Change Process) vinculado al proyecto correspondiente. Finalmente, el sistema muestra un mensaje de éxito confirmando que la solicitud de cambio ha sido presentada correctamente.
+
+<img src="./img/chapter4/wireflow/wf23.png">
+
+<div style="page-break-before: always;"></div>
+
+**24. Presentar una Technical Query**
+
+**User Goal: Formular una consulta técnica relacionada al proyecto para su evaluación y respuesta formal.**
+
+**User Persona:** Entidad contratante (Cliente)
+
+El cliente accede al proyecto desde su cuenta en la plataforma y selecciona la opción "Presentar Technical Query". El sistema despliega un formulario que permite ingresar el título de la consulta técnica, una descripción detallada de la duda o cuestión, y de forma opcional, adjuntar documentos de soporte. El usuario completa los campos requeridos y envía la consulta. El sistema valida que tanto el título como la descripción no estén vacíos. Si la información es válida, se crea un nuevo Change Process asociado al proyecto, clasificado como una Technical Query. Finalmente, el sistema muestra un mensaje de éxito confirmando que la consulta ha sido registrada correctamente.
+
+<img src="./img/chapter4/wireflow/wf24.png">
+
+<div style="page-break-before: always;"></div>
+
+**25. Consultar Change Processes creados**
+
+**User Goal: Visualizar los Change Processes asociados al proyecto, su origen (Change Request o Technical Query) y su estado actual.**
+
+**User Persona:** Coordinador / Contratista / Cliente
+
+El usuario accede a la sección "Gestión de Cambios" dentro del detalle del proyecto. El sistema muestra una lista de los Change Processes creados, presentando para cada uno su número o identificador, el título del Change Request o Technical Query asociado, el tipo de origen correspondiente (ya sea un Change Request o una Technical Query) y el estado actual del proceso, como por ejemplo En evaluación, Aprobado o Rechazado. Desde esta vista, el usuario puede seleccionar cualquiera de los procesos listados para consultar su detalle completo, si así lo desea.
+
+<img src="./img/chapter4/wireflow/wf25.png">
+
+<div style="page-break-before: always;"></div>
+
+**26. Aprobar Change Process**
+
+**User Goal: Revisar y aprobar formalmente un Change Process propuesto para habilitar la posterior emisión de un Change Order**
+
+**User Persona:** Contratista
+
+El contratista accede al detalle de un Change Process pendiente de aprobación. El sistema despliega la información relevante del caso, incluyendo la descripción del cambio propuesto, la justificación técnica o contractual y la documentación de soporte adjunta por quien presentó la solicitud. Tras revisar la información, el usuario selecciona la opción "Aprobar Change Process". El sistema solicita una confirmación para continuar. Una vez confirmada la acción, el sistema actualiza el estado del Change Process a “Aprobado” y muestra un mensaje de éxito. A partir de ese momento, se habilita la opción “Gestionar Change Order” para continuar con la implementación del cambio aprobado.
+
+<img src="./img/chapter4/wireflow/wf26.png">
+
+<div style="page-break-before: always;"></div>
+
 ### 4.4.3. Web Applications Mock-ups. 
+
+Enlace para acceder al <a href="https://www.figma.com/design/K68n9DnQRThT5DihRPAQId/SoftwareGestion?node-id=2105-1303&t=8pukcXo2ixT5RZ4d-1">Figma</a>
 
 **Crear proyecto**
 
 <img src="./img/chapter4/mockup/Crearproyecto.png">
 
+<div style="page-break-before: always;"></div>
+
 **Listar proyectos de organización**
 
 <img src="./img/chapter4/mockup/listarProyectos.png">
+
+<div style="page-break-before: always;"></div>
 
 **Editar proyecto**
 
 <img src="./img/chapter4/mockup/editarproyecto.png">
 
+<div style="page-break-before: always;"></div>
+
 **Listar hitos**
 
 <img src="./img/chapter4/mockup/listarMilestones.png">
+
+<div style="page-break-before: always;"></div>
 
 **Login**
 
 <img src="./img/chapter4/mockup/Login.png">
 
+<div style="page-break-before: always;"></div>
+
+**Informacion de organizacion**
+
+<img src="./img/chapter4/mockup/Vistaorganizacion.png">
+
+<div style="page-break-before: always;"></div>
+
+**Configuracion del proyecto**
+
+<img src="./img/chapter4/mockup/Configuracionproyecto.png">
+
+<div style="page-break-before: always;"></div>
+
+**Adjuntar contrato**
+
+<img src="./img/chapter4/mockup/Adjuntarcontrato.png">
+
+<div style="page-break-before: always;"></div>
+
+**Informacion de proyecto**
+
+<img src="./img/chapter4/mockup/Vistaproyecto.png">
+
+<div style="page-break-before: always;"></div>
+
+**Miembros del proyecto**
+
+<img src="./img/chapter4/mockup/Projectmembers.png">
+
+<div style="page-break-before: always;"></div>
+
+**Vista de tarea**
+
+<img src="./img/chapter4/mockup/Editartareas.png">
+
+<div style="page-break-before: always;"></div>
+
+**Proceso de cambio del proyecto**
+
+<img src="./img/chapter4/mockup/Cambioproceso.png">
+
+<div style="page-break-before: always;"></div>
+
+**Asignar tarea**
+
+<img src="./img/chapter4/mockup/Vistatareas.png">
+
+<div style="page-break-before: always;"></div>
+
 ### 4.4.4. Web Applications User Flow Diagrams. 
+
+Enlace para acceder al <a href="https://lucid.app/lucidchart/61958854-f009-480f-b122-df53bd8ab153/edit?viewport_loc=-9091%2C-7108%2C21047%2C10719%2C0_0&invitationId=inv_a67952f0-a49f-4210-bb72-2e9b6b4d129d">Lucid Chart</a>
+
+**1. Invitar miembros a una organizacion**
 
 <img src="./img/chapter4/userflows/uf01.png">
 
-**1. Crear un nuevo proyecto**
+<div style="page-break-before: always;"></div>
 
-- **User Goal:** Crear un proyecto en la plataforma para iniciar la planificación de su cronograma, equipo y tareas.
+- **User Goal:** Invitar a un nuevo miembro a la organización.
 - **User Persona:** Contratista
 
 **Flujo Principal (Happy Path):**
-- Usuario accede al dashboard principal.
-- Usuario selecciona la opción "Crear nuevo proyecto".
-- Usuario completa los siguientes campos del formulario:
-  - Nombre del proyecto.
-  - Fecha de inicio (automáticamente el día de creación).
-  - Fecha de finalización estimada.
-  - Subida del contrato firmado.
-  - Fecha de firma del contrato.
-  - Correo de la entidad contratante.
-- Usuario envía el formulario.
-- El sistema valida los datos.
-- El sistema crea el proyecto.
-- El sistema muestra mensaje de éxito y redirige al detalle del proyecto.
+- Sistema muestra la vista de la organización con pestaña activa “Organization Members”.
+- Usuario hace clic en el botón "Add Member".
+- Sistema muestra un buscador con la lista de posibles usuarios a invitar.
+- Usuario selecciona un nombre de la lista.
+- Usuario hace clic en el botón "Continue".
+- Sistema actualiza la sección de “Invitations” con el nuevo usuario invitado.
+- Usuario puede visualizar los usuarios pendientes de invitación.
 
 **Puntos de Decisión:**
-- ¿Todos los campos obligatorios fueron completados?
-- ¿Fecha de finalización es válida?
-- ¿Archivo del contrato adjunto?
-- ¿Correo de entidad contratante válido?
+- Si el usuario ya fue invitado o pertenece a la organización, el sistema muestra un mensaje de error: "You must select at least one member to add."
 
 **Flujos Alternativos (Unhappy Paths):**
-- Campos obligatorios incompletos: mensaje de error "Debe completar todos los campos requeridos".
-- Fecha de finalización anterior al inicio: error "La fecha de finalización debe ser posterior a la fecha de inicio".
-- Archivo de contrato no subido: error "Debe adjuntar el contrato firmado".
-- Correo inválido: error "Entidad contratante no encontrada".
+- Usuario debe seleccionar otro nombre o cancelar la acción.
 
-**2. Consultar y visualizar lista de proyectos y sus detalles**
+**2. Crear un nuevo proyecto**
 
 <img src="./img/chapter4/userflows/uf02.png">
 
-- **User Goal:** Consultar los proyectos accesibles para el usuario y visualizar su información general.
-- **User Persona:** Miembro del equipo / Contratista
+<div style="page-break-before: always;"></div>
+
+- **User Goal:** Crear un proyecto dentro de la organización activa para iniciar la planificación de su cronograma, equipo y tareas.
+- **User Persona:** Contratista
 
 **Flujo Principal (Happy Path):**
-- Usuario inicia sesión en la plataforma.
-- Usuario accede a la sección "Proyectos".
-- Sistema muestra la lista de proyectos accesibles, con información resumida: nombre, estado, rol del usuario.
+- Sistema muestra la vista de la organización seleccionada que muestra la barra de navegación de organización.
+- Sistema muestra por default la pestaña "Información" de la organización, que incluye:
+  - Nombre comercial (o razón social).
+  - El contratista dueño de la organización.
+  - La fecha de creación de la organización.
+  - El RUC de la organización.
+- Usuario selecciona la pestaña de proyectos de la organización.
+- Sistema muestra la lista de todos los proyectos de la organización, con información resumida: nombre, estado, rol del usuario.
+- Usuario selecciona la opción "Crear nuevo proyecto".
+- Sistema despliega formulario de creación con los siguientes campos:
+  - Nombre del proyecto.
+  - Descripción del proyecto.
+  - Fecha de inicio (asignada automáticamente como fecha actual, no editable).
+  - Fecha de finalización estimada.
+  - Subida del contrato firmado.
+  - Fecha de firma del contrato.
+  - Correo de la entidad contratante (debe estar registrada).
+- Usuario completa el formulario y lo envía.
+- Sistema valida los datos ingresados.
+- Sistema crea el proyecto dentro de la organización activa.
+- Sistema muestra un mensaje de éxito y redirige al detalle del proyecto creado.
+
+**Puntos de Decisión:**
+- ¿Todos los campos obligatorios fueron completados? (Todos excepto descripción)
+- ¿La fecha de finalización es posterior a la de inicio?
+- ¿El correo de la entidad contratante pertenece a una entidad registrada?
+
+**Flujos Alternativos (Unhappy Paths):**
+- Campos obligatorios incompletos: error "Debe completar todos los campos requeridos".
+- Fecha de finalización anterior a la fecha de inicio: error "La fecha de finalización debe ser posterior a la fecha de inicio".
+- Correo de entidad contratante inválido o no registrado: error "Entidad contratante no encontrada".
+
+**3. Consultar y visualizar lista de proyectos y sus detalles**
+
+<img src="./img/chapter4/userflows/uf03.png">
+
+<div style="page-break-before: always;"></div>
+
+- **User Goal:** Consultar los proyectos accesibles para el usuario y visualizar su información general.
+- **User Persona:** Contratista
+
+**Flujo Principal (Happy Path):**
+- Sistema muestra la vista de la organización seleccionada que muestra la barra de navegación de organización.
+- Usuario selecciona la pestaña "Proyectos" de la organización.
+- Sistema muestra la lista de todos los proyectos de la organización, con información resumida: nombre, estado, rol del usuario.
 - Usuario selecciona un proyecto de la lista.
-- Sistema muestra el detalle completo del proyecto:
+- Sistema muestra la vista del proyecto seleccionado que muestra la barra de navegación de proyecto.
+- Sistema carga por default la pestaña "Información" del proyecto, que incluye:
   - Nombre del proyecto.
   - Estado actual.
   - Fechas de inicio y finalización.
   - Entidad contratante.
-  - Miembros del equipo asignado.
-  - Contrato asociado (visible solo para contratistas).
 
 **Puntos de Decisión:**
-- ¿Usuario tiene permisos para ver proyectos?
-- ¿Usuario pertenece al equipo del proyecto seleccionado?
+- No hay puntos de decisión en este flujo.
 
 **Flujos Alternativos (Unhappy Paths):**
-- Usuario sin proyectos asignados: mensaje "No tienes proyectos disponibles".
-- Usuario no autorizado para ver el proyecto seleccionado: error "No tienes permisos para acceder a este proyecto".
+- No hay unhappy paths para este flujo.
 
-**3. Editar información general del proyecto**
+**4. Editar información general del proyecto**
 
-<img src="./img/chapter4/userflows/uf03.png">
+<img src="./img/chapter4/userflows/uf04.png">
 
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Actualizar el nombre o la descripción del proyecto para reflejar cambios en el alcance o clarificaciones internas.
 - **User Persona:** Contratista
 
 **Flujo Principal (Happy Path):**
-- Contratista accede al detalle del proyecto.
-- Usuario selecciona la opción "Editar información general".
-- Sistema despliega formulario editable con los campos actuales:
+- Sistema muestra la vista del proyecto seleccionado que muestra la barra de navegación de proyecto.
+- Usuario selecciona la pestaña "Configuración".
+- Sistema despliega una vista con los detalles actuales del proyecto:
   - Nombre del proyecto.
   - Descripción del proyecto.
-- Usuario realiza los cambios necesarios.
-- Usuario guarda los cambios.
+  - Estado del proyecto.
+  - La "zona de peligro", que muestra la opción de editar restricciones contractuales y eliminar proyecto.
+- Los campos de nombre y descripción pueden reescribirse, como si se tratara de un formulario.
+- Usuario cambia el nombre y/o descripción del proyecto.
 - Sistema valida los datos y actualiza la información.
 - Sistema muestra un mensaje de éxito.
 
 **Puntos de Decisión:**
 - ¿Nuevo nombre ingresado no está vacío?
-- ¿Usuario tiene permisos de edición?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Nombre de proyecto vacío: error "El nombre del proyecto no puede estar vacío".
-- Usuario sin permisos: error "No tienes permisos para editar este proyecto". 
-
-**4. Cambiar constraints legales del proyecto**
-
-<img src="./img/chapter4/userflows/uf04.png">
-
-- **User Goal:** Actualizar el contrato y la entidad contratante asociada al proyecto en caso de modificaciones legales o administrativas.
-- **User Persona:** Contratista
-
-**Flujo Principal (Happy Path):**
-- Contratista accede al detalle del proyecto.
-- Usuario selecciona la opción "Actualizar contrato y entidad contratante".
-- Sistema despliega formulario para actualizar:
-  - Archivo del nuevo contrato firmado.
-  - Fecha de firma del nuevo contrato.
-  - Nuevo correo de la entidad contratante.
-- Usuario completa los campos requeridos y envía la actualización.
-- Sistema valida la información.
-- Sistema guarda los nuevos datos legales del proyecto.
-- Sistema muestra mensaje de éxito confirmando la actualización.
-
-**Puntos de Decisión:**
-- ¿Nuevo contrato adjuntado?
-- ¿Fecha de firma del contrato ingresada?
-- ¿Correo de entidad contratante válido?
-- ¿Usuario tiene permisos para realizar esta acción?
-
-**Flujos Alternativos (Unhappy Paths):**
-- No se adjunta contrato: error "Debe adjuntar el nuevo contrato firmado".
-- Fecha de firma no ingresada: error "Debe ingresar la fecha de firma del contrato".
-- Correo de entidad no válido: error "Entidad contratante no encontrada".
-- Usuario sin permisos: error "No tienes permisos para actualizar los datos legales de este proyecto".
 
 **5. Cambiar estado del proyecto**
 
 <img src="./img/chapter4/userflows/uf05.png">
 
+<div style="page-break-before: always;"></div>
+
 - **User Goal:** Actualizar el estado del proyecto para reflejar su progreso o finalización.
 - **User Persona:** Contratista
 
 **Flujo Principal (Happy Path):**
-- Contratista accede al detalle del proyecto.
-- Usuario selecciona la opción "Cambiar estado del proyecto".
-- Sistema despliega lista de estados posibles (por ejemplo: En ejecución, Finalizado, Cancelado).
-- Usuario selecciona el nuevo estado deseado.
-- Usuario confirma el cambio de estado.
-- Sistema actualiza el estado del proyecto.
-- Sistema muestra un mensaje de éxito indicando el nuevo estado.
+- Sistema muestra la vista del proyecto seleccionado que muestra la barra de navegación de proyecto.
+- Usuario selecciona la pestaña "Configuración".
+- Sistema despliega una vista con los detalles actuales del proyecto:
+  - Nombre del proyecto.
+  - Descripción del proyecto.
+  - Estado del proyecto.
+  - La "zona de peligro", que muestra la opción de editar restricciones contractuales y eliminar proyecto.
+- El campo de estado del proyecto puede desplegarse como una lista de opciones.
+- Usuario selecciona un nuevo estado para el proyecto de la lista desplegable.
+- Sistema valida los datos y actualiza la información.
+- Sistema muestra un mensaje de éxito.
 
 **Puntos de Decisión:**
-- ¿Nuevo estado seleccionado es válido?
-- ¿Usuario tiene permisos para cambiar el estado?
+- No hay puntos de decisión en este flujo.
 
 **Flujos Alternativos (Unhappy Paths):**
-- No se selecciona nuevo estado: error "Debe seleccionar un estado para continuar".
-- Usuario sin permisos: error "No tienes permisos para cambiar el estado de este proyecto". 
+- No hay unhappy paths para este flujo.
 
-**6. Eliminar proyecto**
+**6. Cambiar correo de entidad contratante y fecha de finalización**
 
 <img src="./img/chapter4/userflows/uf06.png">
+
+<div style="page-break-before: always;"></div>
+
+- **User Goal:** Actualizar la entidad contratante y fecha de finalización del proyecto en caso de modificaciones administrativas.
+- **User Persona:** Contratista
+
+**Flujo Principal (Happy Path):**
+- Sistema muestra la vista del proyecto seleccionado que muestra la barra de navegación de proyecto.
+- Usuario selecciona la pestaña "Configuración".
+- Sistema despliega una vista con los detalles actuales del proyecto:
+  - Nombre del proyecto.
+  - Descripción del proyecto.
+  - Estado del proyecto.
+  - La "zona de peligro", que muestra la opción de editar restricciones contractuales y eliminar proyecto.
+- Usuario selecciona la opción "Cambiar restricciones contractuales".
+- Sistema despliega una vista con los detalles contractuales actuales del proyecto:
+  - Archivo del nuevo contrato firmado.
+  - Correo de la entidad contratante.
+  - Fecha de finalización del proyecto.
+- Los campos de correo de entidad contratante y fecha de finalización pueden reescribirse, como si se tratara de un formulario.
+- Usuario cambia el correo de entidad contratante y/o fecha de finalización.
+- Sistema valida la información.
+- Sistema guarda los nuevos datos.
+- Sistema muestra mensaje de éxito confirmando la actualización.
+
+**Puntos de Decisión:**
+- ¿Fecha de firma del contrato ingresada?
+- ¿Correo de entidad contratante válido?
+
+**Flujos Alternativos (Unhappy Paths):**
+- Fecha de firma no ingresada: error "Debe ingresar la fecha de finalización del proyecto.".
+- Correo de entidad no válido: error "Entidad contratante no encontrada".
+
+**7. Cambiar contrato del proyecto**
+
+<img src="./img/chapter4/userflows/uf07.png">
+
+<div style="page-break-before: always;"></div>
+
+- **User Goal:** Actualizar el contrato del proyecto en caso de modificaciones legales.
+- **User Persona:** Contratista
+
+**Flujo Principal (Happy Path):**
+- Sistema muestra la vista del proyecto seleccionado que muestra la barra de navegación de proyecto.
+- Usuario selecciona la pestaña "Configuración".
+- Sistema despliega una vista con los detalles actuales del proyecto:
+  - Nombre del proyecto.
+  - Descripción del proyecto.
+  - Estado del proyecto.
+  - La "zona de peligro", que muestra la opción de editar restricciones contractuales y eliminar proyecto.
+- Usuario selecciona la opción "Cambiar restricciones contractuales".
+- Sistema despliega una vista con los detalles contractuales actuales del proyecto:
+  - Archivo del nuevo contrato firmado.
+  - Correo de la entidad contratante.
+  - Fecha de finalización del proyecto.
+- El campo de contrato debe ser un botón que permita elegir entre subir un nuevo archivo o elegir uno del workspace de la organización.
+- Si usuario elige elige workspace, debe visualizar la lista de archivos del workspace, incluyendo:
+  - Nombre del archivo.
+  - Extensión del archivo.
+- Si el usuario elige subir nuevo archivo, debe permitir subir un archivo desde su dispositivo.
+  - Sistema valida que haya espacio suficiente en el workspace para el nuevo archivo antes de subirlo.
+- Sistema guarda la referencia al nuevo contrato.
+- Sistema muestra mensaje de éxito confirmando la actualización.
+
+**Puntos de Decisión:**
+- ¿Qué método para adjuntar nuevo contrato elige el usuario?
+- ¿La organización del proyecto cuenta con suficiente espacio en su workspace?
+
+**Flujos Alternativos (Unhappy Paths):**
+- Espacio insuficiente en workspace: error "No hay suficiente espacio en el workspace".
+
+**8. Eliminar proyecto**
+
+<img src="./img/chapter4/userflows/uf08.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Eliminar un proyecto que ya no será ejecutado o es innecesario conservar.
 - **User Persona:** Contratista
 
 **Flujo Principal (Happy Path):**
-- Contratista accede al detalle del proyecto.
+- Sistema muestra la vista del proyecto seleccionado que muestra la barra de navegación de proyecto.
+- Usuario selecciona la pestaña "Configuración".
+- Sistema despliega una vista con los detalles actuales del proyecto:
+  - Nombre del proyecto.
+  - Descripción del proyecto.
+  - Estado del proyecto.
+  - La "zona de peligro", que muestra la opción de editar restricciones contractuales y eliminar proyecto.
 - Usuario selecciona la opción "Eliminar proyecto".
 - Sistema muestra una advertencia de confirmación indicando que se eliminarán todos los recursos asociados (excepto archivos del workspace).
 - Usuario debe confirmar la acción escribiendo "eliminar + nombre del proyecto" para proceder.
 - Usuario envía la confirmación.
 - Sistema valida la entrada.
-- Sistema elimina lógicamente el proyecto (lo marca como inactivo o lo mueve a papelera).
+- Sistema elimina el proyecto.
 - Sistema muestra mensaje de éxito indicando que el proyecto fue eliminado.
 
 **Puntos de Decisión:**
 - ¿Confirmación escrita correctamente?
-- ¿Usuario tiene permisos para eliminar el proyecto?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Confirmación incorrecta: error "El texto ingresado no coincide con el nombre del proyecto".
-- Usuario sin permisos: error "No tienes permisos para eliminar este proyecto".
-- Usuario cancela la operación: no se realiza ninguna acción, proyecto permanece activo.
 
-**7. Agregar nuevos miembros al proyecto**
+**9. Agregar nuevos miembros al proyecto**
+
+<img src="./img/chapter4/userflows/uf09.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Incorporar nuevos miembros de la organización al equipo del proyecto, asignándoles un rol y especialidad si corresponde.
 - **User Persona:** Contratista
@@ -5512,7 +6131,11 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 - Especialidad no asignada a especialista: error "Debe asignar una especialidad si el rol es Especialista".
 - Miembro ya pertenece al proyecto: el sistema impide su selección o muestra advertencia "El miembro ya es parte del proyecto". 
 
-**8. Confirmar incorporación de miembros**
+**10. Confirmar incorporación de miembros**
+
+<img src="./img/chapter4/userflows/uf10.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Finalizar el proceso de adición de nuevos miembros al proyecto, haciéndolos oficialmente parte del equipo.
 - **User Persona:** Contratista
@@ -5534,9 +6157,13 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 - Especialista sin especialidad: error "Debe asignar una especialidad a todos los especialistas".
 - Error de validación general: mensaje "Revise los datos antes de confirmar la incorporación". 
 
-**9. Consultar y gestionar miembros del equipo**
+**11. Consultar y gestionar miembros del equipo**
 
-- **User Goal:** Consultar la lista de miembros del proyecto y gestionar sus roles o especialidades, o eliminarlos si corresponde.
+<img src="./img/chapter4/userflows/uf11.png">
+
+<div style="page-break-before: always;"></div>
+
+- **User Goal:** Consultar la lista de miembros del proyecto y gestionar sus roles o especialidades.
 - **User Persona:** Contratista
 
 **Flujo Principal (Happy Path):**
@@ -5548,21 +6175,19 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
   - Especialidad (si aplica).
 - Usuario puede realizar las siguientes acciones:
   - Editar rol de un miembro.
-  - Editar especialidad de un miembro si su rol es Especialista.
-  - Eliminar un miembro del equipo (previa confirmación).
+- Editar especialidad de un miembro si su rol es Especialista.
 
 **Puntos de Decisión:**
-- ¿Usuario tiene permisos para editar o eliminar miembros?
 - ¿El miembro seleccionado tiene tareas asignadas?
 
 **Flujos Alternativos (Unhappy Paths):**
-- Usuario intenta eliminar miembro con tareas asignadas: sistema muestra advertencia "Debe reasignar o eliminar tareas antes de eliminar este miembro".
-- Usuario sin permisos: error "No tienes permisos para gestionar el equipo de este proyecto".
-- Cancelar edición o eliminación: no se realizan cambios. 
+- Cancelar edición: no se realizan cambios. 
 
-**10. Crear un nuevo hito**
+**12. Crear un nuevo hito**
 
-<img src="./img/chapter4/userflows/uf10.png">
+<img src="./img/chapter4/userflows/uf12.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Añadir un hito al cronograma del proyecto para estructurar fases clave o entregables intermedios.
 - **User Persona:** Contratista
@@ -5585,17 +6210,17 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 **Puntos de Decisión:**
 - ¿Nombre del hito ingresado?
 - ¿Fechas consistentes y dentro del rango permitido?
-- ¿Usuario tiene permisos para crear hitos?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Nombre vacío: error "El nombre del hito es obligatorio".
 - Fechas inconsistentes (inicio posterior a fin): sistema ajusta automáticamente o muestra advertencia.
 - Fechas fuera del rango del proyecto: error "Las fechas del hito deben estar dentro del rango del proyecto".
-- Usuario sin permisos: error "No tienes permisos para añadir hitos a este proyecto".
 
-**11. Consultar lista de hitos del proyecto**
+**13. Consultar lista de hitos del proyecto**
 
-<img src="./img/chapter4/userflows/uf11.png">
+<img src="./img/chapter4/userflows/uf13.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Visualizar los hitos existentes del proyecto para conocer la estructura de su cronograma.
 - **User Persona:** Miembro del proyecto
@@ -5610,15 +6235,15 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 
 **Puntos de Decisión:**
 - ¿Existen hitos creados en el proyecto?
-- ¿Usuario tiene permisos para visualizar el cronograma?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Proyecto sin hitos creados: sistema muestra mensaje "No hay hitos registrados en este proyecto".
-- Usuario sin permisos: error "No tienes permisos para visualizar el cronograma de este proyecto". 
 
-**12. Editar información de un hito**
+**14. Editar información de un hito**
 
-<img src="./img/chapter4/userflows/uf12.png">
+<img src="./img/chapter4/userflows/uf14.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Actualizar el nombre o las fechas de un hito para reflejar cambios en la planificación del proyecto.
 - **User Persona:** Contratista
@@ -5643,17 +6268,17 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 - ¿Nuevo nombre ingresado?
 - ¿Fechas en orden correcto?
 - ¿Fechas dentro del rango del proyecto?
-- ¿Usuario tiene permisos para editar hitos?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Nombre vacío: error "El nombre del hito es obligatorio".
 - Fechas inconsistentes: sistema puede ajustar automáticamente o mostrar advertencia.
 - Fechas fuera de rango: error "Las fechas del hito deben coincidir con el rango del proyecto".
-- Usuario sin permisos: error "No tienes permisos para editar hitos en este proyecto". 
 
-**13. Eliminar hito del cronograma**
+**15. Eliminar hito del cronograma**
 
-<img src="./img/chapter4/userflows/uf13.png">
+<img src="./img/chapter4/userflows/uf15.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Eliminar un hito del cronograma del proyecto cuando ya no sea necesario.
 - **User Persona:** Contratista
@@ -5672,14 +6297,16 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 **Puntos de Decisión:**
 - ¿Hito tiene tareas o reuniones asociadas?
 - ¿Confirmación escrita correctamente?
-- ¿Usuario tiene permisos para eliminar hitos?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Confirmación incorrecta: error "El texto ingresado no coincide con el nombre del hito".
 - Usuario cancela la eliminación: no se realiza ninguna acción.
-- Usuario sin permisos: error "No tienes permisos para eliminar hitos en este proyecto".
 
-**14. Crear una nueva tarea**
+**16. Crear una nueva tarea**
+
+<img src="./img/chapter4/userflows/uf16.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Añadir una nueva tarea dentro de un hito del cronograma para organizar el trabajo del equipo.
 - **User Persona:** Contratista
@@ -5705,15 +6332,17 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 - ¿Nombre de la tarea ingresado?
 - ¿Especialidad seleccionada?
 - ¿Fechas consistentes y dentro del rango del hito?
-- ¿Usuario tiene permisos para crear tareas?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Nombre vacío: error "El nombre de la tarea es obligatorio".
 - Especialidad no seleccionada: error "Debe seleccionar una especialidad".
 - Fechas inconsistentes o fuera de rango: error "Las fechas deben estar dentro del rango del hito y en orden correcto".
-- Usuario sin permisos: error "No tienes permisos para añadir tareas en este proyecto".
 
-**15. Consultar lista de tareas de un hito**
+**17. Consultar lista de tareas de un hito**
+
+<img src="./img/chapter4/userflows/uf17.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Visualizar las tareas asociadas a un hito específico dentro del cronograma del proyecto.
 - **User Persona:** Miembro del proyecto
@@ -5729,14 +6358,16 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 - Usuario puede seleccionar una tarea para consultar más detalles si lo desea.
 
 **Puntos de Decisión:**
-- ¿Usuario tiene permisos para visualizar las tareas del proyecto?
 - ¿Existen tareas asociadas al hito?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Hito sin tareas: sistema muestra mensaje "No hay tareas registradas para este hito".
-- Usuario sin permisos: error "No tienes permisos para visualizar las tareas de este proyecto". 
 
-**16. Asignar responsable a una tarea**
+**18. Asignar responsable a una tarea**
+
+<img src="./img/chapter4/userflows/uf18.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Designar un miembro del equipo como responsable de una tarea para su ejecución y seguimiento.
 - **User Persona:** Contratista
@@ -5753,14 +6384,16 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 
 **Puntos de Decisión:**
 - ¿Miembro seleccionado tiene la especialidad adecuada?
-- ¿Usuario tiene permisos para asignar responsables?
 
 **Flujos Alternativos (Unhappy Paths):**
 - No seleccionar responsable: error "Debe seleccionar un responsable para asignar la tarea".
 - No hay miembros compatibles al aplicar filtro: mensaje "No hay miembros disponibles con la especialidad requerida".
-- Usuario sin permisos: error "No tienes permisos para asignar responsables en este proyecto". 
 
-**17. Editar información de una tarea**
+**19. Editar información de una tarea**
+
+<img src="./img/chapter4/userflows/uf19.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Actualizar el nombre, especialidad, fechas o responsable de una tarea en función de ajustes en la planificación o el equipo.
 - **User Persona:** Contratista
@@ -5787,15 +6420,17 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 - ¿Especialidad válida seleccionada?
 - ¿Fechas consistentes y dentro del rango del hito?
 - ¿Responsable actualizado cumple con la especialidad (si aplica)?
-- ¿Usuario tiene permisos para editar tareas?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Nombre vacío: error "El nombre de la tarea es obligatorio".
 - Especialidad no seleccionada: error "Debe seleccionar una especialidad".
 - Fechas inconsistentes o fuera de rango: error "Las fechas deben estar dentro del rango del hito y ser consistentes".
-- Usuario sin permisos: error "No tienes permisos para editar tareas en este proyecto". 
 
-**18. Enviar entregable de tarea**
+**20. Enviar entregable de tarea**
+
+<img src="./img/chapter4/userflows/uf20.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Subir y enviar el entregable asociado a una tarea para su revisión.
 - **User Persona:** Especialista
@@ -5815,13 +6450,15 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 
 **Puntos de Decisión:**
 - ¿Se adjuntó al menos un archivo?
-- ¿Usuario tiene permisos para enviar entregables?
 
 **Flujos Alternativos (Unhappy Paths):**
 - No adjuntar archivos: error "Debe adjuntar al menos un archivo para enviar el entregable".
-- Usuario sin permisos: error "No tienes permisos para enviar entregables en esta tarea".
 
-**19. Consultar entregables enviados**
+**21. Consultar entregables enviados**
+
+<img src="./img/chapter4/userflows/uf21.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Visualizar los entregables enviados para una tarea y consultar su estado de revisión.
 - **User Persona:** Especialista / Coordinador / Contratista
@@ -5838,13 +6475,15 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 
 **Puntos de Decisión:**
 - ¿El entregable ya fue enviado?
-- ¿Usuario tiene permisos para visualizar entregables?
 
 **Flujos Alternativos (Unhappy Paths):**
 - No hay entregable enviado: mensaje "Todavía no se ha enviado entregable para esta tarea".
-- Usuario sin permisos: error "No tienes permisos para consultar los entregables de esta tarea".
 
-**20. Revisar entregable enviado**
+**22. Revisar entregable enviado**
+
+<img src="./img/chapter4/userflows/uf22.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Evaluar un entregable enviado por un especialista y tomar una acción (aprobar, rechazar o solicitar ajustes).
 - **User Persona:** Coordinador / Contratista
@@ -5866,16 +6505,18 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 - Sistema muestra mensaje de éxito con la acción realizada.
 
 **Puntos de Decisión:**
-- ¿Usuario tiene permisos de revisión?
 - ¿Acción seleccionada correctamente?
 - ¿Comentario obligatorio en caso de rechazo o solicitud de ajustes?
 
 **Flujos Alternativos (Unhappy Paths):**
 - No seleccionar acción: error "Debe seleccionar una acción para completar la revisión".
 - No ingresar comentario en rechazo o ajuste: error "Debe ingresar un comentario explicativo".
-- Usuario sin permisos: error "No tienes permisos para revisar entregables en este proyecto".
 
-**21. Presentar un Change Request**
+**23. Presentar un Change Request**
+
+<img src="./img/chapter4/userflows/uf23.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Solicitar formalmente una modificación al proyecto mediante un Change Request.
 - **User Persona:** Entidad contratante (Cliente)
@@ -5895,13 +6536,15 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 
 **Puntos de Decisión:**
 - ¿Título y descripción del cambio ingresados correctamente?
-- ¿Usuario tiene permisos para presentar un Change Request?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Campos obligatorios incompletos: error "Debe ingresar título y descripción para solicitar un cambio".
-- Usuario sin permisos: error "No tienes permisos para presentar un Change Request en este proyecto".
 
-**22. Presentar una Technical Query**
+**24. Presentar una Technical Query**
+
+<img src="./img/chapter4/userflows/uf24.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Formular una consulta técnica relacionada al proyecto para su evaluación y respuesta formal.
 - **User Persona:** Entidad contratante (Cliente)
@@ -5920,13 +6563,15 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 
 **Puntos de Decisión:**
 - ¿Título y descripción de la consulta ingresados correctamente?
-- ¿Usuario tiene permisos para presentar una Technical Query?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Campos obligatorios incompletos: error "Debe ingresar título y descripción para presentar una consulta técnica".
-- Usuario sin permisos: error "No tienes permisos para presentar una Technical Query en este proyecto".
 
-**23. Consultar Change Processes creados**
+**25. Consultar Change Processes creados**
+
+<img src="./img/chapter4/userflows/uf25.png">
+
+<div style="page-break-before: always;"></div>
 
 - **User Goal:** Visualizar los Change Processes asociados al proyecto, su origen (Change Request o Technical Query) y su estado actual.
 - **User Persona:** Coordinador / Contratista / Cliente
@@ -5941,44 +6586,47 @@ Para ello, se aplicaron principios establecidos en el diseño de páginas web, t
 - Usuario puede seleccionar un Change Process para ver su detalle completo si lo desea.
 
 **Puntos de Decisión:**
-- ¿Usuario tiene permisos para visualizar los Change Processes?
 - ¿Existen Change Processes asociados al proyecto?
 
 **Flujos Alternativos (Unhappy Paths):**
 - Proyecto sin Change Processes: sistema muestra mensaje "No hay Change Processes registrados para este proyecto".
-- Usuario sin permisos: error "No tienes permisos para visualizar los Change Processes de este proyecto". 
 
-**24. Gestionar Change Order asociado**
+**26. Aprobar Change Process**
 
-- **User Goal:** Formalizar y gestionar la autorización de cambios en el proyecto una vez que un Change Process ha sido aprobado.
+<img src="./img/chapter4/userflows/uf26.png">
+
+<div style="page-break-before: always;"></div>
+
+- **User Goal:** Revisar y aprobar formalmente un Change Process propuesto para habilitar la posterior emisión de un Change Order.
 - **User Persona:** Contratista
 
 **Flujo Principal (Happy Path):**
-- Contratista accede al detalle del Change Process aprobado.
-- Usuario selecciona la opción "Gestionar Change Order".
+- Contratista accede al detalle de un Change Process pendiente de aprobación.
+- Sistema muestra la siguiente información:
 - Sistema despliega información relevante:
-  - Datos del Change Process aprobado.
-  - Documentación del cambio.
-- Usuario genera el Change Order correspondiente:
-  - Completa información adicional requerida (por ejemplo, costos, impacto en fechas si aplica).
-  - Adjunta documentos oficiales (opcional).
-- Usuario confirma la emisión del Change Order.
-- Sistema registra el Change Order asociado al Change Process.
-- Sistema actualiza el estado del Change Process indicando que ya cuenta con un Change Order emitido.
-- Sistema muestra mensaje de éxito.
+  - Descripción del cambio propuesto.
+  - Justificación técnica o contractual.
+  - Documentación soporte (adjunta por quien propone el cambio).
+- Usuario revisa la información y selecciona "Aprobar Change Process".
+- Sistema solicita confirmación.
+- Usuario confirma la aprobación.
+- Sistema actualiza el estado del Change Process a “Aprobado”.
+- Sistema muestra mensaje de éxito y habilita la opción “Gestionar Change Order”.
 
 **Puntos de Decisión:**
-- ¿Change Process está aprobado?
-- ¿Usuario tiene permisos para gestionar Change Orders?
-
-**Flujos Alternativos (Unhappy Paths):**
-- Change Process no aprobado aún: error "Solo se pueden generar Change Orders de Change Processes aprobados".
-- Usuario sin permisos: error "No tienes permisos para generar un Change Order en este proyecto".
-- Cancelar emisión del Change Order: no se genera ningún cambio.
+- ¿El usuario tiene permisos para aprobar cambios?
+- ¿La información del Change Process está completa?
 
 <div style="page-break-before: always;"></div>
 
 ## 4.5. Web Applications Prototyping
+Para el desarrollo de los prototipos de la interfaz de usuario orientados a navegadores web en entornos Desktop y Mobile, se adoptaron una serie de principios clave que guiaron el diseño. En primer lugar, se priorizó la claridad y facilidad de uso, procurando que la navegación resultara intuitiva y que los usuarios comprendieran con facilidad las funcionalidades principales, tales como el registro de procesos y la consulta de reportes estadísticos. En segundo lugar, se aplicaron criterios de diseño adaptable (responsive design) para asegurar la compatibilidad de la aplicación con distintos tamaños de pantalla, permitiendo así una experiencia consistente independientemente del dispositivo utilizado. Finalmente, se puso énfasis en la presentación de información relevante, procurando mostrar únicamente los datos esenciales para el perfil de usuario al que se dirige la aplicación.
+
+<img src="./img/chapter4/prototyping/Prototyping.png">
+
+Enlace para acceder al video de explicación del <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20211b994_upc_edu_pe/EQXb8kwTRW1JsIjq76EiawIBSVFvOBnmGCS3Wmu5zYUhOQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=0fERvI">Web Applications Prototyping</a>
+
+Enlace para acceder al <a href= "https://www.figma.com/proto/58D13IoOvL8qDbERBSw8nX/Web-Application-Prototyping?node-id=0-1&t=a4MLV1z9mhD1XMI7-1">Flujo</a>
 
 <div style="page-break-before: always;"></div>
 
@@ -6020,6 +6668,8 @@ Los flujos críticos de usuario, como autenticación (LoginComponent, RegisterCo
 Esta arquitectura basada en componentes y servicios fomenta una modularidad impecable, permitiendo que PropGMS no solo sea altamente mantenible y escalable, sino también adaptable a futuras expansiones o personalizaciones sin comprometer la estabilidad de la plataforma.
 
 <img src="./img/chapter4/c4/componente/webApplication.png" alt="Diagrama de componentes de Web Application de ProP GMS">
+
+<div style="page-break-after: always;"></div>
 
 #### 4.6.3.2. API Diagram
 
@@ -6684,6 +7334,111 @@ Este diccionario describe las clases involucradas en la gestión de pagos dentro
 
 <div style="page-break-before: always;"></div>
 
+## 4.8. Database Design
+
+Para el proyecto ProP GMS se ha seleccionado el motor de base de datos MariaDB debido a su escalabilidad. Esta elección se basa en la experiencia del equipo con motores de bases de datos similares.
+
+### 4.8.1. Database Diagram
+
+El modelo general de base de datos de PropGMS refleja una arquitectura modular basada en contextos delimitados (bounded contexts), alineados con los principios de Domain-Driven Design. Cada contexto modela una parte funcional del sistema, tales como gestión de proyectos, usuarios, archivos, pagos, suscripciones, notificaciones y organizaciones.
+
+Se identifican entidades clave como projects, tasks, invoices, payments, user_accounts, organizations, entre muchas otras, conectadas mediante claves foráneas que garantizan la integridad referencial entre dominios. Las relaciones entre contextos están cuidadosamente controladas para evitar acoplamientos innecesarios y fomentar una evolución independiente de cada módulo.
+
+El diseño promueve escalabilidad, trazabilidad y una clara separación de responsabilidades, facilitando tanto el mantenimiento como la extensión futura del sistema.
+
+<img src="./img/chapter4/db/general.svg" alt="Diagrama de base de datos general de ProP GMS">
+
+#### 4.8.1.1. Project Management Database Diagram
+
+El diseño de base de datos del contexto de gestión de proyectos representa la estructura encargada de organizar y supervisar los proyectos técnicos dentro del sistema PropGMS. La tabla principal projects se conecta con otras tablas relacionadas como schedules, milestones, tasks, meetings y project_team_members, lo que permite modelar de forma estructurada el ciclo de vida completo de un proyecto.
+
+Cada proyecto se clasifica mediante la tabla project_status y se vincula con un equipo técnico registrado en la tabla project_team_members, el cual especifica roles y especialidades mediante las tablas role y specialty. Las tareas que componen un proyecto se organizan por hitos y pueden incluir entregas evaluables a través de task_submissions, que a su vez están enlazadas a archivos mediante la tabla task_submission_files.
+
+Las reuniones de coordinación también están modeladas, permitiendo registrar su temática, fechas y participantes. Este diseño facilita la planificación, el control de avance y la trazabilidad técnica del proyecto, asegurando una gestión estructurada y alineada con los procesos reales de consultoras y contratistas técnicos.
+
+<img src="./img/chapter4/db/projects.png" alt="Diagrama de base de datos del bounded context Project Management de ProP GMS">
+
+#### 4.8.1.2. Change Management Database Diagram
+
+El diseño del contexto de gestión de cambios permite registrar y controlar las modificaciones solicitadas durante el desarrollo de un proyecto técnico en PropGMS. La tabla principal change_processes centraliza toda la información relacionada a los procesos de cambio, incluyendo su origen, estado, justificación y vínculos con órdenes y respuestas.
+
+Las solicitudes de cambio pueden tener origen técnico o contractual, diferenciadas mediante la tabla origin_types. El estado del proceso se gestiona con la tabla change_status. Cada proceso puede generar una orden de cambio formal a través de la tabla change_orders, o recibir una respuesta por medio de la tabla change_responses, que contiene notas y fechas relevantes de la retroalimentación.
+
+Esta estructura permite mantener un historial claro de las decisiones, fechas y responsables asociados a cada modificación, facilitando la trazabilidad y gobernanza del proyecto.
+
+<img src="./img/chapter4/db/changes.png" alt="Diagrama de base de datos del bounded context de Changes Management de ProP GMS">
+
+#### 4.8.1.3. Organization Database Diagram
+
+El diseño del contexto de organización permite modelar las entidades jurídicas y su estructura de miembros dentro del sistema PropGMS. La tabla principal organizations almacena la información esencial como razón social, nombre comercial, RUC y su estado, referenciado desde la tabla organization_status.
+
+El proceso de incorporación de personas a una organización se gestiona mediante la tabla organization_invitations, que permite registrar a quién se invitó, quién realizó la invitación y el estado de la misma, con ayuda de la tabla invitation_status. Una vez aceptada, la persona se convierte en miembro mediante la tabla organization_members, que vincula personas con organizaciones de forma formal y estructurada.
+
+Este diseño permite tener un control completo sobre el ciclo de vida de una organización en la plataforma, desde su creación hasta la gestión de sus miembros, manteniendo trazabilidad y control de acceso claro.
+
+<img src="./img/chapter4/db/organizations.png" alt="Diagrama de base de datos del bounded context Organization de ProP GMS">
+
+#### 4.8.1.4. Notification Database Diagram
+
+El diseño del contexto de notificaciones permite gestionar la comunicación interna del sistema PropGMS dirigida a usuarios. La tabla notifications almacena los mensajes que se envían a cada persona, registrando su título, contenido, destinatario, fecha de creación y la categoría de la notificación.
+
+Las categorías disponibles están definidas en la tabla notification_categories, que permite clasificar los mensajes como informativos, alertas, recordatorios, entre otros. Esta estructura facilita una experiencia más clara y ordenada para los usuarios, permitiendo diferenciar el tipo y propósito de cada notificación dentro de la plataforma.
+
+<img src="./img/chapter4/db/notifications.png" alt="Diagrama de base de datos del bounded context Notifications de ProP GMS">
+
+#### 4.8.1.5. File Database Diagram
+
+El contexto de gestión de archivos permite organizar y clasificar los documentos digitales que se generan o se utilizan dentro del sistema PropGMS. La tabla principal files almacena información clave de cada archivo, como su tamaño, ubicación, fecha de carga, autor y su tipo.
+
+Los archivos pueden agruparse opcionalmente dentro de carpetas, modeladas en la tabla folders, que además se encuentran asociadas a un espacio de trabajo específico. Cada archivo también está clasificado por tipo mediante la tabla file_type, lo que permite diferenciar su propósito o categoría, como contratos, entregas o documentos técnicos.
+
+Este diseño facilita una organización clara y estructurada de los recursos digitales, asegurando su trazabilidad y una experiencia eficiente de gestión documental.
+
+<img src="./img/chapter4/db/files.png" alt="Diagrama de base de datos del bounded context Files Management de ProP GMS">
+
+#### 4.8.1.6. IAM Database Diagram
+
+El contexto de gestión de identidad y acceso permite administrar las credenciales y el estado de los usuarios del sistema PropGMS. La tabla user_accounts almacena los datos de inicio de sesión, incluyendo tipo de usuario, estado de la cuenta, fechas relevantes y vínculo opcional con la tabla persons, donde se detalla información personal como nombre completo, correo y teléfono.
+
+Cada cuenta está categorizada según su tipo mediante la tabla user_types y su estado actual se define por la tabla account_statuses, lo que permite distinguir usuarios activos, inactivos o bloqueados.
+
+Este diseño proporciona una base robusta para la autenticación, autorización y trazabilidad de los usuarios dentro de la plataforma, garantizando seguridad y control en el acceso al sistema.
+
+<img src="./img/chapter4/db/iam.png" alt="Diagrama de base de datos del bounded context IAM de ProP GMS">
+
+#### 4.8.1.7. Subscription Database Diagram
+
+El contexto de suscripciones permite administrar los planes comerciales que habilitan el acceso a las funcionalidades del sistema PropGMS. La tabla subscriptions registra cada suscripción adquirida, incluyendo su plan, duración, costo, estado y la persona asociada.
+
+Los planes disponibles están definidos en la tabla subscription_plans, donde se especifican características como duración en días, capacidad máxima de miembros, almacenamiento y número de proyectos. El estado actual de cada suscripción se controla mediante la tabla subscription_statuses.
+
+<img src="./img/chapter4/db/subscriptions.png" alt="Diagrama de base de datos del bounded context Subscription de ProP GMS">
+
+#### 4.8.1.8. Billing Database Diagram
+
+El contexto de facturación permite registrar y estructurar las transacciones comerciales dentro del sistema PropGMS. La tabla principal invoices representa las facturas emitidas a los usuarios o entidades, incluyendo montos, fechas clave, moneda utilizada y estado de pago, gestionado a través de la tabla payment_statuses.
+
+Cada factura puede incluir múltiples ítems, detallados en la tabla billing_items, donde se especifican los conceptos facturados, sus precios unitarios y subtotales. Esta organización permite una descomposición clara de los servicios cobrados, facilitando tanto el seguimiento contable como la generación de reportes.
+
+Este modelo de datos asegura que los procesos de cobro sean transparentes, auditables y fácilmente integrables con otros componentes financieros del sistema.
+
+<img src="./img/chapter4/db/billings.png" alt="Diagrama de base de datos del bounded context Billing de ProP GMS">
+
+#### 4.8.1.9. Payment Database Diagram
+
+El contexto de pagos se encarga de registrar las operaciones financieras asociadas al cobro de facturas dentro del sistema PropGMS. La tabla payments almacena cada pago realizado, incluyendo su monto, moneda, método utilizado, estado, fecha de realización y la factura a la que corresponde.
+
+El diseño contempla acuerdos de pago recurrente, representados en la tabla recurring_payment_agreements, que permiten automatizar la facturación periódica según el método de pago asociado, especificado en la tabla payment_method_types.
+
+Cada pago puede tener múltiples intentos de transacción registrados en la tabla transactions, la cual guarda la respuesta del gateway de pagos junto con su estado, definido por la tabla transaction_statuses. El estado general del pago se controla mediante la tabla payment_statuses.
+
+Esta estructura robusta permite gestionar pagos únicos y recurrentes con trazabilidad completa de los intentos y resultados, facilitando la integración con plataformas de pago externas.
+
+<img src="./img/chapter4/db/payments.png" alt="Diagrama de base de datos del bounded context Payments de ProP GMS">
+
+
+<div style="page-break-before: always;"></div>
+
 
 
 <div style="page-break-before: always;"></div>
@@ -6784,7 +7539,7 @@ En Galaxia Wonder, la gestión del código fuente se realiza mediante Git como s
 
 El proyecto está organizado en varios repositorios, según la arquitectura modular de las soluciones tecnológicas utilizadas:
 
-- Landing Page (Vue.js + Tailwind CSS):  
+- Landing Page (Vue.js):  
   [https://github.com/GalaxiaWonder-AppsWeb/LandingPage](https://github.com/GalaxiaWonder-AppsWeb/LandingPage)
 
 - FrontEnd Web Application (Vue.js SPA con Vite):  
@@ -6808,13 +7563,13 @@ Para su gestión interna, se aplicará GitFlow. Se explican a continuación las 
 
 - **feature/**: Ramas para el desarrollo de nuevas funcionalidades. Se crean a partir de `develop` y, una vez completadas, se integran de nuevo en `develop`.  
   - **Convención de nombres**:  
-    `feature/story-id`  
-    Ejemplo: `feature/us77`
+    `feature/epic-id`  
+    Ejemplo: `feature/epic10`
 
 - **bugfix/**: Ramas para la correción de errores detectados en fase de desarrollo. Se crean a partir de `develop` y, una vez completadas, se integran de nuevo en `develop`.  
   - **Convención de nombres**:  
-    `bugfix/story-id`  
-    Ejemplo: `bugfix/us82`
+    `bugfix/epic-id`  
+    Ejemplo: `bugfix/epic08`
 
 - **release/**: Ramas para preparar una nueva versión de producción. Se crean desde `develop` cuando ya se ha alcanzado un conjunto estable de funcionalidades. Sirven para realizar pruebas, ajustes menores y documentación. Al finalizar, se integran en `main` y `develop`.  
   - **Convención de nombres**:  
@@ -6823,8 +7578,8 @@ Para su gestión interna, se aplicará GitFlow. Se explican a continuación las 
 
 - **hotfix/**: Ramas para corregir errores críticos detectados tardíamente en producción. Se crean desde `main` y se integran tanto en `main` como en `develop` (o en `release`, si hubiere alguna rama de ese tipo activa).  
   - **Convención de nombres**:  
-    `hotfix/story-id`  
-    Ejemplo: `hotfix/swr35`
+    `hotfix/epic-id`  
+    Ejemplo: `hotfix/epic01`
 
 ### 5.1.3. Source Code Style Guide & Coding Conventions
 
@@ -6885,6 +7640,57 @@ La landing page del proyecto se desplegará utilizando GitHub Pages, una platafo
 
 Enlace para acceder a la landing page: [https://galaxiawonder-appsweb.github.io/LandingPage/](https://galaxiawonder-appsweb.github.io/LandingPage/)
 
+**LANDING PAGE V2 DEPLOYMENT**
+
+Para la segunda implementación de la landing page del proyecto, se decidió utilizar Netlify. Para ello, se siguio el siguiente proceso:
+
+1. Seleccionar la opción de importar un proyecto existente.
+
+<img src="./img/chapter5/Deploy/landing_page_v2/step1.png">
+
+2. Seleccionamos mediante GitHub
+
+<img src="./img/chapter5/Deploy/landing_page_v2/step2.png">
+
+3. Seleccionamos la opción de organización
+
+<img src="./img/chapter5/Deploy/landing_page_v2/step3.png">
+
+4. Seleccionamos el repositorio de la landing page
+
+<img src="./img/chapter5/Deploy/landing_page_v2/step4.png">
+
+5. Se refleja las configuraciones en el dashboard
+
+<img src="./img/chapter5/Deploy/landing_page_v2/step5.png">
+
+6. Configuramos el sitename (url) del web page, la rama y el comando de build y guardamos los cambios.
+
+<img src="./img/chapter5/Deploy/landing_page_v2/step6.png">
+
+**WEB APPLICATION DEPLOYMENT**
+
+Para la primera implementación de la web application se decidió utilizar Azure. Para ello, se siguio el siguiente proceso:
+
+1. Seleccionar la opción de Aplicación Web Estática
+
+<img src="./img/chapter5/Deploy/web_application/step1.png">
+
+2. Configurar nombre, organización, repositorio y rama
+
+<img src="./img/chapter5/Deploy/web_application/step2.png">
+
+3. Configuración de build
+
+<img src="./img/chapter5/Deploy/web_application/step3.png">
+
+4. Revisamos los detalles antes de crear
+
+<img src="./img/chapter5/Deploy/web_application/step4.png">
+
+5. Agregar variables de entorno
+
+<img src="./img/chapter5/Deploy/web_application/step5.png">
 
 <div style="page-break-before: always;"></div>
 
@@ -6990,7 +7796,7 @@ Debido a la presión por completar el Sprint 1 a tiempo, no se manejó a gran de
 
 #### 5.2.1.3. Sprint Backlog 1
 
-<img src="./img/chapter5/Sprint1/sprintbacklog.png">
+<img src="./../img/chapter5/Sprint1/sprintbacklog.png">
 
 <a href="https://galaxiawonder.youtrack.cloud/dashboard?id=213-2" target="_blank">Ver tablero en YouTrack</a>
 
@@ -7022,7 +7828,7 @@ Debido a la presión por completar el Sprint 1 a tiempo, no se manejó a gran de
     <th>Description</th>
     <th>Estimation (Hours)</th>
     <th>Assigned To</th>
-    <th>Status<br>(Done / In-Process / To-Review / Done)</th>
+    <th>Status<br>(To-Do / In-Process / To-Review / Done)</th>
   </tr>
         <tr>
             <td>SWR01</td>
@@ -7413,7 +8219,7 @@ Se presenta a modo de evidencia un video y capturas de las principales vistas im
 
 Contiene el formulario de contacto con una frase llamativa
 
-<img src="./img/chapter5/Sprint1/execution1.png">
+<img src="./../img/chapter5/Sprint1/execution1.png">
 
 <div style="page-break-after: always;"></div>
 
@@ -7421,7 +8227,7 @@ Contiene el formulario de contacto con una frase llamativa
 
 Contiene información sobre nuestra startup
 
-<img src="./img/chapter5/Sprint1/execution2.png">
+<img src="./../img/chapter5/Sprint1/execution2.png">
 
 <div style="page-break-after: always;"></div>
 
@@ -7429,7 +8235,7 @@ Contiene información sobre nuestra startup
 
 Detalla, para grupo por segmento, cuales son las principales funcionalidades del producto
 
-<img src="./img/chapter5/Sprint1/execution3.png">
+<img src="./../img/chapter5/Sprint1/execution3.png">
 
 <div style="page-break-after: always;"></div>
 
@@ -7437,7 +8243,7 @@ Detalla, para grupo por segmento, cuales son las principales funcionalidades del
 
 Se presentan los planes de suscripción (los diseñados provisionalmente)
 
-<img src="./img/chapter5/Sprint1/execution4.png">
+<img src="./../img/chapter5/Sprint1/execution4.png">
 
 <div style="page-break-after: always;"></div>
 
@@ -7445,7 +8251,7 @@ Se presentan los planes de suscripción (los diseñados provisionalmente)
 
 Junto al footer con información de contacto, se presentan testimonios de usuarios
 
-<img src="./img/chapter5/Sprint1/execution5.png">
+<img src="./../img/chapter5/Sprint1/execution5.png">
 
 <div style="page-break-after: always;"></div>
 
@@ -7467,6 +8273,3456 @@ Para este primer Sprint, el equipo ha fallado en tener una participación comple
 
 <div style="page-break-before: always;"></div>
 
+### 5.2.2. Sprint 2
+
+#### 5.2.2.1. Sprint Planning 2
+
+<table cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <th colspan="2"><strong>Sprint #</strong></th>
+    <td colspan="2">Sprint 2</td>
+  </tr>
+  <tr>
+    <th colspan="4" style="background-color: #d9d9d9;"><strong>Sprint Planning Background</strong></th>
+  </tr>
+  <tr>
+    <th style="width: 20%;">Date</th>
+    <td colspan="3">2025-04-28</td>
+  </tr>
+  <tr>
+    <th>Time</th>
+    <td colspan="3">07:40 PM</td>
+  </tr>
+  <tr>
+    <th>Location</th>
+    <td colspan="3">Biblioteca Monterrico - Cubículo de estudiantes</td>
+  </tr>
+  <tr>
+    <th>Prepared By</th>
+    <td colspan="3">Orozco Torres, Álvaro Joaquín</td>
+  </tr>
+  <tr>
+    <th>Attendees (to planning meeting)</th>
+    <td colspan="3">Aponte Cruzado, Andrea Marielena / Orozco Torres, Álvaro Joaquín / Reaño Delgadillo, Henry Paolo</td>
+  </tr>
+  <tr>
+    <th>Sprint 1 Review Summary</th>
+    <td colspan="3">El sprint anterior logró realizar una primera implementación de la Landing Page. Sin embargo, esta implementación no ha llegado a cumplir con las expectativas de los miembros del equipo, quienes identifican una oportunidad de mejora en utilizar el framework de Angular para facilitar su mantenibilidad, aspecto y permitir además implementar ciertas funcionalidades que no lograron a completarse en la primera versión.</td>
+  </tr>
+  <tr>
+    <th>Sprint 1 Retrospective Summary</th>
+    <td colspan="3">Se identificó una ligera falta de coordinación debido principalmente a la presión del tiempo para el primer entregable. Para el sprint actual, se decidió mantener el mismo modo de organización debido a</td>
+  </tr>
+  <tr>
+    <th colspan="4" style="background-color: #d9d9d9;"><strong>Sprint Goal & User Stories</strong></th>
+  </tr>
+  <tr>
+    <th>Sprint 2 Goal</th>
+    <td colspan="3">Nuestro foco está en implementar el front-end con alta fidelidad al diseño de UX/UI previsto por el equipo, tanto en la aplicación web como landing page. Creemos que expande nos permite no solo mostrar el alcance de proyecto claramente, sino también identificar posibles puntos de mejora los distintos workflows. Esto será confirmado cuando se realice una evaluación según heurísticas de usabilidad.</td>
+  </tr>
+  <tr>
+    <th>Sprint 2 Velocity</th>
+    <td colspan="3">70 Story Points</td>
+  </tr>
+  <tr>
+    <th>Sum of Story Points</th>
+    <td colspan="3">176 Story Points</td>
+  </tr>
+</table>
+
+#### 5.2.2.2. Aspect Leaders and Collaborators
+
+Para el Sprint 2, se proyectan actividades como la segunda versión del Landing Page y la implementación de las vistas del Web Application.
+
+<table cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <th>Team Member <br>(Last Name, First Name)</th>
+    <th>GitHub Username</th>
+    <th>Landing Page<br>Leader (L) / Collaborator (C)</th>
+    <th>Web Application UX/UI<br>Leader (L) / Collaborator (C)</th>
+    <th>Web Application DDD Architecture<br>Leader (L) / Collaborator (C)</th>
+  </tr>
+  <tr>
+    <td>Aponte Cruzado, Andrea Marielena</td>
+    <td>iconicmiau</td>
+    <td>C</td>
+    <td>L</td>
+    <td>C</td>
+  </tr>
+  <tr>
+    <td>Orozco Torres, Álvaro Joaquín</td>
+    <td>CodyLionVivo</td>
+    <td>C</td>
+    <td>C</td>
+    <td>C</td>
+  </tr>
+  <tr>
+    <td>López Acuña, Mario Joaquín</td>
+    <td>tertegen</td>
+    <td>C</td>
+    <td>C</td>
+    <td>C</td>
+  </tr>
+  <tr>
+    <td>Orozco Torres, Álvaro Joaquín</td>
+    <td>L1LZ4Z</td>
+    <td>C</td>
+    <td>C</td>
+    <td>L</td>
+  </tr>
+  <tr>
+    <td>Reaño Delgadillo, Henry Paolo</td>
+    <td>PaoloHRRR</td>
+    <td>L</td>
+    <td>C</td>
+    <td>C</td>
+  </tr>
+</table>
+
+#### 5.2.2.3. Sprint Backlog 2
+
+<img src="./../img/chapter5/Sprint1/sprintbacklog.png">
+
+<a href="https://galaxiawonder.youtrack.cloud/dashboard?id=213-2" target="_blank">Ver tablero en YouTrack</a>
+
+<b>Credenciales:</b>
+<ul>
+  <li>
+    Correo: 
+    <span style="cursor: default; color: inherit; text-decoration: none;">
+      invitadogw&#64;galaxiawonder.com
+    </span>
+  </li>
+  <li>Contraseña: GA14x4W0nd3r</li>
+</ul>
+
+<table cellpadding="6" cellspacing="0">
+  <tr>
+    <th colspan="8">Sprint #</th>
+    <td colspan="8">Sprint n</td>
+  </tr>
+  <tr>
+    <th colspan="2">User Story</th>
+    <th colspan="6">Work-Item / Task</th>
+  </tr>
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Estimation (Hours)</th>
+    <th>Assigned To</th>
+    <th>Status<br>(To-do / In-Process / To-Review / Done)</th>
+  </tr>
+        <tr>
+            <td>SWR01</td>
+            <td>Cambiar segmento objetivo</td>
+            <td>SWR01-1</td>
+            <td>Codear el HTML</td>
+            <td>Crear las estructuras de marcado semántico correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Orozco Torres, Álvaro Joaquín</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td></td><td></td>
+            <td>SWR01-2</td>
+            <td>Codear el CSS</td>
+            <td>Crear y aplicar los estilos correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Orozco Torres, Álvaro Joaquín</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>SWR06</td>
+            <td>Call to action Contratista</td>
+            <td>SWR06-1</td>
+            <td>Codear el HTML</td>
+            <td>Crear las estructuras de marcado semántico correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Orozco Torres, Álvaro Joaquín</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td></td><td></td>
+            <td>SWR06-2</td>
+            <td>Codear el CSS</td>
+            <td>Crear y aplicar los estilos correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Orozco Torres, Álvaro Joaquín</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>SWR07</td>
+            <td>Call to action Cliente</td>
+            <td>SWR07-1</td>
+            <td>Codear el HTML</td>
+            <td>Crear las estructuras de marcado semántico correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Orozco Torres, Álvaro Joaquín</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td></td><td></td>
+            <td>SWR07-2</td>
+            <td>Codear el CSS</td>
+            <td>Crear y aplicar los estilos correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Orozco Torres, Álvaro Joaquín</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>SWR05</td>
+            <td>Hero Section Contratista</td>
+            <td>SWR05-1</td>
+            <td>Codear el HTML</td>
+            <td>Crear las estructuras de marcado semántico correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Orozco Torres, Álvaro Joaquín</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td></td><td></td>
+            <td>SWR05-2</td>
+            <td>Codear el CSS</td>
+            <td>Crear y aplicar los estilos correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Orozco Torres, Álvaro Joaquín</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>SWR04</td>
+            <td>Hero Section Cliente</td>
+            <td>SWR04-1</td>
+            <td>Codear el HTML</td>
+            <td>Crear las estructuras de marcado semántico correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Orozco Torres, Álvaro Joaquín</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td></td><td></td>
+            <td>SWR04-2</td>
+            <td>Codear el CSS</td>
+            <td>Crear y aplicar los estilos correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Orozco Torres, Álvaro Joaquín</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>SWR09</td>
+            <td>Overview contratista</td>
+            <td>SWR09-1</td>
+            <td>Codear el HTML</td>
+            <td>Crear las estructuras de marcado semántico correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Orozco Torres, Álvaro Joaquín</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td></td><td></td>
+            <td>SWR09-2</td>
+            <td>Codear el CSS</td>
+            <td>Crear y aplicar los estilos correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Orozco Torres, Álvaro Joaquín</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>SWR08</td>
+            <td>Overview cliente</td>
+            <td>SWR08-1</td>
+            <td>Codear el HTML</td>
+            <td>Crear las estructuras de marcado semántico correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Orozco Torres, Álvaro Joaquín</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td></td><td></td>
+            <td>SWR08-2</td>
+            <td>Codear el CSS</td>
+            <td>Crear y aplicar los estilos correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Orozco Torres, Álvaro Joaquín</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>SWR11</td>
+            <td>Beneficios contratista</td>
+            <td>SWR11-1</td>
+            <td>Codear el HTML</td>
+            <td>Crear las estructuras de marcado semántico correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Orozco Torres, Álvaro Joaquín</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td></td><td></td>
+            <td>SWR11-2</td>
+            <td>Codear el CSS</td>
+            <td>Crear y aplicar los estilos correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Orozco Torres, Álvaro Joaquín</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>SWR10</td>
+            <td>Beneficios cliente</td>
+            <td>SWR10-1</td>
+            <td>Codear el HTML</td>
+            <td>Crear las estructuras de marcado semántico correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Orozco Torres, Álvaro Joaquín</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td></td><td></td>
+            <td>SWR10-2</td>
+            <td>Codear el CSS</td>
+            <td>Crear y aplicar los estilos correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Orozco Torres, Álvaro Joaquín</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>SWR16</td>
+            <td>About The Product</td>
+            <td>SWR16-1</td>
+            <td>Codear el HTML</td>
+            <td>Crear las estructuras de marcado semántico correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Reaño Delgadillo, Henry Paolo</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td></td><td></td>
+            <td>SWR16-2</td>
+            <td>Codear el CSS</td>
+            <td>Crear y aplicar los estilos correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Reaño Delgadillo, Henry Paolo</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>SWR03</td>
+            <td>About Us</td>
+            <td>SWR03-1</td>
+            <td>Codear el HTML</td>
+            <td>Crear las estructuras de marcado semántico correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Reaño Delgadillo, Henry Paolo</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td></td><td></td>
+            <td>SWR03-2</td>
+            <td>Codear el CSS</td>
+            <td>Crear y aplicar los estilos correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Reaño Delgadillo, Henry Paolo</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>SWR13</td>
+            <td>Testimonios contratista</td>
+            <td>SWR13-1</td>
+            <td>Codear el HTML</td>
+            <td>Crear las estructuras de marcado semántico correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Reaño Delgadillo, Henry Paolo</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td></td><td></td>
+            <td>SWR13-2</td>
+            <td>Codear el CSS</td>
+            <td>Crear y aplicar los estilos correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Reaño Delgadillo, Henry Paolo</td>
+            <td>Done</td>
+        </tr>
+                <tr>
+            <td>SWR12</td>
+            <td>Testimonios cliente</td>
+            <td>SWR12-1</td>
+            <td>Codear el HTML</td>
+            <td>Crear las estructuras de marcado semántico correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Reaño Delgadillo, Henry Paolo</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td></td><td></td>
+            <td>SWR12-2</td>
+            <td>Codear el CSS</td>
+            <td>Crear y aplicar los estilos correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Reaño Delgadillo, Henry Paolo</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>SWR02</td>
+            <td>Internacionalización</td>
+            <td>SWR02-1</td>
+            <td>Codear el HTML</td>
+            <td>Crear las estructuras de marcado semántico correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Orozco Torres, Álvaro Joaquín</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td></td><td></td>
+            <td>SWR02-2</td>
+            <td>Codear el CSS</td>
+            <td>Crear y aplicar los estilos correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Orozco Torres, Álvaro Joaquín</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>SWR18</td>
+            <td>Planes</td>
+            <td>SWR18-1</td>
+            <td>Codear el HTML</td>
+            <td>Crear las estructuras de marcado semántico correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Reaño Delgadillo, Henry Paolo</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td></td><td></td>
+            <td>SWR18-2</td>
+            <td>Codear el CSS</td>
+            <td>Crear y aplicar los estilos correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Reaño Delgadillo, Henry Paolo</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>SWR14</td>
+            <td>Footer</td>
+            <td>SWR14-1</td>
+            <td>Codear el HTML</td>
+            <td>Crear las estructuras de marcado semántico correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Aponte Cruzado, Andrea Marielena</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td></td><td></td>
+            <td>SWR14-2</td>
+            <td>Codear el CSS</td>
+            <td>Crear y aplicar los estilos correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Aponte Cruzado, Andrea Marielena</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>SWR17</td>
+            <td>Términos y condiciones de uso</td>
+            <td>SWR17-1</td>
+            <td>Codear el HTML</td>
+            <td>Crear las estructuras de marcado semántico correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Reaño Delgadillo, Henry Paolo</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td></td><td></td>
+            <td>SWR17-2</td>
+            <td>Codear el CSS</td>
+            <td>Crear y aplicar los estilos correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Reaño Delgadillo, Henry Paolo</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>SWR15</td>
+            <td>Header</td>
+            <td>SWR15-1</td>
+            <td>Codear el HTML</td>
+            <td>Crear las estructuras de marcado semántico correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Orozco Torres, Álvaro Joaquín</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td></td><td></td>
+            <td>SWR15-2</td>
+            <td>Codear el CSS</td>
+            <td>Crear y aplicar los estilos correspondientes al componente o sección</td>
+            <td>1</td>
+            <td>Orozco Torres, Álvaro Joaquín</td>
+            <td>Done</td>
+        </tr>
+  <tr>
+    <td>US001</td>
+    <td>Ingresar nombre del proyecto</td>
+    <td>US001-1</td>
+    <td>Diseñar campo de entrada</td>
+    <td>Crear un campo de texto para ingresar el nombre del proyecto con validación obligatoria</td>
+    <td>2</td>
+    <td>Orozco Torres, Álvaro Joaquín</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td></td><td></td>
+    <td>US001-2</td>
+    <td>Validar campo al enviar</td>
+    <td>Mostrar mensaje de error si el nombre está vacío al hacer submit</td>
+    <td>1</td>
+    <td>Orozco Torres, Álvaro Joaquín</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td></td><td></td>
+    <td>US001-3</td>
+    <td>Guardar nombre en backend</td>
+    <td>Enviar solicitud al backend y guardar el nombre del proyecto en la base de datos</td>
+    <td>2</td>
+    <td>Orozco Torres, Álvaro Joaquín</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US002</td>
+    <td>Ingresar fecha de inicio del proyecto</td>
+    <td>US002-1</td>
+    <td>Prellenar fecha actual</td>
+    <td>Configurar el campo para que muestre la fecha actual al cargar el formulario</td>
+    <td>1</td>
+    <td>Orozco Torres, Álvaro Joaquín</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td></td><td></td>
+    <td>US002-2</td>
+    <td>Deshabilitar edición manual</td>
+    <td>Evitar que el usuario edite la fecha de inicio automáticamente asignada</td>
+    <td>1</td>
+    <td>Orozco Torres, Álvaro Joaquín</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US003</td>
+    <td>Ingresar fecha de finalización del proyecto</td>
+    <td>US003-1</td>
+    <td>Validar fecha posterior</td>
+    <td>Verificar que la fecha de finalización sea posterior a la actual</td>
+    <td>2</td>
+    <td>Orozco Torres, Álvaro Joaquín</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td></td><td></td>
+    <td>US003-2</td>
+    <td>Mostrar mensajes de error</td>
+    <td>Notificar al usuario si la fecha ingresada no es válida</td>
+    <td>1</td>
+    <td>Orozco Torres, Álvaro Joaquín</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US004</td>
+    <td>Asociar contrato firmado y su fecha al proyecto</td>
+    <td>US004-1</td>
+    <td>Implementar campo de archivo</td>
+    <td>Permitir seleccionar archivos locales en formatos PDF, DOCX, JPG, etc.</td>
+    <td>2</td>
+    <td>Orozco Torres, Álvaro Joaquín</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td></td><td></td>
+    <td>US004-2</td>
+    <td>Subir archivo al workspace</td>
+    <td>Guardar el archivo en el repositorio de la organización y referenciarlo al proyecto</td>
+    <td>2</td>
+    <td>Orozco Torres, Álvaro Joaquín</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td></td><td></td>
+    <td>US004-3</td>
+    <td>Validar fecha y archivo</td>
+    <td>Evitar envío del formulario si no se subió contrato o falta la fecha</td>
+    <td>1</td>
+    <td>Orozco Torres, Álvaro Joaquín</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US005</td>
+    <td>Seleccionar entidad contratante del proyecto</td>
+    <td>US005-1</td>
+    <td>Crear input de correo electrónico</td>
+    <td>Diseñar el campo para ingresar correo de la entidad contratante</td>
+    <td>1</td>
+    <td>Orozco Torres, Álvaro Joaquín</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td></td><td></td>
+    <td>US005-2</td>
+    <td>Validar correo registrado</td>
+    <td>Verificar si el correo corresponde a una entidad contratante existente</td>
+    <td>2</td>
+    <td>Orozco Torres, Álvaro Joaquín</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US006</td>
+    <td>Visualizar listado de proyectos accesibles</td>
+    <td>US006-1</td>
+    <td>Mostrar lista de proyectos</td>
+    <td>Renderizar una tabla o lista con proyectos accesibles al usuario</td>
+    <td>2</td>
+    <td>Orozco Torres, Álvaro Joaquín</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td></td><td></td>
+    <td>US006-2</td>
+    <td>Mostrar estado y rol</td>
+    <td>Incluir en cada proyecto el estado y rol del usuario</td>
+    <td>1</td>
+    <td>Orozco Torres, Álvaro Joaquín</td>
+    <td>Done</td>
+  </tr>
+<tr>
+  <td>US007</td>
+  <td>Consultar los detalles de un proyecto específico</td>
+  <td>US007-1</td>
+  <td>Diseñar vista de detalle de proyecto</td>
+  <td>Implementar componente que muestre los detalles como nombre, estado, fechas y miembros</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US007-2</td>
+  <td>Gestionar permisos de visualización</td>
+  <td>Restringir secciones según si el usuario es contratista o miembro regular</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>US008</td>
+  <td>Editar nombre y descripción de un proyecto</td>
+  <td>US008-1</td>
+  <td>Agregar formulario editable</td>
+  <td>Habilitar formulario en la sección de configuración para editar nombre y descripción</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US008-2</td>
+  <td>Validar campos requeridos</td>
+  <td>Impedir envío si el campo nombre está vacío</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>US009</td>
+  <td>Cambiar el estado del proyecto</td>
+  <td>US009-1</td>
+  <td>Agregar selector de estado</td>
+  <td>Permitir al contratista elegir un nuevo estado para el proyecto</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US009-2</td>
+  <td>Verificar permisos del usuario</td>
+  <td>Bloquear opción de cambiar estado si el usuario no es contratista</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>US010</td>
+  <td>Actualizar entidad contratante y contrato del proyecto</td>
+  <td>US010-1</td>
+  <td>Permitir nueva carga de archivo</td>
+  <td>Habilitar nuevo input de archivo para subir contrato actualizado</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US010-2</td>
+  <td>Validar nuevo correo de entidad</td>
+  <td>Verificar que el correo ingresado esté vinculado a una entidad registrada</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>US011</td>
+  <td>Eliminar un proyecto</td>
+  <td>US011-1</td>
+  <td>Diseñar alerta de confirmación</td>
+  <td>Mostrar mensaje advirtiendo que se eliminarán los datos del proyecto</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US011-2</td>
+  <td>Solicitar texto de confirmación</td>
+  <td>Validar que el usuario escriba "delete + nombre" antes de eliminar</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>US012</td>
+  <td>Agregar miembro de organización al equipo de proyecto</td>
+  <td>US012-1</td>
+  <td>Diseñar selector de miembros</td>
+  <td>Mostrar lista de miembros disponibles de la organización y permitir selección</td>
+  <td>2</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US012-2</td>
+  <td>Validar duplicados</td>
+  <td>Evitar añadir miembros que ya pertenecen al equipo</td>
+  <td>1</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>US013</td>
+  <td>Buscar miembro por nombre o correo dentro de la organización</td>
+  <td>US013-1</td>
+  <td>Implementar input de búsqueda</td>
+  <td>Agregar un campo que permita filtrar miembros por nombre o correo</td>
+  <td>2</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US013-2</td>
+  <td>Mostrar mensaje si no hay coincidencias</td>
+  <td>Alertar al usuario cuando no se encuentren resultados para el filtro</td>
+  <td>1</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>US014</td>
+  <td>Seleccionar rol del miembro del equipo</td>
+  <td>US014-1</td>
+  <td>Diseñar selector de rol</td>
+  <td>Permitir elegir entre 'COORDINATOR' o 'especialista' al asignar un miembro</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US014-2</td>
+  <td>Validar selección de rol</td>
+  <td>Mostrar error si el contratista intenta confirmar sin asignar rol</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>US015</td>
+  <td>Seleccionar especialidad del miembro del equipo</td>
+  <td>US015-1</td>
+  <td>Mostrar campo de especialidad si es especialista</td>
+  <td>Solo mostrar el campo cuando se seleccione el rol 'especialista'</td>
+  <td>1</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US015-2</td>
+  <td>Validar especialidad obligatoria</td>
+  <td>Impedir confirmar incorporación si no se seleccionó especialidad</td>
+  <td>1</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>US016</td>
+  <td>Confirmar incorporación de los miembros seleccionados al proyecto</td>
+  <td>US016-1</td>
+  <td>Implementar botón de confirmación</td>
+  <td>Permitir confirmar el agregado de miembros correctamente configurados</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US016-2</td>
+  <td>Validar datos antes de confirmar</td>
+  <td>Mostrar error si no se seleccionó un miembro o falta algún dato obligatorio</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>US017</td>
+  <td>Visualizar listado de miembros del equipo del proyecto</td>
+  <td>US017-1</td>
+  <td>Renderizar tabla de miembros</td>
+  <td>Mostrar nombre, rol y especialidad (si aplica) para cada miembro del proyecto</td>
+  <td>2</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US017-2</td>
+  <td>Controlar visibilidad de acciones</td>
+  <td>Ocultar botón de editar/eliminar para el usuario actual</td>
+  <td>1</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US018</td>
+  <td>Editar el rol de un miembro del equipo del proyecto</td>
+  <td>US018-1</td>
+  <td>Mostrar formulario de edición</td>
+  <td>Permitir al contratista cambiar el rol del miembro seleccionado</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US018-2</td>
+  <td>Validar nuevo rol</td>
+  <td>Impedir guardar si no se seleccionó un nuevo rol</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US019</td>
+  <td>Editar la especialidad de un miembro del equipo del proyecto</td>
+  <td>US019-1</td>
+  <td>Actualizar especialidad si es especialista</td>
+  <td>Mostrar campo de especialidad y permitir su edición si el rol es 'especialista'</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US019-2</td>
+  <td>Ocultar campo si no aplica</td>
+  <td>Ocultar el campo de especialidad si el rol no es 'especialista'</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US020</td>
+  <td>Eliminar un miembro sin tareas asignadas</td>
+  <td>US020-1</td>
+  <td>Solicitar texto de confirmación</td>
+  <td>Requerir que el usuario escriba 'eliminar + nombre' antes de confirmar</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US020-2</td>
+  <td>Eliminar miembro y mostrar mensaje</td>
+  <td>Eliminar del equipo y notificar éxito si se confirma correctamente</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US021</td>
+  <td>Eliminar un miembro con tareas o reuniones asignadas</td>
+  <td>US021-1</td>
+  <td>Mostrar advertencia previa</td>
+  <td>Informar que sus tareas pasarán a estado DRAFT y saldrá de las reuniones</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US021-2</td>
+  <td>Eliminar miembro y actualizar sistema</td>
+  <td>Eliminar miembro, cambiar tareas a DRAFT y sacarlo de todas las reuniones</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US022</td>
+  <td>Visualizar opción de añadir hito al cronograma</td>
+  <td>US022-1</td>
+  <td>Mostrar botón de añadir hito</td>
+  <td>Mostrar opción visible solo si el usuario es contratista</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US022-2</td>
+  <td>Desplegar formulario al seleccionar</td>
+  <td>Mostrar formulario emergente al hacer clic en "Añadir hito"</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US023</td>
+  <td>Ingresar nombre del hito del cronograma</td>
+  <td>US023-1</td>
+  <td>Diseñar campo de nombre</td>
+  <td>Campo obligatorio dentro del formulario de creación de hito</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US023-2</td>
+  <td>Validar nombre obligatorio</td>
+  <td>Mostrar error si se intenta confirmar sin nombre</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US024</td>
+  <td>Ingresar fechas de inicio y fin del hito</td>
+  <td>US024-1</td>
+  <td>Diseñar campos de fecha</td>
+  <td>Mostrar campos de fecha de inicio y fin al cargar el formulario</td>
+  <td>2</td>
+  <td>Lopez Acuña, Mario Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US024-2</td>
+  <td>Sincronizar fechas inconsistentes</td>
+  <td>Actualizar automáticamente la otra fecha si hay inconsistencia</td>
+  <td>2</td>
+  <td>Lopez Acuña, Mario Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US025</td>
+  <td>Confirmar creación del hito</td>
+  <td>US025-1</td>
+  <td>Validar datos completos</td>
+  <td>Verificar que nombre y fechas estén completos y válidos antes de guardar</td>
+  <td>1</td>
+  <td>Lopez Acuña, Mario Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US025-2</td>
+  <td>Guardar hito y notificar</td>
+  <td>Guardar nuevo hito y mostrar mensaje de éxito</td>
+  <td>1</td>
+  <td>Lopez Acuña, Mario Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US026</td>
+  <td>Visualizar lista de hitos del cronograma del proyecto</td>
+  <td>US026-1</td>
+  <td>Renderizar lista de hitos</td>
+  <td>Mostrar nombre, fecha de inicio y fin de cada hito</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US026-2</td>
+  <td>Mostrar controles según rol</td>
+  <td>Si el usuario es contratista, mostrar botones de editar y eliminar</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US027</td>
+  <td>Editar nombre de un hito del cronograma</td>
+  <td>US027-1</td>
+  <td>Prellenar campo de nombre</td>
+  <td>Mostrar el nombre actual del hito en el formulario de edición</td>
+  <td>1</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US027-2</td>
+  <td>Validar nombre obligatorio</td>
+  <td>Evitar guardar si el campo de nombre está vacío</td>
+  <td>1</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US028</td>
+  <td>Editar fechas de inicio y fin de un hito</td>
+  <td>US028-1</td>
+  <td>Mostrar fechas actuales al editar</td>
+  <td>Prellenar fechas actuales en formulario de edición de hito</td>
+  <td>1</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US028-2</td>
+  <td>Sincronizar fechas inconsistentes</td>
+  <td>Ajustar automáticamente la fecha de fin/inicio si hay inconsistencia</td>
+  <td>2</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US029</td>
+  <td>Eliminar un hito del cronograma</td>
+  <td>US029-1</td>
+  <td>Confirmar con input de texto</td>
+  <td>Solicitar que el usuario escriba "eliminar + nombre del hito" para confirmar</td>
+  <td>1</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US029-2</td>
+  <td>Cancelar eliminación correctamente</td>
+  <td>No realizar cambios si el usuario cancela la acción desde el diálogo</td>
+  <td>1</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US030</td>
+  <td>Confirmar eliminación de un hito con contenido asociado</td>
+  <td>US030-1</td>
+  <td>Mostrar advertencia por contenido</td>
+  <td>Advertir que se eliminarán tareas y reuniones asociadas al hito</td>
+  <td>1</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US030-2</td>
+  <td>Eliminar hito y contenido</td>
+  <td>Eliminar el hito junto con todas sus tareas y reuniones si se confirma</td>
+  <td>2</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US031</td>
+  <td>Configurar orden de visualización de hitos del cronograma</td>
+  <td>US031-1</td>
+  <td>Mostrar menú de orden</td>
+  <td>Mostrar opciones 'Más próximos primero', 'Último al inicio', 'Primero al inicio'</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US031-2</td>
+  <td>Aplicar orden seleccionado</td>
+  <td>Reordenar lista de hitos según la opción seleccionada por el usuario</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US032</td>
+  <td>Visualizar lista de tareas del cronograma por hito</td>
+  <td>US032-1</td>
+  <td>Mostrar tareas según rol</td>
+  <td>Mostrar todas las tareas si el usuario es contratista o coordinador, o solo las asignadas si es especialista</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US032-2</td>
+  <td>Mostrar botones de acción</td>
+  <td>Permitir editar o eliminar tareas solo si el usuario es contratista</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US033</td>
+  <td>Ingresar nombre y especialidad de la tarea</td>
+  <td>US033-1</td>
+  <td>Diseñar campos del formulario</td>
+  <td>Mostrar campos obligatorios para nombre de tarea y selección de especialidad</td>
+  <td>2</td>
+  <td>Lopez Acuña, Mario Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US033-2</td>
+  <td>Validar ambos campos</td>
+  <td>Evitar avanzar si no se ingresó nombre o especialidad</td>
+  <td>1</td>
+  <td>Lopez Acuña, Mario Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US034</td>
+  <td>Ingresar nombre de la tarea</td>
+  <td>US034-1</td>
+  <td>Mostrar campo de nombre</td>
+  <td>Diseñar campo obligatorio visible al crear una tarea</td>
+  <td>1</td>
+  <td>Lopez Acuña, Mario Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US034-2</td>
+  <td>Validar campo obligatorio</td>
+  <td>Mostrar error si se deja vacío al confirmar</td>
+  <td>1</td>
+  <td>Lopez Acuña, Mario Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US035</td>
+  <td>Seleccionar especialidad de la tarea</td>
+  <td>US035-1</td>
+  <td>Diseñar lista de especialidades</td>
+  <td>Incluir lista desplegable con especialidades disponibles al crear tarea</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US035-2</td>
+  <td>Validar selección de especialidad</td>
+  <td>Bloquear confirmación si no se seleccionó especialidad</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US036</td>
+  <td>Ingresar fechas de inicio y vencimiento de la tarea</td>
+  <td>US036-1</td>
+  <td>Diseñar campos de fechas</td>
+  <td>Mostrar campos separados para ingreso de fecha de inicio y vencimiento</td>
+  <td>1</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US036-2</td>
+  <td>Validar fechas y ajustar</td>
+  <td>Bloquear si faltan fechas, ajustar si están fuera de orden o del rango del hito</td>
+  <td>2</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US037</td>
+  <td>Confirmar creación de la tarea</td>
+  <td>US037-1</td>
+  <td>Validar campos obligatorios</td>
+  <td>Verificar que se ingresaron nombre, especialidad, fecha de inicio y vencimiento antes de guardar</td>
+  <td>2</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US037-2</td>
+  <td>Guardar tarea en estado DRAFT</td>
+  <td>Guardar la tarea en el sistema con estado inicial DRAFT y mostrar mensaje de confirmación</td>
+  <td>1</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US038</td>
+  <td>Asignar responsable a una tarea</td>
+  <td>US038-1</td>
+  <td>Mostrar lista de miembros</td>
+  <td>Mostrar todos los miembros del equipo en un selector</td>
+  <td>1</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US038-2</td>
+  <td>Asignar responsable y cambiar estado</td>
+  <td>Asignar responsable y actualizar estado de la tarea a PENDING</td>
+  <td>1</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US039</td>
+  <td>Filtrar responsables por especialidad afín a la tarea</td>
+  <td>US039-1</td>
+  <td>Mostrar opción de filtro</td>
+  <td>Mostrar switch o checkbox para activar el filtro por especialidad</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US039-2</td>
+  <td>Aplicar filtro de especialidad</td>
+  <td>Mostrar solo miembros cuya especialidad coincida con la de la tarea al activar el filtro</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US040</td>
+  <td>Editar nombre de una tarea</td>
+  <td>US040-1</td>
+  <td>Mostrar campo prellenado</td>
+  <td>Mostrar nombre actual de la tarea en el formulario de edición</td>
+  <td>1</td>
+  <td>Lopez Acuña, Mario Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US040-2</td>
+  <td>Confirmar edición de nombre</td>
+  <td>Actualizar nombre de la tarea y mostrar mensaje de éxito</td>
+  <td>1</td>
+  <td>Lopez Acuña, Mario Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US041</td>
+  <td>Editar nombre de una tarea (validación)</td>
+  <td>US041-1</td>
+  <td>Validar campo obligatorio</td>
+  <td>Impedir guardar si el nombre está vacío y mostrar mensaje de error</td>
+  <td>1</td>
+  <td>Lopez Acuña, Mario Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US041-2</td>
+  <td>Confirmar edición de nombre</td>
+  <td>Actualizar el nombre y notificar éxito si el campo fue completado correctamente</td>
+  <td>1</td>
+  <td>Lopez Acuña, Mario Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US042</td>
+  <td>Editar especialidad de una tarea</td>
+  <td>US042-1</td>
+  <td>Mostrar especialidad actual</td>
+  <td>Prellenar el campo de especialidad en formulario de edición con el valor actual</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US042-2</td>
+  <td>Validar especialidad obligatoria</td>
+  <td>Evitar guardar si no se selecciona ninguna especialidad</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US043</td>
+  <td>Editar fechas de inicio y vencimiento de una tarea</td>
+  <td>US043-1</td>
+  <td>Mostrar fechas actuales</td>
+  <td>Prellenar campos con las fechas actuales de la tarea</td>
+  <td>1</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US043-2</td>
+  <td>Validar rango y consistencia</td>
+  <td>Asegurar que las fechas estén dentro del rango del hito y sean cronológicamente coherentes</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US044</td>
+  <td>Activar filtro por especialidad al seleccionar responsable de una tarea</td>
+  <td>US044-1</td>
+  <td>Mostrar switch de filtro</td>
+  <td>Mostrar checkbox o switch para activar el filtro por especialidad técnica</td>
+  <td>1</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US044-2</td>
+  <td>Filtrar lista según especialidad</td>
+  <td>Mostrar solo miembros cuya especialidad coincide con la de la tarea cuando el filtro está activo</td>
+  <td>1</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US045</td>
+  <td>Visualizar opción de entregar una tarea</td>
+  <td>US045-1</td>
+  <td>Validar visibilidad del botón</td>
+  <td>Mostrar botón de entrega solo si el usuario es responsable y la tarea está en estado PENDING</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US045-2</td>
+  <td>Ocultar botón para otros roles</td>
+  <td>Ocultar la opción de entrega si el usuario no es responsable de la tarea</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US046</td>
+  <td>Adjuntar archivos en la entrega de tarea</td>
+  <td>US046-1</td>
+  <td>Mostrar input de archivo</td>
+  <td>Mostrar campo para subir documentos desde el dispositivo (PDF, DOCX, JPG, PNG)</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US046-2</td>
+  <td>Subir y referenciar archivos</td>
+  <td>Subir los archivos al workspace y crear referencias de tipo TASK_SUBMISSION en la entrega</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US047</td>
+  <td>Escribir notas en la entrega de tarea</td>
+  <td>US047-1</td>
+  <td>Mostrar campo de notas</td>
+  <td>Incluir input de texto para comentarios adicionales en la entrega</td>
+  <td>1</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US047-2</td>
+  <td>Guardar notas en el entregable</td>
+  <td>Guardar comentarios escritos junto a los archivos entregados</td>
+  <td>1</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US048</td>
+  <td>Enviar entrega de tarea</td>
+  <td>US048-1</td>
+  <td>Validar archivos adjuntos</td>
+  <td>Verificar que haya al menos un archivo válido adjunto antes de permitir la entrega</td>
+  <td>1</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US048-2</td>
+  <td>Marcar tarea como entregada</td>
+  <td>Registrar entrega, cambiar estado a SUBMITTED y mostrar mensaje de éxito</td>
+  <td>1</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US049</td>
+  <td>Visualizar tareas pendientes de revisión</td>
+  <td>US049-1</td>
+  <td>Filtrar tareas por estado SUBMITTED</td>
+  <td>Mostrar solo las tareas entregadas que están pendientes de revisión</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US049-2</td>
+  <td>Deshabilitar revisión si no está enviada</td>
+  <td>Bloquear acciones de revisión si la tarea no tiene estado SUBMITTED</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US050</td>
+  <td>Aprobar entrega de tarea</td>
+  <td>US050-1</td>
+  <td>Mostrar botón de aprobación</td>
+  <td>Mostrar opción de aprobar solo si la tarea está en estado SUBMITTED</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US050-2</td>
+  <td>Confirmar y registrar aprobación</td>
+  <td>Cambiar estado a APPROVED y guardar auditoría con fecha y revisor</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US051</td>
+  <td>Rechazar entrega de tarea con retroalimentación</td>
+  <td>US051-1</td>
+  <td>Mostrar campo de retroalimentación</td>
+  <td>Mostrar input obligatorio al seleccionar la opción de rechazo</td>
+  <td>1</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US051-2</td>
+  <td>Guardar rechazo y comentarios</td>
+  <td>Cambiar estado a REJECTED, guardar nota del revisor y mostrar mensaje</td>
+  <td>1</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US052</td>
+  <td>Volver a enviar una tarea rechazada</td>
+  <td>US052-1</td>
+  <td>Mostrar botón de nueva entrega</td>
+  <td>Mostrar la opción de reenvío solo si la tarea está en estado REJECTED</td>
+  <td>1</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US052-2</td>
+  <td>Subir nuevos archivos</td>
+  <td>Permitir adjuntar archivos desde el dispositivo para la nueva entrega</td>
+  <td>1</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US053</td>
+  <td>Eliminar una tarea del cronograma</td>
+  <td>US053-1</td>
+  <td>Solicitar confirmación de texto</td>
+  <td>Requerir que se escriba 'eliminar + nombre de la tarea' para confirmar la acción</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US053-2</td>
+  <td>Ejecutar eliminación tras confirmación válida</td>
+  <td>Eliminar la tarea si la confirmación es correcta y mostrar mensaje de éxito</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US054</td>
+  <td>Visualizar lista de reuniones del cronograma por hito</td>
+  <td>US054-1</td>
+  <td>Filtrar reuniones por rol</td>
+  <td>Mostrar todas las reuniones si es contratista/coordinador o solo las propias si es especialista</td>
+  <td>2</td>
+  <td>Lopez Acuña, Mario Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US054-2</td>
+  <td>Mostrar opción de añadir reunión</td>
+  <td>Mostrar el botón de "Añadir reunión" solo si el usuario tiene rol adecuado</td>
+  <td>1</td>
+  <td>Lopez Acuña, Mario Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US055</td>
+  <td>Visualizar detalles de una reunión</td>
+  <td>US055-1</td>
+  <td>Mostrar campos detallados</td>
+  <td>Renderizar tema, fecha, hora, convocante y participantes si el usuario tiene acceso</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US055-2</td>
+  <td>Bloquear acceso no autorizado</td>
+  <td>Impedir el acceso a detalles si el usuario no forma parte del equipo</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US056</td>
+  <td>Ingresar tema de la reunión</td>
+  <td>US056-1</td>
+  <td>Mostrar campo de tema</td>
+  <td>Incluir campo obligatorio para ingresar el tema al crear una reunión</td>
+  <td>1</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US056-2</td>
+  <td>Validar campo obligatorio</td>
+  <td>Mostrar error si se intenta guardar sin completar el tema</td>
+  <td>1</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US057</td>
+  <td>Ingresar descripción de la reunión</td>
+  <td>US057-1</td>
+  <td>Mostrar campo de descripción</td>
+  <td>Incluir campo de texto opcional para brindar más contexto sobre la reunión</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US057-2</td>
+  <td>Guardar descripción si se completa</td>
+  <td>Incluir la descripción en los detalles de la reunión al guardar</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US058</td>
+  <td>Ingresar fechas y horarios de la reunión</td>
+  <td>US058-1</td>
+  <td>Diseñar campos de fecha y hora</td>
+  <td>Mostrar campos para fecha y hora de inicio y fin de la reunión</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US058-2</td>
+  <td>Validar fechas obligatorias y rango</td>
+  <td>Impedir guardar si faltan fechas o están fuera del rango del hito</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US059</td>
+  <td>Ingresar fechas y horarios de la reunión</td>
+  <td>US059-1</td>
+  <td>Ajustar fechas automáticamente</td>
+  <td>Sincronizar fechas si la hora de inicio es posterior a la de fin (y viceversa)</td>
+  <td>1</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US059-2</td>
+  <td>Bloquear fechas fuera del hito</td>
+  <td>Mostrar advertencia si las fechas no están dentro del rango del hito</td>
+  <td>1</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US060</td>
+  <td>Añadir participantes a una reunión</td>
+  <td>US060-1</td>
+  <td>Listar miembros del proyecto</td>
+  <td>Mostrar todos los miembros disponibles para convocarlos a la reunión</td>
+  <td>1</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US060-2</td>
+  <td>Seleccionar uno o más participantes</td>
+  <td>Permitir marcar a varios usuarios como convocados</td>
+  <td>1</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US061</td>
+  <td>Buscar participantes por nombre o correo en reuniones</td>
+  <td>US061-1</td>
+  <td>Habilitar búsqueda en lista</td>
+  <td>Permitir al usuario escribir sobre la lista para activar filtrado</td>
+  <td>1</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US061-2</td>
+  <td>Filtrar resultados dinámicamente</td>
+  <td>Mostrar solo miembros cuyo nombre o correo coincidan con el texto</td>
+  <td>1</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US062</td>
+  <td>Eliminar participantes de una reunión</td>
+  <td>US062-1</td>
+  <td>Mostrar lista editable</td>
+  <td>Mostrar nombres de los participantes seleccionados junto a un botón de eliminación</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US062-2</td>
+  <td>Eliminar participante de la lista</td>
+  <td>Quitar al participante seleccionado en tiempo real y actualizar la lista</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US063</td>
+  <td>Confirmar creación de la reunión</td>
+  <td>US063-1</td>
+  <td>Validar campos obligatorios</td>
+  <td>Verificar que se haya ingresado tema, fechas válidas y al menos un participante</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US063-2</td>
+  <td>Registrar reunión y notificar</td>
+  <td>Guardar la reunión en el cronograma, asignar convocante y mostrar mensaje</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US064</td>
+  <td>Editar tema de una reunión</td>
+  <td>US064-1</td>
+  <td>Mostrar campo prellenado</td>
+  <td>Prellenar campo de tema en el formulario de edición con valor actual</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US064-2</td>
+  <td>Guardar nuevo tema</td>
+  <td>Actualizar el tema de la reunión si es válido y mostrar mensaje de éxito</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US065</td>
+  <td>Editar descripción de una reunión</td>
+  <td>US065-1</td>
+  <td>Prellenar descripción actual</td>
+  <td>Mostrar campo de descripción con el texto existente al editar</td>
+  <td>1</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US065-2</td>
+  <td>Actualizar descripción</td>
+  <td>Guardar nueva descripción y mostrar mensaje de confirmación</td>
+  <td>1</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US066</td>
+  <td>Editar fechas y horarios de una reunión</td>
+  <td>US066-1</td>
+  <td>Mostrar fechas actuales</td>
+  <td>Prellenar campos con fechas y horas actuales al editar reunión</td>
+  <td>1</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US066-2</td>
+  <td>Validar rango del hito</td>
+  <td>Ajustar automáticamente fechas inconsistentes y bloquear si están fuera del rango del hito</td>
+  <td>2</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US067</td>
+  <td>Editar participantes de una reunión</td>
+  <td>US067-1</td>
+  <td>Mostrar lista editable de participantes</td>
+  <td>Mostrar la lista actual de participantes con opciones para añadir y eliminar</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US067-2</td>
+  <td>Guardar cambios de participantes</td>
+  <td>Actualizar la lista de participantes tras añadir o quitar miembros y mostrar mensaje de confirmación</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US068</td>
+  <td>Cancelar una reunión del cronograma</td>
+  <td>US068-1</td>
+  <td>Solicitar confirmación textual</td>
+  <td>Solicitar que el usuario escriba 'cancelar + nombre del tema' para confirmar la cancelación</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US068-2</td>
+  <td>Cancelar reunión y notificar</td>
+  <td>Eliminar reunión si la confirmación es válida y mostrar mensaje de éxito. Bloquear si es inválida</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US069</td>
+  <td>Visualizar estructura del expediente técnico del proyecto</td>
+  <td>US069-1</td>
+  <td>Renderizar árbol de carpetas</td>
+  <td>Mostrar carpetas y subcarpetas jerárquicamente tipo árbol</td>
+  <td>2</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US069-2</td>
+  <td>Listar archivos referenciados</td>
+  <td>Mostrar nombre, tipo y fecha de archivos al expandir carpeta</td>
+  <td>1</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US070</td>
+  <td>Ver detalles de un archivo referenciado</td>
+  <td>US070-1</td>
+  <td>Mostrar metadata del archivo</td>
+  <td>Ver nombre, tipo, autor, fecha y ubicación original</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US070-2</td>
+  <td>Descargar o previsualizar</td>
+  <td>Permitir descarga o vista previa si es PDF o imagen</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US071</td>
+  <td>Crear carpeta dentro del expediente técnico</td>
+  <td>US071-1</td>
+  <td>Mostrar opción para contratista</td>
+  <td>Solo mostrar opción de creación de carpeta si es contratista</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US071-2</td>
+  <td>Validar nombre y crear</td>
+  <td>Crear carpeta con nombre válido dentro del directorio seleccionado</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US072</td>
+  <td>Renombrar carpeta del expediente</td>
+  <td>US072-1</td>
+  <td>Prellenar nombre actual</td>
+  <td>Mostrar campo editable con el nombre actual de la carpeta</td>
+  <td>1</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US072-2</td>
+  <td>Validar nuevo nombre</td>
+  <td>Bloquear si está vacío y confirmar si es válido</td>
+  <td>1</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US073</td>
+  <td>Eliminar carpeta del expediente</td>
+  <td>US073-1</td>
+  <td>Solicitar confirmación manual</td>
+  <td>Requerir que el usuario escriba 'eliminar + nombre de carpeta'</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US073-2</td>
+  <td>Ejecutar o cancelar eliminación</td>
+  <td>Eliminar carpeta si la confirmación es válida, bloquear si no</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US074</td>
+  <td>Añadir referencia a archivo al expediente</td>
+  <td>US074-1</td>
+  <td>Mostrar opción para añadir referencia</td>
+  <td>Mostrar botón u opción solo si el usuario es contratista</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US074-2</td>
+  <td>Seleccionar archivo del workspace</td>
+  <td>Mostrar listado de archivos existentes en el workspace y permitir su selección como referencia</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US074-3</td>
+  <td>Confirmar inclusión y asociar</td>
+  <td>Crear una referencia de tipo TECHNICAL_FILE_FOLDER hacia el archivo y asociarlo a la carpeta actual</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US075</td>
+  <td>Eliminar referencia a archivo del expediente técnico</td>
+  <td>US075-1</td>
+  <td>Mostrar opción para eliminar referencia</td>
+  <td>Mostrar ícono o botón de eliminación solo si el usuario es contratista</td>
+  <td>1</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US075-2</td>
+  <td>Confirmar y ejecutar eliminación</td>
+  <td>Eliminar únicamente la referencia (sin afectar el archivo original) y mostrar mensaje de éxito</td>
+  <td>1</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US076</td>
+  <td>Iniciar solicitud de cambio desde una solicitud de cambio</td>
+  <td>US076-1</td>
+  <td>Mostrar formulario de solicitud</td>
+  <td>Mostrar campos para descripción del cambio al iniciar una nueva solicitud</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US076-2</td>
+  <td>Validar campos obligatorios</td>
+  <td>Evitar continuar si la descripción está vacía</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US077</td>
+  <td>Iniciar solicitud de cambio desde una consulta técnica</td>
+  <td>US077-1</td>
+  <td>Mostrar formulario para consulta técnica</td>
+  <td>Permitir ingresar la descripción del problema técnico observado</td>
+  <td>1</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US077-2</td>
+  <td>Crear proceso de cambio desde consulta</td>
+  <td>Vincular consulta técnica a proceso PENDING si no existe otro en curso</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US078</td>
+  <td>Visualizar detalles de proceso de cambio</td>
+  <td>US078-1</td>
+  <td>Mostrar justificación del cambio</td>
+  <td>Mostrar descripción del origen y motivo del proceso al contratista</td>
+  <td>1</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US078-2</td>
+  <td>Mostrar tipo y origen</td>
+  <td>Mostrar si el cambio se originó por solicitud o consulta técnica con ID</td>
+  <td>1</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US079</td>
+  <td>Ver proceso de cambio iniciados</td>
+  <td>US079-1</td>
+  <td>Listar procesos de cambio</td>
+  <td>Mostrar lista de procesos con origen, fecha, estado y resumen</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US079-2</td>
+  <td>Filtrar procesos por estado</td>
+  <td>Permitir filtrar por estado: PENDING, APPROVED, REJECTED</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US080</td>
+  <td>Ver proceso de cambio iniciados (Entidad contratante)</td>
+  <td>US080-1</td>
+  <td>Listar procesos iniciados por la entidad</td>
+  <td>Filtrar la lista para mostrar solo los procesos iniciados por su organización</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US080-2</td>
+  <td>Visualizar estado y respuesta</td>
+  <td>Mostrar el estado actualizado del proceso y la respuesta del contratista</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US081</td>
+  <td>Restringir acceso a procesos iniciados fuera de la organización</td>
+  <td>US081-1</td>
+  <td>Validar pertenencia a organización</td>
+  <td>Impedir acceso a procesos de cambio iniciados por otra organización</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US081-2</td>
+  <td>Mostrar mensaje de restricción</td>
+  <td>Mostrar mensaje indicando que el proceso no está disponible si no se tiene acceso</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US082</td>
+  <td>Aprobar un proceso de cambio</td>
+  <td>US082-1</td>
+  <td>Ingresar descripción de aprobación</td>
+  <td>Solicitar campo obligatorio con justificación de la aprobación</td>
+  <td>1</td>
+  <td>Lopez Acuña, Mario Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US082-2</td>
+  <td>Actualizar estado y generar adicional</td>
+  <td>Cambiar estado a APPROVED y crear adicional de obra asociado</td>
+  <td>2</td>
+  <td>Lopez Acuña, Mario Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US083</td>
+  <td>Rechazar un proceso de cambio</td>
+  <td>US083-1</td>
+  <td>Ingresar motivo de rechazo</td>
+  <td>Solicitar campo obligatorio para explicar el rechazo</td>
+  <td>1</td>
+  <td>Lopez Acuña, Mario Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US083-2</td>
+  <td>Actualizar estado a REJECTED</td>
+  <td>Cambiar estado del proceso de cambio a REJECTED y mostrar mensaje</td>
+  <td>1</td>
+  <td>Lopez Acuña, Mario Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US084</td>
+  <td>Solicitar datos para registrar adicional de obra al aprobar</td>
+  <td>US084-1</td>
+  <td>Mostrar campos requeridos</td>
+  <td>Solicitar descripción del cambio y selección de hito relacionado</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US084-2</td>
+  <td>Validar campos y registrar adicional</td>
+  <td>Verificar campos obligatorios y registrar adicional de obra si son válidos</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US085</td>
+  <td>Crear nuevo hito a partir de un adicional de obra aprobado</td>
+  <td>US085-1</td>
+  <td>Solicitar datos del nuevo hito</td>
+  <td>Pedir nombre, fecha de inicio y fecha de fin para el nuevo hito</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US085-2</td>
+  <td>Validar rango y coherencia</td>
+  <td>Verificar que las fechas estén dentro del rango del proyecto y corregir inconsistencias automáticamente</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US086</td>
+  <td>Registrar respuesta al cambio luego de aprobar o rechazar</td>
+  <td>US086-1</td>
+  <td>Registrar respuesta por aprobación</td>
+  <td>Guardar respuesta con fecha, autor y motivo cuando el proceso se aprueba</td>
+  <td>1</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US086-2</td>
+  <td>Registrar respuesta por rechazo</td>
+  <td>Guardar respuesta con fecha, autor y motivo cuando el proceso se rechaza</td>
+  <td>1</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US087</td>
+  <td>Crear una organización</td>
+  <td>US087-1</td>
+  <td>Mostrar botón para crear organización</td>
+  <td>Mostrar opción de creación si el usuario tiene sesión iniciada</td>
+  <td>1</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US087-2</td>
+  <td>Redirigir si no hay workspace</td>
+  <td>Redirigir a la sección de suscripciones si no se tiene workspace disponible</td>
+  <td>1</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US088</td>
+  <td>Crear una organización</td>
+  <td>US088-1</td>
+  <td>Mostrar formulario de creación</td>
+  <td>Desplegar formulario para ingresar datos de la organización</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US088-2</td>
+  <td>Validar formulario</td>
+  <td>Verificar campos requeridos antes de confirmar creación</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US089</td>
+  <td>Ingresar razón social de la organización</td>
+  <td>US089-1</td>
+  <td>Mostrar campo de razón social</td>
+  <td>Incluir campo obligatorio en el formulario para razón social</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US089-2</td>
+  <td>Validar campo obligatorio</td>
+  <td>Mostrar mensaje de error si no se ingresó razón social</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US090</td>
+  <td>Ingresar nombre comercial de la organización</td>
+  <td>US090-1</td>
+  <td>Mostrar campo de nombre comercial</td>
+  <td>Incluir campo opcional en el formulario para nombre comercial</td>
+  <td>1</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US090-2</td>
+  <td>Guardar nombre comercial si se ingresa</td>
+  <td>Registrar nombre comercial solo si se completó el campo</td>
+  <td>1</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US091</td>
+  <td>Ingresar RUC de la organización</td>
+  <td>US091-1</td>
+  <td>Mostrar campo de RUC</td>
+  <td>Incluir campo obligatorio de RUC en el formulario de creación de organización</td>
+  <td>1</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US091-2</td>
+  <td>Validar formato del RUC</td>
+  <td>Verificar que tenga 11 dígitos y que sean numéricos antes de continuar</td>
+  <td>2</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US092</td>
+  <td>Confirmar creación de la organización</td>
+  <td>US092-1</td>
+  <td>Verificar que todos los campos estén completos</td>
+  <td>Evitar crear la organización si falta algún campo obligatorio o contiene errores</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US092-2</td>
+  <td>Registrar organización y mostrar éxito</td>
+  <td>Registrar la organización con estado ACTIVO y mostrar mensaje de éxito</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US093</td>
+  <td>Visualizar organizaciones</td>
+  <td>US093-1</td>
+  <td>Listar organizaciones del usuario</td>
+  <td>Mostrar todas las organizaciones en las que el usuario participa con su estado y rol</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US093-2</td>
+  <td>Mostrar mensaje si no pertenece a ninguna</td>
+  <td>Mostrar aviso si el usuario no pertenece a ninguna organización registrada</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US094</td>
+  <td>Acceder al dashboard de una organización</td>
+  <td>US094-1</td>
+  <td>Acceder desde lista de organizaciones</td>
+  <td>Permitir navegar al dashboard al hacer clic sobre una organización válida</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US094-2</td>
+  <td>Restringir acceso a organizaciones ajenas</td>
+  <td>Mostrar error si intenta acceder a una organización no registrada en su lista</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US095</td>
+  <td>Editar razón social de la organización</td>
+  <td>US095-1</td>
+  <td>Mostrar campo editable</td>
+  <td>Permitir edición del campo solo si el usuario es contratista de la organización</td>
+  <td>1</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US095-2</td>
+  <td>Guardar nueva razón social</td>
+  <td>Actualizar valor si es válido, de lo contrario mostrar error</td>
+  <td>1</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US096</td>
+  <td>Editar nombre comercial de la organización</td>
+  <td>US096-1</td>
+  <td>Mostrar campo editable</td>
+  <td>Habilitar edición del nombre comercial solo si el usuario es contratista</td>
+  <td>1</td>
+  <td>Lopez Acuña, Mario Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US096-2</td>
+  <td>Actualizar nombre comercial</td>
+  <td>Guardar nuevo nombre comercial y marcarlo como campo opcional</td>
+  <td>1</td>
+  <td>Lopez Acuña, Mario Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US097</td>
+  <td>Editar nombre comercial de la organización</td>
+  <td>US097-1</td>
+  <td>Mostrar acción solo si es contratista</td>
+  <td>Mostrar botón de edición únicamente al contratista de la organización</td>
+  <td>1</td>
+  <td>Lopez Acuña, Mario Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US097-2</td>
+  <td>Impedir edición si no es contratista</td>
+  <td>No permitir mostrar el campo si el usuario no es contratista</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US098</td>
+  <td>Eliminar organización (estado INACTIVE)</td>
+  <td>US098-1</td>
+  <td>Mostrar opción de eliminar</td>
+  <td>Permitir eliminar la organización solo si el usuario es contratista</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US098-2</td>
+  <td>Marcar como INACTIVE</td>
+  <td>Actualizar estado de la organización a INACTIVE sin eliminar datos aún</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US099</td>
+  <td>Eliminar definitivamente la organización (vía confirmación por correo)</td>
+  <td>US099-1</td>
+  <td>Mostrar opción solo si es contratista</td>
+  <td>Mostrar la opción de eliminación forzada solo al contratista</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US099-2</td>
+  <td>Solicitar confirmación vía correo</td>
+  <td>Enviar enlace/código de confirmación y proceder con la eliminación definitiva</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US100</td>
+  <td>Invitar a una persona a la organización</td>
+  <td>US100-1</td>
+  <td>Mostrar opción de invitar</td>
+  <td>Mostrar botón de invitar a nuevos miembros en configuración si el usuario es contratista</td>
+  <td>1</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US100-2</td>
+  <td>Enviar invitación por correo</td>
+  <td>Enviar correo con invitación y registrar estado como PENDING al confirmar</td>
+  <td>1</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US101</td>
+  <td>Validar que no exista ya una invitación pendiente</td>
+  <td>US101-1</td>
+  <td>Verificar existencia de invitación</td>
+  <td>Evitar duplicidad revisando si ya hay una invitación en estado PENDING</td>
+  <td>1</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US101-2</td>
+  <td>Mostrar mensaje si hay duplicado</td>
+  <td>Alertar que ya existe una invitación activa y bloquear reenvío</td>
+  <td>1</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US102</td>
+  <td>Impedir invitar a alguien que ya es miembro</td>
+  <td>US102-1</td>
+  <td>Verificar membresía activa</td>
+  <td>Comprobar si la persona ya pertenece a la organización antes de enviar invitación</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US102-2</td>
+  <td>Mostrar error si ya es miembro</td>
+  <td>Mostrar mensaje de advertencia cuando ya pertenece a la organización</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US103</td>
+  <td>Ver listado de invitaciones enviadas</td>
+  <td>US103-1</td>
+  <td>Listar todas las invitaciones</td>
+  <td>Mostrar historial de invitaciones enviadas con su estado</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US103-2</td>
+  <td>Mostrar mensaje si no hay registros</td>
+  <td>Mostrar mensaje claro si no hay ninguna invitación enviada</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US104</td>
+  <td>Aceptar o rechazar una invitación recibida</td>
+  <td>US104-1</td>
+  <td>Mostrar invitaciones pendientes</td>
+  <td>Listar todas las invitaciones en estado PENDING dirigidas al usuario</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US104-2</td>
+  <td>Actualizar estado según respuesta</td>
+  <td>Actualizar a ACCEPTED o REJECTED según acción tomada por el usuario</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US105</td>
+  <td>Mostrar estado de las invitaciones</td>
+  <td>US105-1</td>
+  <td>Mostrar estado de cada invitación</td>
+  <td>Mostrar si la invitación está PENDING, ACCEPTED o REJECTED</td>
+  <td>1</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US105-2</td>
+  <td>Actualizar visual al cambiar estado</td>
+  <td>Actualizar estado visualmente en la lista cuando cambie el estado de la invitación</td>
+  <td>1</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US106</td>
+  <td>Eliminar miembro de la organización</td>
+  <td>US106-1</td>
+  <td>Verificar tareas asignadas</td>
+  <td>Mostrar advertencia si el miembro tiene tareas activas. Si no tiene, eliminar directamente</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US106-2</td>
+  <td>Actualizar tareas a estado DRAFT</td>
+  <td>Si tiene tareas, cambiar su estado a DRAFT y luego eliminar al miembro</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US107</td>
+  <td>Notificar a los participantes cuando se crea una reunión</td>
+  <td>US107-1</td>
+  <td>Generar notificación para cada participante</td>
+  <td>Al confirmar una reunión, generar notificación con tema, fecha y hora</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US107-2</td>
+  <td>Clasificar notificación como REMINDER</td>
+  <td>Asignar categoría REMINDER y target como entidad MEETING</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US108</td>
+  <td>Notificar al responsable cuando se acerca la fecha límite de una tarea</td>
+  <td>US108-1</td>
+  <td>Evaluar condición temporal</td>
+  <td>Detectar si faltan 48 horas o menos para la fecha límite</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US108-2</td>
+  <td>Enviar recordatorio al responsable</td>
+  <td>Enviar mensaje con nombre y fecha límite de la tarea</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US109</td>
+  <td>Notificar cuando se emite una respuesta a una solicitud de cambio</td>
+  <td>US109-1</td>
+  <td>Detectar respuesta formal</td>
+  <td>Al aprobar o rechazar un proceso de cambio, generar notificación</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US109-2</td>
+  <td>Notificar al originador</td>
+  <td>Incluir título con el resultado y resumen de la nota en la notificación</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US110</td>
+  <td>Notificar cuando se crea un nuevo hito como parte de un cambio aprobado</td>
+  <td>US110-1</td>
+  <td>Detectar creación de hito</td>
+  <td>Tras aprobar un cambio, detectar si se ha creado un nuevo hito</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US110-2</td>
+  <td>Notificar al equipo del proyecto</td>
+  <td>Generar mensaje a todos los miembros del proyecto con detalles del hito</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US111</td>
+  <td>Notificar a un usuario cuando es invitado a una organización</td>
+  <td>US111-1</td>
+  <td>Generar notificación al registrar invitación</td>
+  <td>Crear notificación automática al registrar invitación en el sistema</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US111-2</td>
+  <td>Mostrar nombre de la organización</td>
+  <td>Incluir nombre de la organización como parte del mensaje de la notificación</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US112</td>
+  <td>Notificar recordatorio de vencimiento de factura</td>
+  <td>US112-1</td>
+  <td>Detectar facturas próximas a vencer</td>
+  <td>Ejecutar revisión automática para detectar facturas a 3 días del vencimiento</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US112-2</td>
+  <td>Enviar alerta al responsable</td>
+  <td>Enviar notificación con categoría ALERT y mensaje personalizado al responsable</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US113</td>
+  <td>Visualizar lista de notificaciones recibidas</td>
+  <td>US113-1</td>
+  <td>Mostrar listado ordenado</td>
+  <td>Listar notificaciones del usuario ordenadas por fecha (más recientes primero)</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US113-2</td>
+  <td>Mostrar mensaje si no hay notificaciones</td>
+  <td>Mostrar mensaje claro si no existen notificaciones registradas</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US114</td>
+  <td>Ver detalles de una notificación específica</td>
+  <td>US114-1</td>
+  <td>Mostrar contenido completo</td>
+  <td>Mostrar título, mensaje completo, fecha, categoría y target relacionado</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US114-2</td>
+  <td>Permitir navegación al target</td>
+  <td>Habilitar enlace al recurso relacionado (tarea, reunión, factura, etc.)</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US115</td>
+  <td>Eliminar notificación manualmente</td>
+  <td>US115-1</td>
+  <td>Mostrar opción de eliminar</td>
+  <td>Agregar botón de eliminar junto a cada notificación en la lista</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US115-2</td>
+  <td>Eliminar y mostrar confirmación</td>
+  <td>Eliminar notificación seleccionada y mostrar mensaje de éxito</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US116</td>
+  <td>Eliminar automáticamente notificaciones antiguas</td>
+  <td>US116-1</td>
+  <td>Detectar notificaciones antiguas</td>
+  <td>Buscar notificaciones con más de 90 días desde su fecha de creación</td>
+  <td>1</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US116-2</td>
+  <td>Eliminar notificaciones detectadas</td>
+  <td>Ejecutar limpieza automática eliminando esas notificaciones del sistema</td>
+  <td>1</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US117</td>
+  <td>Elegir tipo de cuenta al iniciar el registro</td>
+  <td>US117-1</td>
+  <td>Mostrar selector de tipo de cuenta</td>
+  <td>Mostrar las opciones CLIENT_USER y ORGANIZATION_USER al iniciar el registro</td>
+  <td>1</td>
+  <td>Lopez Acuña, Mario Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US117-2</td>
+  <td>Validar selección antes de continuar</td>
+  <td>No permitir continuar con el registro si no se selecciona un tipo de cuenta</td>
+  <td>1</td>
+  <td>Lopez Acuña, Mario Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US118</td>
+  <td>Mostrar campos de registro según tipo de cuenta seleccionado</td>
+  <td>US118-1</td>
+  <td>Mostrar campos para CLIENT_USER</td>
+  <td>Mostrar nombre completo, correo electrónico y contraseña si se selecciona CLIENT_USER</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US118-2</td>
+  <td>Mostrar campos para ORGANIZATION_USER</td>
+  <td>Mostrar además profesión y número de colegiatura si se selecciona ORGANIZATION_USER</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US119</td>
+  <td>Validar campos requeridos según tipo de cuenta</td>
+  <td>US119-1</td>
+  <td>Validar CLIENT_USER</td>
+  <td>Bloquear registro si falta nombre, correo o contraseña para CLIENT_USER</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US119-2</td>
+  <td>Validar ORGANIZATION_USER</td>
+  <td>Bloquear registro si falta profesión o número de colegiatura en ORGANIZATION_USER</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US120</td>
+  <td>Validar si el correo ya está registrado o en uso en una solicitud pendiente</td>
+  <td>US120-1</td>
+  <td>Detectar si el correo ya tiene cuenta</td>
+  <td>Mostrar advertencia si el correo ya está vinculado a un UserAccount</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US120-2</td>
+  <td>Detectar solicitud en estado CONFIRMATION_PENDING</td>
+  <td>Mostrar mensaje e instrucción de confirmación si el correo ya está en uso por una solicitud activa</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US121</td>
+  <td>Confirmar el registro mediante enlace recibido por correo</td>
+  <td>US121-1</td>
+  <td>Validar token de confirmación</td>
+  <td>Verificar que el enlace recibido sea válido y dentro del periodo de vigencia</td>
+  <td>1</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US121-2</td>
+  <td>Mostrar resultado de la confirmación</td>
+  <td>Mostrar mensaje si el registro fue exitoso o si el enlace expiró</td>
+  <td>1</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US122</td>
+  <td>Iniciar sesión desde el formulario de login</td>
+  <td>US122-1</td>
+  <td>Mostrar formulario de login</td>
+  <td>Desplegar campos de correo electrónico y contraseña para iniciar sesión</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US122-2</td>
+  <td>Generar sesión activa</td>
+  <td>Validar credenciales e iniciar sesión con redirección al dashboard</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US123</td>
+  <td>Mostrar error si las credenciales son incorrectas</td>
+  <td>US123-1</td>
+  <td>Detectar credenciales inválidas</td>
+  <td>Mostrar mensaje claro si el correo o contraseña no coinciden</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US123-2</td>
+  <td>Bloquear acceso</td>
+  <td>No permitir avanzar al sistema si las credenciales no son válidas</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US124</td>
+  <td>Mantener sesión activa mientras el usuario interactúa</td>
+  <td>US124-1</td>
+  <td>Detectar actividad del usuario</td>
+  <td>Extender duración de la sesión si hay acciones recientes (clics, navegación, etc.)</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US124-2</td>
+  <td>Evitar cierre de sesión con actividad</td>
+  <td>No cerrar sesión automáticamente si el usuario sigue trabajando</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US125</td>
+  <td>Cerrar sesión manualmente desde el sistema</td>
+  <td>US125-1</td>
+  <td>Mostrar opción de cerrar sesión</td>
+  <td>Mostrar botón 'Cerrar sesión' en el menú principal para cualquier usuario autenticado</td>
+  <td>1</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US125-2</td>
+  <td>Finalizar sesión y redirigir</td>
+  <td>Eliminar token y redirigir a la pantalla de login al cerrar sesión</td>
+  <td>1</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US126</td>
+  <td>Solicitar restablecimiento de contraseña desde el login</td>
+  <td>US126-1</td>
+  <td>Mostrar opción '¿Olvidaste tu contraseña?'</td>
+  <td>Agregar enlace en login que permita acceder al formulario de recuperación</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US126-2</td>
+  <td>Enviar token por correo</td>
+  <td>Generar token de restablecimiento y enviarlo al correo si es válido</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US127</td>
+  <td>Ver mensaje de confirmación tras solicitar restablecimiento</td>
+  <td>US127-1</td>
+  <td>Mostrar mensaje al enviar solicitud</td>
+  <td>Mostrar confirmación genérica tras enviar el formulario de recuperación</td>
+  <td>1</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US128</td>
+  <td>Acceder al formulario de nueva contraseña desde el enlace recibido</td>
+  <td>US128-1</td>
+  <td>Validar token al acceder</td>
+  <td>Verificar el enlace y mostrar formulario solo si el token es válido</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US128-2</td>
+  <td>Mostrar campos de nueva contraseña</td>
+  <td>Incluir campos para nueva contraseña y confirmación de contraseña</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US129</td>
+  <td>Ver mensaje de éxito al completar el restablecimiento</td>
+  <td>US129-1</td>
+  <td>Confirmar restablecimiento exitoso</td>
+  <td>Mostrar mensaje de éxito al guardar nueva contraseña</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US129-2</td>
+  <td>Ofrecer enlace para volver al login</td>
+  <td>Incluir enlace directo para volver a iniciar sesión después de restablecer</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US130</td>
+  <td>Visualizar información personal registrada</td>
+  <td>US130-1</td>
+  <td>Mostrar datos personales</td>
+  <td>Mostrar nombre completo, correo, teléfono y, si aplica, profesión y colegiatura</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US130-2</td>
+  <td>Habilitar edición posterior</td>
+  <td>Mostrar botón o enlace para editar los datos si el usuario está autenticado</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US131</td>
+  <td>Editar nombre completo del perfil</td>
+  <td>US131-1</td>
+  <td>Mostrar campo editable con nombre actual</td>
+  <td>Permitir al usuario editar su nombre completo desde el perfil personal</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US131-2</td>
+  <td>Actualizar nombre en base de datos</td>
+  <td>Guardar el nuevo nombre y mostrar mensaje de confirmación</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US132</td>
+  <td>Editar correo electrónico personal</td>
+  <td>US132-1</td>
+  <td>Mostrar campo editable con correo actual</td>
+  <td>Permitir modificar el correo desde la sección de edición de perfil</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US132-2</td>
+  <td>Actualizar correo en sistema</td>
+  <td>Actualizar el valor del correo y mostrar mensaje de éxito</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US133</td>
+  <td>Editar número de teléfono</td>
+  <td>US133-1</td>
+  <td>Mostrar campo con número actual</td>
+  <td>Permitir edición del número telefónico registrado en perfil</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US133-2</td>
+  <td>Guardar nuevo número</td>
+  <td>Actualizar el número de teléfono y mostrar mensaje de éxito</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US134</td>
+  <td>Visualizar los planes de suscripción disponibles</td>
+  <td>US134-1</td>
+  <td>Mostrar sección de suscripciones</td>
+  <td>Mostrar lista de planes con nombre, precio, duración y beneficios</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US135</td>
+  <td>Visualizar los planes de suscripción disponibles</td>
+  <td>US135-1</td>
+  <td>Mostrar catálogo completo</td>
+  <td>Mostrar planes disponibles a usuarios autenticados desde sección de suscripción</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US136</td>
+  <td>Contratar un nuevo plan de suscripción</td>
+  <td>US136-1</td>
+  <td>Seleccionar plan desde el catálogo</td>
+  <td>Mostrar resumen del plan seleccionado y solicitar confirmación</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US136-2</td>
+  <td>Crear suscripción y asociar workspace</td>
+  <td>Al completar el pago, registrar suscripción activa y asociar un nuevo workspace con sus restricciones</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US137</td>
+  <td>Ver detalles de la suscripción activa</td>
+  <td>US137-1</td>
+  <td>Mostrar datos del plan actual</td>
+  <td>Mostrar nombre, fecha de inicio, vencimiento, estado, límites de proyectos, miembros y almacenamiento</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US138</td>
+  <td>Cancelar una suscripción activa y mostrar restricciones asociadas</td>
+  <td>US138-1</td>
+  <td>Mostrar advertencia al cancelar</td>
+  <td>Mostrar consecuencias como pérdida de acceso a funciones al finalizar la vigencia</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US138-2</td>
+  <td>Completar cancelación y actualizar estado</td>
+  <td>Cambiar estado de suscripción a CANCELLED y mostrar confirmación</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US139</td>
+  <td>Visualizar facturas generadas por suscripciones</td>
+  <td>US139-1</td>
+  <td>Mostrar lista de facturas</td>
+  <td>Listar facturas con monto total, fecha de emisión, vencimiento y estado de pago</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US140</td>
+  <td>Visualizar el detalle de una factura</td>
+  <td>US140-1</td>
+  <td>Mostrar desglose de factura</td>
+  <td>Incluir descripción, precio unitario, subtotal, total, fechas y estado de pago</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US141</td>
+  <td>Iniciar pago manual de una factura pendiente</td>
+  <td>US141-1</td>
+  <td>Mostrar botón de pago en factura</td>
+  <td>Permitir acceder al flujo de pago desde la vista detallada de una factura con estado PENDING</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US141-2</td>
+  <td>Actualizar estado tras pago exitoso</td>
+  <td>Actualizar estado a PAID al confirmar el pago con la pasarela y mostrar mensaje de éxito</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US142</td>
+  <td>Activar o desactivar pago automático</td>
+  <td>US142-1</td>
+  <td>Mostrar opción de pago automático</td>
+  <td>Permitir activar o desactivar desde la configuración de la suscripción</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US142-2</td>
+  <td>Actualizar estado del acuerdo</td>
+  <td>Crear o cancelar acuerdo de pago automático según la acción del usuario y mostrar mensaje</td>
+  <td>2</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US143</td>
+  <td>Ver intentos de pago realizados (transacciones)</td>
+  <td>US143-1</td>
+  <td>Listar historial de intentos</td>
+  <td>Mostrar fecha, estado (éxito/fallo) y tipo de intento (manual o automático) por cada transacción</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US144</td>
+  <td>Ver detalles del workspace asociado a su suscripción</td>
+  <td>US144-1</td>
+  <td>Mostrar capacidad del workspace</td>
+  <td>Mostrar cantidad máxima de proyectos, miembros y almacenamiento disponible</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US144-2</td>
+  <td>Mostrar organización asociada</td>
+  <td>Indicar a qué organización está vinculado el workspace actual</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US145</td>
+  <td>Mostrar advertencia si la organización está inactiva por falta de workspace</td>
+  <td>US145-1</td>
+  <td>Detectar estado inactivo por falta de workspace</td>
+  <td>Verificar si la organización está marcada como INACTIVE y mostrar mensaje contextual</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US145-2</td>
+  <td>Sugerir activación o renovación</td>
+  <td>Mostrar botón o enlace para contratar un plan y reactivar la organización</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US146</td>
+  <td>Mostrar advertencia al intentar exceder el número máximo de miembros permitidos</td>
+  <td>US146-1</td>
+  <td>Verificar límite de miembros</td>
+  <td>Validar si el número actual de miembros ha alcanzado el máximo permitido por el plan</td>
+  <td>1</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US146-2</td>
+  <td>Mostrar mensaje de advertencia</td>
+  <td>Mostrar mensaje informando que se alcanzó el límite y sugerir actualizar el plan</td>
+  <td>1</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US147</td>
+  <td>Mostrar advertencia al intentar subir archivos que superan la capacidad del workspace</td>
+  <td>US147-1</td>
+  <td>Detectar espacio insuficiente</td>
+  <td>Validar que los archivos seleccionados no excedan la capacidad del plan contratado</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US147-2</td>
+  <td>Mostrar mensaje y opciones</td>
+  <td>Informar sobre el límite alcanzado y sugerir eliminar archivos o actualizar plan</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td>US148</td>
+  <td>Cambiar el idioma preferido desde la configuración de cuenta</td>
+  <td>US148-1</td>
+  <td>Mostrar selector de idioma</td>
+  <td>Permitir seleccionar idioma entre las opciones disponibles desde configuración</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US148-2</td>
+  <td>Guardar preferencia y aplicar cambio</td>
+  <td>Actualizar la preferencia y aplicar el nuevo idioma al recargar la interfaz</td>
+  <td>1</td>
+  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>To Do</td>
+</tr>
+</table>
+
+#### 5.2.2.4. Development Evidence for Sprint Review
+
+En el Sprint 1, se realizó una primera implementación de la Landing Page utilizando HTML, CSS y JavaScript estándar.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commit on |
+| - | - | - | - | - | - |
+| LandingPage | develop | adb91bf6aa8eaf662d84868128ee24fe32511538 | initial commit |   | 3/05/2025 |
+| LandingPage | develop | 07e65efb639f4a8421f0bce7003750974d1796fb | chore: add project dependencies |   | 3/05/2025 |
+| LandingPage | develop | cc32dd86a8aeb78e208e7bfe2c84c693557378ec | chore: remove default app component html structure |   | 3/05/2025 |
+| LandingPage | feature/swr02 | 7f15f5c312dbc1be0a8bdba6e3ec6cbfd5e25e90 | chore: set up i18n configuration |   | 3/05/2025 |
+| LandingPage | feature/swr02 | 1a773307e13d922248b11f70deae203948feaa0d | feat(swr02): add basic sections on english and spanish dictionary |   | 3/05/2025 |
+| LandingPage | feature/swr02 | 7913f6c3454316e52edd04d0e56abcc42fe71f92 | feat(swr02): add languge switcher component |   | 3/05/2025 |
+| LandingPage | develop | 7926547fc05da0ee7720d70a7af5be13e47ccc01 | Merge branch 'swr02' into 'develop' |   | 3/05/2025 |
+| LandingPage | feature/swr15 | 63803f3458915294e41a66f610648598ed4cd2bf | refactor(swr02): change angular.json to serve src/assets folder for better maintainability |   | 3/05/2025 |
+| LandingPage | feature/swr15 | 37eb3aad4b36a56fbcc83d19e1b279003f4b443f | feat(swr15): add toolbar component |   | 3/05/2025 |
+| LandingPage | feature/swr01 | 5a77ed6d369ede8fd52cbc192c401d5661170d13 | feat(swr01): add user type enum |   | 3/05/2025 |
+| LandingPage | feature/swr01 | abf30559e7610e8c2f1f3531abe0c1988d8c18fd | feat(swr01): add user type service |   | 3/05/2025 |
+| LandingPage | feature/swr01 | dde6222439a8655ac94a7656b8c12308bdf6d5f9 | feat(swr01): add user type switcher component |   | 3/05/2025 |
+| LandingPage | develop | 793a889976f4616ee06f6d80f7f0c9151dcc089b | refactor: move landing page specific components into landing page folder |   | 3/05/2025 |
+| LandingPage | feature/swr06 | ee4fd56c84e9de8c0ad4e3d9ceabfff6c7dc103e | feat(swr06): add call to action for contractor user segment |   | 3/05/2025 |
+| LandingPage | feature/swr07 | ca70f1d8de881c141946990c7f1c5aa7b33cff2c | feat(swr07): add call to action for client user segment |   | 3/05/2025 |
+| LandingPage | feature/swr05 | 920a9f88d2341c3876f0356d341c1145f90ab99f | feat(swr05): add hero section for contractor user segment |   | 3/05/2025 |
+| LandingPage | feature/swr04 | 53a04ca6cef0fc00813e5a8cc2178836a362ce6c | feat(swr04): add hero section for client user segment |   | 3/05/2025 |
+| LandingPage | feature/swr09 | 3c46ea19b2affa09c8fd5d5045c6d3587e1b973d | feat(swr09): add overview for contractor user segment |   | 3/05/2025 |
+| LandingPage | feature/swr08 | 46d128c83da07dfd6e4c2e1edf99547c78c8da2a | chore: add overview card interface |   | 3/05/2025 |
+| LandingPage | feature/swr08 | f5629165a6685d3aeb743314c484c69afe7ba74b | refactor(swr08): refactor overview and overview carousel to follow single reponsibility principle |   | 3/05/2025 |
+| LandingPage | feature/swr08 | 39af60fcca56995a9e6ae5a951cc177d44414a76 | feat(swr08): add overview list component |   | 3/05/2025 |
+| LandingPage | develop | 207de11563770ff6eda4a74150dead5247cfdb72 | bugfix(develop): fix merging errors |   | 3/05/2025 |
+| LandingPage | feature/swr14 | d20e336255c22279cb42aee553c65cceae586a47 | feat(swr14): add footer component |   | 3/05/2025 |
+| LandingPage | feature/swr03 | 7c165b401ee4184942a905239782eb5a2f11d963 | feat(swr03): add about us component |   | 3/05/2025 |
+| LandingPage | feature/swr18 | 0a4eeeed4deb4afe7bbb4a02cc69c2182dd863de | feat(swr18): add plans component |   | 3/05/2025 |
+| LandingPage | feature/swr18 | adf0ba332dea4da5c8f22cec2386da031e13de59 | chore(swr18): add styles to learn more button in plans component |   | 3/05/2025 |
+| LandingPage | feature/swr18 | 1c18647016a78e6186ec2e5dd3d2bae72b4b5d45 | bugfix(swr18): fix change plan button styles |   | 3/05/2025 |
+| LandingPage | feature/swr16 | 666f8646fc35aec1c8f98c7a0a308706f143ce8f | feat(swr16): add about the product component |   | 3/05/2025 |
+| LandingPage | feature/swr13 | dbe23b761b9440088ec493fa5aecd6bd08fa813f | feat(swr13): add testimonial model |   | 3/05/2025 |
+| LandingPage | feature/swr13 | a5c93439879b95d24f72e79eb501e508657a3114 | feat(swr13): add testimonial list component |   | 3/05/2025 |
+| LandingPage | feature/swr13 | e22f0c2d60ac67112ef79b8eedd988f978b9464f | feat(swr13): add testimonial carousel component |   | 3/05/2025 |
+| LandingPage | feature/swr12 | 20cdc06a1cea69dff10c2cdaa6959ecbd2e8d86d | feat(swr12): add client testimonial in testimonial model |   | 3/05/2025 |
+| LandingPage | feature/swr17 | 1f45fcba0e79f437bd3b828f3ec605b6e9020aed | chore(swr17): add terms and conditions in i18n json files |   | 3/05/2025 |
+| LandingPage | feature/swr17 | 126b04364fbb8d4346de66d458d697a72cd79398 | feat(swr17): add terms and conditions component |   | 3/05/2025 |
+| LandingPage | feature/swr17 | 1eb8a4750ea95434dd7c7904673d86ccf386701e | feat(swr17): add email of galaxia wonder in terms and conditions |   | 3/05/2025 |
+| LandingPage | feature/swr17 | ba9a19f68671664cf914e0d3f6320b135b283021 | chore(swr17): add styles in terms and conditions component |   | 3/05/2025 |
+| LandingPage | feature/swr15 | fafec32b6e6505d8b9c74476388c4dc90febb2a3 | feat(swr15): add navigation to sections in the toolbar component |   | 3/05/2025 |
+| LandingPage | bugfix/swr17 | 22a7dc22d3d0526209863782761a3b1d7ed944e0 | bugfix(swr17): remove unnecessary buttons in the terms and conditions dialog |   | 3/05/2025 |
+| LandingPage | release/tp | 418ecbdaf8acd65dc159fbe3b14a81a01cedaec9 | chore(tp): add prop gms title and logo in index |   | 4/05/2025 |
+| LandingPage | release/tp | 15fcc54b83a65c0af2bce5bf17b69af25730d775 | bugfix(tp): remove duplicate product logo in folder images |   | 4/05/2025 |
+| LandingPage | release/tp | 91a3c02b17332f822022e6bc2de779d09cf42b4f | chore(tp): add startup name in toolbar component |   | 4/05/2025 |
+
+#### 5.2.2.5. Execution Evidence for Sprint Review
+
+Se presenta a modo de evidencia un video y capturas de las principales vistas implementadas. Enlace al video: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221e247_upc_edu_pe/EfQqRKJ2zyxGoWI-cu8L_iMBzPDe6ArypdwxPU3wHi_IUg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=JzedAW](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221e247_upc_edu_pe/EfQqRKJ2zyxGoWI-cu8L_iMBzPDe6ArypdwxPU3wHi_IUg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=JzedAW)
+
+<p align="center"><strong>LANDING PAGE</strong></p>
+
+
+**HERO SECTION CONTRATISTA**
+
+Contiene una frase e imagen alusiva a las necesidades de este segmento. Proporciona un botón que redirige a la página de registro.
+
+<img src="./../img/chapter5/Sprint2/landing/hero_contractor.png">
+
+<div style="page-break-after: always;"></div>
+
+**HERO SECTION CLIENTE**
+
+Contiene una frase e imagen alusiva a las necesidades de este segmento. Proporciona un botón que redirige a la página de registro.
+
+<img src="./../img/chapter5/Sprint2/landing/hero_client.png">
+
+<div style="page-break-after: always;"></div>
+
+**ABOUT US**
+
+Contiene una la misión, visión y valores de la startup.
+
+<img src="./../img/chapter5/Sprint2/landing/about_us.png">
+
+<div style="page-break-after: always;"></div>
+
+**OVERVIEW CONTRATISTA**
+
+Contiene un resumen de los principales features de la aplicación web.
+
+<img src="./../img/chapter5/Sprint2/landing/overview_contractor.png">
+
+<div style="page-break-after: always;"></div>
+
+**OVERVIEW CLIENTE**
+
+Contiene un resumen de los principales features de la aplicación web.
+
+<img src="./../img/chapter5/Sprint2/landing/overview_client.png">
+
+<div style="page-break-after: always;"></div>
+
+**PLANES**
+
+Muestra los principales planes de suscripción con sus beneficios.
+
+<img src="./../img/chapter5/Sprint2/landing/plans.png">
+
+<div style="page-break-after: always;"></div>
+
+**REVIEWS Y FOOTER**
+
+Muestra reviews de usuarios de cada segmento y, debajo, el footer con información de relevante como los términos de uso y datos de contacto.
+
+<img src="./../img/chapter5/Sprint2/landing/reviews_and_footer.png">
+
+<div style="page-break-after: always;"></div>
+
+
+<p align="center"><strong>WEB APPLICATION</strong></p>
+
+Se presenta a modo de evidencia un video y capturas de las principales vistas implementadas. Enlace del video: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221e247_upc_edu_pe/Ee0BRLkm8UtIqEEy78tjwxgBmSbX22hY4dGRdd8HwxeDCA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=7Zb9qu](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221e247_upc_edu_pe/Ee0BRLkm8UtIqEEy78tjwxgBmSbX22hY4dGRdd8HwxeDCA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=7Zb9qu)
+
+**LOGIN Y REGISTER**
+
+Muestra credenciales de acceso, email y contraseña del usuario. Contiene opción de registro de usuario en caso no lo esté. Proporciona un botón para ingresar a aplicación.
+
+<img src="./../img/chapter5/Sprint2/webapplication/execution1.png">
+
+<div style="page-break-after: always;"></div>
+
+**ORGANIZATION**
+Muestra vista principal de la organización, donde se encuentra la lista de organizaciones de las que es miembro el usuario. 
+
+<img src="./../img/chapter5/Sprint2/webapplication/execution2.png">
+
+<div style="page-break-after: always;"></div>
+
+**ORGANIZATION INFORMATION**
+Muestra la pestaña información, la cual es también la vista por default al ingresar a organización.
+
+<img src="./../img/chapter5/Sprint2/webapplication/execution3.png">
+
+<div style="page-break-after: always;"></div>
+
+**ORGANIZATION CONFIGURATION CONTRATISTA**
+Muestra la pestaña configuración, donde se pueden editar datos de la organización, pero solo para la entidad contratista.
+
+<img src="./../img/chapter5/Sprint2/webapplication/execution4.png">
+
+<div style="page-break-after: always;"></div>
+
+**ORGANIZATION MEMBERS**
+Muestra la pestaña miembros, donde se listan los miembros y se agregan nuevos a la organización.
+
+<img src="./../img/chapter5/Sprint2/webapplication/execution5.png">
+
+<div style="page-break-after: always;"></div>
+
+**ORGANIZATION PROJECTS**
+Muestra la vista de proyectos que están asignados dentro de la organización. 
+
+<img src="./../img/chapter5/Sprint2/webapplication/execution6.png">
+
+<div style="page-break-after: always;"></div>
+
+
+<div style="page-break-after: always;"></div>
+
+#### 5.2.2.6. Services Documentation Evidence for Sprint Review
+
+No hubo desarrollo del API en este Sprint 2.
+
+#### 5.2.2.7. Software Deployment Evidence for Sprint Review
+
+Para este segundo sprint, se creó la segunda versión de la Landing Page, cuyo despliegue incluyó:
+
+1. Creación del primer release a partir de lo avanzado en develop.
+2. Integración del código en la branch de producción (main).
+3. Configuración de Netlify para el despliegue.
+4. Un hotfix y un redespliegue tras el deploy de la aplicación web.
+
+Además se llevó a cabo el desarrollo de la aplicación web, cuyo despliegue incluyó:
+
+1. Creación del primer release a partir de lo avanzado en develop.
+2. Integración del código en la branch de producción (main).
+3. Configuración en Azure para el despliegue.
+4. Un hotfix debido a un error de producción con las variables de entorno.
+
+#### 5.2.2.8. Team Collaboration Insights during Sprint
+
+En este segundo sprint se ha fallado en lograr el objetivo de implementar a totalidad toda la interfaz funcional de la aplicación web, pero se ha conseguido un avance total del desarrollo del modelo y los servicios.
+
+<div style="page-break-before: always;"></div>
+
 
 
 <div style="page-break-before: always;"></div>
@@ -7477,10 +11733,9 @@ Para este primer Sprint, el equipo ha fallado en tener una participación comple
 
 # Conclusiones
 
-- En el ámbito de desarrollo, se ha completado exitosamente la primera implementación y el despliegue de la landing page de nuestro producto.
-- En el ámbito financiero, se ha validado la existencia de un mercado activo que presenta una necesidad real de soluciones tecnológicas como la que ofrecemos.
-- En el ámbito de diseño, a través de la elicitación de requisitos, se ha logrado una comprensión profunda del modelo de negocio, lo que ha permitido aplicar el conocimiento de dominio para diseñar una solución funcionalmente sólida y con una interfaz orientada a la experiencia del usuario.
-- En el ámbito de trabajo en equipo, se han identificado una serie de falencias que han impedido lograr una colaboración efectiva, que deberán resolverse a medida del avance del proyecto.
+- En el ámbito de desarrollo, se ha completado exitosamente la segunda implementación y despliegue de la landing page de nuestro producto, pero se ha fallado en cumplir con la implementación del front-end del web application, quedando incompleto.
+- En el ámbito financiero, se mantiene la validez de la existencia de un mercado activo que presenta una necesidad real de soluciones tecnológicas como la que ofrecemos, más ahora se toman en consideración preocupaciones como el precio del hosting, que serán necesarios tomar en cuenta para ajustar los precios de las suscripciones y/o modelo de negocio del producto.
+- En el ámbito de trabajo en equipo, se ha identificado como principal falencia la falta de dominio técnico de los miembros del equipo, desafío que deberá abordarse a lo largo de los próximos sprints.
 
 <div style="page-break-before: always;"></div>
 
@@ -7513,8 +11768,9 @@ Para este primer Sprint, el equipo ha fallado en tener una participación comple
 
 - Organización de GitHub: [Enlace](https://github.com/GalaxiaWonder-AppsWeb)
 - Organización YouTrack: [Enlace](https://galaxiawonder.youtrack.cloud/projects/0-2)
-- Despliegue Landing Page: [Enlace](https://galaxiawonder-appsweb.github.io/LandingPage/)
+- Despliegue Landing Page: [Enlace](https://propgms-apps-web.netlify.app/)
 - Video exposición TB1: [Enlace](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221e247_upc_edu_pe/EZWHYu0kuXJNo3vwxZbwAI8BUgztRVa4ZYaaLK5_yOF2qQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=roB70Rv)
+- Video exposición TP: [Enlace](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221e247_upc_edu_pe/EdfzV3O4Z8FHqqbmhUnK9_QBPB1I6bbEsqMIdOOggP-5Fw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=US3o3i)
 
 <div style="page-break-before: always;"></div>
 

@@ -37,6 +37,8 @@ Esta arquitectura basada en componentes y servicios fomenta una modularidad impe
 
 <img src="../../../img/chapter4/c4/componente/webApplication.png" alt="Diagrama de componentes de Web Application de ProP GMS">
 
+<div style="page-break-after: always;"></div>
+
 #### 4.6.3.2. API Diagram
 
 Cada módulo de la plataforma web, como la gestión de organizaciones, proyectos o pagos, se comunica de manera segura con un controlador dedicado: OrganizationController, ProjectController, TaskController, entre otros. Estos controladores delegan la lógica de negocio a servicios internos como OrganizationService, ProjectService o PaymentService, cada uno encargado de una funcionalidad crítica del sistema, desde la administración de proyectos hasta el procesamiento de pagos.
