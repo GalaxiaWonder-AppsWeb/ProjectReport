@@ -15,5 +15,5 @@
         <li style="padding: 5px 0;">Orozco Torres, Álvaro Joaquín (202220783)</li>
         <li style="padding: 5px 0;">Reaño Delgadillo, Henry Paolo (20221e247)</li>
     </ul>
-    <h4 style="margin: 10px 0; border-bottom: none;">Abril de 2025</h4>
+    <h4 style="margin: 10px 0; border-bottom: none;">Junio de 2025</h4>
 </div>

@@ -47,11 +47,11 @@
   </tr>
   <tr>
     <th>Sprint 3 Velocity</th>
-    <td colspan="3">XX Story Points</td>
+    <td colspan="3">45 Story Points</td>
   </tr>
   <tr>
     <th>Sum of Story Points</th>
-    <td colspan="3">XXX Story Points</td>
+    <td colspan="3">142 Story Points</td>
   </tr>
 </table>
 
@@ -1787,10 +1787,488 @@ Para el sprint 3 se proyectan actividades como implementacion del FrontEnd y Bac
 | Platform | feature/ep11 | a954405dd723b6996bc4d32147be110821caa916 | docs: add documentation in organization context |   | 19/06/2025 |
 | Platform | develop | fe04753994e1a1ea3989ebbfc68056004ee33493 | chore: ignore local configuration files |   | 19/06/2025 |
 | Platform | release/tb2 | 30b8159daf23e2fe8a02d7464e5a4f5e0b8efae5 | feat(tb2): change program cs to use swagger |   | 19/06/2025 |
+| Platform | feature/ep09 | 7a988fa328c4445c4a01af2d5dcbdb7bc5d6fc9d | feat(ep09): add OrganizationSource aggregate in organizations bounded context |   | 31/05/2025 |
+| Platform | feature/ep09 | db907c984ba8b713110643230ad82dfc4a707cc6 | feat(ep09): add OrganizationSource queries |   | 31/05/2025 |
+| Platform | feature/ep09 | c0b90dde13c79cf9e8b967c4d3dc6506be851a15 | feat(ep09): add organization service contracts |   | 31/05/2025 |
+| Platform | feature/ep09 | fac1b6fbe874513575c43f6c119b494f65acb6a5 | feat(ep09): add organization repository |   | 31/05/2025 |
+| Platform | feature/ep09 | ce55c47635d8024fc6b0bc4f7374eb687efc5c66 | refactor(ep09): move infrastucture to organization context |   | 31/05/2025 |
+| Platform | feature/ep09 | 9463f758189c01466604682d2cff35329a14de17 | feat(ep09): add command and query service implementation for organization |   | 31/05/2025 |
+| Platform | feature/ep09 | 234b9ce62412235ba2255b0af711d87277de8815 | feat(ep09): add resource and assemblers for rest interface layer in organization context |   | 31/05/2025 |
+| Platform | feature/ep09 | 8a88d9a415a3df514a3d9a83545e0d6ff7564c4d | feat(ep09): add organization inbound service |   | 31/05/2025 |
+| Platform | feature/ep09 | 5aef0aa56a5f5b8b6672355ea9cc7308731c80da | bugfix(ep09): fix create a organization is not using post mapping |   | 31/05/2025 |
+| Platform | feature/ep09 | b45febd7574dd726bda09dbe9b5339461078ee29 | bugfix(ep09): change create organization needs status as a parameter |   | 31/05/2025 |
+| Platform | feature/ep09 | 7afd73304cb3af870261bdeeef57c9a443e18cc1 | refactor(ep09): change folder order in organization infrastructure |   | 31/05/2025 |
+| Platform | feature/ep09 | 2cf959f70e7cc25cfe1e48560b7918519224839d | feat(ep09): add commercial name, legal name and person id value objects |   | 7/06/2025 |
+| Platform | feature/ep09 | f322303e33ea59c18d38f434ec211f780b130ff9 | refactor(ep09): organization is not using legal name, commercial name, person id value objects |   | 7/06/2025 |
+| Platform | feature/ep09 | e1b4be5d28300cdf59d6b9bafd22f550e7c2d404 | refactor(ep09): create organization command is not using native data as parameters |   | 7/06/2025 |
+| Platform | feature/ep09 | 836777aeed482a68ff43a0bb097f525e630dad88 | refactor(ep09): layer interfaces of organization is not using value objects |   | 7/06/2025 |
+| Platform | feature/ep09 | 0fee842fadc40ba0d63db8148f5020ec2e1ac723 | feat(ep09): add organization delete command interface |   | 8/06/2025 |
+| Platform | feature/ep09 | 17363276e124107d4637fc29680586c2224b7a25 | feat(ep09): add organization delete command implementation |   | 8/06/2025 |
+| Platform | feature/ep09 | 17363276e124107d4637fc29680586c2224b7a25 | feat(ep09): add delete organization endpoint |   | 8/06/2025 |
+| Platform | feature/ep10 | a3e6049e578873220a48d897ad30d65ffb778eb1 | feat(ep10): add update organization command service |   | 9/06/2025 |
+| Platform | feature/ep10 | f182c394b76e4be40fbee5c355e5f9bcb940e8fe | feat(ep10): add update organization implementation |   | 9/06/2025 |
+| Platform | feature/ep10 | 5d931aa858ad515906f2e4861b4f4b00db951624 | feat(ep10): add update organization endpoint |   | 9/06/2025 |
+| Platform | feature/ep10 | 6ed3731842f0396932b4393ef6e302829977c2ef | fix(ep10): fix invalid validation in update organization command |   | 9/06/2025 |
+| Platform | feature/ep11 | e90cfdedcb5017b4f9288ce04a7aaf3ba07f481c | feat(ep11): add organization member id in shared context |   | 9/06/2025 |
+| Platform | feature/ep11 | 751d01b3844b300ff75e1f6c5f5f020a6291d276 | feat(ep11): add organization member entity and command to create an organization member |   | 10/06/2025 |
+| Platform | feature/ep07 | 2a6b7fab6b541827519bdca3f8826d02531f647a | feat(ep07): add aggregates and entities in domain model change context |   | 20/06/2025 |
+| Platform | feature/ep07 | 4408f804fec8148f1633b0b908e5f6e4494ae487 | refactor(ep07): refactor change order to aggregate |   | 20/06/2025 |
+| Platform | feature/ep07 | c49139f3784f00abbd499858322c740dbe2c9379 | refactor(ep07): refactor change response to value object |   | 20/06/2025 |
+| Platform | feature/ep07 | 380d51620ef4b9c40232fd11b9cd0f5d3548d366 | bugfix(ep07): fix change process is not using correct response format |   | 20/06/2025 |
+| Platform | feature/ep07 | 2148ba25c4245a00ee3cfb29e076011fc64d6850 | feat(ep07): add change origin, change process, change process statuses repositories in change context |   | 20/06/2025 |
+| Platform | feature/ep07 | 1c5bc9e328db41c08636816ad115bff4531c326a | feat(ep07): add change process command service in change context |   | 20/06/2025 |
+| Platform | feature/ep07 | 9da90fc22cf41f5e705d838dbadbc53306e74dfb | feat(persistency): add configuration to persist change process statuses and change origins |   | 20/06/2025 |
+| Platform | feature/ep07 | c5ff21a1e71592617884cc8c293331311f2e8036 | feat(ep07): add change process endpoint |   | 20/06/2025 |
 
 #### 5.2.3.5. Execution Evidence for Sprint Review
 
+Seleccionar la opción de Aplicación Web Estática
+
+<img src="../../../../img/chapter5/Sprint3/Aplication/execution2.png">
+
+Configurar nombre, organización, repositorio y rama
+
+<img src="../../../../img/chapter5/Sprint3/Aplication/execution.png">
+
+Configuración de build
+
+<img src="../../../../img/chapter5/Sprint3/Aplication/execution7.png">
+
+Creamos una nueva clave de repositorio colocando nuestro backend
+
+<img src="../../../../img/chapter5/Sprint3/Aplication/execution8.png">
+
+Finalmente, editamos el archivo .yml para llamar a la clave de repositorio.
+
+<img src="../../../../img/chapter5/Sprint3/Aplication/execution9.png">
+
+
+BASE DE DATOS FLEXIBLE MYSQL8
+
+<img src="../../../../img/chapter5/Sprint3/Aplication/execution10.png">
+
+definimos el usuario y contraseña para acceder
+
+<img src="../../../../img/chapter5/Sprint3/Aplication/execution12.png">
+
+para probar el funcionamiento correcto de la bd ingresamos a traves de workbench con las credenciales
+
+<img src="../../../../img/chapter5/Sprint3/Aplication/execution13.png">
+
+conectamos a workbench
+
+<img src="../../../../img/chapter5/Sprint3/Aplication/execution16.png">
+
+VAMOS A NUESTRO BACKEND y desplegamos con azure
+
+<img src="../../../../img/chapter5/Sprint3/Aplication/execution18.png">
+
+probamos algun endpoint para validar el acceso a la base de datos (sign up en este caso)
+
+<img src="../../../../img/chapter5/Sprint3/Aplication/execution19.png">
+
+verificamos mediante un endpoint get (traer todas las persons, previamente habiendo validado el token)
+
+<img src="../../../../img/chapter5/Sprint3/Aplication/execution20.png">
+
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
+
+A lo largo del sprint, se ha logrado cubrir gran parte de los servicios web que pertenecían a lo proyectado a desarrollar en este sprint. Se presenta a continuación una tabla informativa:
+
+<table style="font-size: 90%; width: 100%; border-collapse: collapse;">
+  <thead>
+    <tr>
+      <th>🧭 Endpoint</th>
+      <th>⚙️ Acción</th>
+      <th>🔁 HTTP</th>
+      <th>📥 Ejemplo de solicitud</th>
+      <th>📤 Ejemplo de respuesta</th>
+      <th>🌐 URL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>/api/v1/organization/create-organization</code></td>
+      <td>Crear una organización</td>
+      <td><code>POST</code></td>
+      <td>
+        <pre>{
+  "legalName": "Constructora Soluciones Integrales S.A.C.",
+  "commercialName": "Solintec",
+  "ruc": "20547896541",
+  "createdBy": 12
+}</pre>
+      </td>
+      <td>
+        <strong>201 Created</strong>
+        <pre>{
+  "id": 7,
+  "legalName": "Constructora Soluciones Integrales S.A.C.",
+  "commercialName": "Solintec",
+  "ruc": "20547896541",
+  "createdBy": 12,
+  "status": "ACTIVE",
+  "createdAt": "2025-06-21T07:31:49.826Z"
+}</pre>
+        <strong>400 Bad Request</strong>
+        <pre>{
+  "message": "Missing required fields or invalid RUC format"
+}</pre>
+      </td>
+      <td><strong>http://localhost:8080/</strong></td>
+    </tr>
+    <tr>
+      <td><code>/api/v1/organizations/invitations</code></td>
+      <td>Invitar a una persona a una organización por correo</td>
+      <td><code>POST</code></td>
+      <td>
+        <pre>{
+  "organizationId": 7,
+  "email": "sofia.ramirez@solintec.com"
+}</pre>
+      </td>
+      <td>
+        <strong>201 Created</strong>
+        <pre>{
+  "id": 15,
+  "organizationName": "Solintec",
+  "invitedBy": "Luis Torres",
+  "status": "PENDING",
+  "invitedAt": "2025-06-21T08:04:38.498Z",
+  "invitedPerson": null
+}</pre>
+        <strong>400 Bad Request</strong>
+        <pre>{
+  "message": "Email already invited or user is already a member"
+}</pre>
+        <strong>404 Not Found</strong>
+        <pre>{
+  "message": "Organization not found or user profile unavailable"
+}</pre>
+      </td>
+      <td><strong>http://localhost:5295/</strong></td>
+    </tr>
+    <tr>
+      <td><code>/api/v1/organizations/{id}</code></td>
+      <td>Obtener organización por ID</td>
+      <td><code>GET</code></td>
+      <td>
+        <code>/api/v1/organizations/7</code><br>
+        <em>Path Param:</em> <code>id: number</code>
+      </td>
+      <td>
+        <strong>200 OK</strong>
+        <pre>{
+  "id": 7,
+  "legalName": "Constructora Soluciones Integrales S.A.C.",
+  "commercialName": "Solintec",
+  "ruc": "20547896541",
+  "createdBy": 12,
+  "status": "ACTIVE",
+  "createdAt": "2025-06-21T08:27:56.218Z"
+}</pre>
+        <strong>404 Not Found</strong>
+        <pre>{
+  "message": "Organization with ID 7 not found"
+}</pre>
+      </td>
+      <td><strong>http://localhost:5295/</strong></td>
+    </tr>
+    <tr>
+  <td><code>/api/v1/organizations/{id}</code></td>
+  <td>Actualizar información de una organización</td>
+  <td><code>PATCH</code></td>
+  <td>
+    <code>/api/v1/organizations/2</code><br>
+    <em>Path Param:</em> <code>id: number</code>
+    <br>
+    <br>
+    <strong>Body:</strong>
+    <pre>{
+  "commercialName": "Realio Consultores S.A.C.",
+  "legalName": "Realio Consultores"
+}</pre>
+  </td>
+  <td>
+    <strong>200 OK</strong>
+    <pre>{
+  "message": "Organization with ID 2 successfully updated"
+}</pre>
+    <strong>400 Bad Request</strong>
+    <pre>{
+  "message": "Invalid JSON format or missing fields"
+}</pre>
+    <strong>404 Not Found</strong>
+    <pre>{
+  "message": "Organization with ID 2 not found"
+}</pre>
+  </td>
+  <td><strong>http://localhost:5295/</strong></td>
+</tr>
+<tr>
+  <td><code>/api/v1/organizations/invitations/{id}/reject</code></td>
+  <td>Rechazar una invitación pendiente</td>
+  <td><code>PATCH</code></td>
+  <td>
+    <code>/api/v1/organizations/invitations/5/reject</code><br>
+    <em>Path Param:</em> <code>id: number</code>
+  </td>
+  <td>
+    <strong>201 Created</strong>
+    <pre>{
+  "id": 5,
+  "organizationName": "Realio Consultores S.A.C.",
+  "invitedBy": "Henry Reaño",
+  "status": "REJECTED",
+  "invitedAt": "2025-06-21T07:43:19.464+00:00",
+  "invitedPerson": null
+}</pre>
+    <strong>404 Not Found</strong>
+    <pre>{
+  "message": "Invitation with ID 5 not found"
+}</pre>
+    <strong>409 Conflict</strong>
+    <pre>{
+  "message": "Invitation is no longer pending and cannot be rejected"
+}</pre>
+  </td>
+  <td><strong>http://localhost:5295/</strong></td>
+</tr>
+<tr>
+  <td><code>/api/v1/organizations/invitations/{id}/accept</code></td>
+  <td>Aceptar una invitación pendiente</td>
+  <td><code>PATCH</code></td>
+  <td>
+    <code>/api/v1/organizations/invitations/6/accept</code><br>
+    <em>Path Param:</em> <code>id: number</code>
+  </td>
+  <td>
+    <strong>201 Created</strong>
+    <pre>{
+  "id": 6,
+  "organizationName": "Realio Consultores S.A.C.",
+  "invitedBy": "Henry Reaño",
+  "status": "ACCEPTED",
+  "invitedAt": "2025-06-21T07:45:54.066+00:00",
+  "invitedPerson": null
+}</pre>
+    <strong>404 Not Found</strong>
+    <pre>{
+  "message": "Invitation with ID 6 not found"
+}</pre>
+    <strong>409 Conflict</strong>
+    <pre>{
+  "message": "Invitation is no longer pending and cannot be accepted"
+}</pre>
+  </td>
+  <td><strong>http://localhost:5295/</strong></td>
+</tr>
+<tr>
+  <td><code>/api/v1/organizations/{organizationId}/members</code></td>
+  <td>Listar miembros activos de una organización</td>
+  <td><code>GET</code></td>
+  <td>
+    <code>/api/v1/organizations/2/members</code><br>
+    <em>Path Param:</em> <code>organizationId: number</code>
+  </td>
+  <td>
+    <strong>200 OK</strong>
+    <pre>[
+  {
+    "id": 2,
+    "fullName": "Henry Reaño",
+    "memberType": "CONTRACTOR",
+    "joinedAt": "2025-06-21T04:40:53.914+00:00"
+  },
+  {
+    "id": 3,
+    "fullName": "Carlos Ochoa",
+    "memberType": "WORKER",
+    "joinedAt": "2025-06-21T04:42:02.115+00:00"
+  }
+]</pre>
+    <strong>404 Not Found</strong>
+    <pre>{
+  "message": "Organization with ID 2 not found"
+}</pre>
+  </td>
+  <td><strong>http://localhost:5295/</strong></td>
+</tr>
+<tr>
+  <td><code>/api/v1/organizations/{organizationId}/invitations</code></td>
+  <td>Listar invitaciones asociadas a una organización</td>
+  <td><code>GET</code></td>
+  <td>
+    <code>/api/v1/organizations/2/invitations</code><br>
+    <em>Path Param:</em> <code>organizationId: number</code>
+  </td>
+  <td>
+    <strong>200 OK</strong>
+    <pre>[
+  {
+    "id": 10,
+    "organizationName": "Realio Consultores S.A.C.",
+    "invitedBy": "Henry Reaño",
+    "status": "PENDING",
+    "invitedAt": "2025-06-21T07:50:50.941Z",
+    "invitedPerson": null
+  }
+]</pre>
+    <strong>404 Not Found</strong>
+    <pre>{
+  "message": "Organization with ID 2 not found"
+}</pre>
+  </td>
+  <td><strong>http://localhost:5295/</strong></td>
+</tr>
+<tr>
+  <td><code>/api/v1/organizations/invitations/by-person-id/{personId}</code></td>
+  <td>Listar invitaciones pendientes por persona</td>
+  <td><code>GET</code></td>
+  <td>
+    <code>/api/v1/organizations/invitations/by-person-id/8</code><br>
+    <em>Path Param:</em> <code>personId: number</code>
+  </td>
+  <td>
+    <strong>200 OK</strong>
+    <pre>[
+  {
+    "id": 14,
+    "organizationName": "Realio Consultores S.A.C.",
+    "invitedBy": "Henry Reaño",
+    "status": "PENDING",
+    "invitedAt": "2025-06-21T07:51:45.018Z",
+    "invitedPerson": null
+  }
+]</pre>
+    <strong>404 Not Found</strong>
+    <pre>{
+  "message": "No invitations found for person ID 8"
+}</pre>
+  </td>
+  <td><strong>http://localhost:5295/</strong></td>
+</tr>
+<tr>
+  <td><code>/api/v1/organizations/by-person-id/{id}</code></td>
+  <td>Listar organizaciones donde una persona es miembro</td>
+  <td><code>GET</code></td>
+  <td>
+    <code>/api/v1/organizations/by-person-id/8</code><br>
+    <em>Path Param:</em> <code>id: number</code>
+  </td>
+  <td>
+    <strong>200 OK</strong>
+    <pre>[
+  {
+    "id": 2,
+    "legalName": "Realio Consultores S.A.C.",
+    "commercialName": "Realio",
+    "ruc": "20103254678",
+    "createdBy": 12,
+    "status": "ACTIVE",
+    "createdAt": "2025-06-21T07:53:16.111Z"
+  }
+]</pre>
+    <strong>404 Not Found</strong>
+    <pre>{
+  "message": "No organizations found for person ID 8"
+}</pre>
+  </td>
+  <td><strong>http://localhost:5295/</strong></td>
+</tr>
+<tr>
+  <td><code>/api/v1/organizations/{ruc}</code></td>
+  <td>Eliminar una organización por RUC</td>
+  <td><code>DELETE</code></td>
+  <td>
+    <code>/api/v1/organizations/20101720201</code><br>
+    <em>Path Param:</em> <code>ruc: string</code>
+  </td>
+  <td>
+    <strong>200 OK</strong>
+    <pre>{
+  "message": "Organization with RUC 20101720201 was successfully deleted"
+}</pre>
+    <strong>404 Not Found</strong>
+    <pre>{
+  "message": "Organization with RUC 20101720201 not found"
+}</pre>
+  </td>
+  <td><strong>http://localhost:5295/</strong></td>
+</tr>
+<tr>
+  <td><code>/api/v1/organizations/members/{memberId}</code></td>
+  <td>Eliminar un miembro de la organización</td>
+  <td><code>DELETE</code></td>
+  <td>
+    <code>/api/v1/organizations/members/12</code><br>
+    <em>Path Param:</em> <code>memberId: number</code>
+  </td>
+  <td>
+    <strong>204 No Content</strong>
+    <pre>
+Miembro con ID 12 eliminado exitosamente.
+    </pre>
+    <strong>400 Bad Request</strong>
+    <pre>{
+  "message": "Cannot delete a CONTRACTOR member"
+}</pre>
+    <strong>404 Not Found</strong>
+    <pre>{
+  "message": "Member with ID 12 not found"
+}</pre>
+  </td>
+  <td><strong>http://localhost:5295/</strong></td>
+
+<tr>
+  <td><code>/api/v1/auth/signup</code></td>
+  <td>Registro de un nuevo usuario</td>
+  <td><code>POST</code></td>
+  <td>
+    <pre>{
+  "userName": "chkioson",
+  "password": "C$D#Gf01",
+  "userType": "TYPE_WORKER",
+  "firstName": "Jesús",
+  "lastName": "Uribe",
+  "email": "jesus@example.com",
+  "phone": "+51321987789"
+}</pre>
+  </td>
+  <td>
+    <strong>200 OK</strong>
+    <pre>{
+  "userName": "chkioson",
+  "userType": "TYPE_WORKER",
+  "personId": 14
+}</pre>
+  </td>
+  <td><strong>http://localhost:5295/</strong></td>
+</tr>
+<tr>
+  <td><code>/api/v1/auth/signin</code></td>
+  <td>Inicio de sesión</td>
+  <td><code>POST</code></td>
+  <td>
+    <pre>{
+  "userName": "chkiosor",
+  "password": "ASDFGH!#"
+}</pre>
+  </td>
+  <td>
+    <strong>200 OK</strong>
+    <pre>{
+  "user": {
+    "userName": "chkiosor",
+    "userType": "TYPE_WORKER",
+    "personId": 14
+  },
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6..."
+}</pre>
+  </td>
+  <td><strong>http://localhost:5295 /</strong></td>
+</tr>
+</table>
 
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
@@ -1804,3 +2282,5 @@ Configuración en Azure para el despliegue.
 Un hotfix debido a un error de producción con las variables de entorno.
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
+
+En este tercer sprint se ha fallado en lograr el objetivo de implementar a totalidad toda la interfaz funcional de la aplicación web, pero se ha conseguido un avance total del desarrollo del modelo y los servicios.
