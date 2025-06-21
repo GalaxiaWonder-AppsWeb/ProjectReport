@@ -490,55 +490,6 @@ Se elaboraron historias de usuario, historias técnicas (para el API) e historia
         <td>EP05</td>
     </tr>
     <tr>
-        <td>US069</td>
-        <td>Visualizar estructura del expediente técnico del proyecto</td>
-        <td>Como miembro del proyecto quiero consultar el contenido organizado del expediente técnico asociado al proyecto para acceder fácilmente a los documentos técnicos relevantes según la estructura definida por la empresa</td>
-        <td><strong>Scenario: Visualizar estructura jerárquica de carpetas</strong><br>Given el usuario pertenece al equipo del proyecto<br>When accede a la sección de expediente técnico<br>Then el sistema debe mostrar la estructura de carpetas y subcarpetas en formato jerárquico tipo árbol<br><br><strong>Scenario: Visualizar archivos referenciados en cada carpeta</strong><br>Given el usuario ha expandido una carpeta<br>When se visualiza su contenido<br>Then el sistema debe mostrar los nombres de los archivos referenciados junto con su tipo y fecha de referencia<br><br><strong>Scenario: Permitir retroceder a la carpeta padre</strong><br>Given el usuario está navegando dentro de una subcarpeta<br>When desea volver al directorio superior<br>Then el sistema debe mostrar una opción para retroceder a la carpeta o directorio padre<br><br></td>
-        <td>EP06</td>
-    </tr>
-    <tr>
-        <td>US070</td>
-        <td>Ver detalles de un archivo referenciado</td>
-        <td>Como miembro del proyecto quiero consultar información completa sobre un archivo incluido en el expediente técnico para identificar el contenido, origen y propósito del archivo dentro del contexto del proyecto</td>
-        <td><strong>Scenario: Visualizar información detallada del archivo</strong><br>Given el usuario está visualizando una carpeta del expediente técnico<br>When selecciona un archivo referenciado<br>Then el sistema debe mostrar los detalles del archivo como nombre, tipo, fecha de referencia, autor y ubicación original en el workspace<br><br><strong>Scenario: Permitir descargar el archivo</strong><br>Given el usuario ha abierto los detalles del archivo<br>When selecciona la opción de descarga<br>Then el sistema debe iniciar la descarga del archivo al dispositivo del usuario<br><br><strong>Scenario: Permitir vista previa del archivo si es compatible</strong><br>Given el usuario ha abierto los detalles del archivo<br>When selecciona la opción de vista previa<br>Then el sistema debe mostrar una vista previa del archivo si su tipo lo permite (por ejemplo: PDF, imágenes)<br><br></td>
-        <td>EP06</td>
-    </tr>
-    <tr>
-        <td>US071</td>
-        <td>Crear carpeta dentro del expediente técnico</td>
-        <td>Como contratista quiero organizar el expediente técnico mediante una estructura jerárquica clara para mantener ordenados los documentos técnicos según los estándares de la empresa y del proyecto</td>
-        <td><strong>Scenario: Mostrar opción de crear carpeta solo si es contratista</strong><br>Given el usuario accede a la sección de expediente técnico<br>When el sistema identifica que el usuario es el contratista del proyecto<br>Then el sistema debe mostrar una opción para crear una nueva carpeta<br><br><strong>Scenario: Visualizar campo para nombre de la carpeta</strong><br>Given el contratista ha seleccionado la opción para crear una carpeta<br>When se despliega el formulario<br>Then el sistema debe mostrar un campo para ingresar el nombre de la nueva carpeta<br><br><strong>Scenario: Validar que el nombre de la carpeta no esté vacío</strong><br>Given el campo de nombre está vacío<br>When el contratista intenta confirmar la creación<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que el nombre es obligatorio<br><br><strong>Scenario: Confirmar creación con nombre válido</strong><br>Given el contratista ha ingresado un nombre válido<br>When confirma la creación<br>Then el sistema debe crear la carpeta en la ubicación actual del expediente técnico<br>Then mostrar un mensaje de confirmación<br><br></td>
-        <td>EP06</td>
-    </tr>
-    <tr>
-        <td>US072</td>
-        <td>Renombrar carpeta del expediente</td>
-        <td>Como contratista quiero actualizar el nombre de una carpeta si se cometió un error o cambió su propósito para mantener la organización del expediente técnico clara y alineada con los estándares del proyecto</td>
-        <td><strong>Scenario: Mostrar opción para renombrar solo si es contratista</strong><br>Given el usuario está visualizando el expediente técnico<br>When el sistema identifica que el usuario es el contratista<br>Then debe mostrarse una opción para renombrar cada carpeta<br><br><strong>Scenario: Visualizar campo con nombre actual</strong><br>Given el contratista ha elegido renombrar una carpeta<br>When se despliega el campo de edición<br>Then el sistema debe mostrar el nombre actual editable de la carpeta<br><br><strong>Scenario: Validar que el nuevo nombre no esté vacío</strong><br>Given el campo está vacío<br>When el contratista intenta confirmar el cambio<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que el nombre es obligatorio<br><br><strong>Scenario: Guardar nuevo nombre si es válido</strong><br>Given el contratista ha ingresado un nuevo nombre válido<br>When confirma el cambio<br>Then el sistema debe actualizar el nombre de la carpeta y mostrar un mensaje de confirmación<br><br></td>
-        <td>EP06</td>
-    </tr>
-    <tr>
-        <td>US073</td>
-        <td>Eliminar carpeta del expediente</td>
-        <td>Como contratista quiero retirar una carpeta que fue creada por error o ya no es necesaria para mantener la estructura del expediente técnico ordenada y libre de elementos innecesarios</td>
-        <td><strong>Scenario: Mostrar opción para eliminar solo si es contratista</strong><br>Given el usuario está visualizando la estructura del expediente<br>When el sistema identifica que el usuario es el contratista<br>Then debe mostrarse una opción para eliminar cada carpeta<br><br><strong>Scenario: Solicitar confirmación manual antes de eliminar</strong><br>Given el contratista ha seleccionado la opción de eliminar una carpeta<br>When confirma que desea eliminar la carpeta<br>Then el sistema debe solicitar escribir 'eliminar + nombre de la carpeta' para confirmar<br><br><strong>Scenario: Eliminar carpeta si la confirmación es correcta</strong><br>Given el contratista ha ingresado correctamente el texto de confirmación<br>When confirma la acción<br>Then el sistema debe eliminar la carpeta del expediente técnico<br>Then mostrar un mensaje de confirmación<br><br><strong>Scenario: Cancelar operación si la confirmación es incorrecta</strong><br>Given el contratista ha ingresado incorrectamente el texto de confirmación<br>When intenta confirmar la eliminación<br>Then el sistema debe impedir la acción<br>Then mostrar un mensaje indicando que la confirmación no es válida<br><br></td>
-        <td>EP06</td>
-    </tr>
-    <tr>
-        <td>US074</td>
-        <td>Añadir referencia a archivo al expediente</td>
-        <td>Como contratista quiero integrar documentos ya subidos al workspace dentro del expediente técnico sin duplicarlos para mantener una estructura ordenada y trazable sin aumentar el almacenamiento innecesariamente</td>
-        <td><strong>Scenario: Visualizar opción para añadir referencia si es contratista</strong><br>Given el usuario está visualizando una carpeta del expediente técnico<br>When el sistema identifica que el usuario es el contratista<br>Then el sistema debe mostrar una opción para añadir archivos como referencias<br><br><strong>Scenario: Seleccionar archivo existente del workspace</strong><br>Given el contratista ha abierto el selector de archivos<br>When se carga la vista del workspace de la organización<br>Then el sistema debe mostrar los archivos disponibles para seleccionar como referencia<br><br><strong>Scenario: Confirmar referencia y asociarla al expediente</strong><br>Given el contratista ha seleccionado un archivo del workspace<br>When confirma su inclusión en la carpeta del expediente técnico<br>Then el sistema debe crear una referencia de tipo TECHNICAL_FILE_FOLDER hacia ese archivo<br>Then asociar dicha referencia a la carpeta actual del expediente técnico<br>Then mostrar un mensaje de confirmación<br><br></td>
-        <td>EP06</td>
-    </tr>
-    <tr>
-        <td>US075</td>
-        <td>Eliminar referencia a archivo del expediente técnico</td>
-        <td>Como contratista quiero retirar del expediente una referencia que fue añadida por error o ya no es necesaria para mantener la relevancia y organización del expediente sin afectar el archivo original en el workspace</td>
-        <td><strong>Scenario: Visualizar opción para eliminar referencia si es contratista</strong><br>Given el usuario está visualizando una carpeta del expediente técnico<br>When el sistema identifica que el usuario es el contratista<br>Then el sistema debe mostrar una opción para eliminar cada referencia de archivo<br><br><strong>Scenario: Confirmar eliminación de referencia</strong><br>Given el contratista ha seleccionado una referencia para eliminar<br>When confirma la acción<br>Then el sistema debe eliminar solo la referencia del expediente técnico<br>Then mostrar un mensaje indicando que la eliminación fue exitosa<br><br></td>
-        <td>EP06</td>
-    </tr>
-    <tr>
         <td>US076</td>
         <td>Iniciar solicitud de cambio desde una solicitud de cambio</td>
         <td>Como entidad contratante quiero solicitar formalmente una modificación del alcance, contenido o entrega del proyecto para asegurar que el cambio sea evaluado, aprobado o rechazado bajo un proceso trazable</td>
@@ -756,76 +707,6 @@ Se elaboraron historias de usuario, historias técnicas (para el API) e historia
         <td>EP11</td>
     </tr>
     <tr>
-        <td>US107</td>
-        <td>Notificar a los participantes cuando se crea una reunión</td>
-        <td>Como miembro del equipo quiero enterarse cuando ha sido convocado a una reunión del proyecto para asistir puntualmente y prepararse adecuadamente</td>
-        <td><strong>Scenario: Generar notificación para cada participante</strong><br>Given se ha creado una nueva reunión y se han definido sus participantes<br>When la reunión es confirmada y registrada en el sistema<br>Then el sistema debe generar una notificación para cada participante<br>Then la categoría de la notificación debe ser REMINDER<br>Then el mensaje debe incluir el tema de la reunión, la fecha y hora<br>Then el target de la notificación debe ser la entidad MEETING correspondiente<br><br></td>
-        <td>EP13</td>
-    </tr>
-    <tr>
-        <td>US108</td>
-        <td>Notificar al responsable cuando se acerca la fecha límite de una tarea</td>
-        <td>Como especialista del proyecto quiero recibir un recordatorio oportuno antes de la fecha límite de una tarea para evitar retrasos y facilitar la entrega puntual del trabajo técnico</td>
-        <td><strong>Scenario: Enviar notificación como recordatorio de vencimiento</strong><br>Given una tarea tiene un responsable y una fecha límite registrada<br>Given y faltan 48 horas o menos para la fecha de vencimiento<br>When se cumple la condición temporal<br>Then el sistema debe generar una notificación al responsable de la tarea<br>Then la categoría debe ser REMINDER<br>Then el mensaje debe indicar que la tarea está próxima a vencer, con su nombre y fecha límite<br>Then el target de la notificación debe ser la entidad TASK correspondiente<br><br></td>
-        <td>EP13</td>
-    </tr>
-    <tr>
-        <td>US109</td>
-        <td>Notificar cuando se emite una respuesta a una solicitud de cambio</td>
-        <td>Como persona que originó el proceso de cambio quiero ser informado cuando se toma una decisión formal sobre su solicitud para actuar con base en la decisión del contratista y continuar con los trabajos o ajustes necesarios</td>
-        <td><strong>Scenario: Generar notificación al responder proceso de cambio</strong><br>Given un proceso de cambio ha sido aprobado o rechazado<br>Given y su origen es una solicitud de cambio de tipo CHANGE_REQUEST o TECHNICAL_QUERY<br>When se registra una respuesta oficial en el sistema<br>Then el sistema debe generar una notificación dirigida al originador del proceso<br>Then el título debe indicar si fue aprobado o rechazado<br>Then el mensaje debe incluir el resumen de la respuesta (notas)<br>Then la categoría debe ser INFO<br>Then el target debe ser la entidad CHANGE_RESPONSE correspondiente<br><br></td>
-        <td>EP13</td>
-    </tr>
-    <tr>
-        <td>US110</td>
-        <td>Notificar cuando se crea un nuevo hito como parte de un cambio aprobado</td>
-        <td>Como equipo del proyecto quiero enterarse cuando se incorpora un nuevo hito al cronograma como resultado de un cambio aprobado para replanificar tareas, coordinar reuniones y alinear entregables de acuerdo al nuevo alcance</td>
-        <td><strong>Scenario: Notificar a los miembros del equipo sobre el nuevo hito</strong><br>Given un proceso de cambio ha sido aprobado<br>Given y como consecuencia se ha creado un nuevo hito en el cronograma<br>When se registra el nuevo hito en el sistema<br>Then el sistema debe generar una notificación a todos los miembros del proyecto<br>Then la categoría debe ser INFO<br>Then el título debe indicar que se ha añadido un nuevo hito al cronograma<br>Then el target debe ser la entidad MILESTONE correspondiente<br><br></td>
-        <td>EP13</td>
-    </tr>
-    <tr>
-        <td>US111</td>
-        <td>Notificar a un usuario cuando es invitado a una organización</td>
-        <td>Como persona externa al sistema o no miembro de la organización quiero ser informado cuando ha sido invitado a unirse a una organización para poder tomar una decisión informada sobre su participación</td>
-        <td><strong>Scenario: Generar notificación al enviar invitación</strong><br>Given el contratista ha enviado una invitación a una persona para que se una a la organización<br>When la invitación es registrada en el sistema<br>Then el sistema debe generar una notificación para el destinatario<br>Then el mensaje debe indicar el nombre de la organización que lo ha invitado<br>Then la categoría debe ser INFO<br>Then el target debe ser la entidad ORGANIZATION correspondiente<br><br></td>
-        <td>EP13</td>
-    </tr>
-    <tr>
-        <td>US112</td>
-        <td>Notificar recordatorio de vencimiento de factura</td>
-        <td>Como usuario responsable de la cuenta de suscripción quiero recibir una alerta cuando una factura está próxima a vencer para evitar la suspensión del servicio por falta de pago</td>
-        <td><strong>Scenario: Generar notificación 3 días antes del vencimiento</strong><br>Given existe una factura activa vinculada a la cuenta del usuario<br>Given faltan exactamente 3 días para la fecha de vencimiento<br>When se ejecuta el proceso automático de revisión de facturas<br>Then el sistema debe generar una notificación para el usuario responsable<br>Then el título debe indicar: 'Factura próxima a vencer'<br>Then la categoría debe ser ALERT<br>Then el target debe ser la entidad INVOICE correspondiente<br><br></td>
-        <td>EP13</td>
-    </tr>
-    <tr>
-        <td>US113</td>
-        <td>Visualizar lista de notificaciones recibidas</td>
-        <td>Como usuario del sistema quiero consultar todas las notificaciones que le han sido enviadas para estar al tanto de eventos importantes del sistema y tomar decisiones oportunas</td>
-        <td><strong>Scenario: Mostrar listado de notificaciones</strong><br>Given el usuario ha iniciado sesión<br>When accede a la sección de notificaciones<br>Then el sistema debe mostrar la lista de notificaciones ordenadas por fecha de creación (más reciente primero)<br>Then cada notificación debe mostrar su título, fecha y estado (leída o no leída)<br><br><strong>Scenario: Mostrar mensaje si no hay notificaciones</strong><br>Given el usuario no ha recibido notificaciones<br>When accede a la sección de notificaciones<br>Then el sistema debe mostrar un mensaje indicando que no hay notificaciones disponibles<br><br></td>
-        <td>EP14</td>
-    </tr>
-    <tr>
-        <td>US114</td>
-        <td>Ver detalles de una notificación específica</td>
-        <td>Como usuario del sistema quiero consultar el contenido completo y contexto de una notificación para entender claramente la razón y el impacto del mensaje recibido</td>
-        <td><strong>Scenario: Acceder al contenido completo de la notificación</strong><br>Given el usuario ha accedido a la lista de notificaciones<br>When selecciona una notificación de la lista<br>Then el sistema debe mostrar el mensaje completo de la notificación<br>Then debe indicarse la fecha de creación, la categoría y el tipo de entidad relacionada (target)<br><br><strong>Scenario: Permitir acceso al objeto vinculado (target)</strong><br>Given la notificación tiene un target definido<br>When el usuario visualiza los detalles<br>Then el sistema debe permitir navegar al detalle del elemento referido (por ejemplo, tarea, reunión, etc.) mediante un enlace o botón<br><br></td>
-        <td>EP14</td>
-    </tr>
-    <tr>
-        <td>US115</td>
-        <td>Eliminar notificación manualmente</td>
-        <td>Como usuario del sistema quiero descartar notificaciones que ya no son relevantes o útiles para mantener su bandeja de notificaciones limpia y enfocada</td>
-        <td><strong>Scenario: Eliminar notificación desde la lista</strong><br>Given el usuario ha accedido a la lista de notificaciones<br>When selecciona la opción de eliminar junto a una notificación<br>Then el sistema debe eliminar la notificación sez|leccionada<br>Then mostrar un mensaje de confirmación o retroalimentación visual<br><br></td>
-        <td>EP14</td>
-    </tr>
-    <tr>
-        <td>US116</td>
-        <td>Eliminar automáticamente notificaciones antiguas</td>
-        <td>Como sistema quiero remover notificaciones que ya no son relevantes tras un largo periodo para mantener la base de datos limpia y evitar acumulación innecesaria de registros obsoletos</td>
-        <td><strong>Scenario: Eliminar notificaciones con más de 90 días</strong><br>Given existen notificaciones con fecha de creación superior a 90 días<br>When se ejecuta el proceso de limpieza periódica del sistema<br>Then el sistema debe eliminar automáticamente dichas notificaciones<br><br></td>
-        <td>EP14</td>
-    </tr>
-    <tr>
         <td>US117</td>
         <td>Elegir tipo de cuenta al iniciar el registro</td>
         <td>Como persona externa al sistema quiero indicar qué tipo de cuenta desea registrar para visualizar el formulario adecuado según el tipo de participación que tendrá en la plataforma</td>
@@ -889,34 +770,6 @@ Se elaboraron historias de usuario, historias técnicas (para el API) e historia
         <td>EP16</td>
     </tr>
     <tr>
-        <td>US126</td>
-        <td>Solicitar restablecimiento de contraseña desde el login</td>
-        <td>Como usuario que no recuerda su contraseña quiero recibir un enlace para restablecer su contraseña de forma segura para volver a acceder a su cuenta sin tener que crear una nueva</td>
-        <td><strong>Scenario: Solicitar restablecimiento desde pantalla de login</strong><br>Given el usuario se encuentra en la pantalla de login<br>When selecciona la opción '¿Olvidaste tu contraseña?'<br>Then el sistema debe mostrar un formulario donde puede ingresar su correo registrado<br><br><strong>Scenario: Correo válido para restablecimiento</strong><br>Given el usuario ha ingresado un correo válido y registrado<br>When envía el formulario de recuperación<br>Then el sistema debe generar un token de restablecimiento y enviarlo por correo electrónico<br><br></td>
-        <td>EP17</td>
-    </tr>
-    <tr>
-        <td>US127</td>
-        <td>Ver mensaje de confirmación tras solicitar restablecimiento</td>
-        <td>Como usuario que solicitó recuperar su contraseña quiero saber que su solicitud fue aceptada y está siendo procesada para tener tranquilidad de que el sistema enviará el enlace correspondiente al correo indicado</td>
-        <td><strong>Scenario: Confirmar solicitud de recuperación</strong><br>Given el usuario ha enviado un correo válido en el formulario de recuperación<br>When el sistema procesa la solicitud<br>Then el sistema debe mostrar un mensaje indicando que, si el correo está registrado, se ha enviado un enlace de restablecimiento<br><br></td>
-        <td>EP17</td>
-    </tr>
-    <tr>
-        <td>US128</td>
-        <td>Acceder al formulario de nueva contraseña desde el enlace recibido</td>
-        <td>Como usuario que ha solicitado restablecer su contraseña quiero establecer una nueva contraseña desde un enlace seguro para recuperar el control de su cuenta sin depender de soporte técnico</td>
-        <td><strong>Scenario: Acceso al formulario de restablecimiento</strong><br>Given el usuario ha recibido un enlace válido de restablecimiento de contraseña<br>When hace clic en el enlace desde su correo<br>Then el sistema debe mostrar el formulario para ingresar y confirmar la nueva contraseña<br><br></td>
-        <td>EP17</td>
-    </tr>
-    <tr>
-        <td>US129</td>
-        <td>Ver mensaje de éxito al completar el restablecimiento</td>
-        <td>Como usuario que ha restablecido su contraseña quiero confirmar que su nueva contraseña fue aceptada para saber que ahora puede iniciar sesión normalmente con su nueva clave</td>
-        <td><strong>Scenario: Mensaje de confirmación tras restablecimiento exitoso</strong><br>Given el usuario ha completado correctamente el formulario con su nueva contraseña<br>When envía el formulario<br>Then el sistema debe mostrar un mensaje indicando que la contraseña ha sido actualizada<br>Then y ofrecer un enlace para volver a la pantalla de login<br><br></td>
-        <td>EP17</td>
-    </tr>
-    <tr>
         <td>US130</td>
         <td>Visualizar información personal registrada</td>
         <td>Como usuario autenticado quiero consultar los datos que el sistema tiene registrados sobre su identidad personal para verificar que su información esté actualizada y corregir posibles errores</td>
@@ -943,104 +796,6 @@ Se elaboraron historias de usuario, historias técnicas (para el API) e historia
         <td>Como usuario autenticado quiero modificar su número de contacto registrado en el perfil para asegurar que su número actual esté disponible en caso de contacto, verificación o notificaciones</td>
         <td><strong>Scenario: Actualizar número de teléfono</strong><br>Given el usuario ha accedido a la edición del perfil<br>When modifica el campo de teléfono y guarda los cambios<br>Then el sistema debe registrar el nuevo número<br>Then mostrar un mensaje indicando que el cambio se realizó exitosamente<br><br></td>
         <td>EP18</td>
-    </tr>
-    <tr>
-        <td>US134</td>
-        <td>Visualizar los planes de suscripción disponibles</td>
-        <td>Como persona interesada en suscribirse quiero conocer los distintos planes disponibles y sus características para elegir el plan más adecuado según sus necesidades y capacidades</td>
-        <td><strong>Scenario: Acceder al catálogo de planes</strong><br>Given el usuario ha iniciado sesión<br>When navega a la sección de suscripciones<br>Then el sistema debe mostrar una lista de planes disponibles con nombre, precio, duración y beneficios (límite de proyectos, almacenamiento, miembros, etc.)<br><br></td>
-        <td>EP19</td>
-    </tr>
-    <tr>
-        <td>US135</td>
-        <td>Visualizar los planes de suscripción disponibles</td>
-        <td>Como persona interesada en suscribirse quiero conocer los distintos planes disponibles y sus características para elegir el plan más adecuado según sus necesidades y capacidades</td>
-        <td><strong>Scenario: Acceder al catálogo de planes</strong><br>Given el usuario ha iniciado sesión<br>When navega a la sección de suscripciones<br>Then el sistema debe mostrar una lista de planes disponibles con nombre, precio, duración y beneficios (límite de proyectos, almacenamiento, miembros, etc.)<br><br></td>
-        <td>EP19</td>
-    </tr>
-    <tr>
-        <td>US136</td>
-        <td>Contratar un nuevo plan de suscripción</td>
-        <td>Como persona interesada en acceder a funcionalidades avanzadas quiero activar un plan que le permita gestionar organizaciones, proyectos y archivos para adquirir permisos y capacidad de uso según sus necesidades mediante un workspace asociado</td>
-        <td><strong>Scenario: Seleccionar un plan para contratar</strong><br>Given el usuario ha accedido a la sección de planes de suscripción<br>When selecciona un plan específico<br>Then el sistema debe mostrar un resumen del plan seleccionado y solicitar confirmación para iniciar la contratación<br><br><strong>Scenario: Completar contratación con éxito</strong><br>Given el usuario ha confirmado el plan seleccionado<br>When completa el proceso de pago con éxito<br>Then el sistema debe crear una nueva suscripción con estado ACTIVE<br>Then asociar un nuevo workspace basado en las restricciones del plan<br>Then mostrar un mensaje de éxito indicando que la suscripción está activa<br><br></td>
-        <td>EP19</td>
-    </tr>
-    <tr>
-        <td>US137</td>
-        <td>Ver detalles de la suscripción activa</td>
-        <td>Como usuario con suscripción activa quiero consultar la información actual de su plan contratado para gestionar mejor sus fechas, límites y renovar a tiempo si es necesario</td>
-        <td><strong>Scenario: Visualizar información de la suscripción</strong><br>Given el usuario cuenta con una suscripción activa<br>When accede a la sección de suscripción actual<br>Then el sistema debe mostrar el nombre del plan, fecha de inicio, fecha de vencimiento, estado de renovación, y restricciones aplicadas (miembros, almacenamiento, proyectos)<br><br></td>
-        <td>EP19</td>
-    </tr>
-    <tr>
-        <td>US138</td>
-        <td>Cancelar una suscripción activa y mostrar restricciones asociadas</td>
-        <td>Como usuario con suscripción activa quiero detener la renovación automática de su plan o darlo de baja para controlar su suscripción y entender las implicancias del cambio</td>
-        <td><strong>Scenario: Confirmar cancelación de suscripción</strong><br>Given el usuario cuenta con una suscripción activa<br>When decide cancelarla desde la configuración de su suscripción<br>Then el sistema debe mostrar un mensaje de advertencia indicando que perderá el acceso a funcionalidades al finalizar la vigencia<br>Then debe mostrar claramente qué restricciones aplicarán (ej. sin creación de organizaciones, sin nuevos archivos)<br><br><strong>Scenario: Completar cancelación</strong><br>Given el usuario ha leído y aceptado las advertencias<br>When confirma la cancelación<br>Then el sistema debe cambiar el estado de la suscripción a CANCELLED<br>Then mostrar un mensaje confirmando la cancelación<br><br></td>
-        <td>EP19</td>
-    </tr>
-    <tr>
-        <td>US139</td>
-        <td>Visualizar facturas generadas por suscripciones</td>
-        <td>Como usuario con historial de suscripción quiero consultar las facturas emitidas asociadas a sus planes contratados para llevar control financiero y descargar los documentos para su archivo personal o contable</td>
-        <td><strong>Scenario: Ver listado de facturas</strong><br>Given el usuario ha contratado una o más suscripciones en el sistema<br>When accede a la sección de facturación<br>Then el sistema debe mostrar una lista de facturas ordenadas por fecha de emisión<br>Then cada factura debe mostrar el monto total, el estado de pago, y el vencimiento<br><br></td>
-        <td>EP19</td>
-    </tr>
-    <tr>
-        <td>US140</td>
-        <td>Visualizar el detalle de una factura</td>
-        <td>Como usuario con historial de facturación quiero ver el contenido detallado de una factura emitida por el sistema para entender qué conceptos fueron cobrados y validar los importes incluidos</td>
-        <td><strong>Scenario: Consultar desglose de factura</strong><br>Given el usuario está visualizando la lista de sus facturas<br>When selecciona una factura específica<br>Then el sistema debe mostrar el detalle de cada ítem de facturación, incluyendo descripción, precio unitario y subtotal<br>Then también debe mostrar el monto total, fecha de emisión, fecha de vencimiento y estado de pago<br><br></td>
-        <td>EP19</td>
-    </tr>
-    <tr>
-        <td>US141</td>
-        <td>Iniciar pago manual de una factura pendiente</td>
-        <td>Como usuario con una factura pendiente de pago quiero completar el pago voluntariamente antes de su vencimiento para evitar interrupciones en el acceso al sistema por falta de pago</td>
-        <td><strong>Scenario: Pagar factura desde su vista detallada</strong><br>Given el usuario está visualizando una factura con estado PENDING<br>When selecciona la opción de pagar ahora<br>Then el sistema debe redirigirlo al flujo de pago según el método disponible (tarjeta, transferencia, etc.)<br>Then una vez confirmado el pago, debe actualizar el estado a PAID y mostrar un mensaje de éxito<br><br></td>
-        <td>EP19</td>
-    </tr>
-    <tr>
-        <td>US142</td>
-        <td>Activar o desactivar pago automático</td>
-        <td>Como usuario con suscripción activa quiero decidir si desea que las renovaciones se cobren automáticamente para evitar cobros inesperados o garantizar continuidad sin preocuparse por fechas</td>
-        <td><strong>Scenario: Activar pago automático</strong><br>Given el usuario tiene una suscripción activa y pagos manuales<br>When activa la opción de pago automático<br>Then el sistema debe crear un acuerdo de pago recurrente con el método seleccionado<br>Then mostrar la fecha de próximo cobro automático<br><br><strong>Scenario: Desactivar pago automático</strong><br>Given el usuario tiene habilitado el pago automático<br>When desactiva la opción desde la configuración de su suscripción<br>Then el sistema debe desactivar el acuerdo de pago recurrente<br>Then mostrar un mensaje indicando que los próximos pagos deberán hacerse manualmente<br><br></td>
-        <td>EP19</td>
-    </tr>
-    <tr>
-        <td>US143</td>
-        <td>Ver intentos de pago realizados (transacciones)</td>
-        <td>Como usuario con pagos recientes o recurrentes quiero consultar los intentos de cobro realizados por el sistema para detectar pagos exitosos o fallidos y actuar con anticipación ante problemas</td>
-        <td><strong>Scenario: Consultar historial de transacciones</strong><br>Given el usuario tiene pagos asociados a su suscripción<br>When accede a la sección de historial de pagos o a una factura específica<br>Then el sistema debe mostrar la lista de intentos con fecha, estado (éxito/fallo) y respuesta de la pasarela<br>Then debe poder identificar si fue un intento manual o automático<br><br></td>
-        <td>EP19</td>
-    </tr>
-    <tr>
-        <td>US144</td>
-        <td>Ver detalles del workspace asociado a su suscripción</td>
-        <td>Como usuario con suscripción activa quiero consultar los límites y capacidades asignados a su entorno de trabajo para organizar sus recursos según el espacio disponible y el número de proyectos o miembros permitidos</td>
-        <td><strong>Scenario: Visualizar características del workspace</strong><br>Given el usuario tiene una suscripción activa con workspace asignado<br>When accede a la sección de detalles de workspace<br>Then el sistema debe mostrar la cantidad máxima de proyectos, almacenamiento disponible y número de miembros permitidos<br>Then también debe indicar qué organización está asociada al workspace<br><br></td>
-        <td>EP19</td>
-    </tr>
-    <tr>
-        <td>US145</td>
-        <td>Mostrar advertencia si la organización está inactiva por falta de workspace</td>
-        <td>Como miembro de una organización quiero entender por qué no puede acceder a las funciones administrativas de su organización para recibir orientación clara para reactivar el workspace mediante la suscripción correspondiente</td>
-        <td><strong>Scenario: Advertencia al acceder a organización inactiva</strong><br>Given el usuario es parte de una organización que no tiene un workspace activo<br>When intenta acceder al dashboard o funciones administrativas de la organización<br>Then el sistema debe mostrar un mensaje indicando que la organización se encuentra inactiva por no tener un workspace asociado<br>Then debe ofrecer un enlace o instrucción para activar o renovar la suscripción correspondiente<br><br></td>
-        <td>EP19</td>
-    </tr>
-    <tr>
-        <td>US146</td>
-        <td>Mostrar advertencia al intentar exceder el número máximo de miembros permitidos</td>
-        <td>Como contratista de una organización quiero comprender por qué no puede añadir más personas al equipo para respetar los límites del plan contratado y evaluar la necesidad de un upgrade</td>
-        <td><strong>Scenario: Intentar añadir miembro cuando se ha alcanzado el límite</strong><br>Given el número actual de miembros en la organización ha alcanzado el máximo permitido por el workspace<br>When el contratista intenta añadir un nuevo miembro al equipo<br>Then el sistema debe mostrar un mensaje de advertencia indicando que se ha alcanzado el número máximo de miembros<br>Then debe sugerir actualizar el plan para ampliar la capacidad<br><br></td>
-        <td>EP19</td>
-    </tr>
-    <tr>
-        <td>US147</td>
-        <td>Mostrar advertencia al intentar subir archivos que superan la capacidad del workspace</td>
-        <td>Como miembro de una organización quiero entender por qué no puede subir nuevos archivos al sistema para evitar pérdidas de tiempo y mantener la organización del almacenamiento según los límites contratados</td>
-        <td><strong>Scenario: Superar el espacio de almacenamiento disponible</strong><br>Given el espacio total ocupado en el workspace está próximo o ya supera el límite permitido<br>When el usuario intenta subir uno o más archivos<br>Then el sistema debe mostrar un mensaje indicando que no se pueden subir los archivos debido a que se superaría la capacidad del workspace<br>Then debe sugerir eliminar archivos no utilizados o actualizar el plan de suscripción<br><br></td>
-        <td>EP19</td>
     </tr>
     <tr>
         <td>US148</td>
@@ -1163,13 +918,6 @@ Se elaboraron historias de usuario, historias técnicas (para el API) e historia
         <td>US054, US055, US056, US057, US058, US059, US060, US061, US062, US063, US064, US065, US066, US067, US068, TS21, TS22, TS23, TS24, TS25, TS26, TS59</td>
     </tr>
     <tr>
-        <td>EP06</td>
-        <td>Gestión del Expediente Técnico</td>
-        <td>Como contratista quiero estructurar, organizar y mantener actualizado el expediente técnico del proyecto para asegurar el orden documental y la trazabilidad de entregables técnicos exigidos por norma</td>
-        <td></td>
-        <td>US069, US070, US071, US072, US073, US074, US075</td>
-    </tr>
-    <tr>
         <td>EP07</td>
         <td>Registro de Solicitudes de Cambio</td>
         <td>Como residente de obra o entidad contratante quiero iniciar procesos formales de cambio en un proyecto cuando se identifican nuevas necesidades o problemas para asegurar que toda solicitud de modificación esté documentada, justificada y gestionada bajo un flujo formal</td>
@@ -1212,20 +960,6 @@ Se elaboraron historias de usuario, historias técnicas (para el API) e historia
         <td>SWR01, SWR02, SWR03, SWR04, SWR05, SWR06, SWR07, SWR08, SWR09, SWR10, SWR11, SWR12, SWR13, SWR14, SWR15, SWR16, SWR17, SWR18</td>
     </tr>
     <tr>
-        <td>EP13</td>
-        <td>Gestión de notificaciones</td>
-        <td>Como miembro de organizaciónm quiero visualizar y recibir notificaciones relevantes del sistema, para estar informado sobre acciones importantes como entregas, invitaciones, tareas asignadas y eventos del proyecto.</td>
-        <td></td>
-        <td>US107, US108, US109, US110, US111, US112, TS36</td>
-    </tr>
-    <tr>
-        <td>EP14</td>
-        <td>Interación con notificaciones</td>
-        <td>Como miembro de organización quiero gestionar mis notificaciones (marcar como leídas o eliminarlas), para mantener organizada mi bandeja y enfocarme en lo que realmente importa dentro del sistema.</td>
-        <td></td>
-        <td>US113, US114, US115, US116, TS37</td>
-    </tr>
-    <tr>
         <td>EP15</td>
         <td>Registro y creación de cuenta</td>
         <td>Como visitante del sistema, quiero registrarme proporcionando mis datos personales, para poder acceder a las funcionalidades de la plataforma y participar en proyectos de consultoría.</td>
@@ -1239,13 +973,6 @@ Se elaboraron historias de usuario, historias técnicas (para el API) e historia
         <td></td>
         <td>US122, US123, US124, US125, TS41, TS42, TS43, TS45, TS48, TS50</td>
     </tr>
-    <tr>
-        <td>EP17</td>
-        <td>Recuperación de acceso</td>
-        <td>Como usuario registrado, quiero recuperar el acceso a mi cuenta cuando olvido mi contraseña, para evitar quedarme sin acceso y continuar trabajando sin interrupciones.</td>
-        <td></td>
-        <td>US126, US127, US128, US129, TS46, TS47, TS49
-</td>
     </tr>
     <tr>
         <td>EP18</td>
@@ -1253,13 +980,6 @@ Se elaboraron historias de usuario, historias técnicas (para el API) e historia
         <td>Como usuario autenticado, quiero editar mi información personal como nombre, correo o idioma, para mantener mi perfil actualizado y disfrutar una experiencia adaptada a mis preferencias.</td>
         <td></td>
         <td>US130, US131, US132, US133, US148, TS38, TS39, TS40</td>
-    </tr>
-    <tr>
-        <td>EP19</td>
-        <td>Gestión de suscripciones y workspaces</td>
-        <td>Como contratista, quiero gestionar mi suscripción y el uso de recursos del workspace, para asegurar que mi organización cuente con la capacidad necesaria para desarrollar sus proyectos de manera eficiente.</td>
-        <td></td>
-        <td>US134, US135, US136, US137, US138, US139, US140, US141, US142, US143, US144, US145, US146, US147, TS51, TS52, TS53, TS54, TS55, TS56, TS57, TS58, TS59, TS60</td>
     </tr>
     </tbody>
 </table>
