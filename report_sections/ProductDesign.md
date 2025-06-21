@@ -1771,7 +1771,7 @@ Cada Task incluye información sobre su especialidad, estado, fechas y el miembr
 
 El modelo también contempla value objects como ProjectStatus, TaskStatus, TaskSpec y Specialty, que acotan y estructuran posibles valores del dominio. Además, se emplean fábricas para construir elementos del cronograma (ScheduleItemFactory, TaskFactory, etc.), promoviendo un diseño limpio y orientado a la creación controlada de objetos complejos.
 
-<img src="../img/chapter4/oop/projects.png" alt="Diagrama de clases del bounded context Project Management de ProP GMS">
+<img src="../img/chapter4/oop/projects.svg" alt="Diagrama de clases del bounded context Project Management de ProP GMS">
 
 #### 4.7.1.2. Change Management Class Diagram
 
@@ -1779,9 +1779,9 @@ Este diagrama representa la estructura del Change Management Context dentro del 
 
 La entidad raíz del agregado es ChangeProcess, que encapsula tanto el origen del cambio (ChangeOrigin), su estado (ChangeProcessStatus) y la justificación del mismo, como también información sobre su aprobación, rechazo y cualquier orden de cambio (ChangeOrder) o respuesta oficial (ChangeResponse). Un proceso de cambio puede iniciarse a partir de una ChangeRequest realizada por la entidad contratante o una TechnicalQuery por parte del residente de obra.
 
-El modelo contempla value objects que acotan claramente los posibles estados (PENDING, APPROVED, REJECTED) y tipos de origen (CHANGE_REQUEST, TECHNICAL_QUERY). Además, se provee una fábrica (ChangeProcessFactory) que permite construir el agregado de manera controlada según el tipo de solicitud original.
+El modelo contempla value objects que acotan claramente los posibles estados (PENDING, APPROVED, REJECTED) y tipos de origen (CHANGE_REQUEST). Además, se provee una fábrica (ChangeProcessFactory) que permite construir el agregado de manera controlada según el tipo de solicitud original.
 
-<img src="../img/chapter4/oop/changes.png" alt="Diagrama de clases del bounded context de Changes Management de ProP GMS">
+<img src="../img/chapter4/oop/change.png" alt="Diagrama de clases del bounded context de Changes Management de ProP GMS">
 
 #### 4.7.1.3. Organization Class Diagram
 
@@ -1791,27 +1791,7 @@ El proceso de incorporación de nuevos miembros se gestiona a través de la enti
 
 <img src="../img/chapter4/oop/organizations.png" alt="Diagrama de clases del bounded context Organization de ProP GMS">
 
-#### 4.7.1.4. Notification Class Diagram
-
-El diagrama muestra la estructura del Notifications Bounded Context, donde se modela la gestión de notificaciones dentro de PropGMS. La clase Notification es la raíz del agregado y contiene los campos necesarios para identificar al receptor, el contenido del mensaje, su fecha de creación y la categoría (NotificationCategory), que puede ser informativa, de alerta, recordatorio o del sistema.
-
-Cada notificación está asociada a un objetivo específico mediante el value object NotificationTarget, el cual define tanto el identificador como el tipo del recurso al que hace referencia (NotificationTargetType). Estos tipos abarcan una variedad de entidades del sistema, como tareas, reuniones, cambios, proyectos, y más, permitiendo una alta contextualización de los avisos.
-
-
-<img src="../img/chapter4/oop/notifications.png" alt="Diagrama de clases del bounded context Notifications de ProP GMS">
-
-#### 4.7.1.5. File Class Diagram
-
-Este diagrama modela la gestión de archivos dentro del sistema PropGMS, organizada en torno al contexto de archivos (Files Management Context). La clase File es la raíz del agregado y representa un archivo digital individual, incluyendo metadatos como nombre, tamaño, tipo MIME, URL y fecha de carga. Cada archivo está asociado a un workspace y a un miembro de la organización que lo subió.
-
-La clase FileReference actúa como un vínculo lógico entre los archivos y los elementos del sistema que los utilizan, como contratos, carpetas técnicas o entregas de tareas. Esta referencia se define mediante el value object ReferenceSource, que encapsula tanto el identificador del objeto de origen como su tipo (ReferenceSourceType), permitiendo identificar claramente el propósito del archivo dentro del dominio.
-
-Además, se modela la entidad Folder, la cual organiza referencias a archivos dentro de una jerarquía flexible, permitiendo carpetas anidadas mediante un parentId opcional. Esta estructura favorece la gestión ordenada y segmentada de documentos técnicos.
-
-<img src="../img/chapter4/oop/files.png" alt="Diagrama de clases del bounded context Files Management de ProP GMS">
-
-#### 4.7.1.6. IAM Class Diagram
-
+#### 4.7.1.4. IAM Class Diagram
 Este diagrama representa el IAM Bounded Context del sistema PropGMS, encargado de gestionar el acceso y la identidad de los usuarios. La clase principal es UserAccount, la cual actúa como Aggregate Root y almacena datos como nombre de usuario, hash de contraseña, tipo de usuario (UserType), estado de la cuenta (AccountStatus) y referencias al objeto Person.
 
 El proceso de registro se inicia a través de RegistrationRequest, que almacena la solicitud de creación de cuenta, incluyendo el correo electrónico, nombre completo, y el estado de la confirmación (RegistrationRequestStatus). La clase UserAccountFactory se encarga de transformar esta solicitud en una cuenta activa mediante un método de creación controlada.
@@ -1821,40 +1801,6 @@ Para la autenticación y manejo de sesiones, se utilizan objetos como AuthToken,
 Finalmente, la entidad Person representa a los individuos registrados, incluyendo datos personales como nombre, correo, teléfono, profesión y estado. Esto permite mantener separada la lógica de autenticación de la información del usuario como persona física o jurídica.
 
 <img src="../img/chapter4/oop/iam.png" alt="Diagrama de clases del bounded context IAM de ProP GMS">
-
-#### 4.7.1.7. Subscription Class Diagram
-
-Este diagrama modela el Subscription Bounded Context del sistema PropGMS, encargado de gestionar las suscripciones de organizaciones a los planes del sistema. La clase Subscription actúa como Aggregate Root, e incluye información relevante como fechas de inicio y fin, estado (SubscriptionStatus), si se renueva automáticamente, y la tarifa asociada.
-
-Cada suscripción está ligada a un SubscriptionPlan, el cual define los parámetros del plan como su nombre, duración, precio, límites de miembros, proyectos y almacenamiento, así como las características incluidas.
-
-La clase Workspace, que representa el espacio digital de trabajo de una organización, mantiene una relación directa con la suscripción activa, reflejando los límites aplicables según el plan adquirido. Este vínculo garantiza que los recursos disponibles estén directamente controlados por el tipo de suscripción vigente.
-
-El modelo también incluye un conjunto de estados para la suscripción (ACTIVE, EXPIRED, CANCELLED, PENDING_PAYMENT), y métodos que permiten controlar su ciclo de vida: renovación, cancelación, activación y expiración.
-
-<img src="../img/chapter4/oop/subscriptions.png" alt="Diagrama de clases del bounded context Subscription de ProP GMS">
-
-#### 4.7.1.8. Billing Class Diagram
-
-Este diagrama representa la estructura del Billing Bounded Context de PropGMS, encargado de modelar el proceso de facturación dentro del sistema. La clase Invoice encapsula una factura generada a un usuario (payer), e incluye atributos clave como el monto total, fechas de emisión y vencimiento, y el estado del pago (PaymentStatus), que puede ir desde PENDING hasta PAID.
-
-Cada factura puede incluir múltiples ítems de facturación representados por la clase BillingItem, donde se detallan los conceptos facturados, su precio unitario y el subtotal calculado. La relación uno a muchos entre Invoice y BillingItem permite una descomposición clara de los cobros.
-
-El diseño incluye métodos para calcular montos totales, marcar facturas como pagadas y validar si se encuentran vencidas. Esto proporciona un control preciso sobre el estado financiero de cada organización dentro de la plataforma.
-
-<img src="../img/chapter4/oop/billings.png" alt="Diagrama de clases del bounded context Billing de ProP GMS">
-
-#### 4.7.1.9. Payment Class Diagram
-
-Este diagrama modela el Payments Bounded Context de PropGMS, centrado en la gestión de pagos y transacciones vinculadas a facturas. La clase principal Payment actúa como Aggregate Root e incluye información como el monto, método de pago (PaymentMethodType), fecha de pago, estado (PaymentStatus) y una posible relación con un acuerdo de pago recurrente (RecurringPaymentAgreement).
-
-Cada pago puede generar múltiples Transaction, que registran intentos de cobro, la fecha en que se realizaron, su estado (TransactionStatus) y la respuesta del gateway. Esta relación permite gestionar fallos o reintentos de manera robusta.
-
-El modelo incluye soporte para pagos recurrentes, encapsulados en RecurringPaymentAgreement, donde se definen la frecuencia, método, fechas clave y el estado de activación. Esto facilita la automatización de cobros en suscripciones periódicas.
-
-Los estados de pago (PENDING, AUTHORIZED, CONFIRMED, FAILED) y de transacción (INITIATED, SUCCESS, FAILURE) permiten un seguimiento detallado del flujo de fondos en la plataforma.
-
-<img src="../img/chapter4/oop/payments.png" alt="Diagrama de clases del bounded context Payments de ProP GMS">
 
 <div style="page-break-after: always;"></div>
 
@@ -1871,10 +1817,9 @@ Este diccionario describe las clases involucradas en la gestión de proyectos de
 | Attribute         | Type                    | Description                                                  |
 |-------------------|-------------------------|--------------------------------------------------------------|
 | id                | ProjectId               | Identificador único del proyecto                             |
-| name              | string                  | Nombre del proyecto                                          |
-| description       | string                  | Descripción del proyecto                                     |
-| contract          | Contract                | Contrato asociado                                            |
-| technicalFile     | TechnicalFile           | Expediente técnico asociado                                  |
+| name              | String                  | Nombre del proyecto                                          |
+| description       | String                  | Descripción del proyecto                                     |
+| contract          | Contract                | Contrato asociado                                            |                                 |
 | status            | ProjectStatus           | Estado actual del proyecto                                   |
 | schedule          | Schedule                | Cronograma del proyecto con sus hitos                        |
 | budget            | Money                   | Presupuesto total del proyecto                               |
@@ -1902,7 +1847,7 @@ Este diccionario describe las clases involucradas en la gestión de proyectos de
 | Attribute   | Type                    | Description                            |
 |-------------|-------------------------|----------------------------------------|
 | id          | MilestoneId             | Identificador único del hito           |
-| name        | string                  | Nombre del hito                        |
+| name        | String                  | Nombre del hito                        |
 | startDate   | DateTime                | Fecha de inicio del hito               |
 | endDate     | DateTime                | Fecha de finalización del hito         |
 | items       | List<ScheduleItem>      | Elementos programados dentro del hito  |
@@ -1922,7 +1867,7 @@ Este diccionario describe las clases involucradas en la gestión de proyectos de
 | Attribute         | Type                      | Description                                 |
 |-------------------|---------------------------|---------------------------------------------|
 | id                | TaskId                    | Identificador único de la tarea             |
-| name              | string                    | Nombre de la tarea                          |
+| name              | String                    | Nombre de la tarea                          |
 | specialty         | Specialty                 | Especialidad técnica de la tarea            |
 | status            | TaskStatus                | Estado actual de la tarea                   |
 | startingDate      | DateTime                  | Fecha de inicio de la tarea                 |
@@ -1950,9 +1895,9 @@ Este diccionario describe las clases involucradas en la gestión de cambios dent
 | id                      | ChangeProcessId           | Identificador único del proceso de cambio                      |
 | origin                  | ChangeOrigin              | Origen del cambio (solicitud o consulta técnica)              |
 | status                  | ChangeProcessStatus       | Estado actual del proceso de cambio                            |
-| justification           | string                    | Justificación del cambio                                       |
-| approvalNotes           | string?                   | Notas de aprobación (si aplica)                                |
-| rejectionReason         | string?                   | Razón del rechazo (si aplica)                                  |
+| justification           | String                    | Justificación del cambio                                       |
+| approvalNotes           | String?                   | Notas de aprobación (si aplica)                                |
+| rejectionReason         | String?                   | Razón del rechazo (si aplica)                                  |
 | response                | ChangeResponse?           | Respuesta formal emitida                                       |
 | changeOrder             | ChangeOrder?              | Orden de cambio generada                                      |
 | createdBy               | PersonId                  | Persona que inició el proceso                                  |
@@ -1973,8 +1918,8 @@ Este diccionario describe las clases involucradas en la gestión de cambios dent
 
 | Attribute   | Type          | Description                                |
 |-------------|---------------|--------------------------------------------|
-| id          | GUID          | Identificador único de la solicitud        |
-| description | string        | Descripción detallada del cambio solicitado|
+| id          | BIGINT          | Identificador único de la solicitud        |
+| description | String        | Descripción detallada del cambio solicitado|
 | createdBy   | PersonId      | Persona que realizó la solicitud           |
 | createdAt   | DateTime      | Fecha de creación de la solicitud          |
 
@@ -1986,8 +1931,8 @@ Este diccionario describe las clases involucradas en la gestión de cambios dent
 
 | Attribute   | Type          | Description                                     |
 |-------------|---------------|-------------------------------------------------|
-| id          | GUID          | Identificador único de la consulta              |
-| description | string        | Detalle de la consulta técnica                  |
+| id          | BIGINT          | Identificador único de la consulta              |
+| description | String        | Detalle de la consulta técnica                  |
 | createdBy   | PersonId      | Persona que emitió la consulta                  |
 | createdAt   | DateTime      | Fecha de creación de la consulta                |
 
@@ -1999,7 +1944,7 @@ Este diccionario describe las clases involucradas en la gestión de cambios dent
 
 | Attribute   | Type      | Description                            |
 |-------------|-----------|----------------------------------------|
-| content     | string    | Contenido de la respuesta              |
+| content     | String    | Contenido de la respuesta              |
 | createdAt   | DateTime  | Fecha de emisión de la respuesta       |
 
 ---
@@ -2010,7 +1955,7 @@ Este diccionario describe las clases involucradas en la gestión de cambios dent
 
 | Attribute     | Type      | Description                           |
 |---------------|-----------|---------------------------------------|
-| summary       | string    | Resumen del cambio autorizado         |
+| summary       | String    | Resumen del cambio autorizado         |
 | issuedBy      | PersonId  | Persona que emite la orden            |
 | issuedAt      | DateTime  | Fecha de emisión de la orden          |
 
@@ -2025,8 +1970,8 @@ Este diccionario describe las clases involucradas en la gestión de organizacion
 | Attribute             | Type                       | Description                                               |
 |-----------------------|----------------------------|-----------------------------------------------------------|
 | id                    | OrganizationId             | Identificador único de la organización                    |
-| legalName             | string                     | Razón social de la organización                           |
-| commercialName        | string                     | Nombre comercial de la organización                       |
+| legalName             | String                     | Razón social de la organización                           |
+| commercialName        | String                     | Nombre comercial de la organización                       |
 | ruc                   | Ruc                        | Número de RUC                                             |
 | createdBy             | PersonId                   | Persona que registró la organización                      |
 | createdAt             | DateTime                   | Fecha de creación                                         |
@@ -2061,108 +2006,13 @@ Este diccionario describe las clases involucradas en la gestión de organizacion
 
 | Attribute     | Type                     | Description                                           |
 |---------------|--------------------------|-------------------------------------------------------|
-| id            | GUID                     | Identificador único de la invitación                 |
+| id            | BIGINT                     | Identificador único de la invitación                 |
 | invitedBy     | OrganizationMemberId     | Miembro que realiza la invitación                   |
-| email         | string                   | Correo de la persona invitada                       |
+| email         | String                   | Correo de la persona invitada                       |
 | status        | InvitationStatus         | Estado de la invitación (PENDING, ACCEPTED, REJECTED)|
 | createdAt     | DateTime                 | Fecha de creación de la invitación                  |
 
-#### 4.7.2.4. Notifications Class Dictionary
-
-Este diccionario describe las clases involucradas en la gestión de notificaciones dentro del sistema PropGMS.
-
-**Class:** `Notification`
-- **Type**: Aggregate Root
-- **Description**: Representa una notificación enviada a un usuario sobre eventos relevantes dentro del sistema.
-
-| Attribute         | Type                       | Description                                               |
-|-------------------|----------------------------|-----------------------------------------------------------|
-| id                | NotificationId             | Identificador único de la notificación                    |
-| recipientId       | PersonId                   | Identificador del destinatario de la notificación         |
-| content           | string                     | Contenido del mensaje de la notificación                  |
-| category          | NotificationCategory       | Categoría de la notificación (ej. alerta, recordatorio)   |
-| isRead            | Boolean                    | Indica si la notificación ha sido leída                   |
-| createdAt         | DateTime                   | Fecha de creación de la notificación                      |
-| target            | NotificationTarget         | Objeto de referencia relacionado con la notificación      |
-
----
-
-**Class:** `NotificationTarget`
-- **Type**: Value Object
-- **Description**: Representa el objetivo al que está asociada una notificación (como una tarea, reunión, proyecto, etc.).
-
-| Attribute     | Type                     | Description                                           |
-|---------------|--------------------------|-------------------------------------------------------|
-| id            | GUID                     | Identificador del objeto relacionado                 |
-| type          | NotificationTargetType   | Tipo de objeto relacionado                           |
-
----
-
-**Class:** `NotificationCategory`
-- **Type**: Value Object
-- **Description**: Define la categoría de una notificación.
-
-| Attribute   | Type     | Description                          |
-|-------------|----------|--------------------------------------|
-| value       | string   | Valor que representa la categoría    |
-
-#### 4.7.2.5. Files Management Class Dictionary
-
-Este diccionario describe las clases involucradas en la gestión de archivos dentro del sistema PropGMS.
-
-**Class:** `File`
-- **Type**: Aggregate Root
-- **Description**: Representa un archivo digital almacenado en el sistema, incluyendo metadatos relevantes.
-
-| Attribute         | Type               | Description                                          |
-|-------------------|--------------------|------------------------------------------------------|
-| id                | FileId             | Identificador único del archivo                     |
-| name              | string             | Nombre del archivo                                  |
-| mimeType          | string             | Tipo MIME del archivo                               |
-| size              | Int                | Tamaño del archivo en bytes                         |
-| uploadedAt        | DateTime           | Fecha de carga del archivo                          |
-| uploadedBy        | OrganizationMemberId | Miembro que subió el archivo                      |
-| url               | string             | URL de acceso al archivo                            |
-| workspaceId       | WorkspaceId        | Espacio de trabajo al que pertenece el archivo      |
-
----
-
-**Class:** `FileReference`
-- **Type**: Entity
-- **Description**: Representa una referencia a un archivo desde otro elemento del sistema, como un contrato o tarea.
-
-| Attribute     | Type               | Description                                          |
-|---------------|--------------------|------------------------------------------------------|
-| id            | GUID               | Identificador de la referencia                      |
-| fileId        | FileId             | Identificador del archivo referenciado              |
-| source        | ReferenceSource    | Fuente que origina la referencia                    |
-
----
-
-**Class:** `ReferenceSource`
-- **Type**: Value Object
-- **Description**: Describe el objeto del sistema desde el cual se está referenciando un archivo.
-
-| Attribute   | Type                 | Description                                     |
-|-------------|----------------------|-------------------------------------------------|
-| id          | GUID                 | Identificador del objeto origen                |
-| type        | ReferenceSourceType  | Tipo del objeto origen                         |
-
----
-
-**Class:** `Folder`
-- **Type**: Entity
-- **Description**: Representa una carpeta que organiza referencias de archivos de forma jerárquica.
-
-| Attribute     | Type      | Description                                        |
-|---------------|-----------|----------------------------------------------------|
-| id            | GUID      | Identificador único de la carpeta                 |
-| name          | string    | Nombre de la carpeta                              |
-| parentId      | GUID?     | Identificador de la carpeta superior (si existe)  |
-| createdBy     | PersonId  | Persona que creó la carpeta                       |
-| createdAt     | DateTime  | Fecha de creación de la carpeta                   |
-
-#### 4.7.2.6. Identity and Access Management Class Dictionary
+#### 4.7.2.4. Identity and Access Management Class Dictionary
 
 Este diccionario describe las clases involucradas en la gestión de identidad y acceso dentro del sistema PropGMS.
 
@@ -2175,7 +2025,7 @@ Este diccionario describe las clases involucradas en la gestión de identidad y 
 | id            | UserId           | Identificador único de la cuenta                     |
 | fullName      | FullName         | Nombre completo del usuario                          |
 | email         | Email            | Correo electrónico del usuario                       |
-| passwordHash  | string           | Hash de la contraseña                                |
+| passwordHash  | String           | Hash de la contraseña                                |
 | role          | Role             | Rol del usuario en el sistema                        |
 | status        | AccountStatus    | Estado actual de la cuenta                           |
 
@@ -2195,7 +2045,7 @@ Este diccionario describe las clases involucradas en la gestión de identidad y 
 
 | Attribute     | Type                   | Description                                        |
 |---------------|------------------------|----------------------------------------------------|
-| id            | GUID                   | Identificador único de la solicitud               |
+| id            | BIGINT                   | Identificador único de la solicitud               |
 | fullName      | FullName               | Nombre completo del solicitante                  |
 | email         | Email                  | Correo electrónico del solicitante               |
 | status        | RegistrationRequestStatus | Estado de la solicitud de registro            |
@@ -2224,7 +2074,7 @@ Este diccionario describe las clases involucradas en la gestión de identidad y 
 
 | Attribute   | Type       | Description                                 |
 |-------------|------------|---------------------------------------------|
-| token       | string     | Token de acceso                             |
+| token       | String     | Token de acceso                             |
 | issuedAt    | DateTime   | Fecha de emisión del token                  |
 | expiresAt   | DateTime   | Fecha de expiración del token               |
 
@@ -2236,7 +2086,7 @@ Este diccionario describe las clases involucradas en la gestión de identidad y 
 
 | Attribute     | Type      | Description                            |
 |---------------|-----------|----------------------------------------|
-| id            | GUID      | Identificador de la sesión             |
+| id            | UUID      | Identificador de la sesión             |
 | userId        | UserId    | Usuario asociado a la sesión           |
 | createdAt     | DateTime  | Fecha de inicio de la sesión           |
 | expiredAt     | DateTime  | Fecha de expiración de la sesión       |
@@ -2249,152 +2099,10 @@ Este diccionario describe las clases involucradas en la gestión de identidad y 
 
 | Attribute   | Type       | Description                                   |
 |-------------|------------|-----------------------------------------------|
-| token       | string     | Token único de restablecimiento               |
+| token       | String     | Token único de restablecimiento               |
 | userId      | UserId     | Cuenta asociada al token                      |
 | expiresAt   | DateTime   | Fecha de expiración del token                 |
 
-#### 4.7.2.7. Subscription Class Dictionary
-
-Este diccionario describe las clases involucradas en la gestión de suscripciones dentro del sistema PropGMS.
-
-**Class:** `Subscription`
-- **Type**: Aggregate Root
-- **Description**: Representa una suscripción activa o pasada que una organización ha adquirido para acceder a funcionalidades del sistema.
-
-| Attribute         | Type                      | Description                                               |
-|-------------------|---------------------------|-----------------------------------------------------------|
-| id                | SubscriptionId            | Identificador único de la suscripción                     |
-| plan              | SubscriptionPlan          | Plan asociado a la suscripción                            |
-| status            | SubscriptionStatus        | Estado actual de la suscripción                           |
-| startDate         | DateTime                  | Fecha de inicio de la suscripción                         |
-| endDate           | DateTime                  | Fecha de fin de la suscripción                            |
-| autoRenew         | Boolean                   | Indica si la suscripción se renovará automáticamente      |
-| price             | Money                     | Precio de la suscripción                                  |
-| assignedWorkspace | WorkspaceId               | Workspace asociado a esta suscripción                     |
-
-| Method                          | Return Type | Description                                               |
-|----------------------------------|-------------|-----------------------------------------------------------|
-| activate()                      | void        | Activa la suscripción                                     |
-| cancel()                        | void        | Cancela la suscripción                                    |
-| renew()                         | void        | Renueva la suscripción si está activa                     |
-| expire()                        | void        | Marca la suscripción como expirada                        |
-
----
-
-**Class:** `SubscriptionPlan`
-- **Type**: Entity
-- **Description**: Define un plan de suscripción con su configuración y límites.
-
-| Attribute             | Type     | Description                                                |
-|-----------------------|----------|------------------------------------------------------------|
-| id                    | PlanId   | Identificador del plan                                     |
-| name                  | string   | Nombre del plan                                            |
-| durationInDays        | Int      | Duración del plan en días                                  |
-| price                 | Money    | Precio del plan                                            |
-| maxMembers            | Int      | Límite de miembros permitidos                              |
-| maxProjects           | Int      | Límite de proyectos permitidos                             |
-| maxStorageMB          | Int      | Límite de almacenamiento en MB                             |
-| features              | List<string> | Lista de características incluidas en el plan         |
-
----
-
-**Class:** `Workspace`
-- **Type**: Entity
-- **Description**: Representa el espacio digital de trabajo asignado a una organización.
-
-| Attribute     | Type          | Description                                      |
-|---------------|---------------|--------------------------------------------------|
-| id            | WorkspaceId   | Identificador único del workspace               |
-| name          | string        | Nombre del workspace                            |
-| ownerId       | OrganizationId| Organización propietaria del workspace          |
-| currentSubscription | SubscriptionId? | Suscripción actualmente activa              |
-
-#### 4.7.2.8. Billing Class Dictionary
-
-Este diccionario describe las clases involucradas en la gestión de facturación dentro del sistema PropGMS.
-
-**Class:** `Invoice`
-- **Type**: Aggregate Root
-- **Description**: Representa una factura generada por el sistema para una organización o usuario.
-
-| Attribute         | Type              | Description                                              |
-|-------------------|-------------------|----------------------------------------------------------|
-| id                | InvoiceId         | Identificador único de la factura                       |
-| payer             | PersonId          | Persona responsable del pago                            |
-| issuedAt          | DateTime          | Fecha de emisión de la factura                          |
-| dueDate           | DateTime          | Fecha de vencimiento de la factura                      |
-| status            | PaymentStatus     | Estado actual del pago de la factura                    |
-| items             | List<BillingItem> | Ítems incluidos en la factura                           |
-
-| Method                          | Return Type | Description                                               |
-|----------------------------------|-------------|-----------------------------------------------------------|
-| calculateTotal()                | Money       | Calcula el monto total de la factura                      |
-| markAsPaid()                    | void        | Marca la factura como pagada                              |
-| isOverdue()                     | boolean     | Verifica si la factura se encuentra vencida               |
-
----
-
-**Class:** `BillingItem`
-- **Type**: Entity
-- **Description**: Representa un ítem específico dentro de una factura.
-
-| Attribute   | Type     | Description                          |
-|-------------|----------|--------------------------------------|
-| name        | string   | Nombre del ítem                      |
-| unitPrice   | Money    | Precio unitario del ítem             |
-| quantity    | Int      | Cantidad facturada                   |
-| subtotal    | Money    | Subtotal calculado                   |
-
-#### 4.7.2.9. Payments Class Dictionary
-
-Este diccionario describe las clases involucradas en la gestión de pagos dentro del sistema PropGMS.
-
-**Class:** `Payment`
-- **Type**: Aggregate Root
-- **Description**: Representa un pago realizado para una factura específica.
-
-| Attribute         | Type                          | Description                                                |
-|-------------------|-------------------------------|------------------------------------------------------------|
-| id                | PaymentId                     | Identificador único del pago                               |
-| amount            | Money                         | Monto pagado                                               |
-| method            | PaymentMethodType             | Método de pago utilizado                                   |
-| status            | PaymentStatus                 | Estado actual del pago                                     |
-| paidAt            | DateTime                      | Fecha en la que se realizó el pago                         |
-| recurringAgreement| RecurringPaymentAgreement?    | Acuerdo de pago recurrente (si aplica)                     |
-
-| Method                          | Return Type | Description                                               |
-|----------------------------------|-------------|-----------------------------------------------------------|
-| confirm()                       | void        | Confirma el pago                                          |
-| fail(reason)                    | void        | Marca el pago como fallido                                |
-| authorize()                     | void        | Autoriza el pago antes de confirmarlo                     |
-
----
-
-**Class:** `Transaction`
-- **Type**: Entity
-- **Description**: Representa un intento de realizar un pago, exitoso o fallido.
-
-| Attribute   | Type            | Description                                |
-|-------------|------------------|--------------------------------------------|
-| id          | GUID            | Identificador de la transacción            |
-| paymentId   | PaymentId       | Pago al que pertenece la transacción       |
-| status      | TransactionStatus| Estado de la transacción                   |
-| attemptedAt | DateTime        | Fecha del intento de transacción           |
-| message     | string          | Mensaje de respuesta del gateway           |
-
----
-
-**Class:** `RecurringPaymentAgreement`
-- **Type**: Entity
-- **Description**: Representa un acuerdo de pagos recurrentes para renovar automáticamente suscripciones.
-
-| Attribute     | Type      | Description                                      |
-|---------------|-----------|--------------------------------------------------|
-| id            | GUID      | Identificador del acuerdo                        |
-| method        | PaymentMethodType | Método utilizado para los pagos recurrentes  |
-| frequency     | string    | Frecuencia del cobro (mensual, anual, etc.)      |
-| startDate     | DateTime  | Fecha de inicio del acuerdo                      |
-| status        | string    | Estado del acuerdo                               |
 
 <div style="page-break-before: always;"></div>
 
@@ -2410,7 +2118,7 @@ Se identifican entidades clave como projects, tasks, invoices, payments, user_ac
 
 El diseño promueve escalabilidad, trazabilidad y una clara separación de responsabilidades, facilitando tanto el mantenimiento como la extensión futura del sistema.
 
-<img src="../img/chapter4/db/general.svg" alt="Diagrama de base de datos general de ProP GMS">
+<img src="../img/chapter4/db/General.svg" alt="Diagrama de base de datos general de ProP GMS">
 
 #### 4.8.1.1. Project Management Database Diagram
 
@@ -2420,7 +2128,7 @@ Cada proyecto se clasifica mediante la tabla project_status y se vincula con un 
 
 Las reuniones de coordinación también están modeladas, permitiendo registrar su temática, fechas y participantes. Este diseño facilita la planificación, el control de avance y la trazabilidad técnica del proyecto, asegurando una gestión estructurada y alineada con los procesos reales de consultoras y contratistas técnicos.
 
-<img src="../img/chapter4/db/projects.png" alt="Diagrama de base de datos del bounded context Project Management de ProP GMS">
+<img src="../img/chapter4/db/project.png" alt="Diagrama de base de datos del bounded context Project Management de ProP GMS">
 
 #### 4.8.1.2. Change Management Database Diagram
 
@@ -2442,25 +2150,7 @@ Este diseño permite tener un control completo sobre el ciclo de vida de una org
 
 <img src="../img/chapter4/db/organizations.png" alt="Diagrama de base de datos del bounded context Organization de ProP GMS">
 
-#### 4.8.1.4. Notification Database Diagram
-
-El diseño del contexto de notificaciones permite gestionar la comunicación interna del sistema PropGMS dirigida a usuarios. La tabla notifications almacena los mensajes que se envían a cada persona, registrando su título, contenido, destinatario, fecha de creación y la categoría de la notificación.
-
-Las categorías disponibles están definidas en la tabla notification_categories, que permite clasificar los mensajes como informativos, alertas, recordatorios, entre otros. Esta estructura facilita una experiencia más clara y ordenada para los usuarios, permitiendo diferenciar el tipo y propósito de cada notificación dentro de la plataforma.
-
-<img src="../img/chapter4/db/notifications.png" alt="Diagrama de base de datos del bounded context Notifications de ProP GMS">
-
-#### 4.8.1.5. File Database Diagram
-
-El contexto de gestión de archivos permite organizar y clasificar los documentos digitales que se generan o se utilizan dentro del sistema PropGMS. La tabla principal files almacena información clave de cada archivo, como su tamaño, ubicación, fecha de carga, autor y su tipo.
-
-Los archivos pueden agruparse opcionalmente dentro de carpetas, modeladas en la tabla folders, que además se encuentran asociadas a un espacio de trabajo específico. Cada archivo también está clasificado por tipo mediante la tabla file_type, lo que permite diferenciar su propósito o categoría, como contratos, entregas o documentos técnicos.
-
-Este diseño facilita una organización clara y estructurada de los recursos digitales, asegurando su trazabilidad y una experiencia eficiente de gestión documental.
-
-<img src="../img/chapter4/db/files.png" alt="Diagrama de base de datos del bounded context Files Management de ProP GMS">
-
-#### 4.8.1.6. IAM Database Diagram
+#### 4.8.1.4. IAM Database Diagram
 
 El contexto de gestión de identidad y acceso permite administrar las credenciales y el estado de los usuarios del sistema PropGMS. La tabla user_accounts almacena los datos de inicio de sesión, incluyendo tipo de usuario, estado de la cuenta, fechas relevantes y vínculo opcional con la tabla persons, donde se detalla información personal como nombre completo, correo y teléfono.
 
@@ -2469,37 +2159,6 @@ Cada cuenta está categorizada según su tipo mediante la tabla user_types y su 
 Este diseño proporciona una base robusta para la autenticación, autorización y trazabilidad de los usuarios dentro de la plataforma, garantizando seguridad y control en el acceso al sistema.
 
 <img src="../img/chapter4/db/iam.png" alt="Diagrama de base de datos del bounded context IAM de ProP GMS">
-
-#### 4.8.1.7. Subscription Database Diagram
-
-El contexto de suscripciones permite administrar los planes comerciales que habilitan el acceso a las funcionalidades del sistema PropGMS. La tabla subscriptions registra cada suscripción adquirida, incluyendo su plan, duración, costo, estado y la persona asociada.
-
-Los planes disponibles están definidos en la tabla subscription_plans, donde se especifican características como duración en días, capacidad máxima de miembros, almacenamiento y número de proyectos. El estado actual de cada suscripción se controla mediante la tabla subscription_statuses.
-
-<img src="../img/chapter4/db/subscriptions.png" alt="Diagrama de base de datos del bounded context Subscription de ProP GMS">
-
-#### 4.8.1.8. Billing Database Diagram
-
-El contexto de facturación permite registrar y estructurar las transacciones comerciales dentro del sistema PropGMS. La tabla principal invoices representa las facturas emitidas a los usuarios o entidades, incluyendo montos, fechas clave, moneda utilizada y estado de pago, gestionado a través de la tabla payment_statuses.
-
-Cada factura puede incluir múltiples ítems, detallados en la tabla billing_items, donde se especifican los conceptos facturados, sus precios unitarios y subtotales. Esta organización permite una descomposición clara de los servicios cobrados, facilitando tanto el seguimiento contable como la generación de reportes.
-
-Este modelo de datos asegura que los procesos de cobro sean transparentes, auditables y fácilmente integrables con otros componentes financieros del sistema.
-
-<img src="../img/chapter4/db/billings.png" alt="Diagrama de base de datos del bounded context Billing de ProP GMS">
-
-#### 4.8.1.9. Payment Database Diagram
-
-El contexto de pagos se encarga de registrar las operaciones financieras asociadas al cobro de facturas dentro del sistema PropGMS. La tabla payments almacena cada pago realizado, incluyendo su monto, moneda, método utilizado, estado, fecha de realización y la factura a la que corresponde.
-
-El diseño contempla acuerdos de pago recurrente, representados en la tabla recurring_payment_agreements, que permiten automatizar la facturación periódica según el método de pago asociado, especificado en la tabla payment_method_types.
-
-Cada pago puede tener múltiples intentos de transacción registrados en la tabla transactions, la cual guarda la respuesta del gateway de pagos junto con su estado, definido por la tabla transaction_statuses. El estado general del pago se controla mediante la tabla payment_statuses.
-
-Esta estructura robusta permite gestionar pagos únicos y recurrentes con trazabilidad completa de los intentos y resultados, facilitando la integración con plataformas de pago externas.
-
-<img src="../img/chapter4/db/payments.png" alt="Diagrama de base de datos del bounded context Payments de ProP GMS">
-
 
 <div style="page-break-before: always;"></div>
 

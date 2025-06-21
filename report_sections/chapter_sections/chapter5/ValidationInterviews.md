@@ -516,56 +516,108 @@ En este apartado se exponen las metas de usuarios en concordancia con nuestras e
 
 <div style="page-break-after: always;"></div>
 
-### 5.3.3. Análisis de entrevistas
+### 5.3.3 UX Heuristics & Principles Evaluation 
 
-**CONTRATISTAS**
+**Usability – Inclusive Design – Information Architecture**
 
-**1. Resumen:** Este segmento agrupa a clientes entre 52 y 57 años que han acumulado experiencia y estabilidad profesional a lo largo de su carrera. Por lo general, buscan materializar proyectos grandes en el ámbito privado como público. Valoran la transparencia, el seguimiento detallado del avance de obra y el cumplimiento estricto de tiempos y presupuestos, asegurándose de que el resultado final sea funcional, duradero y alineado con su visión.
+**CARRERA**  : Ingeniería de Software  
+**CURSO**    : Aplicaciones Web  
+**SECCIÓN**  : 4363
+**PROFESORES**: Todos  
+**AUDITOR**  : PaxTech  
+**CLIENTE(S)**: Andrea Aponte, Fabrizio León, Mario Lopez, Álvaro Orozco y Henry Reaño
 
-**2. Edad:** Las edades de los entrevistados de este segmento varían desde los 52 hasta los 57 años de edad. Se toma como edad representativa la media aritmética de los datos.
+##### SITE o APP A EVALUAR:  
+PropGMS
 
-| Entrevistado | Victor León | Raúl Reaño | William Salcedo | Valor representativo |
-|-|-|-|-|-|
-| **Edad** | 52 | 56 | 57 | 55 |
+##### TAREAS A EVALUAR:  
+1. Registro de un usuario nuevo
+2. Creación de una organización
+3. Configuración de una organización
+4. Invitación de una organización
+5. Aceptar invitación de una organización
+6. Rechazar invitación de una organización
 
-**3. Personalidad:** La totalidad de los entrevistados (100%) se alínean al arquetipo de personalidad *Guardián*, debido a su respeto irrestricto y meticuloso de las normas y acuerdos. Se toma este arquetipo de personalidad como representativo.
+No estan incluidas en esta versión de la evaluación las siguientes tareas:
+1. Creación de un proyecto
+2. Configuración de un proyecto
+3. Gestionar equipo de un proyecto
+4. Crear tarea
+5. Crear reunión
+6. Asignar responsables a tareas
 
-| Entrevistado | Victor León | Raúl Reaño | William Salcedo | Valor representativo |
-|-|-|-|-|-|
-| **Personalidad** | Guardián | Guardián | Guardián | Guardián |
+##### ESCALA DE SEVERIDAD:
 
-<div style="page-break-after: always;"></div>
+Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
 
-**ESPECIALISTA DE ÁREA**
+| Nivel | Descripción |
+|-------|-------------|
+| 1     | Problema superficial: puede ser fácilmente superado por el usuario o ocurre con muy poco frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo. |
+| 2     | Problema menor: puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja resolverlo de cara al siguiente release. |
+| 3     | Problema mayor: ocurre frecuentemente o los usuarios no son capaces de resolverlos. Es importante que sean corregidos y se les debe asignar una prioridad alta. |
+| 4     | Problema muy grave: un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento. |
 
-**1. Resumen:** Los especialistas de área son en su mayoría varones adultos entre los 26 y 30 años, con formación en Ingeniería Civil y experiencia desarrollada dentro de una especialidad técnica. Muchos de ellos llegaron a su posición actual a través de la práctica profesional en empresas del rubro, aunque algunas áreas, como TI, requieren formación específica. Son personas estructuradas, con un fuerte apego a las normas y procesos establecidos, lo que les permite mantener el orden en sus funciones. Sin embargo, enfrentan ciertas dificultades en la comunicación con otras especialidades, influenciadas por la rigidez de las estructuras organizacionales en las que trabajan.
+---
 
-**2. Edad:** Las edades de los entrevistados de este segmento varían desde los 26 hasta los 30 años de edad. Se toma como edad representativa la media aritmética de los datos.
+###### TABLA RESUMEN:
 
-| Entrevistado | Victor Reinoso | Jorge Garcia | Raul Medina | Valor representativo |
-|-|-|-|-|-|
-| **Edad** | 26 | 27 | 30 | 28 |
+| # | Problema | Escala de severidad | Heurística/Principio violado(a) |
+|---|----------|---------------------|---------------------------------|
+| 1 | La pantalla se rompe levemente en la sección de notificaciones de un worker cuando este no tiene invitaciones vinculadas a el. | 1 | Usabilidad: Diseño estético y minimalista |
+| 2 | Cambiar la razón social y nombre comercial de la organización resulta poco intuitivo. | 1 | Usabilidad: Reconocer en lugar de recordar |
+| 3 | Enviar invitación a una organización no valida si se envia invitación a uno mismo | 2 | Usabilidad: Prevención de errores |
+| 4 | En la creación de cuenta no se especifica que se debe utilizar el formato E.164 para el número de telefono | 3 | Usabilidad: Ayuda y documentación |
 
-**3. Personalidad:** La gran mayoría de los entrevistados (100%) se alínean al arquetipo de personalidad *Guardián*, mientras que la menor parte (33.3%) refleja una personalidad de tipo *Racional*. Se toma el arquetipo *Guardián* como representativo.
+###### DESCRIPCIÓN DE PROBLEMAS:
 
-| Entrevistado | Victor Reinoso | Jorge Garcia | Raul Medina | Valor representativo |
-|-|-|-|-|-|
-| **Personalidad** | Racional | Guardián | Guardián | Guardián |
+**PROBLEMA #1:** La pantalla se rompe levemente en la sección de notificaciones de un worker cuando este no tiene invitaciones vinculadas a el
 
-<div style="page-break-after: always;"></div>
+Severidad: 1
+Heurística violada: Usabilidad - Diseño estético y minimalista
 
-**ENTIDAD CONTRATANTE**
+Problema:
+Cuando ingresamos sesión con un usuario de tipo WORKER y nos dirigimos a la sección de invitaciones podemos observar como el componente de notificaciones se rompe por completo al no tener ninguna invitación cargada. 
 
-**1. Resumen:** Los clientes (formalmente llamados "La Entidad Contratante") son predominantemente varones adultos jóvenes entre los 27 y 28 años de edad, con entre 1 y 3 años de experiencia laboral. Se destacan por ser ambiciosos y estratégicos, pensar bien las cosas y tener mucho cuidado de que “todo marche de acuerdo al plan”. Buscan los servicios de consultoría principalmente para la planificación de su primera vivienda a futuro. Sus principales preocupaciones son el cumplimiento de plazos y la satisfacción de sus expectativas.
+<img src="../../../img/chapter5/Sprint3/Heuristics/problema1.png">
 
-**2. Edad:** Las edades de los entrevistados de este segmento varían desde los 27 hasta los 28 años de edad. Se toma como edad representativa la media aritmética de los datos.
+Recomendación:
+Validar en el componente cuando no exista ningun elemento para que el ancho del componente no se vea disminuido y el largo se estire por toda la pantalla.
 
-| Entrevistado | Leonardo Caballa | Álvaro Torres | Aaron Ravines | Valor representativo |
-|-|-|-|-|-|
-| **Edad** | 28 | 27 | 27 | 27 |
+**PROBLEMA #2:** Cambiar la razón social y nombre comercial de la organización resulta poco intuitivo
 
-**3. Personalidad:** La totalidad de los entrevistados (100%) se alínean al arquetipo de personalidad *Idealista*, debido a que reflejan un alto grado de meticulosidad, cuidado y respeto a la ley de por medio a lograr sus objetivos personales.
+Severidad: 1
+Heurística violada: Usabilidad - Reconocer en lugar de recordar
 
-| Entrevistado | Leonardo Caballa | Álvaro Torres | Aaron Ravines | Valor representativo |
-|-|-|-|-|-|
-| **Edad** | 28 | 27 | 27 | 27 |
+Problema:
+Al momento de dirigirnos a las configuraciones de una organización observamos dos labels que corresponden a su razón social y nombre comercial, justo debajo de estos existe un botón verde el cual nos dice "Guardar cambios". Sin embargo, consideramos que esta interfaz es poco intuitiva por el hecho de que todo se ve demasiado junto.
+
+<img src="../../../img/chapter5/Sprint3/Heuristics/problema2.png">
+
+Recomendación:
+Hacer que los componentes tengan más respiración. Aumentar la distancia entre los mismos. Además, señalar explicitamente que dentro de configuraciones se pueden hacer ediciones de la razón social y nombre comercial de la organización.
+
+**PROBLEMA #3:** Enviar invitación a una organización no valida si se envia invitación a uno mismo
+
+Severidad: 2
+Heurística violada: Usabilidad - Prevención de errores
+
+Problema:
+Cuando nos encontramos dentro de una organización y nos dirigimos a la sección "Miembros", podemos hacer invitaciones a personas registradas para que puedan unirse a la organización. Sin embargo, no existe la validación de no enviarse invitaciones a si mismo. Este aspecto no tiene sentido ya que una persona no puede invitarse a una organización que el mismo ha creado.
+
+<img src="../../../img/chapter5/Sprint3/Aplication/problema3.png">
+
+Recomendación:
+Validar a través de una query si una persona y una organización ya se encuentran vinculadas a través de una invitación. En caso eso sea cierto podemos simplemente anular la invitación que se esta queriendo generar.
+
+**PROBLEMA #4:** En la creación de cuenta no se especifica que se debe utilizar el formato E.164 para el número de telefono
+
+Severidad: 3
+Heurística violada: Usabilidad - Ayuda y documentación
+
+Problema:
+Al momento de crear una cuenta no se especifica en ningun momento que el usuario debe ingresar su número de telefono en el formato E.164, es decir con el prefijo de su páis. Además, el mensaje de error no especifica absolutamente nada. Este si es un problema serio pues los nuevos usuarios pueden estancarse y no poder crear su cuenta.
+
+<img src="../../../img/chapter5/Sprint3/Heuristics/problema4.png">
+
+Recomendación:
+Se podría hacer dos cosas para solucionar este problema. En primer lugar, se podría informar al usuario a través de un mensaje de error el formato en el cual debe ingresar su número de telefono. En segundo lugar, se podría simplemente colocar un componente Select con todos los prefijos de distintos países en los cuales PropGMS trabaja, así el usuario, intuitivamente escogería el de su país.
