@@ -42,3 +42,13 @@ Para este entregable que ha elaborado el informe desde el capitulo I hasta el ca
 Para este entregable se ha modificado principalmente el contenido del capítulo III y IV.
 
 <img src="../img/insight_tp.png">
+
+**TB2**
+
+Para este entregable se ha modificado principalmente el contenido del capítulo IV y V.
+
+<img src="../img/insight_tb2.png">
+
+**TF**
+
+Para este entregable se ha modificado principalmente el contenido del capítulo V.
