@@ -32,7 +32,7 @@
   </tr>
   <tr>
     <th>Sprint 3 Review Summary</th>
-    <td colspan="3">El sprint anterior logró realizar la implementación deL backend utilizando el framework de Angular. Se logró realizar un avance de la implementación del Web Application front-end. Sin embargo, este quedó inconcluso y quedaron múltiples task pendientes en estado "To-Do".</td>
+    <td colspan="3">El sprint anterior logró realizar la implementación del backend utilizando C# y el framework .NET. Se logró un avance en la implementación del Web Application front-end; sin embargo, este quedó inconcluso y quedaron múltiples tareas pendientes en estado "To-Do".</td>
   </tr>
   <tr>
     <th>Sprint 3 Retrospective Summary</th>
@@ -100,6 +100,20 @@ Para el Sprint 4, se proyectan actividades como y la implementación de las vist
 
 #### 5.2.4.3. Sprint Backlog 4
 
+<img src="../../../../img/chapter5/Sprint1/sprintbacklog.png">
+
+<a href="https://galaxiawonder.youtrack.cloud/dashboard?id=213-2" target="_blank">Ver tablero en YouTrack</a>
+
+<b>Credenciales:</b>
+<ul>
+  <li>
+    Correo: 
+    <span style="cursor: default; color: inherit; text-decoration: none;">
+      invitadogw&#64;galaxiawonder.com
+    </span>
+  </li>
+  <li>Contraseña: GA14x4W0nd3r</li>
+</ul>
 
 <table cellpadding="6" cellspacing="0">
   <tr>
@@ -709,106 +723,6 @@ Para el Sprint 4, se proyectan actividades como y la implementación de las vist
   <td>Reaño Delgadillo, Henry Paolo</td>
   <td>Done</td>
 </tr>
-
-<tr>
-  <td>TS30</td>
-  <td>Consultar notificaciones de usuario</td>
-  <td>TS30-1</td>
-  <td>Consultar notificaciones exitosamente</td>
-  <td>Implementar GET para devolver lista de notificaciones con 200 OK</td>
-  <td>2</td>
-  <td>León Vivas, Fabrizio Amir</td>
-  <td>Done</td>
-</tr>
-<tr>
-  <td></td><td></td>
-  <td>TS30-2</td>
-  <td>Usuario sin notificaciones o no encontrado</td>
-  <td>Responder 200 con lista vacía o 404 si el usuario no existe</td>
-  <td>2</td>
-  <td>León Vivas, Fabrizio Amir</td>
-  <td>Done</td>
-</tr>
-<tr>
-  <td>TS31</td>
-  <td>Marcar notificación como leída</td>
-  <td>TS31-1</td>
-  <td>Marcar notificación exitosamente</td>
-  <td>Implementar PATCH para marcar notificación como leída con 200 OK</td>
-  <td>2</td>
-  <td>Reaño Delgadillo, Henry Paolo</td>
-  <td>Done</td>
-</tr>
-<tr>
-  <td></td><td></td>
-  <td>TS31-2</td>
-  <td>Validar notificación inexistente o acceso no autorizado</td>
-  <td>Responder 404 o 403 si no existe o el usuario no tiene permiso</td>
-  <td>2</td>
-  <td>Reaño Delgadillo, Henry Paolo</td>
-  <td>Done</td>
-</tr>
-
-<tr>
-  <td>TS32</td>
-  <td>Obtener detalles de perfil</td>
-  <td>TS32-1</td>
-  <td>Obtener detalles exitosamente</td>
-  <td>Implementar GET /users/profile para devolver datos completos con 200 OK</td>
-  <td>2</td>
-  <td>León Vivas, Fabrizio Amir</td>
-  <td>Done</td>
-</tr>
-<tr>
-  <td></td><td></td>
-  <td>TS32-2</td>
-  <td>Validar usuario no autenticado o error interno</td>
-  <td>Responder 401 o 500 según el caso</td>
-  <td>2</td>
-  <td>León Vivas, Fabrizio Amir</td>
-  <td>Done</td>
-</tr>
-
-<tr>
-  <td>TS33</td>
-  <td>Actualizar datos personales</td>
-  <td>TS33-1</td>
-  <td>Actualizar datos exitosamente</td>
-  <td>Implementar PUT para modificar nombre/correo y devolver 200 OK</td>
-  <td>2</td>
-  <td>Reaño Delgadillo, Henry Paolo</td>
-  <td>Done</td>
-</tr>
-<tr>
-  <td></td><td></td>
-  <td>TS33-2</td>
-  <td>Validar campos vacíos o formato inválido</td>
-  <td>Responder 400 si faltan campos obligatorios o hay formato incorrecto</td>
-  <td>2</td>
-  <td>Reaño Delgadillo, Henry Paolo</td>
-  <td>Done</td>
-</tr>
-
-<tr>
-  <td>TS34</td>
-  <td>Actualizar datos de perfil</td>
-  <td>TS34-1</td>
-  <td>Actualizar perfil exitosamente</td>
-  <td>Implementar PUT para actualizar ocupación, experiencia, etc. con 200 OK</td>
-  <td>2</td>
-  <td>León Vivas, Fabrizio Amir</td>
-  <td>Done</td>
-</tr>
-<tr>
-  <td></td><td></td>
-  <td>TS34-2</td>
-  <td>Validar campos obligatorios o datos inválidos</td>
-  <td>Responder 400 si faltan campos o hay datos inválidos</td>
-  <td>2</td>
-  <td>León Vivas, Fabrizio Amir</td>
-  <td>Done</td>
-</tr>
-
 <tr>
   <td>TS35</td>
   <td>Login</td>
@@ -875,7 +789,7 @@ Para el Sprint 4, se proyectan actividades como y la implementación de las vist
   <td>Registro exitoso</td>
   <td>Implementar POST para crear cuenta con 201 Created y enviar verificación</td>
   <td>2</td>
-  <td>León Vivas, Fabrizio Amir</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
   <td>Done</td>
 </tr>
 <tr>
@@ -883,37 +797,6 @@ Para el Sprint 4, se proyectan actividades como y la implementación de las vist
   <td>TS38-2</td>
   <td>Validar email ya registrado o datos inválidos</td>
   <td>Responder 409 o 400 según el error</td>
-  <td>2</td>
-  <td>León Vivas, Fabrizio Amir</td>
-  <td>Done</td>
-</tr>
-
-<tr>
-  <td>TS39</td>
-  <td>Cambiar contraseña</td>
-  <td>TS39-1</td>
-  <td>Cambio de contraseña exitoso</td>
-  <td>Implementar PUT para actualizar contraseña actual con 200 OK</td>
-  <td>2</td>
-  <td>Reaño Delgadillo, Henry Paolo</td>
-  <td>Done</td>
-</tr>
-<tr>
-  <td></td><td></td>
-  <td>TS39-2</td>
-  <td>Validar contraseña incorrecta o campos faltantes</td>
-  <td>Responder 401 o 400 si la contraseña actual es incorrecta o faltan datos</td>
-  <td>2</td>
-  <td>Reaño Delgadillo, Henry Paolo</td>
-  <td>Done</td>
-</tr>
-
-<tr>
-  <td>TS40</td>
-  <td>Solicitar recuperar contraseña</td>
-  <td>TS40-1</td>
-  <td>Solicitud de recuperación exitosa</td>
-  <td>Implementar POST para enviar enlace de recuperación con 200 OK</td>
   <td>2</td>
   <td>León Vivas, Fabrizio Amir</td>
   <td>Done</td>
@@ -928,16 +811,6 @@ Para el Sprint 4, se proyectan actividades como y la implementación de las vist
   <td>Done</td>
 </tr>
 <tr>
-  <td>TS41</td>
-  <td>Renovar contraseña</td>
-  <td>TS41-1</td>
-  <td>Renovar contraseña exitosamente</td>
-  <td>Implementar POST para actualizar contraseña con token válido con 200 OK</td>
-  <td>2</td>
-  <td>Reaño Delgadillo, Henry Paolo</td>
-  <td>Done</td>
-</tr>
-<tr>
   <td></td><td></td>
   <td>TS41-2</td>
   <td>Validar token inválido o campos faltantes</td>
@@ -945,7 +818,6 @@ Para el Sprint 4, se proyectan actividades como y la implementación de las vist
   <td>2</td>
   <td>Reaño Delgadillo, Henry Paolo</td>
   <td>Done</td>
-</tr>
 
 <tr>
   <td>TS42</td>
@@ -954,47 +826,8 @@ Para el Sprint 4, se proyectan actividades como y la implementación de las vist
   <td>Almacenar contraseña de forma segura</td>
   <td>Generar salt y hash con bcrypt al guardar contraseña</td>
   <td>2</td>
-  <td>Le
-<tr>
-  <td>TS46</td>
-  <td>Visualizar plan de suscripción</td>
-  <td>TS46-1</td>
-  <td>Obtener detalles de plan exitosamente</td>
-  <td>Implementar GET para devolver datos del plan actual con 200 OK</td>
-  <td>2</td>
   <td>León Vivas, Fabrizio Amir</td>
   <td>Done</td>
-</tr>
-<tr>
-  <td></td><td></td>
-  <td>TS46-2</td>
-  <td>Validar usuario sin suscripción activa</td>
-  <td>Responder 404 Not Found si no hay suscripción activa</td>
-  <td>2</td>
-  <td>León Vivas, Fabrizio Amir</td>
-  <td>Done</td>
-</tr>
-
-<tr>
-  <td>TS47</td>
-  <td>Pagar factura</td>
-  <td>TS47-1</td>
-  <td>Pagar factura exitosamente</td>
-  <td>Implementar POST para procesar pago con pasarela y devolver 200 OK</td>
-  <td>2</td>
-  <td>Reaño Delgadillo, Henry Paolo</td>
-  <td>Done</td>
-</tr>
-<tr>
-  <td></td><td></td>
-  <td>TS47-2</td>
-  <td>Validar pago rechazado o factura inexistente</td>
-  <td>Responder 400 o 404 según sea rechazo o inexistencia</td>
-  <td>2</td>
-  <td>Reaño Delgadillo, Henry Paolo</td>
-  <td>Done</td>
-</tr>
-
 <tr>
   <td>TS48</td>
   <td>Eliminar proyecto (soft delete)</td>
@@ -1014,7 +847,6 @@ Para el Sprint 4, se proyectan actividades como y la implementación de las vist
   <td>León Vivas, Fabrizio Amir</td>
   <td>Done</td>
 </tr>
-
 <tr>
   <td>TS49</td>
   <td>Eliminar usuario de proyecto</td>
@@ -1034,146 +866,6 @@ Para el Sprint 4, se proyectan actividades como y la implementación de las vist
   <td>Reaño Delgadillo, Henry Paolo</td>
   <td>Done</td>
 </tr>
-
-<tr>
-  <td>TS50</td>
-  <td>Subir entregable de tarea</td>
-  <td>TS50-1</td>
-  <td>Subir entregable exitosamente</td>
-  <td>Implementar POST para aceptar archivo válido y devolver 201 Created</td>
-  <td>2</td>
-  <td>León Vivas, Fabrizio Amir</td>
-  <td>Done</td>
-</tr>
-<tr>
-  <td></td><td></td>
-  <td>TS50-2</td>
-  <td>Validar archivo inválido o tarea no encontrada</td>
-  <td>Responder 400 o 404 si el archivo es inválido o la tarea no existe</td>
-  <td>2</td>
-  <td>León Vivas, Fabrizio Amir</td>
-  <td>Done</td>
-</tr>
-<tr>
-  <td>TS51</td>
-  <td>Eliminar tarea</td>
-  <td>TS51-1</td>
-  <td>Eliminar tarea exitosamente</td>
-  <td>Implementar DELETE para eliminar tarea y devolver 200 OK</td>
-  <td>2</td>
-  <td>Reaño Delgadillo, Henry Paolo</td>
-  <td>Done</td>
-</tr>
-<tr>
-  <td></td><td></td>
-  <td>TS51-2</td>
-  <td>Validar tarea inexistente o proyecto no encontrado</td>
-  <td>Responder 404 Not Found si la tarea o proyecto no existe</td>
-  <td>2</td>
-  <td>Reaño Delgadillo, Henry Paolo</td>
-  <td>Done</td>
-</tr>
-
-<tr>
-  <td>TS52</td>
-  <td>Eliminar tarea con entregables</td>
-  <td>TS52-1</td>
-  <td>Eliminar tarea y confirmación entregables</td>
-  <td>Preguntar si desea eliminar entregables al borrar tarea</td>
-  <td>2</td>
-  <td>León Vivas, Fabrizio Amir</td>
-  <td>Done</td>
-</tr>
-<tr>
-  <td></td><td></td>
-  <td>TS52-2</td>
-  <td>Validar tarea o entregables inexistentes</td>
-  <td>Responder 404 Not Found si la tarea o entregables no existen</td>
-  <td>2</td>
-  <td>León Vivas, Fabrizio Amir</td>
-  <td>Done</td>
-</tr>
-
-<tr>
-  <td>TS53</td>
-  <td>Validar entregable</td>
-  <td>TS53-1</td>
-  <td>Subir entregable válido exitosamente</td>
-  <td>Implementar POST para validar y guardar entregable con 201 Created</td>
-  <td>2</td>
-  <td>Reaño Delgadillo, Henry Paolo</td>
-  <td>Done</td>
-</tr>
-<tr>
-  <td></td><td></td>
-  <td>TS53-2</td>
-  <td>Validar archivo inválido o tarea inexistente</td>
-  <td>Responder 400 o 404 según corresponda</td>
-  <td>2</td>
-  <td>Reaño Delgadillo, Henry Paolo</td>
-  <td>Done</td>
-</tr>
-
-<tr>
-  <td>TS54</td>
-  <td>Actualizar plan de suscripción</td>
-  <td>TS54-1</td>
-  <td>Actualizar plan exitosamente</td>
-  <td>Implementar PUT para actualizar plan con prorrateo y 200 OK</td>
-  <td>2</td>
-  <td>León Vivas, Fabrizio Amir</td>
-  <td>Done</td>
-</tr>
-<tr>
-  <td></td><td></td>
-  <td>TS54-2</td>
-  <td>Validar plan inválido o suscripción inactiva</td>
-  <td>Responder 400 si el plan no es válido o no hay suscripción activa</td>
-  <td>2</td>
-  <td>León Vivas, Fabrizio Amir</td>
-  <td>Done</td>
-</tr>
-
-<tr>
-  <td>TS55</td>
-  <td>Visualizar plan de suscripción</td>
-  <td>TS55-1</td>
-  <td>Obtener plan exitosamente</td>
-  <td>Implementar GET para devolver datos de plan con 200 OK</td>
-  <td>2</td>
-  <td>Reaño Delgadillo, Henry Paolo</td>
-  <td>Done</td>
-</tr>
-<tr>
-  <td></td><td></td>
-  <td>TS55-2</td>
-  <td>Validar usuario sin plan activo</td>
-  <td>Responder 404 Not Found si no tiene suscripción activa</td>
-  <td>2</td>
-  <td>Reaño Delgadillo, Henry Paolo</td>
-  <td>Done</td>
-</tr>
-
-<tr>
-  <td>TS56</td>
-  <td>Pagar factura</td>
-  <td>TS56-1</td>
-  <td>Pagar factura exitosamente</td>
-  <td>Implementar POST para procesar pago con pasarela y 200 OK</td>
-  <td>2</td>
-  <td>León Vivas, Fabrizio Amir</td>
-  <td>Done</td>
-</tr>
-<tr>
-  <td></td><td></td>
-  <td>TS56-2</td>
-  <td>Validar pago rechazado o factura inexistente</td>
-  <td>Responder 400 o 404 según corresponda</td>
-  <td>2</td>
-  <td>León Vivas, Fabrizio Amir</td>
-  <td>Done</td>
-</tr>
-
 <tr>
   <td>TS57</td>
   <td>Eliminar proyecto (soft delete)</td>
@@ -1181,7 +873,7 @@ Para el Sprint 4, se proyectan actividades como y la implementación de las vist
   <td>Eliminar proyecto exitosamente</td>
   <td>Implementar DELETE para marcar como deletion_pending con 202 Accepted</td>
   <td>2</td>
-  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>López Acuña, Mario Joaquín</td>
   <td>Done</td>
 </tr>
 <tr>
@@ -1213,27 +905,6 @@ Para el Sprint 4, se proyectan actividades como y la implementación de las vist
   <td>León Vivas, Fabrizio Amir</td>
   <td>Done</td>
 </tr>
-
-<tr>
-  <td>TS59</td>
-  <td>Subir entregable de tarea</td>
-  <td>TS59-1</td>
-  <td>Subir entregable exitosamente</td>
-  <td>Implementar POST para aceptar archivo válido y devolver 201 Created</td>
-  <td>2</td>
-  <td>Reaño Delgadillo, Henry Paolo</td>
-  <td>Done</td>
-</tr>
-<tr>
-  <td></td><td></td>
-  <td>TS59-2</td>
-  <td>Validar archivo inválido o tarea no encontrada</td>
-  <td>Responder 400 o 404 si el archivo es inválido o la tarea no existe</td>
-  <td>2</td>
-  <td>Reaño Delgadillo, Henry Paolo</td>
-  <td>Done</td>
-</tr>
-
 <tr>
   <td>TS60</td>
   <td>Eliminar tarea</td>
@@ -1251,26 +922,6 @@ Para el Sprint 4, se proyectan actividades como y la implementación de las vist
   <td>Responder 404 Not Found si la tarea o proyecto no existe</td>
   <td>2</td>
   <td>León Vivas, Fabrizio Amir</td>
-  <td>Done</td>
-</tr>
-
-<tr>
-  <td>TS61</td>
-  <td>Eliminar tarea con entregables</td>
-  <td>TS61-1</td>
-  <td>Eliminar tarea y confirmación entregables</td>
-  <td>Preguntar si desea eliminar entregables al borrar tarea</td>
-  <td>2</td>
-  <td>Reaño Delgadillo, Henry Paolo</td>
-  <td>Done</td>
-</tr>
-<tr>
-  <td></td><td></td>
-  <td>TS61-2</td>
-  <td>Validar tarea o entregables inexistentes</td>
-  <td>Responder 404 Not Found si la tarea o entregables no existen</td>
-  <td>2</td>
-  <td>Reaño Delgadillo, Henry Paolo</td>
   <td>Done</td>
 </tr>
 </table>
@@ -2108,10 +1759,8 @@ Project retrieved successfully</strong>
   <td>Obtener los proyecto</td>
   <td><code>GET</code></td>
   <td>
-    <pre>{
  <code>/api/v1/project-team-member/by-project-id/{projectId}</code><br>
     <em>Path Param:</em> <code>project-team-member: numberId</code>
-}</pre>
   </td>
   <td>
     <strong>200 Project team members retrieved successfully</strong>
@@ -2139,10 +1788,8 @@ Project retrieved successfully</strong>
   <td>Elimina miembros de proyecto</td>
   <td><code>DELETE</code></td>
   <td>
-    <pre>{
  <code>/api/v1/project-team-member/6</code><br>
     <em>Path Param:</em> <code>project-team-member: numberId</code>
-}</pre>
   </td>
   <td>
     <strong>200 OK</strong>
@@ -2296,10 +1943,8 @@ Project retrieved successfully</strong>
   <td>Obtener las milestones</td>
   <td><code>GET</code></td>
   <td>
-    <pre>{
  <code>/api/v1/milestone/by-project/6</code><br>
     <em>Path Param:</em> <code>projectId: numberId</code>
-}</pre>
   </td>
   <td>
     <strong>200 Milestones retrieved successfully</strong>
@@ -2323,10 +1968,8 @@ Project retrieved successfully</strong>
   <td>Eliminar milestones del proyecto</td>
   <td><code>DELETE</code></td>
   <td>
-    <pre>{
  <code>/api/v1/milestone/6</code><br>
     <em>Path Param:</em> <code>milestoneId: numberId</code>
-}</pre>
   </td>
   <td>
     <strong>200 OK</strong>
@@ -2415,10 +2058,8 @@ Project retrieved successfully</strong>
   <td>Eliminar task de milestones</td>
   <td><code>DELETE</code></td>
   <td>
-    <pre>{
  <code>/api/v1/task/1</code><br>
     <em>Path Param:</em> <code>taskId: numberId</code>
-}</pre>
   </td>
   <td>
     <strong>200 Task deleted successfully</strong>
@@ -2437,10 +2078,8 @@ Project retrieved successfully</strong>
   <td>Obtener task de milestones</td>
   <td><code>GET</code></td>
   <td>
-    <pre>{
  <code>/api/v1/task/by-milestone-id/1</code><br>
     <em>Path Param:</em> <code>milestoneId: numberId</code>
-}</pre>
   </td>
   <td>
     <strong>200 Tasks retrieved successfully</strong>
@@ -2493,10 +2132,8 @@ Project retrieved successfully</strong>
   <td>Obtener cambios del proyecto</td>
   <td><code>GET</code></td>
   <td>
-    <pre>{
  <code>/api/v1/change-process/by-project-id/6</code><br>
     <em>Path Param:</em> <code>changeId: projectId</code>
-}</pre>
   </td>
   <td>
     <strong>200 Change process retrieved successfully</strong>
@@ -2547,10 +2184,8 @@ Project retrieved successfully</strong>
   <td>Obtener el presupuesto total del proyecto</td>
   <td><code>GET</code></td>
   <td>
-    <pre>{
  <code>/api/v1/projects/6/total-task-bugdet</code><br>
     <em>Path Param:</em> <code>taskId: projectId</code>
-}</pre>
   </td>
   <td>
     <strong>200 	

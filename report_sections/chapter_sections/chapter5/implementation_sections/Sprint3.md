@@ -1692,6 +1692,681 @@ Para el Sprint 3, se proyectan actividades como y la implementación de las vist
   <td>Orozco Torres, Álvaro Joaquín</td>
   <td>Done</td>
 </tr>
+<tr>
+  <td>TS01</td>
+  <td>Crear organización</td>
+  <td>TS01-1</td>
+  <td>Registrar organización exitosamente</td>
+  <td>Implementar endpoint POST /organizations y devolver 201 Created con datos completos</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS01-2</td>
+  <td>Validar datos incompletos o inválidos</td>
+  <td>Responder 400 Bad Request si faltan campos obligatorios o tienen formato inválido</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS02</td>
+  <td>Listar organizaciones</td>
+  <td>TS02-1</td>
+  <td>Listar organizaciones exitosamente</td>
+  <td>Implementar GET /organizations para devolver lista de organizaciones con 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS02-2</td>
+  <td>Usuario sin organizaciones</td>
+  <td>Responder 200 OK con lista vacía si usuario no tiene organizaciones</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS03</td>
+  <td>Detalles de una organización</td>
+  <td>TS03-1</td>
+  <td>Obtener detalles exitosamente</td>
+  <td>Implementar GET /organizations/{id} y devolver datos completos con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS03-2</td>
+  <td>Organización no encontrada</td>
+  <td>Responder 404 Not Found si la organización no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS04</td>
+  <td>Actualizar información de organización</td>
+  <td>TS04-1</td>
+  <td>Actualizar organización exitosamente</td>
+  <td>Implementar PATCH /organizations/{id} para actualizar datos válidos y devolver 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS04-2</td>
+  <td>Validar datos inválidos o no encontrados</td>
+  <td>Responder 400 Bad Request o 404 Not Found según errores de validación o inexistencia</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS05</td>
+  <td>Eliminar organización (soft delete)</td>
+  <td>TS05-1</td>
+  <td>Solicitud de eliminación exitosa</td>
+  <td>Implementar DELETE /organizations/{id} para marcar como deletion_pending y devolver 202 Accepted</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS05-2</td>
+  <td>Organización ya marcada o no encontrada</td>
+  <td>Responder 409 Conflict o 404 Not Found si ya está en proceso o no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>TS06</td>
+  <td>Añadir miembro a organización</td>
+  <td>TS06-1</td>
+  <td>Añadir miembro exitosamente</td>
+  <td>Implementar POST para agregar miembro con rol asignado y devolver 201 Created</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS06-2</td>
+  <td>Validar datos inválidos o miembro existente</td>
+  <td>Responder 400 o 409 si datos son inválidos o el miembro ya existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS07</td>
+  <td>Actualizar estado de miembro de organización</td>
+  <td>TS07-1</td>
+  <td>Cambiar estado exitosamente</td>
+  <td>Implementar PATCH para actualizar estado (activo, suspendido, removido) con 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS07-2</td>
+  <td>Validar estado inválido o miembro no encontrado</td>
+  <td>Responder 400 o 404 si estado es inválido o miembro no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS08</td>
+  <td>Añadir proyecto a organización</td>
+  <td>TS08-1</td>
+  <td>Crear proyecto exitosamente</td>
+  <td>Implementar POST para crear proyecto con datos válidos y devolver 201 Created</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS08-2</td>
+  <td>Validar datos inválidos u organización no encontrada</td>
+  <td>Responder 400 o 404 según error en datos o inexistencia de organización</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS09</td>
+  <td>Listar proyectos de organización</td>
+  <td>TS09-1</td>
+  <td>Listar proyectos exitosamente</td>
+  <td>Implementar GET para devolver lista de proyectos con 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS09-2</td>
+  <td>Organización sin proyectos o no encontrada</td>
+  <td>Responder 200 con lista vacía o 404 si la organización no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS10</td>
+  <td>Detalles de un proyecto</td>
+  <td>TS10-1</td>
+  <td>Obtener detalles de proyecto exitosamente</td>
+  <td>Implementar GET /projects/{id} para devolver datos completos con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS10-2</td>
+  <td>Proyecto no encontrado</td>
+  <td>Responder 404 Not Found si el proyecto no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+  <tr>
+  <td>TS16</td>
+  <td>Obtener detalles de cronograma</td>
+  <td>TS16-1</td>
+  <td>Obtener cronograma exitosamente</td>
+  <td>Implementar GET para devolver cronograma con fechas e hitos con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS16-2</td>
+  <td>Proyecto sin cronograma o no encontrado</td>
+  <td>Responder 404 Not Found si el proyecto no tiene cronograma o no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS17</td>
+  <td>Añadir hito al cronograma</td>
+  <td>TS17-1</td>
+  <td>Añadir hito exitosamente</td>
+  <td>Implementar POST para crear hito con datos válidos y devolver 201 Created</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS17-2</td>
+  <td>Validar datos inválidos o conflicto</td>
+  <td>Responder 400 o 409 si datos son inválidos o proyecto no tiene cronograma</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS18</td>
+  <td>Listar hitos del cronograma</td>
+  <td>TS18-1</td>
+  <td>Listar hitos exitosamente</td>
+  <td>Implementar GET para devolver lista de hitos con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS18-2</td>
+  <td>Proyecto sin cronograma o no encontrado</td>
+  <td>Responder 404 Not Found si el proyecto no tiene cronograma o no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS19</td>
+  <td>Obtener detalles de hito</td>
+  <td>TS19-1</td>
+  <td>Obtener detalles de hito exitosamente</td>
+  <td>Implementar GET /milestones/{id} para devolver datos completos con 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS19-2</td>
+  <td>Hito o proyecto no encontrado</td>
+  <td>Responder 404 Not Found si el hito o proyecto no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS20</td>
+  <td>Actualizar información de hito</td>
+  <td>TS20-1</td>
+  <td>Actualizar estado o duración exitosamente</td>
+  <td>Implementar PATCH para modificar estado o duración del hito con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS20-2</td>
+  <td>Validar datos inválidos o hito no encontrado</td>
+  <td>Responder 400 o 404 si datos son inválidos o hito no existe en el proyecto</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>TS21</td>
+  <td>Crear tarea</td>
+  <td>TS21-1</td>
+  <td>Crear tarea exitosamente</td>
+  <td>Implementar POST para crear tarea con datos válidos y devolver 201 Created</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS21-2</td>
+  <td>Validar datos inválidos o proyecto no encontrado</td>
+  <td>Responder 400 o 404 si datos son inválidos o el proyecto no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS22</td>
+  <td>Listar tareas de hito</td>
+  <td>TS22-1</td>
+  <td>Listar tareas exitosamente</td>
+  <td>Implementar GET para devolver lista de tareas del hito con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS22-2</td>
+  <td>Hito o proyecto no encontrado</td>
+  <td>Responder 404 Not Found si el hito o proyecto no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS23</td>
+  <td>Obtener detalles de tarea</td>
+  <td>TS23-1</td>
+  <td>Obtener detalles de tarea exitosamente</td>
+  <td>Implementar GET /tasks/{id} para devolver datos completos con 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS23-2</td>
+  <td>Tarea o proyecto no encontrado</td>
+  <td>Responder 404 Not Found si la tarea o proyecto no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS24</td>
+  <td>Actualizar información de tarea</td>
+  <td>TS24-1</td>
+  <td>Actualizar detalles de tarea exitosamente</td>
+  <td>Implementar PATCH para modificar datos de tarea y devolver 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS24-2</td>
+  <td>Validar datos inválidos o tarea no encontrada</td>
+  <td>Responder 400 o 404 si datos son inválidos o la tarea no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS25</td>
+  <td>Crear solicitud de cambio</td>
+  <td>TS25-1</td>
+  <td>Crear solicitud exitosamente</td>
+  <td>Implementar POST para registrar solicitud de cambio con 201 Created</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS25-2</td>
+  <td>Validar datos inválidos o proyecto no encontrado</td>
+  <td>Responder 400 o 404 si datos son inválidos o proyecto no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+ <tr>
+  <td>TS26</td>
+  <td>Listar solicitudes de cambio</td>
+  <td>TS26-1</td>
+  <td>Listar solicitudes exitosamente</td>
+  <td>Implementar GET para devolver lista de solicitudes con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS26-2</td>
+  <td>Proyecto sin solicitudes o no encontrado</td>
+  <td>Responder 200 con lista vacía o 404 si el proyecto no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS27</td>
+  <td>Obtener detalles de solicitud de cambio</td>
+  <td>TS27-1</td>
+  <td>Obtener detalles exitosamente</td>
+  <td>Implementar GET para devolver datos completos con 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS27-2</td>
+  <td>Solicitud o proyecto no encontrado</td>
+  <td>Responder 404 Not Found si la solicitud o proyecto no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS28</td>
+  <td>Aceptar / Denegar solicitud de cambio</td>
+  <td>TS28-1</td>
+  <td>Aceptar o denegar solicitud exitosamente</td>
+  <td>Implementar PATCH para actualizar estado de solicitud con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS28-2</td>
+  <td>Validar estado incorrecto o solicitud no encontrada</td>
+  <td>Responder 400 o 404 según error de validación o inexistencia</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS29</td>
+  <td>Obtener detalles de desempeño de hito</td>
+  <td>TS29-1</td>
+  <td>Obtener detalles de desempeño exitosamente</td>
+  <td>Implementar GET para devolver datos de desempeño con 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS29-2</td>
+  <td>Hito sin tareas o no encontrado</td>
+  <td>Responder 200 con mensaje o 404 si el hito no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>TS35</td>
+  <td>Login</td>
+  <td>TS35-1</td>
+  <td>Login exitoso</td>
+  <td>Implementar POST /auth/login para devolver token y datos con 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS35-2</td>
+  <td>Validar credenciales incorrectas o faltantes</td>
+  <td>Responder 401 o 400 si credenciales son incorrectas o faltan campos</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>TS36</td>
+  <td>Refrescar Token</td>
+  <td>TS36-1</td>
+  <td>Refrescar token exitosamente</td>
+  <td>Implementar POST para devolver nuevo accessToken y refreshToken con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS36-2</td>
+  <td>Validar token inválido o expirado</td>
+  <td>Responder 401 o 403 si el token es inválido o expirado</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS37</td>
+  <td>Cerrar sesión + invalidar token</td>
+  <td>TS37-1</td>
+  <td>Cerrar sesión exitosamente</td>
+  <td>Implementar POST para invalidar refreshToken y devolver 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS37-2</td>
+  <td>Validar token inválido o faltante</td>
+  <td>Responder 401 o 400 si el refreshToken es inválido o no se envía</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS38</td>
+  <td>Registro</td>
+  <td>TS38-1</td>
+  <td>Registro exitoso</td>
+  <td>Implementar POST para crear cuenta con 201 Created y enviar verificación</td>
+  <td>2</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS38-2</td>
+  <td>Validar email ya registrado o datos inválidos</td>
+  <td>Responder 409 o 400 según el error</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS40-2</td>
+  <td>Validar email no registrado o inválido</td>
+  <td>Responder 404 o 400 si el email no está registrado o es inválido</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS41-2</td>
+  <td>Validar token inválido o campos faltantes</td>
+  <td>Responder 403 o 400 si el token es inválido o faltan campos</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+
+<tr>
+  <td>TS42</td>
+  <td>Encriptación segura de credenciales</td>
+  <td>TS42-1</td>
+  <td>Almacenar contraseña de forma segura</td>
+  <td>Generar salt y hash con bcrypt al guardar contraseña</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+<tr>
+  <td>TS48</td>
+  <td>Eliminar proyecto (soft delete)</td>
+  <td>TS48-1</td>
+  <td>Eliminar proyecto exitosamente (soft delete)</td>
+  <td>Implementar DELETE para marcar proyecto como deletion_pending con 202 Accepted</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS48-2</td>
+  <td>Validar proyecto ya marcado o inexistente</td>
+  <td>Responder 409 o 404 si ya está en proceso o no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>TS49</td>
+  <td>Eliminar usuario de proyecto</td>
+  <td>TS49-1</td>
+  <td>Eliminar usuario exitosamente</td>
+  <td>Implementar DELETE para quitar miembro del proyecto con 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS49-2</td>
+  <td>Validar usuario no pertenece o proyecto no encontrado</td>
+  <td>Responder 404 Not Found si no pertenece o el proyecto no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>TS57</td>
+  <td>Eliminar proyecto (soft delete)</td>
+  <td>TS57-1</td>
+  <td>Eliminar proyecto exitosamente</td>
+  <td>Implementar DELETE para marcar como deletion_pending con 202 Accepted</td>
+  <td>2</td>
+  <td>López Acuña, Mario Joaquín</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS57-2</td>
+  <td>Validar proyecto ya marcado o inexistente</td>
+  <td>Responder 409 o 404 si ya está en proceso o no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS58</td>
+  <td>Eliminar usuario de proyecto</td>
+  <td>TS58-1</td>
+  <td>Eliminar usuario exitosamente</td>
+  <td>Implementar DELETE para quitar miembro del proyecto con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS58-2</td>
+  <td>Validar usuario no pertenece o proyecto no encontrado</td>
+  <td>Responder 404 Not Found si no pertenece o el proyecto no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>TS60</td>
+  <td>Eliminar tarea</td>
+  <td>TS60-1</td>
+  <td>Eliminar tarea exitosamente</td>
+  <td>Implementar DELETE para eliminar tarea y devolver 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS60-2</td>
+  <td>Validar tarea inexistente o proyecto no encontrado</td>
+  <td>Responder 404 Not Found si la tarea o proyecto no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
 </table>
 
 #### 5.2.3.4. Development Evidence for Sprint Review
