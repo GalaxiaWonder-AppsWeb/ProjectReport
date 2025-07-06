@@ -1,5 +1,5 @@
 # Conclusiones
 
-- En el ámbito de desarrollo, se ha completado exitosamente la segunda implementación y despliegue de la landing page de nuestro producto, pero se ha fallado en cumplir con la implementación del front-end del web application, quedando incompleto.
-- En el ámbito financiero, se mantiene la validez de la existencia de un mercado activo que presenta una necesidad real de soluciones tecnológicas como la que ofrecemos, más ahora se toman en consideración preocupaciones como el precio del hosting, que serán necesarios tomar en cuenta para ajustar los precios de las suscripciones y/o modelo de negocio del producto.
-- En el ámbito de trabajo en equipo, se ha identificado como principal falencia la falta de dominio técnico de los miembros del equipo, desafío que deberá abordarse a lo largo de los próximos sprints.
+- En el ámbito de desarrollo, se ha completado exitosamente con la mayoría de la implementación de features Core tanto a nivel de front-end y back-end, permitiendo realizar test real del producto.
+- En el ámbito financiero, se lograron implementar las funcionalidades planificadas atendiendo a los intereses de los usuarios, validados a través de entrevistas que brindaron tanto comentarios positivos como críticas constructivas.
+- En el ámbito de trabajo en equipo, se ha identificado como principal falencia la acumulación de deuda técnica. No obstante, se alcanzó la implementación completa de la aplicación, asegurando el cumplimiento de los objetivos definidos.
