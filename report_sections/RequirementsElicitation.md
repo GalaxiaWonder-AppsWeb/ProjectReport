@@ -159,16 +159,16 @@ El análisis competitivo es fundamental para desarrollar una estrategia sólida 
         <tr>
             <th style="border: 1px solid #000; padding: 10px; font-weight: normal; width: 12%;">Precios & Costos</th>
             <td style="border: 1px solid #000; padding: 10px;" style="text-align:center;">
-                Galaxia Wonder brinda una modelo de precios basado en suscripción. Además, evalua las funciones y caracteristicas del software en base al cliente.
+                Galaxia Wonder brinda una modelo de precios basado en suscripción. Además, evalua las funciones y caracteristicas del software en base al cliente, con planes desde $14.99 USD/mes (Independent: 1 proyecto activo, 10 miembros, 5 GB de almacenamiento) hasta $24.99 USD/mes (Small Business: 3 proyectos activos, 30 miembros, 25 GB de almacenamiento). Incluye soporte y upgrades de almacenamiento opcionales.
             </td>
             <td style="border: 1px solid #000; padding: 10px;" style="text-align:center;">
-                Utiliza un modelo de precios basado en suscripción. Ofrece prubas gratuitas para su producto BIM 360.
+                Utiliza un modelo de precios basado en suscripción. Ofrece prubas gratuitas para su producto BIM 360, brinda suscripción anual con precios que varían por módulo. Rango aproximado $40–$140 USD/usuario/mes.
             </td>
             <td style="border: 1px solid #000; padding: 10px;" style="text-align:center;">
                 Procore utiliza un modelo de precios basado en suscripción. Los precios varian dependiendo de la organización, rondando entre $1,000 a $2,000 USD al mes. Además, ofrece una prueba gratuita de 14 días.
             </td>
             <td style="border: 1px solid #000; padding: 10px;" style="text-align:center;">
-                Deltek ComputerEase ofrece un modelo basado en suscripción o licencias perpetuas, dependiendo de las necesidades del cliente. Asimismo, cuenta con una demostración gratuita que debe ser solicitada.
+                Deltek ComputerEase ofrece un modelo basado en suscripción o licencias perpetuas, dependiendo de las necesidades del cliente. Asimismo, cuenta con una demostración gratuita que debe ser solicitada. Precios típicos desde $4,000 USD como pago único (licencia) o alrededor de $300–$600 USD/mes (suscripción SaaS). 
             </td>
         </tr>
         <tr>

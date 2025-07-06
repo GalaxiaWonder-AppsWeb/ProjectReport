@@ -5972,6 +5972,681 @@ Para el Sprint 3, se proyectan actividades como y la implementación de las vist
   <td>Orozco Torres, Álvaro Joaquín</td>
   <td>Done</td>
 </tr>
+<tr>
+  <td>TS01</td>
+  <td>Crear organización</td>
+  <td>TS01-1</td>
+  <td>Registrar organización exitosamente</td>
+  <td>Implementar endpoint POST /organizations y devolver 201 Created con datos completos</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS01-2</td>
+  <td>Validar datos incompletos o inválidos</td>
+  <td>Responder 400 Bad Request si faltan campos obligatorios o tienen formato inválido</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS02</td>
+  <td>Listar organizaciones</td>
+  <td>TS02-1</td>
+  <td>Listar organizaciones exitosamente</td>
+  <td>Implementar GET /organizations para devolver lista de organizaciones con 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS02-2</td>
+  <td>Usuario sin organizaciones</td>
+  <td>Responder 200 OK con lista vacía si usuario no tiene organizaciones</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS03</td>
+  <td>Detalles de una organización</td>
+  <td>TS03-1</td>
+  <td>Obtener detalles exitosamente</td>
+  <td>Implementar GET /organizations/{id} y devolver datos completos con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS03-2</td>
+  <td>Organización no encontrada</td>
+  <td>Responder 404 Not Found si la organización no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS04</td>
+  <td>Actualizar información de organización</td>
+  <td>TS04-1</td>
+  <td>Actualizar organización exitosamente</td>
+  <td>Implementar PATCH /organizations/{id} para actualizar datos válidos y devolver 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS04-2</td>
+  <td>Validar datos inválidos o no encontrados</td>
+  <td>Responder 400 Bad Request o 404 Not Found según errores de validación o inexistencia</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS05</td>
+  <td>Eliminar organización (soft delete)</td>
+  <td>TS05-1</td>
+  <td>Solicitud de eliminación exitosa</td>
+  <td>Implementar DELETE /organizations/{id} para marcar como deletion_pending y devolver 202 Accepted</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS05-2</td>
+  <td>Organización ya marcada o no encontrada</td>
+  <td>Responder 409 Conflict o 404 Not Found si ya está en proceso o no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>TS06</td>
+  <td>Añadir miembro a organización</td>
+  <td>TS06-1</td>
+  <td>Añadir miembro exitosamente</td>
+  <td>Implementar POST para agregar miembro con rol asignado y devolver 201 Created</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS06-2</td>
+  <td>Validar datos inválidos o miembro existente</td>
+  <td>Responder 400 o 409 si datos son inválidos o el miembro ya existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS07</td>
+  <td>Actualizar estado de miembro de organización</td>
+  <td>TS07-1</td>
+  <td>Cambiar estado exitosamente</td>
+  <td>Implementar PATCH para actualizar estado (activo, suspendido, removido) con 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS07-2</td>
+  <td>Validar estado inválido o miembro no encontrado</td>
+  <td>Responder 400 o 404 si estado es inválido o miembro no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS08</td>
+  <td>Añadir proyecto a organización</td>
+  <td>TS08-1</td>
+  <td>Crear proyecto exitosamente</td>
+  <td>Implementar POST para crear proyecto con datos válidos y devolver 201 Created</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS08-2</td>
+  <td>Validar datos inválidos u organización no encontrada</td>
+  <td>Responder 400 o 404 según error en datos o inexistencia de organización</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS09</td>
+  <td>Listar proyectos de organización</td>
+  <td>TS09-1</td>
+  <td>Listar proyectos exitosamente</td>
+  <td>Implementar GET para devolver lista de proyectos con 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS09-2</td>
+  <td>Organización sin proyectos o no encontrada</td>
+  <td>Responder 200 con lista vacía o 404 si la organización no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS10</td>
+  <td>Detalles de un proyecto</td>
+  <td>TS10-1</td>
+  <td>Obtener detalles de proyecto exitosamente</td>
+  <td>Implementar GET /projects/{id} para devolver datos completos con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS10-2</td>
+  <td>Proyecto no encontrado</td>
+  <td>Responder 404 Not Found si el proyecto no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+  <tr>
+  <td>TS16</td>
+  <td>Obtener detalles de cronograma</td>
+  <td>TS16-1</td>
+  <td>Obtener cronograma exitosamente</td>
+  <td>Implementar GET para devolver cronograma con fechas e hitos con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS16-2</td>
+  <td>Proyecto sin cronograma o no encontrado</td>
+  <td>Responder 404 Not Found si el proyecto no tiene cronograma o no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS17</td>
+  <td>Añadir hito al cronograma</td>
+  <td>TS17-1</td>
+  <td>Añadir hito exitosamente</td>
+  <td>Implementar POST para crear hito con datos válidos y devolver 201 Created</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS17-2</td>
+  <td>Validar datos inválidos o conflicto</td>
+  <td>Responder 400 o 409 si datos son inválidos o proyecto no tiene cronograma</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS18</td>
+  <td>Listar hitos del cronograma</td>
+  <td>TS18-1</td>
+  <td>Listar hitos exitosamente</td>
+  <td>Implementar GET para devolver lista de hitos con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS18-2</td>
+  <td>Proyecto sin cronograma o no encontrado</td>
+  <td>Responder 404 Not Found si el proyecto no tiene cronograma o no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS19</td>
+  <td>Obtener detalles de hito</td>
+  <td>TS19-1</td>
+  <td>Obtener detalles de hito exitosamente</td>
+  <td>Implementar GET /milestones/{id} para devolver datos completos con 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS19-2</td>
+  <td>Hito o proyecto no encontrado</td>
+  <td>Responder 404 Not Found si el hito o proyecto no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS20</td>
+  <td>Actualizar información de hito</td>
+  <td>TS20-1</td>
+  <td>Actualizar estado o duración exitosamente</td>
+  <td>Implementar PATCH para modificar estado o duración del hito con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS20-2</td>
+  <td>Validar datos inválidos o hito no encontrado</td>
+  <td>Responder 400 o 404 si datos son inválidos o hito no existe en el proyecto</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>TS21</td>
+  <td>Crear tarea</td>
+  <td>TS21-1</td>
+  <td>Crear tarea exitosamente</td>
+  <td>Implementar POST para crear tarea con datos válidos y devolver 201 Created</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS21-2</td>
+  <td>Validar datos inválidos o proyecto no encontrado</td>
+  <td>Responder 400 o 404 si datos son inválidos o el proyecto no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS22</td>
+  <td>Listar tareas de hito</td>
+  <td>TS22-1</td>
+  <td>Listar tareas exitosamente</td>
+  <td>Implementar GET para devolver lista de tareas del hito con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS22-2</td>
+  <td>Hito o proyecto no encontrado</td>
+  <td>Responder 404 Not Found si el hito o proyecto no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS23</td>
+  <td>Obtener detalles de tarea</td>
+  <td>TS23-1</td>
+  <td>Obtener detalles de tarea exitosamente</td>
+  <td>Implementar GET /tasks/{id} para devolver datos completos con 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS23-2</td>
+  <td>Tarea o proyecto no encontrado</td>
+  <td>Responder 404 Not Found si la tarea o proyecto no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS24</td>
+  <td>Actualizar información de tarea</td>
+  <td>TS24-1</td>
+  <td>Actualizar detalles de tarea exitosamente</td>
+  <td>Implementar PATCH para modificar datos de tarea y devolver 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS24-2</td>
+  <td>Validar datos inválidos o tarea no encontrada</td>
+  <td>Responder 400 o 404 si datos son inválidos o la tarea no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS25</td>
+  <td>Crear solicitud de cambio</td>
+  <td>TS25-1</td>
+  <td>Crear solicitud exitosamente</td>
+  <td>Implementar POST para registrar solicitud de cambio con 201 Created</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS25-2</td>
+  <td>Validar datos inválidos o proyecto no encontrado</td>
+  <td>Responder 400 o 404 si datos son inválidos o proyecto no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+ <tr>
+  <td>TS26</td>
+  <td>Listar solicitudes de cambio</td>
+  <td>TS26-1</td>
+  <td>Listar solicitudes exitosamente</td>
+  <td>Implementar GET para devolver lista de solicitudes con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS26-2</td>
+  <td>Proyecto sin solicitudes o no encontrado</td>
+  <td>Responder 200 con lista vacía o 404 si el proyecto no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS27</td>
+  <td>Obtener detalles de solicitud de cambio</td>
+  <td>TS27-1</td>
+  <td>Obtener detalles exitosamente</td>
+  <td>Implementar GET para devolver datos completos con 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS27-2</td>
+  <td>Solicitud o proyecto no encontrado</td>
+  <td>Responder 404 Not Found si la solicitud o proyecto no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS28</td>
+  <td>Aceptar / Denegar solicitud de cambio</td>
+  <td>TS28-1</td>
+  <td>Aceptar o denegar solicitud exitosamente</td>
+  <td>Implementar PATCH para actualizar estado de solicitud con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS28-2</td>
+  <td>Validar estado incorrecto o solicitud no encontrada</td>
+  <td>Responder 400 o 404 según error de validación o inexistencia</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS29</td>
+  <td>Obtener detalles de desempeño de hito</td>
+  <td>TS29-1</td>
+  <td>Obtener detalles de desempeño exitosamente</td>
+  <td>Implementar GET para devolver datos de desempeño con 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS29-2</td>
+  <td>Hito sin tareas o no encontrado</td>
+  <td>Responder 200 con mensaje o 404 si el hito no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>TS35</td>
+  <td>Login</td>
+  <td>TS35-1</td>
+  <td>Login exitoso</td>
+  <td>Implementar POST /auth/login para devolver token y datos con 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS35-2</td>
+  <td>Validar credenciales incorrectas o faltantes</td>
+  <td>Responder 401 o 400 si credenciales son incorrectas o faltan campos</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>TS36</td>
+  <td>Refrescar Token</td>
+  <td>TS36-1</td>
+  <td>Refrescar token exitosamente</td>
+  <td>Implementar POST para devolver nuevo accessToken y refreshToken con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS36-2</td>
+  <td>Validar token inválido o expirado</td>
+  <td>Responder 401 o 403 si el token es inválido o expirado</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS37</td>
+  <td>Cerrar sesión + invalidar token</td>
+  <td>TS37-1</td>
+  <td>Cerrar sesión exitosamente</td>
+  <td>Implementar POST para invalidar refreshToken y devolver 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS37-2</td>
+  <td>Validar token inválido o faltante</td>
+  <td>Responder 401 o 400 si el refreshToken es inválido o no se envía</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS38</td>
+  <td>Registro</td>
+  <td>TS38-1</td>
+  <td>Registro exitoso</td>
+  <td>Implementar POST para crear cuenta con 201 Created y enviar verificación</td>
+  <td>2</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS38-2</td>
+  <td>Validar email ya registrado o datos inválidos</td>
+  <td>Responder 409 o 400 según el error</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS40-2</td>
+  <td>Validar email no registrado o inválido</td>
+  <td>Responder 404 o 400 si el email no está registrado o es inválido</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS41-2</td>
+  <td>Validar token inválido o campos faltantes</td>
+  <td>Responder 403 o 400 si el token es inválido o faltan campos</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+
+<tr>
+  <td>TS42</td>
+  <td>Encriptación segura de credenciales</td>
+  <td>TS42-1</td>
+  <td>Almacenar contraseña de forma segura</td>
+  <td>Generar salt y hash con bcrypt al guardar contraseña</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+<tr>
+  <td>TS48</td>
+  <td>Eliminar proyecto (soft delete)</td>
+  <td>TS48-1</td>
+  <td>Eliminar proyecto exitosamente (soft delete)</td>
+  <td>Implementar DELETE para marcar proyecto como deletion_pending con 202 Accepted</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS48-2</td>
+  <td>Validar proyecto ya marcado o inexistente</td>
+  <td>Responder 409 o 404 si ya está en proceso o no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>TS49</td>
+  <td>Eliminar usuario de proyecto</td>
+  <td>TS49-1</td>
+  <td>Eliminar usuario exitosamente</td>
+  <td>Implementar DELETE para quitar miembro del proyecto con 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS49-2</td>
+  <td>Validar usuario no pertenece o proyecto no encontrado</td>
+  <td>Responder 404 Not Found si no pertenece o el proyecto no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>TS57</td>
+  <td>Eliminar proyecto (soft delete)</td>
+  <td>TS57-1</td>
+  <td>Eliminar proyecto exitosamente</td>
+  <td>Implementar DELETE para marcar como deletion_pending con 202 Accepted</td>
+  <td>2</td>
+  <td>López Acuña, Mario Joaquín</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS57-2</td>
+  <td>Validar proyecto ya marcado o inexistente</td>
+  <td>Responder 409 o 404 si ya está en proceso o no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS58</td>
+  <td>Eliminar usuario de proyecto</td>
+  <td>TS58-1</td>
+  <td>Eliminar usuario exitosamente</td>
+  <td>Implementar DELETE para quitar miembro del proyecto con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS58-2</td>
+  <td>Validar usuario no pertenece o proyecto no encontrado</td>
+  <td>Responder 404 Not Found si no pertenece o el proyecto no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>TS60</td>
+  <td>Eliminar tarea</td>
+  <td>TS60-1</td>
+  <td>Eliminar tarea exitosamente</td>
+  <td>Implementar DELETE para eliminar tarea y devolver 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS60-2</td>
+  <td>Validar tarea inexistente o proyecto no encontrado</td>
+  <td>Responder 404 Not Found si la tarea o proyecto no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
 </table>
 
 #### 5.2.3.4. Development Evidence for Sprint Review
@@ -6565,6 +7240,14 @@ Un hotfix debido a un error de producción con las variables de entorno.
 
 En este tercer sprint se ha fallado en lograr el objetivo de implementar a totalidad toda la interfaz funcional de la aplicación web, pero se ha conseguido un avance total del desarrollo del modelo y los servicios.
 
+**Front_End Insights**
+
+<img src="./../../../../img/chapter5/Sprint3/insights/Front_tb2.png">
+
+**Back_End Insights**
+
+<img src="./../../../../img/chapter5/Sprint3/insights/Back_tb2.png">
+
 <div style="page-break-before: always;"></div>
 
 ### 5.2.4. Sprint 4
@@ -6597,11 +7280,11 @@ En este tercer sprint se ha fallado en lograr el objetivo de implementar a total
   </tr>
   <tr>
     <th>Attendees (to planning meeting)</th>
-    <td colspan="3">Aponte Cruzado, Andrea Marielena / Orozco Torres, Álvaro Joaquín / León Vivas, Fabrizio Amir / Lopez Acuña, Mario Joaquin</td>
+    <td colspan="3">Aponte Cruzado, Andrea Marielena / Orozco Torres, Álvaro Joaquín / León Vivas, Fabrizio Amir / Lopez Acuña, Mario Joaquin/ Reaño Delgadillo, Henry Paolo</td>
   </tr>
   <tr>
     <th>Sprint 3 Review Summary</th>
-    <td colspan="3">El sprint anterior logró realizar la implementación deL backend utilizando el framework de Angular. Se logró realizar un avance de la implementación del Web Application front-end. Sin embargo, este quedó inconcluso y quedaron múltiples task pendientes en estado "To-Do".</td>
+    <td colspan="3">El sprint anterior logró realizar la implementación del backend utilizando C# y el framework .NET. Se logró un avance en la implementación del Web Application front-end; sin embargo, este quedó inconcluso y quedaron múltiples tareas pendientes en estado "To-Do".</td>
   </tr>
   <tr>
     <th>Sprint 3 Retrospective Summary</th>
@@ -6642,7 +7325,7 @@ Para el Sprint 4, se proyectan actividades como y la implementación de las vist
     <td>C</td>
   </tr>
   <tr>
-    <td>Orozco Torres, Álvaro Joaquín</td>
+    <td>Leon Vivas, Fabrizio Amir</td>
     <td>CodyLionVivo</td>
     <td>L</td>
     <td>C</td>
@@ -6669,6 +7352,20 @@ Para el Sprint 4, se proyectan actividades como y la implementación de las vist
 
 #### 5.2.4.3. Sprint Backlog 4
 
+<img src="../../img/chapter5/Sprint1/sprintbacklog.png">
+
+<a href="https://galaxiawonder.youtrack.cloud/dashboard?id=213-2" target="_blank">Ver tablero en YouTrack</a>
+
+<b>Credenciales:</b>
+<ul>
+  <li>
+    Correo: 
+    <span style="cursor: default; color: inherit; text-decoration: none;">
+      invitadogw&#64;galaxiawonder.com
+    </span>
+  </li>
+  <li>Contraseña: GA14x4W0nd3r</li>
+</ul>
 
 <table cellpadding="6" cellspacing="0">
   <tr>
@@ -6723,7 +7420,760 @@ Para el Sprint 4, se proyectan actividades como y la implementación de las vist
   <td>Validar rango y coherencia</td>
   <td>Verificar que las fechas estén dentro del rango del proyecto y corregir inconsistencias automáticamente</td>
   <td>2</td>
-  <td>Orozco Torres, Álvaro Joaquín</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>US149</td>
+  <td>Definir presupuesto inicial del proyecto</td>
+  <td>US149-1</td>
+  <td>Agregar campo de presupuesto en formulario</td>
+  <td>Incluir el campo de presupuesto al crear o editar el proyecto</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US149-2</td>
+  <td>Guardar y mostrar presupuesto en vista de proyecto</td>
+  <td>Persistir el valor y mostrarlo en la pantalla de detalles del proyecto</td>
+  <td>2</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>US150</td>
+  <td>Asociar precio a cada tarea</td>
+  <td>US150-1</td>
+  <td>Agregar campo de costo en formulario de tarea</td>
+  <td>Permitir definir el costo al crear o editar una tarea</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US150-2</td>
+  <td>Guardar y asociar costo a la tarea</td>
+  <td>Persistir el costo ingresado y vincularlo a la entidad de tarea</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>US151</td>
+  <td>Editar costo de tarea y actualizar presupuesto</td>
+  <td>US151-1</td>
+  <td>Permitir editar costo en tareas existentes</td>
+  <td>Habilitar la edición del campo de costo en tareas ya creadas</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US151-2</td>
+  <td>Recalcular presupuesto disponible</td>
+  <td>Actualizar el presupuesto del proyecto al modificar el costo de una tarea</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>US152</td>
+  <td>Validar límite de presupuesto al crear tarea</td>
+  <td>US152-1</td>
+  <td>Verificar presupuesto disponible en creación de tarea</td>
+  <td>Comparar el costo ingresado con el presupuesto restante</td>
+  <td>2</td>
+  <td>Leon Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>US152-2</td>
+  <td>Mostrar error si el costo excede el presupuesto</td>
+  <td>Bloquear la creación y notificar al usuario si no hay saldo suficiente</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>TS01</td>
+  <td>Crear organización</td>
+  <td>TS01-1</td>
+  <td>Registrar organización exitosamente</td>
+  <td>Implementar endpoint POST /organizations y devolver 201 Created con datos completos</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS01-2</td>
+  <td>Validar datos incompletos o inválidos</td>
+  <td>Responder 400 Bad Request si faltan campos obligatorios o tienen formato inválido</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS02</td>
+  <td>Listar organizaciones</td>
+  <td>TS02-1</td>
+  <td>Listar organizaciones exitosamente</td>
+  <td>Implementar GET /organizations para devolver lista de organizaciones con 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS02-2</td>
+  <td>Usuario sin organizaciones</td>
+  <td>Responder 200 OK con lista vacía si usuario no tiene organizaciones</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS03</td>
+  <td>Detalles de una organización</td>
+  <td>TS03-1</td>
+  <td>Obtener detalles exitosamente</td>
+  <td>Implementar GET /organizations/{id} y devolver datos completos con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS03-2</td>
+  <td>Organización no encontrada</td>
+  <td>Responder 404 Not Found si la organización no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS04</td>
+  <td>Actualizar información de organización</td>
+  <td>TS04-1</td>
+  <td>Actualizar organización exitosamente</td>
+  <td>Implementar PATCH /organizations/{id} para actualizar datos válidos y devolver 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS04-2</td>
+  <td>Validar datos inválidos o no encontrados</td>
+  <td>Responder 400 Bad Request o 404 Not Found según errores de validación o inexistencia</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS05</td>
+  <td>Eliminar organización (soft delete)</td>
+  <td>TS05-1</td>
+  <td>Solicitud de eliminación exitosa</td>
+  <td>Implementar DELETE /organizations/{id} para marcar como deletion_pending y devolver 202 Accepted</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS05-2</td>
+  <td>Organización ya marcada o no encontrada</td>
+  <td>Responder 409 Conflict o 404 Not Found si ya está en proceso o no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>TS06</td>
+  <td>Añadir miembro a organización</td>
+  <td>TS06-1</td>
+  <td>Añadir miembro exitosamente</td>
+  <td>Implementar POST para agregar miembro con rol asignado y devolver 201 Created</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS06-2</td>
+  <td>Validar datos inválidos o miembro existente</td>
+  <td>Responder 400 o 409 si datos son inválidos o el miembro ya existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS07</td>
+  <td>Actualizar estado de miembro de organización</td>
+  <td>TS07-1</td>
+  <td>Cambiar estado exitosamente</td>
+  <td>Implementar PATCH para actualizar estado (activo, suspendido, removido) con 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS07-2</td>
+  <td>Validar estado inválido o miembro no encontrado</td>
+  <td>Responder 400 o 404 si estado es inválido o miembro no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS08</td>
+  <td>Añadir proyecto a organización</td>
+  <td>TS08-1</td>
+  <td>Crear proyecto exitosamente</td>
+  <td>Implementar POST para crear proyecto con datos válidos y devolver 201 Created</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS08-2</td>
+  <td>Validar datos inválidos u organización no encontrada</td>
+  <td>Responder 400 o 404 según error en datos o inexistencia de organización</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS09</td>
+  <td>Listar proyectos de organización</td>
+  <td>TS09-1</td>
+  <td>Listar proyectos exitosamente</td>
+  <td>Implementar GET para devolver lista de proyectos con 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS09-2</td>
+  <td>Organización sin proyectos o no encontrada</td>
+  <td>Responder 200 con lista vacía o 404 si la organización no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS10</td>
+  <td>Detalles de un proyecto</td>
+  <td>TS10-1</td>
+  <td>Obtener detalles de proyecto exitosamente</td>
+  <td>Implementar GET /projects/{id} para devolver datos completos con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS10-2</td>
+  <td>Proyecto no encontrado</td>
+  <td>Responder 404 Not Found si el proyecto no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+  <tr>
+  <td>TS16</td>
+  <td>Obtener detalles de cronograma</td>
+  <td>TS16-1</td>
+  <td>Obtener cronograma exitosamente</td>
+  <td>Implementar GET para devolver cronograma con fechas e hitos con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS16-2</td>
+  <td>Proyecto sin cronograma o no encontrado</td>
+  <td>Responder 404 Not Found si el proyecto no tiene cronograma o no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS17</td>
+  <td>Añadir hito al cronograma</td>
+  <td>TS17-1</td>
+  <td>Añadir hito exitosamente</td>
+  <td>Implementar POST para crear hito con datos válidos y devolver 201 Created</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS17-2</td>
+  <td>Validar datos inválidos o conflicto</td>
+  <td>Responder 400 o 409 si datos son inválidos o proyecto no tiene cronograma</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS18</td>
+  <td>Listar hitos del cronograma</td>
+  <td>TS18-1</td>
+  <td>Listar hitos exitosamente</td>
+  <td>Implementar GET para devolver lista de hitos con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS18-2</td>
+  <td>Proyecto sin cronograma o no encontrado</td>
+  <td>Responder 404 Not Found si el proyecto no tiene cronograma o no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS19</td>
+  <td>Obtener detalles de hito</td>
+  <td>TS19-1</td>
+  <td>Obtener detalles de hito exitosamente</td>
+  <td>Implementar GET /milestones/{id} para devolver datos completos con 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS19-2</td>
+  <td>Hito o proyecto no encontrado</td>
+  <td>Responder 404 Not Found si el hito o proyecto no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS20</td>
+  <td>Actualizar información de hito</td>
+  <td>TS20-1</td>
+  <td>Actualizar estado o duración exitosamente</td>
+  <td>Implementar PATCH para modificar estado o duración del hito con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS20-2</td>
+  <td>Validar datos inválidos o hito no encontrado</td>
+  <td>Responder 400 o 404 si datos son inválidos o hito no existe en el proyecto</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>TS21</td>
+  <td>Crear tarea</td>
+  <td>TS21-1</td>
+  <td>Crear tarea exitosamente</td>
+  <td>Implementar POST para crear tarea con datos válidos y devolver 201 Created</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS21-2</td>
+  <td>Validar datos inválidos o proyecto no encontrado</td>
+  <td>Responder 400 o 404 si datos son inválidos o el proyecto no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS22</td>
+  <td>Listar tareas de hito</td>
+  <td>TS22-1</td>
+  <td>Listar tareas exitosamente</td>
+  <td>Implementar GET para devolver lista de tareas del hito con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS22-2</td>
+  <td>Hito o proyecto no encontrado</td>
+  <td>Responder 404 Not Found si el hito o proyecto no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS23</td>
+  <td>Obtener detalles de tarea</td>
+  <td>TS23-1</td>
+  <td>Obtener detalles de tarea exitosamente</td>
+  <td>Implementar GET /tasks/{id} para devolver datos completos con 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS23-2</td>
+  <td>Tarea o proyecto no encontrado</td>
+  <td>Responder 404 Not Found si la tarea o proyecto no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS24</td>
+  <td>Actualizar información de tarea</td>
+  <td>TS24-1</td>
+  <td>Actualizar detalles de tarea exitosamente</td>
+  <td>Implementar PATCH para modificar datos de tarea y devolver 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS24-2</td>
+  <td>Validar datos inválidos o tarea no encontrada</td>
+  <td>Responder 400 o 404 si datos son inválidos o la tarea no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS25</td>
+  <td>Crear solicitud de cambio</td>
+  <td>TS25-1</td>
+  <td>Crear solicitud exitosamente</td>
+  <td>Implementar POST para registrar solicitud de cambio con 201 Created</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS25-2</td>
+  <td>Validar datos inválidos o proyecto no encontrado</td>
+  <td>Responder 400 o 404 si datos son inválidos o proyecto no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+ <tr>
+  <td>TS26</td>
+  <td>Listar solicitudes de cambio</td>
+  <td>TS26-1</td>
+  <td>Listar solicitudes exitosamente</td>
+  <td>Implementar GET para devolver lista de solicitudes con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS26-2</td>
+  <td>Proyecto sin solicitudes o no encontrado</td>
+  <td>Responder 200 con lista vacía o 404 si el proyecto no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS27</td>
+  <td>Obtener detalles de solicitud de cambio</td>
+  <td>TS27-1</td>
+  <td>Obtener detalles exitosamente</td>
+  <td>Implementar GET para devolver datos completos con 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS27-2</td>
+  <td>Solicitud o proyecto no encontrado</td>
+  <td>Responder 404 Not Found si la solicitud o proyecto no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS28</td>
+  <td>Aceptar / Denegar solicitud de cambio</td>
+  <td>TS28-1</td>
+  <td>Aceptar o denegar solicitud exitosamente</td>
+  <td>Implementar PATCH para actualizar estado de solicitud con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS28-2</td>
+  <td>Validar estado incorrecto o solicitud no encontrada</td>
+  <td>Responder 400 o 404 según error de validación o inexistencia</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS29</td>
+  <td>Obtener detalles de desempeño de hito</td>
+  <td>TS29-1</td>
+  <td>Obtener detalles de desempeño exitosamente</td>
+  <td>Implementar GET para devolver datos de desempeño con 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS29-2</td>
+  <td>Hito sin tareas o no encontrado</td>
+  <td>Responder 200 con mensaje o 404 si el hito no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>TS35</td>
+  <td>Login</td>
+  <td>TS35-1</td>
+  <td>Login exitoso</td>
+  <td>Implementar POST /auth/login para devolver token y datos con 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS35-2</td>
+  <td>Validar credenciales incorrectas o faltantes</td>
+  <td>Responder 401 o 400 si credenciales son incorrectas o faltan campos</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>TS36</td>
+  <td>Refrescar Token</td>
+  <td>TS36-1</td>
+  <td>Refrescar token exitosamente</td>
+  <td>Implementar POST para devolver nuevo accessToken y refreshToken con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS36-2</td>
+  <td>Validar token inválido o expirado</td>
+  <td>Responder 401 o 403 si el token es inválido o expirado</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS37</td>
+  <td>Cerrar sesión + invalidar token</td>
+  <td>TS37-1</td>
+  <td>Cerrar sesión exitosamente</td>
+  <td>Implementar POST para invalidar refreshToken y devolver 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS37-2</td>
+  <td>Validar token inválido o faltante</td>
+  <td>Responder 401 o 400 si el refreshToken es inválido o no se envía</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS38</td>
+  <td>Registro</td>
+  <td>TS38-1</td>
+  <td>Registro exitoso</td>
+  <td>Implementar POST para crear cuenta con 201 Created y enviar verificación</td>
+  <td>2</td>
+  <td>Aponte Cruzado, Andrea Marielena</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS38-2</td>
+  <td>Validar email ya registrado o datos inválidos</td>
+  <td>Responder 409 o 400 según el error</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS40-2</td>
+  <td>Validar email no registrado o inválido</td>
+  <td>Responder 404 o 400 si el email no está registrado o es inválido</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS41-2</td>
+  <td>Validar token inválido o campos faltantes</td>
+  <td>Responder 403 o 400 si el token es inválido o faltan campos</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+
+<tr>
+  <td>TS42</td>
+  <td>Encriptación segura de credenciales</td>
+  <td>TS42-1</td>
+  <td>Almacenar contraseña de forma segura</td>
+  <td>Generar salt y hash con bcrypt al guardar contraseña</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+<tr>
+  <td>TS48</td>
+  <td>Eliminar proyecto (soft delete)</td>
+  <td>TS48-1</td>
+  <td>Eliminar proyecto exitosamente (soft delete)</td>
+  <td>Implementar DELETE para marcar proyecto como deletion_pending con 202 Accepted</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS48-2</td>
+  <td>Validar proyecto ya marcado o inexistente</td>
+  <td>Responder 409 o 404 si ya está en proceso o no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>TS49</td>
+  <td>Eliminar usuario de proyecto</td>
+  <td>TS49-1</td>
+  <td>Eliminar usuario exitosamente</td>
+  <td>Implementar DELETE para quitar miembro del proyecto con 200 OK</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS49-2</td>
+  <td>Validar usuario no pertenece o proyecto no encontrado</td>
+  <td>Responder 404 Not Found si no pertenece o el proyecto no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>TS57</td>
+  <td>Eliminar proyecto (soft delete)</td>
+  <td>TS57-1</td>
+  <td>Eliminar proyecto exitosamente</td>
+  <td>Implementar DELETE para marcar como deletion_pending con 202 Accepted</td>
+  <td>2</td>
+  <td>López Acuña, Mario Joaquín</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS57-2</td>
+  <td>Validar proyecto ya marcado o inexistente</td>
+  <td>Responder 409 o 404 si ya está en proceso o no existe</td>
+  <td>2</td>
+  <td>Reaño Delgadillo, Henry Paolo</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td>TS58</td>
+  <td>Eliminar usuario de proyecto</td>
+  <td>TS58-1</td>
+  <td>Eliminar usuario exitosamente</td>
+  <td>Implementar DELETE para quitar miembro del proyecto con 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS58-2</td>
+  <td>Validar usuario no pertenece o proyecto no encontrado</td>
+  <td>Responder 404 Not Found si no pertenece o el proyecto no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>TS60</td>
+  <td>Eliminar tarea</td>
+  <td>TS60-1</td>
+  <td>Eliminar tarea exitosamente</td>
+  <td>Implementar DELETE para eliminar tarea y devolver 200 OK</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td></td><td></td>
+  <td>TS60-2</td>
+  <td>Validar tarea inexistente o proyecto no encontrado</td>
+  <td>Responder 404 Not Found si la tarea o proyecto no existe</td>
+  <td>2</td>
+  <td>León Vivas, Fabrizio Amir</td>
   <td>Done</td>
 </tr>
 </table>
@@ -6923,22 +8373,25 @@ A lo largo del sprint, se ha logrado cubrir gran parte de los servicios web que 
       <td><code>POST</code></td>
       <td>
         <pre>{
-  "legalName": "Constructora Soluciones Integrales S.A.C.",
-  "commercialName": "Solintec",
-  "ruc": "20547896541",
-  "createdBy": 12
+  "legalName": "SahurSAC",
+  "commercialName": "sahur",
+  "ruc": "20538856670",
+  "createdBy": 1
 }</pre>
       </td>
       <td>
-        <strong>201 Created</strong>
+        <strong>200 Created</strong>
         <pre>{
-  "id": 7,
-  "legalName": "Constructora Soluciones Integrales S.A.C.",
-  "commercialName": "Solintec",
-  "ruc": "20547896541",
-  "createdBy": 12,
-  "status": "ACTIVE",
-  "createdAt": "2025-06-21T07:31:49.826Z"
+  "id": 2,
+  "legalName": "SahurSAC",
+  "commercialName": "sahur",
+  "ruc": "20538856670",
+  "createdBy": 1,
+  "organizationStatusId": 1,
+  "statusName": "ACTIVE",
+  "organizationMemberIds": [1 ],
+  "organizationInvitationIds": [],
+  "createdAt": "2025-07-04T16:06:43.036902+00:00"
 }</pre>
         <strong>400 Bad Request</strong>
         <pre>{
@@ -6953,12 +8406,12 @@ A lo largo del sprint, se ha logrado cubrir gran parte de los servicios web que 
       <td><code>POST</code></td>
       <td>
         <pre>{
-  "organizationId": 7,
+  "organizationId": 1,
   "email": "sofia.ramirez@solintec.com"
 }</pre>
       </td>
       <td>
-        <strong>201 Created</strong>
+        <strong>200 Created</strong>
         <pre>{
   "id": 15,
   "organizationName": "Solintec",
@@ -6971,10 +8424,6 @@ A lo largo del sprint, se ha logrado cubrir gran parte de los servicios web que 
         <pre>{
   "message": "Email already invited or user is already a member"
 }</pre>
-        <strong>404 Not Found</strong>
-        <pre>{
-  "message": "Organization not found or user profile unavailable"
-}</pre>
       </td>
       <td><strong>http://localhost:5295/</strong></td>
     </tr>
@@ -6983,19 +8432,24 @@ A lo largo del sprint, se ha logrado cubrir gran parte de los servicios web que 
       <td>Obtener organización por ID</td>
       <td><code>GET</code></td>
       <td>
-        <code>/api/v1/organizations/7</code><br>
+        <code>/api/v1/organizations/1</code><br>
         <em>Path Param:</em> <code>id: number</code>
       </td>
       <td>
         <strong>200 OK</strong>
         <pre>{
-  "id": 7,
-  "legalName": "Constructora Soluciones Integrales S.A.C.",
-  "commercialName": "Solintec",
-  "ruc": "20547896541",
-  "createdBy": 12,
-  "status": "ACTIVE",
-  "createdAt": "2025-06-21T08:27:56.218Z"
+  "id": 1,
+  "legalName": "SahurSAC",
+  "commercialName": "sahur",
+  "ruc": "20538856674",
+  "createdBy": 0,
+  "organizationStatusId": 1,
+  "statusName": "ACTIVE",
+  "organizationMemberIds": [
+    1
+  ],
+  "organizationInvitationIds": [],
+  "createdAt": "2025-07-04T15:19:39+00:00"
 }</pre>
         <strong>404 Not Found</strong>
         <pre>{
@@ -7009,7 +8463,7 @@ A lo largo del sprint, se ha logrado cubrir gran parte de los servicios web que 
   <td>Actualizar información de una organización</td>
   <td><code>PATCH</code></td>
   <td>
-    <code>/api/v1/organizations/2</code><br>
+    <code>/api/v1/organizations/1</code><br>
     <em>Path Param:</em> <code>id: number</code>
     <br>
     <br>
@@ -7020,9 +8474,9 @@ A lo largo del sprint, se ha logrado cubrir gran parte de los servicios web que 
 }</pre>
   </td>
   <td>
-    <strong>200 OK</strong>
+    <strong>200 Organization updated</strong>
     <pre>{
-  "message": "Organization with ID 2 successfully updated"
+  "message": "Organization with ID 1 successfully updated"
 }</pre>
     <strong>400 Bad Request</strong>
     <pre>{
@@ -7030,7 +8484,7 @@ A lo largo del sprint, se ha logrado cubrir gran parte de los servicios web que 
 }</pre>
     <strong>404 Not Found</strong>
     <pre>{
-  "message": "Organization with ID 2 not found"
+  "message": "Organization with ID 1 not found"
 }</pre>
   </td>
   <td><strong>http://localhost:5295/</strong></td>
@@ -7044,7 +8498,7 @@ A lo largo del sprint, se ha logrado cubrir gran parte de los servicios web que 
     <em>Path Param:</em> <code>id: number</code>
   </td>
   <td>
-    <strong>201 Created</strong>
+    <strong>200 Created</strong>
     <pre>{
   "id": 5,
   "organizationName": "Realio Consultores S.A.C.",
@@ -7211,17 +8665,17 @@ A lo largo del sprint, se ha logrado cubrir gran parte de los servicios web que 
   <td>Eliminar una organización por id</td>
   <td><code>DELETE</code></td>
   <td>
-    <code>/api/v1/organizations/20101720201</code><br>
+    <code>/api/v1/organizations/1</code><br>
     <em>Path Param:</em> <code>ruc: string</code>
   </td>
   <td>
-    <strong>200 OK</strong>
+    <strong>200 Organization eliminated</strong>
     <pre>{
-  "message": "Organization with RUC 20101720201 was successfully deleted"
+  "message": "Organization was successfully deleted"
 }</pre>
-    <strong>404 Not Found</strong>
+    <strong>400 Bad Request</strong>
     <pre>{
-  "message": "Organization with RUC 20101720201 not found"
+  "message": "Organization not found"
 }</pre>
   </td>
   <td><strong>http://localhost:5295/</strong></td>
@@ -7475,10 +8929,8 @@ Project date range updated successfully</strong>
   <td>Obtener los proyecto</td>
   <td><code>GET</code></td>
   <td>
-    <pre>{
- <code>/api/v1/project/{Id}</code><br>
+ <code>/api/v1/project/6</code><br>
     <em>Path Param:</em> <code>projectId: number</code>
-}</pre>
   </td>
   <td>
     <strong>200 	
@@ -7509,18 +8961,13 @@ Project retrieved successfully</strong>
   <td>Eliminar proyecto</td>
   <td><code>DELETE</code></td>
   <td>
-    <pre>{
- <code>/api/v1/project/{Id}</code><br>
+ <code>/api/v1/project/6</code><br>
     <em>Path Param:</em> <code>projectId: number</code>
-}</pre>
   </td>
   <td>
     <strong>200 OK</strong>
     <pre>{
-
-  "message": 	
-Project deleted successfully
-
+  "message": 	Project deleted successfully
 }</pre>
 <strong>400 Bad request</strong>
     <pre>{
@@ -7535,7 +8982,6 @@ Project deleted successfully
   <td><code>POST</code></td>
   <td>
     <pre>{
- 
   "role": "COORDINATOR",
   "specialty": "TOPOGRAPHY",
   "organizationMemberId": 2
@@ -7544,7 +8990,6 @@ Project deleted successfully
   <td>
     <strong>200 Project team member created successfully</strong>
     <pre>{
-
   "id": 2,
   "role": "COORDINATOR",
   "specialty": "TOPOGRAPHY",
@@ -7566,15 +9011,12 @@ Project deleted successfully
   <td>Obtener los proyecto</td>
   <td><code>GET</code></td>
   <td>
-    <pre>{
  <code>/api/v1/project-team-member/by-project-id/{projectId}</code><br>
     <em>Path Param:</em> <code>project-team-member: numberId</code>
-}</pre>
   </td>
   <td>
     <strong>200 Project team members retrieved successfully</strong>
     <pre>{
-
   "id": 6,
   "projectName": "Obra",
   "description": "Realizacion de obra",
@@ -7585,7 +9027,6 @@ Project deleted successfully
   "contractingEntityId": 2,
   "contractor": 1,
   "status": "BASIC_STUDIES"
-
 }</pre>
 <strong>400 Bad request</strong>
     <pre>{
@@ -7599,17 +9040,13 @@ Project deleted successfully
   <td>Elimina miembros de proyecto</td>
   <td><code>DELETE</code></td>
   <td>
-    <pre>{
- <code>/api/v1/project-team-member/{id}</code><br>
+ <code>/api/v1/project-team-member/6</code><br>
     <em>Path Param:</em> <code>project-team-member: numberId</code>
-}</pre>
   </td>
   <td>
     <strong>200 OK</strong>
     <pre>{
-
  "message":Project team member deleted successfully
-
 }</pre>
 <strong>400 Bad request</strong>
     <pre>{
@@ -7624,26 +9061,22 @@ Project deleted successfully
   <td><code>POST</code></td>
   <td>
     <pre>{
- 
   "name": "arreglo",
   "description": "arreglo de vereda",
   "projectId": 6,
   "startDate": "2025-07-06T15:57:42.996Z",
   "endDate": "2026-07-04T15:57:42.996Z"
-
 }</pre>
   </td>
   <td>
     <strong>200 OK</strong>
     <pre>{
-
   "id": 1,
   "name": "arreglo",
   "description": "arreglo de vereda",
   "projectId": 6,
   "startDate": "2025-07-06T00:00:00-05:00",
   "endDate": "2026-07-04T00:00:00-05:00"
-
 }</pre>
 <strong>400 Bad request</strong>
     <pre>{
@@ -7664,14 +9097,12 @@ Project deleted successfully
   <td>
     <strong>200 Milestone name updated successfully</strong>
     <pre>{
-
   "id": 1,
   "name": "tuberias rotas",
   "description": "arreglo de vereda",
   "projectId": 6,
   "startDate": "2025-07-06T00:00:00-05:00",
   "endDate": "2026-07-04T00:00:00-05:00"
-
 }</pre>
 <strong>400 Bad request</strong>
     <pre>{
@@ -7718,14 +9149,12 @@ Project deleted successfully
   <td>
     <strong>200 Milestone description updated successfully</strong>
     <pre>{
-
   "id": 1,
   "name": "tuberias rotas",
   "description": "arreglo de tuberias",
   "projectId": 6,
   "startDate": "2025-07-06T00:00:00-05:00",
   "endDate": "2026-07-04T00:00:00-05:00"
-
 }</pre>
 <strong>400 Bad request</strong>
     <pre>{
@@ -7747,14 +9176,12 @@ Project deleted successfully
   <td>
     <strong>200 Milestone date range updated successfully</strong>
     <pre>{
-
   "id": 1,
   "name": "tuberias rotas",
   "description": "arreglo de tuberias",
   "projectId": 6,
   "startDate": "2025-07-10T00:00:00-05:00",
   "endDate": "2027-07-04T00:00:00-05:00"
-
 }</pre>
 <strong>400 Bad request</strong>
     <pre>{
@@ -7768,22 +9195,18 @@ Project deleted successfully
   <td>Obtener las milestones</td>
   <td><code>GET</code></td>
   <td>
-    <pre>{
- <code>/api/v1/milestone/by-project/{projectId}</code><br>
+ <code>/api/v1/milestone/by-project/6</code><br>
     <em>Path Param:</em> <code>projectId: numberId</code>
-}</pre>
   </td>
   <td>
     <strong>200 Milestones retrieved successfully</strong>
     <pre>{
-
     "id": 1,
     "name": "arreglo",
     "description": "arreglo de vereda",
     "projectId": 6,
     "startDate": "2025-07-06T00:00:00-05:00",
     "endDate": "2026-07-04T00:00:00-05:00"
-
 }</pre>
 <strong>400 Bad request</strong>
     <pre>{
@@ -7797,10 +9220,8 @@ Project deleted successfully
   <td>Eliminar milestones del proyecto</td>
   <td><code>DELETE</code></td>
   <td>
-    <pre>{
- <code>/api/v1/milestone/{id}</code><br>
+ <code>/api/v1/milestone/6</code><br>
     <em>Path Param:</em> <code>milestoneId: numberId</code>
-}</pre>
   </td>
   <td>
     <strong>200 OK</strong>
@@ -7889,10 +9310,8 @@ Project deleted successfully
   <td>Eliminar task de milestones</td>
   <td><code>DELETE</code></td>
   <td>
-    <pre>{
- <code>/api/v1/task/{id}</code><br>
+ <code>/api/v1/task/1</code><br>
     <em>Path Param:</em> <code>taskId: numberId</code>
-}</pre>
   </td>
   <td>
     <strong>200 Task deleted successfully</strong>
@@ -7911,10 +9330,8 @@ Project deleted successfully
   <td>Obtener task de milestones</td>
   <td><code>GET</code></td>
   <td>
-    <pre>{
- <code>/api/v1/task/by-milestone-id/{milestoneId}</code><br>
+ <code>/api/v1/task/by-milestone-id/1</code><br>
     <em>Path Param:</em> <code>milestoneId: numberId</code>
-}</pre>
   </td>
   <td>
     <strong>200 Tasks retrieved successfully</strong>
@@ -7967,10 +9384,8 @@ Project deleted successfully
   <td>Obtener cambios del proyecto</td>
   <td><code>GET</code></td>
   <td>
-    <pre>{
- <code>/api/v1/change-process/by-project-id/{projectId}</code><br>
+ <code>/api/v1/change-process/by-project-id/6</code><br>
     <em>Path Param:</em> <code>changeId: projectId</code>
-}</pre>
   </td>
   <td>
     <strong>200 Change process retrieved successfully</strong>
@@ -8021,10 +9436,8 @@ Project deleted successfully
   <td>Obtener el presupuesto total del proyecto</td>
   <td><code>GET</code></td>
   <td>
-    <pre>{
- <code>/api/v1/projects/{projectId}/total-task-bugdet</code><br>
+ <code>/api/v1/projects/6/total-task-bugdet</code><br>
     <em>Path Param:</em> <code>taskId: projectId</code>
-}</pre>
   </td>
   <td>
     <strong>200 	
@@ -8054,9 +9467,17 @@ Configuración en Azure para el despliegue.
 
 Un hotfix debido a un error de producción con las variables de entorno.
 
+Hacer la implementacion completa del back
+
 #### 5.2.4.8. Team Collaboration Insights during Sprint
 
 En este cuarto sprint se ha logrado el objetivo de implementar a totalidad toda la interfaz funcional de la aplicación web y se ha conseguido un avance total del desarrollo del modelo y los servicios.
+
+**Front_End Insights**
+
+**Back_End Insights**
+
+<img src="./../../../../img/chapter5/Sprint3/insights/Back_tf.png">
 
 <div style="page-break-before: always;"></div>
 
@@ -8066,523 +9487,11 @@ En este cuarto sprint se ha logrado el objetivo de implementar a totalidad toda 
 
 ## 5.3. Validation Interviews
 
-Dentro de la sección "Validation Interviews" de nuestro proyecto, dirigimos nuestros esfuerzos a perfeccionar la plataforma web diseñada para la planificación y gestión de proyectos en el ámbito de la ingeniería civil. Esta etapa resulta esencial para comprender mejor las dinámicas del trabajo en obra, por lo que establece un canal de comunicación cercano con los usuarios clave: contratistas, especialistas y clientes. Mediante entrevistas de validación, buscamos recoger sus opiniones, necesidades y recomendaciones, de modo que la herramienta digital vaya sintonía con su realidad. Lo mencionado ayudará a que la solución no solo cumpla con los estándares técnicos, sino que también reuna las condiciones reales del trabajo y las expectativas de los usuarios involucrados.
-
 ### 5.3.1. Diseño de entrevistas
-
-En este apartado se exponen las metas de usuarios en concordancia con nuestras entrevistas. Estos user goals nos permiten comprender mejor las prioridades y expectativas de los usuarios, asegurando que la plataforma refleje fielmente su forma de trabajar en proyectos de la vida real.
-
-**User Goals**
-
-**User Goal: Iniciar sesión**  
-**User persona:** Contratistas, especialistas y clientes.  
-**Flujo:** El usuario accede a la aplicación desplegada y visualiza un formulario que le solicita su nombre de usuario y contraseña. Una vez que el sistema valida correctamente las credenciales, le concede acceso y lo redirige a su dashboard principal, donde se muestran las funcionalidades correspondientes a su rol. En caso contrario, permanece en la pantalla de inicio de sesión y se le indica que vuelva a ingresar sus datos.
-
-**User Goal: Navegar por el dashboard principal**  
-**User persona:** Contratistas y especialistas.  
-**Flujo:** Tras iniciar sesión, el usuario es dirigido automáticamente al dashboard principal de la organización. Esta pantalla incluye distintas secciones que le facilitan el trabajo: la sección “Información” proporciona detalles generales sobre la organización a la que pertenece; la sección “Proyectos” le permite visualizar el listado completo de proyectos activos; la sección “Miembros” le muestra la lista de integrantes, junto con la posibilidad de invitar nuevos miembros en caso de que tenga perfil de contratista; y la sección “Configuración” le brinda acceso a las opciones para modificar los datos legales y comerciales de la organización.
-
-**User Goal: Crear una organización**  
-**User persona:** Contratistas.  
-**Flujo:** El usuario accede a la sección “Organizaciones”, donde puede registrar una nueva entidad. La plataforma le ofrece un formulario que solicita el nombre legal, el nombre comercial y el número de RUC. Una vez que se validan estos datos, la nueva organización queda automáticamente registrada y visible en el listado para su consulta y gestión posterior.
-
-**User Goal: Crear un proyecto**  
-**User persona:** Contratistas.  
-**Flujo:** Al ingresar a una organización, el usuario accede a la sección “Proyectos”, donde dispone de una opción para registrar un nuevo proyecto. La plataforma le presenta un formulario para completar el nombre del proyecto, la descripción del mismo, el cliente al que está asociado y las fechas de inicio y fin. Una vez que los datos son validados y la creación queda confirmada, el proyecto se incluye automáticamente en la lista y queda disponible para su consulta y gestión.
-
-**User Goal: Crear cambios**  
-**User persona:** Clientes.  
-**Flujo:** Desde la vista del cliente, el usuario ingresa a la sección “Proyecto”, donde dispone de una opción para registrar un cambio. La plataforma presenta un formulario en el que es necesario describir el nombre del cambio y su motivo en el campo de descripción. Una vez que la información es completada, el cambio queda listo para ser enviado al contratista responsable del proyecto para su revisión y posterior solución.
-
-**User Goal: Registrar miembros**  
-**User persona:** Contratistas.  
-**Flujo:** Desde una organización o proyecto, el usuario accede a la sección “Miembros”, donde dispone de una opción para incorporar nuevos integrantes. La plataforma le presenta un formulario que requiere el correo electrónico y el rol asignado. Una vez que la información es validada y la invitación queda confirmada, el nuevo miembro se incluye automáticamente en la lista de participantes.
-
-**User Goal: Ver organizaciones**  
-**User persona:** Contratistas, especialistas.  
-**Flujo:** Una vez en el dashboard, el usuario ingresa a la sección “Organizaciones”, donde dispone del listado completo de las organizaciones asociadas a su cuenta. La plataforma le permite seleccionar cualquiera de ellas para consultar la vista detallada.
-
-**User Goal: Ver proyectos**  
-**User persona:** Contratistas, especialistas y clientes.  
-**Flujo:** Desde el dashboard o dentro de una organización específica, el usuario accede a la sección “Proyectos”, donde dispone del listado completo de proyectos activos. La plataforma le permite seleccionar cualquiera de ellos para consultar su vista detallada, que incluye las secciones “Información”, “Cronograma”, “Equipo de trabajo”, “Gestión de cambios” y “Configuración”, disponibles según el rol que tenga el usuario.
-
-**User Goal: Crear hitos y tareas**  
-**User persona:** Contratistas y especialistas.  
-**Flujo:** Al ingresar a un proyecto, el usuario accede a la sección “Cronograma”, donde dispone de las opciones para registrar un nuevo hito y una nueva tarea. La plataforma le presenta un formulario que incluye campos para asignar un responsable (y, si corresponde, su especialidad), definir el nombre y la descripción, establecer las fechas de inicio y fin, y seleccionar el estado actual. Una vez que la información es validada y confirmada, el hito o tarea queda registrado, visible para todo el equipo y listo para que la persona asignada pueda resolver la tarea cuando corresponda.
-<div style="page-break-before: always;"></div>
 
 ### 5.3.2. Registro de entrevistas
 
-<table style="
-          width: 100%;
-          border-collapse: collapse;
-          font-family: Arial, sans-serif;
-          margin-bottom: 40px;">
-  <thead>
-    <tr>
-      <th style="
-            text-align: left;
-            padding: 12px;
-            background-color: #f0f0f0;
-            font-size: 22px;"><strong>SEGMENTO OBJETIVO: CONTRATISTA</strong></th>
-      <th style="
-            text-align: left;
-            padding: 12px;
-            background-color: #f0f0f0;
-            font-size: 22px;"><strong>#1</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
-        <div style="display: flex; gap: 24px; align-items: flex-start; background-color: #fafafa; border-radius: 10px; padding: 24px;">
-          <div style="flex: 1; display: flex; flex-direction: column;">
-            <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Datos generales</p>
-            <ul style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 1.05em; line-height: 1.7; color: #333;">
-              <li><strong>Nombres:</strong> William Martín</li>
-              <li><strong>Apellidos:</strong> Salcedo Vásquez</li>
-              <li><strong>Edad:</strong> 57</li>
-              <li><strong>Distrito:</strong> San Juan de Lurigancho</li>
-              <li><strong>URL Entrevista:</strong> <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202224135_upc_edu_pe/Ef05d1XdNYZFvBYOx4Vp4WEB1Pj8WZ_gKRYXhJ6lTospPw?e=RodDB7&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D" target="_blank">Ver video</a></li>
-              <li><strong>Timestamp:</strong> 00:00</li>
-              <li><strong>Duración:</strong> 05:40</li>
-            </ul>
-          </div>
-          <img style="max-width: 40%; height: auto; border-radius: 10px; object-fit: cover; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);" src="../img/chapter5/Sprint3/william_salcedo.png" alt="Screenshot de la entrevista con William Salcedo">
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
-        <div style="background-color: #f9f9f9; border-radius: 10px; padding: 24px; margin-top: 12px;">
-          <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Resumen</p>
-          <ul style="padding-left: 20px; list-style-type: disc; color: #333; font-size: 1em; margin: 0;">
-            <li><strong>Personalidad:</strong> Guardian.
-              </ul>
-            </li>
-              </ul>
-            <ul style="margin: 0; padding: 24px; list-style-type: disc; color: #333; font-size: 1em; line-height: 1.7;">
-              <li><strong>Análisis:</strong> Durante la entrevista de validación, William Salcedo, autenticado como la entidad contratante, evaluó la plataforma y destacó que la interfaz le resultó amigable y sencilla de comprender. Asimismo, valoró que el flujo de trabajo estuviera bien organizado y fuera fácil de seguir, en línea con el User Goal: Iniciar sesión y el User Goal: Navegar por el dashboard principal, que le brindan una experiencia ordenada y coherente. Sin embargo, sugirió dos mejoras clave para optimizar su experiencia: la incorporación de un sistema de notificaciones que le permita enterarse en tiempo real (vía correo electrónico registrado) sobre nuevos cambios o actualizaciones que involucren su rol, y la posibilidad de visualizar y gestionar los diferentes estados del proyecto que actualmente no se muestran en la plataforma.</li>
-            </ul>
-            </li>
-          </ul>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<div style="page-break-before: always;"></div>
-
-<table class="tabla-entrevista">
-  <thead>
-    <tr>
-      <th style="
-            text-align: left;
-            padding: 12px;
-            background-color: #f0f0f0;
-            font-size: 22px;"><strong>SEGMENTO OBJETIVO: CONTRATISTA</strong></th>
-      <th><strong>#2</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
-        <div style="display: flex; gap: 24px; align-items: flex-start; background-color: #fafafa; border-radius: 10px; padding: 24px;">
-          <div style="flex: 1; display: flex; flex-direction: column;">
-            <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Datos generales</p>
-            <ul style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 1.05em; line-height: 1.7; color: #333;">
-              <li><strong>Nombres:</strong> Raúl Fernando</li>
-              <li><strong>Apellidos:</strong> Reaño García</li>
-              <li><strong>Edad:</strong> 56</li>
-              <li><strong>Distrito:</strong> San Juan de Lurigancho</li>
-              <li><strong>URL Entrevista:</strong> <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202224135_upc_edu_pe/EcevWNDfG6dBnrGYQPSWrzEB4IRn6nz58E08LabLr1X9UA?e=ntuur9&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D" target="_blank">Ver video</a></li>
-              <li><strong>Timestamp:</strong> 05:51</li>
-              <li><strong>Duración:</strong> 11:06</li>
-            </ul>
-          </div>
-          <img style="max-width: 40%; height: auto; border-radius: 10px; object-fit: cover; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);" src="../img/chapter5/Sprint3/raul_reaño.png" alt="Screenshot de la entrevista con Raul Reaño">
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
-        <div style="background-color: #f9f9f9; border-radius: 10px; padding: 24px; margin-top: 12px;">
-          <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Resumen</p>
-          <ul style="padding-left: 20px; list-style-type: disc; color: #333; font-size: 1em; margin: 0;">
-            <li><strong>Personalidad:</strong> Guardián. 
-              </ul>
-            </li>
-          </ul>
-          <ul style="margin: 0; padding: 24px; list-style-type: disc; color: #333; font-size: 1em; line-height: 1.7;">
-            <li><strong>Análisis:</strong> Durante la entrevista de validación, Raúl Reaño, en su rol de contratista, se sintió bastante conforme con la plataforma y destacó que la estructura le resultaba clara y funcional. Asimismo, valoró positivamente la internacionalización y consideró que el cronograma debería dividirse en dos partes: cronograma de trabajo y avance de proyecto. En la vista de avance, sugirió que se pudieran incluir precios, valorizaciones y estimaciones económicas relacionadas con los hitos, para que el progreso del proyecto sea más completo y transparente. Finalmente, comentó que la paleta de colores es sencilla y práctica, facilitando su uso e interpretación.</li>
-          </ul>  
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<div style="page-break-before: always;"></div>
-
-<table class="tabla-entrevista">
-  <thead>
-    <tr>
-      <th style="
-            text-align: left;
-            padding: 12px;
-            background-color: #f0f0f0;
-            font-size: 22px;"><strong>SEGMENTO OBJETIVO: CONTRATISTA</strong></th>
-      <th><strong>#3</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
-        <div style="display: flex; gap: 24px; align-items: flex-start; background-color: #fafafa; border-radius: 10px; padding: 24px;">
-          <div style="flex: 1; display: flex; flex-direction: column;">
-            <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Datos generales</p>
-            <ul style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 1.05em; line-height: 1.7; color: #333;">
-              <li><strong>Nombres:</strong> Victor Manuel</li>
-              <li><strong>Apellidos:</strong> León Reyes</li>
-              <li><strong>Edad:</strong> 52</li>
-              <li><strong>Distrito:</strong> San Borja</li>
-              <li><strong>URL Entrevista:</strong> <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202224135_upc_edu_pe/EcevWNDfG6dBnrGYQPSWrzEB4IRn6nz58E08LabLr1X9UA?e=ntuur9&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D" target="_blank">Ver video</a></li>
-              <li><strong>Timestamp:</strong> 11:07</li>
-              <li><strong>Duración:</strong> 16:54</li>
-            </ul>
-          </div>
-          <img style="max-width: 40%; height: auto; border-radius: 10px; object-fit: cover; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);" src="../img/chapter5/Sprint3/victo_leon.png" alt="Screenshot de la entrevista con Victor Leon">
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
-        <div style="background-color: #f9f9f9; border-radius: 10px; padding: 24px; margin-top: 12px;">
-          <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Resumen</p>
-          <ul style="padding-left: 20px; list-style-type: disc; color: #333; font-size: 1em; margin: 0;">
-            <li><strong>Personalidad:</strong> Guardián.
-              </ul>
-            <ul style="margin: 0; padding: 24px; list-style-type: disc; color: #333; font-size: 1em; line-height: 1.7;">
-                <li><strong>Análisis:</strong> Durante la entrevista de validación, Victor León, en su rol de contratista, comentó que la plataforma le resultó muy intuitiva y sencilla de comprender, sin necesidad de conocimientos expertos para su uso. Destacó que las etapas y fases del proyecto se muestran claramente en el dashboard, facilitando mantener el orden en todo momento. Asimismo, alineado con el User Goal: Registrar cambios y el User Goal: Navegar por el dashboard principal, sugirió implementar más validaciones o respaldos cuando se realiza una solicitud de cambio. Consideró que debería existir algún mecanismo contractual que le otorgue mayor formalidad y legalidad a la modificación, evitando problemas futuros entre las partes.</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<div style="page-break-before: always;"></div>
-
-<table class="tabla-entrevista">
-  <thead>
-    <tr>
-      <th style="
-            text-align: left;
-            padding: 12px;
-            background-color: #f0f0f0;
-            font-size: 22px;"><strong>SEGMENTO OBJETIVO: ESPECIALISTA</strong></th>
-      <th><strong>#1</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
-        <div style="display: flex; gap: 24px; align-items: flex-start; background-color: #fafafa; border-radius: 10px; padding: 24px;">
-          <div style="flex: 1; display: flex; flex-direction: column;">
-            <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Datos generales</p>
-            <ul style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 1.05em; line-height: 1.7; color: #333;">
-              <li><strong>Nombres:</strong> Victor Otto</li>
-              <li><strong>Apellidos:</strong> Reinoso Diaz</li>
-              <li><strong>Edad:</strong> 26</li>
-              <li><strong>Distrito:</strong> La Molina</li>
-             <li><strong>URL Entrevista:</strong> <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202224135_upc_edu_pe/EcevWNDfG6dBnrGYQPSWrzEB4IRn6nz58E08LabLr1X9UA?e=ntuur9&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D" target="_blank">Ver video</a></li>
-              <li><strong>Timestamp:</strong> 16:55</li>
-              <li><strong>Duración:</strong> 21:59</li>
-            </ul>
-          </div>
-          <img style="max-width: 40%; height: auto; border-radius: 10px; object-fit: cover; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);" src="../img/chapter5/Sprint3/victor_reinoso.png" alt="Screenshot de la entrevista con Victor Reinoso">
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
-        <div style="background-color: #f9f9f9; border-radius: 10px; padding: 24px; margin-top: 12px;">
-          <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Resumen</p>
-          <ul style="padding-left: 20px; list-style-type: disc; color: #333; font-size: 1em; margin: 0;">
-            <li><strong>Personalidad:</strong> Racional. 
-              </ul>
-            </li>
-          </ul>
-            <ul style="margin: 0; padding: 24px; list-style-type: disc; color: #333; font-size: 1em; line-height: 1.7;">
-                <li><strong>Análisis:</strong> Durante la entrevista de validación, Victor Reinoso, en su rol de especialista, comentó que la plataforma es funcional, pero que los colores actuales son demasiado intensos y las letras en gris tienden a opacar la visión del contenido. Asimismo, sugirió que sería recomendable eliminar algunas vistas que podrían resultar confusas o redundantes para el usuario, alineándose con el User Goal: Navegar por el dashboard principal y el User Goal: Ver proyectos, con el fin de que la experiencia sea más clara y sencilla. Por último, mencionó que, desde la perspectiva del modelo de negocio, la herramienta es adecuada y cumple con su propósito principal.</li>
-              </ul>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<div style="page-break-before: always;"></div>
-
-<table class="tabla-entrevista">
-  <thead>
-    <tr>
-      <th style="
-            text-align: left;
-            padding: 12px;
-            background-color: #f0f0f0;
-            font-size: 22px;"><strong>SEGMENTO OBJETIVO: ESPECIALISTA</strong></th>
-      <th><strong>#2</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
-        <div style="display: flex; gap: 24px; align-items: flex-start; background-color: #fafafa; border-radius: 10px; padding: 24px;">
-          <div style="flex: 1; display: flex; flex-direction: column;">
-            <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Datos generales</p>
-            <ul style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 1.05em; line-height: 1.7; color: #333;">
-              <li><strong>Nombres:</strong> Jorge Raúl</li>
-              <li><strong>Apellidos:</strong> García Torres</li>
-              <li><strong>Edad:</strong> 27</li>
-              <li><strong>Distrito:</strong> San Miguel</li>
-              <li><strong>URL Entrevista:</strong> <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202224135_upc_edu_pe/EcevWNDfG6dBnrGYQPSWrzEB4IRn6nz58E08LabLr1X9UA?e=ntuur9&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D" target="_blank">Ver video</a></li>
-              <li><strong>Timestamp:</strong> 22:00</li>
-              <li><strong>Duración:</strong> 27:22</li>
-            </ul>
-          </div>
-          <img style="max-width: 40%; height: auto; border-radius: 10px; object-fit: cover; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);" src="../img/chapter5/Sprint3/jorge_garcia.png" alt="Screenshot de la entrevista con Jorge Garcia">
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
-        <div style="background-color: #f9f9f9; border-radius: 10px; padding: 24px; margin-top: 12px;">
-          <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Resumen</p>
-          <ul style="padding-left: 20px; list-style-type: disc; color: #333; font-size: 1em; margin: 0;">
-            <li><strong>Personalidad:</strong> Guardián. 
-              </ul>
-            </li>
-          </ul>
-            <ul style="margin: 0; padding: 24px; list-style-type: disc; color: #333; font-size: 1em; line-height: 1.7;">
-                <li><strong>Análisis:</strong> Durante la entrevista de validación, Jorge, en su rol de especialista, mencionó que la plataforma es bastante clara y que la presentación visual lo invita a seguir explorando. Asimismo, destacó que la información que se le muestra está bien adaptada a su rol como ingeniero, facilitando el acceso a su equipo de trabajo y a los proyectos que le corresponden, en línea con el User Goal: Navegar por el dashboard principal y el User Goal: Ver proyectos. Por último, comentó que la paleta de colores es adecuada y contribuye a que la experiencia sea sencilla y atractiva.</li>
-              </ul>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<div style="page-break-before: always;"></div>
-
-<table class="tabla-entrevista">
-  <thead>
-    <tr>
-      <th style="
-            text-align: left;
-            padding: 12px;
-            background-color: #f0f0f0;
-            font-size: 22px;"><strong>SEGMENTO OBJETIVO: ESPECIALISTA</strong></th>
-      <th><strong>#3</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
-        <div style="display: flex; gap: 24px; align-items: flex-start; background-color: #fafafa; border-radius: 10px; padding: 24px;">
-          <div style="flex: 1; display: flex; flex-direction: column;">
-            <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Datos generales</p>
-            <ul style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 1.05em; line-height: 1.7; color: #333;">
-              <li><strong>Nombres:</strong> Raúl Eduardo</li>
-              <li><strong>Apellidos:</strong> Medina Fernandez</li>
-              <li><strong>Edad:</strong> 30</li>
-              <li><strong>Distrito:</strong> Surquillo</li>
-              <li><strong>URL Entrevista:</strong> <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202224135_upc_edu_pe/EcevWNDfG6dBnrGYQPSWrzEB4IRn6nz58E08LabLr1X9UA?e=ntuur9&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D" target="_blank">Ver video</a></li>
-              <li><strong>Timestamp:</strong> 27:23</li>
-              <li><strong>Duración:</strong> 32:53</li>
-            </ul>
-          </div>
-          <img style="max-width: 40%; height: auto; border-radius: 10px; object-fit: cover; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);" src="../img/chapter5/Sprint3/raul_medina.png" alt="Screenshot de la entrevista con Raul Medina">
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
-        <div style="background-color: #f9f9f9; border-radius: 10px; padding: 24px; margin-top: 12px;">
-          <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Resumen</p>
-          <ul style="padding-left: 20px; list-style-type: disc; color: #333; font-size: 1em; margin: 0;">
-            <li><strong>Personalidad:</strong> Guardián. 
-              </ul>
-            </li>
-          </ul>
-            <ul style="margin: 0; padding: 24px; list-style-type: disc; color: #333; font-size: 1em; line-height: 1.7;">
-                <li><strong>Análisis:</strong> Durante la entrevista de validación, Raúl, en su rol de especialista, destacó que la plataforma le pareció muy clara y sencilla, con una ruta de navegación bien definida y fácil de comprender. También mencionó que los colores elegidos resultan agradables y transmiten una sensación profesional, logrando una experiencia visualmente armoniosa desde el primer ingreso sin necesidad de asistencia externa. Este feedback se alinea con el User Goal: Iniciar sesión y el User Goal: Navegar por el dashboard principal, que buscan ofrecer a los usuarios una interacción intuitiva, ordenada y que inspire confianza.</li>
-              </ul>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<div style="page-break-before: always;"></div>
-
-<table class="tabla-entrevista">
-  <thead>
-    <tr>
-      <th style="
-            text-align: left;
-            padding: 12px;
-            background-color: #f0f0f0;
-            font-size: 22px;"><strong>SEGMENTO OBJETIVO: ENTIDAD CONTRATANTE</strong></th>
-      <th><strong>#1</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
-        <div style="display: flex; gap: 24px; align-items: flex-start; background-color: #fafafa; border-radius: 10px; padding: 24px;">
-          <div style="flex: 1; display: flex; flex-direction: column;">
-            <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Datos generales</p>
-            <ul style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 1.05em; line-height: 1.7; color: #333;">
-              <li><strong>Nombres:</strong> Leonardo Jesús </li>
-              <li><strong>Apellidos:</strong> Caballa Huamán </li>
-              <li><strong>Edad:</strong> 28</li>
-              <li><strong>Distrito:</strong> Jesús María</li>
-              <li><strong>URL Entrevista:</strong> <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202224135_upc_edu_pe/EcevWNDfG6dBnrGYQPSWrzEB4IRn6nz58E08LabLr1X9UA?e=ntuur9&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D" target="_blank">Ver video</a></li>
-              <li><strong>Timestamp:</strong> 32:54</li>
-              <li><strong>Duración:</strong> 37:59</li>
-            </ul>
-          </div>
-          <img style="max-width: 40%; height: auto; border-radius: 10px; object-fit: cover; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);" src="../img/chapter5/Sprint3/leonardo_caballa.png" alt="Screenshot de la entrevista con Leonardo Caballa">
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
-        <div style="background-color: #f9f9f9; border-radius: 10px; padding: 24px; margin-top: 12px;">
-          <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Resumen</p>
-          <ul style="padding-left: 20px; list-style-type: disc; color: #333; font-size: 1em; margin: 0;">
-            <li><strong>Personalidad:</strong> Idealista. 
-              </ul>
-            </li>
-          </ul>
-             <ul style="margin: 0; padding: 24px; list-style-type: disc; color: #333; font-size: 1em; line-height: 1.7;">
-                <li><strong>Análisis:</strong> Durante la entrevista de validación, Leonardo, en su rol de cliente, mencionó que es consciente de que las personas pueden cambiar de idea y que el User Goal: Registrar cambios le parece muy adecuado para cómo funciona un proyecto. Asimismo, comentó que el esquema de colores es neutral y que sería interesante diferenciar visualmente cada sección con tonalidades propias, manteniendo un ruteo de vistas bien organizado y fácil de comprender. Por último, sugirió integrar una comunicación directa con el contratista que le permita pedir fotos o adjuntar documentos cuando solicite cambios, lo que se asocia a los User Goals: Registrar cambios y Ver proyectos, ya que mejora la transparencia y la colaboración entre las partes involucradas.</li>
-              </ul>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<div style="page-break-before: always;"></div>
-
-<table class="tabla-entrevista">
-  <thead>
-    <tr>
-      <th style="
-            text-align: left;
-            padding: 12px;
-            background-color: #f0f0f0;
-            font-size: 22px;"><strong>SEGMENTO OBJETIVO: ENTIDAD CONTRATANTE</strong></th>
-      <th><strong>#2</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
-        <div style="display: flex; gap: 24px; align-items: flex-start; background-color: #fafafa; border-radius: 10px; padding: 24px;">
-          <div style="flex: 1; display: flex; flex-direction: column;">
-            <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Datos generales</p>
-            <ul style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 1.05em; line-height: 1.7; color: #333;">
-              <li><strong>Nombres:</strong> Alvaro Martin</li>
-              <li><strong>Apellidos:</strong> Torres Huamaní </li>
-              <li><strong>Edad:</strong> 27</li>
-              <li><strong>Distrito:</strong> San Juan de Lurigancho</li>
-              <li><strong>URL Entrevista:</strong> <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202224135_upc_edu_pe/EcevWNDfG6dBnrGYQPSWrzEB4IRn6nz58E08LabLr1X9UA?e=ntuur9&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D" target="_blank">Ver video</a></li>
-              <li><strong>Timestamp:</strong> 38:00</li>
-              <li><strong>Duración:</strong> 42:49</li>
-            </ul>
-          </div>
-          <img style="max-width: 40%; height: auto; border-radius: 10px; object-fit: cover; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);" src="../img/chapter5/Sprint3/alvaro_torres.png" alt="Screenshot de la entrevista con Alvaro Torres">
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
-        <div style="background-color: #f9f9f9; border-radius: 10px; padding: 24px; margin-top: 12px;">
-          <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Resumen</p>
-          <ul style="padding-left: 20px; list-style-type: disc; color: #333; font-size: 1em; margin: 0;">
-            <li><strong>Personalidad:</strong> Idealista. 
-              </ul>
-            </li>
-          </ul>
-            <ul style="margin: 0; padding: 24px; list-style-type: disc; color: #333; font-size: 1em; line-height: 1.7;">
-            <li><strong>Análisis:</strong> Durante la entrevista de validación, Álvaro, en su rol de cliente, destacó que la opción de internacionalización le pareció muy útil y bien lograda para usuarios de diferentes idiomas. También mencionó que el campo para registrar el número telefónico debería estar mejor implementado en el registro, ya que no queda claro qué tipo de número se espera, mejorando así el User Goal: Iniciar sesión y el User Goal: Ver proyecto. Por último, sugirió que una notificación visual en la campanita que confirme si un cambio solicitado ha sido aprobado o desaprobado sería muy útil, lo cual está alineado con el User Goal: Registrar cambios y aporta mayor transparencia y control al proceso.</li>
-              </ul>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<div style="page-break-before: always;"></div>
-
-<table class="tabla-entrevista">
-  <thead>
-    <tr>
-      <th style="
-            text-align: left;
-            padding: 12px;
-            background-color: #f0f0f0;
-            font-size: 22px;"><strong>SEGMENTO OBJETIVO: ENTIDAD CONTRATANTE</strong></th>
-      <th><strong>#3</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
-        <div style="display: flex; gap: 24px; align-items: flex-start; background-color: #fafafa; border-radius: 10px; padding: 24px;">
-          <div style="flex: 1; display: flex; flex-direction: column;">
-            <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Datos generales</p>
-            <ul style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 1.05em; line-height: 1.7; color: #333;">
-              <li><strong>Nombres:</strong> Aaron Patrick</li>
-              <li><strong>Apellidos:</strong> Ravines Diaz</li>
-              <li><strong>Edad:</strong> 27</li>
-              <li><strong>Distrito:</strong> San Borja</li>
-             <li><strong>URL Entrevista:</strong> <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202224135_upc_edu_pe/EcevWNDfG6dBnrGYQPSWrzEB4IRn6nz58E08LabLr1X9UA?e=ntuur9&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D" target="_blank">Ver video</a></li>
-              <li><strong>Timestamp:</strong> 42:50</li>
-              <li><strong>Duración:</strong> 48:16</li>
-            </ul>
-          </div>
-          <img style="max-width: 40%; height: auto; border-radius: 10px; object-fit: cover; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);" src="../img/chapter5/Sprint3/aaron_ravines.png" alt="Screenshot de la entrevista con Aaron Ravines">
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" style="padding: 0; vertical-align: top; background-color: #fff border-top: 1px solid #ddd;">
-        <div style="background-color: #f9f9f9; border-radius: 10px; padding: 24px; margin-top: 12px;">
-          <p style="font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px;">Resumen</p>
-          <ul style="padding-left: 20px; list-style-type: disc; color: #333; font-size: 1em; margin: 0;">
-            <li><strong>Personalidad:</strong> Idealista. 
-              </ul>
-            </li>
-          </ul>
-            <ul style="margin: 0; padding: 24px; list-style-type: disc; color: #333; font-size: 1em; line-height: 1.7;">
-                <li><strong>Análisis:</strong> Durante la entrevista de validación, Aaron, en su rol de cliente, mencionó que el proceso le pareció correcto y que no ha sido difícil interactuar con la interfaz, destacando que los colores elegidos transmiten tranquilidad y que todo está bien organizado. Esta facilidad de uso y comodidad al navegar por la plataforma está alineada con el User Goal: Ver Proyecto, ya que le ha permitido comprender y moverse por las distintas secciones sin complicaciones.</li>
-              </ul>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<div style="page-break-after: always;"></div>
-
-### 5.3.3 UX Heuristics & Principles Evaluation 
+### 5.3.3 UX Heuristics And Principles Evaluation
 
 **Usability – Inclusive Design – Information Architecture**
 
@@ -8670,7 +9579,7 @@ Heurística violada: Usabilidad - Prevención de errores
 Problema:
 Cuando nos encontramos dentro de una organización y nos dirigimos a la sección "Miembros", podemos hacer invitaciones a personas registradas para que puedan unirse a la organización. Sin embargo, no existe la validación de no enviarse invitaciones a si mismo. Este aspecto no tiene sentido ya que una persona no puede invitarse a una organización que el mismo ha creado.
 
-<img src="../img/chapter5/Sprint3/Aplication/problema3.png">
+<img src="../img/chapter5/Sprint3/Heuristics/problema3.png">
 
 Recomendación:
 Validar a través de una query si una persona y una organización ya se encuentran vinculadas a través de una invitación. En caso eso sea cierto podemos simplemente anular la invitación que se esta queriendo generar.

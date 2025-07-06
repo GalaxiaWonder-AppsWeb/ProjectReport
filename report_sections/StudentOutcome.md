@@ -38,11 +38,20 @@
                     <li><strong>Álvaro:</strong> Guié la integración del módulo de notificaciones trabajando de la mano con Henry y Mario, y tomé decisiones estratégicas sobre su escalabilidad y mantenibilidad en equipo. Mi liderazgo fue siempre en consenso.</li>
                     <li><strong>Henry:</strong> Diseñé y lideré la configuración del entorno de producción en Railway. Coordiné con el resto del equipo para realizar pruebas finales, corregir errores críticos y garantizar un despliegue exitoso. Fomenté la colaboración técnica continua.</li>
                 </ul>
+                 <strong>TF:</strong><br>
+                <ul>
+                    <li><strong>Andrea:</strong> Coordiné junto a Henry la sesión de pruebas de integración, asegurando que todas las funcionalidades implementadas por el equipo se validaran correctamente. Además, facilité un entorno de trabajo colaborativo durante las sesiones en grupo.</li>
+                    <li><strong>Fabrizio:</strong> Lideré la implementación del sistema de autenticación de usuarios, trabajando estrechamente con Andrea y Álvaro para que estuviera alineado con el flujo general del sistema. También promoví sesiones de feedback para mejorar continuamente.</li>
+                    <li><strong>Mario:</strong> Organicé y facilité reuniones de revisión técnica con el equipo para resolver bloqueos comunes y mejorar la planificación. Mi rol se centró en conectar al equipo con los objetivos de la visión general del proyecto.</li>
+                    <li><strong>Álvaro:</strong> Guié la integración del módulo de notificaciones trabajando de la mano con Henry y Mario, y tomé decisiones estratégicas sobre su escalabilidad y mantenibilidad en equipo. Mi liderazgo fue siempre en consenso.</li>
+                    <li><strong>Henry:</strong> Diseñé y lideré la configuración del entorno de producción en Railway. Coordiné con el resto del equipo para realizar pruebas finales, corregir errores críticos y garantizar un despliegue exitoso. Fomenté la colaboración técnica continua.</li>
+                </ul>
             </td>
             <td>
                 <strong>TB1:</strong> El trabajo en equipo para este entregable fue muy fuerte, casi siempre estabamos en reunión y trabajando juntos. Sin embargo, aún hay espacio para mejorar en la autonomía de cada miembro del equipo. <br>
                 <strong>TP:</strong> El trabajo en equipo para este entregable fue constante, con reuniones frecuentes y colaboración activa entre los miembros. No obstante, aún existen oportunidades para fortalecer la autonomía individual y optimizar la gestión del tiempo de manera más equilibrada<br>
-                <strong>TB2:</strong> En este entregable se consolidó un liderazgo compartido dentro del equipo, evidenciado en la toma de decisiones colaborativas, la distribución equitativa de responsabilidades y la resolución conjunta de desafíos técnicos. Se logró mantener una comunicación fluida y un compromiso colectivo con los objetivos del proyecto. A futuro, se puede seguir fortaleciendo la iniciativa individual en paralelo con este liderazgo horizontal para mejorar aún más la eficiencia y cohesión del equipo.
+                <strong>TB2:</strong> En este entregable se consolidó un liderazgo compartido dentro del equipo, evidenciado en la toma de decisiones colaborativas, la distribución equitativa de responsabilidades y la resolución conjunta de desafíos técnicos. Se logró mantener una comunicación fluida y un compromiso colectivo con los objetivos del proyecto. A futuro, se puede seguir fortaleciendo la iniciativa individual en paralelo con este liderazgo horizontal para mejorar aún más la eficiencia y cohesión del equipo.<br>
+                <strong>TF:</strong> En este entregable se consolidó un liderazgo compartido dentro del equipo, evidenciado en la toma de decisiones conjunta, la distribución equitativa de tareas y la colaboración en la resolución de desafíos técnicos. El equipo sostuvo una comunicación constante y un compromiso común con los objetivos planteados. Hacia adelante, sería útil seguir fomentando la proactividad individual como complemento a este liderazgo horizontal, fortaleciendo así la cohesión y la eficiencia del grupo.
             </td>
         </tr>
         <tr>
@@ -74,11 +83,22 @@
                     <li><strong>Álvaro:</strong> Lideré reuniones de seguimiento para alinear al equipo en torno a las metas. También motivé la participación equitativa de todos los miembros y ajusté tareas de manera proactiva para evitar cuellos de botella.</li>
                     <li><strong>Henry:</strong> Me aseguré de que los objetivos técnicos del entregable se cumplieran dentro del tiempo establecido. También propuse soluciones viables para mantener el ritmo del equipo y evitar bloqueos en tareas críticas.</li>
                 </ul>
+                <strong>TF:</strong><br>
+                <ul>
+                    <li><strong>Andrea:</strong> Coordiné junto a Álvaro la planificación de tareas en el segundo sprint. Además, promoví un ambiente inclusivo donde todos pudieran expresar ideas y resolver dudas sin juicios.</li>
+                    <li><strong>Fabrizio:</strong> Me enfoqué en cumplir con las tareas asignadas y también asumí la responsabilidad de revisar tareas en riesgo. Mantuve una comunicación constante con mis compañeros para garantizar el cumplimiento colectivo de objetivos.</li>
+                    <li><strong>Mario:</strong> Aporté al cumplimiento de metas desde una perspectiva flexible, apoyando donde era más necesario y adaptándome a los cambios. Esto fortaleció la colaboración y la confianza entre el equipo.</li>
+                    <li><strong>Álvaro:</strong> Lideré reuniones de seguimiento para alinear al equipo en torno a las metas. También motivé la participación equitativa de todos los miembros y ajusté tareas de manera proactiva para evitar cuellos de botella.</li>
+                    <li><strong>Henry:</strong> Me aseguré de que los objetivos técnicos del entregable se cumplieran dentro del tiempo establecido. También propuse soluciones viables para mantener el ritmo del equipo y evitar bloqueos en tareas críticas.</li>
+                </ul>
             </td>
             <td>
                 <strong>TB1:</strong> El desempeño y cohesión del equipo durante este entregable fue muy bueno. Se realizaron constantes reuniones y colaboramos mutuamente para llegar a la meta planteada. Todos cumplieron con sus tareas asignadas y cumplieron con los plazos establecidos. Sin embargo, aún hay margen de mejora.<br>
                 <strong>TP:</strong> El desempeño del equipo en este entregable no fue sólido. Aún con reuniones frecuentes que facilitaron el avance de algunos objetivos propuestos, no se cumplieron todos. Cada integrante trató de asumir con responsabilidad sus tareas, cumpliéndolas fuera de los plazos establecidos. No obstante, aún existe margen de mejora en aspectos como la coordinación en momentos clave, la distribución equilibrada del trabajo y el fortalecimiento de la autonomía individual para optimizar el rendimiento colectivo.<br>
                 <strong>TB2:</strong> Durante este entregable, el equipo logró consolidar un entorno de trabajo colaborativo e inclusivo, caracterizado por una comunicación constante, una planificación conjunta y una fuerte disposición al apoyo mutuo. Se evidenció una mejora significativa en la coordinación de tareas y en el cumplimiento de los objetivos trazados. A pesar de algunos retos en la gestión del tiempo individual, el equipo respondió con flexibilidad y compromiso, reforzando así su capacidad para trabajar de forma cohesionada y orientada a resultados.
+                <br>
+                <strong>TF:</strong> Durante el proyecto, el equipo creó un entorno colaborativo e inclusivo que facilitó la participación activa de todos sus miembros. Se definieron metas claras y alcanzables, se planificaron las tareas de manera conjunta y se mantuvo una distribución equitativa de responsabilidades. Gracias a la comunicación constante y al compromiso colectivo, se lograron cumplir los objetivos establecidos, consolidando así una dinámica de trabajo efectiva y orientada a resultados.
+                </br>
             </td>
         </tr>
     </tobdy>

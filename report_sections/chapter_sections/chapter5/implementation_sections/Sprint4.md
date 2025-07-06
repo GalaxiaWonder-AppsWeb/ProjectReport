@@ -2215,6 +2215,14 @@ Configuración en Azure para el despliegue.
 
 Un hotfix debido a un error de producción con las variables de entorno.
 
+Hacer la implementacion completa del back
+
 #### 5.2.4.8. Team Collaboration Insights during Sprint
 
 En este cuarto sprint se ha logrado el objetivo de implementar a totalidad toda la interfaz funcional de la aplicación web y se ha conseguido un avance total del desarrollo del modelo y los servicios.
+
+**Front_End Insights**
+
+**Back_End Insights**
+
+<img src="./../../../../img/chapter5/Sprint3/insights/Back_tf.png">

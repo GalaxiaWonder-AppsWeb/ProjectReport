@@ -2959,3 +2959,11 @@ Un hotfix debido a un error de producción con las variables de entorno.
 #### 5.2.3.8. Team Collaboration Insights during Sprint
 
 En este tercer sprint se ha fallado en lograr el objetivo de implementar a totalidad toda la interfaz funcional de la aplicación web, pero se ha conseguido un avance total del desarrollo del modelo y los servicios.
+
+**Front_End Insights**
+
+<img src="./../../../../img/chapter5/Sprint3/insights/Front_tb2.png">
+
+**Back_End Insights**
+
+<img src="./../../../../img/chapter5/Sprint3/insights/Back_tb2.png">
