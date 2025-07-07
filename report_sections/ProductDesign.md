@@ -1771,7 +1771,7 @@ Cada Task incluye información sobre su especialidad, estado, fechas y el miembr
 
 El modelo también contempla value objects como ProjectStatus, TaskStatus, TaskSpec y Specialty, que acotan y estructuran posibles valores del dominio. Además, se emplean fábricas para construir elementos del cronograma (ScheduleItemFactory, TaskFactory, etc.), promoviendo un diseño limpio y orientado a la creación controlada de objetos complejos.
 
-<img src="../img/chapter4/oop/projects.svg" alt="Diagrama de clases del bounded context Project Management de ProP GMS">
+<img src="../img/chapter4/oop/project.svg" alt="Diagrama de clases del bounded context Project Management de ProP GMS">
 
 #### 4.7.1.2. Change Management Class Diagram
 
@@ -1781,7 +1781,7 @@ La entidad raíz del agregado es ChangeProcess, que encapsula tanto el origen de
 
 El modelo contempla value objects que acotan claramente los posibles estados (PENDING, APPROVED, REJECTED) y tipos de origen (CHANGE_REQUEST). Además, se provee una fábrica (ChangeProcessFactory) que permite construir el agregado de manera controlada según el tipo de solicitud original.
 
-<img src="../img/chapter4/oop/change.png" alt="Diagrama de clases del bounded context de Changes Management de ProP GMS">
+<img src="../img/chapter4/oop/changes.svg" alt="Diagrama de clases del bounded context de Changes Management de ProP GMS">
 
 #### 4.7.1.3. Organization Class Diagram
 
@@ -1789,7 +1789,7 @@ Este diagrama representa la estructura del Organization Context, donde se modela
 
 El proceso de incorporación de nuevos miembros se gestiona a través de la entidad OrganizationInvitation, que registra quién invita, a quién se invita, cuándo, y en qué estado se encuentra la invitación (PENDING, ACCEPTED, REJECTED). Este mecanismo permite un control claro y seguro del acceso organizacional.
 
-<img src="../img/chapter4/oop/organizations.png" alt="Diagrama de clases del bounded context Organization de ProP GMS">
+<img src="../img/chapter4/oop/organizations.svg" alt="Diagrama de clases del bounded context Organization de ProP GMS">
 
 #### 4.7.1.4. IAM Class Diagram
 Este diagrama representa el IAM Bounded Context del sistema PropGMS, encargado de gestionar el acceso y la identidad de los usuarios. La clase principal es UserAccount, la cual actúa como Aggregate Root y almacena datos como nombre de usuario, hash de contraseña, tipo de usuario (UserType), estado de la cuenta (AccountStatus) y referencias al objeto Person.
@@ -1800,7 +1800,7 @@ Para la autenticación y manejo de sesiones, se utilizan objetos como AuthToken,
 
 Finalmente, la entidad Person representa a los individuos registrados, incluyendo datos personales como nombre, correo, teléfono, profesión y estado. Esto permite mantener separada la lógica de autenticación de la información del usuario como persona física o jurídica.
 
-<img src="../img/chapter4/oop/iam.png" alt="Diagrama de clases del bounded context IAM de ProP GMS">
+<img src="../img/chapter4/oop/iam.svg" alt="Diagrama de clases del bounded context IAM de ProP GMS">
 
 <div style="page-break-after: always;"></div>
 
