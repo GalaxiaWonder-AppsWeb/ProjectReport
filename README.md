@@ -6915,9 +6915,6 @@ El proyecto está organizado en varios repositorios, según la arquitectura modu
 - FrontEnd Web Application (Vue.js SPA con Vite):  
   [https://github.com/GalaxiaWonder-AppsWeb/FrontEnd](https://github.com/GalaxiaWonder-AppsWeb/FrontEnd)
 
-- RESTful API (C# + ASP.NET Core):  
-  [https://github.com/GalaxiaWonder-AppsWeb/API](https://github.com/GalaxiaWonder-AppsWeb/API)
-
 - ProP GMS Web Service (Arquitectura modular basada en .NET):  
   [https://github.com/GalaxiaWonder-AppsWeb/Platform](https://github.com/GalaxiaWonder-AppsWeb/Platform)
 
