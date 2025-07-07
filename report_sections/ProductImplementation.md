@@ -8242,6 +8242,32 @@ Para el sprint 4 se proyectan actividades como implementacion de los endpoints e
 | Platform | feature/ep19 | 9b252df9da2eeb0c848b84462d36f1a987cb666c | feat(persistency): add billing context configuration to persist data in db context |   | 3/07/2025 |
 | Platform | feature/ep19 | e2154d401cee0562aae34bdc6cd1a47967fde99c | feat(ep19): add task budget when a task is created |   | 3/07/2025 |
 | Platform | develop | b865e00633e7c39e39f0244bc293510e7c288ced | bugfix(ep04): fix get tasks are not returning specialties |   | 3/07/2025 |
+| FrontEnd | develop | 58d1d3c479b8b151bd798295bef9f3f9d37ebd22 | chore: modify component to use real api endpoint |   | 1/07/2025 |
+| Platform | feature/ep03 | 402a936e3945abc2b6b70961b0324f3e00558a21 | feat(ep03): create budget field for the create project api endpoint |   | 1/07/2025 |
+| FrontEnd | feature/ep01 | fe018f6e6787887fcaad699fc6ed9508c4eea1b6 | feat(ep01): change files to use real api endpoint |   | 1/07/2025 |
+| FrontEnd | feature/ep01 | 7eb4aa97d01c55b70c92769ed8572b915f2e692f | feat(ep01): change project detail fake endpoint with real api endpoint |   | 2/07/2025 |
+| FrontEnd | feature/ep01 | 4a3b4aa4109f7dfaa91c0bf382b8a4c3917fc884 | feat(ep01): replace project fake api endpoint for real api endpoint |   | 2/07/2025 |
+| FrontEnd | feature/ep01 | aac274cafc1b4cdf7131dbe7521005b41b412347 | feat(e
+p01): replace project setting fake api endpoint for real api endpoint |   | 2/07/2025 |
+| FrontEnd | feature/ep01 | 3f351b21439f7d8ba7b6e76a7937a8a3c02e3f7c | feat(ep01): add updateDate api endpoint |   | 2/07/2025 |
+| FrontEnd | feature/ep01 | cf8216b99ab9ab337a7b1cc8c6a2ad36f3b558e4 | feat(e
+p01): replace project members fake api endpoint for real api endpoint |   | 2/07/2025 |
+| FrontEnd | feature/ep01 | b4abbf65116d72d49a93b3fc8649396699becaf4 | feat(ep03): replace create milestone fake api endpoint for real api endpoint |   | 3/07/2025 |
+| FrontEnd | feature/ep03 | dc2014cb0185860eb19179750889d69ba8c8ea05 | feat(ep03): replace list and delete milestone fake api endpoint for real api endpoint |   | 3/07/2025 |
+| FrontEnd | feature/ep03 | 48c2bac77fd69a3d3b5a1da079d8248ba611c67c | feat(e
+p03): replace edit milestone fake api endpoint for real api endpoint |   | 3/07/2025 |
+| FrontEnd | feature/ep04 | 07976dab5633805e31f18ec76d1c98839f2975a7 | feat(ep04): replace task fake api endpoint for real api endpoint |   | 3/07/2025 |
+| FrontEnd | feature/ep04 | 8891adee1c1d7633b2b76fbef444ed5cf51fb595 | feat(ep04): replace i18n for all |   | 4/07/2025 |
+| Platform | develop | a7fa9afad384950dd0d177e5b2bbf462f489907c | feat(ep04): add delete task endpoint |   | 4/07/2025 |
+| FrontEnd | feature/ep04 | 637b82c53ea5bf4bf3a24a87e2eea05fdb8868cb | feat(ep15): replace client fake api endpoint for real api endpoint |   | 4/07/2025 |
+| FrontEnd | feature/ep04 | f07c4e86062f073404a55f376623eb089b7a1c2c | feat(ep15): route client view |   | 4/07/2025 |
+| FrontEnd | feature/ep07 | 7f8a07136d7fac42d6f17acb40b1af628aa48c00 |
+ feat(ep07): replace change management fake api endpoint for real api endpoint |   | 5/07/2025 |
+| FrontEnd | feature/ep07 | 446efad20d415bb15fe91f9508ed278c314e9bb1 |
+ feat(ep04): replace task budget fake api endpoint for real api endpoint |   | 5/07/2025 |
+| FrontEnd | develop | 69fa2e8278c811c1c66f3ce3cce44d9acf17c591 | chore: update css styles |   | 5/07/2025 |
+| FrontEnd | develop | 6b9d30f2519a4fe9d9e4549b482cdcf12b7a83bc | chore: update client styles |   | 5/07/2025 |
+| FrontEnd | develop | 660734a093f68e8eb8c4bd44c23b9f6ebad05d6e | chore: validate roles paths |   | 5/07/2025 |
 
 
 #### 5.2.4.5. Execution Evidence for Sprint Review
@@ -9467,13 +9493,15 @@ Configuración en Azure para el despliegue.
 
 Un hotfix debido a un error de producción con las variables de entorno.
 
-Hacer la implementacion completa del back
+Hacer la implementacion completa del Back-End
 
 #### 5.2.4.8. Team Collaboration Insights during Sprint
 
 En este cuarto sprint se ha logrado el objetivo de implementar a totalidad toda la interfaz funcional de la aplicación web y se ha conseguido un avance total del desarrollo del modelo y los servicios.
 
 **Front_End Insights**
+
+<img src="./../../../../img/chapter5/Sprint3/insights/Front_tf.png">
 
 **Back_End Insights**
 
