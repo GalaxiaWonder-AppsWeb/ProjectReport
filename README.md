@@ -16457,6 +16457,3 @@ Enlace del video subido a Stream: <a href="https://upcedupe-my.sharepoint.com/:v
 - Video exposicion TF: [Enlace](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202220783_upc_edu_pe/EU5GR0IaZZFOsPUOcveA6GABKBY2qfbksWm3nFO8LF5SJg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=O0U74E)
 - Video About The Team: [Enlace](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221e247_upc_edu_pe/EeXxWfvqGOdNqjMod71ZRcABIOunTrwBwpFxHYwDNZHbzQ?e=e3PCBl)
 - Video About The Product: [Enlace](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221e247_upc_edu_pe/EQWGGfZtIdhIhZULdqnqdJABDDsdw8kNbhAIo6Q8Di4gGw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=miA74W)
-
-<div style="page-break-before: always;"></div>
-
