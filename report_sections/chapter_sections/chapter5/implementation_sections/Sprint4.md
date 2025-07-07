@@ -2249,6 +2249,8 @@ En este cuarto sprint se ha logrado el objetivo de implementar a totalidad toda 
 
 **Front_End Insights**
 
+<img src="./../../../../img/chapter5/Sprint3/insights/Front_tf.png">
+
 **Back_End Insights**
 
 <img src="./../../../../img/chapter5/Sprint3/insights/Back_tf.png">
