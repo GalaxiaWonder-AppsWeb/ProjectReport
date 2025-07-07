@@ -292,6 +292,8 @@ Para este entregable se ha modificado principalmente el contenido del capítulo 
 
 Para este entregable se ha modificado principalmente el contenido del capítulo V.
 
+<img src="./img/insight_tf.png">
+
 <div style="page-break-before: always;"></div>
 
 # Contenido
@@ -12803,7 +12805,6 @@ Para el Sprint 3, se proyectan actividades como y la implementación de las vist
   <td>León Vivas, Fabrizio Amir</td>
   <td>Done</td>
 </tr>
-
 <tr>
   <td>TS02</td>
   <td>Listar organizaciones</td>
@@ -12823,7 +12824,6 @@ Para el Sprint 3, se proyectan actividades como y la implementación de las vist
   <td>Reaño Delgadillo, Henry Paolo</td>
   <td>Done</td>
 </tr>
-
 <tr>
   <td>TS03</td>
   <td>Detalles de una organización</td>
@@ -12843,7 +12843,6 @@ Para el Sprint 3, se proyectan actividades como y la implementación de las vist
   <td>León Vivas, Fabrizio Amir</td>
   <td>Done</td>
 </tr>
-
 <tr>
   <td>TS04</td>
   <td>Actualizar información de organización</td>
@@ -12863,7 +12862,6 @@ Para el Sprint 3, se proyectan actividades como y la implementación de las vist
   <td>Reaño Delgadillo, Henry Paolo</td>
   <td>Done</td>
 </tr>
-
 <tr>
   <td>TS05</td>
   <td>Eliminar organización (soft delete)</td>
@@ -12902,7 +12900,6 @@ Para el Sprint 3, se proyectan actividades como y la implementación de las vist
   <td>León Vivas, Fabrizio Amir</td>
   <td>Done</td>
 </tr>
-
 <tr>
   <td>TS07</td>
   <td>Actualizar estado de miembro de organización</td>
@@ -12922,7 +12919,6 @@ Para el Sprint 3, se proyectan actividades como y la implementación de las vist
   <td>Reaño Delgadillo, Henry Paolo</td>
   <td>Done</td>
 </tr>
-
 <tr>
   <td>TS08</td>
   <td>Añadir proyecto a organización</td>
@@ -12942,7 +12938,6 @@ Para el Sprint 3, se proyectan actividades como y la implementación de las vist
   <td>León Vivas, Fabrizio Amir</td>
   <td>Done</td>
 </tr>
-
 <tr>
   <td>TS09</td>
   <td>Listar proyectos de organización</td>
@@ -12962,7 +12957,6 @@ Para el Sprint 3, se proyectan actividades como y la implementación de las vist
   <td>Reaño Delgadillo, Henry Paolo</td>
   <td>Done</td>
 </tr>
-
 <tr>
   <td>TS10</td>
   <td>Detalles de un proyecto</td>
@@ -13000,7 +12994,6 @@ Para el Sprint 3, se proyectan actividades como y la implementación de las vist
   <td>León Vivas, Fabrizio Amir</td>
   <td>Done</td>
 </tr>
-
 <tr>
   <td>TS17</td>
   <td>Añadir hito al cronograma</td>
@@ -13020,7 +13013,6 @@ Para el Sprint 3, se proyectan actividades como y la implementación de las vist
   <td>Reaño Delgadillo, Henry Paolo</td>
   <td>Done</td>
 </tr>
-
 <tr>
   <td>TS18</td>
   <td>Listar hitos del cronograma</td>
@@ -13040,7 +13032,6 @@ Para el Sprint 3, se proyectan actividades como y la implementación de las vist
   <td>León Vivas, Fabrizio Amir</td>
   <td>Done</td>
 </tr>
-
 <tr>
   <td>TS19</td>
   <td>Obtener detalles de hito</td>
@@ -13060,7 +13051,6 @@ Para el Sprint 3, se proyectan actividades como y la implementación de las vist
   <td>Reaño Delgadillo, Henry Paolo</td>
   <td>Done</td>
 </tr>
-
 <tr>
   <td>TS20</td>
   <td>Actualizar información de hito</td>
@@ -13099,7 +13089,6 @@ Para el Sprint 3, se proyectan actividades como y la implementación de las vist
   <td>Reaño Delgadillo, Henry Paolo</td>
   <td>Done</td>
 </tr>
-
 <tr>
   <td>TS22</td>
   <td>Listar tareas de hito</td>
@@ -13119,7 +13108,6 @@ Para el Sprint 3, se proyectan actividades como y la implementación de las vist
   <td>León Vivas, Fabrizio Amir</td>
   <td>Done</td>
 </tr>
-
 <tr>
   <td>TS23</td>
   <td>Obtener detalles de tarea</td>
@@ -13139,7 +13127,6 @@ Para el Sprint 3, se proyectan actividades como y la implementación de las vist
   <td>Reaño Delgadillo, Henry Paolo</td>
   <td>Done</td>
 </tr>
-
 <tr>
   <td>TS24</td>
   <td>Actualizar información de tarea</td>
@@ -13159,7 +13146,6 @@ Para el Sprint 3, se proyectan actividades como y la implementación de las vist
   <td>León Vivas, Fabrizio Amir</td>
   <td>Done</td>
 </tr>
-
 <tr>
   <td>TS25</td>
   <td>Crear solicitud de cambio</td>
@@ -13198,7 +13184,6 @@ Para el Sprint 3, se proyectan actividades como y la implementación de las vist
   <td>León Vivas, Fabrizio Amir</td>
   <td>Done</td>
 </tr>
-
 <tr>
   <td>TS27</td>
   <td>Obtener detalles de solicitud de cambio</td>
@@ -13218,7 +13203,6 @@ Para el Sprint 3, se proyectan actividades como y la implementación de las vist
   <td>Reaño Delgadillo, Henry Paolo</td>
   <td>Done</td>
 </tr>
-
 <tr>
   <td>TS28</td>
   <td>Aceptar / Denegar solicitud de cambio</td>
@@ -13238,7 +13222,6 @@ Para el Sprint 3, se proyectan actividades como y la implementación de las vist
   <td>León Vivas, Fabrizio Amir</td>
   <td>Done</td>
 </tr>
-
 <tr>
   <td>TS29</td>
   <td>Obtener detalles de desempeño de hito</td>
@@ -13296,7 +13279,6 @@ Para el Sprint 3, se proyectan actividades como y la implementación de las vist
   <td>León Vivas, Fabrizio Amir</td>
   <td>Done</td>
 </tr>
-
 <tr>
   <td>TS37</td>
   <td>Cerrar sesión + invalidar token</td>
@@ -13316,7 +13298,6 @@ Para el Sprint 3, se proyectan actividades como y la implementación de las vist
   <td>Reaño Delgadillo, Henry Paolo</td>
   <td>Done</td>
 </tr>
-
 <tr>
   <td>TS38</td>
   <td>Registro</td>
@@ -13353,7 +13334,7 @@ Para el Sprint 3, se proyectan actividades como y la implementación de las vist
   <td>2</td>
   <td>Reaño Delgadillo, Henry Paolo</td>
   <td>Done</td>
-
+</tr>
 <tr>
   <td>TS42</td>
   <td>Encriptación segura de credenciales</td>
@@ -13420,7 +13401,6 @@ Para el Sprint 3, se proyectan actividades como y la implementación de las vist
   <td>Reaño Delgadillo, Henry Paolo</td>
   <td>Done</td>
 </tr>
-
 <tr>
   <td>TS58</td>
   <td>Eliminar usuario de proyecto</td>
@@ -16469,7 +16449,7 @@ Enlace del video subido a Stream: <a href="https://upcedupe-my.sharepoint.com/:v
 - Organización de GitHub: [Enlace](https://github.com/GalaxiaWonder-AppsWeb)
 - Organización YouTrack: [Enlace](https://galaxiawonder.youtrack.cloud/projects/0-2)
 - Despliegue Landing Page: [Enlace](https://propgms-apps-web.netlify.app/)
-- Despliegue del Front-End: [Enlace]()
+- Despliegue del Front-End: [Enlace](https://purple-plant-03b5be210.6.azurestaticapps.net/)
 - API Swagger: [Enlace](https://app-250705131108.azurewebsites.net/swagger/index.html)
 - Video exposición TB1: [Enlace](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221e247_upc_edu_pe/EZWHYu0kuXJNo3vwxZbwAI8BUgztRVa4ZYaaLK5_yOF2qQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=roB70Rv)
 - Video exposición TP: [Enlace](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221e247_upc_edu_pe/EdfzV3O4Z8FHqqbmhUnK9_QBPB1I6bbEsqMIdOOggP-5Fw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=US3o3i)
