@@ -13569,6 +13569,8 @@ Para el sprint 3 se proyectan actividades como implementacion del FrontEnd y Bac
 
 #### 5.2.3.5. Execution Evidence for Sprint Review
 
+Se presenta a modo de evidencia un video y capturas de pantalla de las vistas implementadas. Link al video [https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221e247_upc_edu_pe/EYYwptGeVCxGoCD5OnKN_8ABjPhzepMVi_1cmRAPyIlolA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=dSMIPJ][https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221e247_upc_edu_pe/EYYwptGeVCxGoCD5OnKN_8ABjPhzepMVi_1cmRAPyIlolA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=dSMIPJ]
+
 Seleccionar la opción de Aplicación Web Estática
 
 <img src="./img/chapter5/Sprint3/Aplication/execution2.png">
@@ -15042,6 +15044,8 @@ p03): replace edit milestone fake api endpoint for real api endpoint |   | 3/07/
 
 
 #### 5.2.4.5. Execution Evidence for Sprint Review
+
+Se presenta a modo de evidencia un video y capturas de pantalla de las vistas implementadas. Link al video [https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221e247_upc_edu_pe/EQWGGfZtIdhIhZULdqnqdJABDDsdw8kNbhAIo6Q8Di4gGw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=miA74W][https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221e247_upc_edu_pe/EQWGGfZtIdhIhZULdqnqdJABDDsdw8kNbhAIo6Q8Di4gGw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=miA74W]
 
 Seleccionar la opción de Aplicación Web Estática
 
